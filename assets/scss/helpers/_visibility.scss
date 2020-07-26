@@ -1,0 +1,14 @@
+@import "./media-queries";
+
+@each $name, $bp in $mqs {
+  .-hide-on-#{$name} {
+    @include for-width("+#{$name}") {
+      display: none;
+    }
+  }
+  .-show-on-#{$name} {
+    @include for-width("-#{$name}") {
+      display: none;
+    }
+  }
+}

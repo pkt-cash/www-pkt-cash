@@ -1,0 +1,68 @@
+$mqs: (
+  //name         //breakpoint
+  'small':       320,
+  'small-md':    450,
+  'tablet':      768,
+  'tablet-lg':   1025,
+  'laptop':      1100,
+  'desktop-med': 1200,
+  'desktop-lg':  1400,
+);
+
+@mixin for-width($size, $size2: null) {
+  @each $name, $bp in $mqs {
+    $max: calc(#{em($bp)} - #{em(1)});
+    $min: em($bp);
+    @if $size == "-#{$name}" {
+      @media (max-width: $max) { @content; }
+    }
+    @if $size == "+#{$name}" {
+      @media (min-width: $min) { @content; }
+    }
+    @if $size2 == "#{$name}" {
+      @each $name, $bp in $mqs {
+        $min: em($bp);
+        @if $size == "#{$name}" {
+          @media (min-width: $min) and (max-width: $max)  { @content; }
+        }
+      }
+    }
+  }
+}
+
+/*
+._example {
+  @include for-width(-desktop) {
+    opacity: 0.5;
+  };
+}
+*/
+
+@mixin for-height($size, $size2: null) {
+  @each $name, $bp in $mqs {
+    $max: calc(#{em($bp)} - #{em(1)});
+    $min: em($bp);
+    @if $size == "-#{$name}" {
+      @media (max-height: $max) { @content; }
+    }
+    @if $size == "+#{$name}" {
+      @media (min-height: $min) { @content; }
+    }
+    @if $size2 == "#{$name}" {
+      @each $name, $bp in $mqs {
+        $min: em($bp);
+        @if $size == "#{$name}" {
+          @media (min-height: $min) and (max-height: $max)  { @content; }
+        }
+      }
+    }
+  }
+}
+
+/*
+._example {
+  @include for-height(-desktop) {
+    opacity: 0.5;
+  };
+}
+*/

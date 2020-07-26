@@ -1,0 +1,75 @@
+// ================ Poppins-Bold ================
+@include font_face(Poppins-Bold, Poppins-Bold);
+
+%bold {
+  font-family: 'Poppins-Bold', sans-serif;
+}
+
+// ################ Poppins-Bold ################
+// ================ Poppins-Regular ================
+@include font_face(Poppins-Regular, Poppins-Regular);
+
+%regular {
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+// ################ Poppins-Regular ################
+// ================ Poppins-SemiBold ================
+@include font_face(Poppins-SemiBold, Poppins-SemiBold);
+
+%semibold {
+  font-family: 'Poppins-SemiBold', sans-serif;
+}
+
+// ################ Poppins-SemiBold ################
+
+// ====================== Font sizes =======================
+%ttu {
+  text-transform: uppercase;
+}
+
+%letter-space {
+  letter-spacing: 0.02em;
+}
+// H1
+
+%h1-title {
+  @extend %bold;
+  @include font_sizes(69, 103);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(59, 80);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(33, 43);
+  }
+}
+
+// H2
+%h2-title {
+  @extend %bold;
+  @include font_sizes(35, 50);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(32, 48);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(16, 26);
+  }
+}
+
+// H3
+%h3-title {
+  @extend %semibold;
+  @include font_sizes(25, 35);
+}
+
+// Body
+%body-text {
+  @extend %regular;
+  @include font_sizes(23, 35);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(20, 32);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(17, 27);
+  }
+}

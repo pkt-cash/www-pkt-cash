@@ -1,0 +1,66 @@
+%db {
+    display: block;
+}
+
+%dib {
+    display: inline-block;
+}
+
+%dn {
+    display: none;
+}
+
+%df {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+%jcc {
+    justify-content: center;
+}
+
+%jcsb {
+    justify-content: space-between;
+}
+
+%jcsa {
+    justify-content: space-around;
+}
+
+%aic {
+    -ms-align-items: center;
+    align-items: center;
+}
+
+%fw {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+%fdc {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+%bg-reset {
+    background-color: transparent;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+%evt-none {
+    pointer-events: none;
+}
+
+%evt-all {
+    pointer-events: all;
+}

@@ -1,0 +1,8 @@
+@function starts-with($string, $find) {
+  //@debug 'starts-with() - str-slice($string, 1, 1): ' + str-slice($string, 1, 1);
+  @return str-slice($string, 1, 1) == $find;
+}
+
+@function ends-with($string, $find) {
+  @return str-slice($string, (str-length($string) - str-length($find) + 1)) == $find;
+}

@@ -1,0 +1,111 @@
+@mixin font_face($file_name, $font_name:$file_name, $path:$font_path, $weight:normal, $style:normal) {
+	@font-face {
+		font-family: quote($font_name);
+		src: url($path + $file-name + ".woff2") format("woff2"),
+		url($path + $file-name + ".woff") format("woff");
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+@mixin placeholder($color, $opacity) {
+	::-webkit-input-placeholder {
+		color: $color;
+		opacity: $opacity;
+	}
+	::-moz-placeholder {
+		color: $color;
+		opacity: $opacity;
+	}
+	:-moz-placeholder {
+		color: $color;
+		opacity: $opacity;
+	}
+	:-ms-input-placeholder {
+		color: $color;
+		opacity: $opacity;
+	}
+}
+
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+$percent: 100%;
+$myFullWidth: 1920;
+
+@function width($num, $ful: $myFullWidth) {
+	@return #{$num * $percent / $ful};
+}
+@mixin bp($width, $direction:max) {
+	@if $direction==min {
+		@media screen and (min-width: $width) {
+			@content;
+		}
+	}
+
+	@else {
+		@media screen and (max-width: $width) {
+			@content;
+		}
+	}
+}
+@mixin position($top: 0, $bottom: false, $right: false, $left: 0) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	@if $bottom {
+		bottom: $bottom;
+	}
+	@if $right {
+		right: $right;
+	}
+
+}
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $size $color;
+        -moz-box-shadow:inset $top $left $blur $size $color;
+        box-shadow:inset $top $left $blur $size $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $size $color;
+        -moz-box-shadow: $top $left $blur $size $color;
+        box-shadow: $top $left $blur $size $color;
+    }
+}
+@mixin fontClass($fontName, $className) {
+	@include font_face($fontName, $fontName);
+
+	%#{$className} {
+		font-family: ''+$fontName+'', sans-serif;
+	}
+}
+
+@mixin font_sizes($size, $line_height) {
+	font-size: rem($size);
+	line-height: rem($line_height);
+}
+
+@mixin svg-button-icon ($color: $content) {
+  svg {
+    *[fill] {
+      fill: $color;
+    }
+    *[stroke] {
+      stroke: $color;
+    }
+  }
+}
+
+$size__100vh: calc(var(--vh, 1vh) * 100);
+
+@mixin set100vh ($property: height) {
+  #{$property}: 100vh;
+  #{$property}: $size__100vh;
+  //#{$property}: -webkit-fill-available;
+}

@@ -1,0 +1,8 @@
+/**
+ * Get size in `vw` relative to 1440px wide screen
+ * @example
+ * vw(720) // 50vw
+ */
+@function vw($num, $initialW: 1440) {
+  @return #{$num * 100 / $initialW}vw;
+}

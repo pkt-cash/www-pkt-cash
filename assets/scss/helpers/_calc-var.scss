@@ -1,0 +1,16 @@
+@import "./string";
+
+/**
+ * Wraps CSS variable in `calc()` construction
+ * @example
+ * calc-var(paddingX) // calc(var(--paddingX) * 0.0625rem)
+ * calc-var(test, '- 2px + 3px +' rem(4)) // calc(var(--test) * 0.0625rem - 2px + 3px + 0.25rem)
+ */
+@function calc-var($var, $args: null, $multiplier: 1) {
+  @if starts-with($var, '-') {
+    $multiplier: "-#{$multiplier}";
+    $var: str-slice($var, 2);
+  }
+
+  @return calc(var(--#{$var}) * #{rem($multiplier)}#{$args});
+}

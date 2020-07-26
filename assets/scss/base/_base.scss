@@ -1,0 +1,14 @@
+body {
+  font-size: 16px;
+}
+img {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+a {
+    &:hover {
+        // color: $color_link_hover;
+    }
+}

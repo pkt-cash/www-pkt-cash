@@ -1,0 +1,13 @@
+:root {
+  --layoutMarginX: 20;
+  --headerMarginY: 10;
+
+  @include for-width(+tablet) {
+    --layoutMarginX: 24;
+    --headerMarginY: 16;
+  }
+
+  @include for-width(+desktop) {
+    --layoutMarginX: 120;
+  }
+}
