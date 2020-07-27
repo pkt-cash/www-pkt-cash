@@ -2,7 +2,7 @@
 @include font_face(Poppins-Bold, Poppins-Bold);
 
 %bold {
-  font-family: 'Poppins-Bold', sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
 }
 
 // ################ Poppins-Bold ################
@@ -10,7 +10,7 @@
 @include font_face(Poppins-Regular, Poppins-Regular);
 
 %regular {
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: "Poppins-Regular", sans-serif;
 }
 
 // ################ Poppins-Regular ################
@@ -18,10 +18,34 @@
 @include font_face(Poppins-SemiBold, Poppins-SemiBold);
 
 %semibold {
-  font-family: 'Poppins-SemiBold', sans-serif;
+  font-family: "Poppins-SemiBold", sans-serif;
 }
 
 // ################ Poppins-SemiBold ################
+// ================ TTNorms-Regular ================
+@include font_face(TTNorms-Regular, TTNorms-Regular);
+
+%norms-regular {
+  font-family: "TTNorms-Regular", sans-serif;
+}
+
+// ################ TTNorms-Regular ################
+// ================ TTNorms-Bold ================
+@include font_face(TTNorms-Bold, TTNorms-Bold);
+
+%norms-bold {
+  font-family: "TTNorms-Bold", sans-serif;
+}
+
+// ################ TTNorms-Bold ################
+// ================ TTNorms-Light ================
+@include font_face(TTNorms-Light, TTNorms-Light);
+
+%norms-light {
+  font-family: "TTNorms-Light", sans-serif;
+}
+
+// ################ TTNorms-Light ################
 
 // ====================== Font sizes =======================
 %ttu {
