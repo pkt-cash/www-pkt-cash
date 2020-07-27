@@ -11,8 +11,16 @@
   background-color: $hard_blue;
   text-decoration: none;
   border-radius: rem(46);
-  padding: rem(11) rem(34);
+  padding: rem(17) rem(34);
   @include font_sizes(17, 24);
+}
+
+%blue-button-arrow {
+  padding-right: rem(60);
+  background-image: url("/img/btn-arrow.svg");
+  background-size: 5px 8px;
+  background-position: 88% 50%;
+  background-repeat: no-repeat;
 }
 
 .btn-nav {
@@ -23,4 +31,10 @@
 .blue-btn {
   @extend %bold;
   @extend %blue-button;
+}
+
+.blue-btn-arrow {
+  @extend %bold;
+  @extend %blue-button;
+  @extend %blue-button-arrow;
 }
