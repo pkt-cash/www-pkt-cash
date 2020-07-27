@@ -209,7 +209,10 @@ export default {
       }
 
       &:last-child {
-        margin-bottom: rem(12);
+        margin-bottom: rem(4);
+        @include for-width(-tablet) {
+          margin-bottom: rem(12);
+        }
       }
     }
 
