@@ -1,5 +1,6 @@
 body {
   font-size: 16px;
+  @extend %regular;
 }
 img {
   display: inline-block;
@@ -8,7 +9,7 @@ img {
   object-fit: cover;
 }
 a {
-    &:hover {
-        // color: $color_link_hover;
-    }
+  &:hover {
+    // color: $color_link_hover;
+  }
 }

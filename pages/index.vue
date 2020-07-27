@@ -1,13 +1,15 @@
 <template>
-  <h1>LOL</h1>
+  <div class="test">LOL</div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss">
-h1 {
+.test {
   @extend %h1-title;
+  height: calc(100vh - 100px);
+  background-color: grey;
 }
 </style>
