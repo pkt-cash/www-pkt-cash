@@ -1,12 +1,16 @@
 <template>
-  <div class="c-mining-list">
+  <div class="c-advantage">
     <template v-for="item of list">
-      <div class="c-mining-list__item" :key="item.title" style="{ background: item.img }">
+      <div
+        class="c-advantage__item"
+        :key="item.title"
+        :style="{ 'background-image': 'url(' + item.img + ')' }"
+      >
         <div class="container" :class="{ 'container-right': item.aligh }">
-          <h1 class="c-mining-list__title">{{ item.title }}</h1>
-          <h2 class="c-mining-list__sub">{{ item.subTitle }}</h2>
-          <p class="c-mining-list__text">{{ item.text }}</p>
-          <nuxt-link to="/" class="c-mining-list__link blue-btn-arrow">
+          <h1 class="c-advantage__title">{{ item.title }}</h1>
+          <h2 class="c-advantage__sub">{{ item.subTitle }}</h2>
+          <p class="c-advantage__text">{{ item.text }}</p>
+          <nuxt-link to="/" class="c-advantage__link blue-btn-arrow">
             <span>{{ item.btnText }}</span>
           </nuxt-link>
         </div>
@@ -17,7 +21,7 @@
 
 <script>
 export default {
-  name: "MiningList",
+  name: "Advatage",
   props: {
     list: Array,
   },
@@ -25,9 +29,12 @@ export default {
 </script>
 
 <style lang="scss">
-.c-mining-list {
+.c-advantage {
   &__item {
     padding: rem(100) rem(15);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
   }
 
   .container {

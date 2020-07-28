@@ -1,4 +1,4 @@
-no<template>
+<template>
   <footer class="c-footer">
     <div class="container">
       <div class="c-footer__wrap">
