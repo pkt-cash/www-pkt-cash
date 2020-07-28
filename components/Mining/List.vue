@@ -1,7 +1,7 @@
 <template>
   <div class="c-mining-list">
     <template v-for="item of list">
-      <div class="c-mining-list__item" :key="item.title" style="{ background: item.img }">
+      <div class="c-mining-list__item" :key="item.title" :style="{ background: `url(${item.img})` }">
         <div class="container" :class="{ 'container-right': item.aligh }">
           <h1 class="c-mining-list__title">{{ item.title }}</h1>
           <h2 class="c-mining-list__sub">{{ item.subTitle }}</h2>
