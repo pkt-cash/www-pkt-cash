@@ -14,6 +14,14 @@
 }
 
 // ################ Poppins-Regular ################
+// ================ Poppins-Light ================
+@include font_face(Poppins-Light, Poppins-Light);
+
+%light {
+  font-family: "Poppins-Light", sans-serif;
+}
+
+// ################ Poppins-Regular ################
 // ================ Poppins-SemiBold ================
 @include font_face(Poppins-SemiBold, Poppins-SemiBold);
 
@@ -84,6 +92,21 @@
 %h3-title {
   @extend %semibold;
   @include font_sizes(25, 35);
+}
+
+// P
+%text-main {
+  @extend %regular;
+  @include font_sizes(25, 40);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(23, 35);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(20, 32);
+  }
+  @include for-width(-small-lg) {
+    @include font_sizes(17, 27);
+  }
 }
 
 // Body

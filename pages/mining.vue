@@ -4,19 +4,19 @@
       <MiningHeader />
     </section>
     <section class="v-mining-section">
-      <MiningList :list="advantage_list" />
+      <Advantage :list="advantage_list" />
     </section>
   </div>
 </template>
 
 <script>
 import MiningHeader from "~/components/Mining/Header";
-import MiningList from "~/components/Mining/List";
+import Advantage from "~/components/Advantage";
 
 export default {
   components: {
     MiningHeader,
-    MiningList,
+    Advantage,
   },
   data() {
     return {
