@@ -14,6 +14,14 @@
 }
 
 // ################ Poppins-Regular ################
+// ================ Poppins-Regular ================
+@include font_face(Poppins-Medium, Poppins-Medium);
+
+%medium {
+  font-family: "Poppins-Medium", sans-serif;
+}
+
+// ################ Poppins-Medium ################
 // ================ Poppins-Light ================
 @include font_face(Poppins-Light, Poppins-Light);
 

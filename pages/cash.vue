@@ -3,7 +3,7 @@
     <section class="v-cash-section">
       <SimpleHeader
         title="PKT"
-        text="PKT is paid to PacketCrypt miners"
+        subTitle="PKT is paid to PacketCrypt miners"
         bg="/img/cash-header-bg.jpg"
       />
     </section>
@@ -18,7 +18,7 @@
 
 <script>
 import SimpleHeader from "~/components/Base/SimpleHeader";
-import CashMain from "~/components/Cash/CashMain";
+import CashMain from "~/components/Cash/Main";
 import Advantage from "~/components/Advantage";
 
 export default {

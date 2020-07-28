@@ -1,6 +1,7 @@
 body {
   font-size: 16px;
   @extend %regular;
+  scroll-behavior: smooth;
 }
 img {
   display: inline-block;
