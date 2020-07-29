@@ -23,6 +23,7 @@ export default {
 <style lang="scss">
 .c-simple-header {
   padding: rem(108) 0 rem(171);
+  min-height: 30vw;
   color: $light_blue;
   background-size: cover;
   background-repeat: no-repeat;

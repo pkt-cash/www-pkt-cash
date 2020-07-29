@@ -4,7 +4,7 @@
       <h1 class="c-simple-header__title">{{ title }}</h1>
       <h2 class="c-simple-header__sub-title">{{ subtitle }}</h2>
       <p class="c-simple-header__text">{{ text }}</p>
-      <nuxt-link class="c-simple-header__link blue-btn-arrow" to="/">{{ btn }}</nuxt-link>
+      <nuxt-link class="c-simple-header__link blue-btn-arrow" to="/" v-if="btn">{{ btn }}</nuxt-link>
     </div>
   </div>
 </template>

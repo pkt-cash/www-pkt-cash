@@ -120,5 +120,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.c-content-main {
+  & .container {
+    width: 100%;
+    max-width: rem(1182);
+  }
+
+  &__content {
+    max-width: calc(100% - 435px);
+  }
+}
 </style>
