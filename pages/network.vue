@@ -1,9 +1,10 @@
 <template>
   <div class="v-setup">
     <section class="v-setup-section">
-      <SimpleHeader
+      <BigHeader
         title="Network Steward"
         text="By consensus rule, 20% of every newly mined block goes to an elected address, which is the Network Steward. The Network Steward is currently a 5 person group that is dedicated to helping build the PKT ecosystem through competitive grants for open source projects."
+        btn="Network Steward Vote"
         bg="/img/network-header-bg.jpg"
       />
     </section>
@@ -14,12 +15,12 @@
 </template>
 
 <script>
-import SimpleHeader from "~/components/Base/SimpleHeader";
+import BigHeader from "~/components/Base/BigHeader";
 import NetworkMain from "~/components/NetWork/Main";
 
 export default {
   components: {
-    SimpleHeader,
+    BigHeader,
     NetworkMain,
   },
 };
