@@ -3,9 +3,9 @@
     <div class="container">
       <div class="nav">
         <div class="nav__logo">
-          <figure>
+          <nuxt-link tag="figure" to="/">
             <img src="/img/main-logo.png" alt />
-          </figure>
+          </nuxt-link>
         </div>
         <div class="nav__menu" :class="{ 'active': nav_open }">
           <ul class="nav__menu-list" :class="{ 'active': nav_open }">
@@ -103,6 +103,8 @@ export default {
   background-color: $white;
 
   &__logo {
+    cursor: pointer;
+
     & img {
       @include for-width(-small-md) {
         height: rem(21);

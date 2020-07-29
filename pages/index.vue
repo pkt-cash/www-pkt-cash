@@ -1,9 +1,29 @@
 <template>
-  <div class="test">LOL</div>
+  <div class="v-network">
+    <section class="v-network-section">
+      <BigHeader
+        title="Wallet Setup"
+        subtitle="PKT Wallet Installation"
+        text="To set up the command line wallet for PKT you will need:"
+        bg="/img/wallet-setup-header-bg.jpg"
+      />
+    </section>
+    <section class="v-network-section">
+      <WalletSetupMain />
+    </section>
+  </div>
 </template>
 
 <script>
-export default {};
+import BigHeader from "~/components/Base/BigHeader";
+import WalletSetupMain from "~/components/Wallet/SetupMain";
+
+export default {
+  components: {
+    BigHeader,
+    WalletSetupMain,
+  },
+};
 </script>
 
 <style lang="scss">
