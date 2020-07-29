@@ -1,16 +1,210 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 16px;
   @extend %regular;
-  scroll-behavior: smooth;
 }
 img {
   display: inline-block;
   width: inherit;
   height: inherit;
-  object-fit: cover;
 }
 a {
   &:hover {
     // color: $color_link_hover;
+  }
+}
+
+.c-content-main {
+  padding: rem(80) 0 rem(50);
+
+  & .container {
+    width: 100%;
+    max-width: rem(1182);
+    margin: 0 auto;
+    padding: 0 rem(15);
+  }
+
+  &__section {
+    padding-top: rem(30);
+
+    & > *:last-child {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__content {
+    max-width: calc(100% - 435px);
+  }
+
+  &__navigation {
+    padding-top: rem(30);
+    flex: 0 0 auto;
+    margin-right: rem(50);
+
+    &-list {
+      position: sticky;
+      top: rem(30);
+    }
+
+    &-link {
+      @extend %light;
+      @include font_sizes(16, 35);
+      color: $dark_blue;
+
+      &.active {
+        @extend %medium;
+        padding-left: rem(13);
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0%;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background-color: $hard_blue;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @extend %h2-title;
+    color: $dark_blue;
+    margin-bottom: rem(50);
+  }
+
+  &__text {
+    @extend %text-main;
+    color: $dark_blue;
+    margin-bottom: rem(30);
+
+    & a {
+      color: $hard_blue;
+    }
+  }
+
+  &__scroll {
+    @extend %light;
+    color: $dark_blue;
+    @include font_sizes(23, 40);
+    max-height: rem(480);
+    overflow: auto;
+    padding: rem(30) rem(30) rem(47);
+    margin-bottom: rem(50);
+    background-color: $light_blue;
+    box-shadow: rem(4) rem(4) rem(10) rgba(25, 25, 68, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: $dark_blue $white;
+
+    &::-webkit-scrollbar {
+      height: 20px;
+      background-color: #143861;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dark_blue;
+      height: 20px;
+    }
+    &::-webkit-scrollbar-button {
+      height: 10px;
+    }
+
+    &::-webkit-resizer {
+      height: 20px;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+      height: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-button:vertical:start:decrement {
+      display: none;
+    }
+    &::-webkit-scrollbar-button:vertical:end:increment {
+      display: none;
+    }
+  }
+
+  &__more {
+    @extend %medium;
+    @include font_sizes(25, 40);
+    @include for-width(-tablet-lg) {
+      @include font_sizes(23, 35);
+    }
+    @include for-width(-tablet) {
+      @include font_sizes(20, 32);
+    }
+    @include for-width(-small-lg) {
+      @include font_sizes(17, 27);
+    }
+    margin-bottom: rem(50);
+
+    & a {
+      color: $hard_blue;
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    padding-left: rem(40);
+    margin-bottom: rem(40);
+
+    &-item {
+      @extend %text-main;
+      margin-bottom: rem(20);
+      color: $dark_blue;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: rem(20);
+        left: rem(-40);
+        transform: translateY(-50%);
+        display: block;
+        content: "";
+        width: rem(10);
+        height: rem(10);
+        background-color: $hard_blue;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__list--small {
+    padding-left: rem(80);
+    margin-bottom: rem(40);
+
+    &-item {
+      @extend %text-main;
+      color: $dark_blue;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: rem(-25);
+        transform: translateY(-50%);
+        display: block;
+        content: "";
+        width: rem(10);
+        height: rem(10);
+        background-color: $hard_blue;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__btn {
+    margin-right: rem(50);
+    margin-top: rem(20);
   }
 }

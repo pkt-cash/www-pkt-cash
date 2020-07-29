@@ -8,7 +8,13 @@ html {
   position: relative;
 }
 
-div, p, form, input, a, span, button {
+div,
+p,
+form,
+input,
+a,
+span,
+button {
   box-sizing: border-box;
 }
 
@@ -114,7 +120,6 @@ sup {
 }
 
 a {
-
   &:before,
   &:after {
     box-sizing: border-box;
@@ -245,8 +250,14 @@ button {
   }
 }
 
-input, input:hover, input:focus, input:active,
-button, button:hover, button:focus, button:active {
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active {
   outline: none;
   cursor: pointer;
 }
@@ -255,31 +266,31 @@ textarea {
 }
 /*--------------Style for scroll bar----------------*/
 ::-webkit-scrollbar-button {
-background-repeat:no-repeat;
-width:5px;
-height:0px
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
 }
 ::-webkit-scrollbar-track {
-background-color:$scroll_bar_color;
+  background-color: $scroll_bar_color;
 }
 ::-webkit-scrollbar-thumb {
--webkit-border-radius: 0px;
-border-radius: 0px;
-background-color: $scroll_thumb_color;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: $scroll_thumb_color;
 }
 ::-webkit-scrollbar-thumb:hover {
-background-color: $scroll_thumb_color;
+  background-color: $scroll_thumb_color;
 }
-::-webkit-resizer{
-background-repeat:no-repeat;
-width:4px;
-height:0px
+::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px;
 }
-::-webkit-scrollbar{
-width: 4px;
+::-webkit-scrollbar {
+  width: 4px;
 }
 /*--------------Style for plaseholder----------------*/
-@include placeholder($black, .5);
+@include placeholder($black, 0.5);
 /*========================Reset attr TITLE===================*/
 select {
   -webkit-appearance: none;

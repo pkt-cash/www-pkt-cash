@@ -1,6 +1,6 @@
 <template>
-  <div class="v-setup">
-    <section class="v-setup-section">
+  <div class="v-network">
+    <section class="v-network-section">
       <BigHeader
         title="Network Steward"
         text="By consensus rule, 20% of every newly mined block goes to an elected address, which is the Network Steward. The Network Steward is currently a 5 person group that is dedicated to helping build the PKT ecosystem through competitive grants for open source projects."
@@ -8,7 +8,7 @@
         bg="/img/network-header-bg.jpg"
       />
     </section>
-    <section class="v-setup-section">
+    <section class="v-network-section">
       <NetworkMain />
     </section>
   </div>

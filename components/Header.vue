@@ -58,7 +58,7 @@ export default {
         },
         {
           name: "Network Steward",
-          route_link: "/network-steward",
+          route_link: "/network",
         },
         {
           name: "Wallet",
