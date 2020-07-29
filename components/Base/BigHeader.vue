@@ -4,6 +4,7 @@
       <h1 class="c-simple-header__title">{{ title }}</h1>
       <h2 class="c-simple-header__sub-title">{{ subtitle }}</h2>
       <p class="c-simple-header__text">{{ text }}</p>
+      <nuxt-link class="c-simple-header__link blue-btn-arrow" to="/">{{ btn }}</nuxt-link>
     </div>
   </div>
 </template>
@@ -15,6 +16,7 @@ export default {
     title: String,
     subtitle: String,
     text: String,
+    btn: String,
     bg: String,
   },
 };
@@ -24,6 +26,10 @@ export default {
 .c-simple-header {
   padding: rem(108) 0 rem(171);
   color: $light_blue;
+  min-height: calc(100vh - 100px);
+  @include for-width(-small-md) {
+    min-height: calc(100vh - 45px);
+  }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -32,7 +38,7 @@ export default {
     width: 100%;
     max-width: rem(1100);
     margin: 0 auto;
-    padding: 0 rem(400) 0 rem(15);
+    padding: 0 rem(300) 0 rem(15);
     @include for-width(-desktop-med) {
       padding: 0 rem(15);
     }
@@ -49,6 +55,10 @@ export default {
 
   &__text {
     @extend %text-main;
+  }
+
+  &__link {
+    margin-top: rem(50);
   }
 }
 </style>
