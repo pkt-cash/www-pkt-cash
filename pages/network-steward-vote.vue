@@ -18,7 +18,7 @@
 
 <script>
 import BigHeader from "~/components/Base/BigHeader";
-import NetworkStewardVoteMain from "~/components/NetWork/StewardVoteMain";
+import NetworkStewardVoteMain from "~/components/Network/StewardVoteMain";
 
 export default {
   components: {
