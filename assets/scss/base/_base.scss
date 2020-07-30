@@ -4,6 +4,7 @@ html {
 body {
   font-size: 16px;
   @extend %regular;
+  color: $dark_blue;
 }
 img {
   display: inline-block;

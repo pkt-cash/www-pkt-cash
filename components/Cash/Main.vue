@@ -47,13 +47,12 @@ export default {
 
 <style lang="scss">
 .c-cash-main {
-  padding: rem(100) 0 rem(50);
+  padding: rem(100) rem(15) rem(50);
 
   & .container {
     width: 100%;
     max-width: rem(1100);
     margin: 0 auto;
-    padding: 0 rem(15);
   }
 
   &__text {
