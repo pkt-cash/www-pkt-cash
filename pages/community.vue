@@ -14,17 +14,29 @@
         :list="resources_list"
       />
     </section>
+    <section class="v-community-section">
+      <CommunityList
+        title="Join us"
+        text="Join us and help to create a better internet. Connect and collaborate with PKT community members online"
+        :list="join_list"
+      />
+    </section>
+    <section class="v-community-section">
+      <CommunityContact />
+    </section>
   </div>
 </template>
 
 <script>
 import BigHeader from "~/components/Base/BigHeader";
 import CommunityList from "~/components/Community/List";
+import CommunityContact from "~/components/Community/Contact";
 
 export default {
   components: {
     BigHeader,
     CommunityList,
+    CommunityContact,
   },
   data() {
     return {
@@ -33,13 +45,50 @@ export default {
           title: "PKT Trading Group",
           text:
             "Participate in live discussions, ask questions, and get to know the PKT community.",
-          img: "/img/communicate/telegram.svg",
+          img: "/img/community/pkt.svg",
         },
+      ],
+      join_list: [
         {
-          title: "PKT Trading Group",
+          title: "PKT Telegram",
           text:
             "Participate in live discussions, ask questions, and get to know the PKT community.",
-          img: "/img/communicate/telegram.svg",
+          img: "/img/community/telegram.svg",
+        },
+        {
+          title: "Facebook",
+          text:
+            "Visit PKT on Facebook for current events and to meet the community.",
+          img: "/img/community/facebook.svg",
+        },
+        {
+          title: "Instagram",
+          text:
+            "Browse PKT on Instagram for valuable insights about the project.",
+          img: "/img/community/instagram.svg",
+        },
+        {
+          title: "Twitter",
+          text:
+            "Follow PKT on Twitter to stay up to date with news and progress.",
+          img: "/img/community/twitter.svg",
+        },
+        {
+          title: "Mastadon",
+          text:
+            "Follow PKT on Mastadon to stay up to date with news and progress.",
+          img: "/img/community/mastadon.svg",
+        },
+        {
+          title: "IRC",
+          text: "Follow PKT on IRC to stay up to date with news and progress.",
+          img: "/img/community/irc.svg",
+        },
+        {
+          title: "Matrix",
+          text:
+            "Follow PKT on Matrix to stay up to date with news and progress.",
+          img: "/img/community/matrix.svg",
         },
       ],
     };
