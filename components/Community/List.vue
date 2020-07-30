@@ -44,7 +44,7 @@ export default {
   &__text {
     @extend %text-main;
     text-align: center;
-    margin-bottom: rem(20);
+    margin-bottom: rem(80);
   }
 
   &__item {
