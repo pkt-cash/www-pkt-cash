@@ -1,6 +1,6 @@
 <template>
-  <div class="v-network">
-    <section class="v-network-section">
+  <div class="v-wallet">
+    <section class="v-wallet-section">
       <BigHeader
         title="Wallet Setup"
         subtitle="PKT Wallet Installation"
@@ -8,7 +8,7 @@
         bg="/img/wallet-setup-header-bg.jpg"
       />
     </section>
-    <section class="v-network-section">
+    <section class="v-wallet-section">
       <WalletSetupMain />
     </section>
   </div>

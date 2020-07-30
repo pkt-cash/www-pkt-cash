@@ -14,7 +14,7 @@
 }
 
 // ################ Poppins-Regular ################
-// ================ Poppins-Regular ================
+// ================ Poppins-Medium ================
 @include font_face(Poppins-Medium, Poppins-Medium);
 
 %medium {
@@ -22,6 +22,14 @@
 }
 
 // ################ Poppins-Medium ################
+// ================ Poppins-MediumItalic ================
+@include font_face(Poppins-MediumItalic, Poppins-MediumItalic);
+
+%medium-italic {
+  font-family: "Poppins-MediumItalic", sans-serif;
+}
+
+// ################ Poppins-MediumItalic ################
 // ================ Poppins-Light ================
 @include font_face(Poppins-Light, Poppins-Light);
 
@@ -106,6 +114,21 @@
 %text-main {
   @extend %regular;
   @include font_sizes(25, 40);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(23, 35);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(20, 32);
+  }
+  @include for-width(-small-lg) {
+    @include font_sizes(17, 27);
+  }
+}
+
+// Quote
+%italic-quote {
+  @extend %medium-italic;
+  @include font_sizes(32, 52);
   @include for-width(-tablet-lg) {
     @include font_sizes(23, 35);
   }

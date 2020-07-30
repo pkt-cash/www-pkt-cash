@@ -231,15 +231,9 @@ export default {
     }
 
     &-img {
-      width: rem(38);
       display: flex;
       align-items: center;
-      @include for-width(-small-lg) {
-        width: rem(25);
-        & img {
-          max-width: rem(15);
-        }
-      }
+      margin-right: rem(10);
     }
   }
 

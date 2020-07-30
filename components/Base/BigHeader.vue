@@ -1,17 +1,17 @@
 <template>
-  <div class="c-simple-header" :style="{ 'background-image': 'url(' + bg + ')'}">
+  <div class="c-big-header" :style="{ 'background-image': 'url(' + bg + ')'}">
     <div class="container">
-      <h1 class="c-simple-header__title">{{ title }}</h1>
-      <h2 class="c-simple-header__sub-title">{{ subtitle }}</h2>
-      <p class="c-simple-header__text">{{ text }}</p>
-      <nuxt-link class="c-simple-header__link blue-btn-arrow" to="/">{{ btn }}</nuxt-link>
+      <h1 class="c-big-header__title">{{ title }}</h1>
+      <h2 class="c-big-header__sub-title">{{ subtitle }}</h2>
+      <p class="c-big-header__text">{{ text }}</p>
+      <nuxt-link class="c-big-header__link blue-btn-arrow" to="/" v-if="btn">{{ btn }}</nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SimpleHeader",
+  name: "BigHeader",
   props: {
     title: String,
     subtitle: String,
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
-.c-simple-header {
+.c-big-header {
   padding: rem(108) 0 rem(171);
   color: $light_blue;
   min-height: calc(100vh - 100px);
