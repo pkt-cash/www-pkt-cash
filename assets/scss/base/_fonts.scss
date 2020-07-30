@@ -2,7 +2,7 @@
 @include font_face(Poppins-Bold, Poppins-Bold);
 
 %bold {
-  font-family: 'Poppins-Bold', sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
 }
 
 // ################ Poppins-Bold ################
@@ -10,7 +10,31 @@
 @include font_face(Poppins-Regular, Poppins-Regular);
 
 %regular {
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: "Poppins-Regular", sans-serif;
+}
+
+// ################ Poppins-Regular ################
+// ================ Poppins-Medium ================
+@include font_face(Poppins-Medium, Poppins-Medium);
+
+%medium {
+  font-family: "Poppins-Medium", sans-serif;
+}
+
+// ################ Poppins-Medium ################
+// ================ Poppins-MediumItalic ================
+@include font_face(Poppins-MediumItalic, Poppins-MediumItalic);
+
+%medium-italic {
+  font-family: "Poppins-MediumItalic", sans-serif;
+}
+
+// ################ Poppins-MediumItalic ################
+// ================ Poppins-Light ================
+@include font_face(Poppins-Light, Poppins-Light);
+
+%light {
+  font-family: "Poppins-Light", sans-serif;
 }
 
 // ################ Poppins-Regular ################
@@ -18,10 +42,34 @@
 @include font_face(Poppins-SemiBold, Poppins-SemiBold);
 
 %semibold {
-  font-family: 'Poppins-SemiBold', sans-serif;
+  font-family: "Poppins-SemiBold", sans-serif;
 }
 
 // ################ Poppins-SemiBold ################
+// ================ TTNorms-Regular ================
+@include font_face(TTNorms-Regular, TTNorms-Regular);
+
+%norms-regular {
+  font-family: "TTNorms-Regular", sans-serif;
+}
+
+// ################ TTNorms-Regular ################
+// ================ TTNorms-Bold ================
+@include font_face(TTNorms-Bold, TTNorms-Bold);
+
+%norms-bold {
+  font-family: "TTNorms-Bold", sans-serif;
+}
+
+// ################ TTNorms-Bold ################
+// ================ TTNorms-Light ================
+@include font_face(TTNorms-Light, TTNorms-Light);
+
+%norms-light {
+  font-family: "TTNorms-Light", sans-serif;
+}
+
+// ################ TTNorms-Light ################
 
 // ====================== Font sizes =======================
 %ttu {
@@ -60,6 +108,36 @@
 %h3-title {
   @extend %semibold;
   @include font_sizes(25, 35);
+}
+
+// P
+%text-main {
+  @extend %regular;
+  @include font_sizes(25, 40);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(23, 35);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(20, 32);
+  }
+  @include for-width(-small-lg) {
+    @include font_sizes(17, 27);
+  }
+}
+
+// Quote
+%italic-quote {
+  @extend %medium-italic;
+  @include font_sizes(32, 52);
+  @include for-width(-tablet-lg) {
+    @include font_sizes(23, 35);
+  }
+  @include for-width(-tablet) {
+    @include font_sizes(20, 32);
+  }
+  @include for-width(-small-lg) {
+    @include font_sizes(17, 27);
+  }
 }
 
 // Body
