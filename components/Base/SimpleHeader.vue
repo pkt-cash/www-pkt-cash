@@ -2,8 +2,8 @@
   <div class="c-simple-header" :style="{ 'background-image': 'url(' + bg + ')'}">
     <div class="container">
       <h1 class="c-simple-header__title">{{ title }}</h1>
-      <h2 class="c-simple-header__sub-title">{{ subtitle }}</h2>
-      <p class="c-simple-header__text">{{ text }}</p>
+      <h2 class="c-simple-header__sub-title" v-if="subtitle">{{ subtitle }}</h2>
+      <p class="c-simple-header__text" v-if="text">{{ text }}</p>
     </div>
   </div>
 </template>
@@ -41,15 +41,16 @@ export default {
 
   &__title {
     @extend %h1-title;
-    margin-bottom: rem(41);
   }
 
   &__sub-title {
     @extend %h2-title;
+    margin-top: rem(41);
   }
 
   &__text {
     @extend %text-main;
+    margin-top: rem(41);
   }
 }
 </style>

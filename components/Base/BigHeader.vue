@@ -2,9 +2,16 @@
   <div class="c-big-header" :style="{ 'background-image': 'url(' + bg + ')'}">
     <div class="container">
       <h1 class="c-big-header__title">{{ title }}</h1>
-      <h2 class="c-big-header__sub-title">{{ subtitle }}</h2>
-      <p class="c-big-header__text">{{ text }}</p>
+      <h2 class="c-big-header__sub-title" v-if="subtitle">{{ subtitle }}</h2>
+      <p class="c-big-header__text" v-if="text">{{ text }}</p>
+      <ul class="c-big-header__list" v-if="list">
+        <li v-for="item of list" :key="item" class="c-big-header__list-item">{{ item }}</li>
+      </ul>
+      <ul class="c-big-header__list--tick" v-if="listTick">
+        <li v-for="item of listTick" :key="item" class="c-big-header__list--tick-item">{{ item }}</li>
+      </ul>
       <nuxt-link class="c-big-header__link blue-btn-arrow" to="/" v-if="btn">{{ btn }}</nuxt-link>
+      <p class="c-big-header__sometext" v-if="sometext">{{ sometext }}</p>
     </div>
   </div>
 </template>
@@ -16,7 +23,10 @@ export default {
     title: String,
     subtitle: String,
     text: String,
+    list: Array,
+    listTick: Array,
     btn: String,
+    sometext: String,
     bg: String,
   },
 };
@@ -46,15 +56,71 @@ export default {
 
   &__title {
     @extend %h1-title;
-    margin-bottom: rem(41);
   }
 
   &__sub-title {
     @extend %h2-title;
+    margin-top: rem(40);
   }
 
   &__text {
     @extend %text-main;
+    margin-top: rem(40);
+  }
+
+  &__sometext {
+    @extend %text-main;
+    margin-top: rem(130);
+  }
+
+  &__list {
+    margin-top: rem(40);
+
+    &-item {
+      @extend %text-main;
+      padding-left: rem(30);
+      margin-bottom: rem(20);
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: rem(20);
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        background-color: $light_blue;
+      }
+    }
+  }
+
+  &__list--tick {
+    margin-top: rem(40);
+
+    &-item {
+      @extend %text-main;
+      padding-left: rem(100);
+      margin-bottom: rem(20);
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: rem(29);
+        height: rem(22);
+        background-image: url("/img/tick.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 
   &__link {
