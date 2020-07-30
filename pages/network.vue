@@ -16,7 +16,7 @@
 
 <script>
 import BigHeader from "~/components/Base/BigHeader";
-import NetworkMain from "~/components/NetWork/Main";
+import NetworkMain from "~/components/Network/Main";
 
 export default {
   components: {
