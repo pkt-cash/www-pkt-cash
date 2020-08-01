@@ -137,11 +137,14 @@ export default {
 .c-content-main {
   & .container {
     width: 100%;
-    max-width: rem(1182);
+    max-width: rem(1138);
   }
 
   &__content {
     max-width: calc(100% - 435px);
+    @include for-width(-tablet) {
+      max-width: 100%;
+    }
   }
 }
 </style>

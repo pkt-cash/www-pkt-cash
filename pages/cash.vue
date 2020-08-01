@@ -3,7 +3,7 @@
     <section class="v-cash-section">
       <SimpleHeader
         title="PKT"
-        subTitle="PKT is paid to PacketCrypt miners"
+        subtitle="PKT is paid to PacketCrypt miners"
         bg="/img/cash-header-bg.jpg"
       />
     </section>

@@ -73,6 +73,10 @@ export default {
 
   &__captcha {
     margin-bottom: rem(50);
+
+    & img {
+      max-width: 100%;
+    }
   }
 }
 </style>

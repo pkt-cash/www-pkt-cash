@@ -128,7 +128,11 @@ export default {
   }
 
   &__content {
+    width: 100%;
     max-width: calc(100% - 435px);
+    @include for-width(-tablet) {
+      max-width: 100%;
+    }
   }
 }
 </style>

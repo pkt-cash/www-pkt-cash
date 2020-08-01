@@ -13,14 +13,20 @@
   border-radius: rem(48);
   padding: rem(17) rem(34);
   @include font_sizes(17, 24);
+  @include for-width(-tablet) {
+    padding: rem(14) rem(40);
+    @include font_sizes(15, 22);
+  }
 }
 
 %blue-button-arrow {
-  padding-right: rem(60);
-  background-image: url("/img/btn-arrow.svg");
-  background-size: 5px 8px;
-  background-position: 88% 50%;
-  background-repeat: no-repeat;
+  @include for-width(+ tablet) {
+    padding-right: rem(60);
+    background-image: url("/img/btn-arrow.svg");
+    background-size: 5px 8px;
+    background-position: 88% 50%;
+    background-repeat: no-repeat;
+  }
 }
 
 .btn-nav {

@@ -84,6 +84,13 @@ export default {
 
 <style lang="scss">
 .c-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: 100;
+
   & .container {
     width: 100%;
     max-width: rem(1315);
@@ -100,7 +107,6 @@ export default {
   @include for-width(-small-md) {
     height: rem(45);
   }
-  background-color: $white;
 
   &__logo {
     cursor: pointer;

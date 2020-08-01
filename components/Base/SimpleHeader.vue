@@ -22,8 +22,15 @@ export default {
 
 <style lang="scss">
 .c-simple-header {
-  padding: rem(108) 0 rem(171);
+  padding: rem(208) 0 rem(171);
   min-height: 30vw;
+  @include for-width(-small-lg) {
+    padding: rem(100) 0 rem(28);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
   color: $light_blue;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,11 +38,11 @@ export default {
 
   & .container {
     width: 100%;
-    max-width: rem(1100);
+    max-width: rem(1118);
     margin: 0 auto;
-    padding: 0 rem(400) 0 rem(15);
+    padding: 0 rem(400) 0 rem(25);
     @include for-width(-desktop-med) {
-      padding: 0 rem(15);
+      padding: 0 rem(25);
     }
   }
 
@@ -46,11 +53,17 @@ export default {
   &__sub-title {
     @extend %h2-title;
     margin-top: rem(41);
+    @include for-width(-small-lg) {
+      margin-top: rem(14);
+    }
   }
 
   &__text {
     @extend %text-main;
     margin-top: rem(41);
+    @include for-width(-small-lg) {
+      margin-top: rem(14);
+    }
   }
 }
 </style>

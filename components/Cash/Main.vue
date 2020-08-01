@@ -24,8 +24,9 @@
         satoshi was almost two 100ths of a penny, approaching a range where it
         would become impractical for microtransactions, even with nearly free
         transacting over the Lightning Network.
-        <br />
-        <br />PKT is designed around the
+      </p>
+      <p class="c-cash-main__text">
+        PKT is designed around the
         idea of small denominations, fast cheap transacting, using the Network
         Steward for funding the build-out of decentralized internet
         infrastructure and PacketCrypt creating artificial demand for bandwidth.
@@ -51,7 +52,7 @@ export default {
 
   & .container {
     width: 100%;
-    max-width: rem(1100);
+    max-width: rem(1075);
     margin: 0 auto;
   }
 
@@ -60,7 +61,7 @@ export default {
     color: $dark_blue;
 
     &:not(:last-child) {
-      margin-bottom: rem(75);
+      margin-bottom: rem(28);
     }
 
     & br {
@@ -69,6 +70,7 @@ export default {
   }
 
   &__grafic {
+    margin-top: rem(75);
     margin-bottom: rem(100);
     width: 100%;
 
@@ -80,7 +82,7 @@ export default {
 
     &-caption {
       width: 100%;
-      margin-top: rem(40);
+      margin-top: rem(33);
       text-align: center;
       @extend %light;
       @include font_sizes(24, 35);

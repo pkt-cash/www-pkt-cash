@@ -59,6 +59,9 @@ export default {
   &__list {
     display: flex;
     justify-content: space-between;
+    @include for-width(-tablet) {
+      flex-direction: column;
+    }
   }
 
   &__item {

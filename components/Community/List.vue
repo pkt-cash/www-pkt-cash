@@ -4,11 +4,13 @@
       <h1 class="c-community-list__title">{{ title }}</h1>
       <p class="c-community-list__text">{{ text }}</p>
       <div class="c-community-list__item" v-for="item of list" :key="item.title">
-        <h1 class="c-community-list__item-title">{{ item.title }}</h1>
-        <p class="c-community-list__item-text">{{ item.text }}</p>
-        <figure class="c-community-list__item-img">
-          <img :src="item.img" alt />
-        </figure>
+        <nuxt-link class="c-community-list__item-wrap" to="/">
+          <h1 class="c-community-list__item-title">{{ item.title }}</h1>
+          <p class="c-community-list__item-text">{{ item.text }}</p>
+          <figure class="c-community-list__item-img">
+            <img :src="item.img" alt />
+          </figure>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -54,6 +56,10 @@ export default {
     margin-bottom: rem(30);
     box-shadow: 4px 4px 10px rgba(25, 25, 68, 0.1);
     position: relative;
+
+    &-wrap {
+      cursor: pointer;
+    }
 
     &-title {
       @extend %h3-title;

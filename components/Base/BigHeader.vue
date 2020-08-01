@@ -34,12 +34,12 @@ export default {
 
 <style lang="scss">
 .c-big-header {
-  padding: rem(108) 0 rem(171);
-  color: $light_blue;
-  min-height: calc(100vh - 100px);
-  @include for-width(-small-md) {
-    min-height: calc(100vh - 45px);
+  padding: rem(208) 0 rem(171);
+  @include for-width(-tablet) {
+    padding: rem(170) 0 rem(30);
   }
+  color: $light_blue;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
