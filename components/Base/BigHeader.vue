@@ -79,6 +79,9 @@ export default {
     &-item {
       @extend %text-main;
       padding-left: rem(30);
+      @include for-width(-tablet) {
+        padding-left: rem(15);
+      }
       margin-bottom: rem(20);
       position: relative;
 
@@ -103,6 +106,9 @@ export default {
     &-item {
       @extend %text-main;
       padding-left: rem(100);
+      @include for-width(-tablet) {
+        padding-left: rem(50);
+      }
       margin-bottom: rem(20);
       position: relative;
 

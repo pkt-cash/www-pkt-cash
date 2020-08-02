@@ -10,6 +10,7 @@ img {
   display: inline-block;
   width: inherit;
   height: inherit;
+  max-width: 100%;
 }
 a {
   &:hover {
@@ -43,7 +44,7 @@ a {
   &__navigation {
     padding-top: rem(30);
     flex: 0 0 auto;
-    margin-right: rem(70);
+    width: rem(220);
     @include for-width(-tablet) {
       display: none;
     }

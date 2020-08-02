@@ -33,7 +33,7 @@ export default {
 
   .container {
     width: 100%;
-    max-width: rem(825);
+    max-width: rem(748);
     margin: 0 auto;
   }
 
@@ -54,7 +54,7 @@ export default {
     @extend %regular;
     @include font_sizes(17, 27);
     width: 100%;
-    padding: rem(16) rem(25);
+    padding: rem(16) rem(33) rem(17);
     margin-bottom: rem(30);
     background-color: $light_blue;
     border-radius: rem(20);

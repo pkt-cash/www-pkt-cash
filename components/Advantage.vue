@@ -34,6 +34,9 @@
             <nuxt-link to="/" class="c-advantage__link blue-btn-arrow" v-if="item.btnText">
               <span>{{ item.btnText }}</span>
             </nuxt-link>
+            <nuxt-link to="/" class="c-advantage__link-more blue-btn-arrow" v-if="item.learnMore">
+              <span>Learn More</span>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -57,10 +60,15 @@ export default {
     @include for-width(-small-lg) {
       padding: rem(29) rem(25) rem(40);
     }
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     background-color: $light_blue;
+    @include for-width(-small-lg) {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
   }
 
   &__item-blue {
@@ -101,6 +109,9 @@ export default {
       top: 15%;
       left: rem(-10);
       transform: translateX(-100%);
+      @include for-width(-tablet) {
+        display: none;
+      }
     }
   }
 
@@ -127,6 +138,17 @@ export default {
     margin-top: rem(50);
     @include for-width(-small-lg) {
       margin-top: rem(40);
+    }
+
+    &-more {
+      background-color: transparent !important;
+      border: 1px solid $light_blue;
+      @include for-width(+ tablet) {
+        margin-left: rem(18);
+      }
+      @include for-width(-tablet) {
+        margin-top: rem(18);
+      }
     }
   }
 }

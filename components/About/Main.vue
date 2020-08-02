@@ -73,51 +73,78 @@ export default {
 
 <style lang="scss">
 .c-about-main {
-  padding: rem(100) 0 rem(180);
+  padding: rem(93) rem(25) rem(197);
+  @include for-width(-tablet) {
+    padding: rem(30) rem(25) rem(197);
+  }
 
   & .container {
     width: 100%;
-    max-width: rem(1100);
+    max-width: rem(1217);
     margin: 0 auto;
-    padding: 0 rem(15);
   }
 
   &__title {
     @extend %h1-title;
     color: $dark_blue;
     margin-bottom: rem(40);
+    @include for-width(-tablet) {
+      margin-bottom: rem(20);
+    }
   }
 
   &__subtitle {
     @extend %h2-title;
     color: $dark_blue;
-    margin-bottom: rem(60);
+    margin-bottom: rem(61);
+    @include for-width(-tablet) {
+      text-align: center;
+      margin-bottom: rem(30);
+    }
   }
 
   &__text {
     @extend %text-main;
     color: $dark_blue;
-    margin-bottom: rem(15);
+    margin-bottom: rem(20);
+    @include for-width(-tablet) {
+      margin-bottom: rem(10);
+    }
   }
 
   &__quote {
     display: block;
     @extend %italic-quote;
     color: $dark_blue;
-    margin: rem(80) auto;
-    max-width: 85%;
+    margin: rem(60) auto;
     text-align: center;
+    @include for-width(-tablet) {
+      margin: rem(40) auto;
+    }
+    @include for-width(+ tablet) {
+      max-width: 85%;
+    }
   }
 
   &__signature {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: rem(40) rem(200) rem(60) auto;
+    margin: rem(40) rem(200) rem(66) auto;
+    @include for-width(-tablet) {
+      margin: rem(23) rem(0) rem(40) auto;
+    }
+
+    @include for-width(-tablet) {
+      & img {
+        height: rem(60);
+      }
+    }
 
     &-name {
       @include font_sizes(18, 20);
       color: $dark_blue;
+      margin-top: rem(10);
     }
   }
 
@@ -126,9 +153,18 @@ export default {
     justify-content: center;
     align-items: center;
     margin-bottom: rem(100);
+    @include for-width(-tablet) {
+      flex-direction: column;
+      margin-bottom: rem(40);
+    }
 
     &-link:not(:last-child) {
-      margin-right: rem(40);
+      @include for-width(-tablet) {
+        margin-bottom: rem(20);
+      }
+      @include for-width(+ tablet) {
+        margin-right: rem(40);
+      }
     }
   }
 

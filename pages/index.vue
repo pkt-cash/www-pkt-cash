@@ -1,36 +1,56 @@
 <template>
-  <div class="v-network">
-    <section class="v-network-section">
-      <BigHeader
-        title="Wallet Setup"
-        subtitle="PKT Wallet Installation"
-        text="To set up the command line wallet for PKT you will need:"
-        :list="wallet_setup"
-        sometext="Here are instructions to install the command line wallet:"
-        bg="/img/wallet-setup-header-bg.jpg"
-      />
+  <div class="v-index">
+    <section class="v-index-section">
+      <IndexHeader />
     </section>
-    <section class="v-network-section">
-      <WalletSetupMain />
+    <section class="v-index-section">
+      <IndexFeatures />
+    </section>
+    <section class="v-mining-section">
+      <Advantage :list="advantage_list" />
+    </section>
+    <section class="v-index-section">
+      <IndexJoin />
     </section>
   </div>
 </template>
 
 <script>
-import BigHeader from "~/components/Base/BigHeader";
-import WalletSetupMain from "~/components/Wallet/SetupMain";
+import IndexHeader from "~/components/Index/IndexHeader";
+import IndexFeatures from "~/components/Index/IndexFeatures";
+import IndexJoin from "~/components/Index/IndexJoin";
+import Advantage from "~/components/Advantage";
 
 export default {
   components: {
-    BigHeader,
-    WalletSetupMain,
+    IndexHeader,
+    IndexFeatures,
+    IndexJoin,
+    Advantage,
   },
   data() {
     return {
-      wallet_setup: [
-        "the PKT daemon",
-        "the PKT wallet",
-        "and pktctl for interacting with the wallet",
+      advantage_list: [
+        {
+          title: "Network Steward",
+          text:
+            "The network steward is an address which gets 20% of every new block-mine so that the developers can finance the building of mesh network technology. Unlike a premine or founder’s fee, the recipient of the network steward payout can be changed by a PoS vote.",
+          btnText: "Submit Proposal",
+          img: "/img/advantage/index-1-mobile.png",
+          aligh: true,
+          textSVG: true,
+          colorBlue: true,
+          learnMore: true,
+        },
+        {
+          title: "Wallet",
+          text:
+            "Currently there’s only a text based wallet for PKT and in order to install this you need to install the PKT daemon then the wallet, then btcctl for interacting with the wallet.",
+          btnText: "Install Wallet",
+          img: "/img/advantage/index-2-mobile.png",
+          aligh: false,
+          textSVG: true,
+        },
       ],
     };
   },
