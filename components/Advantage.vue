@@ -136,6 +136,7 @@ export default {
 
   &__link {
     margin-top: rem(50);
+    margin-right: rem(18);
     @include for-width(-small-lg) {
       margin-top: rem(40);
     }
@@ -143,12 +144,7 @@ export default {
     &-more {
       background-color: transparent !important;
       border: 1px solid $light_blue;
-      @include for-width(+ tablet) {
-        margin-left: rem(18);
-      }
-      @include for-width(-tablet) {
-        margin-top: rem(18);
-      }
+      margin-top: rem(18);
     }
   }
 }

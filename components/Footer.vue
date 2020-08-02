@@ -131,7 +131,7 @@ export default {
   & .container {
     width: 100%;
     padding: rem(76) rem(60);
-    @include for-width(-small-lg) {
+    @include for-width(-tablet) {
       padding: rem(30) rem(25);
     }
     margin: 0 auto;
@@ -144,7 +144,11 @@ export default {
 
   &__logo {
     margin-right: rem(104);
-    @include for-width(-small-lg) {
+    @include for-width(-tablet-lg) {
+      margin-right: rem(35);
+      margin-bottom: rem(35);
+    }
+    @include for-width(-tablet) {
       width: 60%;
       margin-right: 0;
       order: 4;
@@ -157,12 +161,17 @@ export default {
 
   &__menu {
     margin-right: rem(85);
-    @include for-width(-small-lg) {
+    @include for-width(-tablet-lg) {
+      margin-right: rem(32);
+      margin-bottom: rem(35);
+    }
+    @include for-width(-tablet) {
       width: 50%;
       margin-right: 0;
+      margin-bottom: 0;
     }
 
-    @include for-width(-small-lg) {
+    @include for-width(-tablet) {
       &:nth-child(2) {
         order: 1;
       }
@@ -239,7 +248,7 @@ export default {
 
   &__text {
     width: 100%;
-    @include for-width(-small-lg) {
+    @include for-width(-tablet) {
       width: 40%;
       order: 5;
       padding-top: rem(6);

@@ -159,6 +159,9 @@ export default {
         margin-bottom: rem(20);
       }
       @include for-width(+ laptop) {
+        margin-left: rem(22);
+      }
+      @include for-width(+ desktop-medium) {
         margin-left: rem(36);
       }
 
@@ -212,6 +215,9 @@ export default {
 
     &-blue {
       @include for-width(+ laptop) {
+        margin-left: rem(35);
+      }
+      @include for-width(+ desktop-medium) {
         margin-left: rem(120);
       }
 

@@ -99,14 +99,19 @@ export default {
 
     &-list {
       display: flex;
-      flex-wrap: wrap;
+      @include for-width(-tablet-lg) {
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
       flex: 0 0 33.33%;
       padding: 0 rem(50) rem(30);
-      @include for-width(-tablet) {
+      @include for-width(-tablet-lg) {
         flex: 0 0 100%;
+        padding: 0 0 rem(50);
+      }
+      @include for-width(-tablet) {
         padding: 0 0 rem(30);
       }
       display: flex;
@@ -136,6 +141,10 @@ export default {
         height: rem(75);
         margin-bottom: rem(25);
         text-align: center;
+      }
+
+      & img {
+        max-width: 100%;
       }
     }
   }

@@ -67,7 +67,7 @@ export default {
   &__title {
     flex: 0 0 55%;
     @extend %h1-title;
-    @include for-width(-tablet) {
+    @include for-width(-tablet-lg) {
       flex: 0 0 100%;
       margin-bottom: rem(6);
     }
@@ -75,7 +75,7 @@ export default {
 
   &__img {
     flex: 0 0 40%;
-    @include for-width(-tablet) {
+    @include for-width(-tablet-lg) {
       flex: 0 0 100%;
       margin-bottom: rem(100);
     }
@@ -92,6 +92,9 @@ export default {
 
     &-item {
       flex: 0 0 33.33%;
+      @include for-width(-tablet-lg) {
+        flex: 0 0 50%;
+      }
       @include for-width(-tablet) {
         flex: 0 0 100%;
         text-align: center;

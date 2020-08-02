@@ -78,11 +78,10 @@ export default {
     }
 
     &-link:not(:last-child) {
-      @include for-width(+ tablet) {
-        margin-right: rem(70);
-      }
+      margin-right: rem(70);
       @include for-width(-tablet) {
         margin-bottom: rem(20);
+        margin-right: rem(35);
       }
     }
   }
