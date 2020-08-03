@@ -5,7 +5,7 @@
         class="c-advantage__item"
         :class="{ 'c-advantage__item-blue': item.colorBlue }"
         :key="item.title"
-        :style="{ 'background-image': 'url(' + item.img + ')' }"
+        :style="{ 'background-image': `url(${is_mobile ? item.mobile_img : item.img})` }"
       >
         <div class="container" :class="{ 'container-blue': item.colorBlue }">
           <div class="c-advantage__wrap" :class="{ 'c-advantage__wrap-right': item.aligh }">
@@ -49,6 +49,11 @@ export default {
   name: "Advatage",
   props: {
     list: Array,
+  },
+  computed: {
+    is_mobile() {
+      return process.client ? window.innerWidth < 768 : false;
+    }
   },
 };
 </script>

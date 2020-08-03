@@ -7,7 +7,7 @@
       <IndexFeatures />
     </section>
     <section class="v-scroll-section">
-
+      <IndexScrollSection/>
     </section>
     <section class="v-mining-section">
       <Advantage :list="advantage_list" />
@@ -23,9 +23,11 @@ import IndexHeader from "~/components/Index/IndexHeader";
 import IndexFeatures from "~/components/Index/IndexFeatures";
 import IndexJoin from "~/components/Index/IndexJoin";
 import Advantage from "~/components/Advantage";
+import IndexScrollSection from "~/components/Index/IndexScrollSection";
 
 export default {
   components: {
+    IndexScrollSection,
     IndexHeader,
     IndexFeatures,
     IndexJoin,
@@ -40,6 +42,7 @@ export default {
             "The network steward is an address which gets 20% of every new block-mine so that the developers can finance the building of mesh network technology. Unlike a premine or founder’s fee, the recipient of the network steward payout can be changed by a PoS vote.",
           btnText: "Submit Proposal",
           img: "/img/advantage/index-1.png",
+          mobile_img: "/img/advantage/index-1-mobile.png",
           aligh: true,
           textSVG: true,
           colorBlue: true,
@@ -50,7 +53,8 @@ export default {
           text:
             "Currently there’s only a text based wallet for PKT and in order to install this you need to install the PKT daemon then the wallet, then btcctl for interacting with the wallet.",
           btnText: "Install Wallet",
-          img: "/img/advantage/index-2-mobile.png",
+          img: "/img/advantage/index-2.png",
+          mobile_img: "/img/advantage/index-2-mobile.png",
           aligh: false,
           textSVG: true,
         },
