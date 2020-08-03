@@ -6,6 +6,9 @@
     <section class="v-index-section">
       <IndexFeatures />
     </section>
+    <section class="v-scroll-section">
+
+    </section>
     <section class="v-mining-section">
       <Advantage :list="advantage_list" />
     </section>
