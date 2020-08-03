@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "IndexFeatures",
+  name: "IndexJoin",
 };
 </script>
 

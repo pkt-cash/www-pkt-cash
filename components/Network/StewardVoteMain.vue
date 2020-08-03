@@ -6,13 +6,13 @@
         <div class="c-content-main__navigation">
           <ul class="c-content-main__navigation-list">
             <li class="c-content-main__navigation-item">
-              <a href="#how-voting-works" class="c-content-main__navigation-link">How voting works</a>
+              <a href="#how-voting-works" @click="itm_link = 'how-voting-works'" :class="{ active: itm_link === 'how-voting-works'}" class="c-content-main__navigation-link">How voting works</a>
             </li>
             <li class="c-content-main__navigation-item">
-              <a href="#how-to-vote" class="c-content-main__navigation-link active">How to vote</a>
+              <a href="#how-to-vote" @click="itm_link = 'how-to-vote'" :class="{ active: itm_link === 'how-to-vote'}" class="c-content-main__navigation-link">How to vote</a>
             </li>
             <li class="c-content-main__navigation-item">
-              <a href="#resources" class="c-content-main__navigation-link">Resources</a>
+              <a href="#resources" @click="itm_link = 'resources'" :class="{ active:itm_link === 'resources'}" class="c-content-main__navigation-link">Resources</a>
             </li>
           </ul>
         </div>
@@ -168,6 +168,11 @@ export default {
     text: String,
     bg: String,
   },
+  data() {
+    return {
+      itm_link: null
+    }
+  }
 };
 </script>
 

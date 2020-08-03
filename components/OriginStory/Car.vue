@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "OriginStoryCompass",
+  name: "OriginStoryCar",
 };
 </script>
 

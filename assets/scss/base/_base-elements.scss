@@ -17,6 +17,10 @@
     padding: rem(14) rem(40);
     @include font_sizes(15, 22);
   }
+  min-width: rem(150);
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
 %blue-button-arrow {
@@ -44,8 +48,8 @@
   @extend %blue-button;
   @extend %blue-button-arrow;
   @include for-width(-tablet) {
-    padding-left: rem(8);
-    padding-right: rem(8);
+    padding-left: rem(15);
+    padding-right: rem(15);
     font-size: rem(14);
   }
 }
