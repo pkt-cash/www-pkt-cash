@@ -26,7 +26,7 @@
             <br />wallet for desktop
           </a>
           <nuxt-link class="c-wallet-options__item-btn blue-btn-arrow" to="/">
-            <span>Setup Wallet</span>
+            <span>Download Beta</span>
           </nuxt-link>
         </div>
       </div>
