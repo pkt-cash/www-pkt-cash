@@ -9,24 +9,32 @@
               <a
                 href="#network-steward-charter"
                 class="c-content-main__navigation-link"
+                @click="itm_link = 'network-steward-charter'"
+                :class="{ active: itm_link === 'network-steward-charter'}"
               >Network Steward Charter</a>
             </li>
             <li class="c-content-main__navigation-item">
               <a
                 href="#funding-proposal"
-                class="c-content-main__navigation-link active"
+                class="c-content-main__navigation-link"
+                @click="itm_link = 'funding-proposal'"
+                :class="{ active: itm_link === 'funding-proposal'}"
               >Funding Proposal</a>
             </li>
             <li class="c-content-main__navigation-item">
               <a
                 href="#network-steward-projects"
                 class="c-content-main__navigation-link"
+                @click="itm_link = 'network-steward-projects'"
+                :class="{ active: itm_link === 'network-steward-projects'}"
               >Network Steward Projects</a>
             </li>
             <li class="c-content-main__navigation-item">
               <a
                 href="#who-is-the-network-steward"
                 class="c-content-main__navigation-link"
+                @click="itm_link = 'who-is-the-network-steward'"
+                :class="{ active: itm_link === 'who-is-the-network-steward'}"
               >Who is the Network Steward</a>
             </li>
           </ul>
@@ -141,6 +149,11 @@ export default {
     title: String,
     text: String,
     bg: String,
+  },
+  data() {
+    return {
+      itm_link: null
+    }
   },
 };
 </script>
