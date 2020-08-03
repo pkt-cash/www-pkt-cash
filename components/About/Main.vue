@@ -189,6 +189,10 @@ export default {
     position: relative;
     margin: rem(100) auto 0;
     max-width: rem(750);
+    @include for-width(-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &-input {
       width: 100%;
@@ -209,6 +213,11 @@ export default {
       position: absolute;
       top: 0;
       right: 0;
+      @include for-width(-tablet) {
+        position: static;
+        margin-top: rem(20);
+        text-align: center;
+      }
     }
   }
 }

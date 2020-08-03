@@ -36,7 +36,7 @@ export default {
           text:
             "The network steward is an address which gets 20% of every new block-mine so that the developers can finance the building of mesh network technology. Unlike a premine or founder’s fee, the recipient of the network steward payout can be changed by a PoS vote.",
           btnText: "Submit Proposal",
-          img: "/img/advantage/index-1-mobile.png",
+          img: "/img/advantage/index-1.png",
           aligh: true,
           textSVG: true,
           colorBlue: true,

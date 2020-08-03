@@ -12,6 +12,10 @@
       </ul>
       <nuxt-link class="c-big-header__link blue-btn-arrow" to="/" v-if="btn">{{ btn }}</nuxt-link>
       <p class="c-big-header__sometext" v-if="sometext">{{ sometext }}</p>
+      <div class="c-big-header__email" v-if="email">
+        <input type="text" placeholder="Email" class="c-big-header__email-input" />
+        <button class="c-big-header__email-btn blue-btn">Join The Community</button>
+      </div>
     </div>
   </div>
 </template>
@@ -28,6 +32,7 @@ export default {
     btn: String,
     sometext: String,
     bg: String,
+    email: Boolean,
   },
 };
 </script>
@@ -80,7 +85,7 @@ export default {
       @extend %text-main;
       padding-left: rem(30);
       @include for-width(-tablet) {
-        padding-left: rem(15);
+        padding-left: rem(25);
       }
       margin-bottom: rem(20);
       position: relative;
@@ -89,6 +94,9 @@ export default {
         position: absolute;
         content: "";
         top: rem(20);
+        @include for-width(-tablet) {
+          top: rem(15);
+        }
         left: 0;
         transform: translateY(-50%);
         display: block;
@@ -131,6 +139,43 @@ export default {
 
   &__link {
     margin-top: rem(50);
+  }
+
+  &__email {
+    display: block;
+    position: relative;
+    margin: rem(50) auto 0 0;
+    max-width: rem(750);
+    @include for-width(-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-input {
+      width: 100%;
+      background-color: $dark_blue;
+      padding: rem(17) rem(34);
+      @include font_sizes(17, 24);
+      border-radius: rem(48);
+      border: none;
+      color: $light_blue;
+
+      &::placeholder {
+        color: $light_blue;
+        opacity: 0.8;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include for-width(-tablet) {
+        position: static;
+        margin-top: rem(20);
+        text-align: center;
+      }
+    }
   }
 }
 </style>

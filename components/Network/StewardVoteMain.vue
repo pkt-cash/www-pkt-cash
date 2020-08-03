@@ -179,7 +179,11 @@ export default {
   }
 
   &__content {
-    max-width: calc(100% - 435px);
+    width: 100%;
+    max-width: calc(100% - 440px);
+    @include for-width(-tablet) {
+      max-width: 100%;
+    }
   }
 }
 </style>

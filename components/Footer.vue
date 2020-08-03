@@ -130,6 +130,7 @@ export default {
 
   & .container {
     width: 100%;
+    max-width: rem(1300);
     padding: rem(76) rem(60);
     @include for-width(-tablet) {
       padding: rem(30) rem(25);
