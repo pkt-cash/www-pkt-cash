@@ -95,14 +95,14 @@ npm install</pre>
       <div class="container">
         <h1 class="c-setup-main__title">Begin Mining</h1>
         <div class="c-setup-main__wrap grid">
-         <div class="wrapper-text">
-           <p
-             class="c-setup-main__text"
-           >There are two types of mining available and pools should typically make about 50% of their payment to their announcement miners and 50% of their payment to their block miners.</p>
-           <p
-             class="c-setup-main__text"
-           >Devices with low available memory and/or slow internet connection should prefer to do announcement mining while devices with high speed internet and lots of available memory may prefer block mining.</p>
-         </div>
+          <div class="wrapper-text">
+            <p
+              class="c-setup-main__text"
+            >There are two types of mining available and pools should typically make about 50% of their payment to their announcement miners and 50% of their payment to their block miners.</p>
+            <p
+              class="c-setup-main__text"
+            >Devices with low available memory and/or slow internet connection should prefer to do announcement mining while devices with high speed internet and lots of available memory may prefer block mining.</p>
+          </div>
           <div class="wrapper-text">
             <p
               class="c-setup-main__text"
@@ -199,13 +199,11 @@ export default {
 .c-setup-main {
   padding: rem(118) rem(80);
   @include for-width(-tablet) {
-    padding-left: rem(15);
-    padding-right: rem(15);
+    padding: rem(25) rem(25) rem(30);
   }
   background-color: $dark_blue;
   color: $light_blue;
-  &
-  & .container {
+  & & .container {
     width: 100%;
     max-width: rem(1129);
     margin: 0 auto;

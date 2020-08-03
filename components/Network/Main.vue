@@ -136,7 +136,7 @@
 
 <script>
 export default {
-  name: "SetupMain",
+  name: "NetworkMain",
   props: {
     title: String,
     text: String,

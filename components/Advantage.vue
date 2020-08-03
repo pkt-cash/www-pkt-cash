@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: "Advatage",
+  name: "Advantage",
   props: {
     list: Array,
   },
