@@ -10,10 +10,10 @@
       </div>
       <div class="c-mining-header__button">
         <h3 class="c-mining-header__button-title">In order to begin mining, you will need to:</h3>
-        <nuxt-link to="#" class="c-mining-header__button-link blue-btn-arrow">
+        <nuxt-link to="/wallet" class="c-mining-header__button-link blue-btn-arrow">
           <span class="c-mining-header__button-btn">Setup a Wallet</span>
         </nuxt-link>
-        <nuxt-link to="#" class="c-mining-header__button-link blue-btn-arrow">
+        <nuxt-link to="/setup" class="c-mining-header__button-link blue-btn-arrow">
           <span class="c-mining-header__button-btn">Install PacketCrypt</span>
         </nuxt-link>
       </div>
@@ -29,6 +29,11 @@ export default {
 
 <style lang="scss">
 .c-mining-header {
+  min-height: 100vh;
+  padding: rem(209) rem(25) rem(122);
+  @include for-width(-tablet) {
+    padding: rem(150) rem(25) rem(30);
+  }
   background-image: url("/img/mining-header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,24 +42,25 @@ export default {
 
   & .container {
     width: 100%;
-    max-width: rem(1098);
-    padding: rem(109) rem(15) rem(122);
+    max-width: rem(1070);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: calc(100vh - 100px);
-    @include for-width(-small-md) {
-      min-height: calc(100vh - 45px);
-    }
   }
 
   &__title {
-    margin-bottom: rem(60);
+    margin-bottom: rem(120);
+    @include for-width(-tablet) {
+      margin-bottom: rem(15);
+    }
 
     &-header {
       @extend %h1-title;
       margin-bottom: rem(21);
+      @include for-width(-tablet) {
+        display: none;
+      }
     }
 
     &-text {
@@ -64,12 +70,19 @@ export default {
 
   &__button {
     &-title {
-      @extend %h3-title;
+      @include font_sizes(25, 50);
+      @include for-width(-tablet) {
+        @include font_sizes(16, 26);
+      }
       margin-bottom: rem(50);
     }
 
     &-link:not(:last-child) {
       margin-right: rem(70);
+      @include for-width(-tablet) {
+        margin-bottom: rem(20);
+        margin-right: rem(35);
+      }
     }
   }
 }

@@ -70,12 +70,20 @@
             <p
               class="c-content-main__text"
             >Periodically The Network Steward will hold a meeting and decide on which proposals should be funded. The minutes of these meetings are published in the the ns-projects repository along with the projects and their status.</p>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/">
+            <a
+              href="https://github.com/pkt-cash/ns-projects"
+              target="_blank"
+              class="c-content-main__btn blue-btn-arrow"
+            >
               <span>Submit Proposal</span>
-            </nuxt-link>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/">
+            </a>
+            <a
+              href="https://github.com/pkt-cash/ns-projects/blob/master/projects/template.md"
+              target="_blank"
+              class="c-content-main__btn blue-btn-arrow"
+            >
               <span>Download Template</span>
-            </nuxt-link>
+            </a>
           </div>
           <!-- //Item 2 -->
 
@@ -83,9 +91,13 @@
           <div class="c-content-main__section" id="network-steward-projects">
             <h2 class="c-content-main__title">Network Steward Projects</h2>
             <p class="c-content-main__text">These are the various projects:</p>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/">
+            <a
+              href="https://github.com/pkt-cash/ns-projects/tree/master/projects"
+              target="_blank"
+              class="c-content-main__btn blue-btn-arrow"
+            >
               <span>Network Steward Projects</span>
-            </nuxt-link>
+            </a>
           </div>
           <!-- // Item 3 -->
 
@@ -111,7 +123,7 @@
             <p
               class="c-content-main__text"
             >All of the participants have agreed not to enter into any relationships which would affect their ability to act impartially on behalf of the PKT chain.</p>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/">
+            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/network-steward-vote">
               <span>Voting Details</span>
             </nuxt-link>
           </div>
@@ -137,11 +149,18 @@ export default {
 .c-content-main {
   & .container {
     width: 100%;
-    max-width: rem(1182);
+    max-width: rem(1138);
   }
 
   &__content {
     max-width: calc(100% - 435px);
+    @include for-width(-tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__navigation {
+    width: rem(250);
   }
 }
 </style>

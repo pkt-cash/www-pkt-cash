@@ -27,7 +27,11 @@ export default {
           text:
             "PacketCrypt is an algorithm designed to encourage cooperation between miners and investment into Internet infrastructure for high speed data encryption and decryption. Efficient mining is achieved only if miners communicate between one another and requires bandwidth to be expended in lieu of processor effort. The result is a bandwidth-hard PoW that combines 2 distinct stages: announcement mining and block mining, which together, collectively decentralizes the transmission of data across a distributed global network.  ",
           btnText: "Install Packet Crypt",
+          btnLink: "/setup",
           img: "/img/advantage/mining-1.png",
+          mobile_img: "/img/advantage/mining-1-mobile.png",
+          aligh: false,
+          textSVG: true,
         },
         {
           title: "Announcement Mining",
@@ -35,8 +39,11 @@ export default {
           text:
             "The announcement stage is where a miner creates a small (1KB) message that proves they did some work. Announcements are then collected by block miners to form blocks. Announcement miners seek to maximize the number of successful announcements which can be accepted into a block and need to maximize their bandwidth to achieve the optimal mining results. This in turn assures that the network has high throughput longitudinally. An announcement, by default, is the nodes network state. But an announcement can be any bit of data. ",
           btnText: "Start Mining",
+          btnLink: "/setup",
           img: "/img/advantage/mining-2.png",
+          mobile_img: "/img/advantage/mining-2-mobile.png",
           aligh: true,
+          textSVG: true,
         },
         {
           title: "Block Mining",
@@ -44,7 +51,11 @@ export default {
           text:
             "Block mining is the second stage and block miners are the traditional “miners” in the blockchain sense, as they validate the chain and get the payouts. Block miners collect announcements from announcement miners. Block miners get a discount on the difficulty of the work they must do based on the amount of fresh announcements they collect, so they are incentivized to have lots of announcements in memory at the time of mining and to pay announcement miners to keep them supplied",
           btnText: "Start Mining",
+          btnLink: "/setup",
           img: "/img/advantage/mining-3.png",
+          mobile_img: "/img/advantage/mining-3-mobile.png",
+          aligh: false,
+          textSVG: true,
         },
       ],
     };

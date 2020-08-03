@@ -1,7 +1,7 @@
 <template>
   <div class="v-about">
     <section class="v-about-section">
-      <SimpleHeader title="Wallet Setup" bg="/img/about-header-bg.jpg" />
+      <SimpleHeader title="About PKT" bg="/img/about-header-bg.jpg" />
     </section>
     <section class="v-about-section">
       <AboutMain />

@@ -2,26 +2,35 @@
   <div class="v-wallet">
     <section class="v-wallet-section">
       <BigHeader
-        title="Wallet Setup"
-        subtitle="PKT Wallet Installation"
-        text="To set up the command line wallet for PKT you will need:"
-        bg="/img/wallet-setup-header-bg.jpg"
+        title="Wallet"
+        subtitle="You store your PKT in a PKT Wallet"
+        :listTick="wallet_list"
+        bg="/img/wallet-header-bg.jpg"
       />
     </section>
     <section class="v-wallet-section">
-      <WalletSetupMain />
+      <WalletOptions />
     </section>
   </div>
 </template>
 
 <script>
 import BigHeader from "~/components/Base/BigHeader";
-import WalletSetupMain from "~/components/Wallet/SetupMain";
+import WalletOptions from "~/components/Wallet/Options";
 
 export default {
   components: {
     BigHeader,
-    WalletSetupMain,
+    WalletOptions,
+  },
+  data() {
+    return {
+      wallet_list: [
+        "The PKT Wallet allows you to send, receive and earn PKT.  ",
+        "The PKT Wallet allows you to send, receive and earn PKT.  ",
+        "The PKT Wallet allows you to send, receive and earn PKT.  ",
+      ],
+    };
   },
 };
 </script>

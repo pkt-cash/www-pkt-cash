@@ -48,10 +48,10 @@
         <figcaption class="c-about-main__signature-name">Caleb James DeLisle</figcaption>
       </figure>
       <div class="c-about-main__btns">
-        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/">
+        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/roadmap">
           <span>PKT Roadmap</span>
         </nuxt-link>
-        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/">
+        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/origin-story">
           <span>PKT Origin Story</span>
         </nuxt-link>
       </div>
@@ -73,51 +73,78 @@ export default {
 
 <style lang="scss">
 .c-about-main {
-  padding: rem(100) 0 rem(180);
+  padding: rem(93) rem(25) rem(197);
+  @include for-width(-tablet) {
+    padding: rem(30) rem(25) rem(197);
+  }
 
   & .container {
     width: 100%;
-    max-width: rem(1100);
+    max-width: rem(1217);
     margin: 0 auto;
-    padding: 0 rem(15);
   }
 
   &__title {
     @extend %h1-title;
     color: $dark_blue;
     margin-bottom: rem(40);
+    @include for-width(-tablet) {
+      margin-bottom: rem(20);
+    }
   }
 
   &__subtitle {
     @extend %h2-title;
     color: $dark_blue;
-    margin-bottom: rem(60);
+    margin-bottom: rem(61);
+    @include for-width(-tablet) {
+      text-align: center;
+      margin-bottom: rem(30);
+    }
   }
 
   &__text {
     @extend %text-main;
     color: $dark_blue;
-    margin-bottom: rem(15);
+    margin-bottom: rem(20);
+    @include for-width(-tablet) {
+      margin-bottom: rem(10);
+    }
   }
 
   &__quote {
     display: block;
     @extend %italic-quote;
     color: $dark_blue;
-    margin: rem(80) auto;
-    max-width: 85%;
+    margin: rem(60) auto;
     text-align: center;
+    @include for-width(-tablet) {
+      margin: rem(40) auto;
+    }
+    @include for-width(+ tablet) {
+      max-width: 85%;
+    }
   }
 
   &__signature {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: rem(40) rem(200) rem(60) auto;
+    margin: rem(40) rem(200) rem(66) auto;
+    @include for-width(-tablet) {
+      margin: rem(23) rem(0) rem(40) auto;
+    }
+
+    @include for-width(-tablet) {
+      & img {
+        height: rem(60);
+      }
+    }
 
     &-name {
-      @include font_sizes(18, 20);
+      @include font_sizes(14, 16);
       color: $dark_blue;
+      margin-top: rem(10);
     }
   }
 
@@ -126,9 +153,18 @@ export default {
     justify-content: center;
     align-items: center;
     margin-bottom: rem(100);
+    @include for-width(-tablet) {
+      flex-direction: column;
+      margin-bottom: rem(40);
+    }
 
     &-link:not(:last-child) {
-      margin-right: rem(40);
+      @include for-width(-tablet) {
+        margin-bottom: rem(20);
+      }
+      @include for-width(+ tablet) {
+        margin-right: rem(40);
+      }
     }
   }
 
@@ -153,12 +189,16 @@ export default {
     position: relative;
     margin: rem(100) auto 0;
     max-width: rem(750);
+    @include for-width(-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &-input {
       width: 100%;
       background-color: $dark_blue;
       padding: rem(17) rem(34);
-      @include font_sizes(17, 24);
+      @include font_sizes(14, 19);
       border-radius: rem(48);
       border: none;
       color: $light_blue;
@@ -173,6 +213,11 @@ export default {
       position: absolute;
       top: 0;
       right: 0;
+      @include for-width(-tablet) {
+        position: static;
+        margin-top: rem(20);
+        text-align: center;
+      }
     }
   }
 }

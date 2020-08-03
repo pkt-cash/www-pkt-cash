@@ -10,6 +10,7 @@ img {
   display: inline-block;
   width: inherit;
   height: inherit;
+  max-width: 100%;
 }
 a {
   &:hover {
@@ -18,11 +19,13 @@ a {
 }
 
 .c-content-main {
-  padding: rem(80) 0 rem(50);
+  padding: rem(70) rem(25) rem(50);
+  @include for-width(-small-lg) {
+    padding: rem(20) rem(25) rem(50);
+  }
 
   & .container {
     margin: 0 auto;
-    padding: 0 rem(15);
   }
 
   &__section {
@@ -30,6 +33,7 @@ a {
 
     & > *:last-child {
       margin-bottom: rem(20);
+      margin-right: 0;
     }
   }
 
@@ -40,11 +44,13 @@ a {
   &__navigation {
     padding-top: rem(30);
     flex: 0 0 auto;
-    margin-right: rem(50);
+    @include for-width(-tablet) {
+      display: none;
+    }
 
     &-list {
       position: sticky;
-      top: rem(30);
+      top: rem(120);
     }
 
     &-link {
@@ -71,15 +77,25 @@ a {
   }
 
   &__title {
-    @extend %h2-title;
+    @extend %bold;
+    @include font_sizes(28, 40);
+    @include for-width(-tablet) {
+      @include font_sizes(26, 36);
+    }
     color: $dark_blue;
     margin-bottom: rem(50);
+    @include for-width(-small-lg) {
+      margin-bottom: rem(40);
+    }
   }
 
   &__text {
     @extend %text-main;
     color: $dark_blue;
     margin-bottom: rem(30);
+    @include for-width(-small-lg) {
+      margin-bottom: rem(20);
+    }
 
     & a {
       color: $hard_blue;
@@ -89,11 +105,18 @@ a {
   &__scroll {
     @extend %light;
     color: $dark_blue;
-    @include font_sizes(23, 40);
+    @include font_sizes(18, 32);
+    @include for-width(-small-lg) {
+      @include font_sizes(14, 22);
+    }
     max-height: rem(480);
     overflow: auto;
     padding: rem(30) rem(30) rem(47);
     margin-bottom: rem(50);
+    @include for-width(-small-lg) {
+      padding: rem(10) rem(10) rem(27);
+      margin-bottom: rem(30);
+    }
     background-color: $light_blue;
     box-shadow: rem(4) rem(4) rem(10) rgba(25, 25, 68, 0.1);
     scrollbar-width: thin;
@@ -131,15 +154,15 @@ a {
 
   &__more {
     @extend %medium;
-    @include font_sizes(25, 40);
+    @include font_sizes(20, 32);
     @include for-width(-tablet-lg) {
-      @include font_sizes(23, 35);
+      @include font_sizes(18, 30);
     }
     @include for-width(-tablet) {
-      @include font_sizes(20, 32);
+      @include font_sizes(16, 26);
     }
     @include for-width(-small-lg) {
-      @include font_sizes(17, 27);
+      @include font_sizes(14, 22);
     }
     margin-bottom: rem(50);
 
@@ -152,16 +175,23 @@ a {
   &__list {
     padding-left: rem(40);
     margin-bottom: rem(40);
+    @include for-width(-small-lg) {
+      padding-left: rem(22);
+      margin-bottom: rem(30);
+    }
 
     &-item {
       @extend %text-main;
       margin-bottom: rem(20);
+      @include for-width(-small-lg) {
+        margin-bottom: rem(10);
+      }
       color: $dark_blue;
       position: relative;
 
       &::after {
         position: absolute;
-        top: rem(20);
+        top: rem(25);
         left: rem(-40);
         transform: translateY(-50%);
         display: block;
@@ -170,6 +200,12 @@ a {
         height: rem(10);
         background-color: $hard_blue;
         border-radius: 50%;
+        @include for-width(-small-lg) {
+          top: rem(16);
+          left: rem(-22);
+          width: rem(8);
+          height: rem(8);
+        }
       }
     }
   }

@@ -28,7 +28,10 @@ export default {
 
 <style lang="scss">
 .c-roadmap-is {
-  padding: rem(100) rem(15);
+  padding: rem(100) rem(25) rem(82);
+  @include for-width(-small-lg) {
+    padding: rem(25) rem(25) rem(21);
+  }
 
   .container {
     width: 100%;
@@ -39,8 +42,11 @@ export default {
   &__title {
     @extend %h1-title;
     color: $dark_blue;
-    margin-bottom: rem(50);
-    text-align: center;
+    margin-bottom: rem(39);
+    @include for-width(+ small-lg) {
+      text-align: center;
+      margin-bottom: rem(50);
+    }
   }
 
   &__item {
