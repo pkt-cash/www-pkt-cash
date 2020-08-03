@@ -14,8 +14,17 @@
                 <span class="nav__menu-text">{{ item.name }}</span>
               </nuxt-link>
             </li>
+            <li class="nav__menu-item">
+              <a href="https://explorer.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
+                <span class="nav__menu-text">Block Explorer</span>
+              </a>
+            </li>
           </ul>
-          <nuxt-link to="#" class="nav__menu-blue btn-nav blue-btn">
+          <a
+            href="https://explorer.pkt.cash"
+            target="_blank"
+            class="nav__menu-blue btn-nav blue-btn"
+          >
             <span class="nav__menu-blue-text">
               Whitepaper
               <svg
@@ -37,7 +46,7 @@
                 />
               </svg>
             </span>
-          </nuxt-link>
+          </a>
         </div>
         <div class="nav__burger" @click="nav_open = !nav_open" :class="{ 'active': nav_open }"></div>
       </div>
@@ -58,7 +67,7 @@ export default {
         },
         {
           name: "Network Steward",
-          route_link: "/network",
+          route_link: "/network-steward",
         },
         {
           name: "Wallet",
@@ -71,10 +80,6 @@ export default {
         {
           name: "About",
           route_link: "/about",
-        },
-        {
-          name: "Block Explorer",
-          route_link: "/block-explorer",
         },
       ],
     };
@@ -104,7 +109,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: rem(100);
-  @include for-width(-small-md) {
+  @include for-width(-tablet) {
     height: rem(45);
   }
 
@@ -112,7 +117,7 @@ export default {
     cursor: pointer;
 
     & img {
-      @include for-width(-small-md) {
+      @include for-width(-tablet) {
         height: rem(21);
       }
     }
@@ -120,12 +125,12 @@ export default {
 
   &__menu {
     display: flex;
-    @include for-width(-small-lg) {
+    @include for-width(-tablet) {
       position: fixed;
       transform: scaleX(0);
       transform-origin: right;
       transition: 0.3s all ease;
-      top: rem(99);
+      top: rem(45);
       left: 0;
       bottom: 0;
       right: 0;
@@ -136,7 +141,7 @@ export default {
       align-items: flex-start;
     }
 
-    @include for-width(-small-lg) {
+    @include for-width(-tablet) {
       &.active {
         transform: scaleX(1);
       }
@@ -150,7 +155,7 @@ export default {
       margin: 0;
     }
 
-    @include for-width(-small-md) {
+    @include for-width(-tablet) {
       top: rem(44);
     }
 
@@ -190,7 +195,11 @@ export default {
         align-items: flex-start;
       }
 
-      @include for-width(-small-lg) {
+      @include for-width(-tablet) {
+        top: rem(45);
+      }
+
+      @include for-width(-tablet) {
         position: static;
         top: rem(0);
       }
@@ -201,7 +210,7 @@ export default {
         align-items: flex-start;
       }
 
-      @include for-width(-laptop, + small-lg) {
+      @include for-width(-laptop) {
         &.active {
           transform: scaleX(1);
         }
@@ -239,7 +248,7 @@ export default {
     }
     width: rem(45);
     height: rem(45);
-    @include for-width(-small-md) {
+    @include for-width(-tablet) {
       width: rem(24);
       height: rem(24);
     }
@@ -253,7 +262,7 @@ export default {
       content: "";
       position: absolute;
       width: rem(22);
-      @include for-width(-small-md) {
+      @include for-width(-tablet) {
         width: rem(12);
       }
       height: rem(1);
@@ -265,14 +274,14 @@ export default {
 
     &::after {
       transform: translate(-50%, -5px);
-      @include for-width(-small-md) {
+      @include for-width(-tablet) {
         transform: translate(-50%, -3px);
       }
     }
 
     &::before {
       transform: translate(-50%, 5px);
-      @include for-width(-small-md) {
+      @include for-width(-tablet) {
         transform: translate(-50%, 3px);
       }
     }

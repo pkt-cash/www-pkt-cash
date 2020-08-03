@@ -10,10 +10,10 @@
       </div>
       <div class="c-mining-header__button">
         <h3 class="c-mining-header__button-title">In order to begin mining, you will need to:</h3>
-        <nuxt-link to="#" class="c-mining-header__button-link blue-btn-arrow">
+        <nuxt-link to="/wallet" class="c-mining-header__button-link blue-btn-arrow">
           <span class="c-mining-header__button-btn">Setup a Wallet</span>
         </nuxt-link>
-        <nuxt-link to="#" class="c-mining-header__button-link blue-btn-arrow">
+        <nuxt-link to="/setup" class="c-mining-header__button-link blue-btn-arrow">
           <span class="c-mining-header__button-btn">Install PacketCrypt</span>
         </nuxt-link>
       </div>

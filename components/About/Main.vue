@@ -48,10 +48,10 @@
         <figcaption class="c-about-main__signature-name">Caleb James DeLisle</figcaption>
       </figure>
       <div class="c-about-main__btns">
-        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/">
+        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/roadmap">
           <span>PKT Roadmap</span>
         </nuxt-link>
-        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/">
+        <nuxt-link class="c-about-main__btns-link blue-btn-arrow" to="/origin-story">
           <span>PKT Origin Story</span>
         </nuxt-link>
       </div>
@@ -142,7 +142,7 @@ export default {
     }
 
     &-name {
-      @include font_sizes(18, 20);
+      @include font_sizes(14, 16);
       color: $dark_blue;
       margin-top: rem(10);
     }
@@ -198,7 +198,7 @@ export default {
       width: 100%;
       background-color: $dark_blue;
       padding: rem(17) rem(34);
-      @include font_sizes(17, 24);
+      @include font_sizes(14, 19);
       border-radius: rem(48);
       border: none;
       color: $light_blue;

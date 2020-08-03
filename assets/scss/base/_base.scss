@@ -44,7 +44,6 @@ a {
   &__navigation {
     padding-top: rem(30);
     flex: 0 0 auto;
-    width: rem(220);
     @include for-width(-tablet) {
       display: none;
     }
@@ -79,9 +78,9 @@ a {
 
   &__title {
     @extend %bold;
-    @include font_sizes(35, 50);
+    @include font_sizes(28, 40);
     @include for-width(-tablet) {
-      @include font_sizes(33, 45);
+      @include font_sizes(26, 36);
     }
     color: $dark_blue;
     margin-bottom: rem(50);
@@ -106,9 +105,9 @@ a {
   &__scroll {
     @extend %light;
     color: $dark_blue;
-    @include font_sizes(23, 40);
+    @include font_sizes(18, 32);
     @include for-width(-small-lg) {
-      @include font_sizes(17, 27);
+      @include font_sizes(14, 22);
     }
     max-height: rem(480);
     overflow: auto;
@@ -155,15 +154,15 @@ a {
 
   &__more {
     @extend %medium;
-    @include font_sizes(25, 40);
+    @include font_sizes(20, 32);
     @include for-width(-tablet-lg) {
-      @include font_sizes(23, 35);
+      @include font_sizes(18, 30);
     }
     @include for-width(-tablet) {
-      @include font_sizes(20, 32);
+      @include font_sizes(16, 26);
     }
     @include for-width(-small-lg) {
-      @include font_sizes(17, 27);
+      @include font_sizes(14, 22);
     }
     margin-bottom: rem(50);
 

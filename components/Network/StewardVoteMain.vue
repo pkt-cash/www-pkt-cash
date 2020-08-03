@@ -185,5 +185,9 @@ export default {
       max-width: 100%;
     }
   }
+
+  &__navigation {
+    width: rem(220);
+  }
 }
 </style>

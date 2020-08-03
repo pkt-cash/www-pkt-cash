@@ -31,7 +31,11 @@
             </h1>
             <h2 class="c-advantage__sub">{{ item.subTitle }}</h2>
             <p class="c-advantage__text">{{ item.text }}</p>
-            <nuxt-link to="/" class="c-advantage__link blue-btn-arrow" v-if="item.btnText">
+            <nuxt-link
+              :to="{ path: item.btnLink }"
+              class="c-advantage__link blue-btn-arrow"
+              v-if="item.btnText"
+            >
               <span>{{ item.btnText }}</span>
             </nuxt-link>
             <nuxt-link to="/" class="c-advantage__link-more blue-btn-arrow" v-if="item.learnMore">
@@ -52,8 +56,8 @@ export default {
   },
   computed: {
     is_mobile() {
-      return process.client ? window.innerWidth < 768 : false;
-    }
+      return process.client ? window.innerWidth < 1024 : false;
+    },
   },
 };
 </script>
@@ -107,6 +111,7 @@ export default {
     @include for-width(-tablet) {
       margin-bottom: rem(21);
     }
+    word-wrap: normal;
     position: relative;
 
     & svg {
@@ -130,12 +135,12 @@ export default {
     @include for-width(-tablet) {
       margin-top: 92vw;
     }
-    @include font_sizes(25, 40);
+    @include font_sizes(20, 32);
     @include for-width(-tablet-lg) {
-      @include font_sizes(20, 32);
+      @include font_sizes(16, 25);
     }
     @include for-width(-tablet) {
-      @include font_sizes(17, 27);
+      @include font_sizes(13, 22);
     }
   }
 

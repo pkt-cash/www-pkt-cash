@@ -10,7 +10,11 @@
       <ul class="c-big-header__list--tick" v-if="listTick">
         <li v-for="item of listTick" :key="item" class="c-big-header__list--tick-item">{{ item }}</li>
       </ul>
-      <nuxt-link class="c-big-header__link blue-btn-arrow" to="/" v-if="btn">{{ btn }}</nuxt-link>
+      <nuxt-link
+        class="c-big-header__link blue-btn-arrow"
+        :to="{ path: btnLink }"
+        v-if="btn"
+      >{{ btn }}</nuxt-link>
       <p class="c-big-header__sometext" v-if="sometext">{{ sometext }}</p>
       <div class="c-big-header__email" v-if="email">
         <input type="text" placeholder="Email" class="c-big-header__email-input" />
@@ -33,6 +37,7 @@ export default {
     sometext: String,
     bg: String,
     email: Boolean,
+    btnLink: String,
   },
 };
 </script>
@@ -55,7 +60,7 @@ export default {
     margin: 0 auto;
     padding: 0 rem(300) 0 rem(15);
     @include for-width(-desktop-med) {
-      padding: 0 rem(15);
+      padding: 0 rem(25);
     }
   }
 
@@ -76,6 +81,9 @@ export default {
   &__sometext {
     @extend %text-main;
     margin-top: rem(130);
+    @include for-width(-tablet) {
+      margin-top: rem(70);
+    }
   }
 
   &__list {
@@ -155,7 +163,7 @@ export default {
       width: 100%;
       background-color: $dark_blue;
       padding: rem(17) rem(34);
-      @include font_sizes(17, 24);
+      @include font_sizes(14, 20);
       border-radius: rem(48);
       border: none;
       color: $light_blue;

@@ -36,7 +36,8 @@ export default {
           text:
             "The Network Steward is an address which gets 20% of every new block-mine so that developers can finance the building of Internet infrastructure and mesh network technology. Unlike a pre-mine or founder's fee, the recipient of the network steward payout can be changed by a PoS vote. ",
           btnText: "Info on Network Steward",
-          img: "/img/mining/mining-4.png",
+          img: "/img/advantage/mining-4.png",
+          mobile_img: "/img/advantage/mining-4-mobile.png",
         },
       ],
     };

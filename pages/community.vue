@@ -6,7 +6,7 @@
         subtitle="Thank you for your interest in the PKT Network. In building out this network infrastructure we are only as strong as the sum of all parts. ."
         sometext="Please check out the various resources available to collaborate and communicate."
         bg="/img/community-header-bg.jpg"
-        email="true"
+        :email="true"
       />
     </section>
     <section class="v-community-section">
@@ -48,6 +48,7 @@ export default {
           text:
             "Participate in live discussions, ask questions, and get to know the PKT community.",
           img: "/img/community/pkt.svg",
+          link: "https://pkt.cash",
         },
       ],
       join_list: [
@@ -56,41 +57,48 @@ export default {
           text:
             "Participate in live discussions, ask questions, and get to know the PKT community.",
           img: "/img/community/telegram.svg",
+          link: "https://t.me/pktproject",
         },
         {
           title: "Facebook",
           text:
             "Visit PKT on Facebook for current events and to meet the community.",
           img: "/img/community/facebook.svg",
+          link: "https://www.facebook.com/PKT-110041354126488",
         },
         {
           title: "Instagram",
           text:
             "Browse PKT on Instagram for valuable insights about the project.",
           img: "/img/community/instagram.svg",
+          link: "https://www.instagram.com/pktcash/",
         },
         {
           title: "Twitter",
           text:
             "Follow PKT on Twitter to stay up to date with news and progress.",
           img: "/img/community/twitter.svg",
+          link: "https://www.facebook.com/PKT-110041354126488",
         },
         {
           title: "Mastadon",
           text:
             "Follow PKT on Mastadon to stay up to date with news and progress.",
           img: "/img/community/mastadon.svg",
+          link: "https://www.facebook.com/PKT-110041354126488",
         },
         {
           title: "IRC",
           text: "Follow PKT on IRC to stay up to date with news and progress.",
           img: "/img/community/irc.svg",
+          link: "https://www.facebook.com/PKT-110041354126488",
         },
         {
           title: "Matrix",
           text:
             "Follow PKT on Matrix to stay up to date with news and progress.",
           img: "/img/community/matrix.svg",
+          link: "https://riot.im/app/#/room/#pkt:m.trnsz.com",
         },
       ],
     };

@@ -41,6 +41,7 @@ export default {
           text:
             "Price will be decided by auction with a minimum bid of zero. In order to stay decentralized and achieve low enough cost of transactions to enable true micropayments, VPNs will be purchased using PKT Cash, a cryptocurrency which is mined by performing encryption operations and expending Internet bandwidth. Anyone who wants to use a VPN, create their own, or mine PKT will easily be able to do so.",
           img: "/img/advantage/stage-1-mobile.png",
+          mobile_img: "/img/advantage/stage-1-mobile.png",
           aligh: false,
           colorBlue: true,
           textSVG: false,
@@ -51,6 +52,7 @@ export default {
           text:
             "Once there are approximately one million installations of the VPN client application, PKT will support third party operators to offer internet sharing technology and hardware for home or business users. This technology and hardware will allow people to earn PKT with their unused internet bandwidth and like the VPN market, it will have a minimum bid of zero. Since it will be the VPN client application that connects to the Internet sharing hardware, there will be no privacy risk nor legal risk because all data will be sent to the VPN.",
           img: "/img/advantage/stage-2-mobile.png",
+          mobile_img: "/img/advantage/stage-2-mobile.png",
           aligh: true,
           colorBlue: true,
           textSVG: false,
@@ -61,6 +63,7 @@ export default {
           text:
             "By tokenizing bandwidth leases Internet sharing hardware will be able to connect to each other and network operators will be able to observe the network, buy, sell and trade, relevant leases, and plan paths through it. This will make local mesh networking easy by moving the network engineering component to the network operator service.",
           img: "/img/advantage/stage-3-mobile.png",
+          mobile_img: "/img/advantage/stage-3-mobile.png",
           aligh: false,
           colorBlue: true,
           textSVG: false,
@@ -72,6 +75,7 @@ export default {
             "PKT will begin to support next generation networking hardware. The stateless switch design central in the cjdns protocol will not only set new records for router performance/cost ratio, but will also allow for hundreds or even thousands of network operators to send data through a single device, each according to their own routing policy. Since PKT Cash is mined by performing encryption operations, hardware devices capable of efficiently mining PKT will also be capable of efficiently encrypting network data. The ASICs which will emerge to mine PKT will be what finally enables the whole Internet to be encrypted.",
           btnText: "PTK Origin Story",
           img: "/img/advantage/stage-4-mobile.png",
+          mobile_img: "/img/advantage/stage-4-mobile.png",
           aligh: true,
           colorBlue: true,
           textSVG: false,

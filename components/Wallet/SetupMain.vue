@@ -63,7 +63,7 @@ transactions, height 843, 2019-08-16 05:56:50 +0000 UTC)</pre>
             <pre class="c-content-main__scroll">./btcctl getinfo</pre>
             <p class="c-content-main__text">
               Check the
-              <a href="#">Block Explorer</a> to see the most recent block.
+              <a href="https://explorer.pkt.cash" target="_blank">Block Explorer</a> to see the most recent block.
             </p>
           </div>
           <!-- // Item 4 -->
@@ -91,10 +91,10 @@ transactions, height 843, 2019-08-16 05:56:50 +0000 UTC)</pre>
               class="c-content-main__text"
             >For an exhaustive list of all the RPC calls you can make, use:</p>
             <pre class="c-content-main__scroll">./btcctl -l</pre>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/">
+            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/mining">
               <span>Begin Mining</span>
             </nuxt-link>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/">
+            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/cash">
               <span>PKT Details</span>
             </nuxt-link>
           </div>

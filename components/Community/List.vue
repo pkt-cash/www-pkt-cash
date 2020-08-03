@@ -3,13 +3,19 @@
     <div class="container">
       <h1 class="c-community-list__title">{{ title }}</h1>
       <p class="c-community-list__text">{{ text }}</p>
-      <nuxt-link class="c-community-list__item" v-for="item of list" :key="item.title" to="/">
+      <a
+        class="c-community-list__item"
+        v-for="item of list"
+        :key="item.title"
+        :href="item.link"
+        target="_blank"
+      >
         <h1 class="c-community-list__item-title">{{ item.title }}</h1>
         <p class="c-community-list__item-text">Participate in live discussion >>></p>
         <figure class="c-community-list__item-img">
           <img :src="item.img" alt />
         </figure>
-      </nuxt-link>
+      </a>
     </div>
   </div>
 </template>
