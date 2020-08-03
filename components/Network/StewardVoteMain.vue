@@ -149,7 +149,7 @@ $ btcctl -u x -P x --wallet getnetworkstewardvote
             <h2 class="c-content-main__title">Resources</h2>
             <ul class="c-content-main__list--small">
               <li class="c-content-main__list--small-item">Telegram: https://t.me/pktproject</li>
-              <li class="c-content-main__list--small-item">Matrix: #pkt:matrix.org</li>
+              <li class="c-content-main__list--small-item">Matrix: https://riot.im/app/#/room/#pkt:m.trnsz.com</li>
               <li class="c-content-main__list--small-item">IRC: #pkt@freenode.net</li>
             </ul>
           </div>

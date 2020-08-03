@@ -59,7 +59,7 @@ export default {
       quick_links: [
         {
           name: "PKT",
-          route_link: "/pkt",
+          route_link: "/cash",
         },
         {
           name: "Mining",

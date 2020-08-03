@@ -43,4 +43,9 @@
   @extend %bold;
   @extend %blue-button;
   @extend %blue-button-arrow;
+  @include for-width(-tablet) {
+    padding-left: rem(8);
+    padding-right: rem(8);
+    font-size: rem(14);
+  }
 }

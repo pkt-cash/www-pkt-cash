@@ -94,23 +94,27 @@ npm install</pre>
     <div class="c-setup-main">
       <div class="container">
         <h1 class="c-setup-main__title">Begin Mining</h1>
-        <div class="c-setup-main__wrap">
-          <p
-            class="c-setup-main__text"
-          >There are two types of mining available and pools should typically make about 50% of their payment to their announcement miners and 50% of their payment to their block miners.</p>
-          <p
-            class="c-setup-main__text"
-          >Devices with low available memory and/or slow internet connection should prefer to do announcement mining while devices with high speed internet and lots of available memory may prefer block mining.</p>
-          <p
-            class="c-setup-main__text"
-          >These examples have you mining in the Gridfinity mining pool and also giving your coins to cjd, make sure you update the --paymentAddr appropriately unless you wish to make a donation.</p>
-          <div class="c-setup-main__btns">
-            <nuxt-link class="c-setup-main__link blue-btn-arrow" to="/">
-              <span>Install Packet Crypt</span>
-            </nuxt-link>
-            <nuxt-link class="c-setup-main__link blue-btn-arrow" to="/">
-              <span>Visit Gridfinity</span>
-            </nuxt-link>
+        <div class="c-setup-main__wrap grid">
+         <div class="wrapper-text">
+           <p
+             class="c-setup-main__text"
+           >There are two types of mining available and pools should typically make about 50% of their payment to their announcement miners and 50% of their payment to their block miners.</p>
+           <p
+             class="c-setup-main__text"
+           >Devices with low available memory and/or slow internet connection should prefer to do announcement mining while devices with high speed internet and lots of available memory may prefer block mining.</p>
+         </div>
+          <div class="wrapper-text">
+            <p
+              class="c-setup-main__text"
+            >These examples have you mining in the Gridfinity mining pool and also giving your coins to cjd, make sure you update the --paymentAddr appropriately unless you wish to make a donation.</p>
+            <div class="c-setup-main__btns">
+              <nuxt-link class="c-setup-main__link blue-btn-arrow" to="/">
+                <span>Install Packet Crypt</span>
+              </nuxt-link>
+              <nuxt-link class="c-setup-main__link blue-btn-arrow" to="/">
+                <span>Visit Gridfinity</span>
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -194,9 +198,13 @@ export default {
 
 .c-setup-main {
   padding: rem(118) rem(80);
+  @include for-width(-tablet) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
   background-color: $dark_blue;
   color: $light_blue;
-
+  &
   & .container {
     width: 100%;
     max-width: rem(1129);
@@ -219,6 +227,14 @@ export default {
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+    &.grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      @include for-width(-tablet) {
+        display: block;
+      }
+    }
   }
 
   &__link:not(:last-child) {

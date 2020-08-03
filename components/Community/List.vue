@@ -11,7 +11,7 @@
         target="_blank"
       >
         <h1 class="c-community-list__item-title">{{ item.title }}</h1>
-        <p class="c-community-list__item-text">Participate in live discussion >>></p>
+        <p class="c-community-list__item-text">{{ item.text | crop_text }}</p>
         <figure class="c-community-list__item-img">
           <img :src="item.img" alt />
         </figure>
@@ -28,6 +28,17 @@ export default {
     text: String,
     list: Array,
   },
+  filters: {
+    crop_text(value) {
+      if(process.client) {
+        if(window.innerWidth < 768) {
+          return value.slice(0, 20) + '>>>'
+        } else {
+          return value
+        }
+      }
+    }
+  }
 };
 </script>
 

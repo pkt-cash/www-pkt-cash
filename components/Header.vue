@@ -78,6 +78,10 @@ export default {
           route_link: "/community",
         },
         {
+          name: "PKT",
+          route_link: "/cash",
+        },
+        {
           name: "About",
           route_link: "/about",
         },
@@ -140,6 +144,11 @@ export default {
       justify-content: space-between;
       align-items: flex-start;
     }
+    &-link {
+      &.btn-nav {
+        font-size: rem(16);
+      }
+    }
 
     @include for-width(-tablet) {
       &.active {
@@ -179,6 +188,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: rem(14);
       @include for-width(-laptop) {
         position: fixed;
         transform: scaleX(0);
