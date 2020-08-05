@@ -13,9 +13,17 @@
         </div>
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_content">
 <!--          <figure >-->
-            <transition-group name="fade" mode="out-in" tag="figure"class="c-scroll-sect__scroll-images">
-              <img v-for="(img, index) of images" v-if="image_index === index" :key="img" :src="img" :alt="img">
-            </transition-group>
+<!--           v-if="image_index === index" :class="{ visible: image_index === index }"-->
+            <div class="c-scroll-sect__scroll-images">
+              <div class="scroll-image">
+                <div class="scroll-image-wrapper">
+                  <transition-group name="fade" mode="in-out" tag="figure">
+                    <img v-for="(img, index) of images" v-if="image_index === index" :key="img" :src="img" :alt="img">
+                  </transition-group>
+                </div>
+              </div>
+            </div>
+
 <!--          </figure>-->
           <div class="c-scroll-sect__wrapper">
             <div v-for="(block, index) of blocks" :ref="`scroll-sect-${index}`" :key="index" class="c-scroll-sect__block">
@@ -145,6 +153,9 @@
     &_top {
       padding-top: rem(91);
       margin-bottom: rem(126);
+      @include for-width(-tablet) {
+        margin-bottom: rem(60);
+      }
     }
     &_content {
       position: relative;
@@ -192,14 +203,29 @@
     @include for-width(-tablet) {
       display: none;
     }
-    img {
+    .scroll-image {
       position: sticky;
+      width: 100%;
       top: 30%;
-     // transform: translateY(-50%);
+      height: rem(483);
+      &-wrapper {
+        position: relative;
+      }
+      @include for-width(-tablet) {
+        display: none;
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
       right: 0;
       order: 2;
-      transition: all .3s ease;
+      transition: opacity .3s ease;
       height: rem(483);
+      /*&.visible {*/
+      /*  position: sticky;*/
+      /*  opacity: 1;*/
+      /*}*/
     }
   }
   &__block {

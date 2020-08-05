@@ -4,7 +4,7 @@
       <div class="c-index-header__wrap">
         <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
         <figure class="c-index-header__img">
-          <img src="/img/index-header.png" alt />
+          <img src="/img/pkt-gif.gif" alt />
         </figure>
         <div class="c-index-header__list">
           <ul class="c-index-header__list-list">
