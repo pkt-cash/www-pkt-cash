@@ -12,9 +12,11 @@
           </div>
         </div>
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_content">
-          <figure class="c-scroll-sect__scroll-images">
-            <img v-for="(img, index) of images" :class="{visible: image_index === index}" :key="index" :src="img" :alt="img">
-          </figure>
+<!--          <figure >-->
+            <transition-group name="fade" mode="out-in" tag="figure"class="c-scroll-sect__scroll-images">
+              <img v-for="(img, index) of images" v-if="image_index === index" :key="img" :src="img" :alt="img">
+            </transition-group>
+<!--          </figure>-->
           <div class="c-scroll-sect__wrapper">
             <div v-for="(block, index) of blocks" :ref="`scroll-sect-${index}`" :key="index" class="c-scroll-sect__block">
               <figure class="c-scroll-sect__b-wrap-right">
@@ -86,11 +88,11 @@
     created() {
       if(process.client) {
         document.addEventListener('scroll', () => {
-          const section_0 = this.getCoords('scroll-sect-0') - 150;
-          const section_1 = this.getCoords('scroll-sect-1') - 150;
-          const section_2 = this.getCoords('scroll-sect-2') - 150;
-          const section_3 = this.getCoords('scroll-sect-3') - 150;
-          const section_4 = this.getCoords('scroll-sect-4') - 150;
+          const section_0 = this.getCoords('scroll-sect-0') - 500;
+          const section_1 = this.getCoords('scroll-sect-1') - 500;
+          const section_2 = this.getCoords('scroll-sect-2') - 500;
+          const section_3 = this.getCoords('scroll-sect-3') - 500;
+          const section_4 = this.getCoords('scroll-sect-4') - 500;
           const scroll_y = window.scrollY;
           if(scroll_y >= section_0) {
             this.image_index = 0
@@ -114,9 +116,16 @@
 </script>
 
 <style lang="scss">
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 .c-scroll-section {
   position: relative;
   @extend %bg-reset;
+  background-position: center rem(-330);
   background-image: url('/img/scroll-section/scroll-sect-bg.png');
   .container {
     max-width: rem(1112);
@@ -134,12 +143,16 @@
   padding-bottom: rem(150);
   &__wrap {
     &_top {
-      padding-top: rem(209);
+      padding-top: rem(91);
       margin-bottom: rem(126);
     }
     &_content {
       position: relative;
       display: flex;
+      padding-left: rem(40);
+      @include for-width(-laptop) {
+        padding-left: 0;
+      }
     }
   }
   &__wrapper {
@@ -181,22 +194,21 @@
     }
     img {
       position: sticky;
-      top: 100px;
+      top: 30%;
+     // transform: translateY(-50%);
       right: 0;
       order: 2;
-      opacity: 0;
-      display: none;
       transition: all .3s ease;
-      height: auto;
-      &.visible {
-        display: block;
-        opacity: 1;
-      }
+      height: rem(483);
     }
   }
   &__block {
     position: static;
-    margin-bottom: rem(155);
+    margin-bottom: rem(300);
+    &:last-child {
+      margin-bottom: rem(0);
+    }
+    padding-top: rem(56);
     @include for-width(-tablet) {
       margin-bottom: rem(65);
     }

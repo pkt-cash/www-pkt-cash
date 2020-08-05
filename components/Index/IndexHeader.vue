@@ -47,7 +47,10 @@ export default {
 
 <style lang="scss">
 .c-index-header {
-  padding: rem(136) rem(60) rem(56);
+  @extend %bg-reset;
+  background-image: url('/img/main-header-bg.png');
+  background-size: cover;
+  padding: rem(136) rem(96) rem(66);
   @include for-width(-tablet) {
     padding: rem(73) rem(25) rem(25);
   }
@@ -91,7 +94,7 @@ export default {
     }
 
     &-item {
-      flex: 0 0 33.33%;
+      flex: 0 0 30%;
       @include for-width(-tablet-lg) {
         flex: 0 0 50%;
       }
