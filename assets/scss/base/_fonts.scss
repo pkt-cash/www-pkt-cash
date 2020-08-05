@@ -83,68 +83,85 @@
 
 %h1-title {
   @extend %bold;
-  @include font_sizes(55, 82);
+  @include font_sizes(69, 103);
+  //@include font_sizes(55, 82);
   @include for-width(-tablet-lg) {
-    @include font_sizes(47, 64);
+    @include font_sizes(59, 80);
+    //@include font_sizes(47, 64);
   }
   @include for-width(-tablet) {
-    @include font_sizes(26, 43);
+    @include font_sizes(33, 43);
+    //@include font_sizes(26, 43);
   }
 }
 
 // H2
 %h2-title {
   @extend %bold;
-  @include font_sizes(28, 40);
+  @include font_sizes(35, 50);
+  //@include font_sizes(28, 40);
   @include for-width(-tablet-lg) {
-    @include font_sizes(25, 38);
+    @include font_sizes(32, 48);
+    //@include font_sizes(25, 38);
   }
   @include for-width(-tablet) {
-    @include font_sizes(13, 21);
+    @include font_sizes(16, 26);
+    //@include font_sizes(13, 21);
   }
 }
 
 // H3
 %h3-title {
   @extend %semibold;
-  @include font_sizes(20, 28);
+  @include font_sizes(25, 35);
+  //@include font_sizes(20, 28);
 }
 
 // P
 %text-main {
   @extend %regular;
-  @include font_sizes(20, 32);
+  @include font_sizes(25, 40);
+  //@include font_sizes(20, 32);
   @include for-width(-tablet-lg) {
-    @include font_sizes(18, 28);
+    @include font_sizes(23, 35);
+    //@include font_sizes(18, 28);
   }
   @include for-width(-tablet) {
-    @include font_sizes(16, 25);
+    @include font_sizes(20, 32);
+    //@include font_sizes(16, 25);
   }
   @include for-width(-small-lg) {
-    @include font_sizes(14, 22);
+    @include font_sizes(17, 27);
+    //@include font_sizes(14, 22);
   }
 }
 
 // Quote
 %italic-quote {
   @extend %medium-italic;
-  @include font_sizes(26, 42);
+  @include font_sizes(32, 52);
+  //@include font_sizes(26, 42);
   @include for-width(-tablet-lg) {
-    @include font_sizes(18, 28);
+    @include font_sizes(23, 35);
+    //@include font_sizes(18, 28);
   }
   @include for-width(-tablet) {
-    @include font_sizes(16, 26);
+    @include font_sizes(20, 32);
+    //@include font_sizes(16, 26);
   }
   @include for-width(-small-lg) {
-    @include font_sizes(14, 22);
+    @include font_sizes(17, 27);
+    //@include font_sizes(14, 22);
   }
 }
 
 // Body
 %body-text {
   @extend %regular;
-  @include font_sizes(18, 28);
+  @include font_sizes(23, 35);
+  //@include font_sizes(18, 28);
   @include for-width(-tablet-lg) {
-    @include font_sizes(16, 25);
+    @include font_sizes(17, 27);
+    //@include font_sizes(16, 25);
   }
 }
