@@ -7,14 +7,20 @@
           <img src="/img/pkt-gif.gif" alt />
         </figure>
         <div class="c-index-header__list">
+<!--          <pre>-->
+<!--                {{ already_mined}}-->
+<!--                {{reward}}-->
+<!--                {{ remaining}}-->
+<!--                {{ difficulty }}-->
+<!--          </pre>-->
           <ul class="c-index-header__list-list">
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Network Bandwidth</h4>
-              <span class="c-index-header__list-text">81.16 Mb/s</span>
+              <span class="c-index-header__list-text">64.41 Mb/s</span>
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Difficulty</h4>
-              <span class="c-index-header__list-text">21,300</span>
+              <span class="c-index-header__list-text">{{ difficulty | commafy }}</span>
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Mined to Date</h4>
@@ -40,8 +46,33 @@
 </template>
 
 <script>
+  import { mapFields } from 'vuex-map-fields'
 export default {
   name: "IndexHeader",
+  computed: {
+    ...mapFields('pkt-analytics', [
+      'already_mined',
+      'reward',
+      'remaining',
+      'difficulty',
+      'bitsPerSecond',
+      'encryptionsPerSecond'
+    ])
+  },
+  filters: {
+    displayed_stats_data(value) {
+      return Number(value) / 0x40000000
+    },
+    displayed_kb(value) {
+      if (value > (1 << 30)) return `${parseFloat(value / 1073741824).toFixed(2)} Gb/s`
+      if (value > (1 << 20)) return `${parseFloat(value / 1048576).toFixed(2)} Mb/s`
+      if (value > (1 << 10)) return `${parseFloat(value / 1048576).toFixed(2)} Kb/s`
+      return `${value} bits/s`
+    },
+    commafy(value) {
+      return ('' + value).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    }
+  }
 };
 </script>
 
@@ -70,9 +101,11 @@ export default {
   &__title {
     flex: 0 0 55%;
     @extend %h1-title;
+    padding-top: rem(90);
     @include for-width(-tablet-lg) {
       flex: 0 0 100%;
       margin-bottom: rem(6);
+      padding-top: 0;
     }
   }
 
@@ -86,7 +119,6 @@ export default {
 
   &__list {
     flex: 0 0 100%;
-    margin-top: rem(46);
 
     &-list {
       display: flex;
@@ -102,7 +134,7 @@ export default {
         flex: 0 0 100%;
         text-align: center;
       }
-      margin-bottom: rem(50);
+      margin-bottom: rem(20);
       @include for-width(-tablet) {
         margin-bottom: rem(25);
       }

@@ -64,6 +64,7 @@ export default {
 <style lang="scss">
 .c-index-features {
   padding: rem(14) rem(0) rem(100);
+  padding-bottom: 0;
   @include for-width(-tablet) {
     padding: rem(25) rem(25) rem(50);
   }

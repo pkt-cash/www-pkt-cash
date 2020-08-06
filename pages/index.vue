@@ -24,7 +24,6 @@ import IndexFeatures from "~/components/Index/IndexFeatures";
 import IndexJoin from "~/components/Index/IndexJoin";
 import Advantage from "~/components/Advantage";
 import IndexScrollSection from "~/components/Index/IndexScrollSection";
-
 export default {
   components: {
     IndexScrollSection,
@@ -60,6 +59,9 @@ export default {
         },
       ],
     };
+  },
+  async middleware({ store }) {
+    await store.dispatch('pkt-analytics/load')
   },
 };
 </script>
