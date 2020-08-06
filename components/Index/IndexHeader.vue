@@ -16,7 +16,9 @@
           <ul class="c-index-header__list-list">
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Network Bandwidth</h4>
-              <span class="c-index-header__list-text">64.41 Mb/s</span>
+              <span class="c-index-header__list-text">
+                65.72 Mb/s
+              </span>
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Difficulty</h4>
@@ -24,19 +26,31 @@
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Mined to Date</h4>
-              <span class="c-index-header__list-text">1,645,817,539.55 PKT</span>
+              <span class="c-index-header__list-text">
+<!--                1,645,817,539.55 PKT-->
+                {{ already_mined | displayed_stats_data | commafy }} PKT
+              </span>
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
-              <span class="c-index-header__list-text">6,925,200</span>
+              <span class="c-index-header__list-text">
+<!--                6,925,200-->
+                {{ encryptionsPerSecond | displayed_stats_data | commafy }} PKT
+              </span>
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Current Block Reward</h4>
-              <span class="c-index-header__list-text">3,037.01 PKT</span>
+              <span class="c-index-header__list-text">
+<!--                3,037.01 PKT-->
+                {{ reward | displayed_stats_data | commafy }} PKT
+              </span>
             </li>
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Coins Remaining</h4>
-              <span class="c-index-header__list-text">4,353,219,423.41 PKT</span>
+              <span class="c-index-header__list-text">
+<!--                4,353,219,423.41 PKT-->
+                {{ remaining | displayed_stats_data | commafy }} PKT
+              </span>
             </li>
           </ul>
         </div>
@@ -59,9 +73,14 @@ export default {
       'encryptionsPerSecond'
     ])
   },
+  data() {
+    return {
+      timeout: null
+    }
+  },
   filters: {
     displayed_stats_data(value) {
-      return Number(value) / 0x40000000
+      return (Number(value) / 0x40000000).toFixed(2)
     },
     displayed_kb(value) {
       if (value > (1 << 30)) return `${parseFloat(value / 1073741824).toFixed(2)} Gb/s`
@@ -72,6 +91,15 @@ export default {
     commafy(value) {
       return ('' + value).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     }
+  },
+  mounted() {
+    if(process.client) {
+      this.timeout = setInterval(() => this.$store.dispatch('pkt-analytics/update_data'), 60000)
+    }
+  },
+  beforeDestroy() {
+    clearInterval(this.timeout)
+    this.timeout = null
   }
 };
 </script>
