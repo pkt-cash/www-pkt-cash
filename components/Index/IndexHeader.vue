@@ -4,7 +4,10 @@
       <div class="c-index-header__wrap">
         <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
         <figure class="c-index-header__img">
-          <img src="/img/pkt-gif.gif" alt />
+          <video autoplay loop muted draggable="false">
+            <source type="video/mp4" src="https://i.imgur.com/LY4IgO2.mp4"/>
+          </video>
+<!--          <img src="/img/pkt-gif.gif" alt />-->
         </figure>
         <div class="c-index-header__list">
 <!--          <pre>-->
@@ -139,6 +142,10 @@ export default {
 
   &__img {
     flex: 0 0 40%;
+    video {
+      width: 100%;
+      height: 100%;
+    }
     @include for-width(-tablet-lg) {
       flex: 0 0 100%;
       margin-bottom: rem(100);
