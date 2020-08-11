@@ -11,7 +11,7 @@
       <CashMain />
     </section>
     <section class="v-cash-section">
-      <Advantage :list="advantage_item" />
+      <Advantage is_index :list="advantage_item" />
     </section>
   </div>
 </template>
@@ -38,6 +38,7 @@ export default {
           btnText: "Info on Network Steward",
           img: "/img/advantage/mining-4.png",
           mobile_img: "/img/advantage/mining-4-mobile.png",
+          lear_link: '/wallet'
         },
       ],
     };

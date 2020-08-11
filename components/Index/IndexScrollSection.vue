@@ -33,7 +33,7 @@
               <div class="c-scroll-sect__b-wrap-left">
                 <h3 class="c-scroll-sect__b-title" v-html="block.title"></h3>
                 <p class="c-scroll-sect__b-text" v-html="block.text"></p>
-                <nuxt-link to="/" class="c-scroll-sect__b-btn">
+                <nuxt-link :to="block.link" class="c-scroll-sect__b-btn">
                   <span>More Details</span>
                 </nuxt-link>
               </div>
@@ -61,26 +61,31 @@
           {
             title: 'PKT Network',
             text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network. \n'
+              'Nodes broadcast what are called announcements (“anns”) across the network. \n',
+            link: { path: '/cash' }
           },
           {
             title: 'PacketCrypt Protocol',
-            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network.  Nodes broadcast what are called announcements (“anns”) across the network.'
+            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network.  Nodes broadcast what are called announcements (“anns”) across the network.',
+            link: { path: '/setup' }
           },
           {
             title: 'Announcement Mining',
             text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network. \n'
+              'Nodes broadcast what are called announcements (“anns”) across the network. \n',
+            link: { path: '/mining' }
           },
           {
             title: 'Block Mining',
             text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n'
+              'Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n',
+            link: { path: '/mining' }
           },
           {
-            title: 'PKT Cash\n',
+            title: 'PKT',
             text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n'
+              'Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n',
+            link: { path: '/cash' }
           },
         ],
         image_index: 0
@@ -133,8 +138,7 @@
 .c-scroll-section {
   position: relative;
   @extend %bg-reset;
-  background-position: center rem(-330);
-  background-image: url('/img/scroll-section/scroll-sect-bg.png');
+  background: linear-gradient(189.29deg, rgba(60, 207, 239, 0.0126) 43.48%, rgba(60, 196, 239, 0.06) 78.24%);
   .container {
     max-width: rem(1112);
     margin: 0 auto;
@@ -149,6 +153,7 @@
 .c-scroll-sect {
   position: relative;
   padding-bottom: rem(150);
+
   &__wrap {
     &_top {
       padding-top: rem(91);
@@ -176,6 +181,9 @@
     color: $dark_blue;
     text-align: center;
     margin-bottom: rem(58);
+    @include for-width(-tablet) {
+      @include font_sizes(36, 40)
+    }
   }
   &__text {
     @extend %medium;
@@ -236,7 +244,7 @@
     }
     padding-top: rem(56);
     @include for-width(-tablet) {
-      margin-bottom: rem(65);
+      margin-bottom: rem(20);
     }
   }
   &__b {
@@ -257,8 +265,8 @@
       line-height: rem(75);
       @include for-width(-tablet) {
         text-align: center;
-        font-size: rem(33);
-        line-height: rem(43);
+        font-size: rem(28);
+        line-height: rem(34);
       }
     }
     &-text {

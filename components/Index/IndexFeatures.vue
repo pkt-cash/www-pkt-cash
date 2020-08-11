@@ -125,6 +125,7 @@ export default {
       margin-bottom: rem(30);
       @include for-width(-tablet) {
         margin-bottom: rem(15);
+        @include font_sizes(20, 26)
       }
     }
 
@@ -132,6 +133,7 @@ export default {
       @extend %text-main;
       @include for-width(-tablet) {
         text-align: center;
+        @include font_sizes(16, 22)
       }
     }
 

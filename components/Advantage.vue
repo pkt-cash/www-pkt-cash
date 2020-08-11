@@ -31,16 +31,30 @@
             </h1>
             <h2 class="c-advantage__sub">{{ item.subTitle }}</h2>
             <p class="c-advantage__text">{{ item.text }}</p>
-            <nuxt-link
-              :to="{ path: item.btnLink }"
-              class="c-advantage__link blue-btn-arrow"
-              v-if="item.btnText"
-            >
-              <span>{{ item.btnText }}</span>
-            </nuxt-link>
-            <nuxt-link to="/" class="c-advantage__link-more blue-btn-arrow" v-if="item.learnMore">
-              <span>Learn More</span>
-            </nuxt-link>
+            <template v-if="is_index && !item.linkMore">
+              <a href="https://github.com/pkt-cash/ns-projects"
+                 class="c-advantage__link blue-btn-arrow"
+                 v-if="item.btnText && !item.linkMor">
+                <span>{{ item.btnText }}</span>
+              </a>
+            </template>
+            <template v-else>
+              <a :href="item.btnLink"
+                 class="c-advantage__link blue-btn-arrow"
+                 v-if="item.btnText && !item.linkMore">
+                <span>{{ item.btnText }}</span>
+              </a>
+            </template>
+            <template v-if="item.learnMore">
+              <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link-more blue-btn-arrow"  v-if="item.learnMore">
+                <span>Learn More</span>
+              </nuxt-link>
+            </template>
+            <template v-else>
+              <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
+                <span>Learn More</span>
+              </nuxt-link>
+            </template>
           </div>
         </div>
       </div>
@@ -53,6 +67,7 @@ export default {
   name: "Advantage",
   props: {
     list: Array,
+    is_index: Boolean
   },
   computed: {
     is_mobile() {
@@ -110,6 +125,7 @@ export default {
     margin-bottom: rem(40);
     @include for-width(-tablet) {
       margin-bottom: rem(21);
+      @include font_sizes(40, 46)
     }
     word-wrap: normal;
     position: relative;

@@ -122,7 +122,8 @@ export default {
 
     & img {
       @include for-width(-tablet) {
-        height: rem(21);
+        height: rem(30);
+        margin-top: 5px;
       }
     }
   }
@@ -145,6 +146,9 @@ export default {
       align-items: flex-start;
     }
     &-link {
+      &.link-active {
+        color: $hard_blue;
+      }
       &.btn-nav {
         font-size: rem(16);
       }

@@ -1,5 +1,6 @@
 <template>
   <div class="c-index-header">
+    <div class="bg"></div>
     <div class="container">
       <div class="c-index-header__wrap">
         <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
@@ -109,9 +110,10 @@ export default {
 
 <style lang="scss">
 .c-index-header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(189.29deg, rgba(60, 207, 239, 0.0126) 28.2%, rgba(60, 196, 239, 0.06) 78.24%);
   @extend %bg-reset;
-  background-image: url('/img/main-header-bg.png');
-  background-size: cover;
   padding: rem(136) rem(96) rem(66);
   @include for-width(-tablet) {
     padding: rem(73) rem(25) rem(25);

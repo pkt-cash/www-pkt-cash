@@ -10,7 +10,7 @@
       <IndexScrollSection/>
     </section>
     <section class="v-mining-section">
-      <Advantage :list="advantage_list" />
+      <Advantage is_index :list="advantage_list" />
     </section>
     <section class="v-index-section">
       <IndexJoin />
@@ -46,6 +46,7 @@ export default {
           textSVG: true,
           colorBlue: true,
           learnMore: true,
+          lear_link: '/network-steward'
         },
         {
           title: "Wallet",
@@ -56,6 +57,8 @@ export default {
           mobile_img: "/img/advantage/index-2-mobile.png",
           aligh: false,
           textSVG: true,
+          linkMore: true,
+          lear_link: '/wallet'
         },
       ],
     };

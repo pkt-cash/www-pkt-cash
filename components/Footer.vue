@@ -155,7 +155,7 @@ export default {
       order: 4;
 
       & img {
-        height: rem(35);
+        height: rem(25);
       }
     }
   }

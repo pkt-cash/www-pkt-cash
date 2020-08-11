@@ -25,6 +25,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    linkActiveClass: 'link-active',
+  },
   /*
   ** Global CSS
   */

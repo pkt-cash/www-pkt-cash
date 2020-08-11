@@ -10,7 +10,7 @@
                 href="#network-steward-charter"
                 class="c-content-main__navigation-link"
                 @click="itm_link = 'network-steward-charter'"
-                :class="{ active: itm_link === 'network-steward-charter'}"
+                :class="{ active: itm_link === 'network-steward-charter' || itm_link === null }"
               >Network Steward Charter</a>
             </li>
             <li class="c-content-main__navigation-item">
