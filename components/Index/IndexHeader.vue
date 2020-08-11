@@ -5,7 +5,7 @@
       <div class="c-index-header__wrap">
         <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
         <figure class="c-index-header__img">
-          <video autoplay loop muted draggable="false">
+          <video autoplay loop muted playsInline="" draggable="false">
             <source type="video/mp4" src="https://i.imgur.com/LY4IgO2.mp4"/>
           </video>
 <!--          <img src="/img/pkt-gif.gif" alt />-->
@@ -39,7 +39,7 @@
               <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
               <span class="c-index-header__list-text">
 <!--                6,925,200-->
-                {{ encryptionsPerSecond | displayed_stats_data | commafy }} PKT
+                {{ encryptionsPerSecond | displayed_stats_data | commafy }}
               </span>
             </li>
             <li class="c-index-header__list-item">
