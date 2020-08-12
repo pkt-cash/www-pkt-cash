@@ -70,7 +70,4 @@ export default {
 </script>
 
 <style lang="scss">
-.test {
-  @extend %h1-title;
-}
 </style>
