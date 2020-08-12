@@ -32,6 +32,7 @@ export default {
           mobile_img: "/img/advantage/mining-1-mobile.png",
           aligh: false,
           textSVG: true,
+          lear_link: '/cash'
         },
         {
           title: "Announcement Mining",
@@ -44,6 +45,7 @@ export default {
           mobile_img: "/img/advantage/mining-2-mobile.png",
           aligh: true,
           textSVG: true,
+          lear_link: '/cash'
         },
         {
           title: "Block Mining",
@@ -56,6 +58,7 @@ export default {
           mobile_img: "/img/advantage/mining-3-mobile.png",
           aligh: false,
           textSVG: true,
+          lear_link: '/cash'
         },
       ],
     };
