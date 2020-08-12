@@ -43,7 +43,8 @@
 
         <!-- Item 1 -->
         <div class="c-content-main__content">
-          <div class="c-content-main__section" id="network-steward-charter">
+          <div class="c-content-anchor" id="network-steward-charter"></div>
+          <div class="c-content-main__section">
             <h2 class="c-content-main__title">Network Steward Charter</h2>
             <p
               class="c-content-main__text"
@@ -67,7 +68,8 @@
           <!-- // Item 1 -->
 
           <!-- Item 2 -->
-          <div class="c-content-main__section" id="funding-proposal">
+          <div class="c-content-anchor" id="funding-proposal"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">How to Make a Funding Proposal</h2>
             <p
               class="c-content-main__text"
@@ -96,7 +98,8 @@
           <!-- //Item 2 -->
 
           <!-- Item 3 -->
-          <div class="c-content-main__section" id="network-steward-projects">
+          <div class="c-content-anchor" id="network-steward-projects"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Network Steward Projects</h2>
             <p class="c-content-main__text">These are the various projects:</p>
             <a
@@ -110,7 +113,8 @@
           <!-- // Item 3 -->
 
           <!-- Item 4 -->
-          <div class="c-content-main__section" id="who-is-the-network-steward">
+          <div class="c-content-anchor" id="who-is-the-network-steward"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Who is the Network Steward?</h2>
             <p
               class="c-content-main__text"
@@ -159,10 +163,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .c-content-anchor {
+    position: absolute;
+    margin-top: -70px;
+  }
 .c-content-main {
   & .container {
     width: 100%;
     max-width: rem(1138);
+  }
+  &__title {
+    @include for-width(-tablet) {
+      font-size: rem(38);
+      line-height: rem(45);
+      padding-right: rem(10);
+    }
+  }
+  &__btn {
+    @include for-width(-tablet) {
+      display: block;
+      margin: 0 auto rem(10);
+      max-width: rem(223);
+      &.blue-btn-arrow {
+        margin-right: auto;
+      }
+    }
   }
 
   &__content {

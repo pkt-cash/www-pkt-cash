@@ -48,6 +48,9 @@ export default {
 
   &__title {
     @extend %h1-title;
+    @include for-width(-tablet) {
+      font-size: rem(33);
+    }
   }
 
   &__sub-title {
@@ -55,6 +58,9 @@ export default {
     margin-top: rem(41);
     @include for-width(-small-lg) {
       margin-top: rem(14);
+    }
+    @include for-width(-tablet) {
+      font-size: rem(16);
     }
   }
 

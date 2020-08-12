@@ -148,9 +148,9 @@ $ btcctl -u x -P x --wallet getnetworkstewardvote
           <div class="c-content-main__section" id="resources">
             <h2 class="c-content-main__title">Resources</h2>
             <ul class="c-content-main__list--small">
-              <li class="c-content-main__list--small-item">Telegram: https://t.me/pktproject</li>
-              <li class="c-content-main__list--small-item">Matrix: https://riot.im/app/#/room/#pkt:m.trnsz.com</li>
-              <li class="c-content-main__list--small-item">IRC: #pkt@freenode.net</li>
+              <li class="c-content-main__list--small-item">Telegram: <a href="https://t.me/pktproject<">https://t.me/pktproject</a></li>
+              <li class="c-content-main__list--small-item">Matrix: <a href="https://riot.im/app/#/room/#pkt:m.trnsz.com">https://riot.im/app/#/room/#pkt:m.trnsz.com</a></li>
+              <li class="c-content-main__list--small-item">IRC: <a href="mainlto:#pkt@freenode.net">#pkt@freenode.net</a></li>
             </ul>
           </div>
           <!-- // Item 3 -->

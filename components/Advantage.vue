@@ -41,19 +41,24 @@
             <template v-else>
               <a :href="item.btnLink"
                  class="c-advantage__link blue-btn-arrow"
+                 :class="{ 'mining-center': is_mining && is_mobile }"
                  v-if="item.btnText && !item.linkMore">
                 <span>{{ item.btnText }}</span>
               </a>
             </template>
             <template v-if="item.learnMore">
-              <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link-more blue-btn-arrow"  v-if="item.learnMore">
-                <span>Learn More</span>
-              </nuxt-link>
+              <template v-if="!(is_mining && is_mobile)">
+                <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link-more blue-btn-arrow"  v-if="item.learnMore">
+                  <span>Learn More</span>
+                </nuxt-link>
+              </template>
             </template>
             <template v-else>
-              <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
-                <span>Learn More</span>
-              </nuxt-link>
+              <template v-if="!(is_mining && is_mobile)">
+                <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
+                  <span>Learn More</span>
+                </nuxt-link>
+              </template>
             </template>
           </div>
         </div>
@@ -67,7 +72,8 @@ export default {
   name: "Advantage",
   props: {
     list: Array,
-    is_index: Boolean
+    is_index: Boolean,
+    is_mining: Boolean
   },
   computed: {
     is_mobile() {
@@ -125,7 +131,7 @@ export default {
     margin-bottom: rem(40);
     @include for-width(-tablet) {
       margin-bottom: rem(21);
-      @include font_sizes(40, 46)
+      @include font_sizes(36, 46)
     }
     word-wrap: normal;
     position: relative;
@@ -164,7 +170,11 @@ export default {
     margin-top: rem(50);
     margin-right: rem(18);
     @include for-width(-small-lg) {
-      margin-top: rem(40);
+      &.mining-center {
+        display: block;
+        margin: rem(40) auto 0;
+        max-width: rem(223);
+      }
     }
 
     &-more {

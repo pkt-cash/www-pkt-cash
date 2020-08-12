@@ -48,7 +48,7 @@ export default {
           text:
             "Participate in live discussions, ask questions, and get to know the PKT community.",
           img: "/img/community/pkt.svg",
-          link: "https://pkt.cash",
+          link: "https://t.me/joinchat/FwYcdlU85n0MzGXsJq3ffg",
         },
       ],
       join_list: [
@@ -78,7 +78,7 @@ export default {
           text:
             "Follow PKT on Twitter to stay up to date with news and progress.",
           img: "/img/community/twitter.svg",
-          link: "https://www.facebook.com/PKT-110041354126488",
+          link: "https://twitter.com/pktproject",
         },
         {
           title: "Mastadon",

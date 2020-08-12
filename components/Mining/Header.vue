@@ -59,7 +59,8 @@ export default {
       @extend %h1-title;
       margin-bottom: rem(21);
       @include for-width(-tablet) {
-        display: none;
+        font-size: rem(33);
+        /*display: none;*/
       }
     }
 
@@ -76,7 +77,13 @@ export default {
       }
       margin-bottom: rem(50);
     }
-
+    &-link {
+      @include for-width(-tablet) {
+        display: block;
+        width: 100%;
+        max-width: rem(223);
+      }
+    }
     &-link:not(:last-child) {
       margin-right: rem(70);
       @include for-width(-tablet) {

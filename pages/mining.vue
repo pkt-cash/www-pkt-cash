@@ -4,7 +4,7 @@
       <MiningHeader />
     </section>
     <section class="v-mining-section">
-      <Advantage :list="advantage_list" />
+      <Advantage is_mining :list="advantage_list" />
     </section>
   </div>
 </template>

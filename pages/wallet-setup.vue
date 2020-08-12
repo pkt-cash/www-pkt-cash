@@ -2,6 +2,7 @@
   <div class="v-network">
     <section class="v-network-section">
       <BigHeader
+        is_wallet_setup
         title="Wallet Setup"
         subtitle="PKT Wallet Installation"
         text="To set up the command line wallet for PKT you will need:"

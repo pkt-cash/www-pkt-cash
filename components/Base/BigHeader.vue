@@ -1,5 +1,5 @@
 <template>
-  <div class="c-big-header" :style="{ 'background-image': 'url(' + bg + ')'}">
+  <div class="c-big-header" :class="{ 'net-mobile-bg': is_mobile && is_network_st, 'is_wallet': is_wallet, is_wallet_setup: is_wallet_setup }" :style="{ 'background-image': 'url(' + bg + ')'}">
     <div class="container">
       <h1 class="c-big-header__title">{{ title }}</h1>
       <h2 class="c-big-header__sub-title" v-if="subtitle">{{ subtitle }}</h2>
@@ -28,6 +28,9 @@
 export default {
   name: "BigHeader",
   props: {
+    is_network_st: Boolean,
+    is_wallet_setup: Boolean,
+    is_wallet: Boolean,
     title: String,
     subtitle: String,
     text: String,
@@ -38,6 +41,11 @@ export default {
     bg: String,
     email: Boolean,
     btnLink: String,
+  },
+  computed: {
+    is_mobile() {
+      return process.client ? window.innerWidth < 1024 : false;
+    },
   },
 };
 </script>
@@ -53,7 +61,53 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  &.net-mobile-bg {
+    padding-top: rem(230);
+    background-position: right top;
+  }
+  &.is_wallet {
+    .c-big-header {
+      &__title{
+        @include for-width(-tablet) {
+          font-size: rem(33);
+        }
+      }
+      &__sub-title {
+        max-width: rem(481);
+        @include for-width(-tablet) {
+          font-size: rem(25);
+        }
+      }
+      &__list--tick {
+          max-width: rem(539);
+      }
+      &__list--tick-item {
+        @include for-width(-tablet) {
+          align-items: flex-start;
+          font-size: rem(17);
+          padding-left: rem(20);
+          &:after {
+            top: 10px;
+            transform: translateY(0);
+            width: rem(10);
+            height: rem(10);
+          }
+        }
+      }
+    }
+  }
+  &.is_wallet_setup {
+    .c-big-header {
+      &__text {
+        max-width: rem(340);
+      }
+      &__list {
+        max-width: rem(320);
+      }
+      &__sometext {;
+      }
+    }
+  }
   & .container {
     width: 100%;
     max-width: rem(1100);
@@ -66,6 +120,9 @@ export default {
 
   &__title {
     @extend %h1-title;
+    @include for-width(-tablet) {
+      font-size: rem(34);
+    }
   }
 
   &__sub-title {
@@ -76,6 +133,10 @@ export default {
   &__text {
     @extend %text-main;
     margin-top: rem(40);
+    @include for-width(-tablet) {
+      margin-top: rem(65);
+      font-size: rem(16);
+    }
   }
 
   &__sometext {
@@ -103,7 +164,8 @@ export default {
         content: "";
         top: rem(20);
         @include for-width(-tablet) {
-          top: rem(15);
+          top: rem(0);
+          transform: translateY(0);
         }
         left: 0;
         transform: translateY(-50%);

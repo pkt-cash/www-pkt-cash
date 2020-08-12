@@ -2,6 +2,7 @@
   <div class="v-wallet">
     <section class="v-wallet-section">
       <BigHeader
+        is_wallet
         title="Wallet"
         subtitle="You store your PKT in a PKT Wallet"
         :listTick="wallet_list"

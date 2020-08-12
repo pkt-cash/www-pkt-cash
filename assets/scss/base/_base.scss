@@ -221,11 +221,17 @@ a {
   &__list--small {
     padding-left: rem(80);
     margin-bottom: rem(40);
+    @include for-width(-tablet) {
+      padding-left: rem(20);
+    }
 
     &-item {
       @extend %text-main;
       color: $dark_blue;
       position: relative;
+      a {
+        color: $dark_blue;
+      }
 
       &::after {
         position: absolute;
