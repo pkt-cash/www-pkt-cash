@@ -2,6 +2,7 @@
   <div class="v-setup">
     <section class="v-setup-section">
       <SimpleHeader
+        mobile_img="/img/setup-mobile.jpg"
         title="Setup PacketCrypt"
         text="If you’re using Windows, please install Ubuntu from the app store, native windows support is not here yet. In order to use PacketCrypt, you will need a compiler, libcrypto, libsodium and a recent version of nodejs. For nodejs we recommend using nvm.sh to install."
         bg="/img/setup-header-bg.jpg"

@@ -87,6 +87,7 @@ export default {
   &__title {
     @extend %h1-title;
     color: $dark_blue;
+    text-align: center;
     margin-bottom: rem(40);
     @include for-width(-tablet) {
       margin-bottom: rem(20);
@@ -157,7 +158,13 @@ export default {
       flex-direction: column;
       margin-bottom: rem(40);
     }
-
+    &-link {
+      @include for-width(-tablet) {
+        display: block;
+        width: 100%;
+        max-width: rem(223);
+      }
+    }
     &-link:not(:last-child) {
       @include for-width(-tablet) {
         margin-bottom: rem(20);
@@ -182,6 +189,9 @@ export default {
     display: inline-block;
     width: 100%;
     text-align: center;
+    @include for-width(-tablet) {
+      font-size: rem(33);
+    }
   }
 
   &__email {

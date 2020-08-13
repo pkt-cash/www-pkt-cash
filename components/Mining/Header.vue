@@ -66,6 +66,10 @@ export default {
 
     &-text {
       @extend %h2-title;
+      @include for-width(-tablet) {
+        font-size: rem(16);
+        line-height: rem(20);
+      }
     }
   }
 
@@ -73,7 +77,7 @@ export default {
     &-title {
       @include font_sizes(25, 50);
       @include for-width(-tablet) {
-        @include font_sizes(16, 26);
+        @include font_sizes(20, 26);
       }
       margin-bottom: rem(50);
     }

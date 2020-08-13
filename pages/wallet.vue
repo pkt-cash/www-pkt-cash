@@ -2,6 +2,7 @@
   <div class="v-wallet">
     <section class="v-wallet-section">
       <BigHeader
+        mobile_img="/img/wallet-mobile.jpg"
         is_wallet
         title="Wallet"
         subtitle="You store your PKT in a PKT Wallet"
@@ -27,9 +28,9 @@ export default {
   data() {
     return {
       wallet_list: [
-        "The PKT Wallet allows you to send, receive and earn PKT.  ",
-        "The PKT Wallet allows you to send, receive and earn PKT.  ",
-        "The PKT Wallet allows you to send, receive and earn PKT.  ",
+        "End, receive and earn PKT.  ",
+        "Control your own private keys.  ",
+        "Backup your wallet by writing a short 13 word seed.  ",
       ],
     };
   },

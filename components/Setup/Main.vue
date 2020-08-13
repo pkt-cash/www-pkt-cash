@@ -10,24 +10,37 @@
                 <a href="#" class="c-content-main__navigation-link">Setup Packet Crypt</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a href="#Ubuntu" class="c-content-main__navigation-link active">Ubuntu</a>
+                <a href="#Ubuntu"
+                   @click="itm_link = 'Ubuntu'"
+                   :class="{ active: itm_link === 'Ubuntu' || itm_link === null }"
+                   class="c-content-main__navigation-link">Ubuntu</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a href="#Alpine-Linux" class="c-content-main__navigation-link">Alpine Linux</a>
+                <a href="#Alpine-Linux"
+                   @click="itm_link = 'Alpine-Linux'"
+                   :class="{ active: itm_link === 'Alpine-Linux' }"
+                   class="c-content-main__navigation-link">Alpine Linux</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a href="#Apple-OSX" class="c-content-main__navigation-link">Apple OSX</a>
+                <a href="#Apple-OSX"
+                   @click="itm_link = 'Apple-OSX'"
+                   :class="{ active: itm_link === 'Apple-OSX' }"
+                   class="c-content-main__navigation-link">Apple OSX</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a href="#Begin-Minning" class="c-content-main__navigation-link">Begin Minning</a>
+                <a href="#Begin-Minning"
+                   @click="itm_link = 'Begin-Minning'"
+                   :class="{ active: itm_link === 'Begin-Minning' }"
+                   class="c-content-main__navigation-link">Begin Minning</a>
               </li>
             </ul>
           </div>
           <!-- // Navigation -->
 
           <!-- Item 1 -->
+          <div class="c-content-anchor"  id="Ubuntu"></div>
           <div class="c-content-main__content">
-            <div class="c-content-main__section" id="Ubuntu">
+            <div class="c-content-main__section" >
               <h2 class="c-content-main__title">Ubuntu</h2>
               <p
                 class="c-content-main__text"
@@ -47,7 +60,8 @@ npm install</pre>
             <!-- // Item 1 -->
 
             <!-- Item 2 -->
-            <div class="c-content-main__section" id="Alpine-Linux">
+            <div class="c-content-anchor"  id="Alpine-Linux"></div>
+            <div class="c-content-main__section" >
               <h2 class="c-content-main__title">Alpine Linux</h2>
               <p class="c-content-main__text">Make sure you have the community repository enabled.</p>
               <pre class="c-content-main__scroll">sudo apk update
@@ -66,7 +80,8 @@ npm install</pre>
             <!-- // Item 2 -->
 
             <!-- Item 3 -->
-            <div class="c-content-main__section" id="Apple-OSX">
+            <div class="c-content-anchor"  id="Apple-OSX"></div>
+            <div class="c-content-main__section" >
               <h2 class="c-content-main__title">Apple OSX</h2>
               <p class="c-content-main__text">Make sure you have homebrew installed first.</p>
               <pre class="c-content-main__scroll">brew install libsodium pkg-config autoconf-archive openssl</pre>
@@ -108,12 +123,12 @@ npm install</pre>
               class="c-setup-main__text"
             >These examples have you mining in the Gridfinity mining pool and also giving your coins to cjd, make sure you update the --paymentAddr appropriately unless you wish to make a donation.</p>
             <div class="c-setup-main__btns">
-              <nuxt-link class="c-setup-main__link blue-btn-arrow" to="/">
+              <a href="https://github.com/cjdelisle/PacketCrypt " class="c-setup-main__link blue-btn-arrow">
                 <span>Install Packet Crypt</span>
-              </nuxt-link>
-              <nuxt-link class="c-setup-main__link blue-btn-arrow" to="/">
+              </a>
+              <a href="https://gridfinity.com/ " class="c-setup-main__link blue-btn-arrow">
                 <span>Visit Gridfinity</span>
-              </nuxt-link>
+              </a>
             </div>
           </div>
         </div>
@@ -123,20 +138,21 @@ npm install</pre>
       <div class="container">
         <div class="c-content-main__wrap">
           <!-- Item 4 -->
+          <div class="c-content-anchor"  id="Begin-Minning"></div>
           <div class="c-content-main__content">
-            <div class="c-content-main__section" id="Begin-Minning">
+            <div class="c-content-main__section">
               <h2 class="c-content-main__title">Announcement mining:</h2>
               <pre class="c-content-main__scroll">node ./annmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.gridfinity.com/master</pre>
               <h2 class="c-content-main__title">Block mining:</h2>
               <pre class="c-content-main__scroll">node ./blkmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.gridfinity.com/master</pre>
-              <h2 class="c-content-main__title">Resources</h2>
-              <ul class="c-content-main__list--small">
-                <li class="c-content-main__list--small-item">Telegram: https://t.me/pktproject</li>
-                <li class="c-content-main__list--small-item">Matrix: #pkt:matrix.org</li>
-                <li class="c-content-main__list--small-item">IRC: #pkt@freenode.net</li>
-                <li class="c-content-main__list--small-item">Suggest an edit to this page</li>
-                <li class="c-content-main__list--small-item">Main</li>
-              </ul>
+<!--              <h2 class="c-content-main__title">Resources</h2>-->
+<!--              <ul class="c-content-main__list&#45;&#45;small">-->
+<!--                <li class="c-content-main__list&#45;&#45;small-item">Telegram: https://t.me/pktproject</li>-->
+<!--                <li class="c-content-main__list&#45;&#45;small-item">Matrix: #pkt:matrix.org</li>-->
+<!--                <li class="c-content-main__list&#45;&#45;small-item">IRC: #pkt@freenode.net</li>-->
+<!--                <li class="c-content-main__list&#45;&#45;small-item">Suggest an edit to this page</li>-->
+<!--                <li class="c-content-main__list&#45;&#45;small-item">Main</li>-->
+<!--              </ul>-->
             </div>
             <!-- // Item 4 -->
           </div>
@@ -153,6 +169,11 @@ export default {
     title: String,
     text: String,
     bg: String,
+  },
+  data() {
+    return {
+      itm_link: null
+    }
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
-  <div class="c-big-header" :class="{ 'net-mobile-bg': is_mobile && is_network_st, 'is_wallet': is_wallet, is_wallet_setup: is_wallet_setup }" :style="{ 'background-image': 'url(' + bg + ')'}">
+  <div class="c-big-header" :class="{ 'net-mobile-bg': is_mobile && is_network_st, 'is_wallet': is_wallet, is_wallet_setup: is_wallet_setup }"
+       :style="{ 'background-image': 'url(' + bg_image + ')'}">
     <div class="container">
       <h1 class="c-big-header__title">{{ title }}</h1>
       <h2 class="c-big-header__sub-title" v-if="subtitle">{{ subtitle }}</h2>
@@ -41,11 +42,15 @@ export default {
     bg: String,
     email: Boolean,
     btnLink: String,
+    mobile_img: String,
   },
   computed: {
     is_mobile() {
       return process.client ? window.innerWidth < 1024 : false;
     },
+    bg_image() {
+      return !!this.mobile_img && this.is_mobile ? this.mobile_img : this.bg;
+    }
   },
 };
 </script>
@@ -128,6 +133,9 @@ export default {
   &__sub-title {
     @extend %h2-title;
     margin-top: rem(40);
+    @include for-width(-tablet) {
+      line-height: rem(36);
+    }
   }
 
   &__text {
@@ -219,6 +227,9 @@ export default {
     @include for-width(-tablet) {
       display: flex;
       flex-direction: column;
+    }
+    &-btn {
+      height: rem(54);
     }
 
     &-input {

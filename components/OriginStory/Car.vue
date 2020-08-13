@@ -8,10 +8,10 @@
         class="c-origin-car__text"
       >By replacing “where do you want to go” with “how do you want to get there”, cjdns replaces the rigidity of a postal service with the flexibility of a road system, a road system where each driver can choose which GPS to use. In this new network, hundreds or even thousands of Virtual ISPs can compete for customers while leasing access to the same “road system” and each searching for the best ways to get their customers’ data where it needs to go.</p>
       <div class="c-origin-car__btns">
-        <nuxt-link class="c-origin-car__link blue-btn" to="/">
+        <nuxt-link class="c-origin-car__link blue-btn" to="/roadmap">
           <span>PKT Roadmap</span>
         </nuxt-link>
-        <nuxt-link class="c-origin-car__link blue-btn" to="/">
+        <nuxt-link class="c-origin-car__link blue-btn" to="/about">
           <span>Letter from CJD</span>
         </nuxt-link>
       </div>

@@ -3,8 +3,9 @@
     <section class="v-network-section">
       <BigHeader
         is_network_st
+        mobile_img="/img/net-mobile.jpg"
         title="Network Steward"
-        text="By consensus rule, 20% of every newly mined block goes to an elected address, which is the Network Steward. The Network Steward is currently a 5 person group that is dedicated to helping build the PKT ecosystem through competitive grants for open source projects."
+        text="20% of every newly mined block goes to a network steward address. This address can be changed by way of a PoS based vote. See the Network Steward Vote for more information about the mechanics of the vote. The payments to the network steward address have one special rule, they cannot be spent after 129600 blocks (approximately 3 months) have elapsed, so if the network steward cannot decide how to spend its treasury, the PKT will be burned rather than piling up."
         btn="Network Steward Vote"
         btnLink="/network-steward-vote"
         bg="/img/network-header-bg.jpg"

@@ -3,8 +3,9 @@
     <div class="container">
       <div class="c-content-main__wrap">
         <!-- Item 1 -->
+        <div class="c-content-anchor" id="install-golang"></div>
         <div class="c-content-main__content">
-          <div class="c-content-main__section" id="install-golang">
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Install golang</h2>
             <p
               class="c-content-main__text"
@@ -14,7 +15,8 @@
           <!-- // Item 1 -->
 
           <!-- Item 2 -->
-          <div class="c-content-main__section" id="install-git">
+          <div class="c-content-anchor" id="install-git"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Install git</h2>
             <p
               class="c-content-main__text"
@@ -38,7 +40,8 @@
           <!-- //Item 2 -->
 
           <!-- Item 3 -->
-          <div class="c-content-main__section" id="install-the-components">
+          <div class="c-content-anchor" id="install-the-components"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Install the components</h2>
             <p
               class="c-content-main__text"
@@ -50,7 +53,7 @@ cd pktd
           <!-- // Item 3 -->
 
           <!-- Item 4 -->
-          <div class="c-content-main__section" id="install-the-components">
+          <div class="c-content-main__section">
             <h2 class="c-content-main__title">Launch pktd</h2>
             <p class="c-content-main__text">Now, you can launch pktd:</p>
             <pre class="c-content-main__scroll">./pktd</pre>
@@ -69,7 +72,8 @@ transactions, height 843, 2019-08-16 05:56:50 +0000 UTC)</pre>
           <!-- // Item 4 -->
 
           <!-- Item 5 -->
-          <div class="c-content-main__section" id="setup-the-wallet">
+          <div class="c-content-anchor" id="setup-the-wallet"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Setup the wallet</h2>
             <p class="c-content-main__text">First you’ll need to create a wallet</p>
             <pre class="c-content-main__scroll">./wallet --create</pre>

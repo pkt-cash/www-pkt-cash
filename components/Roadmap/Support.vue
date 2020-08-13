@@ -12,10 +12,10 @@
         class="c-roadmap-support__text"
       >The Network Steward makes it possible for new businesses to propose and have projects funded that coincide with the PKT project roadmap.</p>
       <div class="c-roadmap-support__btns">
-        <nuxt-link class="c-roadmap-support__link blue-btn" to="/">
+        <nuxt-link class="c-roadmap-support__link blue-btn" to="/network-steward">
           <span>Info on Network Steward</span>
         </nuxt-link>
-        <nuxt-link class="c-roadmap-support__link blue-btn" to="/">
+        <nuxt-link class="c-roadmap-support__link blue-btn" to="/community">
           <span>Join The Community</span>
         </nuxt-link>
       </div>

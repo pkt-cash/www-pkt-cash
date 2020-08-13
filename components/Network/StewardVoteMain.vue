@@ -19,8 +19,9 @@
         <!-- // Navigation -->
 
         <!-- Item 1 -->
+        <div class="c-content-anchor" id="how-voting-works"></div>
         <div class="c-content-main__content">
-          <div class="c-content-main__section" id="how-voting-works">
+          <div class="c-content-main__section">
             <h2 class="c-content-main__title">How voting works</h2>
             <p
               class="c-content-main__text"
@@ -31,11 +32,10 @@
             <p class="c-content-main__text">
               Exploring a coinbase transaction we can see the output being paid to the network steward
               <a
-                href="#"
-              >pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2</a> and the script for this output is
-              <a
-                href="#"
-              >0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</a>
+                href="https://explorer.pkt.cash/address/"
+              >https://explorer.pkt.cash/address/</a> and the script for this output is
+              <b
+              >0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</b>
             </p>
             <pre class="c-content-main__scroll">$ btcctl -u x -P x getrawtransaction 505d2750577a3d3c739c2a650ec0e03a7ddb1f81080c820ab1a317575020745b 1
 {
@@ -108,8 +108,8 @@
             <p class="c-content-main__text">
               So if we wanted, for instance, to change the network steward to
               <a
-                href="#"
-              >pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX</a>,
+                href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX "
+              >https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a>,
               we would want to vote for the corrisponding script
               <a
                 href="#"
@@ -119,17 +119,18 @@
           <!-- // Item 1 -->
 
           <!-- Item 2 -->
-          <div class="c-content-main__section" id="how-to-vote">
+          <div class="c-content-anchor" id="how-to-vote"></div>
+          <div class="c-content-main__section">
             <h2 class="c-content-main__title">How to vote</h2>
             <p
               class="c-content-main__text"
             >Voting is done by configuring your wallet to vote, whenever you spend money, your wallet will include a vote in every future payment of PKT which is made. If you want to speed up the voting process, you can configure your wallet to vote and then transfer all of your PKT to another wallet, in order to be sure it will all be voting.</p>
             <p class="c-content-main__text">
               To configure your wallet to vote for
-              <a href="#">pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX</a> and against
+              <a href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX ">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a> and against
               <a
-                href="#"
-              >pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2</a>, you would use the following workflow:
+                href="https://explorer.pkt.cash/address"
+              >https://explorer.pkt.cash/address</a>, you would use the following workflow:
             </p>
             <pre class="c-content-main__scroll">$ btcctl -u x -P x --wallet getnetworkstewardvote
 {}
@@ -145,7 +146,8 @@ $ btcctl -u x -P x --wallet getnetworkstewardvote
           <!-- // Item 2 -->
 
           <!-- Item 3 -->
-          <div class="c-content-main__section" id="resources">
+          <div class="c-content-anchor" id="resources"></div>
+          <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Resources</h2>
             <ul class="c-content-main__list--small">
               <li class="c-content-main__list--small-item">Telegram: <a href="https://t.me/pktproject<">https://t.me/pktproject</a></li>

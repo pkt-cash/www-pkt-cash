@@ -122,8 +122,8 @@
             <p class="c-content-main__text">
               The Network Steward wallet address is:
               <a
-                href="#"
-              >pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2</a>
+                href="https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2"
+              >https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2</a>
             </p>
             <ul class="c-content-main__list">
               <li class="c-content-main__list-item">cjd - cjdns original author</li>
@@ -163,10 +163,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .c-content-anchor {
-    position: absolute;
-    margin-top: -70px;
-  }
 .c-content-main {
   & .container {
     width: 100%;

@@ -122,8 +122,8 @@ export default {
 
     & img {
       @include for-width(-tablet) {
-        height: rem(30);
-        margin-top: 5px;
+        height: rem(40);
+        margin-top: 10px;
       }
     }
   }

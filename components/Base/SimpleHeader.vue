@@ -1,5 +1,5 @@
 <template>
-  <div class="c-simple-header" :style="{ 'background-image': 'url(' + bg + ')'}">
+  <div class="c-simple-header" :class="{ is_road: is_road }" :style="{ 'background-image': 'url(' + bg_image + ')'}">
     <div class="container">
       <h1 class="c-simple-header__title">{{ title }}</h1>
       <h2 class="c-simple-header__sub-title" v-if="subtitle">{{ subtitle }}</h2>
@@ -16,6 +16,16 @@ export default {
     subtitle: String,
     text: String,
     bg: String,
+    mobile_img: String,
+    is_road: Boolean,
+  },
+  computed: {
+    is_mobile() {
+      return process.client ? window.innerWidth < 1024 : false;
+    },
+    bg_image() {
+      return !!this.mobile_img && this.is_mobile ? this.mobile_img : this.bg;
+    }
   },
 };
 </script>
@@ -30,6 +40,9 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    &.is_road {
+      justify-content: center;
+    }
   }
   color: $light_blue;
   background-size: cover;

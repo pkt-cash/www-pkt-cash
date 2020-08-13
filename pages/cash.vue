@@ -2,6 +2,7 @@
   <div class="v-cash">
     <section class="v-cash-section">
       <SimpleHeader
+        mobile_img="/img/cash-mobile.jpg"
         title="PKT"
         subtitle="PKT is paid to PacketCrypt miners"
         bg="/img/cash-header-bg.jpg"
@@ -38,7 +39,6 @@ export default {
           btnText: "Info on Network Steward",
           img: "/img/advantage/mining-4.png",
           mobile_img: "/img/advantage/mining-4-mobile.png",
-          lear_link: '/wallet'
         },
       ],
     };

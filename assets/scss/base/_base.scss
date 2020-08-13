@@ -99,7 +99,7 @@ a {
       margin-bottom: rem(20);
     }
 
-    & a {
+    & a, & b {
       color: $hard_blue;
     }
   }
@@ -174,7 +174,7 @@ a {
     }
     margin-bottom: rem(50);
 
-    & a {
+    & a, & b {
       color: $hard_blue;
       text-decoration: underline;
     }
@@ -252,4 +252,8 @@ a {
     margin-right: rem(50);
     margin-top: rem(20);
   }
+}
+.c-content-anchor {
+  position: absolute;
+  margin-top: -70px;
 }

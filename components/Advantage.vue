@@ -3,6 +3,7 @@
     <template v-for="item of list">
       <div
         class="c-advantage__item"
+        :id="item.title"
         :class="{ 'c-advantage__item-blue': item.colorBlue }"
         :key="item.title"
         :style="{ 'background-image': `url(${is_mobile ? item.mobile_img : item.img})` }"
@@ -55,7 +56,7 @@
             </template>
             <template v-else>
               <template v-if="!(is_mining && is_mobile)">
-                <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
+                <nuxt-link  v-if="item.lear_link" :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
                   <span>Learn More</span>
                 </nuxt-link>
               </template>
