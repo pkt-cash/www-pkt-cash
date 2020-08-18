@@ -248,14 +248,7 @@
     }
     padding-top: rem(56);
     @include for-width(-tablet) {
-      /*position: sticky;*/
-      /*top: rem(80);*/
       margin-bottom: rem(20);
-      /*opacity: 0;*/
-      /*transition: all .3s ease;*/
-      /*&.show_block {*/
-      /*  opacity: 1;*/
-      /*}*/
     }
   }
   &__b {
