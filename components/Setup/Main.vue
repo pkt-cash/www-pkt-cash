@@ -123,10 +123,10 @@ npm install</pre>
               class="c-setup-main__text"
             >These examples have you mining in the Gridfinity mining pool and also giving your coins to cjd, make sure you update the --paymentAddr appropriately unless you wish to make a donation.</p>
             <div class="c-setup-main__btns">
-              <a href="https://github.com/cjdelisle/PacketCrypt " class="c-setup-main__link blue-btn-arrow">
+              <a href="https://github.com/cjdelisle/PacketCrypt " target="_blank" class="c-setup-main__link blue-btn-arrow">
                 <span>Install Packet Crypt</span>
               </a>
-              <a href="https://gridfinity.com/ " class="c-setup-main__link blue-btn-arrow">
+              <a href="https://gridfinity.com/ " target="_blank" class="c-setup-main__link blue-btn-arrow">
                 <span>Visit Gridfinity</span>
               </a>
             </div>

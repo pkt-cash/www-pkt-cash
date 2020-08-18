@@ -2,7 +2,7 @@
   <div class="v-network">
     <section class="v-network-section">
       <BigHeader
-        mobile_img="/img/net-vote-mobile.jpg"
+        mobile_img="/img/network-steward-vote-header-bg.jpg"
         title="Network Steward Vote"
         text="We believe it is a universal fact that any unaccountable authority, no matter how benevolent, will eventually fall victim to corruption, inefficiency or simple failure to innovate.
         Because of this, we built in to the PKT blockchain solution in case that the network steward is ever not fulfilling its role.

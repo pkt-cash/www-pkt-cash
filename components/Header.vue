@@ -4,7 +4,7 @@
       <div class="nav">
         <div class="nav__logo">
           <nuxt-link tag="figure" to="/">
-            <img src="/img/main-logo.png" alt />
+            <img src="/img/logo.svg" alt />
           </nuxt-link>
         </div>
         <div class="nav__menu" :class="{ 'active': nav_open }">

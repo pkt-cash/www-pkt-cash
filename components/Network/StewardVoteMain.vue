@@ -33,6 +33,7 @@
               Exploring a coinbase transaction we can see the output being paid to the network steward
               <a
                 href="https://explorer.pkt.cash/address/"
+                target="_blank"
               >https://explorer.pkt.cash/address/</a> and the script for this output is
               <b
               >0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</b>
@@ -109,10 +110,12 @@
               So if we wanted, for instance, to change the network steward to
               <a
                 href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX "
+                target="_blank"
               >https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a>,
               we would want to vote for the corrisponding script
               <a
-                href="#"
+                href="https://explorer.pkt.cash/address/"
+                target="_blank"
               >76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac</a>, and of course we probably want to vote against the current network steward as well.
             </p>
           </div>
@@ -127,9 +130,10 @@
             >Voting is done by configuring your wallet to vote, whenever you spend money, your wallet will include a vote in every future payment of PKT which is made. If you want to speed up the voting process, you can configure your wallet to vote and then transfer all of your PKT to another wallet, in order to be sure it will all be voting.</p>
             <p class="c-content-main__text">
               To configure your wallet to vote for
-              <a href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX ">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a> and against
+              <a href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX " target="_blank">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a> and against
               <a
                 href="https://explorer.pkt.cash/address"
+                target="_blank"
               >https://explorer.pkt.cash/address</a>, you would use the following workflow:
             </p>
             <pre class="c-content-main__scroll">$ btcctl -u x -P x --wallet getnetworkstewardvote
@@ -150,9 +154,9 @@ $ btcctl -u x -P x --wallet getnetworkstewardvote
           <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Resources</h2>
             <ul class="c-content-main__list--small">
-              <li class="c-content-main__list--small-item">Telegram: <a href="https://t.me/pktproject<">https://t.me/pktproject</a></li>
-              <li class="c-content-main__list--small-item">Matrix: <a href="https://riot.im/app/#/room/#pkt:m.trnsz.com">https://riot.im/app/#/room/#pkt:m.trnsz.com</a></li>
-              <li class="c-content-main__list--small-item">IRC: <a href="mainlto:#pkt@freenode.net">#pkt@freenode.net</a></li>
+              <li class="c-content-main__list--small-item">Telegram: <a href="https://t.me/pktproject" target="_blank">https://t.me/pktproject</a></li>
+              <li class="c-content-main__list--small-item">Matrix: <a href="https://riot.im/app/#/room/#pkt:m.trnsz.com" target="_blank">https://riot.im/app/#/room/#pkt:m.trnsz.com</a></li>
+              <li class="c-content-main__list--small-item">IRC: <a href="mainlto:#pkt@freenode.net" target="_blank">#pkt@freenode.net</a></li>
             </ul>
           </div>
           <!-- // Item 3 -->

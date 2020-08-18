@@ -26,7 +26,10 @@
 
 <!--          </figure>-->
           <div class="c-scroll-sect__wrapper">
-            <div v-for="(block, index) of blocks" :ref="`scroll-sect-${index}`" :key="index" class="c-scroll-sect__block">
+            <div v-for="(block, index) of blocks" :ref="`scroll-sect-${index}`"
+                 :key="index"
+                 :class="{ show_block: image_index === index }"
+                 class="c-scroll-sect__block">
               <figure class="c-scroll-sect__b-wrap-right">
                 <img :src="images[index]" :alt="block.title">
               </figure>
@@ -101,11 +104,12 @@
     created() {
       if(process.client) {
         document.addEventListener('scroll', () => {
-          const section_0 = this.getCoords('scroll-sect-0') - 550;
-          const section_1 = this.getCoords('scroll-sect-1') - 550;
-          const section_2 = this.getCoords('scroll-sect-2') - 550;
-          const section_3 = this.getCoords('scroll-sect-3') - 550;
-          const section_4 = this.getCoords('scroll-sect-4') - 550;
+          const condition = window.innerWidth > 1100 ? 550 : 0;
+          const section_0 = this.getCoords('scroll-sect-0') - condition;
+          const section_1 = this.getCoords('scroll-sect-1') - condition;
+          const section_2 = this.getCoords('scroll-sect-2') - condition;
+          const section_3 = this.getCoords('scroll-sect-3') - condition;
+          const section_4 = this.getCoords('scroll-sect-4') - condition;
           const scroll_y = window.scrollY;
           if(scroll_y >= section_0) {
             this.image_index = 0
@@ -244,7 +248,14 @@
     }
     padding-top: rem(56);
     @include for-width(-tablet) {
+      /*position: sticky;*/
+      /*top: rem(80);*/
       margin-bottom: rem(20);
+      /*opacity: 0;*/
+      /*transition: all .3s ease;*/
+      /*&.show_block {*/
+      /*  opacity: 1;*/
+      /*}*/
     }
   }
   &__b {

@@ -2,7 +2,7 @@
   <div class="v-wallet">
     <section class="v-wallet-section">
       <BigHeader
-        mobile_img="/img/wallet-mobile.jpg"
+        mobile_img="/img/wallet-header-bg.jpg"
         is_wallet
         title="Wallet"
         subtitle="You store your PKT in a PKT Wallet"

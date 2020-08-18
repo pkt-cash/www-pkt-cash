@@ -12,7 +12,7 @@
             Terminal-based
             <br />full node setup
           </a>
-          <a href="https://pkt.cash/wallet_setup" class="c-wallet-options__item-btn blue-btn-arrow">
+          <a href="https://pkt.cash/wallet_setup" target="_blank" class="c-wallet-options__item-btn blue-btn-arrow">
             <span>Setup Wallet</span>
           </a>
         </div>
