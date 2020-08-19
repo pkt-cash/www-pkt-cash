@@ -5,7 +5,7 @@
       <p
         class="c-index-join__text"
       >PKT is run by the community for the community. The network becomes most secure when it is populated by people just like YOU. Join the community now for updates and discussions around how to participate in this growing network.</p>
-      <nuxt-link class="c-index-join__link blue-btn-arrow" to="/">
+      <nuxt-link class="c-index-join__link blue-btn-arrow" to="/community">
         <span>Join Now</span>
       </nuxt-link>
     </div>
