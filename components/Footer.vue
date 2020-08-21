@@ -17,16 +17,16 @@
             </li>
           </ul>
         </div>
-<!--        <div class="c-footer__menu">-->
-<!--          <h5 class="c-footer__menu-title">About</h5>-->
-<!--          <ul class="c-footer__menu-list">-->
-<!--            <li v-for="(item, index) of about_links" :key="index" class="c-footer__menu-item">-->
-<!--              <nuxt-link :to="item.route_link" class="c-footer__menu-link">-->
-<!--                <span class="c-footer__menu-text">{{ item.name }}</span>-->
-<!--              </nuxt-link>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </div>-->
+        <div class="c-footer__menu">
+          <h5 class="c-footer__menu-title">About</h5>
+          <ul class="c-footer__menu-list">
+            <li v-for="(item, index) of about_links" :key="index" class="c-footer__menu-item">
+              <nuxt-link :to="item.route_link" class="c-footer__menu-link">
+                <span class="c-footer__menu-text">{{ item.name }}</span>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
         <div class="c-footer__menu">
           <h5 class="c-footer__menu-title">Github</h5>
           <ul class="c-footer__menu-list">
