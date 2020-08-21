@@ -18,8 +18,7 @@
       >{{ btn }}</nuxt-link>
       <p class="c-big-header__sometext" v-if="sometext">{{ sometext }}</p>
       <div class="c-big-header__email" v-if="email">
-        <input type="text" placeholder="Email" class="c-big-header__email-input" />
-        <button class="c-big-header__email-btn blue-btn">Join The Community</button>
+        <div class="klaviyo-form-UMUDtg"></div>
       </div>
     </div>
   </div>
@@ -185,6 +184,52 @@ export default {
     @include for-width(-tablet) {
       display: flex;
       flex-direction: column;
+    }
+    .tBOqQ.tBOqQ {
+      position: absolute;
+      top: 0;
+      border-radius: 3rem;
+      right: -6px;
+    }
+    .klaviyo-form-UMUDtg {
+
+    }
+    .bQDdTc.bQDdTc {
+
+    }
+    .jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs,
+    .hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW,
+    .bBQWYX.bBQWYX {
+      color: $white !important;
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+    .hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW:focus,
+    .jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs:focus {
+      color: $white !important;
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+    .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor strong,
+    .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor span {
+      color: $white !important;
+    }
+    @include for-width(-tablet) {
+      .tBOqQ.tBOqQ {
+        position: static;
+        padding-left: 10px;
+        right: 0;
+      }
+      .bBQWYX.bBQWYX {
+        overflow: visible;
+        border-radius: 0;
+      }
+      .kgtZbf.kgtZbf {
+        flex-direction: column;
+      }
+      .gXrOPj.gXrOPj.gXrOPj.gXrOPj.gXrOPj.gXrOPj {
+        width: 100%;
+      }
     }
     &-btn {
       height: rem(54);

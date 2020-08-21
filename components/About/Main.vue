@@ -58,8 +58,7 @@
       <div class="c-about-main__separator"></div>
       <span class="c-about-main__involved">Get involved</span>
       <div class="c-about-main__email">
-        <input type="text" placeholder="Email" class="c-about-main__email-input" />
-        <button class="c-about-main__email-btn blue-btn">Join The Community</button>
+        <div class="klaviyo-form-UMUDtg"></div>
       </div>
     </div>
   </div>
@@ -201,6 +200,47 @@ export default {
     position: relative;
     margin: rem(100) auto 0;
     max-width: rem(750);
+    .tBOqQ.tBOqQ {
+      position: absolute;
+      top: 0;
+      border-radius: 3rem;
+      right: -6px;
+    }
+    .klaviyo-form-UMUDtg {
+
+    }
+    .bQDdTc.bQDdTc {
+
+    }
+    .jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs,
+    .hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW,
+    .bBQWYX.bBQWYX {
+      color: $white !important;
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+    .hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW.hEPcWW:focus,
+    .jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs.jcyZHs:focus {
+      color: $white !important;
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+    @include for-width(-tablet) {
+      .tBOqQ.tBOqQ {
+        position: static;
+      }
+      .bBQWYX.bBQWYX {
+        overflow: visible;
+        border-radius: 0;
+      }
+      .kgtZbf.kgtZbf {
+        flex-direction: column;
+      }
+      .gXrOPj.gXrOPj.gXrOPj.gXrOPj.gXrOPj.gXrOPj {
+        width: 100%;
+      }
+    }
+     /*{}*/
     @include for-width(-tablet) {
       display: flex;
       flex-direction: column;

@@ -25,7 +25,7 @@
             target="_blank"
             class="nav__menu-blue btn-nav blue-btn"
           >
-            <span class="nav__menu-blue-text">
+            <span class="nav__menu-link">
               Whitepaper
               <svg
                 class="nav__menu-blue-img"
@@ -238,7 +238,9 @@ export default {
 
     &-blue {
       &.btn-nav {
-        padding: 12px 20px;
+        color: $white;
+        padding: 7px 10px;
+        font-size: rem(14);
       }
       @include for-width(+ laptop) {
         margin-left: rem(35);

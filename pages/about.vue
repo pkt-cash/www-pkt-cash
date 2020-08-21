@@ -7,7 +7,6 @@
     </section>
     <section class="v-about-section">
       <AboutMain />
-      <div class="klaviyo-form-UMUDtg"></div>
     </section>
   </div>
 </template>
