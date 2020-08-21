@@ -106,7 +106,7 @@ export default {
 .c-index-header {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(189.29deg, rgba(60, 207, 239, 0.0126) 28.2%, rgba(60, 196, 239, 0.06) 78.24%);
+  background: linear-gradient(119.29deg, rgba(60, 207, 239, 0.0126) 28.2%, rgba(60, 196, 239, 0.06) 78.24%);
   @extend %bg-reset;
   padding: rem(136) rem(96) rem(66);
   @include for-width(-tablet) {
