@@ -78,6 +78,7 @@ export default {
           btnText: "PTK Origin Story",
           img: "/img/advantage/stage-4.png",
           mobile_img: "/img/advantage/stage-4-mobile.png",
+          btnLink: '/origin-story',
           aligh: true,
           colorBlue: true,
           textSVG: false,

@@ -90,8 +90,8 @@
     @include font_sizes(47, 64);
   }
   @include for-width(-tablet) {
-    //@include font_sizes(33, 43);
-    @include font_sizes(26, 43);
+    @include font_sizes(33, 43);
+    //@include font_sizes(26, 43);
   }
 }
 
@@ -105,8 +105,8 @@
     @include font_sizes(25, 38);
   }
   @include for-width(-tablet) {
-    //@include font_sizes(16, 26);
-    @include font_sizes(13, 21);
+    @include font_sizes(16, 26);
+    //@include font_sizes(13, 21);
   }
 }
 
@@ -127,13 +127,13 @@
     @include font_sizes(18, 28);
   }
   @include for-width(-tablet) {
-    //@include font_sizes(20, 32);
-    @include font_sizes(16, 25);
+    @include font_sizes(20, 32);
+    //@include font_sizes(16, 25);
   }
-  @include for-width(-small-lg) {
-    //@include font_sizes(17, 27);
-    @include font_sizes(14, 22);
-  }
+  //@include for-width(-small-lg) {
+  //  //@include font_sizes(17, 27);
+  //  @include font_sizes(14, 22);
+  //}
 }
 
 // Quote
@@ -150,8 +150,8 @@
     @include font_sizes(16, 26);
   }
   @include for-width(-small-lg) {
-    //@include font_sizes(17, 27);
-    @include font_sizes(14, 22);
+    @include font_sizes(17, 27);
+    //@include font_sizes(14, 22);
   }
 }
 

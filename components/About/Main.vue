@@ -1,7 +1,7 @@
 <template>
   <div class="c-about-main">
     <div class="container">
-      <h1 class="c-about-main__title">Letter from CJD</h1>
+<!--      <h1 class="c-about-main__title">Letter from CJD</h1>-->
       <h2 class="c-about-main__subtitle">ARPANET Paved the Way</h2>
       <p
         class="c-about-main__text"
@@ -99,7 +99,6 @@ export default {
     color: $dark_blue;
     margin-bottom: rem(61);
     @include for-width(-tablet) {
-      text-align: center;
       margin-bottom: rem(30);
     }
   }
@@ -181,6 +180,9 @@ export default {
     max-width: rem(285);
     height: rem(1);
     margin: 0 auto rem(100);
+    @include for-width(-tablet) {
+      margin-bottom: rem(40);
+    }
   }
 
   &__involved {
@@ -202,6 +204,7 @@ export default {
     @include for-width(-tablet) {
       display: flex;
       flex-direction: column;
+      margin-top: rem(30);
     }
 
     &-input {
@@ -223,6 +226,7 @@ export default {
       position: absolute;
       top: 0;
       right: 0;
+      height: 100%;
       @include for-width(-tablet) {
         position: static;
         margin-top: rem(20);

@@ -16,6 +16,11 @@
           <a href="#Support Next Gen Networking Hardware">Phase 4</a> - Support high performance networking hardware which automatically sells its bandwidth into the bandwidth market
         </li>
       </ul>
+      <div class="d">
+        <nuxt-link to="/about" class="c-roadmap-is__btn blue-btn">
+          <span>Letter from CJD</span>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -56,6 +61,19 @@ export default {
     & a {
       color: $hard_blue;
     }
+  }
+  .d {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(96);
+    @include for-width(-tablet) {
+      margin-top: rem(30);
+    }
+  }
+  &__btn {
+    display: block;
+    width: rem(231);
   }
 }
 </style>

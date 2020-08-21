@@ -60,6 +60,7 @@ export default {
     @extend %text-main;
     color: $dark_blue;
 
+
     &:not(:last-child) {
       margin-bottom: rem(28);
     }
@@ -86,6 +87,9 @@ export default {
       text-align: center;
       @extend %light;
       @include font_sizes(24, 35);
+      @include for-width(-tablet) {
+        @include font_sizes(14, 24);
+      }
     }
   }
 }

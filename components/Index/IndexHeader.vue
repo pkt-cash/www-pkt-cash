@@ -11,12 +11,6 @@
 <!--          <img src="/img/pkt-gif.gif" alt />-->
         </figure>
         <div class="c-index-header__list">
-<!--          <pre>-->
-<!--                {{ already_mined}}-->
-<!--                {{reward}}-->
-<!--                {{ remaining}}-->
-<!--                {{ difficulty }}-->
-<!--          </pre>-->
           <ul class="c-index-header__list-list">
             <li class="c-index-header__list-item">
               <h4 class="c-index-header__list-title">Network Bandwidth</h4>
@@ -139,6 +133,7 @@ export default {
       flex: 0 0 100%;
       margin-bottom: rem(6);
       padding-top: 0;
+      @include font_sizes(33, 43);
     }
   }
 
@@ -164,6 +159,7 @@ export default {
 
     &-item {
       flex: 0 0 30%;
+      margin-bottom: rem(20);
       @include for-width(-tablet-lg) {
         flex: 0 0 50%;
       }
@@ -171,9 +167,26 @@ export default {
         flex: 0 0 100%;
         text-align: center;
       }
-      margin-bottom: rem(20);
       @include for-width(-tablet) {
         margin-bottom: rem(25);
+        &:first-child {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 4;
+        }
+        &:nth-child(3) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 2;
+        }
+        &:nth-child(5) {
+          order: 5;
+        }
+        &:nth-child(6) {
+          order: 6;
+        }
       }
     }
 

@@ -3,11 +3,12 @@
     <template v-for="item of list">
       <div
         class="c-advantage__item"
-        :id="item.title"
+
         :class="{ 'c-advantage__item-blue': item.colorBlue }"
         :key="item.title"
         :style="{ 'background-image': `url(${is_mobile ? item.mobile_img : item.img})` }"
       >
+        <div class="id-anchor" :id="item.title"></div>
         <div class="container" :class="{ 'container-blue': item.colorBlue }">
           <div class="c-advantage__wrap" :class="{ 'c-advantage__wrap-right': item.aligh }">
             <h1 class="c-advantage__title">
@@ -32,36 +33,38 @@
             </h1>
             <h2 class="c-advantage__sub">{{ item.subTitle }}</h2>
             <p class="c-advantage__text">{{ item.text }}</p>
-            <template v-if="is_index && !item.linkMore">
-              <a href="https://github.com/pkt-cash/ns-projects"
-                 target="_blank"
-                 class="c-advantage__link blue-btn-arrow"
-                 v-if="item.btnText && !item.linkMor">
-                <span>{{ item.btnText }}</span>
-              </a>
-            </template>
-            <template v-else>
-              <a :href="item.btnLink"
-                 class="c-advantage__link blue-btn-arrow"
-                 :class="{ 'mining-center': is_mining && is_mobile }"
-                 v-if="item.btnText && !item.linkMore">
-                <span>{{ item.btnText }}</span>
-              </a>
-            </template>
-            <template v-if="item.learnMore">
-              <template v-if="!(is_mining && is_mobile)">
-                <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link-more blue-btn-arrow"  v-if="item.learnMore">
-                  <span>Learn More</span>
-                </nuxt-link>
+            <div class="c-advantage__btn-wrapper">
+              <template v-if="is_index && !item.linkMore">
+                <a href="https://github.com/pkt-cash/ns-projects"
+                   target="_blank"
+                   class="c-advantage__link blue-btn-arrow"
+                   v-if="item.btnText && !item.linkMor">
+                  <span>{{ item.btnText }}</span>
+                </a>
               </template>
-            </template>
-            <template v-else>
-              <template v-if="!(is_mining && is_mobile)">
-                <nuxt-link  v-if="item.lear_link" :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
-                  <span>Learn More</span>
-                </nuxt-link>
+              <template v-else>
+                <a :href="item.btnLink"
+                   class="c-advantage__link blue-btn-arrow"
+                   :class="{ 'mining-center': is_mining && is_mobile }"
+                   v-if="item.btnText && !item.linkMore">
+                  <span>{{ item.btnText }}</span>
+                </a>
               </template>
-            </template>
+              <template v-if="item.learnMore">
+                <template v-if="!(is_mining && is_mobile)">
+                  <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link-more blue-btn-arrow"  v-if="item.learnMore">
+                    <span>Learn More</span>
+                  </nuxt-link>
+                </template>
+              </template>
+              <template v-else>
+                <template v-if="!(is_mining && is_mobile)">
+                  <nuxt-link  v-if="item.lear_link" :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
+                    <span>Learn More</span>
+                  </nuxt-link>
+                </template>
+              </template>
+            </div>
           </div>
         </div>
       </div>
@@ -88,6 +91,7 @@ export default {
 <style lang="scss">
 .c-advantage {
   &__item {
+    position: relative;
     padding: rem(127) rem(25) rem(74);
     @include for-width(-small-lg) {
       padding: rem(29) rem(25) rem(40);
@@ -100,6 +104,13 @@ export default {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: top center;
+    }
+    .id-anchor {
+      position: absolute;
+      top: -100px;
+      @include for-width(-tablet) {
+        top: -45px;
+      }
     }
   }
 
@@ -133,7 +144,7 @@ export default {
     margin-bottom: rem(40);
     @include for-width(-tablet) {
       margin-bottom: rem(21);
-      @include font_sizes(36, 46)
+      @include font_sizes(34, 51)
     }
     word-wrap: normal;
     position: relative;
@@ -164,7 +175,7 @@ export default {
       @include font_sizes(16, 25);
     }
     @include for-width(-tablet) {
-      @include font_sizes(13, 22);
+      @include font_sizes(16, 26);
     }
   }
 
@@ -183,6 +194,15 @@ export default {
       background-color: transparent !important;
       border: 1px solid $light_blue;
       margin-top: rem(18);
+    }
+  }
+  &__btn-wrapper {
+    @include for-width(-tablet) {
+      display: flex;
+      flex-direction: column;
+      .blue-btn-arrow {
+        width: 100%;
+      }
     }
   }
 }

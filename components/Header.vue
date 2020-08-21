@@ -237,6 +237,9 @@ export default {
     }
 
     &-blue {
+      &.btn-nav {
+        padding: 12px 20px;
+      }
       @include for-width(+ laptop) {
         margin-left: rem(35);
       }

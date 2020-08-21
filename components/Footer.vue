@@ -17,6 +17,16 @@
             </li>
           </ul>
         </div>
+<!--        <div class="c-footer__menu">-->
+<!--          <h5 class="c-footer__menu-title">About</h5>-->
+<!--          <ul class="c-footer__menu-list">-->
+<!--            <li v-for="(item, index) of about_links" :key="index" class="c-footer__menu-item">-->
+<!--              <nuxt-link :to="item.route_link" class="c-footer__menu-link">-->
+<!--                <span class="c-footer__menu-text">{{ item.name }}</span>-->
+<!--              </nuxt-link>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
         <div class="c-footer__menu">
           <h5 class="c-footer__menu-title">Github</h5>
           <ul class="c-footer__menu-list">
@@ -55,31 +65,58 @@ export default {
   name: "Footer",
   data() {
     return {
+      // PKT
+      // About
+      // Roadmap
+      // Origin Story
+      // Community
       nav_open: false,
       quick_links: [
         {
-          name: "PKT",
-          route_link: "/cash",
-        },
-        {
           name: "Mining",
           route_link: "/mining",
+        },
+        {
+          name: "Setup PacketCrypt",
+          route_link: "/setup",
         },
         {
           name: "Network Steward",
           route_link: "/network-steward",
         },
         {
-          name: "Roadmap",
-          route_link: "/Roadmap",
+          name: "Network Steward Voting",
+          route_link: "/network-steward-vote",
         },
         {
-          name: "Community",
-          route_link: "/community",
+          name: "Wallet",
+          route_link: "/wallet",
+        },
+        {
+          name: "Wallet Setup",
+          route_link: "/wallet-setup",
+        },
+      ],
+      about_links: [
+        {
+          name: "PKT",
+          route_link: "/cash",
         },
         {
           name: "About",
           route_link: "/about",
+        },
+        {
+          name: "Roadmap",
+          route_link: "/roadmap",
+        },
+        {
+          name: "Origin Story",
+          route_link: "/origin-story",
+        },
+        {
+          name: "Community",
+          route_link: "/community",
         },
       ],
       github_links: [

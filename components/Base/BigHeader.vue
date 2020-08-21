@@ -70,49 +70,7 @@ export default {
     padding-top: rem(230);
     background-position: right top;
   }
-  &.is_wallet {
-    .c-big-header {
-      &__title{
-        @include for-width(-tablet) {
-          font-size: rem(33);
-        }
-      }
-      &__sub-title {
-        max-width: rem(481);
-        @include for-width(-tablet) {
-          font-size: rem(25);
-        }
-      }
-      &__list--tick {
-          max-width: rem(539);
-      }
-      &__list--tick-item {
-        @include for-width(-tablet) {
-          align-items: flex-start;
-          font-size: rem(17);
-          padding-left: rem(20);
-          &:after {
-            top: 10px;
-            transform: translateY(0);
-            width: rem(10);
-            height: rem(10);
-          }
-        }
-      }
-    }
-  }
-  &.is_wallet_setup {
-    .c-big-header {
-      &__text {
-        max-width: rem(340);
-      }
-      &__list {
-        max-width: rem(320);
-      }
-      &__sometext {;
-      }
-    }
-  }
+
   & .container {
     width: 100%;
     max-width: rem(1100);
@@ -255,6 +213,65 @@ export default {
         position: static;
         margin-top: rem(20);
         text-align: center;
+      }
+    }
+  }
+  &.is_wallet {
+    .c-big-header {
+      &__title{
+        @include for-width(-tablet) {
+          font-size: rem(33);
+        }
+      }
+      &__sub-title {
+        max-width: rem(481);
+        @include for-width(-tablet) {
+          font-size: rem(25);
+        }
+      }
+      &__list--tick {
+        max-width: rem(539);
+      }
+      &__list--tick-item {
+        @include for-width(-tablet) {
+          align-items: flex-start;
+          font-size: rem(17);
+          padding-left: rem(20);
+          &:after {
+            top: 10px;
+            transform: translateY(0);
+            width: rem(10);
+            height: rem(10);
+          }
+        }
+      }
+    }
+  }
+  &.is_wallet_setup {
+    .c-big-header {
+      &__sub-title {
+        @include for-width(-tablet) {
+          @include font_sizes(25, 35);
+        }
+      }
+      &__text {
+        max-width: rem(340);
+        @include for-width(-tablet) {
+          margin-top: rem(30);
+        }
+      }
+      &__list {
+        max-width: rem(320);
+        &-item {
+          @include for-width(-tablet) {
+            &:after {
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+      &__sometext {
       }
     }
   }

@@ -1,7 +1,9 @@
 <template>
   <div class="v-about">
     <section class="v-about-section">
-      <SimpleHeader mobile_img="/img/about-mobile.jpg" title="About PKT" bg="/img/about-header-bg.jpg" />
+      <SimpleHeader mobile_img="/img/about-mobile.jpg" title="Letter from CJD"
+                    subtitle=""
+                    bg="/img/about-header-bg.jpg" />
     </section>
     <section class="v-about-section">
       <AboutMain />

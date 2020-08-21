@@ -8,7 +8,8 @@
         <input type="text" placeholder="Subject:" class="c-community-contact__input" />
         <textarea placeholder="Message:" class="c-community-contact__textarea"></textarea>
         <figure class="c-community-contact__captcha">
-          <img src="/img/captcha.jpg" alt />
+          <vue-recaptcha sitekey="6LfdA8EZAAAAAElKtBfaI0iB6QoChOR_LJ6MX3UP"></vue-recaptcha>
+<!--          <img src="/img/captcha.jpg" alt />-->
         </figure>
         <button type="submit" class="c-community-contact__button blue-btn">Send Message</button>
       </form>
@@ -17,8 +18,12 @@
 </template>
 
 <script>
+  import VueRecaptcha from 'vue-recaptcha';
 export default {
   name: "CommunityContact",
+  components: {
+    VueRecaptcha
+  },
   props: {
     title: String,
     text: String,
