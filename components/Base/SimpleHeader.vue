@@ -35,8 +35,9 @@ export default {
   padding: rem(208) 0 rem(171);
   min-height: 30vw;
   @include for-width(-small-lg) {
+    height: rem(406);
     padding: rem(100) 0 rem(28);
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

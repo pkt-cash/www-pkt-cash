@@ -199,7 +199,7 @@ export default {
     display: block;
     position: relative;
     margin: rem(100) auto 0;
-    max-width: rem(750);
+    max-width: rem(620);
     .tBOqQ.tBOqQ {
       position: absolute;
       top: 0;

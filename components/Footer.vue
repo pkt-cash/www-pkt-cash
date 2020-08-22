@@ -178,6 +178,7 @@ export default {
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 
   &__logo {
@@ -211,17 +212,22 @@ export default {
 
     @include for-width(-tablet) {
       &:nth-child(2) {
-        order: 1;
+        /*order: 1;*/
       }
 
       &:nth-child(3) {
-        width: 100%;
-        order: 3;
-        position: relative;
+        /*width: 100%;*/
+        /*order: 3;*/
+      }
+
+      &:nth-child(5) {
+        /*order: 2;*/
+        position: static;
         margin-bottom: rem(45);
 
         &::after {
           content: "";
+          left: 0;
           position: absolute;
           width: 100%;
           height: rem(1);
@@ -229,10 +235,6 @@ export default {
           opacity: 0.1;
           margin-top: rem(14);
         }
-      }
-
-      &:nth-child(4) {
-        order: 2;
       }
     }
 

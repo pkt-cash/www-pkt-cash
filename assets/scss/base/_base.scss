@@ -34,6 +34,9 @@ a {
     & > *:last-child {
       margin-bottom: rem(20);
       margin-right: 0;
+      @include for-width(-tablet) {
+        margin-right: auto !important;
+      }
     }
   }
 
@@ -81,8 +84,8 @@ a {
     //@include font_sizes(35, 50);
     @include font_sizes(28, 40);
     @include for-width(-tablet) {
-      //@include font_sizes(33, 45);
-      @include font_sizes(26, 36);
+      @include font_sizes(33, 45);
+      //@include font_sizes(26, 36);
     }
     color: $dark_blue;
     margin-bottom: rem(50);
@@ -251,6 +254,11 @@ a {
   &__btn {
     margin-right: rem(50);
     margin-top: rem(20);
+    @include for-width(-tablet) {
+      display: flex !important;
+      width: rem(223);
+      margin: rem(20) auto 0 ;
+    }
   }
 }
 .c-content-anchor {

@@ -127,7 +127,7 @@
     @include font_sizes(18, 28);
   }
   @include for-width(-tablet) {
-    @include font_sizes(20, 32);
+    @include font_sizes(16, 26);
     //@include font_sizes(16, 25);
   }
   //@include for-width(-small-lg) {

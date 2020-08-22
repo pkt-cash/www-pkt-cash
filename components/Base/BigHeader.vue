@@ -174,6 +174,14 @@ export default {
 
   &__link {
     margin-top: rem(50);
+    @include for-width(-tablet) {
+      display: flex !important;
+      width: rem(223);
+      padding-right: 0;
+      padding-left: 0;
+      min-width: auto;
+      margin: rem(50) auto 0;
+    }
   }
 
   &__email {

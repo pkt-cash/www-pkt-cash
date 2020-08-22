@@ -2,16 +2,26 @@
   <div class="c-community-contact">
     <div class="container">
       <h1 class="c-community-contact__title">Contact us</h1>
-      <form class="c-community-contact__form">
-        <input type="text" placeholder="Name:" class="c-community-contact__input" />
-        <input type="email" placeholder="Email:" class="c-community-contact__input" />
-        <input type="text" placeholder="Subject:" class="c-community-contact__input" />
-        <textarea placeholder="Message:" class="c-community-contact__textarea"></textarea>
+      <form @submit.prevent="send_data" class="c-community-contact__form">
+        <input type="text" placeholder="Name:" v-model="form.name" class="c-community-contact__input" />
+        <input type="email" placeholder="Email:" v-model="form.email" class="c-community-contact__input" />
+        <input type="text" placeholder="Subject:" v-model="form.subject" class="c-community-contact__input" />
+        <textarea placeholder="Message:" v-model="form.message" class="c-community-contact__textarea"></textarea>
         <figure class="c-community-contact__captcha">
           <vue-recaptcha sitekey="6LfdA8EZAAAAAElKtBfaI0iB6QoChOR_LJ6MX3UP"></vue-recaptcha>
-<!--          <img src="/img/captcha.jpg" alt />-->
         </figure>
         <button type="submit" class="c-community-contact__button blue-btn">Send Message</button>
+        <div class="c-community-contact__status">
+          <template v-if="status === 'sending'">
+            Sending in process ...
+          </template>
+          <template v-if="status === 'ok'">
+            Thanks, we'll get back to you soon
+          </template>
+          <template v-if="status === 'error'">
+            Something went wrong, please try again.
+          </template>
+        </div>
       </form>
     </div>
   </div>
@@ -28,6 +38,29 @@ export default {
     title: String,
     text: String,
     list: Array,
+  },
+  data() {
+    return {
+      form: {
+        name: null,
+        email: null,
+        subject: null,
+        message: null,
+      },
+      status: null
+    }
+  },
+  methods: {
+    async send_data() {
+      this.status = 'sending';
+      try {
+        await this.$axios.post('https://pkt.cash/contact-api/submit', this.form);
+        this.status = 'ok';
+      } catch (e) {
+        this.status = 'error';
+      }
+
+    }
   },
 };
 </script>
@@ -82,6 +115,12 @@ export default {
     & img {
       max-width: 100%;
     }
+  }
+
+  &__status {
+    @extend %text-main;
+    color: $black;
+    margin-top: rem(15);
   }
 }
 </style>

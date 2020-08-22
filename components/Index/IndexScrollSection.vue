@@ -287,10 +287,13 @@
     }
     &-btn {
       @extend %blue-button;
+      @extend %bold;
       @include for-width(-tablet) {
         display: block;
-        width: 173px;
+        width: rem(223);
         margin: 0 auto;
+        padding-right: 5px;
+        padding-left: 5px;
       }
     }
   }
