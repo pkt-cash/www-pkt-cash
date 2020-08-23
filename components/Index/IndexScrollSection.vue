@@ -105,13 +105,13 @@
     created() {
       if(process.client) {
         document.addEventListener('scroll', () => {
-          const condition = window.innerWidth > 1100 ? 550 : 130;
+          const condition = window.innerWidth > 1100 ? 550 : 150;
           const section_0 = this.getCoords('scroll-sect-0') - condition;
           const section_1 = this.getCoords('scroll-sect-1') - condition;
           const section_2 = this.getCoords('scroll-sect-2') - condition;
           const section_3 = this.getCoords('scroll-sect-3') - condition;
           const section_4 = this.getCoords('scroll-sect-4') - condition;
-          let scroll_y = window.innerWidth > 1100 ? window.scrollY : window.scrollY + 50;
+          let scroll_y = window.innerWidth > 1100 ? window.scrollY : window.scrollY + 30;
           if(scroll_y >= section_0) {
             this.image_index = 0
           }
@@ -254,7 +254,7 @@
     padding-top: rem(56);
     @include for-width(-tablet) {
       position: sticky;
-      top: rem(50);
+      top: rem(30);
       margin-bottom: rem(20);
       opacity: 0;
       transition: all .3s ease;
