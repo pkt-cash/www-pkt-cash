@@ -180,6 +180,10 @@
     position: sticky;
     top: 0;
     max-width: rem(558);
+    @include for-width(-tablet) {
+      position: relative;
+      top: auto;
+    }
   }
   &__title {
     @extend %h1-title;
