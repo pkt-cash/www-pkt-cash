@@ -74,7 +74,7 @@ export default {
 .c-about-main {
   padding: rem(93) rem(25) rem(197);
   @include for-width(-tablet) {
-    padding: rem(30) rem(25) rem(197);
+    padding: rem(30) rem(25) rem(55);
   }
 
   & .container {
@@ -198,8 +198,8 @@ export default {
   &__email {
     display: block;
     position: relative;
-    margin: rem(100) auto 0;
-    max-width: rem(620);
+    margin: rem(50) auto 0;
+    max-width: rem(490);
     .tBOqQ.tBOqQ {
       position: absolute;
       top: 0;

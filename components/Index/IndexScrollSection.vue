@@ -165,6 +165,7 @@
       margin-bottom: rem(126);
       @include for-width(-tablet) {
         margin-bottom: rem(60);
+        padding-top: 0;
       }
     }
     &_content {

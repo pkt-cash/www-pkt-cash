@@ -111,6 +111,7 @@ export default {
   padding: rem(136) rem(96) rem(66);
   @include for-width(-tablet) {
     padding: rem(73) rem(25) rem(25);
+    background: linear-gradient(69.29deg, rgba(60, 207, 239, 0.0126) 28.2%, rgba(60, 196, 239, 0.06) 78.24%);
   }
 
   .container {

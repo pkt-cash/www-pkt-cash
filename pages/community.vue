@@ -103,6 +103,12 @@ export default {
       ],
     };
   },
+  created() {
+    // console.log(process)
+    // if(process.client) {
+    //   location.reload();
+    // }
+  }
 };
 </script>
 

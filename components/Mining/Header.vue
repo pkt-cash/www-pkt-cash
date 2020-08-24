@@ -83,16 +83,16 @@ export default {
     }
     &-link {
       @include for-width(-tablet) {
-        display: block;
-        width: 100%;
-        max-width: rem(223);
+        display: block !important;
+        width: rem(223);
+        margin: 0 auto rem(15);
       }
     }
     &-link:not(:last-child) {
       margin-right: rem(70);
       @include for-width(-tablet) {
         margin-bottom: rem(20);
-        margin-right: rem(35);
+        margin-right: auto;
       }
     }
   }

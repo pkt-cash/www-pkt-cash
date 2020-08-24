@@ -12,7 +12,7 @@
             Terminal-based
             <br />full node setup
           </a>
-          <nuxt-link to="/wallet-setup" target="_blank" class="c-wallet-options__item-btn blue-btn-arrow">
+          <nuxt-link to="/wallet-setup" class="c-wallet-options__item-btn blue-btn-arrow">
             <span>Setup Wallet</span>
           </nuxt-link>
         </div>
@@ -25,7 +25,7 @@
             Graphical User Interface (GUI)
             <br />wallet for desktop
           </a>
-          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://pkt.cash/wallet_setup">
+          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://pkt.cash/wallet_setup" target="_blank">
             <span>Download Beta</span>
           </a>
         </div>
