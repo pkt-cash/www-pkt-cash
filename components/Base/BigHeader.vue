@@ -188,7 +188,7 @@ export default {
     display: block;
     position: relative;
     margin: rem(50) auto 0 0;
-    max-width: rem(750);
+    max-width: rem(490);
     @include for-width(-tablet) {
       display: flex;
       flex-direction: column;
