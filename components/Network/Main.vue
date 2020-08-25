@@ -160,6 +160,40 @@ export default {
       itm_link: null
     }
   },
+  methods: {
+    getCoords(name) {
+      const box = document.querySelector(name).getBoundingClientRect()
+      //
+      return box.top + pageYOffset;
+    }
+  },
+  mounted() {
+    if(process.client) {
+      document.addEventListener('scroll', () => {
+        const condition = window.innerWidth > 1100 ? 80 : 60;
+        const section_0 = this.getCoords('#network-steward-charter') - condition;
+        const section_1 = this.getCoords('#funding-proposal') - condition;
+        const section_2 = this.getCoords('#network-steward-projects') - condition;
+        const section_3 = this.getCoords('#who-is-the-network-steward') - condition;
+        let scroll_y = window.innerWidth > 1100 ? window.scrollY : window.scrollY + 30;
+        if(scroll_y < section_0) {
+          this.itm_link = null
+        }
+        if(scroll_y >= section_0) {
+          this.itm_link = 'network-steward-charter'
+        }
+        if(scroll_y >= section_1) {
+          this.itm_link = 'funding-proposal'
+        }
+        if(scroll_y >= section_2) {
+          this.itm_link = 'network-steward-projects'
+        }
+        if(scroll_y >= section_3) {
+          this.itm_link = 'who-is-the-network-steward'
+        }
+      })
+    }
+  }
 };
 </script>
 

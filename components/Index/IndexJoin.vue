@@ -53,5 +53,12 @@ export default {
       margin-bottom: rem(50);
     }
   }
+
+  &__link {
+    @include for-width(-tablet) {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 </style>

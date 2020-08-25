@@ -82,8 +82,8 @@ export default {
           route_link: "/cash",
         },
         {
-          name: "About",
-          route_link: "/about",
+          name: "Roadmap",
+          route_link: "/roadmap",
         },
       ],
     };

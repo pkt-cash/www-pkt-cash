@@ -10,48 +10,82 @@
           </video>
 <!--          <img src="/img/pkt-gif.gif" alt />-->
         </figure>
-        <div class="c-index-header__list">
-          <ul class="c-index-header__list-list">
-            <li class="c-index-header__list-item">
-              <h4 class="c-index-header__list-title">Network Bandwidth</h4>
-              <span class="c-index-header__list-text">
+        <template v-if="is_mobile">
+          <div class="c-index-header__list">
+            <ul class="c-index-header__list-list">
+              <li class="c-index-header__list-item">
+                <h4 class="c-index-header__list-title">Network Bandwidth</h4>
+                <span class="c-index-header__list-text">
                 65.72 Mb/s
               </span>
-            </li>
-            <li class="c-index-header__list-item">
-              <h4 class="c-index-header__list-title">Difficulty</h4>
-              <span class="c-index-header__list-text">{{ difficulty | commafy }}</span>
-            </li>
-            <li class="c-index-header__list-item">
-              <h4 class="c-index-header__list-title">Mined to Date</h4>
-              <span class="c-index-header__list-text">
+              </li>
+              <li class="c-index-header__list-item">
+                <h4 class="c-index-header__list-title">Difficulty</h4>
+                <span class="c-index-header__list-text">{{ difficulty | commafy }}</span>
+              </li>
+              <li class="c-index-header__list-item">
+                <h4 class="c-index-header__list-title">Mined to Date</h4>
+                <span class="c-index-header__list-text">
 <!--                1,645,817,539.55 PKT-->
                 {{ already_mined | displayed_stats_data | commafy }} PKT
               </span>
-            </li>
-            <li class="c-index-header__list-item">
-              <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
-              <span class="c-index-header__list-text">
+              </li>
+              <li class="c-index-header__list-item">
+                <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
+                <span class="c-index-header__list-text">
 <!--                6,925,200-->
                 {{ encryptionsPerSecond | displayed_stats_data | commafy }}
               </span>
-            </li>
-            <li class="c-index-header__list-item">
-              <h4 class="c-index-header__list-title">Current Block Reward</h4>
-              <span class="c-index-header__list-text">
+              </li>
+              <li class="c-index-header__list-item">
+                <h4 class="c-index-header__list-title">Current Block Reward</h4>
+                <span class="c-index-header__list-text">
 <!--                3,037.01 PKT-->
                 {{ reward | displayed_stats_data | commafy }} PKT
               </span>
-            </li>
-            <li class="c-index-header__list-item">
-              <h4 class="c-index-header__list-title">Coins Remaining</h4>
-              <span class="c-index-header__list-text">
+              </li>
+              <li class="c-index-header__list-item">
+                <h4 class="c-index-header__list-title">Coins Remaining</h4>
+                <span class="c-index-header__list-text">
 <!--                4,353,219,423.41 PKT-->
                 {{ remaining | displayed_stats_data | commafy }} PKT
               </span>
-            </li>
-          </ul>
-        </div>
+              </li>
+            </ul>
+          </div>
+        </template>
+        <template v-else>
+          <div class="c-index-header__desk-list">
+            <div class="c-index-header__desk-left">
+              <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
+                <h3 class="c-index-header__desk-itm-title">Network Bandwidth</h3>
+                <p class="c-index-header__desk-itm-text">65.72 Mb/s</p>
+              </div>
+              <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
+                <h3 class="c-index-header__desk-itm-title">Encryptions / Sec</h3>
+                <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | displayed_stats_data | commafy }}</p>
+              </div>
+              <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
+                <h3 class="c-index-header__desk-itm-title">Difficulty</h3>
+                <p class="c-index-header__desk-itm-text">{{ difficulty | commafy }}</p>
+              </div>
+            </div>
+            <div class="c-index-header__desk-right">
+              <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
+                <h3 class="c-index-header__desk-itm-title">Current Block Reward</h3>
+                <p class="c-index-header__desk-itm-text">{{ reward | displayed_stats_data | commafy }} PKT</p>
+              </div>
+              <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
+                <h3 class="c-index-header__desk-itm-title">Coins Remaining</h3>
+                <p class="c-index-header__desk-itm-text">{{ remaining | displayed_stats_data | commafy }} PKT</p>
+              </div>
+              <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
+                <h3 class="c-index-header__desk-itm-title">>Mined to Date</h3>
+                <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
+              </div>
+            </div>
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -69,7 +103,10 @@ export default {
       'difficulty',
       'bitsPerSecond',
       'encryptionsPerSecond'
-    ])
+    ]),
+    is_mobile() {
+      return process.client && window.innerWidth < 1100
+    }
   },
   data() {
     return {
@@ -190,6 +227,9 @@ export default {
         }
       }
     }
+    &__desk {
+
+    }
 
     &-title {
       @extend %bold;
@@ -207,6 +247,72 @@ export default {
       @include for-width(-tablet) {
         @include font_sizes(24, 33);
       }
+    }
+  }
+}
+.c-index-header__desk {
+  &-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: rem(15);
+  }
+  &-itm {
+    &-l, &-r {
+      position: relative;
+      padding: rem(20);
+      border-left: 1px solid #98E0F9;
+      &:after,
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: rem(40);
+        height: rem(1);
+        background-color: #98E0F9;
+      }
+      &:after {
+        top: 0;
+        left: 0;
+      }
+      &:before {
+        bottom: 0;
+        left: 0;
+      }
+    }
+    &-r {
+      border-left: 1px solid transparent;
+      border-bottom: 1px solid #98E0F9;
+      &:after,
+      &:before {
+        width: rem(1);
+        height: rem(40);
+      }
+      &:after {
+        top: auto;
+        bottom: 0;
+        left: 0;
+      }
+      &:before {
+        bottom: 0;
+        left: auto;
+        right: -2px;
+      }
+    }
+    &-title {
+      @extend %medium;
+      @include font_sizes(18, 28);
+    }
+    &-text {
+      @extend %medium;
+      @include font_sizes(18, 22);
+      color: #3CADEF;
+      margin-top: rem(10);
     }
   }
 }

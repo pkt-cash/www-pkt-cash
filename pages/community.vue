@@ -3,7 +3,7 @@
     <section class="v-community-section">
       <BigHeader
         title="Community"
-        subtitle="Thank you for your interest in the PKT Network. In building out this network infrastructure we are only as strong as the sum of all parts. ."
+        subtitle="Thank you for your interest in the PKT Network. In building out this network infrastructure we are only as strong as the sum of all parts."
         sometext="Please check out the various resources available to collaborate and communicate."
         bg="/img/community-header-bg.jpg"
         :email="true"

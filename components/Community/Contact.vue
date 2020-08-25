@@ -54,7 +54,7 @@ export default {
     async send_data() {
       this.status = 'sending';
       try {
-        await this.$axios.post('https://pkt.cash/contact-api/submit', this.form);
+        const test = await this.$axios.post('https://pkt.cash/contact-api/submit', this.form);
         this.status = 'ok';
       } catch (e) {
         this.status = 'error';
