@@ -103,12 +103,16 @@ export default {
       ],
     };
   },
-  created() {
-    // console.log(process)
-    // if(process.client) {
-    //   location.reload();
-    // }
-  }
+  // async mounted() {
+  //   // console.log(process)
+  //   if(process.client) {
+  //     await setTimeout(() => {
+  //       let test = document.querySelector('.needsclick');
+  //       if(!test) location.reload();
+  //     }, 500)
+  //     //
+  //   }
+  // },
 };
 </script>
 

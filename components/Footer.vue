@@ -21,9 +21,16 @@
           <h5 class="c-footer__menu-title">About</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of about_links" :key="index" class="c-footer__menu-item">
-              <nuxt-link :to="item.route_link" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">{{ item.name }}</span>
-              </nuxt-link>
+              <template v-if="item.name === 'About'">
+                <a :href="item.route_link" :class="{ 'link-active' : $route.name === 'about'}" class="c-footer__menu-link">
+                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                </a>
+              </template>
+              <template v-else>
+                <nuxt-link :to="item.route_link" class="c-footer__menu-link">
+                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                </nuxt-link>
+              </template>
             </li>
           </ul>
         </div>

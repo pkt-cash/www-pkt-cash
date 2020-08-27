@@ -10,9 +10,16 @@
         <div class="nav__menu" :class="{ 'active': nav_open }">
           <ul class="nav__menu-list" :class="{ 'active': nav_open }">
             <li v-for="(item, index) of nav_list" @click="nav_open = !nav_open" :key="index" class="nav__menu-item">
-              <nuxt-link :to="item.route_link" class="nav__menu-link btn-nav">
-                <span class="nav__menu-text">{{ item.name }}</span>
-              </nuxt-link>
+              <template v-if="item.name === 'Community'">
+                <a :href="item.route_link" :class="{ 'link-active' : $route.name === 'community'}" class="nav__menu-link btn-nav">
+                  <span class="nav__menu-text">{{ item.name }}</span>
+                </a>
+              </template>
+              <template v-else>
+                <nuxt-link :to="item.route_link" class="nav__menu-link btn-nav">
+                  <span class="nav__menu-text">{{ item.name }}</span>
+                </nuxt-link>
+              </template>
             </li>
             <li class="nav__menu-item">
               <a href="https://explorer.pkt.cash" target="_blank" class="nav__menu-link btn-nav">

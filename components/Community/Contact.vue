@@ -8,7 +8,7 @@
         <input type="text" placeholder="Subject:" v-model="form.subject" class="c-community-contact__input" />
         <textarea placeholder="Message:" v-model="form.message" class="c-community-contact__textarea"></textarea>
         <figure class="c-community-contact__captcha">
-          <vue-recaptcha sitekey="6Leho8MZAAAAAH5GlD2YVJWtyen8wxOXYlpbysMn" :loadRecaptchaScript="true"></vue-recaptcha>
+          <vue-recaptcha sitekey="6Ldy38MZAAAAANoF7QlOq6WhDf2iVX1xHXh-p_vq" :loadRecaptchaScript="true"></vue-recaptcha>
         </figure>
         <button type="submit" class="c-community-contact__button blue-btn">Send Message</button>
         <div class="c-community-contact__status">
