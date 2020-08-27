@@ -80,7 +80,7 @@
                 <p class="c-index-header__desk-itm-text">{{ remaining | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">>Mined to Date</h3>
+                <h3 class="c-index-header__desk-itm-title">Mined to Date</h3>
                 <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
               </div>
             </div>
@@ -252,6 +252,7 @@ export default {
 }
 .c-index-header__desk {
   &-list {
+    margin-top: rem(-90);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -260,12 +261,11 @@ export default {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    margin-top: rem(15);
   }
   &-itm {
     &-l, &-r {
       position: relative;
-      padding: rem(20);
+      padding: rem(10);
       border-left: 1px solid #98E0F9;
       &:after,
       &:before {
@@ -303,6 +303,9 @@ export default {
         left: auto;
         right: -2px;
       }
+    }
+    &-r {
+      padding: rem(10) rem(15);
     }
     &-title {
       @extend %medium;
