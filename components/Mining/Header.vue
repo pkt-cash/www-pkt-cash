@@ -5,7 +5,7 @@
         <h1 class="c-mining-header__title-header">Mining</h1>
         <h2 class="c-mining-header__title-text">
           PacketCrypt:
-          <br />The firs idth-hard proof of work
+          <br />The first bandwidth-hard proof of work
         </h2>
       </div>
       <div class="c-mining-header__button">

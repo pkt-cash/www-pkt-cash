@@ -167,11 +167,22 @@ export default {
     flex: 0 0 55%;
     @extend %h1-title;
     padding-top: rem(90);
+
+    @include for-width(-desktop-medium) {
+      padding-top: rem(50);
+    }
+    @include for-width(-desktop-med) {
+      padding-top: rem(30);
+    }
     @include for-width(-tablet-lg) {
       flex: 0 0 100%;
+      width: 100%;
       margin-bottom: rem(6);
-      padding-top: 0;
       @include font_sizes(33, 43);
+      text-align:center;
+    }
+    @include for-width(-tablet) {
+      text-align: left;
     }
   }
 
@@ -183,6 +194,8 @@ export default {
     }
     @include for-width(-tablet-lg) {
       flex: 0 0 100%;
+      max-width: rem(450);
+      margin: 0 auto;
       margin-bottom: rem(100);
     }
   }
