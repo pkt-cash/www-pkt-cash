@@ -41,7 +41,7 @@ export const actions = {
       commit('updateField', { path: 'remaining', value: data.remaining })
       commit('updateField', { path: 'difficulty', value: Math.floor(difficulty.results[0].difficulty) })
       commit('updateField', { path: 'bitsPerSecond', value: stats.results[0].bitsPerSecond })
-      commit('updateField', { path: 'encryptionsPerSecond', value: stats.results[0].encryptionsPerSecond * 1000000 })
+      commit('updateField', { path: 'encryptionsPerSecond', value: stats.results[0].encryptionsPerSecond })
 
     } catch (e) {
       console.log(e)

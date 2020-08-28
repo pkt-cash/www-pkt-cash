@@ -59,11 +59,11 @@
             <div class="c-index-header__desk-left">
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Network Bandwidth</h3>
-                <p class="c-index-header__desk-itm-text">65.72 Mb/s</p>
+                <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Encryptions / Sec</h3>
-                <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | displayed_stats_data | commafy }}</p>
+                <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | commafy }}</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Difficulty</h3>
