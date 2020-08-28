@@ -129,7 +129,7 @@ export default {
   },
   mounted() {
     if(process.client) {
-      this.timeout = setInterval(() => this.$store.dispatch('pkt-analytics/update_data'), 600)
+      this.timeout = setInterval(() => this.$store.dispatch('pkt-analytics/update_data'), 6000)
     }
   },
   beforeDestroy() {
