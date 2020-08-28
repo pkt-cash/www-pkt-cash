@@ -6,7 +6,7 @@
         <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
         <figure class="c-index-header__img">
           <video autoplay loop muted playsInline="" draggable="false">
-            <source type="video/mp4" src="https://i.imgur.com/LY4IgO2.mp4"/>
+            <source type="video/mp4" src="/gif.mp4"/>
           </video>
 <!--          <img src="/img/pkt-gif.gif" alt />-->
         </figure>
