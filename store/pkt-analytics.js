@@ -35,7 +35,7 @@ export const actions = {
       // /api/v1/PKT/pkt/chain/down
       const difficulty = await this.$axios.$get('https://pkt.cash/api/v1/PKT/pkt/chain/down/1')
       const stats = await this.$axios.$get('https://pkt.cash/api/v1/PKT/pkt/packetcrypt/stats/1/')
-
+      console.log('load function')
       commit('updateField', { path: 'already_mined', value: data.alreadyMined })
       commit('updateField', { path: 'reward', value: data.reward })
       commit('updateField', { path: 'remaining', value: data.remaining })

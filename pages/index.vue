@@ -63,8 +63,8 @@ export default {
       ],
     };
   },
-  async middleware({ store }) {
-    await store.dispatch('pkt-analytics/load')
+  async mounted() {
+    await this.$store.dispatch('pkt-analytics/load')
   },
 };
 </script>
