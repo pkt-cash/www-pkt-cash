@@ -269,6 +269,9 @@ export default {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include for-width(-desktop-medium) {
+      margin-top: rem(60);
+    }
   }
   &-right {
     display: flex;
