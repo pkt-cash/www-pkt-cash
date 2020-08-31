@@ -8,7 +8,7 @@
         <input type="text" placeholder="Subject:" v-model="form.subject" class="c-community-contact__input" />
         <textarea placeholder="Message:" v-model="form.message" class="c-community-contact__textarea"></textarea>
         <figure class="c-community-contact__captcha">
-          <vue-recaptcha sitekey="6Ldy38MZAAAAANoF7QlOq6WhDf2iVX1xHXh-p_vq" :loadRecaptchaScript="true"></vue-recaptcha>
+          <vue-recaptcha @verify="varify_capcha" sitekey="6Ldy38MZAAAAANoF7QlOq6WhDf2iVX1xHXh-p_vq" :loadRecaptchaScript="true"></vue-recaptcha>
         </figure>
         <button type="submit" class="c-community-contact__button blue-btn">Send Message</button>
         <div class="c-community-contact__status">
@@ -51,10 +51,14 @@ export default {
     }
   },
   methods: {
+    varify_capcha(res) {
+      console.log(res);
+    },
     async send_data() {
       this.status = 'sending';
       try {
-        const test = await this.$axios.post('https://pkt.cash/contact-api/submit', this.form);
+        const sed_request = await this.$axios.post('https://pkt.cash/contact-api/submit', this.form);
+        console.log(sed_request);
         this.status = 'ok';
       } catch (e) {
         this.status = 'error';
