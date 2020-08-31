@@ -1,5 +1,5 @@
 <template>
-  <div class="c-big-header" :class="{ 'net-mobile-bg': is_mobile && is_network_st, 'is_wallet': is_wallet, is_wallet_setup: is_wallet_setup }"
+  <div class="c-big-header" :class="{ 'net-stet-page': is_network_st, 'net-mobile-bg': is_mobile && is_network_st, 'is_wallet': is_wallet, is_wallet_setup: is_wallet_setup }"
        :style="{ 'background-image': 'url(' + bg_image + ')'}">
     <div class="container">
       <h1 class="c-big-header__title">{{ title }}</h1>
@@ -69,6 +69,19 @@ export default {
   @include for-width(-tablet) {
     padding: rem(170) 0 rem(30);
   }
+  &.net-stet-page {
+
+    @include for-width(-laptop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include for-width(+laptop) {
+      background-size: 120%;
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
+  }
   color: $light_blue;
   min-height: 100vh;
   background-size: cover;
@@ -77,6 +90,7 @@ export default {
   &.net-mobile-bg {
     padding-top: rem(230);
     background-position: right top;
+
   }
 
   & .container {
