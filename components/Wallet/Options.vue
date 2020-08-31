@@ -1,5 +1,5 @@
 <template>
-  <div class="c-wallet-options">
+  <div class="c-wallet-options" id="setup">
     <div class="container">
       <h2 class="c-wallet-options__title">There are currently two options to get a free PKT Wallet</h2>
       <div class="c-wallet-options__list">
@@ -54,6 +54,9 @@ export default {
   &__title {
     @extend %text-main;
     margin-bottom: rem(50);
+    @include for-width(-tablet) {
+      margin-bottom: rem(5);
+    }
   }
 
   &__list {
@@ -69,9 +72,16 @@ export default {
     flex-direction: column;
     align-items: center;
     margin: rem(25) rem(50);
+    @include for-width(-tablet) {
+      margin-bottom: rem(15);
+    }
 
     &-img {
-      margin-bottom: rem(50);
+      margin-bottom: rem(0);
+      height: rem(200);
+      @include for-width(-tablet) {
+        margin-bottom: rem(0);
+      }
     }
 
     &-title {
@@ -86,6 +96,9 @@ export default {
 
     &-btn {
       margin-top: rem(50);
+      @include for-width(-tablet) {
+        margin-top: rem(10);
+      }
     }
   }
 }

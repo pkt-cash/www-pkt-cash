@@ -24,7 +24,7 @@
         <ul class="c-index-features__list-list">
           <li class="c-index-features__list-item">
             <figure class="c-index-features__list-img">
-              <img src="/img/features-1.svg" alt />
+              <img src="/img/features-1.png" alt />
             </figure>
             <h4 class="c-index-features__list-title">Bandwidth-Hard</h4>
             <p
@@ -33,7 +33,7 @@
           </li>
           <li class="c-index-features__list-item">
             <figure class="c-index-features__list-img">
-              <img src="/img/features-2.svg" alt />
+              <img src="/img/features-2.png" alt />
             </figure>
             <h4 class="c-index-features__list-title">Networking</h4>
             <p
@@ -42,7 +42,7 @@
           </li>
           <li class="c-index-features__list-item">
             <figure class="c-index-features__list-img">
-              <img src="/img/features-3.svg" alt />
+              <img src="/img/features-3.png" alt />
             </figure>
             <h4 class="c-index-features__list-title">Scalability</h4>
             <p
@@ -139,11 +139,11 @@ export default {
     }
 
     &-img {
-      height: rem(123);
-      margin-bottom: rem(50);
+      height: rem(200);
+      margin-bottom: rem(0);
       @include for-width(-tablet) {
-        height: rem(75);
-        margin-bottom: rem(25);
+        height: rem(150);
+        margin-bottom: rem(0);
         text-align: center;
       }
 

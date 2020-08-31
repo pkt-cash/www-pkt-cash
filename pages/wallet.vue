@@ -7,7 +7,10 @@
         title="Wallet"
         subtitle="You store your PKT in a PKT Wallet"
         :listTick="wallet_list"
+        is_anchor
+        btnLink="#setup"
         bg="/img/wallet-header-bg.jpg"
+        btn="Setup a Wallet"
       />
     </section>
     <section class="v-wallet-section">

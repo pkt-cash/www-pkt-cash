@@ -16,7 +16,7 @@
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Network Bandwidth</h4>
                 <span class="c-index-header__list-text">
-                65.72 Mb/s
+                {{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s
               </span>
               </li>
               <li class="c-index-header__list-item">
@@ -34,7 +34,7 @@
                 <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
                 <span class="c-index-header__list-text">
 <!--                6,925,200-->
-                {{ encryptionsPerSecond | displayed_stats_data | commafy }}
+                {{ encryptionsPerSecond | commafy }}
               </span>
               </li>
               <li class="c-index-header__list-item">
@@ -196,7 +196,7 @@ export default {
       flex: 0 0 100%;
       max-width: rem(450);
       margin: 0 auto;
-      margin-bottom: rem(100);
+      margin-bottom: rem(15);
     }
   }
 

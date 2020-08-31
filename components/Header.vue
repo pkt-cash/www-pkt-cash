@@ -120,7 +120,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: rem(100);
-  @include for-width(-tablet) {
+  @include for-width(-laptop) {
     height: rem(45);
   }
 
@@ -128,7 +128,7 @@ export default {
     cursor: pointer;
 
     & img {
-      @include for-width(-tablet) {
+      @include for-width(-laptop) {
         height: rem(40);
         margin-top: 10px;
       }
@@ -137,7 +137,8 @@ export default {
 
   &__menu {
     display: flex;
-    @include for-width(-tablet) {
+    @include for-width(-laptop) {
+
       position: fixed;
       transform: scaleX(0);
       transform-origin: right;
@@ -149,8 +150,9 @@ export default {
       padding: rem(25);
       background-color: $white;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &-link {
       &.link-active {
@@ -161,7 +163,7 @@ export default {
       }
     }
 
-    @include for-width(-tablet) {
+    @include for-width(-laptop) {
       &.active {
         transform: scaleX(1);
       }
@@ -175,7 +177,7 @@ export default {
       margin: 0;
     }
 
-    @include for-width(-tablet) {
+    @include for-width(-laptop) {
       top: rem(44);
     }
 
@@ -216,11 +218,11 @@ export default {
         align-items: flex-start;
       }
 
-      @include for-width(-tablet) {
+      @include for-width(-laptop) {
         top: rem(45);
       }
 
-      @include for-width(-tablet) {
+      @include for-width(-laptop) {
         position: static;
         top: rem(0);
       }
@@ -274,7 +276,7 @@ export default {
     }
     width: rem(45);
     height: rem(45);
-    @include for-width(-tablet) {
+    @include for-width(-laptop) {
       width: rem(24);
       height: rem(24);
     }
@@ -288,7 +290,7 @@ export default {
       content: "";
       position: absolute;
       width: rem(22);
-      @include for-width(-tablet) {
+      @include for-width(-laptop) {
         width: rem(12);
       }
       height: rem(1);
@@ -307,7 +309,7 @@ export default {
 
     &::before {
       transform: translate(-50%, 5px);
-      @include for-width(-tablet) {
+      @include for-width(-laptop) {
         transform: translate(-50%, 3px);
       }
     }

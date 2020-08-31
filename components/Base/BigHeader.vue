@@ -11,11 +11,19 @@
       <ul class="c-big-header__list--tick" v-if="listTick">
         <li v-for="item of listTick" :key="item" class="c-big-header__list--tick-item">{{ item }}</li>
       </ul>
-      <nuxt-link
-        class="c-big-header__link blue-btn-arrow"
-        :to="{ path: btnLink }"
-        v-if="btn"
-      >{{ btn }}</nuxt-link>
+      <template v-if="is_anchor">
+        <a :href="btnLink" class="c-big-header__link blue-btn-arrow"
+          v-if="btn"
+        >{{ btn }}</a>
+      </template>
+      <template v-else>
+        <nuxt-link
+          class="c-big-header__link blue-btn-arrow"
+          :to="{ path: btnLink }"
+          v-if="btn"
+        >{{ btn }}</nuxt-link>
+      </template>
+
       <p class="c-big-header__sometext" v-if="sometext">{{ sometext }}</p>
       <div class="c-big-header__email" v-if="email">
         <div class="klaviyo-form-UMUDtg"></div>
@@ -28,6 +36,7 @@
 export default {
   name: "BigHeader",
   props: {
+    is_anchor: Boolean,
     is_network_st: Boolean,
     is_wallet_setup: Boolean,
     is_wallet: Boolean,

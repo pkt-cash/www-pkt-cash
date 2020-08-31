@@ -144,6 +144,9 @@
   position: relative;
   @extend %bg-reset;
   background: linear-gradient(189.29deg, rgba(60, 207, 239, 0.0126) 43.48%, rgba(60, 196, 239, 0.06) 78.24%);
+  //@include for-width(-tablet) {
+    //height: calc(100% + 500px);
+  //}
   .container {
     max-width: rem(1112);
     margin: 0 auto;
@@ -152,6 +155,7 @@
     }
     @include for-width(-tablet) {
       max-width: rem(300);
+      height: calc(100% + 200px);
     }
   }
 }
