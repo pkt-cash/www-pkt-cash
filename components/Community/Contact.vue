@@ -10,7 +10,7 @@
         <figure class="c-community-contact__captcha">
           <vue-recaptcha @verify="varify_capcha" sitekey="6Ldy38MZAAAAANoF7QlOq6WhDf2iVX1xHXh-p_vq" :loadRecaptchaScript="true"></vue-recaptcha>
         </figure>
-        <button type="submit" class="c-community-contact__button blue-btn">Send Message</button>
+        <button :disabled="!valid" type="submit" class="c-community-contact__button blue-btn">Send Message</button>
         <div class="c-community-contact__status">
           <template v-if="status === 'sending'">
             Sending in process ...
@@ -47,12 +47,13 @@ export default {
         subject: null,
         message: null,
       },
-      status: null
+      status: null,
+      valid: null,
     }
   },
   methods: {
     varify_capcha(res) {
-      console.log(res);
+      this.valid = res
     },
     async send_data() {
       this.status = 'sending';
@@ -60,6 +61,10 @@ export default {
         const sed_request = await this.$axios.post('https://pkt.cash/contact-api/submit', this.form);
         console.log(sed_request);
         this.status = 'ok';
+        this.form.name = null;
+        this.form.email = null;
+        this.form.subject = null;
+        this.form.message = null;
       } catch (e) {
         this.status = 'error';
       }
@@ -118,6 +123,13 @@ export default {
 
     & img {
       max-width: 100%;
+    }
+  }
+
+  &__button {
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
     }
   }
 
