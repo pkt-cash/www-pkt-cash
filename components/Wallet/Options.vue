@@ -82,7 +82,7 @@ export default {
 
     &-img {
       margin-bottom: rem(0);
-      height: rem(200);
+      height: rem(250);
       @include for-width(-tablet) {
         margin-bottom: rem(0);
       }
