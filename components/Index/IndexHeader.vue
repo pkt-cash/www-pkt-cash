@@ -215,9 +215,11 @@ export default {
     @include for-width(-tablet-lg) {
       flex: 0 0 100%;
       width: 100%;
-      margin-bottom: rem(6);
+      /*margin-bottom: rem(6);*/
       @include font_sizes(55, 82);
       text-align: center;
+      max-width: 500px;
+      margin: 0 auto rem(6);
     }
     @include for-width(-small-lg) {
       text-align: left;
@@ -251,6 +253,9 @@ export default {
     &-list {
       display: flex;
       flex-wrap: wrap;
+      @include for-width(-tablet-lg) {
+        justify-content: space-between;
+      }
     }
 
     &-item {
