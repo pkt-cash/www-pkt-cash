@@ -56,8 +56,8 @@
         images: [
           '/img/scroll-section/scroll-sect-1.png',
           '/img/scroll-section/scroll-sect-2.png',
-          '/img/scroll-section/scroll-sect-3.png',
           '/img/scroll-section/scroll-sect-4.png',
+          '/img/scroll-section/scroll-sect-3.png',
           '/img/scroll-section/scroll-sect-5.png',
         ],
         blocks: [
