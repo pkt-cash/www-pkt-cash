@@ -4,7 +4,7 @@
       <div class="c-footer__wrap">
         <div class="c-footer__logo">
           <figure class="c-footer__logo-img">
-            <img src="/img/footer-logo.svg" alt />
+            <img src="/img/logo-white.svg" alt />
           </figure>
         </div>
         <div class="c-footer__menu">
