@@ -3,12 +3,14 @@
     <div class="bg"></div>
     <div class="container">
       <div class="c-index-header__wrap">
-        <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
+        <h1 class="c-index-header__title">
+          The world’s first bandwidth-hard blockchain
+        </h1>
         <figure class="c-index-header__img">
           <video autoplay loop muted playsInline="" draggable="false">
-            <source type="video/mp4" src="/gif.mp4"/>
+            <source type="video/mp4" src="/gif.mp4" />
           </video>
-<!--          <img src="/img/pkt-gif.gif" alt />-->
+          <!--          <img src="/img/pkt-gif.gif" alt />-->
         </figure>
         <template v-if="is_mobile">
           <div class="c-index-header__list">
@@ -16,40 +18,42 @@
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Network Bandwidth</h4>
                 <span class="c-index-header__list-text">
-                {{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s
-              </span>
+                  {{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s
+                </span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Difficulty</h4>
-                <span class="c-index-header__list-text">{{ difficulty | commafy }}</span>
+                <span class="c-index-header__list-text">{{
+                  difficulty | commafy
+                }}</span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Mined to Date</h4>
                 <span class="c-index-header__list-text">
-<!--                1,645,817,539.55 PKT-->
-                {{ already_mined | displayed_stats_data | commafy }} PKT
-              </span>
+                  <!--                1,645,817,539.55 PKT-->
+                  {{ already_mined | displayed_stats_data | commafy }} PKT
+                </span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
                 <span class="c-index-header__list-text">
-<!--                6,925,200-->
-                {{ encryptionsPerSecond | commafy }}
-              </span>
+                  <!--                6,925,200-->
+                  {{ encryptionsPerSecond | commafy }}
+                </span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Current Block Reward</h4>
                 <span class="c-index-header__list-text">
-<!--                3,037.01 PKT-->
-                {{ reward | displayed_stats_data | commafy }} PKT
-              </span>
+                  <!--                3,037.01 PKT-->
+                  {{ reward | displayed_stats_data | commafy }} PKT
+                </span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Coins Remaining</h4>
                 <span class="c-index-header__list-text">
-<!--                4,353,219,423.41 PKT-->
-                {{ remaining | displayed_stats_data | commafy }} PKT
-              </span>
+                  <!--                4,353,219,423.41 PKT-->
+                  {{ remaining | displayed_stats_data | commafy }} PKT
+                </span>
               </li>
             </ul>
           </div>
@@ -58,30 +62,48 @@
           <div class="c-index-header__desk-list">
             <div class="c-index-header__desk-left">
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Network Bandwidth</h3>
-                <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s</p>
+                <h3 class="c-index-header__desk-itm-title">
+                  Network Bandwidth
+                </h3>
+                <p class="c-index-header__desk-itm-text">
+                  {{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s
+                </p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Encryptions / Sec</h3>
-                <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | commafy }}</p>
+                <h3 class="c-index-header__desk-itm-title">
+                  Encryptions / Sec
+                </h3>
+                <p class="c-index-header__desk-itm-text">
+                  {{ encryptionsPerSecond | commafy }}
+                </p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Difficulty</h3>
-                <p class="c-index-header__desk-itm-text">{{ difficulty | commafy }}</p>
+                <p class="c-index-header__desk-itm-text">
+                  {{ difficulty | commafy }}
+                </p>
               </div>
             </div>
             <div class="c-index-header__desk-right">
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Current Block Reward</h3>
-                <p class="c-index-header__desk-itm-text">{{ reward | displayed_stats_data | commafy }} PKT</p>
+                <h3 class="c-index-header__desk-itm-title">
+                  Current Block Reward
+                </h3>
+                <p class="c-index-header__desk-itm-text">
+                  {{ reward | displayed_stats_data | commafy }} PKT
+                </p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Coins Remaining</h3>
-                <p class="c-index-header__desk-itm-text">{{ remaining | displayed_stats_data | commafy }} PKT</p>
+                <p class="c-index-header__desk-itm-text">
+                  {{ remaining | displayed_stats_data | commafy }} PKT
+                </p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Mined to Date</h3>
-                <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
+                <p class="c-index-header__desk-itm-text">
+                  {{ already_mined | displayed_stats_data | commafy }} PKT
+                </p>
               </div>
             </div>
           </div>
@@ -92,49 +114,55 @@
 </template>
 
 <script>
-  import { mapFields } from 'vuex-map-fields'
+import { mapFields } from "vuex-map-fields";
 export default {
   name: "IndexHeader",
   computed: {
-    ...mapFields('pkt-analytics', [
-      'already_mined',
-      'reward',
-      'remaining',
-      'difficulty',
-      'bitsPerSecond',
-      'encryptionsPerSecond'
+    ...mapFields("pkt-analytics", [
+      "already_mined",
+      "reward",
+      "remaining",
+      "difficulty",
+      "bitsPerSecond",
+      "encryptionsPerSecond"
     ]),
     is_mobile() {
-      return process.client && window.innerWidth < 1100
+      return process.client && window.innerWidth < 1100;
     }
   },
   data() {
     return {
       timeout: null
-    }
+    };
   },
   filters: {
     displayed_stats_data(value) {
-      return (Number(value) / 0x40000000).toFixed(2)
+      return (Number(value) / 0x40000000).toFixed(2);
     },
     displayed_kb(value) {
-      if (value > (1 << 30)) return `${parseFloat(value / 1073741824).toFixed(2)} Gb/s`
-      if (value > (1 << 20)) return `${parseFloat(value / 1048576).toFixed(2)} Mb/s`
-      if (value > (1 << 10)) return `${parseFloat(value / 1048576).toFixed(2)} Kb/s`
-      return `${value} bits/s`
+      if (value > 1 << 30)
+        return `${parseFloat(value / 1073741824).toFixed(2)} Gb/s`;
+      if (value > 1 << 20)
+        return `${parseFloat(value / 1048576).toFixed(2)} Mb/s`;
+      if (value > 1 << 10)
+        return `${parseFloat(value / 1048576).toFixed(2)} Kb/s`;
+      return `${value} bits/s`;
     },
     commafy(value) {
-      return ('' + value).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+      return ("" + value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
   },
   mounted() {
-    if(process.client) {
-      this.timeout = setInterval(() => this.$store.dispatch('pkt-analytics/update_data'), 60 * 1000)
+    if (process.client) {
+      this.timeout = setInterval(
+        () => this.$store.dispatch("pkt-analytics/update_data"),
+        60 * 1000
+      );
     }
   },
   beforeDestroy() {
-    clearInterval(this.timeout)
-    this.timeout = null
+    clearInterval(this.timeout);
+    this.timeout = null;
   }
 };
 </script>
@@ -143,12 +171,20 @@ export default {
 .c-index-header {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(119.29deg, rgba(60, 207, 239, 0.0126) 28.2%, rgba(60, 196, 239, 0.06) 78.24%);
+  background: linear-gradient(
+    119.29deg,
+    rgba(60, 207, 239, 0.0126) 28.2%,
+    rgba(60, 196, 239, 0.06) 78.24%
+  );
   @extend %bg-reset;
   padding: rem(136) rem(96) rem(66);
   @include for-width(-tablet) {
     padding: rem(73) rem(25) rem(25);
-    background: linear-gradient(69.29deg, rgba(60, 207, 239, 0.0126) 28.2%, rgba(60, 196, 239, 0.06) 78.24%);
+    background: linear-gradient(
+      69.29deg,
+      rgba(60, 207, 239, 0.0126) 28.2%,
+      rgba(60, 196, 239, 0.06) 78.24%
+    );
   }
 
   .container {
@@ -166,8 +202,10 @@ export default {
   &__title {
     flex: 0 0 55%;
     @extend %h1-title;
-    padding-top: rem(90);
-
+    padding-top: rem(50);
+    @include for-width(-desktop-lg) {
+      padding-top: rem(30);
+    }
     @include for-width(-desktop-medium) {
       padding-top: rem(50);
     }
@@ -178,16 +216,23 @@ export default {
       flex: 0 0 100%;
       width: 100%;
       margin-bottom: rem(6);
-      @include font_sizes(33, 43);
-      text-align:center;
+      @include font_sizes(55, 82);
+      text-align: center;
     }
-    @include for-width(-tablet) {
+    @include for-width(-small-lg) {
       text-align: left;
+      @include font_sizes(33, 43);
     }
   }
 
   &__img {
     flex: 0 0 40%;
+    @include for-width(+ desktop-medium) {
+      height: rem(420);
+    }
+    @include for-width(+ desktop-lg) {
+      height: rem(500);
+    }
     video {
       width: 100%;
       height: 100%;
@@ -241,7 +286,6 @@ export default {
       }
     }
     &__desk {
-
     }
 
     &-title {
@@ -279,18 +323,19 @@ export default {
     justify-content: flex-end;
   }
   &-itm {
-    &-l, &-r {
+    &-l,
+    &-r {
       position: relative;
       padding: rem(10);
-      border-left: 1px solid #98E0F9;
+      border-left: 1px solid #98e0f9;
       &:after,
       &:before {
         position: absolute;
-        content: '';
+        content: "";
         display: block;
         width: rem(40);
         height: rem(1);
-        background-color: #98E0F9;
+        background-color: #98e0f9;
       }
       &:after {
         top: 0;
@@ -303,7 +348,7 @@ export default {
     }
     &-r {
       border-left: 1px solid transparent;
-      border-bottom: 1px solid #98E0F9;
+      border-bottom: 1px solid #98e0f9;
       &:after,
       &:before {
         width: rem(1);
@@ -330,7 +375,7 @@ export default {
     &-text {
       @extend %medium;
       @include font_sizes(18, 22);
-      color: #3CADEF;
+      color: #3cadef;
       margin-top: rem(10);
     }
   }

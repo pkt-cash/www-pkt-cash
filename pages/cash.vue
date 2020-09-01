@@ -12,7 +12,7 @@
       <CashMain />
     </section>
     <section class="v-cash-section">
-      <Advantage is_index :list="advantage_item" />
+      <Advantage :list="advantage_item" />
     </section>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
   components: {
     SimpleHeader,
     CashMain,
-    Advantage,
+    Advantage
   },
   data() {
     return {
@@ -39,10 +39,11 @@ export default {
           btnText: "Network Steward",
           img: "/img/advantage/mining-4.png",
           mobile_img: "/img/advantage/mining-4-mobile.png",
-        },
-      ],
+          btnLink: "/network-steward"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 

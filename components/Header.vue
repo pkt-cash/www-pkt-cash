@@ -41,8 +41,9 @@
             </li>
           </ul>
           <a
-            href="https://explorer.pkt.cash"
+            href="/PacketCrypt Whitepaper.pdf"
             target="_blank"
+            download
             class="nav__menu-blue btn-nav blue-btn"
           >
             <span class="nav__menu-link">

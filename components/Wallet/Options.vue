@@ -25,7 +25,11 @@
             Graphical User Interface (GUI)
             <br />wallet for desktop
           </a>
-          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://pkt.cash/wallet_setup" target="_blank">
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow"
+            href="https://pkt.cash/wallet_setup"
+            target="_blank"
+          >
             <span>Download Beta</span>
           </a>
         </div>
