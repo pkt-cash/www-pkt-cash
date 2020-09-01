@@ -7,11 +7,20 @@
             <img src="/img/logo.svg" alt />
           </nuxt-link>
         </div>
-        <div class="nav__menu" :class="{ 'active': nav_open }">
-          <ul class="nav__menu-list" :class="{ 'active': nav_open }">
-            <li v-for="(item, index) of nav_list" @click="nav_open = !nav_open" :key="index" class="nav__menu-item">
+        <div class="nav__menu" :class="{ active: nav_open }">
+          <ul class="nav__menu-list" :class="{ active: nav_open }">
+            <li
+              v-for="(item, index) of nav_list"
+              @click="nav_open = !nav_open"
+              :key="index"
+              class="nav__menu-item"
+            >
               <template v-if="item.name === 'Community'">
-                <a :href="item.route_link" :class="{ 'link-active' : $route.name === 'community'}" class="nav__menu-link btn-nav">
+                <a
+                  :href="item.route_link"
+                  :class="{ 'link-active': $route.name === 'community' }"
+                  class="nav__menu-link btn-nav"
+                >
                   <span class="nav__menu-text">{{ item.name }}</span>
                 </a>
               </template>
@@ -22,7 +31,11 @@
               </template>
             </li>
             <li class="nav__menu-item">
-              <a href="https://explorer.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
+              <a
+                href="https://explorer.pkt.cash"
+                target="_blank"
+                class="nav__menu-link btn-nav"
+              >
                 <span class="nav__menu-text">Block Explorer</span>
               </a>
             </li>
@@ -43,7 +56,13 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M5.5 0L5.5 12" stroke="white" />
-                <line x1="5.56051" y1="11.6464" x2="10.526" y2="6.68093" stroke="white" />
+                <line
+                  x1="5.56051"
+                  y1="11.6464"
+                  x2="10.526"
+                  y2="6.68093"
+                  stroke="white"
+                />
                 <line
                   y1="-0.5"
                   x2="7.0223"
@@ -55,7 +74,11 @@
             </span>
           </a>
         </div>
-        <div class="nav__burger" @click="nav_open = !nav_open" :class="{ 'active': nav_open }"></div>
+        <div
+          class="nav__burger"
+          @click="nav_open = !nav_open"
+          :class="{ active: nav_open }"
+        ></div>
       </div>
     </div>
   </nav>
@@ -70,31 +93,31 @@ export default {
       nav_list: [
         {
           name: "Mining",
-          route_link: "/mining",
+          route_link: "/mining"
         },
         {
           name: "Network Steward",
-          route_link: "/network-steward",
+          route_link: "/network-steward"
         },
         {
           name: "Wallet",
-          route_link: "/wallet",
+          route_link: "/wallet"
         },
         {
           name: "Community",
-          route_link: "/community",
+          route_link: "/community"
         },
         {
           name: "PKT",
-          route_link: "/cash",
+          route_link: "/cash"
         },
         {
           name: "Roadmap",
-          route_link: "/roadmap",
-        },
-      ],
+          route_link: "/roadmap"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
@@ -129,7 +152,7 @@ export default {
 
     & img {
       @include for-width(-laptop) {
-        height: rem(40);
+        height: rem(21);
         margin-top: 10px;
       }
     }
@@ -138,7 +161,6 @@ export default {
   &__menu {
     display: flex;
     @include for-width(-laptop) {
-
       position: fixed;
       transform: scaleX(0);
       transform-origin: right;
@@ -170,7 +192,7 @@ export default {
     }
 
     @include for-width(-laptop, + small-lg) {
-      margin: 0 rem(30) 0 auto;
+      margin: 0 0 0 auto;
     }
 
     @include for-width(-small-lg) {
