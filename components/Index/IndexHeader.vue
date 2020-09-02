@@ -3,11 +3,9 @@
     <div class="bg"></div>
     <div class="container">
       <div class="c-index-header__wrap">
-        <h1 class="c-index-header__title">
-          The world’s first bandwidth-hard blockchain
-        </h1>
+        <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
         <figure class="c-index-header__img">
-          <video autoplay loop muted playsInline="" draggable="false">
+          <video autoplay loop muted playsinline draggable="false">
             <source type="video/mp4" src="/gif.mp4" />
           </video>
           <!--          <img src="/img/pkt-gif.gif" alt />-->
@@ -17,15 +15,17 @@
             <ul class="c-index-header__list-list">
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Network Bandwidth</h4>
-                <span class="c-index-header__list-text">
-                  {{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s
-                </span>
+                <span
+                  class="c-index-header__list-text"
+                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s</span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Difficulty</h4>
-                <span class="c-index-header__list-text">{{
+                <span class="c-index-header__list-text">
+                  {{
                   difficulty | commafy
-                }}</span>
+                  }}
+                </span>
               </li>
               <li class="c-index-header__list-item">
                 <h4 class="c-index-header__list-title">Mined to Date</h4>
@@ -62,48 +62,38 @@
           <div class="c-index-header__desk-list">
             <div class="c-index-header__desk-left">
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">
-                  Network Bandwidth
-                </h3>
-                <p class="c-index-header__desk-itm-text">
-                  {{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s
-                </p>
+                <h3 class="c-index-header__desk-itm-title">Network Bandwidth</h3>
+                <p
+                  class="c-index-header__desk-itm-text"
+                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">
-                  Encryptions / Sec
-                </h3>
-                <p class="c-index-header__desk-itm-text">
-                  {{ encryptionsPerSecond | commafy }}
-                </p>
+                <h3 class="c-index-header__desk-itm-title">Encryptions / Sec</h3>
+                <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | commafy }}</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Difficulty</h3>
-                <p class="c-index-header__desk-itm-text">
-                  {{ difficulty | commafy }}
-                </p>
+                <p class="c-index-header__desk-itm-text">{{ difficulty | commafy }}</p>
               </div>
             </div>
             <div class="c-index-header__desk-right">
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">
-                  Current Block Reward
-                </h3>
-                <p class="c-index-header__desk-itm-text">
-                  {{ reward | displayed_stats_data | commafy }} PKT
-                </p>
+                <h3 class="c-index-header__desk-itm-title">Current Block Reward</h3>
+                <p
+                  class="c-index-header__desk-itm-text"
+                >{{ reward | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Coins Remaining</h3>
-                <p class="c-index-header__desk-itm-text">
-                  {{ remaining | displayed_stats_data | commafy }} PKT
-                </p>
+                <p
+                  class="c-index-header__desk-itm-text"
+                >{{ remaining | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
                 <h3 class="c-index-header__desk-itm-title">Mined to Date</h3>
-                <p class="c-index-header__desk-itm-text">
-                  {{ already_mined | displayed_stats_data | commafy }} PKT
-                </p>
+                <p
+                  class="c-index-header__desk-itm-text"
+                >{{ already_mined | displayed_stats_data | commafy }} PKT</p>
               </div>
             </div>
           </div>
@@ -124,15 +114,15 @@ export default {
       "remaining",
       "difficulty",
       "bitsPerSecond",
-      "encryptionsPerSecond"
+      "encryptionsPerSecond",
     ]),
     is_mobile() {
       return process.client && window.innerWidth < 1100;
-    }
+    },
   },
   data() {
     return {
-      timeout: null
+      timeout: null,
     };
   },
   filters: {
@@ -150,7 +140,7 @@ export default {
     },
     commafy(value) {
       return ("" + value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
+    },
   },
   mounted() {
     if (process.client) {
@@ -163,7 +153,7 @@ export default {
   beforeDestroy() {
     clearInterval(this.timeout);
     this.timeout = null;
-  }
+  },
 };
 </script>
 
@@ -319,6 +309,12 @@ export default {
     display: flex;
     justify-content: space-between;
     @include for-width(-desktop-medium) {
+      margin-top: rem(-50);
+    }
+    @include for-width(-laptop) {
+      margin-top: rem(10);
+    }
+    @include for-width(-tablet-lg) {
       margin-top: rem(60);
     }
   }
