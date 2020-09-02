@@ -22,7 +22,11 @@
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of about_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.name === 'About'">
-                <a :href="item.route_link" :class="{ 'link-active' : $route.name === 'about'}" class="c-footer__menu-link">
+                <a
+                  :href="item.route_link"
+                  :class="{ 'link-active' : $route.name === 'about'}"
+                  class="c-footer__menu-link"
+                >
                   <span class="c-footer__menu-text">{{ item.name }}</span>
                 </a>
               </template>
@@ -207,6 +211,11 @@ export default {
 
   &__menu {
     margin-right: rem(85);
+
+    @include for-width(-desktop-med) {
+      margin-right: rem(55);
+      margin-bottom: rem(35);
+    }
     @include for-width(-tablet-lg) {
       margin-right: rem(32);
       margin-bottom: rem(35);
