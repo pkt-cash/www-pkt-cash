@@ -3,35 +3,42 @@
     <div class="container">
       <div class="c-scroll-sect">
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_top">
-          <h2 class="c-scroll-sect__title">
-            The Network
-          </h2>
+          <h2 class="c-scroll-sect__title">The Network</h2>
           <div class="c-scroll-sect__text">
             The world’s first bandwidth-hard blockchain protocol, built to incentivize
             the growth of infrastructure
           </div>
         </div>
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_content">
-<!--          <figure >-->
-<!--           v-if="image_index === index" :class="{ visible: image_index === index }"-->
-            <div class="c-scroll-sect__scroll-images">
-              <div class="scroll-image">
-                <div class="scroll-image-wrapper">
-                  <transition-group name="fade" mode="in-out" tag="figure">
-                    <img v-for="(img, index) of images" v-if="image_index === index" :key="img" :src="img" :alt="img">
-                  </transition-group>
-                </div>
+          <!--          <figure >-->
+          <!--           v-if="image_index === index" :class="{ visible: image_index === index }"-->
+          <div class="c-scroll-sect__scroll-images">
+            <div class="scroll-image">
+              <div class="scroll-image-wrapper">
+                <transition-group name="fade" mode="in-out" tag="figure">
+                  <img
+                    v-for="(img, index) of images"
+                    v-if="image_index === index"
+                    :key="img"
+                    :src="img"
+                    :alt="img"
+                  />
+                </transition-group>
               </div>
             </div>
+          </div>
 
-<!--          </figure>-->
+          <!--          </figure>-->
           <div class="c-scroll-sect__wrapper">
-            <div v-for="(block, index) of blocks" :ref="`scroll-sect-${index}`"
-                 :key="index"
-                 :class="{ show_block: image_index === index, hide: hide_block === index }"
-                 class="c-scroll-sect__block">
+            <div
+              v-for="(block, index) of blocks"
+              :ref="`scroll-sect-${index}`"
+              :key="index"
+              :class="{ show_block: image_index === index, hide: hide_block === index }"
+              class="c-scroll-sect__block"
+            >
               <figure class="c-scroll-sect__b-wrap-right">
-                <img :src="images[index]" :alt="block.title">
+                <img :src="images[index]" :alt="block.title" />
               </figure>
               <div class="c-scroll-sect__b-wrap-left">
                 <h3 class="c-scroll-sect__b-title" v-html="block.title"></h3>
@@ -49,113 +56,127 @@
 </template>
 
 <script>
-  export default {
-    name: "IndexScrollSection",
-    data() {
-      return {
-        images: [
-          '/img/scroll-section/scroll-sect-1.png',
-          '/img/scroll-section/scroll-sect-2.png',
-          '/img/scroll-section/scroll-sect-4.png',
-          '/img/scroll-section/scroll-sect-3.png',
-          '/img/scroll-section/scroll-sect-5.png',
-        ],
-        blocks: [
-          {
-            title: 'PKT Network',
-            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network. \n',
-            link: { path: '/cash' }
-          },
-          {
-            title: 'PacketCrypt Protocol',
-            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network.  Nodes broadcast what are called announcements (“anns”) across the network.',
-            link: { path: '/setup' }
-          },
-          {
-            title: 'Announcement Mining',
-            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network. \n',
-            link: { path: '/mining' }
-          },
-          {
-            title: 'Block Mining',
-            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n',
-            link: { path: '/mining' }
-          },
-          {
-            title: 'PKT',
-            text: 'PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n' +
-              'Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n',
-            link: { path: '/cash' }
-          },
-        ],
-        image_index: 0,
-        hide_block: null
-      }
+export default {
+  name: "IndexScrollSection",
+  data() {
+    return {
+      images: [
+        "/img/scroll-section/scroll-sect-1.png",
+        "/img/scroll-section/scroll-sect-2.png",
+        "/img/scroll-section/scroll-sect-4.png",
+        "/img/scroll-section/scroll-sect-3.png",
+        "/img/scroll-section/scroll-sect-5.png",
+      ],
+      blocks: [
+        {
+          title: "PKT Network",
+          text:
+            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "Nodes broadcast what are called announcements (“anns”) across the network. \n",
+          link: { path: "/cash" },
+        },
+        {
+          title: "PacketCrypt Protocol",
+          text:
+            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network.  Nodes broadcast what are called announcements (“anns”) across the network.",
+          link: { path: "/setup" },
+        },
+        {
+          title: "Announcement Mining",
+          text:
+            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "Nodes broadcast what are called announcements (“anns”) across the network. \n",
+          link: { path: "/mining" },
+        },
+        {
+          title: "Block Mining",
+          text:
+            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+          link: { path: "/mining" },
+        },
+        {
+          title: "PKT",
+          text:
+            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+          link: { path: "/cash" },
+        },
+      ],
+      image_index: 0,
+      hide_block: null,
+    };
+  },
+  methods: {
+    getCoords(name) {
+      const box = this.$refs[name][0].getBoundingClientRect();
+      //
+      return box.top + pageYOffset;
     },
-    methods: {
-      getCoords(name) {
-        const box = this.$refs[name][0].getBoundingClientRect()
-        //
-        return box.top + pageYOffset;
-      }
-    },
-    created() {
-      if(process.client) {
-        document.addEventListener('scroll', () => {
-          const condition = window.innerWidth > 1100 ? 550 : 150;
-          const section_0 = this.getCoords('scroll-sect-0') - condition;
-          const section_1 = this.getCoords('scroll-sect-1') - condition;
-          const section_2 = this.getCoords('scroll-sect-2') - condition;
-          const section_3 = this.getCoords('scroll-sect-3') - condition;
-          const section_4 = this.getCoords('scroll-sect-4') - condition;
-          let scroll_y = window.innerWidth > 1100 ? window.scrollY : window.scrollY + 30;
-          if(scroll_y >= section_0) {
-            this.image_index = 0
-          }
-          if(scroll_y >= section_1) {
-            this.image_index = 1
-          }
-          if(scroll_y >= section_2) {
-            this.image_index = 2
-          }
-          if(scroll_y >= section_3) {
-            this.image_index = 3
-          }
-          if(scroll_y >= section_4) {
-            this.image_index = 4
-          }
-        })
-      }
-    },
-  }
+  },
+  created() {
+    if (process.client) {
+      document.addEventListener("scroll", () => {
+        const condition = window.innerWidth > 1100 ? 550 : 150;
+        const section_0 = this.getCoords("scroll-sect-0") - condition;
+        const section_1 = this.getCoords("scroll-sect-1") - condition;
+        const section_2 = this.getCoords("scroll-sect-2") - condition;
+        const section_3 = this.getCoords("scroll-sect-3") - condition;
+        const section_4 = this.getCoords("scroll-sect-4") - condition;
+        let scroll_y =
+          window.innerWidth > 1100 ? window.scrollY : window.scrollY + 30;
+        if (scroll_y >= section_0) {
+          this.image_index = 0;
+        }
+        if (scroll_y >= section_1) {
+          this.image_index = 1;
+        }
+        if (scroll_y >= section_2) {
+          this.image_index = 2;
+        }
+        if (scroll_y >= section_3) {
+          this.image_index = 3;
+        }
+        if (scroll_y >= section_4) {
+          this.image_index = 4;
+        }
+      });
+    }
+  },
+};
 </script>
 
 <style lang="scss">
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 .c-scroll-section {
   position: relative;
   @extend %bg-reset;
-  background: linear-gradient(189.29deg, rgba(60, 207, 239, 0.0126) 43.48%, rgba(60, 196, 239, 0.06) 78.24%);
+  background: linear-gradient(
+    189.29deg,
+    rgba(60, 207, 239, 0.0126) 43.48%,
+    rgba(60, 196, 239, 0.06) 78.24%
+  );
   //@include for-width(-tablet) {
-    //height: calc(100% + 500px);
+  //height: calc(100% + 500px);
   //}
   .container {
     max-width: rem(1112);
     margin: 0 auto;
     @include for-width(-laptop) {
       max-width: rem(962);
+      padding: 0 rem(30);
     }
     @include for-width(-tablet) {
       max-width: rem(300);
       height: calc(100% + 200px);
+      padding: 0;
     }
   }
 }
@@ -185,6 +206,9 @@
     position: sticky;
     top: 0;
     max-width: rem(558);
+    @include for-width(-tablet-lg) {
+      max-width: rem(380);
+    }
     @include for-width(-tablet) {
       position: relative;
       top: auto;
@@ -196,7 +220,7 @@
     text-align: center;
     margin-bottom: rem(58);
     @include for-width(-tablet) {
-      @include font_sizes(36, 40)
+      @include font_sizes(36, 40);
     }
   }
   &__text {
@@ -242,7 +266,7 @@
       top: 0;
       right: 0;
       order: 2;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
       height: rem(483);
       /*&.visible {*/
       /*  position: sticky;*/
@@ -262,7 +286,7 @@
       top: rem(30);
       margin-bottom: rem(20);
       opacity: 0;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       &.show_block {
         opacity: 1;
       }
@@ -271,7 +295,6 @@
   &__b {
     &-wrap {
       &-left {
-
       }
       &-right {
         display: none;
