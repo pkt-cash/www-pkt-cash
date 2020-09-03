@@ -255,7 +255,9 @@ export default {
     }
 
     &-title {
-      @extend %norms-bold;
+      font-family: arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1.1px;
       @include font_sizes(15, 20);
       margin-bottom: rem(23);
       @include for-width(-tablet) {
@@ -282,7 +284,8 @@ export default {
     }
 
     &-link {
-      @extend %norms-light;
+      font-family: arial, sans-serif;
+      letter-spacing: 0.85px;
       @include font_sizes(15, 20);
       @include for-width(-small-lg) {
         @include font_sizes(11, 16);
@@ -332,7 +335,8 @@ export default {
 
     &-light {
       opacity: 0.4;
-      @extend %norms-regular;
+      font-family: arial, sans-serif;
+      letter-spacing: 1.1px;
       @include font_sizes(15, 20);
       @include for-width(-tablet) {
         @include font_sizes(11, 19);
