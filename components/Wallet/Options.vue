@@ -80,7 +80,7 @@ export default {
     align-items: center;
     margin: rem(25) rem(50);
     @include for-width(-tablet) {
-      margin-bottom: rem(25);
+      margin: rem(25) rem(20);
     }
 
     &-img {
@@ -89,6 +89,11 @@ export default {
       @include for-width(-tablet) {
         margin-bottom: rem(15);
         height: auto;
+        max-height: rem(250);
+      }
+
+      & img {
+        max-height: rem(220);
       }
     }
 

@@ -31,7 +31,7 @@ export default {
 .c-mining-header {
   min-height: 100vh;
   padding: rem(209) rem(25) rem(122);
-  @include for-width(-tablet) {
+  @include for-width(-small-lg) {
     padding: rem(150) rem(25) rem(30);
   }
   background-image: url("/img/mining-header-bg.jpg");
@@ -51,7 +51,7 @@ export default {
 
   &__title {
     margin-bottom: rem(120);
-    @include for-width(-tablet) {
+    @include for-width(-small-lg) {
       margin-bottom: rem(15);
     }
 
@@ -82,7 +82,7 @@ export default {
       margin-bottom: rem(50);
     }
     &-link {
-      @include for-width(-tablet) {
+      @include for-width(-small-lg) {
         display: block !important;
         width: rem(223);
         margin: 0 auto rem(15);
@@ -90,7 +90,7 @@ export default {
     }
     &-link:not(:last-child) {
       margin-right: rem(70);
-      @include for-width(-tablet) {
+      @include for-width(-small-lg) {
         margin-bottom: rem(20);
         margin-right: auto;
       }

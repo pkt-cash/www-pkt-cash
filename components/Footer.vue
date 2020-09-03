@@ -298,6 +298,9 @@ export default {
 
       &-with-social {
         padding-left: rem(37);
+        @include for-width(-tablet) {
+          padding-left: rem(28);
+        }
       }
     }
 
@@ -309,6 +312,10 @@ export default {
 
       display: flex;
       align-items: center;
+
+      @include for-width(-tablet) {
+        transform: translate(-33%, -50%) scale(0.65);
+      }
 
       // max-width: rem(25);
       // height: rem(25);

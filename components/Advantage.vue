@@ -3,7 +3,6 @@
     <template v-for="item of list">
       <div
         class="c-advantage__item"
-
         :class="{ 'c-advantage__item-blue': item.colorBlue }"
         :key="item.title"
         :style="{ 'background-image': `url(${is_mobile ? item.mobile_img : item.img})` }"
@@ -35,31 +34,43 @@
             <p class="c-advantage__text">{{ item.text }}</p>
             <div class="c-advantage__btn-wrapper">
               <template v-if="is_index && !item.linkMore">
-                <a href="https://github.com/pkt-cash/ns-projects"
-                   target="_blank"
-                   class="c-advantage__link blue-btn-arrow"
-                   v-if="item.btnText && !item.linkMor">
+                <a
+                  href="https://github.com/pkt-cash/ns-projects"
+                  target="_blank"
+                  class="c-advantage__link blue-btn-arrow"
+                  v-if="item.btnText && !item.linkMor"
+                >
                   <span>{{ item.btnText }}</span>
                 </a>
               </template>
               <template v-else>
-                <a :href="item.btnLink"
-                   class="c-advantage__link blue-btn-arrow"
-                   :class="{ 'mining-center': is_mining && is_mobile }"
-                   v-if="item.btnText && !item.linkMore">
+                <a
+                  :href="item.btnLink"
+                  class="c-advantage__link blue-btn-arrow"
+                  :class="{ 'mining-center': is_mining && is_mobile }"
+                  v-if="item.btnText && !item.linkMore"
+                >
                   <span>{{ item.btnText }}</span>
                 </a>
               </template>
               <template v-if="item.learnMore">
                 <template v-if="!(is_mining && is_mobile)">
-                  <nuxt-link :to="{ path: item.lear_link }" class="c-advantage__link-more blue-btn-arrow"  v-if="item.learnMore">
+                  <nuxt-link
+                    :to="{ path: item.lear_link }"
+                    class="c-advantage__link-more blue-btn-arrow"
+                    v-if="item.learnMore"
+                  >
                     <span>Learn More</span>
                   </nuxt-link>
                 </template>
               </template>
               <template v-else>
                 <template v-if="!(is_mining && is_mobile)">
-                  <nuxt-link  v-if="item.lear_link" :to="{ path: item.lear_link }" class="c-advantage__link blue-btn-arrow" >
+                  <nuxt-link
+                    v-if="item.lear_link"
+                    :to="{ path: item.lear_link }"
+                    class="c-advantage__link blue-btn-arrow"
+                  >
                     <span>Learn More</span>
                   </nuxt-link>
                 </template>
@@ -78,7 +89,7 @@ export default {
   props: {
     list: Array,
     is_index: Boolean,
-    is_mining: Boolean
+    is_mining: Boolean,
   },
   computed: {
     is_mobile() {
@@ -144,7 +155,7 @@ export default {
     margin-bottom: rem(40);
     @include for-width(-tablet) {
       margin-bottom: rem(21);
-      @include font_sizes(34, 51)
+      @include font_sizes(34, 51);
     }
     word-wrap: normal;
     position: relative;
@@ -202,6 +213,9 @@ export default {
       flex-direction: column;
       .blue-btn-arrow {
         width: 100%;
+        max-width: rem(223);
+        margin-right: auto;
+        margin-left: auto;
       }
     }
   }

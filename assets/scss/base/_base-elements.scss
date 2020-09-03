@@ -17,13 +17,23 @@
     padding: rem(14) rem(40);
     @include font_sizes(15, 22);
   }
-  min-width: rem(150);
+  min-width: rem(240);
+  @include for-width(-tablet) {
+    min-width: rem(223);
+  }
   text-align: center;
   display: inline-flex;
   justify-content: center;
 }
 
 %blue-button-arrow {
+  @include for-width(-tablet) {
+    max-width: rem(223);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include for-width(+ tablet) {
     padding-right: rem(60);
     background-image: url("/img/btn-arrow.svg");
