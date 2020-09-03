@@ -64,7 +64,13 @@
           </ul>
         </div>
         <div class="c-footer__text">
-          <span class="c-footer__text-light">@ PKT cash, 2020</span>
+          <span class="c-footer__text-light">
+            This site is hosted for the community by CJDNS SASU, a French business with SEREN 843264235.
+            <br/>
+            PKT is a decentralized community blockchain, not controlled by CJDNS or any other entity.
+            <br/>
+            <a href="https://github.com/cjdelisle/CJDNS-contact">Legal and Privacy Info</a>
+          </span>
         </div>
       </div>
     </div>

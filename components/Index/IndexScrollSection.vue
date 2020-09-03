@@ -71,35 +71,39 @@ export default {
         {
           title: "PKT Network",
           text:
-            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
-            "Nodes broadcast what are called announcements (“anns”) across the network. \n",
+            "PKT is a blockchain designed to bootstrap a decentralized bandwidth marketplace using " +
+            "near-free microtransactions, and artificial demand for bandwidth using the PacketCrypt " +
+            "bandwidth-hard proof of work algorithm. \n",
           link: { path: "/cash" },
         },
         {
           title: "PacketCrypt Protocol",
           text:
-            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. Nodes broadcast what are called announcements (“anns”) across the network.",
+            "PacketCrypt is a lightweight CPU-hard proof of work which is more efficiently mined when " +
+            "miners collaborate, but collaboration requires bandwidth, making it the world's first " +
+            "bandwidth-hard proof of work. \n",
           link: { path: "/setup" },
         },
         {
           title: "Announcement Mining",
           text:
-            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
-            "Nodes broadcast what are called announcements (“anns”) across the network. \n",
+            "Casual miners use idle CPU time to generate small messages called announcements and " +
+            "broadcast them to block miners who pay for them. \n",
           link: { path: "/mining" },
         },
         {
           title: "Block Mining",
           text:
-            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
-            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+            "Dedicated miners use specialized equipment to secure the blockchain, \n" +
+            "but the PacketCrypt algorithm allows them to do less work if they have more announcements, \n" +
+            "effectively substituting bandwidth for electricity. \n",
           link: { path: "/mining" },
         },
         {
           title: "PKT",
           text:
-            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
-            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+            "PKT is a native cryptocurrency based on Bitcoin code, making it Lightning Network \n" +
+            "ready from day one. It is not a token so there is no centralized issuer and no gas fees. \n",
           link: { path: "/cash" },
         },
       ],
