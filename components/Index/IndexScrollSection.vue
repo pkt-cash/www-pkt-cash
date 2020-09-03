@@ -71,34 +71,34 @@ export default {
         {
           title: "PKT Network",
           text:
-            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
             "Nodes broadcast what are called announcements (“anns”) across the network. \n",
           link: { path: "/cash" },
         },
         {
           title: "PacketCrypt Protocol",
           text:
-            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network.  Nodes broadcast what are called announcements (“anns”) across the network.",
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. Nodes broadcast what are called announcements (“anns”) across the network.",
           link: { path: "/setup" },
         },
         {
           title: "Announcement Mining",
           text:
-            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
             "Nodes broadcast what are called announcements (“anns”) across the network. \n",
           link: { path: "/mining" },
         },
         {
           title: "Block Mining",
           text:
-            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
             "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
           link: { path: "/mining" },
         },
         {
           title: "PKT",
           text:
-            "PKT is a new blockchain that rewards users  for contributing bandwidth to the network. \n" +
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
             "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
           link: { path: "/cash" },
         },
