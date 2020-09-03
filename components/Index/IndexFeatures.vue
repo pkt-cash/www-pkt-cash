@@ -126,7 +126,7 @@ export default {
       margin-bottom: rem(30);
       @include for-width(-tablet) {
         margin-bottom: rem(15);
-        @include font_sizes(16, 26)
+        @include font_sizes(16, 26);
       }
     }
 
@@ -134,16 +134,16 @@ export default {
       @extend %text-main;
       @include for-width(-tablet) {
         text-align: center;
-        @include font_sizes(16, 26)
+        @include font_sizes(16, 26);
       }
     }
 
     &-img {
-      height: rem(200);
-      margin-bottom: rem(0);
+      height: rem(100);
+      margin: rem(50) auto;
       @include for-width(-tablet) {
-        height: rem(150);
-        margin-bottom: rem(0);
+        height: rem(100);
+        margin-bottom: rem(50);
         text-align: center;
       }
 

@@ -53,7 +53,7 @@
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of join_community" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">
+                <span class="c-footer__menu-text c-footer__menu-text-with-social">
                   <figure class="c-footer__menu-img">
                     <img :src="item.icon" alt />
                   </figure>
@@ -133,7 +133,7 @@ export default {
       github_links: [
         {
           name: "pkt.cash",
-          route_link: "https://pkt.cash",
+          route_link: "https://github.com/pkt-cash/",
         },
         {
           name: "cjdns",
@@ -291,14 +291,27 @@ export default {
     }
 
     &-text {
+      position: relative;
+
       display: flex;
       align-items: center;
+
+      &-with-social {
+        padding-left: rem(37);
+      }
     }
 
     &-img {
+      position: absolute;
+      top: 50%;
+      left: rem(8);
+      transform: translate(-33%, -50%);
+
       display: flex;
       align-items: center;
-      margin-right: rem(10);
+
+      // max-width: rem(25);
+      // height: rem(25);
     }
   }
 

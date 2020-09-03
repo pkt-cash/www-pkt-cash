@@ -27,7 +27,7 @@
           </a>
           <a
             class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://pkt.cash/wallet_setup"
+            href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases/tag/v.1.0.0-beta.27"
             target="_blank"
           >
             <span>Download Beta</span>
@@ -48,6 +48,9 @@ export default {
 .c-wallet-options {
   padding: rem(100) rem(15);
   text-align: center;
+  @include for-width(-tablet) {
+    padding: rem(30) rem(15) rem(50);
+  }
 
   .container {
     width: 100%;
@@ -77,14 +80,15 @@ export default {
     align-items: center;
     margin: rem(25) rem(50);
     @include for-width(-tablet) {
-      margin-bottom: rem(15);
+      margin-bottom: rem(25);
     }
 
     &-img {
-      margin-bottom: rem(0);
+      margin-bottom: rem(15);
       height: rem(250);
       @include for-width(-tablet) {
-        margin-bottom: rem(0);
+        margin-bottom: rem(15);
+        height: auto;
       }
     }
 

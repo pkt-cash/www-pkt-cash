@@ -304,10 +304,13 @@ export default {
 }
 .c-index-header__desk {
   &-list {
-    margin-top: rem(-90);
+    margin-top: rem(-150);
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include for-width(-desktop-lg) {
+      margin-top: rem(-90);
+    }
     @include for-width(-desktop-medium) {
       margin-top: rem(-50);
     }
