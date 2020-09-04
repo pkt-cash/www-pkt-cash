@@ -37,7 +37,7 @@
             </li>
           </ul>
           <a
-            href="/PacketCrypt Whitepaper.pdf"
+            href="/PacketCrypt-2020-09-04.pdf"
             target="_blank"
             download
             class="nav__menu-blue btn-nav blue-btn"
