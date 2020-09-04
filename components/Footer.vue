@@ -156,7 +156,7 @@ export default {
         },
         {
           name: "Matrix",
-          route_link: "https://riot.im/app/#/room/#pkt:m.trnsz.com",
+          route_link: "https://matrix.to/#/#pkt:matrix.org",
           icon: "/img/icon/matrix.svg",
         },
         {
