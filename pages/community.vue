@@ -80,25 +80,25 @@ export default {
           img: "/img/community/twitter.svg",
           link: "https://twitter.com/pktproject",
         },
-        {
+        /*{
           title: "Mastadon",
           text:
             "Follow PKT on Mastadon to stay up to date with news and progress.",
           img: "/img/community/mastadon.svg",
           link: "https://www.facebook.com/PKT-110041354126488",
-        },
+        },*/
         {
           title: "IRC",
           text: "Follow PKT on IRC to stay up to date with news and progress.",
           img: "/img/community/irc.svg",
-          link: "https://www.facebook.com/PKT-110041354126488",
+          link: "https://kiwiirc.com/nextclient/irc.freenode.net/pkt?nick=pktwow",
         },
         {
           title: "Matrix",
           text:
             "Follow PKT on Matrix to stay up to date with news and progress.",
           img: "/img/community/matrix.svg",
-          link: "https://riot.im/app/#/room/#pkt:m.trnsz.com",
+          link: "https://matrix.to/#/#pkt:matrix.org",
         },
       ],
     };
