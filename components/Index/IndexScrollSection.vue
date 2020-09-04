@@ -66,6 +66,7 @@ export default {
         "/img/scroll-section/scroll-sect-4.png",
         "/img/scroll-section/scroll-sect-3.png",
         "/img/scroll-section/scroll-sect-5.png",
+        "/img/scroll-section/scroll-sect-5.png",
       ],
       blocks: [
         {
@@ -104,6 +105,13 @@ export default {
           text:
             "PKT is a native cryptocurrency based on Bitcoin code, making it Lightning Network \n" +
             "ready from day one. It is not a token so there is no centralized issuer and no gas fees. \n",
+          link: { path: "/cash" },
+        },
+        {
+          title: "PKT",
+          text:
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
+            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
           link: { path: "/cash" },
         },
       ],
@@ -147,13 +155,18 @@ export default {
       });
     }
   },
+  mounted() {
+    if (window.innerWidth > 1100) {
+      this.blocks.pop();
+    }
+  },
 };
 </script>
 
 <style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 .fade-enter,
 .fade-leave-to {
