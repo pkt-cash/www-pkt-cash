@@ -66,6 +66,7 @@ export default {
         "/img/scroll-section/scroll-sect-4.png",
         "/img/scroll-section/scroll-sect-3.png",
         "/img/scroll-section/scroll-sect-5.png",
+        "/img/scroll-section/scroll-sect-5.png",
       ],
       blocks: [
         {
@@ -94,6 +95,13 @@ export default {
             "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
             "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
           link: { path: "/mining" },
+        },
+        {
+          title: "PKT",
+          text:
+            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
+            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+          link: { path: "/cash" },
         },
         {
           title: "PKT",
@@ -143,13 +151,18 @@ export default {
       });
     }
   },
+  mounted() {
+    if (window.innerWidth > 1100) {
+      this.blocks.pop();
+    }
+  },
 };
 </script>
 
 <style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 .fade-enter,
 .fade-leave-to {
