@@ -51,7 +51,7 @@ export default {
         {
           title: "Wallet",
           text:
-            "Currently there’s only a text based wallet for PKT and in order to install this you need to install the PKT daemon then the wallet, then btcctl for interacting with the wallet.",
+            "Currently there’s only a text based wallet for PKT and in order to install this you need to install the PKT daemon then the wallet, then pktctl for interacting with the wallet.",
           btnText: "Install Wallet",
           img: "/img/advantage/index-2.png",
           mobile_img: "/img/advantage/index-2-mobile.png",

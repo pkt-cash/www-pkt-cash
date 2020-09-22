@@ -38,7 +38,7 @@
               <b
               >0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</b>
             </p>
-            <pre class="c-content-main__scroll">$ btcctl -u x -P x getrawtransaction 505d2750577a3d3c739c2a650ec0e03a7ddb1f81080c820ab1a317575020745b 1
+            <pre class="c-content-main__scroll">$ ./bin/pktctl getrawtransaction 505d2750577a3d3c739c2a650ec0e03a7ddb1f81080c820ab1a317575020745b 1
 {
   "hex": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff10022913000b2f503253482f706b74642fffffffff03cac2a6ee0000000
 01976a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac362f5f3b00000000220020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2b000000000000
@@ -100,7 +100,7 @@
             <p
               class="c-content-main__text"
             >If we double-check by querying pktd to find out what is the network steward, we will see that it shows the script that was paid to.</p>
-            <pre class="c-content-main__scroll">$ btcctl -u x -P x getnetworksteward
+            <pre class="c-content-main__scroll">$ ./bin/pktctl getnetworksteward
 {
   "script": "0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2b",
   "votesagainst": 0,
@@ -136,12 +136,12 @@
                 target="_blank"
               >https://explorer.pkt.cash/address</a>, you would use the following workflow:
             </p>
-            <pre class="c-content-main__scroll">$ btcctl -u x -P x --wallet getnetworkstewardvote
+            <pre class="c-content-main__scroll">$ ./bin/pktctl --wallet getnetworkstewardvote
 {}
-$ btcctl -u x -P x --wallet setnetworkstewardvote default 76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac 0020d5c1005c0d4012d3ae2672319e7f
+$ ./bin/pktctl --wallet setnetworkstewardvote default 76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac 0020d5c1005c0d4012d3ae2672319e7f
 9eb15a57516aeefabbbc062265f67e308f2b
 {}
-$ btcctl -u x -P x --wallet getnetworkstewardvote
+$ ./bin/pktctl --wallet getnetworkstewardvote
 {
   "votefor": "76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac",
   "voteagainst": "0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2b"

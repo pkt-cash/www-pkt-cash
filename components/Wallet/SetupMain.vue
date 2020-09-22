@@ -45,7 +45,7 @@
             <h2 class="c-content-main__title">Install the components</h2>
             <p
               class="c-content-main__text"
-            >Once you have golang and git fully installed and set up, you can use the following commands to install pktd, wallet and btcctl.</p>
+            >Once you have golang and git fully installed and set up, you can use the following commands to install pktd, pktwallet and pktctl.</p>
             <pre class="c-content-main__scroll">git clone github.com/pkt-cash/pktd
 cd pktd
 ./do</pre>
@@ -56,14 +56,14 @@ cd pktd
           <div class="c-content-main__section">
             <h2 class="c-content-main__title">Launch pktd</h2>
             <p class="c-content-main__text">Now, you can launch pktd:</p>
-            <pre class="c-content-main__scroll">./pktd</pre>
+            <pre class="c-content-main__scroll">./bin/pktd</pre>
             <p class="c-content-main__text">This should show some output such as the following:</p>
             <pre class="c-content-main__scroll">2019-08-16 13:47:56.526 [INF] SYNC: Processed 843 blocks in the last 10.01s (843
 transactions, height 843, 2019-08-16 05:56:50 +0000 UTC)</pre>
             <p
               class="c-content-main__text"
             >This tells you that it’s properly syncing the chain. In another window, you can check the status of your node.</p>
-            <pre class="c-content-main__scroll">./btcctl getinfo</pre>
+            <pre class="c-content-main__scroll">./bin/pktctl getinfo</pre>
             <p class="c-content-main__text">
               Check the
               <a href="https://explorer.pkt.cash" target="_blank">Block Explorer</a> to see the most recent block.
@@ -76,25 +76,25 @@ transactions, height 843, 2019-08-16 05:56:50 +0000 UTC)</pre>
           <div class="c-content-main__section" >
             <h2 class="c-content-main__title">Setup the wallet</h2>
             <p class="c-content-main__text">First you’ll need to create a wallet</p>
-            <pre class="c-content-main__scroll">./wallet --create</pre>
+            <pre class="c-content-main__scroll">./bin/pktwallet --create</pre>
             <p class="c-content-main__text">Then once it is created, launch it</p>
-            <pre class="c-content-main__scroll">./wallet</pre>
+            <pre class="c-content-main__scroll">./bin/pktwallet</pre>
             <p
               class="c-content-main__text"
             >Now in another window, you can interact with the wallet. First you might want to create for yourself an address:</p>
-            <pre class="c-content-main__scroll">./btcctl --wallet getnewaddress</pre>
+            <pre class="c-content-main__scroll">./bin/pktctl --wallet getnewaddress</pre>
             <p class="c-content-main__text">Or get your current balance:</p>
-            <pre class="c-content-main__scroll">./btcctl --wallet getbalance</pre>
+            <pre class="c-content-main__scroll">./bin/pktctl --wallet getbalance</pre>
             <p
               class="c-content-main__text"
             >To send PKT to somebody, you need to first unlock your wallet. In this example, we’re keeping the wallet unlocked for only 60 seconds, you can change the number at the end to your liking.</p>
-            <pre class="c-content-main__scroll">./btcctl --wallet walletpassphrase &lt;password you used when creating wallet&gt; 60</pre>
+            <pre class="c-content-main__scroll">./bin/pktctl --wallet walletpassphrase &lt;password you used when creating wallet&gt; 60</pre>
             <p class="c-content-main__text">Then send cjd a 10 pkt tip.</p>
-            <pre class="c-content-main__scroll">./btcctl --wallet sendtoaddress pP6Vh6GiL4HsMfcPby5xHQTyBUApd7mewg 10</pre>
+            <pre class="c-content-main__scroll">./bin/pktctl --wallet sendtoaddress pP6Vh6GiL4HsMfcPby5xHQTyBUApd7mewg 10</pre>
             <p
               class="c-content-main__text"
             >For an exhaustive list of all the RPC calls you can make, use:</p>
-            <pre class="c-content-main__scroll">./btcctl -l</pre>
+            <pre class="c-content-main__scroll">./bin/pktctl -l</pre>
             <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/mining">
               <span>Begin Mining</span>
             </nuxt-link>
