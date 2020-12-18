@@ -46,20 +46,20 @@ export default {
         {
           title: "PKT Trading Group",
           text:
-            "Participate in live discussions, ask questions, and get to know the PKT community.",
-          img: "/img/community/pkt.svg",
+            "Telegram chat for peer-to-peer buying and selling of PKT.",
+          img: "/img/community/telegram.svg",
           link: "https://t.me/joinchat/FwYcdlU85n0MzGXsJq3ffg",
         },
       ],
       join_list: [
         {
-          title: "PKT Telegram",
+          title: "PKT.chat",
           text:
-            "Participate in live discussions, ask questions, and get to know the PKT community.",
-          img: "/img/community/telegram.svg",
-          link: "https://t.me/pktproject",
+            "Participate in live discussions, ask questions, and get to know the PKT community in dozens of chat rooms",
+          img: "/img/community/pkt.svg",
+          link: "https://pkt.chat",
         },
-        {
+        /*{
           title: "Facebook",
           text:
             "Visit PKT on Facebook for current events and to meet the community.",
@@ -80,7 +80,7 @@ export default {
           img: "/img/community/twitter.svg",
           link: "https://twitter.com/pktproject",
         },
-        /*{
+        {
           title: "Mastadon",
           text:
             "Follow PKT on Mastadon to stay up to date with news and progress.",
@@ -89,14 +89,13 @@ export default {
         },*/
         {
           title: "IRC",
-          text: "Follow PKT on IRC to stay up to date with news and progress.",
+          text: "Follow the PKT.chat main chat room through the bridged IRC channel",
           img: "/img/community/irc.svg",
           link: "https://kiwiirc.com/nextclient/irc.freenode.net/pkt?nick=pktwow",
         },
         {
           title: "Matrix",
-          text:
-            "Follow PKT on Matrix to stay up to date with news and progress.",
+          text: "Follow the PKT.chat main chat room through the bridged Matrix channel",
           img: "/img/community/matrix.svg",
           link: "https://matrix.to/#/#pkt:matrix.org",
         },

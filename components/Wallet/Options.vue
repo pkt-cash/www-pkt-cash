@@ -12,9 +12,13 @@
             Terminal-based
             <br />full node setup
           </a>
-          <nuxt-link to="/wallet-setup" class="c-wallet-options__item-btn blue-btn-arrow">
-            <span>Setup Wallet</span>
-          </nuxt-link>
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow"
+            href="https://docs.pkt.cash/en/latest/pktd/#pktwallet"
+            target="_blank"
+          >
+            <span>Setup CLI Wallet</span>
+          </a>
         </div>
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
@@ -27,10 +31,10 @@
           </a>
           <a
             class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases/tag/v.1.0.0-beta.27"
+            href="https://docs.pkt.cash/en/latest/electrum/"
             target="_blank"
           >
-            <span>Download Beta</span>
+            <span>Setup GUI Wallet</span>
           </a>
         </div>
       </div>
