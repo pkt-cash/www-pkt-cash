@@ -53,12 +53,12 @@
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of join_community" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
-                <span class="c-footer__menu-text c-footer__menu-text-with-social">
+                <!--<span class="c-footer__menu-text c-footer__menu-text-with-social">
                   <figure class="c-footer__menu-img">
                     <img :src="item.icon" alt />
-                  </figure>
-                  {{ item.name }}
-                </span>
+                  </figure>-->
+                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                <!--</span>-->
               </a>
             </li>
           </ul>
