@@ -46,18 +46,25 @@ export default {
         {
           title: "PKT Trading Group",
           text:
-            "Telegram chat for peer-to-peer buying and selling of PKT.",
+            "Community organized Telegram chat for peer-to-peer buying and selling of PKT.",
           img: "/img/community/telegram.svg",
           link: "https://t.me/joinchat/FwYcdlU85n0MzGXsJq3ffg",
         },
       ],
       join_list: [
         {
-          title: "PKT.chat",
+          title: "PKT.chat - Project Chat",
           text:
-            "Participate in live discussions, ask questions, and get to know the PKT community in dozens of chat rooms",
+            "The place to chat with the PKT core developers, get help and support, and participate in the project",
           img: "/img/community/pkt.svg",
           link: "https://pkt.chat",
+        },
+        {
+          title: "PKT Cash - Community Discussion",
+          text:
+            "Community organized chat for discussing PKT project",
+          img: "/img/community/telegram.svg",
+          link: "https://t.me/pkt_cash",
         },
         /*{
           title: "Facebook",
