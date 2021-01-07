@@ -150,7 +150,7 @@ export default {
       ],
       join_community: [
         {
-          name: "PKT.chat",
+          name: "pkt.chat",
           route_link: "https://pkt.chat",
           //icon: "/img/icon/telegram.svg",
         },
