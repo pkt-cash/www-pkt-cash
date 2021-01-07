@@ -150,16 +150,21 @@ export default {
       ],
       join_community: [
         {
-          name: "Telegram",
-          route_link: "https://t.me/pktproject ",
-          icon: "/img/icon/telegram.svg",
+          name: "PKT.chat",
+          route_link: "https://pkt.chat",
+          //icon: "/img/icon/telegram.svg",
+        },
+        {
+          name: "Twitter",
+          route_link: "https://twitter.com/pkt_cash",
+          //icon: "/img/icon/matrix.svg",
         },
         {
           name: "Matrix",
           route_link: "https://matrix.to/#/#pkt:matrix.org",
-          icon: "/img/icon/matrix.svg",
+          //icon: "/img/icon/matrix.svg",
         },
-        {
+        /*{
           name: "Instagram",
           route_link: "https://www.instagram.com/pktcash/",
           icon: "/img/icon/instagram.svg",
@@ -168,7 +173,7 @@ export default {
           name: "Facebook",
           route_link: "https://www.facebook.com/PKT-110041354126488",
           icon: "/img/icon/facebook.svg",
-        },
+        },*/
       ],
     };
   },
