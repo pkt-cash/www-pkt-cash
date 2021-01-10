@@ -53,12 +53,12 @@
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of join_community" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
-                <span class="c-footer__menu-text c-footer__menu-text-with-social">
+                <!--<span class="c-footer__menu-text c-footer__menu-text-with-social">
                   <figure class="c-footer__menu-img">
                     <img :src="item.icon" alt />
-                  </figure>
-                  {{ item.name }}
-                </span>
+                  </figure>-->
+                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                <!--</span>-->
               </a>
             </li>
           </ul>
@@ -150,16 +150,21 @@ export default {
       ],
       join_community: [
         {
-          name: "Telegram",
-          route_link: "https://t.me/pktproject ",
-          icon: "/img/icon/telegram.svg",
+          name: "pkt.chat",
+          route_link: "https://pkt.chat",
+          //icon: "/img/icon/telegram.svg",
+        },
+        {
+          name: "Twitter",
+          route_link: "https://twitter.com/pkt_cash",
+          //icon: "/img/icon/matrix.svg",
         },
         {
           name: "Matrix",
           route_link: "https://matrix.to/#/#pkt:matrix.org",
-          icon: "/img/icon/matrix.svg",
+          //icon: "/img/icon/matrix.svg",
         },
-        {
+        /*{
           name: "Instagram",
           route_link: "https://www.instagram.com/pktcash/",
           icon: "/img/icon/instagram.svg",
@@ -168,7 +173,7 @@ export default {
           name: "Facebook",
           route_link: "https://www.facebook.com/PKT-110041354126488",
           icon: "/img/icon/facebook.svg",
-        },
+        },*/
       ],
     };
   },

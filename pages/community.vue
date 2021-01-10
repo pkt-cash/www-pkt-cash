@@ -86,15 +86,15 @@ export default {
             "Browse PKT on Instagram for valuable insights about the project.",
           img: "/img/community/instagram.svg",
           link: "https://www.instagram.com/pktcash/",
-        },
+        },*/
         {
           title: "Twitter",
           text:
             "Follow PKT on Twitter to stay up to date with news and progress.",
           img: "/img/community/twitter.svg",
-          link: "https://twitter.com/pktproject",
+          link: "https://twitter.com/pkt_cash",
         },
-        {
+        /*{
           title: "Mastadon",
           text:
             "Follow PKT on Mastadon to stay up to date with news and progress.",
