@@ -66,6 +66,13 @@ export default {
           img: "/img/community/telegram.svg",
           link: "https://t.me/pkt_cash",
         },
+        {
+          title: "PKT Community Discord",
+          text:
+            "The one-stop to talk about everything PKT related. Ask questions to community leaders and where to get involved in the PKT Network.",
+          img: "/img/community/pkt_discord.svg",
+          link: "https://discord.gg/ndH4f4zS"
+        },
         /*{
           title: "Facebook",
           text:
