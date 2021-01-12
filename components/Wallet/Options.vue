@@ -34,7 +34,7 @@
             href="https://docs.pkt.cash/en/latest/electrum/"
             target="_blank"
           >
-            <span>Setup GUI Wallet</span>
+            <span>Setup Electrum Wallet</span>
           </a>
         </div>
       </div>
