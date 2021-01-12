@@ -24,7 +24,7 @@
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-2.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">Desktop PKT Wallet</h3>
+          <h3 class="c-wallet-options__item-title">Electrum PKT Wallet</h3>
           <a href="#" class="c-wallet-options__item-link">
             Graphical User Interface (GUI)
             <br />wallet for desktop
