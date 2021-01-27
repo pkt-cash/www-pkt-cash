@@ -20,16 +20,13 @@
         6 billion PKT mined whereas bitcoin will max out at 21 million.
         Furthermore, each PKT is subdividable into 1,073,741,824 units (2 to the
         30th power) whereas there are only 100 million satoshis per bitcoin.
-        When Bitcoin price peaked in 2018 at almost $20,000, the price of a
-        satoshi was almost two 100ths of a penny, approaching a range where it
-        would become impractical for microtransactions, even with nearly free
+        When the Bitcoin price reached almost $42,000 in January 2021, the price of a
+        satoshi was 0.04 cents. This cost per satoshi is impractical for microtransactions, even with nearly free
         transacting over the Lightning Network.
       </p>
       <p class="c-cash-main__text">
-        PKT is designed around the
-        idea of small denominations, fast cheap transacting, using the Network
-        Steward for funding the build-out of decentralized internet
-        infrastructure and PacketCrypt creating artificial demand for bandwidth.
+        PKT is designed around the idea of fast cheap transacting in small denominations to enable a bandwidth trading marketplace. PKT Cash provides an economic incentive for people to connect bandwidth to the network. The Network
+        Steward is designed to ensure funding is available to build-out decentralized internet infrastructure and open-source technology.
       </p>
     </div>
   </div>
