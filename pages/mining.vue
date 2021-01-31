@@ -32,7 +32,7 @@ export default {
           mobile_img: "/img/advantage/mining-1-mobile.png",
           aligh: false,
           textSVG: true,
-          lear_link: '/cash'
+          lear_link: 'https://docs.pkt.cash/en/latest/#pkt-documentation'
         },
         {
           title: "Announcement Mining",
@@ -45,20 +45,20 @@ export default {
           mobile_img: "/img/advantage/mining-2-mobile.png",
           aligh: true,
           textSVG: true,
-          lear_link: '/cash'
+          lear_link: 'https://docs.pkt.cash/en/latest/mining/'
         },
         {
           title: "Block Mining",
           subTitle: "Specialized hardware is required to mine blocks",
           text:
-            "Block mining is the second stage and block miners are the traditional “miners” in the blockchain sense, as they validate the chain and get the payouts. Block miners collect announcements from announcement miners. Block miners get a discount on the difficulty of the work they must do based on the amount of fresh announcements they collect, so they are incentivized to have lots of announcements in memory at the time of mining and to pay announcement miners to keep them supplied",
+            "Block mining is the traditional “mining” in the blockchain sense. Block miners generally must be permissioned by a mining pool and must provide high bandwidth. Block miners collect announcements from announcement miners, validate the chain and get the payouts. Block miners are incentivized to have lots of announcements in memory at the time of mining and must pay announcement miners to keep fresh announcements supplied.",
           btnText: "Start Mining",
           btnLink: "/setup",
           img: "/img/advantage/mining-3.png",
           mobile_img: "/img/advantage/mining-3-mobile.png",
           aligh: false,
           textSVG: true,
-          lear_link: '/cash'
+          lear_link: 'https://docs.pkt.cash/en/latest/mining/'
         },
       ],
     };
