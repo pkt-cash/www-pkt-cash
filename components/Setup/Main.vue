@@ -42,11 +42,11 @@
               </li>
               <li class="c-content-main__navigation-item">
                 <a
-                  href="#Begin-Minning"
-                  @click="itm_link = 'Begin-Minning'"
-                  :class="{ active: itm_link === 'Begin-Minning' }"
+                  href="#Begin-Mining"
+                  @click="itm_link = 'Begin-Mining'"
+                  :class="{ active: itm_link === 'Begin-Mining' }"
                   class="c-content-main__navigation-link"
-                  >Begin Minning</a
+                  >Begin Mining</a
                 >
               </li>
             </ul>
@@ -135,7 +135,7 @@ npm install</pre
               <p class="c-content-main__more">
                 Once you’ve completed building PacketCrypt, you can begin
                 mining.
-                <nuxt-link to="/">Learn More</nuxt-link>
+                <nuxt-link to="https://docs.pkt.cash/en/latest/">Learn More</nuxt-link>
               </p>
             </div>
           </div>
