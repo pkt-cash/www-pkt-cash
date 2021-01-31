@@ -42,11 +42,11 @@
               </li>
               <li class="c-content-main__navigation-item">
                 <a
-                  href="#Begin-Minning"
-                  @click="itm_link = 'Begin-Minning'"
-                  :class="{ active: itm_link === 'Begin-Minning' }"
+                  href="#Begin-Mining"
+                  @click="itm_link = 'Begin-Mining'"
+                  :class="{ active: itm_link === 'Begin-Mining' }"
                   class="c-content-main__navigation-link"
-                  >Begin Minning</a
+                  >Begin Mining</a
                 >
               </li>
             </ul>
