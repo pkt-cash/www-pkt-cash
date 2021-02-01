@@ -190,7 +190,7 @@ npm install</pre
       <div class="container">
         <div class="c-content-main__wrap">
           <!-- Item 4 -->
-          <div class="c-content-anchor" id="Begin-Minning"></div>
+          <div class="c-content-anchor" id="Begin-Mining"></div>
           <div class="c-content-main__content">
             <div class="c-content-main__section">
               <h2 class="c-content-main__title">Announcement mining:</h2>
