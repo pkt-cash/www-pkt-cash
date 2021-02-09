@@ -31,12 +31,73 @@
               </template>
             </li>
             <li class="nav__menu-item">
-              <a href="https://explorer.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
+              <a
+                href="https://explorer.pkt.cash"
+                target="_blank"
+                class="nav__menu-link btn-nav"
+              >
                 <span class="nav__menu-text">Block Explorer</span>
               </a>
             </li>
           </ul>
-          <a
+          <div class="nav__menu-blue btn-nav blue-btn" @click="toggleDropdown">
+            <span class="nav__menu-link">
+              Whitepaper
+              <svg
+                class="nav__menu-blue-img"
+                width="11"
+                height="12"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 284.929 284.929"
+                style="enable-background: new 0 0 284.929 284.929"
+                xml:space="preserve"
+                fill="#fff"
+              >
+                <g>
+                  <path
+                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+		L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+		c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+		c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"
+                  />
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+            </span>
+            <div class="dropdown" :class="{active: dropdownOpen}">
+              <ul class="dropdown__list">
+                <li class="dropdown__list__item">
+                  <a href="https://cryptpad.fr/file/#/2/file/covntXBDZj4VfTexZNITP+DH/" target="_blank" class="dropdown__list__item__link">Whitepaper</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <a href="https://docsend.com/view/42wqgjdgbh9igrji" target="_blank" class="dropdown__list__item__link">Deck</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank" class="dropdown__list__item__link">PacketCrypt</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <a
             href="/PacketCrypt-2020-09-04.pdf"
             target="_blank"
             download
@@ -63,9 +124,13 @@
                 />
               </svg>
             </span>
-          </a>
+          </a> -->
         </div>
-        <div class="nav__burger" @click="nav_open = !nav_open" :class="{ active: nav_open }"></div>
+        <div
+          class="nav__burger"
+          @click="nav_open = !nav_open"
+          :class="{ active: nav_open }"
+        ></div>
       </div>
     </div>
   </nav>
@@ -103,12 +168,50 @@ export default {
           route_link: "/roadmap",
         },
       ],
+      dropdownOpen: false
     };
   },
+  methods: {
+    toggleDropdown() {
+      this.dropdownOpen = !this.dropdownOpen;
+    }
+  }
 };
 </script>
 
 <style lang="scss">
+.nav__menu-blue {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  height: 0px;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    height: 200px;
+    z-index: 9999;
+  }
+  &__list {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    &__item {
+      &__link {
+        display: block;
+        padding: 20px;
+        color: #000;
+        font-size: 16px;
+      }
+    }
+  }
+}
 .c-navigation {
   position: fixed;
   top: 0;
@@ -245,6 +348,7 @@ export default {
       @include for-width(-laptop) {
         &.active {
           transform: scaleX(1);
+          margin-top: -190px;
         }
       }
     }
