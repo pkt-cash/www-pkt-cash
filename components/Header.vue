@@ -86,13 +86,13 @@
             <div class="dropdown" :class="{active: dropdownOpen}">
               <ul class="dropdown__list">
                 <li class="dropdown__list__item">
-                  <a href="https://cryptpad.fr/file/#/2/file/covntXBDZj4VfTexZNITP+DH/" target="_blank" class="dropdown__list__item__link">Whitepaper</a>
+                  <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="dropdown__list__item__link">Whitepaper</a>
                 </li>
                 <li class="dropdown__list__item">
-                  <a href="https://docsend.com/view/42wqgjdgbh9igrji" target="_blank" class="dropdown__list__item__link">Deck</a>
+                  <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="dropdown__list__item__link">Deck</a>
                 </li>
                 <li class="dropdown__list__item">
-                  <a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank" class="dropdown__list__item__link">PacketCrypt</a>
+                  <a href="/PacketCrypt-2020-09-04.pdf" target="_blank" class="dropdown__list__item__link">PacketCrypt</a>
                 </li>
               </ul>
             </div>
