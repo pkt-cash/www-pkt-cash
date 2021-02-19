@@ -14,7 +14,7 @@
           </a>
           <a
             class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://docs.pkt.cash/en/latest/pktd/#pktwallet"
+            href="https://docs.pkt.cash/en/latest/pktd/pktwallet"
             target="_blank"
           >
             <span>Setup CLI Wallet</span>
