@@ -10,6 +10,11 @@
         <div class="c-footer__menu">
           <h5 class="c-footer__menu-title">Quicklink</h5>
           <ul class="c-footer__menu-list">
+            <li class="c-footer__menu-item">
+              <a href="https://docs.pkt.cash/en/latest/mining/" class="c-footer__menu-link">
+                <span class="c-footer__menu-text">Setup PacketCrypt</span>
+              </a>
+            </li>
             <li v-for="(item, index) of quick_links" :key="index" class="c-footer__menu-item">
               <nuxt-link :to="item.route_link" class="c-footer__menu-link">
                 <span class="c-footer__menu-text">{{ item.name }}</span>
@@ -90,10 +95,6 @@ export default {
         {
           name: "Mining",
           route_link: "/mining",
-        },
-        {
-          name: "Setup PacketCrypt",
-          route_link: "/setup",
         },
         {
           name: "Network Steward",
