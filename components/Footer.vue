@@ -71,7 +71,7 @@
         <div class="c-footer__text">
           <span class="c-footer__text-light">
             <a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">
-              ©2020 PKT Cash | Privacy Policy
+              ©2021 PKT Cash | Privacy Policy
             </a>
           </span>
         </div>

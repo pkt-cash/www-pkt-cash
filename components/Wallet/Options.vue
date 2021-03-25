@@ -1,7 +1,9 @@
 <template>
   <div class="c-wallet-options" id="setup">
     <div class="container">
-      <h2 class="c-wallet-options__title">There are currently two options to get a free PKT Wallet</h2>
+      <h2 class="c-wallet-options__title">
+        There are currently two options to get a free PKT Wallet
+      </h2>
       <div class="c-wallet-options__list">
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
@@ -35,6 +37,36 @@
             target="_blank"
           >
             <span>Setup Electrum Wallet</span>
+          </a>
+        </div>
+        <div class="c-wallet-options__item">
+          <figure class="c-wallet-options__item-img">
+            <img src="/img/wallet-item-1.png" alt />
+          </figure>
+          <h3 class="c-wallet-options__item-title">GUI Wallet</h3>
+          <a href="#" class="c-wallet-options__item-link">
+            The PKT GUI wallet is for <br />
+            mining and supports Mac only.
+          </a>
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow"
+            href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases"
+            target="_blank"
+          >
+            <span>Setup PKT GUI Wallet</span>
+          </a>
+        </div>
+        <div class="c-wallet-options__item">
+          <figure class="c-wallet-options__item-img">
+            <img src="/img/wallet-item-2.png" alt />
+          </figure>
+          <h3 class="c-wallet-options__item-title">Mobile Wallet</h3>
+          <a href="#" class="c-wallet-options__item-link"> Coming Soon </a>
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow disabled"
+            href="#"
+          >
+            <span>Coming Soon</span>
           </a>
         </div>
       </div>
@@ -73,6 +105,9 @@ export default {
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     @include for-width(-tablet) {
       flex-direction: column;
     }
@@ -117,6 +152,11 @@ export default {
         margin-top: rem(10);
       }
     }
+  }
+}
+.disabled {
+  &:hover {
+    cursor: not-allowed;
   }
 }
 </style>

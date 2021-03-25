@@ -13,9 +13,9 @@
         <nuxt-link to="/wallet" class="c-mining-header__button-link blue-btn-arrow">
           <span class="c-mining-header__button-btn">Setup a Wallet</span>
         </nuxt-link>
-        <nuxt-link to="/setup" class="c-mining-header__button-link blue-btn-arrow">
+        <a href="https://docs.pkt.cash/en/latest/mining/" class="c-mining-header__button-link blue-btn-arrow">
           <span class="c-mining-header__button-btn">Install PacketCrypt</span>
-        </nuxt-link>
+        </a>
       </div>
     </div>
   </div>
