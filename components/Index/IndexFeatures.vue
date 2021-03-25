@@ -77,7 +77,7 @@ export default {
 
   &__title {
     @extend %h1-title;
-    margin-bottom: rem(131);
+    margin-bottom: rem(10);
     padding: 0 rem(34);
     @include for-width(-tablet) {
       margin-bottom: rem(40);
