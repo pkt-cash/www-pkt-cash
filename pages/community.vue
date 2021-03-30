@@ -83,7 +83,7 @@ export default {
           text:
             "The one-stop to talk about everything PKT related. Ask questions to community leaders and where to get involved in the PKT Network.",
           img: "/img/community/pkt_discord.png",
-          link: "https://discord.gg/ndH4f4zS"
+          link: "https://discord.gg/ytjzxzNzF3"
         },
         /*{
           title: "Facebook",
