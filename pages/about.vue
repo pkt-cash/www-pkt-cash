@@ -20,6 +20,18 @@ export default {
     SimpleHeader,
     AboutMain,
   },
+  head() {
+    return {
+      title: "About - PKT",
+      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pkt.cash' + this.$route.path
+        }
+      ]
+    };
+  },
   // async mounted() {
   //   // console.log(process)
   //   if(process.client) {

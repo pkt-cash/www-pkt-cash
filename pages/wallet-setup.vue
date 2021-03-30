@@ -26,6 +26,18 @@ export default {
     BigHeader,
     WalletSetupMain,
   },
+  head() {
+    return {
+      title: "Wallet Setup - PKT",
+      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pkt.cash' + this.$route.path
+        }
+      ]
+    };
+  },
   data() {
     return {
       wallet_setup: [
