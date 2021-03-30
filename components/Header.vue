@@ -434,6 +434,10 @@ export default {
             color: #000;
           }
         }
+        @include for-width(-laptop) {
+          position: relative;
+          top: 0;
+        }
       }
 
       &:hover {

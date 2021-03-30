@@ -27,6 +27,18 @@ export default {
     BigHeader,
     NetworkStewardVoteMain,
   },
+  head() {
+    return {
+      title: "Network Steward Vote - PKT",
+      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pkt.cash' + this.$route.path
+        }
+      ]
+    };
+  },
 };
 </script>
 

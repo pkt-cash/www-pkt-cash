@@ -11,7 +11,7 @@
         target="_blank"
       >
         <h1 class="c-community-list__item-title">{{ item.title }}</h1>
-        <p class="c-community-list__item-text">{{ item.text | crop_text }}</p>
+        <p class="c-community-list__item-text">{{ item.text }}</p>
         <figure class="c-community-list__item-img">
           <img :src="item.img" alt />
         </figure>
@@ -89,8 +89,8 @@ export default {
     position: relative;
     color: $dark_blue;
     @include for-width(-tablet) {
-      height: rem(109);
-      padding: 0 rem(15) 0 rem(83);
+      height: auto;
+      padding: 30px rem(15) 30px rem(83);
     }
 
     &:last-child {
@@ -116,9 +116,9 @@ export default {
       top: rem(35);
       @include for-width(-tablet) {
         left: rem(22);
-        top: rem(17);
-        max-width: rem(32);
-        max-height: rem(32);
+        top: rem(30);
+        max-width: rem(40);
+        max-height: rem(40);
       }
     }
   }
