@@ -72,24 +72,24 @@ export default {
         {
           title: "PKT Network",
           text:
-            "PKT is a blockchain designed to bootstrap a decentralized bandwidth marketplace using " +
-            "near-free microtransactions, and artificial demand for bandwidth using the PacketCrypt " +
-            "bandwidth-hard proof of work algorithm. \n",
+            "PKT is a blockchain enables anyone to become an ISP. Users allocate bandwidth from their " +
+            "local internet connections and build a global, decentralized edge network, " +
+            "by the people, for the people. \n",
           link: { path: "/cash" },
         },
         {
           title: "PacketCrypt Protocol",
           text:
-            "PacketCrypt is a lightweight CPU-hard proof of work which is more efficiently mined when " +
-            "miners collaborate, but collaboration requires bandwidth, making it the world's first " +
-            "bandwidth-hard proof of work. \n",
+            "PKT is a Bitcoin fork, using PacketCrypt, the world's first bandwidth-hard proof of work. " +
+            "PKT is efficiently mined when miners collaborate, and collaboration requires " +
+            "bandwidth and CPU. \n",
           link: { path: "/setup" },
         },
         {
           title: "Announcement Mining",
           text:
             "Casual miners use idle CPU time to generate small messages called announcements and " +
-            "broadcast them to block miners who pay for them. \n",
+            "broadcasts them to block miners who pay for them. \n",
           link: { path: "/mining" },
         },
         {
@@ -97,11 +97,11 @@ export default {
           text:
             "Dedicated miners use specialized equipment to secure the blockchain, \n" +
             "but the PacketCrypt algorithm allows them to do less work if they have more announcements, \n" +
-            "effectively substituting bandwidth for electricity. \n",
+            "effectively substituting bandwidth for CPU power. \n",
           link: { path: "/mining" },
         },
         {
-          title: "PKT",
+          title: "PKT Cash",
           text:
             "PKT is a native cryptocurrency based on Bitcoin code, making it Lightning Network \n" +
             "ready from day one. It is not a token so there is no centralized issuer and no gas fees. \n",
