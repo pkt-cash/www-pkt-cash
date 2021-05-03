@@ -6,7 +6,7 @@
           <h2 class="c-scroll-sect__title">The Network</h2>
           <div class="c-scroll-sect__text">
             The world’s first bandwidth-hard blockchain protocol, built to incentivize
-            the growth of infrastructure
+            the growth of web 3.0 infrastructure
           </div>
         </div>
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_content">
@@ -72,16 +72,16 @@ export default {
         {
           title: "PKT Network",
           text:
-            "PKT is a blockchain enables anyone to become an ISP. Users allocate bandwidth from their " +
-            "local internet connections and build a global, decentralized edge network, " +
+            "PKT is a blockchain that enables anyone to become an ISP. Users allocate bandwidth from their " +
+            "local internet connections which results in a global, decentralized edge network, " +
             "by the people, for the people. \n",
           link: { path: "/cash" },
         },
         {
           title: "PacketCrypt Protocol",
           text:
-            "PKT is a Bitcoin fork, using PacketCrypt, the world's first bandwidth-hard proof of work. " +
-            "PKT is efficiently mined when miners collaborate, and collaboration requires " +
+            "PKT is a Bitcoin fork, replacing SHA-256 with PacketCrypt, the world's first bandwidth-hard proof of work. " +
+            "PKT is efficiently mined when miners collaborate, which requires " +
             "bandwidth and CPU. \n",
           link: { path: "/setup" },
         },
@@ -89,14 +89,14 @@ export default {
           title: "Announcement Mining",
           text:
             "Casual miners use idle CPU time to generate small messages called announcements and " +
-            "broadcasts them to block miners who pay for them. \n",
+            "then broadcast them to block miners who pay for the announcements. \n",
           link: { path: "/mining" },
         },
         {
           title: "Block Mining",
           text:
-            "Dedicated miners use specialized equipment to secure the blockchain, \n" +
-            "but the PacketCrypt algorithm allows them to do less work if they have more announcements, \n" +
+            "Block miners use specialized equipment to secure the blockchain, \n" +
+            "and the PacketCrypt algorithm allows them to do less work if they have more announcements, \n" +
             "effectively substituting bandwidth for CPU power. \n",
           link: { path: "/mining" },
         },
@@ -104,14 +104,14 @@ export default {
           title: "PKT Cash",
           text:
             "PKT is a native cryptocurrency based on Bitcoin code, making it Lightning Network \n" +
-            "ready from day one. It is not a token so there is no centralized issuer and no gas fees. \n",
+            "ready from day one. PKT is not a token so there is no centralized issuer and no gas fees. \n",
           link: { path: "/cash" },
         },
         {
           title: "PKT",
           text:
             "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
-            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+            "Nodes broadcast announcements (“anns”) across the network, and block miners gather anns to secure the blockchain. \n",
           link: { path: "/cash" },
         },
       ],
