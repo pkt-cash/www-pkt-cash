@@ -72,7 +72,7 @@ export default {
         {
           title: "PKT Network",
           text:
-            "PKT is a blockchain enables anyone to become an ISP. Users allocate bandwidth from their " +
+            "PKT is a blockchain enabling anyone to become an ISP. Users allocate bandwidth from their " +
             "local internet connections and build a global, decentralized edge network, " +
             "by the people, for the people. \n",
           link: { path: "/cash" },
