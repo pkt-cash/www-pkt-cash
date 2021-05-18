@@ -51,7 +51,7 @@ export default {
         {
           title: "Wallet",
           text:
-            "Currently there’s only a text based wallet for PKT and in order to install this you need to install the PKT daemon then the wallet, then pktctl for interacting with the wallet.",
+            "There are serval options for installing a PKT wallet. Certain wallets are suited for simple transactions while others are enabled for mining. The currently supported wallets include a terminal based command line wallet, the Electrum PKT wallet, and the PKT Zulu GUI wallet. A mobile wallet is also being developed and will be available soon.",
           btnText: "Install Wallet",
           img: "/img/advantage/index-2.png",
           mobile_img: "/img/advantage/index-2-mobile.png",
