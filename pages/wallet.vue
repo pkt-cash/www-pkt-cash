@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       wallet_list: [
-        "End, receive and earn PKT.  ",
+        "Send, receive and earn PKT.  ",
         "Control your own private keys.  ",
         "Backup your wallet by writing a short 13 word seed.  ",
       ],
