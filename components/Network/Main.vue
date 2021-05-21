@@ -118,7 +118,7 @@
             <h2 class="c-content-main__title">Who is the Network Steward?</h2>
             <p
               class="c-content-main__text"
-            >The Network Steward is a multi-signature wallet which requires 3 o ut of 5 signatures in order to make a payment.</p>
+            >The Network Steward is a multi-signature wallet which requires 3 out of 5 signatures in order to make a payment.</p>
             <p class="c-content-main__text">
               The Network Steward wallet address is:
               <a
