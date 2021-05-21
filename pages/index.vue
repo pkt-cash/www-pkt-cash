@@ -49,6 +49,18 @@ export default {
           lear_link: '/network-steward'
         },
         {
+          title: "PKT Roadmap",
+          text: "",
+          btnText: "Learn More",
+          img: "/img/advantage/index-1.png",
+          mobile_img: "/img/advantage/index-1-mobile.png",
+          aligh: true,
+          textSVG: true,
+          colorBlue: true,
+          learnMore: true,
+          lear_link: '/roadmap'
+        },
+        {
           title: "Wallet",
           text:
             "There are serval options for installing a PKT wallet. Certain wallets are suited for simple transactions while others are enabled for mining. The currently supported wallets include a terminal based command line wallet, the Electrum PKT wallet, and the PKT Zulu GUI wallet. A mobile wallet is also being developed and will be available soon.",
