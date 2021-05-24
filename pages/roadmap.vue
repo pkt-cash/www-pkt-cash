@@ -94,7 +94,6 @@ export default {
           aligh: true,
           colorBlue: true,
           textSVG: false,
-		  id: "story",
         },
       ],
     };

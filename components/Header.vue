@@ -83,12 +83,6 @@
                 <li>
                   <a href="/roadmap">Roadmap</a>
                 </li>
-				<li>
-                  <a href="/roadmap/#letter_from_cjd">Letter from CJD</a>
-                </li>
-				<li>
-                  <a href="/roadmap/#story">PKT Origin Story</a>
-                </li>
               </ul>
             </li>
             <li class="nav__menu-item">
