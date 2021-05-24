@@ -4,6 +4,7 @@
       <div
         class="c-advantage__item"
         :class="{ 'c-advantage__item-blue': item.colorBlue }"
+		:id="item.aId"
         :key="item.title"
         :style="{ 'background-image': `url(${is_mobile ? item.mobile_img : item.img})` }"
       >
@@ -31,7 +32,8 @@
               {{ item.title }}
             </h1>
             <h2 class="c-advantage__sub">{{ item.subTitle }}</h2>
-            <p class="c-advantage__text">{{ item.text }}</p>
+            <p class="c-advantage__text" :id="item.id">{{ item.text }}</p>
+			<div :class="item.graphic"><img :src="item.graphicSrc" :alt="item.graphicAlt" /></div>
             <div class="c-advantage__btn-wrapper">
               <template v-if="is_index && !item.linkMore">
                 <a
@@ -219,5 +221,31 @@ export default {
       }
     }
   }
+  #pkt_roadmap {
+	background-color: #080e3e;
+	.c-advantage__title {
+		color:#fff;
+	}
+	.c-advantage__wrap {
+		padding-right: 0;
+	}
+	.pkt_roadmap_graphic img {
+		
+	}
+	.c-advantage__btn-wrapper {
+		text-align: center;
+		margin-top: 35px;
+	}
+	@include for-width(-tablet-lg) {
+		
+	}
+	@include for-width(-tablet) {
+		
+		.c-advantage__text {
+			margin: 0;
+		}
+	}
+  }
+  
 }
 </style>
