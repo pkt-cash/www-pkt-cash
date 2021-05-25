@@ -1,7 +1,7 @@
 <template>
   <div class="c-roadmap-is">
     <div class="container">
-      <h1 class="c-roadmap-is__title">The PKT Roadmap is</h1>
+      <h1 class="c-roadmap-is__title">The PKT Roadmap</h1>
       <ul class="c-roadmap-is__list">
         <li class="c-roadmap-is__item">
           <a href="#VPN Marketplace">Phase 1</a> - Build a VPN market where anyone can participate and the minimum price is free
@@ -12,7 +12,7 @@
         <li class="c-roadmap-is__item">
           <a href="#Tokenized Bandwidth Leases">Phase 3</a> - Create a bandwidth market where network operators do the network engineering so that building a mesh network is easy
         </li>
-        <li class="c-roadmap-is__item">
+        <li class="c-roadmap-is__item" id="letter_from_cjd">
           <a href="#Support Next Gen Networking Hardware">Phase 4</a> - Support high performance networking hardware which automatically sells its bandwidth into the bandwidth market
         </li>
       </ul>

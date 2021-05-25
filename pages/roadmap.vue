@@ -2,11 +2,8 @@
   <div class="v-roadmap">
     <section class="v-roadmap-section">
       <SimpleHeader
-        is_road
-        title="PKT Roadmap"
-        mobile_img="/img/roadmap-mobile.jpg"
-        text="There are four distinct stages of evolution which the PKT project will undergo. These stages may occur out of order at times, but the project will be viable in every state, just as a caterpillar is a viable creature before it becomes a butterfly."
-        bg="/img/roadmap-header-bg.jpg"
+		cta_title="Glossary of Terms"
+		cta_link="#"
       />
     </section>
     <section class="v-roadmap-section">
@@ -22,7 +19,7 @@
 </template>
 
 <script>
-import SimpleHeader from "~/components/Base/SimpleHeader";
+import SimpleHeader from "~/components/Roadmap/SimpleHeader";
 import RoadmapIs from "~/components/Roadmap/RoadmapIs";
 import Advantage from "~/components/Advantage";
 import RoadmapSupport from "~/components/Roadmap/Support";
@@ -94,6 +91,7 @@ export default {
           aligh: true,
           colorBlue: true,
           textSVG: false,
+		  id: "story",
         },
       ],
     };
