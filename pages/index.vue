@@ -49,16 +49,18 @@ export default {
           lear_link: '/network-steward'
         },
         {
-          title: "PKT Roadmap",
+          title: "",
           text: "",
-          btnText: "Learn More",
-          img: "/img/advantage/index-1.png",
-          mobile_img: "/img/advantage/index-1-mobile.png",
-          aligh: true,
+          btnText: "",
+          img: "",
+          mobile_img: "",
+          aligh: false,
           textSVG: true,
-          colorBlue: true,
+          colorBlue: false,
           learnMore: true,
-          lear_link: '/roadmap'
+          lear_link: '/roadmap',
+		  aId: "pkt_roadmap",
+		  graphic: "pkt_roadmap_graphic",
         },
         {
           title: "Wallet",
