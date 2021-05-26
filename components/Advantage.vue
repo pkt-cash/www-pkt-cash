@@ -61,12 +61,11 @@
 		<rect id="Rectangle_34" class="st1" width="1366" height="990"/>
 		<text transform="matrix(1 0 0 1 182.192 463)" class="st2 st3 st4">PacketCrypt Created</text>
 		<text transform="matrix(1 0 0 1 182.192 493)" class="st2 st3 st4">Mainnet Launch</text>
-		<text transform="matrix(1 0 0 1 182.192 523)" class="st2 st3 st4">Command Line </text>
-		<text transform="matrix(1 0 0 1 182.192 553)" class="st2 st3 st4">Wallet</text>
-		<text transform="matrix(1 0 0 1 182.192 583)" class="st2 st3 st4">PKT.Cash Website</text>
-		<text transform="matrix(1 0 0 1 182.192 613)" class="st2 st3 st4">Electrum Wallet</text>
-		<text transform="matrix(1 0 0 1 182.192 643)" class="st2 st3 st4">GUI Wallet</text>
-		<text transform="matrix(1 0 0 1 182.192 673)" class="st2 st3 st4">Community Launch</text>
+		<text transform="matrix(1 0 0 1 182.192 523)" class="st2 st3 st4">CLI Wallet</text>
+		<text transform="matrix(1 0 0 1 182.192 553)" class="st2 st3 st4">PKT.Cash Website</text>
+		<text transform="matrix(1 0 0 1 182.192 583)" class="st2 st3 st4">Electrum Wallet</text>
+		<text transform="matrix(1 0 0 1 182.192 613)" class="st2 st3 st4">GUI Wallet</text>
+		<text transform="matrix(1 0 0 1 182.192 643)" class="st2 st3 st4">Community Launch</text>
 		<path id="Rectangle_27" class="st5" d="M401,395.7h283.1l0,0v448.4c0,22.6-18.4,41-41,41l0,0H442c-22.6,0-41-18.4-41-41l0,0V395.7
 			L401,395.7z"/>
 		<text transform="matrix(1 0 0 1 464 463)" class="st2 st3 st4">Route Server</text>
@@ -77,7 +76,7 @@
 		<text transform="matrix(1 0 0 1 464 613)" class="st2 st3 st4">Edge Point Device</text>
 		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4">PKT Lighting</text>
 		<text transform="matrix(1 0 0 1 464 673)" class="st2 st3 st4">Lightning Paymaker</text>
-		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - BSC/ETH</text>
+		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - ETH/BSC</text>
 		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4">LINK/PKT Oracles</text>
 		<text transform="matrix(1 0 0 1 464 763)" class="st2 st3 st4">Atomic Swap Market</text>
 		<text transform="matrix(1 0 0 1 464 793)" class="st2 st3 st4">PacketCryptRs</text>
@@ -116,9 +115,6 @@
 		<path id="Icon_awesome-check-8" class="st8" d="M158.8,585.5l-8.2-8.2c-0.5-0.5-0.5-1.3,0-1.8c0,0,0,0,0,0l1.8-1.8
 			c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l5.5,5.5l11.9-11.9c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l1.8,1.8c0.5,0.5,0.5,1.3,0,1.8
 			c0,0,0,0,0,0l-14.6,14.6C160.1,586,159.3,586,158.8,585.5C158.8,585.5,158.8,585.5,158.8,585.5z"/>
-		<path id="Icon_awesome-check-9" class="st8" d="M157.4,675.5l-8.2-8.2c-0.5-0.5-0.5-1.3,0-1.8c0,0,0,0,0,0l1.8-1.8
-			c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l5.5,5.5l11.9-11.9c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l1.8,1.8c0.5,0.5,0.5,1.3,0,1.8
-			c0,0,0,0,0,0l-14.6,14.6C158.7,676,157.9,676,157.4,675.5C157.4,675.5,157.4,675.5,157.4,675.5z"/>
 		<path id="Icon_awesome-check-10" class="st8" d="M438.6,464.7l-8.2-8.2c-0.5-0.5-0.5-1.3,0-1.8c0,0,0,0,0,0l1.8-1.8
 			c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l5.5,5.5l11.9-11.9c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l1.8,1.8c0.5,0.5,0.5,1.3,0,1.8
 			c0,0,0,0,0,0l-14.6,14.6C439.9,465.2,439.1,465.2,438.6,464.7C438.6,464.7,438.6,464.7,438.6,464.7z"/>
@@ -197,7 +193,7 @@
 		<text transform="matrix(1 0 0 1 1031.876 523)" class="st2 st3 st4">Paid VPN</text>
 		<text transform="matrix(1 0 0 1 1031.876 553)" class="st2 st3 st4">VRouter Lease</text>
 		<text transform="matrix(1 0 0 1 1031.876 583)" class="st2 st3 st4">AddrLease</text>
-		<text transform="matrix(1 0 0 1 1031.876 613)" class="st2 st3 st4">Cjdns WiFI</text>
+		<text transform="matrix(1 0 0 1 1031.876 613)" class="st2 st3 st4">Cjdns WiFi</text>
 		<text transform="matrix(1 0 0 1 1031.876 643)" class="st2 st3 st4">Smart Contracts</text>
 		<text transform="matrix(1 0 0 1 1031.876 673)" class="st2 st3 st4">PKT CDN Bridge</text>
 		<text transform="matrix(1 0 0 1 1031.876 703)" class="st2 st3 st4">Dapps API</text>
@@ -370,7 +366,7 @@
 		Electrum Wallet
 		GUI Wallet
 		Community Launch
-		" transform="translate(136 267)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">PacketCrypt Created</tspan><tspan x="0" y="51">Mainnet Launch</tspan><tspan x="0" y="81">Command Line </tspan><tspan x="0" y="111">Wallet</tspan><tspan x="0" y="141">PKT.Cash Website</tspan><tspan x="0" y="171">Electrum Wallet</tspan><tspan x="0" y="201">GUI Wallet</tspan><tspan x="0" y="231">Community Launch</tspan><tspan x="0" y="261"></tspan></text>
+		" transform="translate(136 267)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">PacketCrypt Created</tspan><tspan x="0" y="51">Mainnet Launch</tspan><tspan x="0" y="81">CLI Wallet</tspan><tspan x="0" y="111">PKT.Cash Website</tspan><tspan x="0" y="141">Electrum Wallet</tspan><tspan x="0" y="171">GUI Wallet</tspan><tspan x="0" y="201">Community Launch</tspan><tspan x="0" y="231"></tspan></text>
 			<g id="Group_249" data-name="Group 249" transform="translate(-2.808)">
 			  <path id="Icon_awesome-check-2" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.384,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.808 266.423)" fill="#50dd8d"/>
 			  <path id="Icon_awesome-check-3" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.384,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.808 296.423)" fill="#50dd8d"/>
@@ -379,7 +375,6 @@
 			  <path id="Icon_awesome-check-6" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.384,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(100.182 356.423)" fill="#50dd8d"/>
 			  <path id="Icon_awesome-check-7" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.384,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.808 447.423)" fill="#50dd8d"/>
 			  <path id="Icon_awesome-check-8" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.384,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(100.182 387.423)" fill="#50dd8d"/>
-			  <path id="Icon_awesome-check-9" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.384,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.808 477.423)" fill="#50dd8d"/>
 			</g>
 			<text id="Route_Server_Exchange_Listing_Anodium_VPN_Token_Strike_Mining_Wallet_Edge_Point_Device_PKT_Lighting_Lightning_Paymaker_WPKT_DeFi_-_BSC_ETH_LINK_PKT_Oracles_Atomic_Swap_Market_PacketCryptRs_PKT_NFTs" data-name="Route Server
 		Exchange Listing
@@ -393,7 +388,7 @@
 		LINK/PKT Oracles
 		Atomic Swap Market
 		PacketCryptRs
-		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lighting</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - BSC/ETH</tspan><tspan x="0" y="291">LINK/PKT Oracles</tspan><tspan x="0" y="321">Atomic Swap Market</tspan><tspan x="0" y="351">PacketCryptRs</tspan><tspan x="0" y="381">PKT NFTs</tspan></text>
+		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lighting</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH/BSC</tspan><tspan x="0" y="291">LINK/PKT Oracles</tspan><tspan x="0" y="321">Atomic Swap Market</tspan><tspan x="0" y="351">PacketCryptRs</tspan><tspan x="0" y="381">PKT NFTs</tspan></text>
 			<g id="Group_251" data-name="Group 251" transform="translate(-0.197)">
 			  <g id="Group_250" data-name="Group 250">
 				<path id="Icon_awesome-check-10" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.383,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.99 667.625)" fill="#50dd8d"/>
@@ -483,7 +478,7 @@
 		PKT CDN Bridge
 		Dapps API
 		Streaming API
-		Bandwidth Market" transform="translate(136 1746.995)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Paid Access</tspan><tspan x="0" y="51">Full Paid Net</tspan><tspan x="0" y="81">Paid VPN</tspan><tspan x="0" y="111">VRouter Lease</tspan><tspan x="0" y="141">AddrLease</tspan><tspan x="0" y="171">Cjdns WiFI</tspan><tspan x="0" y="201">Smart Contracts</tspan><tspan x="0" y="231">PKT CDN Bridge</tspan><tspan x="0" y="261">Dapps API</tspan><tspan x="0" y="291">Streaming API</tspan><tspan x="0" y="321">Bandwidth Market</tspan></text>
+		Bandwidth Market" transform="translate(136 1746.995)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Paid Access</tspan><tspan x="0" y="51">Full Paid Net</tspan><tspan x="0" y="81">Paid VPN</tspan><tspan x="0" y="111">VRouter Lease</tspan><tspan x="0" y="141">AddrLease</tspan><tspan x="0" y="171">Cjdns WiFi</tspan><tspan x="0" y="201">Smart Contracts</tspan><tspan x="0" y="231">PKT CDN Bridge</tspan><tspan x="0" y="261">Dapps API</tspan><tspan x="0" y="291">Streaming API</tspan><tspan x="0" y="321">Bandwidth Market</tspan></text>
 			<g id="Group_248" data-name="Group 248" transform="translate(-1)">
 			  <g id="Group_236" data-name="Group 236" transform="translate(98 1747.995)">
 				<ellipse id="Ellipse_5-13" data-name="Ellipse 5" cx="13.256" cy="13.256" rx="13.256" ry="13.256" transform="translate(0 0)" fill="#949494"/>
