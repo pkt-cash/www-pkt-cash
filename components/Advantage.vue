@@ -76,11 +76,12 @@
 		<text transform="matrix(1 0 0 1 464 613)" class="st2 st3 st4">Edge Point Device</text>
 		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4">PKT Lighting</text>
 		<text transform="matrix(1 0 0 1 464 673)" class="st2 st3 st4">Lightning Paymaker</text>
-		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - ETH/BSC</text>
-		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4">LINK/PKT Oracles</text>
-		<text transform="matrix(1 0 0 1 464 763)" class="st2 st3 st4">Atomic Swap Market</text>
-		<text transform="matrix(1 0 0 1 464 793)" class="st2 st3 st4">PacketCryptRs</text>
-		<text transform="matrix(1 0 0 1 464 823)" class="st2 st3 st4">PKT NFTs</text>
+		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - ETH</text>
+		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4">WPKT DeFi - BSC</text>
+		<text transform="matrix(1 0 0 1 464 763)" class="st2 st3 st4">LINK/PKT Oracles</text>
+		<text transform="matrix(1 0 0 1 464 793)" class="st2 st3 st4">Atomic Swap Market</text>
+		<text transform="matrix(1 0 0 1 464 823)" class="st2 st3 st4">PacketCryptRs</text>
+		<text transform="matrix(1 0 0 1 464 853)" class="st2 st3 st4">PKT NFTs</text>
 		<text transform="matrix(1 0 0 1 749 463)" class="st2 st3 st4">Paid VPN</text>
 		<text transform="matrix(1 0 0 1 749 493)" class="st2 st3 st4">Desktop App</text>
 		<text transform="matrix(1 0 0 1 749 523)" class="st2 st3 st4">AddrLease</text>
@@ -139,6 +140,7 @@
 		<path id="Icon_open-reload-7" class="st8" d="M438.2,826.6c6.1,2.2,12.9-1,15-7.1c2.2-6.1-1-12.9-7.1-15c-2.9-1-6.1-0.9-8.9,0.4
 			l1.3,2.7c4.4-2.1,9.7-0.2,11.7,4.2c2.1,4.4,0.2,9.7-4.2,11.7c-2.1,1-4.6,1.1-6.8,0.3c-2.2-0.8-3.9-2.5-4.9-4.6l4.1-1.9l-8.3-3
 			l-3,8.3l4.5-2.1C433,823.4,435.3,825.6,438.2,826.6L438.2,826.6z"/>
+		<path id="Icon_open-reload-70" d="M438.2,856.6c6.1,2.2,12.9-1,15-7.1c2.2-6.1-1-12.9-7.1-15c-2.9-1-6.1-0.9-8.9,0.4    l1.3,2.7c4.4-2.1,9.7-0.2,11.7,4.2c2.1,4.4,0.2,9.7-4.2,11.7c-2.1,1-4.6,1.1-6.8,0.3c-2.2-0.8-3.9-2.5-4.9-4.6l4.1-1.9l-8.3-3    l-3,8.3l4.5-2.1C433,853.4,435.3,855.6,438.2,856.6L438.2,856.6z" class="st8"></path>
 		<path id="Icon_open-reload-8" class="st8" d="M438.2,528.1c6.1,2.2,12.9-1,15-7.1c2.2-6.1-1-12.9-7.1-15c-2.9-1-6.1-0.9-8.9,0.4
 			l1.3,2.7c4.4-2.1,9.7-0.2,11.7,4.2c2.1,4.4,0.2,9.7-4.2,11.7c-2.1,1-4.6,1.1-6.8,0.3c-2.2-0.8-3.9-2.5-4.9-4.6l4.1-1.9l-8.3-3
 			l-3,8.3l4.5-2.1C433,524.9,435.3,527.1,438.2,528.1L438.2,528.1z"/>
@@ -333,7 +335,7 @@
 		  <g id="iPhone_XR_XS_Max_11_3" data-name="iPhone XR/XS Max/11 – 3" clip-path="url(#clip-iPhone_XR_XS_Max_11_3)">
 			<rect width="414" height="2195" fill="#0f1541"/>
 			<rect id="Rectangle_53" data-name="Rectangle 53" width="414" height="2195" fill="#0f1541"/>
-			<path id="Rectangle_52" data-name="Rectangle 52" d="M0,0H287.125a55,55,0,0,1,55,55V456.223a55,55,0,0,1-55,55H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(48 575.5)" fill="#144697" opacity="0.39"/>
+			<path id="Rectangle_52" data-name="Rectangle 52" d="M0,0H287.125a55,55,0,0,1,55,55V470.223a55,55,0,0,1-55,55H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(48 575.5)" fill="#144697" opacity="0.39"/>
 			<rect id="Rectangle_48" data-name="Rectangle 48" width="220" height="55" rx="27.5" transform="translate(97 150)" fill="#3cadef"/>
 			<text id="PKT_Road_Map" data-name="PKT Road Map" transform="translate(48 78)" fill="#fff" font-size="30" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">PKT Road Map</tspan></text>
 			<line id="Line_5" data-name="Line 5" y2="461" transform="translate(49.5 1656.5)" fill="none" stroke="#b5e0f8" stroke-linecap="round" stroke-width="5"/>
@@ -388,7 +390,7 @@
 		LINK/PKT Oracles
 		Atomic Swap Market
 		PacketCryptRs
-		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lighting</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH/BSC</tspan><tspan x="0" y="291">LINK/PKT Oracles</tspan><tspan x="0" y="321">Atomic Swap Market</tspan><tspan x="0" y="351">PacketCryptRs</tspan><tspan x="0" y="381">PKT NFTs</tspan></text>
+		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lighting</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH</tspan><tspan x="0" y="291">WPKT DeFi - BSC</tspan><tspan x="0" y="321">LINK/PKT Oracles</tspan><tspan x="0" y="351">Atomic Swap Market</tspan><tspan x="0" y="381">PacketCryptRs</tspan><tspan x="0" y="411">PKT NFTs</tspan></text>
 			<g id="Group_251" data-name="Group 251" transform="translate(-0.197)">
 			  <g id="Group_250" data-name="Group 250">
 				<path id="Icon_awesome-check-10" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.383,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.99 667.625)" fill="#50dd8d"/>
@@ -399,6 +401,7 @@
 				<path id="Icon_open-reload-5" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 908.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-6" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 1027.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-7" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 1056.662) rotate(-160)" fill="#50dd8d"/>
+				<path id="Icon_open-reload-70" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 1086.175) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-8" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 758.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-9" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 878.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-10" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 997.149) rotate(-160)" fill="#50dd8d"/>

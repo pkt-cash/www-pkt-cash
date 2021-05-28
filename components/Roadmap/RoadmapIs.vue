@@ -3,13 +3,13 @@
     <div class="container">
       <h1 class="c-roadmap-is__title">The PKT Roadmap</h1>
       <ul class="c-roadmap-is__list">
-        <li class="c-roadmap-is__item">
+        <li class="c-roadmap-is__item" id="phase_1">
           <a href="#VPN Marketplace">Phase 1</a> - Build a VPN market where anyone can participate and the minimum price is free
         </li>
-        <li class="c-roadmap-is__item">
+        <li class="c-roadmap-is__item" id="phase_2">
           <a href="#Support Internet Sharing">Phase 2</a> - Support low cost Internet sharing hardware that allows people to earn PKT using their extra bandwidth
         </li>
-        <li class="c-roadmap-is__item">
+        <li class="c-roadmap-is__item" id="phase_3">
           <a href="#Tokenized Bandwidth Leases">Phase 3</a> - Create a bandwidth market where network operators do the network engineering so that building a mesh network is easy
         </li>
         <li class="c-roadmap-is__item" id="letter_from_cjd">
