@@ -14,7 +14,7 @@
 			  <span>{{ item.heading }}</span>
 			</vsa-heading>
 			<vsa-content>
-			  {{ item.content }}
+			  <p>{{ item.content }}</p>
 			</vsa-content>
 		  </vsa-item>
 		</vsa-list>
@@ -72,12 +72,15 @@ export default {
 
   &__text {
     margin-bottom: rem(20);
+	@extend %text-main;
   }
   &__list {
 	
   }
   &__item {
     margin-bottom: rem(15);
+    border: 1px solid #C5C7D3;
+    border-radius: 6px;
     & span {
       color: $hard_blue;
 	  display: block;
@@ -104,8 +107,8 @@ export default {
     --vsa-highlight-color: #fff;
     --vsa-bg-color: #fff;
     --vsa-border-color: transparent;
-    --vsa-border-width: 0;
-	--vsa-content-padding: 0 0 1rem;
+    --vsa-border-width: 1;
+	--vsa-content-padding: 0;
     --vsa-default-icon-size: .3;
   }
   .vsa-item__trigger:focus .vsa-item__trigger__icon--is-default:after, 
@@ -115,7 +118,31 @@ export default {
     background-color: #3cadef;
   }
   .vsa-item__trigger__content {
-	font-size: 1rem;
+	@extend %text-main;
+  }
+  .vsa-item__content {
+    @extend %text-main;
+  }
+  .vsa-item__content p {
+	padding: 13px 20px;
+  }
+  .vsa-item__trigger {
+	padding: 13px 20px;
+  }
+  .vsa-item--is-active .vsa-item__heading, .vsa-item:not(:last-of-type) {
+	border-bottom: 1px solid #C5C7D3;
+  }
+  .vsa-item__trigger:focus, .vsa-item__trigger:hover {
+	border-radius: 6px;
+  }
+  .vsa-item__trigger[aria-expanded=true] .vsa-item__trigger__icon--is-default:before {
+    transform: rotate(225deg) translate3d(8px,-5px,0);
+  }
+  .vsa-item__trigger[aria-expanded=true] .vsa-item__trigger__icon--is-default:after {
+    transform: rotate(-225deg) translate3d(-8px,-5px,0);
+  }
+  .vsa-item__trigger__icon--is-default:after, .vsa-item__trigger__icon--is-default:before {
+	transition: none;
   }
 }
 </style>
