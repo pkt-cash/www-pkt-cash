@@ -141,9 +141,6 @@
                 </span>
               </a>
               <ul class="nested-drop">
-			    <!--<li>
-                  <a href="https://crypto.pkt.cash/">Blog</a>
-                </li>-->
                 <li>
                   <a href="https://docs.pkt.cash/">Docs</a>
                 </li>
