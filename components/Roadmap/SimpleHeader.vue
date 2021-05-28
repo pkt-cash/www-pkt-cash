@@ -36,31 +36,32 @@
 		<text transform="matrix(1 0 0 1 182.192 643)" class="st2 st3 st4">Community Launch</text>
 		<path id="Rectangle_27" class="st5" d="M401,395.7h283.1l0,0v448.4c0,22.6-18.4,41-41,41l0,0H442c-22.6,0-41-18.4-41-41l0,0V395.7
 			L401,395.7z"/>
-		<text transform="matrix(1 0 0 1 464 463)" class="st2 st3 st4">Route Server</text>
+		<text transform="matrix(1 0 0 1 464 463)" v-scroll-to="{el: '#RouteServer',offset: -100}" class="st2 st3 st4">Route Server</text>
 		<text transform="matrix(1 0 0 1 464 493)" class="st2 st3 st4">Exchange Listing</text>
-		<text transform="matrix(1 0 0 1 464 523)" class="st2 st3 st4">Anodium VPN</text>
-		<text transform="matrix(1 0 0 1 464 553)" class="st2 st3 st4">Token Strike</text>
-		<text transform="matrix(1 0 0 1 464 583)" class="st2 st3 st4">Mining Wallet</text>
-		<text transform="matrix(1 0 0 1 464 613)" class="st2 st3 st4">Edge Point Device</text>
-		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4">PKT Lighting</text>
-		<text transform="matrix(1 0 0 1 464 673)" class="st2 st3 st4">Lightning Paymaker</text>
-		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - ETH/BSC</text>
-		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4">LINK/PKT Oracles</text>
-		<text transform="matrix(1 0 0 1 464 763)" class="st2 st3 st4">Atomic Swap Market</text>
-		<text transform="matrix(1 0 0 1 464 793)" class="st2 st3 st4">PacketCryptRs</text>
-		<text transform="matrix(1 0 0 1 464 823)" class="st2 st3 st4">PKT NFTs</text>
-		<text transform="matrix(1 0 0 1 749 463)" class="st2 st3 st4">Paid VPN</text>
-		<text transform="matrix(1 0 0 1 749 493)" class="st2 st3 st4">Desktop App</text>
-		<text transform="matrix(1 0 0 1 749 523)" class="st2 st3 st4">AddrLease</text>
-		<text transform="matrix(1 0 0 1 749 553)" class="st2 st3 st4">BandwidthLease</text>
-		<text transform="matrix(1 0 0 1 749 583)" class="st2 st3 st4">PKT VPN</text>
-		<text transform="matrix(1 0 0 1 749 613)" class="st2 st3 st4">WinCjdns</text>
-		<text transform="matrix(1 0 0 1 749 643)" class="st2 st3 st4">CjdnsPriority</text>
-		<text transform="matrix(1 0 0 1 749 673)" class="st2 st3 st4">CjdnsMT</text>
-		<text transform="matrix(1 0 0 1 749 703)" class="st2 st3 st4">CjdnsDocker</text>
-		<text transform="matrix(1 0 0 1 749 733)" class="st2 st3 st4">CjdnsTool</text>
-		<text transform="matrix(1 0 0 1 749 763)" class="st2 st3 st4">CustomerBit</text>
-		<text transform="matrix(1 0 0 1 749 793)" class="st2 st3 st4">PKT DEX</text>
+		<text transform="matrix(1 0 0 1 464 523)" v-scroll-to="{el: '#AnodiumVPN',offset: -100}" class="st2 st3 st4">Anodium VPN</text>
+		<text transform="matrix(1 0 0 1 464 553)" v-scroll-to="{el: '#Strike',offset: -100}" class="st2 st3 st4">Token Strike</text>
+		<text transform="matrix(1 0 0 1 464 583)" v-scroll-to="{el: '#MiningWallet',offset: -100}" class="st2 st3 st4">Mining Wallet</text>
+		<text transform="matrix(1 0 0 1 464 613)" v-scroll-to="{el: '#EdgePointDevice',offset: -100}" class="st2 st3 st4">Edge Point Device</text>
+		<text transform="matrix(1 0 0 1 464 643)" v-scroll-to="{el: '#Lighting',offset: -100}" class="st2 st3 st4">PKT Lighting</text>
+		<text transform="matrix(1 0 0 1 464 673)" v-scroll-to="{el: '#LightningPaymaker',offset: -100}" class="st2 st3 st4">Lightning Paymaker</text>
+		<text transform="matrix(1 0 0 1 464 703)" v-scroll-to="{el: '#WPKTDeFiETH',offset: -100}" class="st2 st3 st4">WPKT DeFi - ETH</text>
+		<text transform="matrix(1 0 0 1 464 733)" v-scroll-to="{el: '#WPKTDeFiBSC',offset: -100}" class="st2 st3 st4">WPKT DeFi - BSC</text>
+		<text transform="matrix(1 0 0 1 464 763)" v-scroll-to="{el: '#LINKPKTOracles',offset: -100}" class="st2 st3 st4">LINK/PKT Oracles</text>
+		<text transform="matrix(1 0 0 1 464 793)" v-scroll-to="{el: '#AtomicSwapMarket',offset: -100}" class="st2 st3 st4">Atomic Swap Market</text>
+		<text transform="matrix(1 0 0 1 464 823)" v-scroll-to="{el: '#PacketCryptRs',offset: -100}" class="st2 st3 st4">PacketCryptRs</text>
+		<text transform="matrix(1 0 0 1 464 853)" v-scroll-to="{el: '#PKTNFTs',offset: -100}" class="st2 st3 st4">PKT NFTs</text>
+		<text transform="matrix(1 0 0 1 749 463)" v-scroll-to="{el: '#PaidVPN',offset: -100}" class="st2 st3 st4">Paid VPN</text>
+		<text transform="matrix(1 0 0 1 749 493)" v-scroll-to="{el: '#DesktopApp',offset: -100}" class="st2 st3 st4">Desktop App</text>
+		<text transform="matrix(1 0 0 1 749 523)" v-scroll-to="{el: '#AddrLease',offset: -100}" class="st2 st3 st4">AddrLease</text>
+		<text transform="matrix(1 0 0 1 749 553)" v-scroll-to="{el: '#BandwidthLease',offset: -100}" class="st2 st3 st4">BandwidthLease</text>
+		<text transform="matrix(1 0 0 1 749 583)" v-scroll-to="{el: '#PKTVPN',offset: -100}" class="st2 st3 st4">PKT VPN</text>
+		<text transform="matrix(1 0 0 1 749 613)" v-scroll-to="{el: '#WinCjdns',offset: -100}" class="st2 st3 st4">WinCjdns</text>
+		<text transform="matrix(1 0 0 1 749 643)" v-scroll-to="{el: '#CjdnsPriority',offset: -100}" class="st2 st3 st4">CjdnsPriority</text>
+		<text transform="matrix(1 0 0 1 749 673)" v-scroll-to="{el: '#CjdnsMT',offset: -100}" class="st2 st3 st4">CjdnsMT</text>
+		<text transform="matrix(1 0 0 1 749 703)" v-scroll-to="{el: '#CjdnsDocker',offset: -100}" class="st2 st3 st4">CjdnsDocker</text>
+		<text transform="matrix(1 0 0 1 749 733)" v-scroll-to="{el: '#CjdnsTool',offset: -100}" class="st2 st3 st4">CjdnsTool</text>
+		<text transform="matrix(1 0 0 1 749 763)" v-scroll-to="{el: '#CustomerBit',offset: -100}" class="st2 st3 st4">CustomerBit</text>
+		<text transform="matrix(1 0 0 1 749 793)" v-scroll-to="{el: '#PKTDEX',offset: -100}" class="st2 st3 st4">PKT DEX</text>
 		<text transform="matrix(1 0 0 1 227.696 169)" class="st2 st6 st7">PKT Roadmap</text>
 		<path id="Icon_awesome-check-2" class="st8" d="M157.4,464.5l-8.2-8.2c-0.5-0.5-0.5-1.3,0-1.8c0,0,0,0,0,0l1.8-1.8
 			c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l5.5,5.5l11.9-11.9c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l1.8,1.8c0.5,0.5,0.5,1.3,0,1.8
@@ -107,6 +108,7 @@
 		<path id="Icon_open-reload-7" class="st8" d="M438.2,826.6c6.1,2.2,12.9-1,15-7.1c2.2-6.1-1-12.9-7.1-15c-2.9-1-6.1-0.9-8.9,0.4
 			l1.3,2.7c4.4-2.1,9.7-0.2,11.7,4.2c2.1,4.4,0.2,9.7-4.2,11.7c-2.1,1-4.6,1.1-6.8,0.3c-2.2-0.8-3.9-2.5-4.9-4.6l4.1-1.9l-8.3-3
 			l-3,8.3l4.5-2.1C433,823.4,435.3,825.6,438.2,826.6L438.2,826.6z"/>
+		<path id="Icon_open-reload-70" d="M438.2,856.6c6.1,2.2,12.9-1,15-7.1c2.2-6.1-1-12.9-7.1-15c-2.9-1-6.1-0.9-8.9,0.4    l1.3,2.7c4.4-2.1,9.7-0.2,11.7,4.2c2.1,4.4,0.2,9.7-4.2,11.7c-2.1,1-4.6,1.1-6.8,0.3c-2.2-0.8-3.9-2.5-4.9-4.6l4.1-1.9l-8.3-3    l-3,8.3l4.5-2.1C433,853.4,435.3,855.6,438.2,856.6L438.2,856.6z" class="st8"></path>
 		<path id="Icon_open-reload-8" class="st8" d="M438.2,528.1c6.1,2.2,12.9-1,15-7.1c2.2-6.1-1-12.9-7.1-15c-2.9-1-6.1-0.9-8.9,0.4
 			l1.3,2.7c4.4-2.1,9.7-0.2,11.7,4.2c2.1,4.4,0.2,9.7-4.2,11.7c-2.1,1-4.6,1.1-6.8,0.3c-2.2-0.8-3.9-2.5-4.9-4.6l4.1-1.9l-8.3-3
 			l-3,8.3l4.5-2.1C433,524.9,435.3,527.1,438.2,528.1L438.2,528.1z"/>
@@ -150,24 +152,24 @@
 			c-15.2,0-27.5-12.3-27.5-27.5l0,0C699,255.3,711.3,243,726.5,243z"/>
 		<path id="Rectangle_35" class="st10" d="M993.5,243h165c15.2,0,27.5,12.3,27.5,27.5l0,0c0,15.2-12.3,27.5-27.5,27.5h-165
 			c-15.2,0-27.5-12.3-27.5-27.5l0,0C966,255.3,978.3,243,993.5,243z"/>
-		<text transform="matrix(1 0 0 1 235 278)" class="st2 st3 st11">Phase 1</text>
+		<text transform="matrix(1 0 0 1 235 278)" class="st2 st3 st11" v-scroll-to="{el: '#phase_1',offset: -100}">Phase 1</text>
 		<text transform="matrix(1 0 0 1 222 350)" class="st2 st6 st12">Launch</text>
-		<text transform="matrix(1 0 0 1 499 278)" class="st2 st3 st11">Phase 2</text>
+		<text transform="matrix(1 0 0 1 499 278)" class="st2 st3 st11" v-scroll-to="{el: '#phase_2',offset: -100}">Phase 2</text>
 		<text transform="matrix(1 0 0 1 497 350)" class="st2 st6 st12">Utilize</text>
-		<text transform="matrix(1 0 0 1 766 278)" class="st2 st3 st11">Phase 3</text>
+		<text transform="matrix(1 0 0 1 766 278)" class="st2 st3 st11" v-scroll-to="{el: '#phase_3',offset: -100}">Phase 3</text>
 		<text transform="matrix(1 0 0 1 769 350)" class="st2 st6 st12">Scale</text>
-		<text transform="matrix(1 0 0 1 1031.876 463)" class="st2 st3 st4">Paid Access</text>
-		<text transform="matrix(1 0 0 1 1031.876 493)" class="st2 st3 st4">Full Paid Net</text>
-		<text transform="matrix(1 0 0 1 1031.876 523)" class="st2 st3 st4">Paid VPN</text>
-		<text transform="matrix(1 0 0 1 1031.876 553)" class="st2 st3 st4">VRouter Lease</text>
-		<text transform="matrix(1 0 0 1 1031.876 583)" class="st2 st3 st4">AddrLease</text>
-		<text transform="matrix(1 0 0 1 1031.876 613)" class="st2 st3 st4">Cjdns WiFi</text>
-		<text transform="matrix(1 0 0 1 1031.876 643)" class="st2 st3 st4">Smart Contracts</text>
-		<text transform="matrix(1 0 0 1 1031.876 673)" class="st2 st3 st4">PKT CDN Bridge</text>
-		<text transform="matrix(1 0 0 1 1031.876 703)" class="st2 st3 st4">Dapps API</text>
-		<text transform="matrix(1 0 0 1 1031.876 733)" class="st2 st3 st4">Streaming API</text>
-		<text transform="matrix(1 0 0 1 1031.876 763)" class="st2 st3 st4">Bandwidth Market</text>
-		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11">Phase 4</text>
+		<text transform="matrix(1 0 0 1 1031.876 463)" v-scroll-to="{el: '#PaidAccess',offset: -100}" class="st2 st3 st4">Paid Access</text>
+		<text transform="matrix(1 0 0 1 1031.876 493)" v-scroll-to="{el: '#FullPaidNet',offset: -100}" class="st2 st3 st4">Full Paid Net</text>
+		<text transform="matrix(1 0 0 1 1031.876 523)" v-scroll-to="{el: '#PaidVPN',offset: -100}" class="st2 st3 st4">Paid VPN</text>
+		<text transform="matrix(1 0 0 1 1031.876 553)" v-scroll-to="{el: '#VRouterLease',offset: -100}" class="st2 st3 st4">VRouter Lease</text>
+		<text transform="matrix(1 0 0 1 1031.876 583)" v-scroll-to="{el: '#AddrLease',offset: -100}" class="st2 st3 st4">AddrLease</text>
+		<text transform="matrix(1 0 0 1 1031.876 613)" v-scroll-to="{el: '#CjdnsWiFi',offset: -100}" class="st2 st3 st4">Cjdns WiFi</text>
+		<text transform="matrix(1 0 0 1 1031.876 643)" v-scroll-to="{el: '#SmartContracts',offset: -100}" class="st2 st3 st4">Smart Contracts</text>
+		<text transform="matrix(1 0 0 1 1031.876 673)" v-scroll-to="{el: '#PKTCDNBridge',offset: -100}" class="st2 st3 st4">PKT CDN Bridge</text>
+		<text transform="matrix(1 0 0 1 1031.876 703)" v-scroll-to="{el: '#DappsAPI',offset: -100}" class="st2 st3 st4">Dapps API</text>
+		<text transform="matrix(1 0 0 1 1031.876 733)" v-scroll-to="{el: '#StreamingAPI',offset: -100}" class="st2 st3 st4">Streaming API</text>
+		<text transform="matrix(1 0 0 1 1031.876 763)" v-scroll-to="{el: '#BandwidthMarket',offset: -100}" class="st2 st3 st4">Bandwidth Market</text>
+		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11" v-scroll-to="{el: '#letter_from_cjd',offset: -100}">Phase 4</text>
 		<text transform="matrix(1 0 0 1 1012.225 350)" class="st2 st6 st12">Innovate</text>
 		<g id="Group_87" transform="translate(706.841 610)">
 			<ellipse id="Ellipse_5-5" class="st9" cx="13.3" cy="-93.7" rx="13.3" ry="13.3"/>
@@ -293,7 +295,7 @@
 		</g>
 		</svg></div>
 		<div class="mobile">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="2195" viewBox="0 0 414 2195">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="2195" viewBox="0 0 414 2195">
 		  <defs>
 			<clipPath id="clip-iPhone_XR_XS_Max_11_3">
 			  <rect width="414" height="2195"/>
@@ -302,7 +304,7 @@
 		  <g id="iPhone_XR_XS_Max_11_3" data-name="iPhone XR/XS Max/11 – 3" clip-path="url(#clip-iPhone_XR_XS_Max_11_3)">
 			<rect width="414" height="2195" fill="#0f1541"/>
 			<rect id="Rectangle_53" data-name="Rectangle 53" width="414" height="2195" fill="#0f1541"/>
-			<path id="Rectangle_52" data-name="Rectangle 52" d="M0,0H287.125a55,55,0,0,1,55,55V456.223a55,55,0,0,1-55,55H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(48 575.5)" fill="#144697" opacity="0.39"/>
+			<path id="Rectangle_52" data-name="Rectangle 52" d="M0,0H287.125a55,55,0,0,1,55,55V470.223a55,55,0,0,1-55,55H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(48 575.5)" fill="#144697" opacity="0.39"/>
 			<rect id="Rectangle_48" data-name="Rectangle 48" width="220" height="55" rx="27.5" transform="translate(97 150)" fill="#3cadef"/>
 			<text id="PKT_Road_Map" data-name="PKT Road Map" transform="translate(48 78)" fill="#fff" font-size="30" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">PKT Road Map</tspan></text>
 			<line id="Line_5" data-name="Line 5" y2="461" transform="translate(49.5 1656.5)" fill="none" stroke="#b5e0f8" stroke-linecap="round" stroke-width="5"/>
@@ -310,7 +312,7 @@
 			<line id="Line_4" data-name="Line 4" y2="511" transform="translate(49.5 1145.5)" fill="none" stroke="#70c0f6" stroke-linecap="round" stroke-width="5"/>
 			<line id="Line_1" data-name="Line 1" y2="59.281" transform="translate(49.443 125.5)" fill="none" stroke="#144697" stroke-linecap="round" stroke-width="5"/>
 			<line id="Line_2" data-name="Line 2" y2="394.169" transform="translate(49.443 181.331)" fill="none" stroke="#1a80c6" stroke-linecap="round" stroke-width="5"/>
-			<text id="Phase_1" data-name="Phase 1" transform="translate(169 185)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 1</tspan></text>
+			<text id="Phase_1" data-name="Phase 1" transform="translate(169 185)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0" v-scroll-to="{el: '#phase_1',offset: -50}">Phase 1</tspan></text>
 			<circle id="Ellipse_1" data-name="Ellipse 1" cx="14.5" cy="14.5" r="14.5" transform="translate(64 163) rotate(90)" fill="#144697"/>
 			<circle id="Ellipse_2" data-name="Ellipse 2" cx="14.5" cy="14.5" r="14.5" transform="translate(64 561) rotate(90)" fill="#1a80c6"/>
 			<circle id="Ellipse_3" data-name="Ellipse 3" cx="14.5" cy="14.5" r="14.5" transform="translate(64 1131) rotate(90)" fill="#399ee4"/>
@@ -325,9 +327,9 @@
 			<rect id="Rectangle_49" data-name="Rectangle 49" width="220" height="55" rx="27.5" transform="translate(97 548)" fill="#3cadef"/>
 			<rect id="Rectangle_50" data-name="Rectangle 50" width="220" height="55" rx="27.5" transform="translate(97 1118)" fill="#3cadef"/>
 			<rect id="Rectangle_51" data-name="Rectangle 51" width="220" height="55" rx="27.5" transform="translate(97 1629)" fill="#3cadef"/>
-			<text id="Phase_2" data-name="Phase 2" transform="translate(167 583)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 2</tspan></text>
-			<text id="Phase_3" data-name="Phase 3" transform="translate(166 1153)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 3</tspan></text>
-			<text id="Phase_4" data-name="Phase 4" transform="translate(166 1664)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 4</tspan></text>
+			<text id="Phase_2" data-name="Phase 2" transform="translate(167 583)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0" v-scroll-to="{el: '#phase_2',offset: -50}">Phase 2</tspan></text>
+			<text id="Phase_3" data-name="Phase 3" transform="translate(166 1153)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0" v-scroll-to="{el: '#phase_3',offset: -50}">Phase 3</tspan></text>
+			<text id="Phase_4" data-name="Phase 4" transform="translate(166 1664)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0" v-scroll-to="{el: '#letter_from_cjd',offset: -50}">Phase 4</tspan></text>
 			<text id="PacketCrypt_Created_Mainnet_Launch_Command_Line_Wallet_PKT.Cash_Website_Electrum_Wallet_GUI_Wallet_Community_Launch_" data-name="PacketCrypt Created
 		Mainnet Launch
 		Command Line Wallet
@@ -357,7 +359,7 @@
 		LINK/PKT Oracles
 		Atomic Swap Market
 		PacketCryptRs
-		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lighting</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH/BSC</tspan><tspan x="0" y="291">LINK/PKT Oracles</tspan><tspan x="0" y="321">Atomic Swap Market</tspan><tspan x="0" y="351">PacketCryptRs</tspan><tspan x="0" y="381">PKT NFTs</tspan></text>
+		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21" v-scroll-to="{el: '#RouteServer',offset: -50}">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81" v-scroll-to="{el: '#AnodiumVPN',offset: -50}">Anodium VPN</tspan><tspan x="0" y="111" v-scroll-to="{el: '#Strike',offset: -50}">Token Strike</tspan><tspan x="0" y="141" v-scroll-to="{el: '#MiningWallet',offset: -50}">Mining Wallet</tspan><tspan x="0" y="171" v-scroll-to="{el: '#EdgePointDevice',offset: -50}">Edge Point Device</tspan><tspan x="0" y="201" v-scroll-to="{el: '#Lighting',offset: -50}">PKT Lighting</tspan><tspan x="0" y="231" v-scroll-to="{el: '#LightningPaymaker',offset: -50}">Lightning Paymaker</tspan><tspan x="0" y="261" v-scroll-to="{el: '#WPKTDeFiETH',offset: -50}">WPKT DeFi - ETH</tspan><tspan x="0" y="291" v-scroll-to="{el: '#WPKTDeFiBSC',offset: -50}">WPKT DeFi - BSC</tspan><tspan x="0" y="321" v-scroll-to="{el: '#LINKPKTOracles',offset: -50}">LINK/PKT Oracles</tspan><tspan x="0" y="351" v-scroll-to="{el: '#AtomicSwapMarket',offset: -50}">Atomic Swap Market</tspan><tspan x="0" y="381" v-scroll-to="{el: '#PacketCryptRs',offset: -50}">PacketCryptRs</tspan><tspan x="0" y="411" v-scroll-to="{el: '#PKTNFTs',offset: -50}">PKT NFTs</tspan></text>
 			<g id="Group_251" data-name="Group 251" transform="translate(-0.197)">
 			  <g id="Group_250" data-name="Group 250">
 				<path id="Icon_awesome-check-10" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.383,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.99 667.625)" fill="#50dd8d"/>
@@ -368,6 +370,7 @@
 				<path id="Icon_open-reload-5" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 908.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-6" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 1027.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-7" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 1056.662) rotate(-160)" fill="#50dd8d"/>
+				<path id="Icon_open-reload-70" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 1086.175) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-8" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 758.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-9" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 878.149) rotate(-160)" fill="#50dd8d"/>
 				<path id="Icon_open-reload-10" data-name="Icon open-reload" d="M11.765,0a11.765,11.765,0,1,0,8.353,20.118L18,18A8.83,8.83,0,1,1,11.736,2.941a8.556,8.556,0,0,1,6.147,2.677L14.677,8.824H23.5V0L20,3.5A11.7,11.7,0,0,0,11.736,0Z" transform="translate(118.28 997.149) rotate(-160)" fill="#50dd8d"/>
@@ -436,7 +439,7 @@
 		CjdnsDocker
 		CjdnsTool
 		CustomerBit
-		PKT DEX" transform="translate(136 1236)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Paid VPN</tspan><tspan x="0" y="51">Desktop App</tspan><tspan x="0" y="81">AddrLease</tspan><tspan x="0" y="111">BandwidthLease</tspan><tspan x="0" y="141">PKT VPN</tspan><tspan x="0" y="171">WinCjdns</tspan><tspan x="0" y="201">CjdnsPriority</tspan><tspan x="0" y="231">CjdnsMT</tspan><tspan x="0" y="261">CjdnsDocker</tspan><tspan x="0" y="291">CjdnsTool</tspan><tspan x="0" y="321">CustomerBit</tspan><tspan x="0" y="351">PKT DEX</tspan></text>
+		PKT DEX" transform="translate(136 1236)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21" v-scroll-to="{el: '#PaidVPN',offset: -50}">Paid VPN</tspan><tspan x="0" y="51" v-scroll-to="{el: '#DesktopApp',offset: -50}">Desktop App</tspan><tspan x="0" y="81" v-scroll-to="{el: '#AddrLease',offset: -50}">AddrLease</tspan><tspan x="0" y="111" v-scroll-to="{el: '#BandwidthLease',offset: -50}">BandwidthLease</tspan><tspan x="0" y="141" v-scroll-to="{el: '#PKTVPN',offset: -50}">PKT VPN</tspan><tspan x="0" y="171" v-scroll-to="{el: '#WinCjdns',offset: -50}">WinCjdns</tspan><tspan x="0" y="201" v-scroll-to="{el: '#CjdnsPriority',offset: -50}">CjdnsPriority</tspan><tspan x="0" y="231" v-scroll-to="{el: '#CjdnsMT',offset: -50}">CjdnsMT</tspan><tspan x="0" y="261" v-scroll-to="{el: '#CjdnsDocker',offset: -50}">CjdnsDocker</tspan><tspan x="0" y="291" v-scroll-to="{el: '#CjdnsTool',offset: -50}">CjdnsTool</tspan><tspan x="0" y="321" v-scroll-to="{el: '#CustomerBit',offset: -50}">CustomerBit</tspan><tspan x="0" y="351" v-scroll-to="{el: '#PKTDEX',offset: -50}">PKT DEX</tspan></text>
 			<text id="Paid_Access_Full_Paid_Net_Paid_VPN_VRouter_Lease_AddrLease_Cjdns_WiFI_Smart_Contracts_PKT_CDN_Bridge_Dapps_API_Streaming_API_Bandwidth_Market" data-name="Paid Access
 		Full Paid Net
 		Paid VPN
@@ -447,7 +450,7 @@
 		PKT CDN Bridge
 		Dapps API
 		Streaming API
-		Bandwidth Market" transform="translate(136 1746.995)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Paid Access</tspan><tspan x="0" y="51">Full Paid Net</tspan><tspan x="0" y="81">Paid VPN</tspan><tspan x="0" y="111">VRouter Lease</tspan><tspan x="0" y="141">AddrLease</tspan><tspan x="0" y="171">Cjdns WiFi</tspan><tspan x="0" y="201">Smart Contracts</tspan><tspan x="0" y="231">PKT CDN Bridge</tspan><tspan x="0" y="261">Dapps API</tspan><tspan x="0" y="291">Streaming API</tspan><tspan x="0" y="321">Bandwidth Market</tspan></text>
+		Bandwidth Market" transform="translate(136 1746.995)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21" v-scroll-to="{el: '#PaidAccess',offset: -50}">Paid Access</tspan><tspan x="0" y="51" v-scroll-to="{el: '#FullPaidNet',offset: -50}">Full Paid Net</tspan><tspan x="0" y="81" v-scroll-to="{el: '#PaidVPN',offset: -50}">Paid VPN</tspan><tspan x="0" y="111" v-scroll-to="{el: '#VRouterLease',offset: -50}">VRouter Lease</tspan><tspan x="0" y="141" v-scroll-to="{el: '#AddrLease',offset: -50}">AddrLease</tspan><tspan x="0" y="171" v-scroll-to="{el: '#CjdnsWiFi',offset: -50}">Cjdns WiFi</tspan><tspan x="0" y="201" v-scroll-to="{el: '#SmartContracts',offset: -50}">Smart Contracts</tspan><tspan x="0" y="231" v-scroll-to="{el: '#PKTCDNBridge',offset: -50}">PKT CDN Bridge</tspan><tspan x="0" y="261" v-scroll-to="{el: '#DappsAPI',offset: -50}">Dapps API</tspan><tspan x="0" y="291" v-scroll-to="{el: '#StreamingAPI',offset: -50}">Streaming API</tspan><tspan x="0" y="321" v-scroll-to="{el: '#BandwidthMarket',offset: -50}">Bandwidth Market</tspan></text>
 			<g id="Group_248" data-name="Group 248" transform="translate(-1)">
 			  <g id="Group_236" data-name="Group 236" transform="translate(98 1747.995)">
 				<ellipse id="Ellipse_5-13" data-name="Ellipse 5" cx="13.256" cy="13.256" rx="13.256" ry="13.256" transform="translate(0 0)" fill="#949494"/>
@@ -498,7 +501,7 @@
 		  </g>
 		</svg>
 		</div>
-	  <div class="c-advantage__btn-wrapper"><a :href="cta_link" class="c-advantage__link-more blue-btn-arrow"><span>{{ cta_title }}</span></a></div>
+	  <div class="c-advantage__btn-wrapper"><a v-scroll-to="'#glossary'" class="c-advantage__link-more blue-btn-arrow"><span>{{ cta_title }}</span></a></div>
     </div>
   </div>
 </template>
@@ -507,8 +510,7 @@
 export default {
   name: "SimpleHeader",
   props: {
-	cta_title: String,
-	cta_link: String,
+	cta_title: String
   },
   computed: {
     is_mobile() {
@@ -545,6 +547,9 @@ export default {
     padding-right: 2.125rem;
     border-color: #3CADEF;
     background-image: none;
+  }
+  & svg text.st2 {
+	cursor:pointer;
   }
   & .mobile {
 	display:none;
