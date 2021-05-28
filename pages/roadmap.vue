@@ -142,62 +142,62 @@ export default {
 		{
 		  id: "PKTVPN",
           heading: "PKT VPN",
-          content: "* Pkteers will be able to setup a VPN exit using simple docker commands. VPN exits can be private for friends and family, or public using cjdns.<br />* **Requires:**<br />* CjdnsTool<br />* CjdnsDocker"
+          content: "* Pkteers will be able to setup a VPN exit using simple docker commands. VPN exits can be private for friends and family, or public using cjdns. * **Requires:** * CjdnsTool * CjdnsDocker"
         },
 		{
 		  id: "CjdnsPriority",
           heading: "CjdnsPriority",
-          content: "Enables available bandwidth measurement, MTU measurement, HTB based priority levels for bandwidth lease and packet priority. Introduce customer bit and backoff on latency increase to drop packets if needed.<br />* **Requires:**<br />* CjdnsMT"
+          content: "Enables available bandwidth measurement, MTU measurement, HTB based priority levels for bandwidth lease and packet priority. Introduce customer bit and backoff on latency increase to drop packets if needed. * **Requires:** * CjdnsMT"
         },
 		{
 		  id: "BandwidthLease",
           heading: "BandwidthLease",
-          content: "Ability to sell bandwidth leases in cjdns and inform route server why packets were dropped. Until VRouter Lease is completed, this will only allow bandwidth leases to be allocated to cjdns peers or to VPN sessions.<br />* **Requires:**<br />* Token Strike<br />* AtomicS wap Market<br />* CjdnsPriority"
+          content: "Ability to sell bandwidth leases in cjdns and inform route server why packets were dropped. Until VRouter Lease is completed, this will only allow bandwidth leases to be allocated to cjdns peers or to VPN sessions. * **Requires:** * Token Strike * AtomicS wap Market * CjdnsPriority"
         },
 		{
 		  id: "AddrLease",
           heading: "AddrLease",
-          content: "Ability to lease IP addresses in the marketplace. A holder of an IP address lease is able to use that address in a VPN.<br />* **Requires:**<br />* CjdnsMT<br />* Token Strike<br />* Atomic Swap Market"
+          content: "Ability to lease IP addresses in the marketplace. A holder of an IP address lease is able to use that address in a VPN. * **Requires:** * CjdnsMT * Token Strike * Atomic Swap Market"
         },
 		{
 		  id: "DesktopApp",
           heading: "Desktop App",
-          content: "App UI containing the basic ability to transact PKT and setup cjdns VPNs on Windows/Mac/Linux.<br />* **Requires:**<br />* PKT Lightning<br />* PktVpn<br />* WinCjdns"
+          content: "App UI containing the basic ability to transact PKT and setup cjdns VPNs on Windows/Mac/Linux. * **Requires:** * PKT Lightning * PktVpn * WinCjdns"
         },
 		{
 		  id: "LightningPaymaker",
           heading: "Lightning Paymaker",
-          content: "New paymaker for PacketCrypt mining pools written in Rust and included in the packetcrypt_rs repository. Pays via ordinary payouts or via lightning invoices at the request of the miner. Pool fee is defined as a configuration parameter. Update of miner to request payment via Lightning Network.<br />* **Requires:**<br />* PKT Lightning"
+          content: "New paymaker for PacketCrypt mining pools written in Rust and included in the packetcrypt_rs repository. Pays via ordinary payouts or via lightning invoices at the request of the miner. Pool fee is defined as a configuration parameter. Update of miner to request payment via Lightning Network. * **Requires:** * PKT Lightning"
         },
 		{
 		  id: "MiningWallet",
           heading: "Mining Wallet",
-          content: "Integration of PacketCrypt announcement miner into the PKT Wallet and PKT Electrum. Ability to create invoices to clear your balance with the Lightning Paymaker. Mining pools serve as Lightning Network hubs from which the network grows.<br />* **Requires:**<br />* Lightning Paymaker<br />* PKT Lightning"
+          content: "Integration of PacketCrypt announcement miner into the PKT Wallet and PKT Electrum. Ability to create invoices to clear your balance with the Lightning Paymaker. Mining pools serve as Lightning Network hubs from which the network grows. * **Requires:** * Lightning Paymaker * PKT Lightning"
         },
 		{
 		  id: "EdgePointDevice",
           heading: "Edge Point Device",
-          content: "Ability to connect to a wifi device and get on the PKT Network. Enables the ability to use the PKT Network to reach your VPN exit of choice.<br />* **Requires:**<br />* PKT VPN<br />* CjdnsWifi"
+          content: "Ability to connect to a wifi device and get on the PKT Network. Enables the ability to use the PKT Network to reach your VPN exit of choice. * **Requires:** * PKT VPN * CjdnsWifi"
         },
 		{
 		  id: "VRouterLease",
           heading: "VRouter Lease",
-          content: "Ability to sell/configure virtual routers in cjdns. This expands bandwidth lease functionality to allow interconnection of different bandwidth leases making a virtual network. VRouter Lease depends on CjdnsMT because it will be a significant reworking of the cjdns internals.<br />* **Requires:**<br />* CjdnsMT<br />* BandwidthLease<br />* Token Strike<br />* Atomic Swap Market"
+          content: "Ability to sell/configure virtual routers in cjdns. This expands bandwidth lease functionality to allow interconnection of different bandwidth leases making a virtual network. VRouter Lease depends on CjdnsMT because it will be a significant reworking of the cjdns internals. * **Requires:** * CjdnsMT * BandwidthLease * Token Strike * Atomic Swap Market"
         },
 		{
 		  id: "PaidVPN",
           heading: "Paid VPN",
-          content: "Ability to use VPN while leasing all relevant assets for that VPN including the bandwidth on the VPN exit as well as the IP addresses. This assumes that you already have an internet connection which allows you to reach the VPN exit.<br />* **Requires:**<br />* Desktop App<br />* AddrLease<br />* BandwidthLease"
+          content: "Ability to use VPN while leasing all relevant assets for that VPN including the bandwidth on the VPN exit as well as the IP addresses. This assumes that you already have an internet connection which allows you to reach the VPN exit. * **Requires:** * Desktop App * AddrLease * BandwidthLease"
         },
 		{
 		  id: "PaidAccess",
           heading: "Paid Access",
-          content: "This means everything you need to get from an *internet-connected* Edge Point to the VPN exit is paid for, but still this does not include paying for each network link within a real mesh network.<br />* **Requires:**<br />* Edge Point Device<br />* Paid VPN"
+          content: "This means everything you need to get from an *internet-connected* Edge Point to the VPN exit is paid for, but still this does not include paying for each network link within a real mesh network. * **Requires:** * Edge Point Device * Paid VPN"
         },
 		{
 		  id: "FullPaidNet",
           heading: "Full Paid Net",
-          content: "This adds the ability to get on the internet through a virtual network operated by a Cloud ISP which runs on top of a mesh network. No part of that mesh network truly needs to be internet-connected, though it is likely that there will be an internet gateway at some point in that network which then takes the bandwidth to the VPN exit.<br />* **Requires:**<br />* Paid Access<br />* VRouter Lease"
+          content: "This adds the ability to get on the internet through a virtual network operated by a Cloud ISP which runs on top of a mesh network. No part of that mesh network truly needs to be internet-connected, though it is likely that there will be an internet gateway at some point in that network which then takes the bandwidth to the VPN exit. * **Requires:** * Paid Access * VRouter Lease"
         },
 		{
 		  id: "PacketCryptRs",
