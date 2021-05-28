@@ -84,10 +84,10 @@
                   <a href="/roadmap">Roadmap</a>
                 </li>
 				<li>
-                  <a href="https://pkt.cash/roadmap#letter_from_cjd">Letter from CJD</a>
+                  <a href="https://pkt.cash/about">Letter from CJD</a>
                 </li>
 				<li>
-                  <a href="https://pkt.cash/roadmap#story">PKT Origin Story</a>
+                  <a href="https://pkt.cash/origin-story">PKT Origin Story</a>
                 </li>
               </ul>
             </li>
