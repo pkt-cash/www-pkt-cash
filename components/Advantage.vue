@@ -74,7 +74,7 @@
 		<text transform="matrix(1 0 0 1 464 553)" class="st2 st3 st4">Token Strike</text>
 		<text transform="matrix(1 0 0 1 464 583)" class="st2 st3 st4">Mining Wallet</text>
 		<text transform="matrix(1 0 0 1 464 613)" class="st2 st3 st4">Edge Point Device</text>
-		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4">PKT Lighting</text>
+		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4">PKT Lightning</text>
 		<text transform="matrix(1 0 0 1 464 673)" class="st2 st3 st4">Lightning Paymaker</text>
 		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - ETH</text>
 		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4">WPKT DeFi - BSC</text>
@@ -384,13 +384,13 @@
 		Token Strike
 		Mining Wallet
 		Edge Point Device
-		PKT Lighting
+		PKT Lightning
 		Lightning Paymaker
 		WPKT DeFi - BSC/ETH
 		LINK/PKT Oracles
 		Atomic Swap Market
 		PacketCryptRs
-		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lighting</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH</tspan><tspan x="0" y="291">WPKT DeFi - BSC</tspan><tspan x="0" y="321">LINK/PKT Oracles</tspan><tspan x="0" y="351">Atomic Swap Market</tspan><tspan x="0" y="381">PacketCryptRs</tspan><tspan x="0" y="411">PKT NFTs</tspan></text>
+		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lightning</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH</tspan><tspan x="0" y="291">WPKT DeFi - BSC</tspan><tspan x="0" y="321">LINK/PKT Oracles</tspan><tspan x="0" y="351">Atomic Swap Market</tspan><tspan x="0" y="381">PacketCryptRs</tspan><tspan x="0" y="411">PKT NFTs</tspan></text>
 			<g id="Group_251" data-name="Group 251" transform="translate(-0.197)">
 			  <g id="Group_250" data-name="Group 250">
 				<path id="Icon_awesome-check-10" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.383,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.99 667.625)" fill="#50dd8d"/>
