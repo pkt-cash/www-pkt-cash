@@ -34,7 +34,7 @@
             <h2 class="c-advantage__sub">{{ item.subTitle }}</h2>
             <p class="c-advantage__text" :id="item.id">{{ item.text }}</p>
 			<div id="desktop" :class="item.graphic"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			 viewBox="0 0 1366 988" style="enable-background:new 0 0 1366 988;" xml:space="preserve">
+			 viewBox="0 0 1366 945" style="enable-background:new 0 0 1366 945;" xml:space="preserve">
 		<style type="text/css">
 			.st0{fill:none;}
 			.st1{fill:#0F1541;}
@@ -736,7 +736,7 @@ export default {
 	}
 	.c-advantage__btn-wrapper {
 		text-align: center;
-		margin-top: 35px;
+		margin-top: 0;
 	}
 	#mobile {
 		display:none;
