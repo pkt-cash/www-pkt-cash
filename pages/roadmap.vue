@@ -60,6 +60,7 @@ export default {
           aligh: false,
           colorBlue: true,
           textSVG: false,
+		  aId: "phase_1",
         },
         {
           title: "Support Internet Sharing",
@@ -71,6 +72,7 @@ export default {
           aligh: true,
           colorBlue: true,
           textSVG: false,
+		  aId: "phase_2",
         },
         {
           title: "Tokenized Bandwidth Leases",
@@ -82,6 +84,7 @@ export default {
           aligh: false,
           colorBlue: true,
           textSVG: false,
+		  aId: "phase_3",
         },
         {
           title: "Support Next Gen Networking Hardware",
@@ -95,7 +98,7 @@ export default {
           aligh: true,
           colorBlue: true,
           textSVG: false,
-		  id: "story",
+		  aId: "phase_4",
         },
       ],
 	  glossary_list: [

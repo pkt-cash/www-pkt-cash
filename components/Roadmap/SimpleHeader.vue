@@ -169,7 +169,7 @@
 		<text transform="matrix(1 0 0 1 1031.876 703)" v-scroll-to="{el: '#DappsAPI',offset: -100}" class="st2 st3 st4">Dapps API</text>
 		<text transform="matrix(1 0 0 1 1031.876 733)" v-scroll-to="{el: '#StreamingAPI',offset: -100}" class="st2 st3 st4">Streaming API</text>
 		<text transform="matrix(1 0 0 1 1031.876 763)" v-scroll-to="{el: '#BandwidthMarket',offset: -100}" class="st2 st3 st4">Bandwidth Market</text>
-		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11" v-scroll-to="{el: '#letter_from_cjd',offset: -100}">Phase 4</text>
+		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11" v-scroll-to="{el: '#phase_4',offset: -100}">Phase 4</text>
 		<text transform="matrix(1 0 0 1 1012.225 350)" class="st2 st6 st12">Innovate</text>
 		<g id="Group_87" transform="translate(706.841 610)">
 			<ellipse id="Ellipse_5-5" class="st9" cx="13.3" cy="-93.7" rx="13.3" ry="13.3"/>
