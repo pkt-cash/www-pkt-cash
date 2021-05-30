@@ -60,6 +60,7 @@ export default {
           aligh: false,
           colorBlue: true,
           textSVG: false,
+		  aId: "phase_1",
         },
         {
           title: "Support Internet Sharing",
@@ -71,6 +72,7 @@ export default {
           aligh: true,
           colorBlue: true,
           textSVG: false,
+		  aId: "phase_2",
         },
         {
           title: "Tokenized Bandwidth Leases",
@@ -82,6 +84,7 @@ export default {
           aligh: false,
           colorBlue: true,
           textSVG: false,
+		  aId: "phase_3",
         },
         {
           title: "Support Next Gen Networking Hardware",
@@ -95,14 +98,14 @@ export default {
           aligh: true,
           colorBlue: true,
           textSVG: false,
-		  id: "story",
+		  aId: "phase_4",
         },
       ],
 	  glossary_list: [
         {
 		  id: "CjdnsTool",
           heading: "CjdnsTool",
-          content: "Build a VPN market where anyone can participate and the minimum price is free"
+          content: "This project will aid in cjdns node operation, the key objective though is to integrate with the vpn-api to simplify setting up a VPN using cjdns. Adding this capability plus CjdnsDocker will open the door to an easy to use VPN solution (PKT VPN)."
         },
 		{
 		  id: "CjdnsDocker",
@@ -131,7 +134,7 @@ export default {
         },
 		{
 		  id: "AtomicSwapMarket",
-          heading: "AtomicSwapMarket",
+          heading: "Atomic Swap Market",
           content: "Decentralized gossipped orderbook for atomic swapped assets with similarities to OpenDEX."
         },
 		{
@@ -142,7 +145,7 @@ export default {
 		{
 		  id: "PKTVPN",
           heading: "PKT VPN",
-          content: "* Pkteers will be able to setup a VPN exit using simple docker commands. VPN exits can be private for friends and family, or public using cjdns. * **Requires:** * CjdnsTool * CjdnsDocker"
+          content: "Pkteers will be able to setup a VPN exit using simple docker commands. VPN exits can be private for friends and family, or public using cjdns. * **Requires:** * CjdnsTool * CjdnsDocker"
         },
 		{
 		  id: "CjdnsPriority",

@@ -42,7 +42,7 @@
 		<text transform="matrix(1 0 0 1 464 553)" v-scroll-to="{el: '#Strike',offset: -100}" class="st2 st3 st4">Token Strike</text>
 		<text transform="matrix(1 0 0 1 464 583)" v-scroll-to="{el: '#MiningWallet',offset: -100}" class="st2 st3 st4">Mining Wallet</text>
 		<text transform="matrix(1 0 0 1 464 613)" v-scroll-to="{el: '#EdgePointDevice',offset: -100}" class="st2 st3 st4">Edge Point Device</text>
-		<text transform="matrix(1 0 0 1 464 643)" v-scroll-to="{el: '#Lighting',offset: -100}" class="st2 st3 st4">PKT Lighting</text>
+		<text transform="matrix(1 0 0 1 464 643)" v-scroll-to="{el: '#Lighting',offset: -100}" class="st2 st3 st4">PKT Lightning</text>
 		<text transform="matrix(1 0 0 1 464 673)" v-scroll-to="{el: '#LightningPaymaker',offset: -100}" class="st2 st3 st4">Lightning Paymaker</text>
 		<text transform="matrix(1 0 0 1 464 703)" v-scroll-to="{el: '#WPKTDeFiETH',offset: -100}" class="st2 st3 st4">WPKT DeFi - ETH</text>
 		<text transform="matrix(1 0 0 1 464 733)" v-scroll-to="{el: '#WPKTDeFiBSC',offset: -100}" class="st2 st3 st4">WPKT DeFi - BSC</text>
@@ -169,7 +169,7 @@
 		<text transform="matrix(1 0 0 1 1031.876 703)" v-scroll-to="{el: '#DappsAPI',offset: -100}" class="st2 st3 st4">Dapps API</text>
 		<text transform="matrix(1 0 0 1 1031.876 733)" v-scroll-to="{el: '#StreamingAPI',offset: -100}" class="st2 st3 st4">Streaming API</text>
 		<text transform="matrix(1 0 0 1 1031.876 763)" v-scroll-to="{el: '#BandwidthMarket',offset: -100}" class="st2 st3 st4">Bandwidth Market</text>
-		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11" v-scroll-to="{el: '#letter_from_cjd',offset: -100}">Phase 4</text>
+		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11" v-scroll-to="{el: '#phase_4',offset: -100}">Phase 4</text>
 		<text transform="matrix(1 0 0 1 1012.225 350)" class="st2 st6 st12">Innovate</text>
 		<g id="Group_87" transform="translate(706.841 610)">
 			<ellipse id="Ellipse_5-5" class="st9" cx="13.3" cy="-93.7" rx="13.3" ry="13.3"/>
@@ -353,13 +353,13 @@
 		Token Strike
 		Mining Wallet
 		Edge Point Device
-		PKT Lighting
+		PKT Lightning
 		Lightning Paymaker
 		WPKT DeFi - BSC/ETH
 		LINK/PKT Oracles
 		Atomic Swap Market
 		PacketCryptRs
-		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21" v-scroll-to="{el: '#RouteServer',offset: -50}">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81" v-scroll-to="{el: '#AnodiumVPN',offset: -50}">Anodium VPN</tspan><tspan x="0" y="111" v-scroll-to="{el: '#Strike',offset: -50}">Token Strike</tspan><tspan x="0" y="141" v-scroll-to="{el: '#MiningWallet',offset: -50}">Mining Wallet</tspan><tspan x="0" y="171" v-scroll-to="{el: '#EdgePointDevice',offset: -50}">Edge Point Device</tspan><tspan x="0" y="201" v-scroll-to="{el: '#Lighting',offset: -50}">PKT Lighting</tspan><tspan x="0" y="231" v-scroll-to="{el: '#LightningPaymaker',offset: -50}">Lightning Paymaker</tspan><tspan x="0" y="261" v-scroll-to="{el: '#WPKTDeFiETH',offset: -50}">WPKT DeFi - ETH</tspan><tspan x="0" y="291" v-scroll-to="{el: '#WPKTDeFiBSC',offset: -50}">WPKT DeFi - BSC</tspan><tspan x="0" y="321" v-scroll-to="{el: '#LINKPKTOracles',offset: -50}">LINK/PKT Oracles</tspan><tspan x="0" y="351" v-scroll-to="{el: '#AtomicSwapMarket',offset: -50}">Atomic Swap Market</tspan><tspan x="0" y="381" v-scroll-to="{el: '#PacketCryptRs',offset: -50}">PacketCryptRs</tspan><tspan x="0" y="411" v-scroll-to="{el: '#PKTNFTs',offset: -50}">PKT NFTs</tspan></text>
+		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21" v-scroll-to="{el: '#RouteServer',offset: -50}">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81" v-scroll-to="{el: '#AnodiumVPN',offset: -50}">Anodium VPN</tspan><tspan x="0" y="111" v-scroll-to="{el: '#Strike',offset: -50}">Token Strike</tspan><tspan x="0" y="141" v-scroll-to="{el: '#MiningWallet',offset: -50}">Mining Wallet</tspan><tspan x="0" y="171" v-scroll-to="{el: '#EdgePointDevice',offset: -50}">Edge Point Device</tspan><tspan x="0" y="201" v-scroll-to="{el: '#Lighting',offset: -50}">PKT Lightning</tspan><tspan x="0" y="231" v-scroll-to="{el: '#LightningPaymaker',offset: -50}">Lightning Paymaker</tspan><tspan x="0" y="261" v-scroll-to="{el: '#WPKTDeFiETH',offset: -50}">WPKT DeFi - ETH</tspan><tspan x="0" y="291" v-scroll-to="{el: '#WPKTDeFiBSC',offset: -50}">WPKT DeFi - BSC</tspan><tspan x="0" y="321" v-scroll-to="{el: '#LINKPKTOracles',offset: -50}">LINK/PKT Oracles</tspan><tspan x="0" y="351" v-scroll-to="{el: '#AtomicSwapMarket',offset: -50}">Atomic Swap Market</tspan><tspan x="0" y="381" v-scroll-to="{el: '#PacketCryptRs',offset: -50}">PacketCryptRs</tspan><tspan x="0" y="411" v-scroll-to="{el: '#PKTNFTs',offset: -50}">PKT NFTs</tspan></text>
 			<g id="Group_251" data-name="Group 251" transform="translate(-0.197)">
 			  <g id="Group_250" data-name="Group 250">
 				<path id="Icon_awesome-check-10" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.383,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.99 667.625)" fill="#50dd8d"/>
