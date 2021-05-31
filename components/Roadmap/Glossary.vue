@@ -14,7 +14,7 @@
 			  <span>{{ item.heading }}</span>
 			</vsa-heading>
 			<vsa-content>
-			  <p>{{ item.content }}</p>
+			  <p v-html="item.content"></p>
 			</vsa-content>
 		  </vsa-item>
 		</vsa-list>
