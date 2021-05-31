@@ -68,32 +68,32 @@
 		<text transform="matrix(1 0 0 1 182.192 643)" class="st2 st3 st4">Community Launch</text>
 		<path id="Rectangle_27" class="st5" d="M401,395.7h283.1l0,0v448.4c0,22.6-18.4,41-41,41l0,0H442c-22.6,0-41-18.4-41-41l0,0V395.7
 			L401,395.7z"/>
-		<text transform="matrix(1 0 0 1 464 463)" class="st2 st3 st4">Route Server</text>
+		<text transform="matrix(1 0 0 1 464 463)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#RouteServer">Route Server</a></text>
 		<text transform="matrix(1 0 0 1 464 493)" class="st2 st3 st4">Exchange Listing</text>
-		<text transform="matrix(1 0 0 1 464 523)" class="st2 st3 st4">Anodium VPN</text>
-		<text transform="matrix(1 0 0 1 464 553)" class="st2 st3 st4">Token Strike</text>
-		<text transform="matrix(1 0 0 1 464 583)" class="st2 st3 st4">Mining Wallet</text>
-		<text transform="matrix(1 0 0 1 464 613)" class="st2 st3 st4">Edge Point Device</text>
-		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4">PKT Lightning</text>
-		<text transform="matrix(1 0 0 1 464 673)" class="st2 st3 st4">Lightning Paymaker</text>
-		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4">WPKT DeFi - ETH</text>
-		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4">WPKT DeFi - BSC</text>
-		<text transform="matrix(1 0 0 1 464 763)" class="st2 st3 st4">LINK/PKT Oracles</text>
-		<text transform="matrix(1 0 0 1 464 793)" class="st2 st3 st4">Atomic Swap Market</text>
-		<text transform="matrix(1 0 0 1 464 823)" class="st2 st3 st4">PacketCryptRs</text>
-		<text transform="matrix(1 0 0 1 464 853)" class="st2 st3 st4">PKT NFTs</text>
-		<text transform="matrix(1 0 0 1 749 463)" class="st2 st3 st4">Paid VPN</text>
-		<text transform="matrix(1 0 0 1 749 493)" class="st2 st3 st4">Desktop App</text>
-		<text transform="matrix(1 0 0 1 749 523)" class="st2 st3 st4">AddrLease</text>
-		<text transform="matrix(1 0 0 1 749 553)" class="st2 st3 st4">BandwidthLease</text>
-		<text transform="matrix(1 0 0 1 749 583)" class="st2 st3 st4">PKT VPN</text>
-		<text transform="matrix(1 0 0 1 749 613)" class="st2 st3 st4">WinCjdns</text>
-		<text transform="matrix(1 0 0 1 749 643)" class="st2 st3 st4">CjdnsPriority</text>
-		<text transform="matrix(1 0 0 1 749 673)" class="st2 st3 st4">CjdnsMT</text>
-		<text transform="matrix(1 0 0 1 749 703)" class="st2 st3 st4">CjdnsDocker</text>
-		<text transform="matrix(1 0 0 1 749 733)" class="st2 st3 st4">CjdnsTool</text>
-		<text transform="matrix(1 0 0 1 749 763)" class="st2 st3 st4">CustomerBit</text>
-		<text transform="matrix(1 0 0 1 749 793)" class="st2 st3 st4">PKT DEX</text>
+		<text transform="matrix(1 0 0 1 464 523)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#AnodiumVPN">Anodium VPN</a></text>
+		<text transform="matrix(1 0 0 1 464 553)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#Strike">Token Strike</a></text>
+		<text transform="matrix(1 0 0 1 464 583)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#MiningWallet">Mining Wallet</a></text>
+		<text transform="matrix(1 0 0 1 464 613)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#EdgePointDevice">Edge Point Device</a></text>
+		<text transform="matrix(1 0 0 1 464 643)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#Lighting">PKT Lightning</a></text>
+		<text transform="matrix(1 0 0 1 464 673)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#LightningPaymaker">Lightning Paymaker</a></text>
+		<text transform="matrix(1 0 0 1 464 703)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#WPKTDeFiETH">WPKT DeFi - ETH</a></text>
+		<text transform="matrix(1 0 0 1 464 733)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#WPKTDeFiBSC">WPKT DeFi - BSC</a></text>
+		<text transform="matrix(1 0 0 1 464 763)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#LINKPKTOracles">LINK/PKT Oracles</a></text>
+		<text transform="matrix(1 0 0 1 464 793)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#AtomicSwapMarket">Atomic Swap Market</a></text>
+		<text transform="matrix(1 0 0 1 464 823)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PacketCryptRs">PacketCryptRs</a></text>
+		<text transform="matrix(1 0 0 1 464 853)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PKTNFTs">PKT NFTs</a></text>
+		<text transform="matrix(1 0 0 1 749 463)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PaidVPN">Paid VPN</a></text>
+		<text transform="matrix(1 0 0 1 749 493)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#DesktopApp">Desktop App</a></text>
+		<text transform="matrix(1 0 0 1 749 523)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#AddrLease">AddrLease</a></text>
+		<text transform="matrix(1 0 0 1 749 553)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#BandwidthLease">BandwidthLease</a></text>
+		<text transform="matrix(1 0 0 1 749 583)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PKTVPN">PKT VPN</a></text>
+		<text transform="matrix(1 0 0 1 749 613)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#WinCjdns">WinCjdns</a></text>
+		<text transform="matrix(1 0 0 1 749 643)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#CjdnsPriority">CjdnsPriority</a></text>
+		<text transform="matrix(1 0 0 1 749 673)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#CjdnsMT">CjdnsMT</a></text>
+		<text transform="matrix(1 0 0 1 749 703)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#CjdnsDocker">CjdnsDocker</a></text>
+		<text transform="matrix(1 0 0 1 749 733)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#CjdnsTool">CjdnsTool</a></text>
+		<text transform="matrix(1 0 0 1 749 763)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#CustomerBit">CustomerBit</a></text>
+		<text transform="matrix(1 0 0 1 749 793)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PKTDEX">PKT DEX</a></text>
 		<text transform="matrix(1 0 0 1 227.696 169)" class="st2 st6 st7">PKT Roadmap</text>
 		<path id="Icon_awesome-check-2" class="st8" d="M157.4,464.5l-8.2-8.2c-0.5-0.5-0.5-1.3,0-1.8c0,0,0,0,0,0l1.8-1.8
 			c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l5.5,5.5l11.9-11.9c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l1.8,1.8c0.5,0.5,0.5,1.3,0,1.8
@@ -184,24 +184,24 @@
 			c-15.2,0-27.5-12.3-27.5-27.5l0,0C699,255.3,711.3,243,726.5,243z"/>
 		<path id="Rectangle_35" class="st10" d="M993.5,243h165c15.2,0,27.5,12.3,27.5,27.5l0,0c0,15.2-12.3,27.5-27.5,27.5h-165
 			c-15.2,0-27.5-12.3-27.5-27.5l0,0C966,255.3,978.3,243,993.5,243z"/>
-		<text transform="matrix(1 0 0 1 235 278)" class="st2 st3 st11">Phase 1</text>
+		<text transform="matrix(1 0 0 1 235 278)" class="st2 st3 st11"><a href="/roadmap#phase_1">Phase 1</a></text>
 		<text transform="matrix(1 0 0 1 222 350)" class="st2 st6 st12">Launch</text>
-		<text transform="matrix(1 0 0 1 499 278)" class="st2 st3 st11">Phase 2</text>
+		<text transform="matrix(1 0 0 1 499 278)" class="st2 st3 st11"><a href="/roadmap#phase_2">Phase 2</a></text>
 		<text transform="matrix(1 0 0 1 497 350)" class="st2 st6 st12">Utilize</text>
-		<text transform="matrix(1 0 0 1 766 278)" class="st2 st3 st11">Phase 3</text>
+		<text transform="matrix(1 0 0 1 766 278)" class="st2 st3 st11"><a href="/roadmap#phase_3">Phase 3</a></text>
 		<text transform="matrix(1 0 0 1 769 350)" class="st2 st6 st12">Scale</text>
-		<text transform="matrix(1 0 0 1 1031.876 463)" class="st2 st3 st4">Paid Access</text>
-		<text transform="matrix(1 0 0 1 1031.876 493)" class="st2 st3 st4">Full Paid Net</text>
-		<text transform="matrix(1 0 0 1 1031.876 523)" class="st2 st3 st4">Paid VPN</text>
-		<text transform="matrix(1 0 0 1 1031.876 553)" class="st2 st3 st4">VRouter Lease</text>
-		<text transform="matrix(1 0 0 1 1031.876 583)" class="st2 st3 st4">AddrLease</text>
-		<text transform="matrix(1 0 0 1 1031.876 613)" class="st2 st3 st4">Cjdns WiFi</text>
-		<text transform="matrix(1 0 0 1 1031.876 643)" class="st2 st3 st4">Smart Contracts</text>
-		<text transform="matrix(1 0 0 1 1031.876 673)" class="st2 st3 st4">PKT CDN Bridge</text>
-		<text transform="matrix(1 0 0 1 1031.876 703)" class="st2 st3 st4">Dapps API</text>
-		<text transform="matrix(1 0 0 1 1031.876 733)" class="st2 st3 st4">Streaming API</text>
-		<text transform="matrix(1 0 0 1 1031.876 763)" class="st2 st3 st4">Bandwidth Market</text>
-		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11">Phase 4</text>
+		<text transform="matrix(1 0 0 1 1031.876 463)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PaidAccess">Paid Access</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 493)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#FullPaidNet">Full Paid Net</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 523)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PaidVPN">Paid VPN</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 553)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#VRouterLease">VRouter Lease</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 583)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#AddrLease">AddrLease</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 613)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#CjdnsWiFi">Cjdns WiFi</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 643)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#SmartContracts">Smart Contracts</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 673)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#PKTCDNBridge">PKT CDN Bridge</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 703)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#DappsAPI">Dapps API</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 733)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#StreamingAPI">Streaming API</a></text>
+		<text transform="matrix(1 0 0 1 1031.876 763)" class="st2 st3 st4"><a href="https://pkt.cash/roadmap#BandwidthMarket">Bandwidth Market</a></text>
+		<text transform="matrix(1 0 0 1 1034 278)" class="st2 st3 st11"><a href="/roadmap#phase_4">Phase 4</a></text>
 		<text transform="matrix(1 0 0 1 1012.225 350)" class="st2 st6 st12">Innovate</text>
 		<g id="Group_87" transform="translate(706.841 610)">
 			<ellipse id="Ellipse_5-5" class="st9" cx="13.3" cy="-93.7" rx="13.3" ry="13.3"/>
@@ -343,7 +343,7 @@
 			<line id="Line_4" data-name="Line 4" y2="511" transform="translate(49.5 1145.5)" fill="none" stroke="#70c0f6" stroke-linecap="round" stroke-width="5"/>
 			<line id="Line_1" data-name="Line 1" y2="59.281" transform="translate(49.443 125.5)" fill="none" stroke="#144697" stroke-linecap="round" stroke-width="5"/>
 			<line id="Line_2" data-name="Line 2" y2="394.169" transform="translate(49.443 181.331)" fill="none" stroke="#1a80c6" stroke-linecap="round" stroke-width="5"/>
-			<text id="Phase_1" data-name="Phase 1" transform="translate(169 185)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 1</tspan></text>
+			<text id="Phase_1" data-name="Phase 1" transform="translate(169 185)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0"><a href="/roadmap#phase_1">Phase 1</a></tspan></text>
 			<circle id="Ellipse_1" data-name="Ellipse 1" cx="14.5" cy="14.5" r="14.5" transform="translate(64 163) rotate(90)" fill="#144697"/>
 			<circle id="Ellipse_2" data-name="Ellipse 2" cx="14.5" cy="14.5" r="14.5" transform="translate(64 561) rotate(90)" fill="#1a80c6"/>
 			<circle id="Ellipse_3" data-name="Ellipse 3" cx="14.5" cy="14.5" r="14.5" transform="translate(64 1131) rotate(90)" fill="#399ee4"/>
@@ -358,9 +358,9 @@
 			<rect id="Rectangle_49" data-name="Rectangle 49" width="220" height="55" rx="27.5" transform="translate(97 548)" fill="#3cadef"/>
 			<rect id="Rectangle_50" data-name="Rectangle 50" width="220" height="55" rx="27.5" transform="translate(97 1118)" fill="#3cadef"/>
 			<rect id="Rectangle_51" data-name="Rectangle 51" width="220" height="55" rx="27.5" transform="translate(97 1629)" fill="#3cadef"/>
-			<text id="Phase_2" data-name="Phase 2" transform="translate(167 583)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 2</tspan></text>
-			<text id="Phase_3" data-name="Phase 3" transform="translate(166 1153)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 3</tspan></text>
-			<text id="Phase_4" data-name="Phase 4" transform="translate(166 1664)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Phase 4</tspan></text>
+			<text id="Phase_2" data-name="Phase 2" transform="translate(167 583)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0"><a href="/roadmap#phase_2">Phase 2</a></tspan></text>
+			<text id="Phase_3" data-name="Phase 3" transform="translate(166 1153)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0"><a href="/roadmap#phase_3">Phase 3</a></tspan></text>
+			<text id="Phase_4" data-name="Phase 4" transform="translate(166 1664)" fill="#fff" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0"><a href="/roadmap#phase_4">Phase 4</a></tspan></text>
 			<text id="PacketCrypt_Created_Mainnet_Launch_Command_Line_Wallet_PKT.Cash_Website_Electrum_Wallet_GUI_Wallet_Community_Launch_" data-name="PacketCrypt Created
 		Mainnet Launch
 		Command Line Wallet
@@ -390,7 +390,7 @@
 		LINK/PKT Oracles
 		Atomic Swap Market
 		PacketCryptRs
-		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Route Server</tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81">Anodium VPN</tspan><tspan x="0" y="111">Token Strike</tspan><tspan x="0" y="141">Mining Wallet</tspan><tspan x="0" y="171">Edge Point Device</tspan><tspan x="0" y="201">PKT Lightning</tspan><tspan x="0" y="231">Lightning Paymaker</tspan><tspan x="0" y="261">WPKT DeFi - ETH</tspan><tspan x="0" y="291">WPKT DeFi - BSC</tspan><tspan x="0" y="321">LINK/PKT Oracles</tspan><tspan x="0" y="351">Atomic Swap Market</tspan><tspan x="0" y="381">PacketCryptRs</tspan><tspan x="0" y="411">PKT NFTs</tspan></text>
+		PKT NFTs" transform="translate(136 668)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21"><a href="https://pkt.cash/roadmap#RouteServer">Route Server</a></tspan><tspan x="0" y="51">Exchange Listing</tspan><tspan x="0" y="81"><a href="https://pkt.cash/roadmap#AnodiumVPN">Anodium VPN</a></tspan><tspan x="0" y="111"><a href="https://pkt.cash/roadmap#Strike">Token Strike</a></tspan><tspan x="0" y="141"><a href="https://pkt.cash/roadmap#MiningWallet">Mining Wallet</a></tspan><tspan x="0" y="171"><a href="https://pkt.cash/roadmap#EdgePointDevice">Edge Point Device</a></tspan><tspan x="0" y="201"><a href="https://pkt.cash/roadmap#Lighting">PKT Lightning</a></tspan><tspan x="0" y="231"><a href="https://pkt.cash/roadmap#LightningPaymaker">Lightning Paymaker</a></tspan><tspan x="0" y="261"><a href="https://pkt.cash/roadmap#WPKTDeFiETH">WPKT DeFi - ETH</a></tspan><tspan x="0" y="291"><a href="https://pkt.cash/roadmap#WPKTDeFiBSC">WPKT DeFi - BSC</a></tspan><tspan x="0" y="321"><a href="https://pkt.cash/roadmap#LINKPKTOracles">LINK/PKT Oracles</a></tspan><tspan x="0" y="351"><a href="https://pkt.cash/roadmap#AtomicSwapMarket">Atomic Swap Market</a></tspan><tspan x="0" y="381"><a href="https://pkt.cash/roadmap#PacketCryptRs">PacketCryptRs</a></tspan><tspan x="0" y="411"><a href="https://pkt.cash/roadmap#PKTNFTs">PKT NFTs</a></tspan></text>
 			<g id="Group_251" data-name="Group 251" transform="translate(-0.197)">
 			  <g id="Group_250" data-name="Group 250">
 				<path id="Icon_awesome-check-10" data-name="Icon awesome-check" d="M8.606,23.1.371,14.866a1.267,1.267,0,0,1,0-1.792l1.792-1.792a1.267,1.267,0,0,1,1.792,0L9.5,16.83,21.383,4.948a1.267,1.267,0,0,1,1.792,0L24.967,6.74a1.267,1.267,0,0,1,0,1.792L10.4,23.1A1.267,1.267,0,0,1,8.606,23.1Z" transform="translate(98.99 667.625)" fill="#50dd8d"/>
@@ -470,7 +470,7 @@
 		CjdnsDocker
 		CjdnsTool
 		CustomerBit
-		PKT DEX" transform="translate(136 1236)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Paid VPN</tspan><tspan x="0" y="51">Desktop App</tspan><tspan x="0" y="81">AddrLease</tspan><tspan x="0" y="111">BandwidthLease</tspan><tspan x="0" y="141">PKT VPN</tspan><tspan x="0" y="171">WinCjdns</tspan><tspan x="0" y="201">CjdnsPriority</tspan><tspan x="0" y="231">CjdnsMT</tspan><tspan x="0" y="261">CjdnsDocker</tspan><tspan x="0" y="291">CjdnsTool</tspan><tspan x="0" y="321">CustomerBit</tspan><tspan x="0" y="351">PKT DEX</tspan></text>
+		PKT DEX" transform="translate(136 1236)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21"><a href="https://pkt.cash/roadmap#PaidVPN">Paid VPN</a></tspan><tspan x="0" y="51"><a href="https://pkt.cash/roadmap#DesktopApp">Desktop App</a></tspan><tspan x="0" y="81"><a href="https://pkt.cash/roadmap#AddrLease">AddrLease</a></tspan><tspan x="0" y="111"><a href="https://pkt.cash/roadmap#BandwidthLease">BandwidthLease</a></tspan><tspan x="0" y="141"><a href="https://pkt.cash/roadmap#PKTVPN">PKT VPN</a></tspan><tspan x="0" y="171"><a href="https://pkt.cash/roadmap#WinCjdns">WinCjdns</a></tspan><tspan x="0" y="201"><a href="https://pkt.cash/roadmap#CjdnsPriority">CjdnsPriority</a></tspan><tspan x="0" y="231"><a href="https://pkt.cash/roadmap#CjdnsMT">CjdnsMT</a></tspan><tspan x="0" y="261"><a href="https://pkt.cash/roadmap#CjdnsDocker">CjdnsDocker</a></tspan><tspan x="0" y="291"><a href="https://pkt.cash/roadmap#CjdnsTool">CjdnsTool</a></tspan><tspan x="0" y="321"><a href="https://pkt.cash/roadmap#CustomerBit">CustomerBit</a></tspan><tspan x="0" y="351"><a href="https://pkt.cash/roadmap#PKTDEX">PKT DEX</a></tspan></text>
 			<text id="Paid_Access_Full_Paid_Net_Paid_VPN_VRouter_Lease_AddrLease_Cjdns_WiFI_Smart_Contracts_PKT_CDN_Bridge_Dapps_API_Streaming_API_Bandwidth_Market" data-name="Paid Access
 		Full Paid Net
 		Paid VPN
@@ -481,7 +481,7 @@
 		PKT CDN Bridge
 		Dapps API
 		Streaming API
-		Bandwidth Market" transform="translate(136 1746.995)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21">Paid Access</tspan><tspan x="0" y="51">Full Paid Net</tspan><tspan x="0" y="81">Paid VPN</tspan><tspan x="0" y="111">VRouter Lease</tspan><tspan x="0" y="141">AddrLease</tspan><tspan x="0" y="171">Cjdns WiFi</tspan><tspan x="0" y="201">Smart Contracts</tspan><tspan x="0" y="231">PKT CDN Bridge</tspan><tspan x="0" y="261">Dapps API</tspan><tspan x="0" y="291">Streaming API</tspan><tspan x="0" y="321">Bandwidth Market</tspan></text>
+		Bandwidth Market" transform="translate(136 1746.995)" fill="#fff" font-size="20" font-family="Poppins-Regular, Poppins"><tspan x="0" y="21"><a href="https://pkt.cash/roadmap#PaidAccess">Paid Access</a></tspan><tspan x="0" y="51"><a href="https://pkt.cash/roadmap#FullPaidNet">Full Paid Net</a></tspan><tspan x="0" y="81"><a href="https://pkt.cash/roadmap#PaidVPN">Paid VPN</a></tspan><tspan x="0" y="111"><a href="https://pkt.cash/roadmap#VRouterLease">VRouter Lease</a></tspan><tspan x="0" y="141"><a href="https://pkt.cash/roadmap#AddrLease">AddrLease</a></tspan><tspan x="0" y="171"><a href="https://pkt.cash/roadmap#CjdnsWiFi">Cjdns WiFi</a></tspan><tspan x="0" y="201"><a href="https://pkt.cash/roadmap#SmartContracts">Smart Contracts</a></tspan><tspan x="0" y="231"><a href="https://pkt.cash/roadmap#PKTCDNBridge">PKT CDN Bridge</a></tspan><tspan x="0" y="261"><a href="https://pkt.cash/roadmap#DappsAPI">Dapps API</a></tspan><tspan x="0" y="291"><a href="https://pkt.cash/roadmap#StreamingAPI">Streaming API</a></tspan><tspan x="0" y="321"><a href="https://pkt.cash/roadmap#BandwidthMarket">Bandwidth Market</a></tspan></text>
 			<g id="Group_248" data-name="Group 248" transform="translate(-1)">
 			  <g id="Group_236" data-name="Group 236" transform="translate(98 1747.995)">
 				<ellipse id="Ellipse_5-13" data-name="Ellipse 5" cx="13.256" cy="13.256" rx="13.256" ry="13.256" transform="translate(0 0)" fill="#949494"/>
@@ -743,6 +743,14 @@ export default {
 	}
 	#desktop {
 		display:block;
+	}
+	svg text.st2,svg tspan {
+		cursor:pointer;
+	}
+	svg text.st2 a,svg text.st2 a:hover,svg text.st2 a:focus,
+	svg tspan a,svg tspan a:hover,svg tspan a:focus {
+		color:#fff;
+		fill: #fff;
 	}
 	.c-advantage__link-more {
 		background-color: #3cadef !important;
