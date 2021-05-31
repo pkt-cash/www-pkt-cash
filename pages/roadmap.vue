@@ -51,6 +51,7 @@ export default {
     return {
       advantage_list: [
         {
+		  upTitle: "Phase 1",
           title: "VPN Marketplace",
           subTitle: "VPN Marketplace",
           text:
@@ -63,6 +64,7 @@ export default {
 		  aId: "phase_1",
         },
         {
+		  upTitle: "Phase 2",
           title: "Support Internet Sharing",
           subTitle: "Support Internet Sharing",
           text:
@@ -75,6 +77,7 @@ export default {
 		  aId: "phase_2",
         },
         {
+		  upTitle: "Phase 3",
           title: "Tokenized Bandwidth Leases",
           subTitle: "Tokenized Bandwidth Leases",
           text:
@@ -87,6 +90,7 @@ export default {
 		  aId: "phase_3",
         },
         {
+		  upTitle: "Phase 4",
           title: "Support Next Gen Networking Hardware",
           subTitle: "Support Next Gen Networking Hardware",
           text:
@@ -283,5 +287,10 @@ export default {
   @extend %h1-title;
   height: calc(100vh - 100px);
   background-color: grey;
+}
+.c-advantage__up {
+	@extend %h3-title;
+	color: #3cadef;
+    margin-bottom: -10px;
 }
 </style>

@@ -11,6 +11,7 @@
         <div class="id-anchor" :id="item.title"></div>
         <div class="container" :class="{ 'container-blue': item.colorBlue }">
           <div class="c-advantage__wrap" :class="{ 'c-advantage__wrap-right': item.aligh }">
+		    <h3 class="c-advantage__up">{{ item.upTitle }}</h3>
             <h1 class="c-advantage__title">
               <svg
                 v-if="item.textSVG"
