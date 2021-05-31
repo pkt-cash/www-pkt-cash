@@ -3,7 +3,7 @@
     <div class="bg"></div>
     <div class="container">
       <div class="c-index-header__wrap">
-        <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain</h1>
+        <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain<br /><nuxt-link to="/roadmap" class="c-scroll-sect__b-btn"><span>Roadmap</span></nuxt-link></h1>
         <figure class="c-index-header__img">
           <video autoplay loop muted playsinline draggable="false">
             <source type="video/mp4" src="/gif.mp4" />
@@ -197,7 +197,7 @@ export default {
       padding-top: rem(30);
     }
     @include for-width(-desktop-medium) {
-      padding-top: rem(50);
+      padding-top: 0;
     }
     @include for-width(-desktop-med) {
       padding-top: rem(30);
@@ -214,6 +214,12 @@ export default {
     @include for-width(-small-lg) {
       text-align: left;
       @include font_sizes(33, 43);
+    }
+  }
+  
+  .c-scroll-sect__b-btn {
+	@include for-width(-small-lg) {
+      margin: 15px 0;
     }
   }
 
@@ -291,6 +297,8 @@ export default {
       }
       margin-bottom: rem(12);
     }
+	
+	.c-scroll-sect__b-btn
 
     &-text {
       color: $hard_blue;
@@ -304,7 +312,7 @@ export default {
 }
 .c-index-header__desk {
   &-list {
-    margin-top: rem(-120);
+    margin-top: rem(-85);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -312,7 +320,7 @@ export default {
       margin-top: rem(-90);
     }
     @include for-width(-desktop-medium) {
-      margin-top: rem(-50);
+      margin-top: rem(-20);
     }
     @include for-width(-laptop) {
       margin-top: rem(10);
