@@ -32,8 +32,7 @@
             </li>
             <li class="nav__menu-item">
               <a
-                href="/cash"
-                target="_blank"
+                href="#"
                 class="nav__menu-link btn-nav"
               >
                 <span class="nav__menu-text">
@@ -94,7 +93,6 @@
             <li class="nav__menu-item">
               <a
                 href="#"
-                target="_blank"
                 class="nav__menu-link btn-nav"
               >
                 <span class="nav__menu-text">
