@@ -2,7 +2,7 @@
   <div class="c-wallet-options" id="setup">
     <div class="container">
       <h2 class="c-wallet-options__title">
-        There are currently two options to get a free PKT Wallet
+        There are currently several options to get a free PKT Wallet
       </h2>
       <div class="c-wallet-options__list">
         <div class="c-wallet-options__item">
