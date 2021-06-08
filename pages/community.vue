@@ -60,7 +60,7 @@ export default {
           text:
             "Community organized Telegram chat for peer-to-peer buying and selling of PKT.",
           img: "/img/community/telegram.svg",
-          link: "https://t.me/joinchat/FwYcdlU85n0MzGXsJq3ffg",
+          link: "https://t.me/joinchat/VTzmfU6P3YB7WrYx",
         },
       ],
       join_list: [
