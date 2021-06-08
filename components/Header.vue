@@ -316,12 +316,17 @@ export default {
     right: 0;
     background: #fff;
     border-radius: 5px;
+    text-align: left;
+    box-shadow: 0px 2px 9px -5px rgba(0,0,0,0.75);
     &__item {
       &__link {
         display: block;
         padding: 20px;
         color: #000;
         font-size: 16px;
+        &:hover {
+          color: $hard_blue;
+        }
       }
     }
   }
