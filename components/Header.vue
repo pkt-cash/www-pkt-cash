@@ -16,13 +16,13 @@
               class="nav__menu-item"
             >
               <template v-if="item.name === 'Community'">
-                <a
-                  :href="item.route_link"
+                <nuxt-link
+                  :to="item.route_link"
                   :class="{ 'link-active': $route.name === 'community' }"
                   class="nav__menu-link btn-nav"
                 >
                   <span class="nav__menu-text">{{ item.name }}</span>
-                </a>
+                </nuxt-link>
               </template>
               <template v-else>
                 <nuxt-link :to="item.route_link" class="nav__menu-link btn-nav">
@@ -80,13 +80,13 @@
               </a>
               <ul class="nested-drop">
                 <li>
-                  <a href="/roadmap">Roadmap</a>
+                  <nuxt-link to="/roadmap">Roadmap</nuxt-link>
                 </li>
 				<li>
-                  <a href="https://pkt.cash/about">Letter from CJD</a>
+                  <nuxt-link to="/about">Letter from CJD</nuxt-link>
                 </li>
 				<li>
-                  <a href="https://pkt.cash/origin-story">PKT Origin Story</a>
+                  <nuxt-link to="/origin-story">PKT Origin Story</nuxt-link>
                 </li>
               </ul>
             </li>
