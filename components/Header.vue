@@ -427,12 +427,16 @@ export default {
         position: absolute;
         top: 60px;
         background-color: #fff;
+        border-radius: 5px;
 
         li {
           padding: 15px;
           a {
             font-size: rem(16);
             color: #000;
+            &:hover {
+              color: $hard_blue;
+            }
           }
         }
         @include for-width(-laptop) {
@@ -444,6 +448,7 @@ export default {
       &:hover {
         .nested-drop {
           display: block;
+          box-shadow: 0px 2px 9px -5px rgba(0,0,0,0.75);
         }
       }
     }

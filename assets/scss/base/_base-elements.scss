@@ -50,11 +50,17 @@
 .btn-nav {
   @extend %regular;
   @extend %base-button;
+  &:hover {
+    color: $hard_blue;
+  }
 }
 
 .blue-btn {
   @extend %bold;
   @extend %blue-button;
+  &:hover {
+    color: #fff;
+  }
 }
 
 .blue-btn-arrow {
