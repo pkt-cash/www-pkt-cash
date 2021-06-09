@@ -16,13 +16,13 @@
               class="nav__menu-item"
             >
               <template v-if="item.name === 'Community'">
-                <a
-                  :href="item.route_link"
+                <nuxt-link
+                  :to="item.route_link"
                   :class="{ 'link-active': $route.name === 'community' }"
                   class="nav__menu-link btn-nav"
                 >
                   <span class="nav__menu-text">{{ item.name }}</span>
-                </a>
+                </nuxt-link>
               </template>
               <template v-else>
                 <nuxt-link :to="item.route_link" class="nav__menu-link btn-nav">
@@ -80,13 +80,13 @@
               </a>
               <ul class="nested-drop">
                 <li>
-                  <a href="/roadmap">Roadmap</a>
+                  <nuxt-link to="/roadmap">Roadmap</nuxt-link>
                 </li>
 				<li>
-                  <a href="https://pkt.cash/about">Letter from CJD</a>
+                  <nuxt-link to="/about">Letter from CJD</nuxt-link>
                 </li>
 				<li>
-                  <a href="https://pkt.cash/origin-story">PKT Origin Story</a>
+                  <nuxt-link to="/origin-story">PKT Origin Story</nuxt-link>
                 </li>
               </ul>
             </li>
@@ -316,12 +316,17 @@ export default {
     right: 0;
     background: #fff;
     border-radius: 5px;
+    text-align: left;
+    box-shadow: 0px 2px 9px -5px rgba(0,0,0,0.75);
     &__item {
       &__link {
         display: block;
         padding: 20px;
         color: #000;
         font-size: 16px;
+        &:hover {
+          color: $hard_blue;
+        }
       }
     }
   }
@@ -427,12 +432,16 @@ export default {
         position: absolute;
         top: 60px;
         background-color: #fff;
+        border-radius: 5px;
 
         li {
           padding: 15px;
           a {
             font-size: rem(16);
             color: #000;
+            &:hover {
+              color: $hard_blue;
+            }
           }
         }
         @include for-width(-laptop) {
@@ -444,6 +453,7 @@ export default {
       &:hover {
         .nested-drop {
           display: block;
+          box-shadow: 0px 2px 9px -5px rgba(0,0,0,0.75);
         }
       }
     }

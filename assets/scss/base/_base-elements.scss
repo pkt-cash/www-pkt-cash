@@ -24,6 +24,10 @@
   text-align: center;
   display: inline-flex;
   justify-content: center;
+  &:hover {
+    transition: box-shadow 250ms ease-out;
+    box-shadow: 0 5px 15px rgba($hard_blue, .4);
+  }
 }
 
 %blue-button-arrow {
@@ -46,11 +50,17 @@
 .btn-nav {
   @extend %regular;
   @extend %base-button;
+  &:hover {
+    color: $hard_blue;
+  }
 }
 
 .blue-btn {
   @extend %bold;
   @extend %blue-button;
+  &:hover {
+    color: #fff;
+  }
 }
 
 .blue-btn-arrow {
