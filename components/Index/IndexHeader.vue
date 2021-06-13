@@ -290,6 +290,7 @@ export default {
     }
 
     &-title {
+	  font-family: "Poppins-Bold", sans-serif;
       @extend %bold;
       @include font_sizes(18, 28);
       @include for-width(-tablet) {
@@ -298,9 +299,8 @@ export default {
       margin-bottom: rem(12);
     }
 	
-	.c-scroll-sect__b-btn
-
     &-text {
+	  font-family: "Poppins-Bold", sans-serif;
       color: $hard_blue;
       @extend %bold;
       @include font_sizes(28, 38);
@@ -317,10 +317,10 @@ export default {
     display: flex;
     justify-content: space-between;
     @include for-width(-desktop-lg) {
-      margin-top: rem(-90);
+      margin-top: rem(-30);
     }
     @include for-width(-desktop-medium) {
-      margin-top: rem(-20);
+      margin-top: rem(20);
     }
     @include for-width(-laptop) {
       margin-top: rem(10);
