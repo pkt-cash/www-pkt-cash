@@ -142,6 +142,9 @@
                 <li>
                   <a href="https://docs.pkt.cash/">Docs</a>
                 </li>
+				<li>
+                  <a href="https://crypto.pkt.cash/">Blog</a>
+                </li>
               </ul>
             </li>
             <li class="nav__menu-item">
