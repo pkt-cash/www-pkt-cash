@@ -55,6 +55,10 @@
           <span>PKT Origin Story</span>
         </nuxt-link>
       </div>
+	  <div id="brand" class="c-about-main__brand">
+		<span class="c-about-main__involved">Brand Assets</span>
+		<p class="c-about-main__text">Download the logo and other brand assets samples <a href="PKT-brand-assets.zip">here</a>.</p>
+	  </div>
       <div class="c-about-main__separator"></div>
       <span class="c-about-main__involved">Get involved</span>
       <div class="c-about-main__email">
@@ -172,13 +176,18 @@ export default {
       }
     }
   }
-
+  &__brand {
+	.c-about-main__text {
+		margin: rem(15) auto 0;
+		text-align:center;
+	}
+  }
   &__separator {
     background-color: rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: rem(285);
     height: rem(1);
-    margin: 0 auto rem(100);
+    margin: rem(60) auto rem(60);
     @include for-width(-tablet) {
       margin-bottom: rem(40);
     }
