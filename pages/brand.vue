@@ -5,7 +5,8 @@
     </section>
     <section class="v-brand-section">
 		<div class="container">
-			<p class="v-brand-section__text">Download the logo and other brand assets samples <a href="PKT-brand-assets.zip">here</a>.</p>
+			<p class="v-brand-section__text">Download the PKT Logo and wordmark assets <a href="PKT-brand-assets.zip">here</a>.</p>
+			<p class="v-brand-section__text">Before use, please see the trademark guidelines for these assets <a href="/trademark">here.</a></p>
 		</div>
     </section>
   </div>
