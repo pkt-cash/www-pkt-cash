@@ -134,6 +134,14 @@ export default {
           name: "Community",
           route_link: "/community",
         },
+		{
+          name: "Trademark",
+          route_link: "/trademark",
+        },
+		{
+          name: "Brand",
+          route_link: "/brand",
+        },
       ],
       github_links: [
         {
@@ -337,10 +345,13 @@ export default {
 
   &__text {
     width: 100%;
+	text-align: center;
+	padding-top: rem(25);
     @include for-width(-tablet) {
       width: 40%;
       order: 5;
-      padding-top: rem(6);
+      padding-top: 0;
+	  text-align: left;
     }
 
     &-light {

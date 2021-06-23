@@ -172,13 +172,12 @@ export default {
       }
     }
   }
-
   &__separator {
     background-color: rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: rem(285);
     height: rem(1);
-    margin: 0 auto rem(100);
+    margin: rem(60) auto rem(60);
     @include for-width(-tablet) {
       margin-bottom: rem(40);
     }
