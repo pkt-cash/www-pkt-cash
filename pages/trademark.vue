@@ -1,11 +1,11 @@
 <template>
   <div class="v-trademark">
     <section class="v-trademark-section-top">
-      <SimpleHeader mobile_img="" title="The PKT wordmarks and logo are Creative Commons 4.0." subtitle="" bg="" />
+      <SimpleHeader mobile_img="" title="The PKT Wordmarks and Logo Creative Commons 4.0" subtitle="" bg="" />
     </section>
     <section class="v-trademark-section">
 		<div class="container">
-			<p class="v-trademark-section__text">You are free to use the <a href="/about#brand">"PKT logos"</a> as follows:</p>
+			<p class="v-trademark-section__text">You are free to use the <a href="/brand">PKT logos</a> as follows:</p>
 			<ol>
 				<li>Share — copy and redistribute the material in any medium or format.</li>
 				<li>Adapt — remix, transform, and build upon the material for any purpose, even commercially.</li>
@@ -63,13 +63,25 @@ export default {
 	& .c-simple-header {
 		padding: rem(150) 0 rem(50);
 		min-height: 1px;
+		@include for-width(-tablet-lg) {
+			padding: rem(75) 0 rem(50);
+		}
+		@include for-width(-small-lg) {
+			padding: rem(60) 0 rem(25);
+			height: auto;
+		}
 		& .container {
 			max-width: rem(1217);
 			padding: 0;
+			@include for-width(-tablet-lg) {
+			  padding: 0 rem(30);
+			}
 		}
 		&__title {
 			color: #191944;
 			text-align: center;
+			max-width: rem(865);
+			margin: 0 auto;
 		}
 	}
 }
@@ -78,6 +90,9 @@ export default {
 		width: 100%;
 		max-width: rem(1217);
 		margin: 0 auto rem(100);
+		@include for-width(-tablet-lg) {
+			padding: 0 rem(30);
+		}
 	}
 	&__text {
 		@extend %text-main;

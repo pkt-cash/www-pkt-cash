@@ -140,7 +140,7 @@ export default {
         },
 		{
           name: "Brand",
-          route_link: "/about#brand",
+          route_link: "/brand",
         },
       ],
       github_links: [
