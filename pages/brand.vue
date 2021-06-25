@@ -1,6 +1,6 @@
 <template>
-  <div class="v-trademark">
-    <section class="v-trademark-section-top">
+  <div class="v-brand">
+    <section class="v-brand-section-top">
       <SimpleHeader mobile_img="" title="Brand Assets" subtitle="" bg="" />
     </section>
     <section class="v-brand-section">
@@ -21,8 +21,8 @@ export default {
   },
   head() {
     return {
-      title: "Trademark - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: "Brand - PKT",
+      meta: [{ hid: "description", name: "description", content: "Download the PKT Logo and wordmark assets." }],
       link: [
         {
           rel: 'canonical',
@@ -35,9 +35,12 @@ export default {
 </script>
 
 <style lang="scss">
-.v-trademark-section-top {
+.v-brand {
+	min-height: calc(100vh - 509px);
+}
+.v-brand-section-top {
 	& .c-simple-header {
-		padding: rem(150) 0 rem(50);
+		padding: rem(200) 0 rem(50);
 		min-height: 1px;
 		@include for-width(-tablet-lg) {
 			padding: rem(75) 0 rem(50);
