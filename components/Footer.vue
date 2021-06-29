@@ -107,11 +107,7 @@ export default {
         {
           name: "Wallet",
           route_link: "/wallet",
-        },
-        {
-          name: "Wallet Setup",
-          route_link: "/wallet-setup",
-        },
+        }
       ],
       about_links: [
         {
