@@ -52,54 +52,54 @@ export default {
       advantage_list: [
         {
 		  upTitle: "Phase 1",
-          title: "VPN Marketplace",
-          subTitle: "VPN Marketplace",
+          title: "Launch",
+          subTitle: "Bandwidth Mining",
           text:
-            "Price will be decided by auction with a minimum bid of zero. In order to stay decentralized and achieve low enough cost of transactions to enable true micropayments, VPNs will be purchased using PKT Cash, a cryptocurrency which is mined by performing encryption operations and expending Internet bandwidth. Anyone who wants to use a VPN, create their own, or mine PKT will easily be able to do so.",
-          img: "/img/advantage/stage-1.png",
-          mobile_img: "/img/advantage/stage-1-mobile.png",
-          aligh: false,
+            "PacketCrypt was created and the mainnet PKT blockchain was launched in August 2019. Phase 1 focused on community growth, building out network infrastructure and unifying around PacketCrypt and bandwidth-hard mining. Major developments include multiple PKT wallets, community engagement via PKT Chat, the project task tracker, Network Steward and informational websites.",
+          img: "/img/advantage/stage-2.jpg",
+          mobile_img: "/img/advantage/stage-2-mobile.jpg",
+          aligh: true,
           colorBlue: true,
           textSVG: false,
 		  aId: "phase_1",
         },
         {
 		  upTitle: "Phase 2",
-          title: "Support Internet Sharing",
-          subTitle: "Support Internet Sharing",
+          title: "Utilize",
+          subTitle: "Tokenized Bandwidth Leases",
           text:
-            "Once there are approximately one million installations of the VPN client application, PKT will support third party operators to offer internet sharing technology and hardware for home or business users. This technology and hardware will allow people to earn PKT with their unused internet bandwidth and like the VPN market, it will have a minimum bid of zero. Since it will be the VPN client application that connects to the Internet sharing hardware, there will be no privacy risk nor legal risk because all data will be sent to the VPN.",
-          img: "/img/advantage/stage-2.png",
-          mobile_img: "/img/advantage/stage-2-mobile.png",
-          aligh: true,
+            "Anyone who wants to use a VPN, create their own, or mine PKT will easily be able to do so via Anodium VPN. Technology development includes Token Strike, to issue tokens in the PKT ecosystem for near zero cost and without gas fees, a DeFi bridge between PKT, Ethereum and Binance Smart Chain, bandwidth lease function and infrastructure via cjdns, and an Edge Point Device to easily mine PacketCrypt and get on the internet via your neighbor.",
+		  img: "/img/advantage/stage-1.png",
+          mobile_img: "/img/advantage/stage-1-mobile.png",
+          aligh: false,
           colorBlue: true,
           textSVG: false,
 		  aId: "phase_2",
         },
         {
 		  upTitle: "Phase 3",
-          title: "Tokenized Bandwidth Leases",
-          subTitle: "Tokenized Bandwidth Leases",
+          title: "Scale",
+          subTitle: "Support Internet Sharing",
           text:
-            "By tokenizing bandwidth leases Internet sharing hardware will be able to connect to each other and network operators will be able to observe the network, buy, sell and trade, relevant leases, and plan paths through it. This will make local mesh networking easy by moving the network engineering component to the network operator service.",
-          img: "/img/advantage/stage-3.png",
-          mobile_img: "/img/advantage/stage-3-mobile.png",
-          aligh: false,
+            "The alpha implementation the virtual Cloud ISP provides the ability to trade, aggregate, of and access tokenized bandwidth leases via cjdns. People can get on the internet via their neighbor with no privacy risk because all data is sent to a VPN. The Atomic Swap Market can transact in and out of PKT with high speed, low cost transactions between Lightning Network enabled coins such as PKT, Bitcoin, Litecoin and Ethereum. Desktop and mobile apps provide easy functionality across devices worldwide.",
+          img: "/img/advantage/stage-4.png",
+          mobile_img: "/img/advantage/stage-4-mobile.png",
+          aligh: true,
           colorBlue: true,
           textSVG: false,
 		  aId: "phase_3",
         },
         {
 		  upTitle: "Phase 4",
-          title: "Support Next Gen Networking Hardware",
-          subTitle: "Support Next Gen Networking Hardware",
+          title: "Innovate",
+          subTitle: "Virtual ISPs",
           text:
-            "PKT will begin to support next generation networking hardware. The stateless switch design central in the cjdns protocol will not only set new records for router performance/cost ratio, but will also allow for hundreds or even thousands of network operators to send data through a single device, each according to their own routing policy. Since PKT Cash is mined by performing encryption operations, hardware devices capable of efficiently mining PKT will also be capable of efficiently encrypting network data. The ASICs which will emerge to mine PKT will be what finally enables the whole Internet to be encrypted.",
+            "The commercial expansion of Cloud ISPs signifies a healthy and active bandwidth market. People can lease bandwidth allotment guarantees and access the internet without using a traditional ISP. PKT Priority provides internet access with a minimum price free if there is available bandwidth. This will simplify local mesh of networking by moving the network engineering component to the Cloud ISP. The stateless switch design central in the cjdns protocol will not only set new records for router performance/cost ratio, but will also allow for hundreds or even thousands of Cloud ISPs to send data through a single device, each according to their own routing policy.",
           btnText: "PTK Origin Story",
-          img: "/img/advantage/stage-4.png",
-          mobile_img: "/img/advantage/stage-4-mobile.png",
+		  img: "/img/advantage/stage-3.png",
+          mobile_img: "/img/advantage/stage-3-mobile.png",
           btnLink: '/origin-story',
-          aligh: true,
+          aligh: false,
           colorBlue: true,
           textSVG: false,
 		  aId: "phase_4",
@@ -293,4 +293,9 @@ export default {
 	color: #3cadef;
     margin-bottom: -10px;
 }
+.v-roadmap-section .c-advantage .c-advantage__text {
+    @include for-width(-tablet) {
+      margin-top: 40vw;
+    }
+  }
 </style>
