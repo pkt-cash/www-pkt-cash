@@ -4,16 +4,16 @@
       <h1 class="c-roadmap-is__title">The PKT Roadmap</h1>
       <ul class="c-roadmap-is__list">
         <li class="c-roadmap-is__item">
-          <a href="#VPN Marketplace">Phase 1</a> - Build a VPN market where anyone can participate and the minimum price is free
+          <a href="#VPN Marketplace">Phase 1</a> - Launch the PKT blockchain and begin bandwidth-hard mining using PacketCrypt.
         </li>
         <li class="c-roadmap-is__item">
-          <a href="#Support Internet Sharing">Phase 2</a> - Support low cost Internet sharing hardware that allows people to earn PKT using their extra bandwidth
+          <a href="#Support Internet Sharing">Phase 2</a> - Utilize technology use cases including VPN bandwidth leasing, tokenized bandwidth, DeFi, and connecting PKT to cjdns.
         </li>
         <li class="c-roadmap-is__item">
-          <a href="#Tokenized Bandwidth Leases">Phase 3</a> - Create a bandwidth market where network operators do the network engineering so that building a mesh network is easy
+          <a href="#Tokenized Bandwidth Leases">Phase 3</a> - Scale low cost internet sharing, introduce first Cloud ISPs, and enable high speed transactions in and out of PKT using Lightning Network.
         </li>
         <li class="c-roadmap-is__item" id="letter_from_cjd">
-          <a href="#Support Next Gen Networking Hardware">Phase 4</a> - Support high performance networking hardware which automatically sells its bandwidth into the bandwidth market
+          <a href="#Support Next Gen Networking Hardware">Phase 4</a> - Innovate on Cloud ISP commercialization, getting on the internet without a traditional ISP, and selling tokenize bandwidth into a bandwidth trading marketplace.
         </li>
       </ul>
       <div class="d">
