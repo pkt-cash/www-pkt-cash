@@ -79,7 +79,7 @@ export default {
   },
   head() {
     return {
-      title: "Main - PKT",
+      title: "PKT Cash - The World's First Bandwidth-Hard Blockchain",
       meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
       link: [
         {
