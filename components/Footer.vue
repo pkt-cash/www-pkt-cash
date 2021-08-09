@@ -20,6 +20,11 @@
                 <span class="c-footer__menu-text">{{ item.name }}</span>
               </nuxt-link>
             </li>
+            <li class="c-footer__menu-item">
+              <a href="https://crypto.pkt.cash/" class="c-footer__menu-link">
+                <span class="c-footer__menu-text">Blog</span>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="c-footer__menu">
