@@ -85,6 +85,9 @@
                 <li>
                   <nuxt-link to="/origin-story">PKT Origin Story</nuxt-link>
                 </li>
+                <li>
+                  <nuxt-link to="/cash">Cryptoeconomics</nuxt-link>
+                </li>
               </ul>
             </li>
             <li class="nav__menu-item">
