@@ -294,6 +294,12 @@ export default {
     border-radius: 5px;
     text-align: left;
     box-shadow: 0px 2px 9px -5px rgba(0, 0, 0, 0.75);
+
+    @include for-width(-laptop) {
+      top: auto;
+      bottom: 55px;
+    }
+
     &__item {
       &__link {
         display: block;
@@ -386,7 +392,7 @@ export default {
     }
 
     @include for-width(-laptop) {
-      top: rem(44);
+      top: 0;
     }
 
     &-item {
@@ -475,7 +481,7 @@ export default {
       @include for-width(-laptop) {
         &.active {
           transform: scaleX(1);
-          margin-top: -190px;
+          //margin-top: -190px;
         }
       }
     }
@@ -502,6 +508,12 @@ export default {
         > span {
           display: flex;
           align-items: center;
+        }
+
+        svg {
+          @include for-width(- laptop) {
+            transform: rotate(180deg);
+          }
         }
       }
       @include for-width(+ laptop) {
