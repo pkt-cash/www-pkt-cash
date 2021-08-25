@@ -79,10 +79,15 @@
                 </span>
               </a>
               <ul class="nested-drop">
-                <li><a href="/roadmap">Roadmap</a></li>
-				        <li><a href="https://pkt.cash/about">Letter from CJD</a></li>
-				        <li><a href="https://pkt.cash/origin-story">PKT Origin Story</a></li>
-                <li><a href="https://pkt.cash/cash">Cryptoeconomics</a></li>
+                <li>
+                  <a href="/roadmap">Roadmap</a>
+                </li>
+				<li>
+                  <a href="https://pkt.cash/about">Letter from CJD</a>
+                </li>
+				<li>
+                  <a href="https://pkt.cash/origin-story">PKT Origin Story</a>
+                </li>
               </ul>
             </li>
             <li class="nav__menu-item">
