@@ -197,8 +197,8 @@ export default {
   &__email {
     display: block;
     position: relative;
-    margin: rem(50) auto 0;
-    max-width: rem(490);
+    margin: rem(30) auto 0;
+    max-width: rem(600);
     .tBOqQ.tBOqQ {
       position: absolute;
       top: 0;
@@ -272,6 +272,58 @@ export default {
         text-align: center;
       }
     }
+  }
+  &__email .klaviyo-form-UMUDtg  {
+      @include for-width(-tablet) {
+          width: 100%;
+      }
+      & .Row__FormRow-sc-1avh9u7-1 {
+        @include for-width(-tablet) {
+          display: block;
+        }
+        & .FormComponent__StyledFormComponentWrapper-sc-1gg8fea-0 {
+          @include for-width(-tablet) {
+            padding:0;
+            width: 100%;
+          }
+          & .needsclick input.TextInput__FormStyledTextInput-sc-1ydur12-0 {
+            font-family: Poppins-Regular,sans-serif;
+            background: #fff;
+            border-color: #191944;
+            padding: 1.0625rem 2.125rem;
+            @extend %text-main;
+            line-height: 1.5rem;
+            color: #191944;
+            border-radius: 3rem;
+            height:58px;
+            margin-right:15px;
+            @include for-width(-tablet) {
+                margin-right:0;
+              }
+            &::-webkit-input-placeholder {color: #191944;@extend %text-main;font-family: Poppins-Regular,sans-serif;}
+            &::-ms-input-placeholder {color: #191944;@extend %text-main;font-family: Poppins-Regular,sans-serif;}
+            &:-ms-input-placeholder {color: #191944;@extend %text-main;font-family: Poppins-Regular,sans-serif;}
+            &::-moz-placeholder {color: #191944;@extend %text-main;font-family: Poppins-Regular,sans-serif;}
+            &:-moz-placeholder {color: #191944;@extend %text-main;font-family: Poppins-Regular,sans-serif;}
+            &::placeholder {color: #191944;@extend %text-main;font-family: Poppins-Regular,sans-serif;}
+          }
+          .ValidationMessage__Container-ja3t6w-0 {
+            display:none;
+          }
+          button.Button__FormStyledButton-sc-1of1qh3-0.gAmTGw {
+            font-family: Poppins-Regular,sans-serif;
+            background: #3cadef;
+            padding: 1.0625rem 2.125rem;
+            @extend %text-main;
+            line-height: 1.5rem;
+            border-radius: 3rem;
+            @include for-width(-tablet) {
+                width: 100%;
+                margin-top: 15px;
+            }
+          }
+        }
+      }
   }
 }
 </style>
