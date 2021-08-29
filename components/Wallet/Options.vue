@@ -60,6 +60,23 @@
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-2.png" alt />
           </figure>
+          <h3 class="c-wallet-options__item-title">Pkt.world Wallet</h3>
+          <a href="#" class="c-wallet-options__item-link">
+            The Pkt.World wallet is a GUI wallet<br />
+            for Windows users and miners.
+          </a>
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow"
+            href="https://www.pkt.world/wallet"
+            target="_blank"
+          >
+            <span>Setup Pkt.world Wallet</span>
+          </a>
+        </div>
+        <div class="c-wallet-options__item">
+          <figure class="c-wallet-options__item-img">
+            <img src="/img/wallet-item-1.png" alt />
+          </figure>
           <h3 class="c-wallet-options__item-title">Mobile Wallet</h3>
           <a href="#" class="c-wallet-options__item-link"> Coming Soon </a>
           <a

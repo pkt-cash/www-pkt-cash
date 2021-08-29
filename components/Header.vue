@@ -31,121 +31,82 @@
               </template>
             </li>
             <li class="nav__menu-item">
-              <a
-                href="#"
-                class="nav__menu-link btn-nav"
-              >
+              <a href="#" class="nav__menu-link btn-nav">
                 <span class="nav__menu-text">
                   PKT
                   <svg
-                class="nav__menu-blue-img"
-                width="11"
-                height="12"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 284.929 284.929"
-                style="enable-background: new 0 0 284.929 284.929"
-                xml:space="preserve"
-                fill="#000"
-              >
-                <g>
-                  <path
-                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                    class="nav__menu-blue-img"
+                    width="11"
+                    height="12"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 284.929 284.929"
+                    style="enable-background: new 0 0 284.929 284.929"
+                    xml:space="preserve"
+                    fill="#000"
+                  >
+                    <g>
+                      <path
+                        d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
 		L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
 		c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
 		c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"
-                  />
-                </g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-              </svg>
+                      />
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </svg>
                 </span>
               </a>
               <ul class="nested-drop">
                 <li>
                   <nuxt-link to="/roadmap">Roadmap</nuxt-link>
                 </li>
-				<li>
+                <li>
                   <nuxt-link to="/about">Letter from CJD</nuxt-link>
                 </li>
-				<li>
+                <li>
                   <nuxt-link to="/origin-story">PKT Origin Story</nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link to="/cash">Cryptoeconomics</nuxt-link>
                 </li>
               </ul>
             </li>
             <li class="nav__menu-item">
               <a
-                href="#"
+                href="https://docs.pkt.cash/"
+                target="_blank"
                 class="nav__menu-link btn-nav"
               >
-                <span class="nav__menu-text">
-                  Info
-                  <svg
-                class="nav__menu-blue-img"
-                width="11"
-                height="12"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 284.929 284.929"
-                style="enable-background: new 0 0 284.929 284.929"
-                xml:space="preserve"
-                fill="#000"
-              >
-                <g>
-                  <path
-                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
-		L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
-		c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
-		c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"
-                  />
-                </g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-              </svg>
-                </span>
+                <span class="nav__menu-text">Docs</span>
               </a>
-              <ul class="nested-drop">
-                <li>
-                  <a href="https://docs.pkt.cash/">Docs</a>
-                </li>
-				<li>
-                  <a href="https://crypto.pkt.cash/">Blog</a>
-                </li>
-              </ul>
+            </li>
+            <li class="nav__menu-item">
+              <a
+                href="https://crypto.pkt.cash/"
+                target="_blank"
+                class="nav__menu-link btn-nav"
+              >
+                <span class="nav__menu-text">Blog</span>
+              </a>
             </li>
             <li class="nav__menu-item">
               <a
@@ -200,16 +161,31 @@
                 <g></g>
               </svg>
             </span>
-            <div class="dropdown" :class="{active: dropdownOpen}">
+            <div class="dropdown" :class="{ active: dropdownOpen }">
               <ul class="dropdown__list">
                 <li class="dropdown__list__item">
-                  <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="dropdown__list__item__link">Whitepaper</a>
+                  <a
+                    href="/PKT_Network_v1.0_2021.02.01.pdf"
+                    target="_blank"
+                    class="dropdown__list__item__link"
+                    >Whitepaper</a
+                  >
                 </li>
                 <li class="dropdown__list__item">
-                  <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="dropdown__list__item__link">Deck</a>
+                  <a
+                    href="https://docsend.com/view/ayf5d3tz5rymn8fv"
+                    target="_blank"
+                    class="dropdown__list__item__link"
+                    >Deck</a
+                  >
                 </li>
                 <li class="dropdown__list__item">
-                  <a href="/PacketCrypt-2020-09-04.pdf" target="_blank" class="dropdown__list__item__link">PacketCrypt</a>
+                  <a
+                    href="/PacketCrypt-2020-09-04.pdf"
+                    target="_blank"
+                    class="dropdown__list__item__link"
+                    >PacketCrypt</a
+                  >
                 </li>
               </ul>
             </div>
@@ -285,14 +261,14 @@ export default {
         //   route_link: "/roadmap",
         // },
       ],
-      dropdownOpen: false
+      dropdownOpen: false,
     };
   },
   methods: {
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -304,7 +280,7 @@ export default {
 .dropdown {
   visibility: hidden;
   opacity: 0;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   height: 0px;
   &.active {
     visibility: visible;
@@ -320,7 +296,13 @@ export default {
     background: #fff;
     border-radius: 5px;
     text-align: left;
-    box-shadow: 0px 2px 9px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 9px -5px rgba(0, 0, 0, 0.75);
+
+    @include for-width(-laptop) {
+      top: auto;
+      bottom: 55px;
+    }
+
     &__item {
       &__link {
         display: block;
@@ -372,6 +354,7 @@ export default {
 
   &__menu {
     display: flex;
+    flex: 1;
     @include for-width(-laptop) {
       position: fixed;
       transform: scaleX(0);
@@ -412,7 +395,7 @@ export default {
     }
 
     @include for-width(-laptop) {
-      top: rem(44);
+      top: 0;
     }
 
     &-item {
@@ -456,7 +439,7 @@ export default {
       &:hover {
         .nested-drop {
           display: block;
-          box-shadow: 0px 2px 9px -5px rgba(0,0,0,0.75);
+          box-shadow: 0px 2px 9px -5px rgba(0, 0, 0, 0.75);
         }
       }
     }
@@ -466,6 +449,7 @@ export default {
       justify-content: space-between;
       align-items: center;
       font-size: rem(14);
+      margin-right: auto;
       @include for-width(-laptop) {
         position: fixed;
         transform: scaleX(0);
@@ -500,7 +484,7 @@ export default {
       @include for-width(-laptop) {
         &.active {
           transform: scaleX(1);
-          margin-top: -190px;
+          //margin-top: -190px;
         }
       }
     }
@@ -515,8 +499,25 @@ export default {
         color: $white;
         font-size: rem(14);
         height: rem(45);
-        width: rem(197);
+        margin-left: 1rem;
+        //width: rem(197);
         min-width: auto;
+
+        @media (max-width: 1130px) {
+          padding-left: 1.4rem;
+          padding-right: 1.4rem;
+        }
+
+        > span {
+          display: flex;
+          align-items: center;
+        }
+
+        svg {
+          @include for-width(- laptop) {
+            transform: rotate(180deg);
+          }
+        }
       }
       @include for-width(+ laptop) {
         margin-left: rem(35);
