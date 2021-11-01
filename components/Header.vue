@@ -122,7 +122,7 @@
             </li>
             <li class="nav__menu-item buy">
               <a
-                href="https://pancakeswap.finance/add/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32"
+                href="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32"
                 target="_blank"
                 class="nav__menu-link btn-nav"
               >
