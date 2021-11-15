@@ -71,13 +71,13 @@ export default {
           img: "/img/community/pkt.svg",
           link: "https://pkt.chat",
         },
-        {
-          title: "PKT Cash - Community Discussion",
-          text:
-            "Community organized chat for discussing PKT project",
-          img: "/img/community/telegram.svg",
-          link: "https://t.me/pkt_cash",
-        },
+        // {
+        //   title: "PKT Cash - Community Discussion",
+        //   text:
+        //     "Community organized chat for discussing PKT project",
+        //   img: "/img/community/telegram.svg",
+        //   link: "https://t.me/pkt_cash",
+        // },
         {
           title: "PKT Community Discord",
           text:
