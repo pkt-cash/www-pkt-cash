@@ -335,7 +335,9 @@ export default {
   right: 0;
   background-color: $white;
   z-index: 100;
-
+  @include for-width(-small-lg) {
+    height:auto;
+  }
   & .container {
     width: 100%;
     max-width: rem(1315);
@@ -360,6 +362,9 @@ export default {
       @include for-width(-laptop) {
         height: rem(21);
         margin-top: 10px;
+      }
+      @include for-width(-small-lg) {
+        height: rem(30);
       }
     }
   }
