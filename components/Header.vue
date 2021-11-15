@@ -9,7 +9,9 @@
         </div>
         <div class="nav__menu" :class="{ active: nav_open }">
           <ul class="nav__menu-list" :class="{ active: nav_open }">
+
             <li
+
               v-for="(item, index) of nav_list"
               @click="nav_open = !nav_open"
               :key="index"
@@ -30,6 +32,7 @@
                 </nuxt-link>
               </template>
             </li>
+
             <li class="nav__menu-item">
               <a href="#" class="nav__menu-link btn-nav">
                 <span class="nav__menu-text">
@@ -117,8 +120,17 @@
                 <span class="nav__menu-text">Block Explorer</span>
               </a>
             </li>
+            <li class="nav__menu-item buy">
+              <a
+                href="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32"
+                target="_blank"
+                class="nav__menu-link btn-nav"
+              >
+                <span class="nav__menu-text">Buy</span>
+              </a>
+            </li>
           </ul>
-          <div class="nav__menu-blue btn-nav blue-btn" @click="toggleDropdown">
+          <div class="nav__menu-blue btn-nav blue-btn center" @click="toggleDropdown">
             <span class="nav__menu-link">
               Whitepaper
               <svg
