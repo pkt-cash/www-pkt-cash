@@ -2,19 +2,18 @@
   <div class="c-mining-header">
     <div class="container">
       <div class="c-mining-header__title">
-        <h1 class="c-mining-header__title-header">Mining</h1>
+        <h1 class="c-mining-header__title-header">{{ $t("header.mining") }}</h1>
         <h2 class="c-mining-header__title-text">
-          PacketCrypt:
-          <br />The first bandwidth-hard proof of work
+          {{ $t("header.packetcrypt") }}: <br />{{ $t("mining.header_titletext") }}
         </h2>
       </div>
       <div class="c-mining-header__button">
-        <h3 class="c-mining-header__button-title">In order to begin mining, you will need to:</h3>
+        <h3 class="c-mining-header__button-title">{{ $t("mining.header_buttons_title") }}:</h3>
         <nuxt-link to="/wallet" class="c-mining-header__button-link blue-btn-arrow">
-          <span class="c-mining-header__button-btn">Setup a Wallet</span>
+          <span class="c-mining-header__button-btn">{{ $t("wallet.header_button") }}</span>
         </nuxt-link>
         <a href="https://docs.pkt.cash/en/latest/mining/" class="c-mining-header__button-link blue-btn-arrow">
-          <span class="c-mining-header__button-btn">Install PacketCrypt</span>
+          <span class="c-mining-header__button-btn">{{ $t("mining.header_button_2") }}</span>
         </a>
       </div>
     </div>

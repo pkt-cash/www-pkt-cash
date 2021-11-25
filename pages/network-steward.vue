@@ -4,9 +4,9 @@
       <BigHeader
         is_network_st
         mobile_img="/img/net-mobile.jpg"
-        title="Network Steward"
-        text="20% of every newly mined block goes to a network steward address. This address can be changed by way of a PoS based vote. See the Network Steward Vote for more information about the mechanics of the vote. The payments to the network steward address have one special rule, they cannot be spent after 129600 blocks (approximately 3 months) have elapsed, so if the network steward cannot decide how to spend its treasury, the PKT will be burned rather than piling up."
-        btn="Network Steward Vote"
+        :title="this.$t("header.network_st")"
+        :text="this.$t("steward.big_header_text")"
+        :btn="this.$t("steward_vote.big_header_title")"
         btnLink="/network-steward-vote"
         bg="/img/network-header-bg.jpg"
       />
@@ -28,8 +28,8 @@ export default {
   },
   head() {
     return {
-      title: "Network Steward - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("steward.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',

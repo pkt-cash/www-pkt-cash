@@ -1,20 +1,12 @@
 <template>
   <div class="c-origin-first">
     <div class="container">
-      <p
-        class="c-origin-first__text"
-      >PKT was born out of the cjdns project when it was realized that without the financial infrastructure for the network to pay its own bills, it would always remain a hobby. The cjdns project dates back to 2011 and the two basic ideas it brought to the table were:</p>
+      <p class="c-origin-first__text">{{ $t("origin_story.first_section_text_01") }}</p>
       <ul class="c-origin-first__list">
-        <li
-          class="c-origin-first__list-item"
-        >Everything should be encrypted, all of the time, no matter what</li>
-        <li
-          class="c-origin-first__list-item"
-        >A packet of data flying across the Internet should not contain the address of its destination, but rather the directions to get there</li>
+        <li class="c-origin-first__list-item">{{ $t("origin_story.first_section_list_item_01") }}</li>
+        <li class="c-origin-first__list-item">{{ $t("origin_story.first_section_list_item_02") }}</li>
       </ul>
-      <p
-        class="c-origin-first__text"
-      >Point 1 has become more of a universal norm. However, point 2 remains uncommon in the network space.</p>
+      <p class="c-origin-first__text">{{ $t("origin_story.first_section_text_02") }}</p>
     </div>
   </div>
 </template>

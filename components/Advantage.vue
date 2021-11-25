@@ -64,7 +64,7 @@
                     class="c-advantage__link-more blue-btn-arrow"
                     v-if="item.learnMore"
                   >
-                    <span>Learn More</span>
+                    <span>{{ $t("common.learn_more") }}</span>
                   </nuxt-link>
                 </template>
               </template>
@@ -75,7 +75,7 @@
                     :to="{ path: item.lear_link }"
                     class="c-advantage__link blue-btn-arrow"
                   >
-                    <span>Learn More</span>
+                    <span>{{ $t("common.learn_more") }}</span>
                   </nuxt-link>
                 </template>
               </template>

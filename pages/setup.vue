@@ -3,8 +3,8 @@
     <section class="v-setup-section">
       <SimpleHeader
         mobile_img="/img/setup-mobile.jpg"
-        title="Setup PacketCrypt"
-        text="If you’re using Windows, please install Ubuntu from the app store, native windows support is not here yet. In order to use PacketCrypt, you will need a compiler, libcrypto, libsodium and a recent version of nodejs. For nodejs we recommend using nvm.sh to install."
+        :title="this.$t('footer.setup_pktcrypt')"
+        :text="this.$t('setup.simple_header_text')"
         bg="/img/setup-header-bg.jpg"
       />
     </section>
@@ -25,8 +25,8 @@ export default {
   },
   head() {
     return {
-      title: "Setup - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t('setup.meta_title'),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',

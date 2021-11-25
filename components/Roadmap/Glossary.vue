@@ -1,12 +1,10 @@
 <template>
 <div class="c-glossary">
     <div class="container">
-		<h1 class="c-glossary__title">Glossary of Terms</h1>
-		<p class="c-glossary__text">The PKT roadmap is a non-linear roadmap based on gating items which unlock capabilities.
-			The objective is to reach the Full Paid Net stage where all necessary resources to build a virtual network, including bandwidth, virtual routers, 
-			and IP addresses for VPN exit, are able to be leased in the decentralized bandwidth marketplace.</p>
-		<p class="c-glossary__text">Projects below are listed in order of their dependencies, with the items having the fewest dependencies first, but this is almost certainly not the order in which the roadmap will be executed because it is more beneficial to do projects in an order which brings valuable capabilities to the PKT community as quickly as possible.</p>
-		<p class="c-glossary__text">There are also other items which do not rank here or have their dependencies omitted because their functionality is currently being developed.</p>
+		<h1 class="c-glossary__title">{{ $t("roadmap.glossary_heading") }}</h1>
+		<p class="c-glossary__text">{{ $t("roadmap.glossary_text_01") }}</p>
+		<p class="c-glossary__text">{{ $t("roadmap.glossary_text_02") }}</p>
+		<p class="c-glossary__text">{{ $t("roadmap.glossary_text_03") }}</p>
 		
 		<vsa-list :init-active="false" :auto-collapse="true">
 		  <vsa-item v-for="item of accordion_list" :key="item.id" :id="item.id" class="c-glossary__item">

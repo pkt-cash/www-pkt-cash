@@ -6,13 +6,13 @@
         <div class="c-content-main__navigation">
           <ul class="c-content-main__navigation-list">
             <li class="c-content-main__navigation-item">
-              <a href="#how-voting-works" @click="itm_link = 'how-voting-works'" :class="{ active: itm_link === 'how-voting-works'}" class="c-content-main__navigation-link">How voting works</a>
+              <a href="#how-voting-works" @click="itm_link = 'how-voting-works'" :class="{ active: itm_link === 'how-voting-works'}" class="c-content-main__navigation-link">{{ $t("steward_vote.steward_vote_nav_01") }}</a>
             </li>
             <li class="c-content-main__navigation-item">
-              <a href="#how-to-vote" @click="itm_link = 'how-to-vote'" :class="{ active: itm_link === 'how-to-vote'}" class="c-content-main__navigation-link">How to vote</a>
+              <a href="#how-to-vote" @click="itm_link = 'how-to-vote'" :class="{ active: itm_link === 'how-to-vote'}" class="c-content-main__navigation-link">{{ $t("steward_vote.steward_vote_nav_02") }}</a>
             </li>
             <li class="c-content-main__navigation-item">
-              <a href="#resources" @click="itm_link = 'resources'" :class="{ active:itm_link === 'resources'}" class="c-content-main__navigation-link">Resources</a>
+              <a href="#resources" @click="itm_link = 'resources'" :class="{ active:itm_link === 'resources'}" class="c-content-main__navigation-link">{{ $t("steward_vote.steward_vote_nav_03") }}</a>
             </li>
           </ul>
         </div>
@@ -22,21 +22,12 @@
         <div class="c-content-anchor" id="how-voting-works"></div>
         <div class="c-content-main__content">
           <div class="c-content-main__section">
-            <h2 class="c-content-main__title">How voting works</h2>
-            <p
-              class="c-content-main__text"
-            >A vote consists one two parts, VoteFor and VoteAgainst, VoteAgainst is a vote for impeachment while VoteFor is a vote for who should become network steward in the event of an impeachment.</p>
-            <p
-              class="c-content-main__text"
-            >A network steward is represented as a transaction output script rather than a script encoded key. An easy way to get the script for a given address is to pay some money to it and then explore the raw transaction and copy the output.</p>
-            <p class="c-content-main__text">
-              Exploring a coinbase transaction we can see the output being paid to the network steward
-              <a
-                href="https://explorer.pkt.cash/address/"
-                target="_blank"
-              >https://explorer.pkt.cash/address/</a> and the script for this output is
-              <b
-              >0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</b>
+            <h2 class="c-content-main__title">{{ $t("steward_vote.steward_vote_nav_01") }}</h2>
+            <p class="c-content-main__text">{{ $t("steward_vote.steward_vote_01_content_01") }}</p>
+            <p class="c-content-main__text">{{ $t("steward_vote.steward_vote_01_content_02") }}</p>
+            <p class="c-content-main__text">{{ $t("steward_vote.steward_vote_01_content_03") }}
+              <a href="https://explorer.pkt.cash/address/" target="_blank">https://explorer.pkt.cash/address/</a> {{ $t("steward_vote.steward_vote_01_content_04") }}
+              <b>0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</b>
             </p>
             <pre class="c-content-main__scroll">$ ./bin/pktctl getrawtransaction 505d2750577a3d3c739c2a650ec0e03a7ddb1f81080c820ab1a317575020745b 1
 {
@@ -97,26 +88,20 @@
   "time": 1566221646,
   "blocktime": 1566221646
 }</pre>
-            <p
-              class="c-content-main__text"
-            >If we double-check by querying pktd to find out what is the network steward, we will see that it shows the script that was paid to.</p>
+            <p class="c-content-main__text">{{ $t("steward_vote.steward_vote_01_content_05") }}</p>
             <pre class="c-content-main__scroll">$ ./bin/pktctl getnetworksteward
 {
   "script": "0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2b",
   "votesagainst": 0,
   "totalpossible": 21985819476623360
 }</pre>
-            <p class="c-content-main__text">
-              So if we wanted, for instance, to change the network steward to
-              <a
-                href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX "
-                target="_blank"
-              >https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a>,
-              we would want to vote for the corrisponding script
+            <p class="c-content-main__text">{{ $t("steward_vote.steward_vote_01_content_06") }}
+              <a href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX" target="_blank">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a>,
+              {{ $t("steward_vote.steward_vote_01_content_07") }}
               <a
                 href="https://explorer.pkt.cash/address/"
                 target="_blank"
-              >76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac</a>, and of course we probably want to vote against the current network steward as well.
+              >76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac</a>, {{ $t("steward_vote.steward_vote_01_content_08") }}
             </p>
           </div>
           <!-- // Item 1 -->
@@ -124,17 +109,15 @@
           <!-- Item 2 -->
           <div class="c-content-anchor" id="how-to-vote"></div>
           <div class="c-content-main__section">
-            <h2 class="c-content-main__title">How to vote</h2>
-            <p
-              class="c-content-main__text"
-            >Voting is done by configuring your wallet to vote, whenever you spend money, your wallet will include a vote in every future payment of PKT which is made. If you want to speed up the voting process, you can configure your wallet to vote and then transfer all of your PKT to another wallet, in order to be sure it will all be voting.</p>
+            <h2 class="c-content-main__title">{{ $t("steward_vote.steward_vote_nav_02") }}</h2>
+            <p class="c-content-main__text">{{ $t("steward_vote.steward_vote_02_content_01") }}</p>
             <p class="c-content-main__text">
-              To configure your wallet to vote for
-              <a href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX " target="_blank">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a> and against
+              {{ $t("steward_vote.steward_vote_02_content_02") }}
+              <a href="https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX " target="_blank">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX </a> {{ $t("steward_vote.steward_vote_02_content_03") }}
               <a
                 href="https://explorer.pkt.cash/address"
                 target="_blank"
-              >https://explorer.pkt.cash/address</a>, you would use the following workflow:
+              >https://explorer.pkt.cash/address</a>, {{ $t("steward_vote.steward_vote_02_content_04") }}
             </p>
             <pre class="c-content-main__scroll">$ ./bin/pktctl --wallet getnetworkstewardvote
 {}
@@ -152,9 +135,9 @@ $ ./bin/pktctl --wallet getnetworkstewardvote
           <!-- Item 3 -->
           <div class="c-content-anchor" id="resources"></div>
           <div class="c-content-main__section" >
-            <h2 class="c-content-main__title">Resources</h2>
+            <h2 class="c-content-main__title">{{ $t("steward_vote.steward_vote_nav_03") }}</h2>
             <ul class="c-content-main__list--small">
-              <li class="c-content-main__list--small-item">Telegram: <a href="https://t.me/pktproject" target="_blank">https://t.me/pktproject</a></li>
+              <li class="c-content-main__list--small-item">{{ $t("steward_vote.steward_vote_03_content_01") }}: <a href="https://t.me/pktpal" target="_blank">https://t.me/pktpal</a></li>
               <li class="c-content-main__list--small-item">Matrix: <a href="https://matrix.to/#/#pkt:matrix.org" target="_blank">https://matrix.to/#/#pkt:matrix.org</a></li>
               <li class="c-content-main__list--small-item">IRC: <a href="mainlto:#pkt@freenode.net" target="_blank">#pkt@freenode.net</a></li>
             </ul>

@@ -80,16 +80,16 @@
               </a>
               <ul class="nested-drop">
                 <li>
-                  <nuxt-link to="/roadmap">Roadmap</nuxt-link>
+                  <nuxt-link to="/roadmap">{{ $t("header.roadmap") }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/about">Letter from CJD</nuxt-link>
+                  <nuxt-link to="/about">{{ $t("header.letter") }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/origin-story">PKT Origin Story</nuxt-link>
+                  <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/cash">Cryptoeconomics</nuxt-link>
+                  <nuxt-link to="/cash">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                 </li>
               </ul>
             </li>
@@ -99,7 +99,7 @@
                 target="_blank"
                 class="nav__menu-link btn-nav"
               >
-                <span class="nav__menu-text">Docs</span>
+                <span class="nav__menu-text">{{ $t("header.docs") }}</span>
               </a>
             </li>
             <li class="nav__menu-item">
@@ -108,7 +108,7 @@
                 target="_blank"
                 class="nav__menu-link btn-nav"
               >
-                <span class="nav__menu-text">Blog</span>
+                <span class="nav__menu-text">{{ $t("header.blog") }}</span>
               </a>
             </li>
             <li class="nav__menu-item">
@@ -117,7 +117,7 @@
                 target="_blank"
                 class="nav__menu-link btn-nav"
               >
-                <span class="nav__menu-text">Block Explorer</span>
+                <span class="nav__menu-text">{{ $t("header.block_explorer") }}</span>
               </a>
             </li>
             <li class="nav__menu-item buy">
@@ -126,13 +126,29 @@
                 target="_blank"
                 class="nav__menu-link btn-nav"
               >
-                <span class="nav__menu-text">Buy</span>
+                <span class="nav__menu-text">{{ $t("header.buy") }}</span>
               </a>
+            </li>
+            <li class="nav__menu-lang_switch">
+              <button v-on:click="isHidden = !isHidden" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}
+                <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#000">
+                  <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                  L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                  c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                  c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z" /> 
+                  </g>
+                </svg>
+              </button>
+              <div class="nav__menu-lang_switch_drop_down" v-if="isHidden" v-model="$i18n.locale">
+                <p v-on:click="isHidden = !isHidden">
+                  <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+                </p>
+              </div>
             </li>
           </ul>
           <div class="nav__menu-blue btn-nav blue-btn center" @click="toggleDropdown">
             <span class="nav__menu-link">
-              Whitepaper
+              {{ $t("header.whitepaper") }}
               <svg
                 class="nav__menu-blue-img"
                 width="11"
@@ -180,7 +196,7 @@
                     href="/PKT_Network_v1.0_2021.02.01.pdf"
                     target="_blank"
                     class="dropdown__list__item__link"
-                    >Whitepaper</a
+                    >{{ $t("header.whitepaper") }}</a
                   >
                 </li>
                 <li class="dropdown__list__item">
@@ -188,7 +204,7 @@
                     href="https://docsend.com/view/ayf5d3tz5rymn8fv"
                     target="_blank"
                     class="dropdown__list__item__link"
-                    >Deck</a
+                    >{{ $t("header.deck") }}</a
                   >
                 </li>
                 <li class="dropdown__list__item">
@@ -196,7 +212,7 @@
                     href="/PacketCrypt-2020-09-04.pdf"
                     target="_blank"
                     class="dropdown__list__item__link"
-                    >PacketCrypt</a
+                    >{{ $t("header.packetcrypt") }}</a
                   >
                 </li>
               </ul>
@@ -247,21 +263,22 @@ export default {
   data() {
     return {
       nav_open: false,
+      isHidden: false,
       nav_list: [
         {
-          name: "Mining",
+          name: this.$t("header.mining"),
           route_link: "/mining",
         },
         {
-          name: "Network Steward",
+          name: this.$t("header.network_st"),
           route_link: "/network-steward",
         },
         {
-          name: "Wallet",
+          name: this.$t("header.wallet"),
           route_link: "/wallet",
         },
         {
-          name: "Community",
+          name: this.$t("header.community"),
           route_link: "/community",
         },
         // {
@@ -274,13 +291,25 @@ export default {
         // },
       ],
       dropdownOpen: false,
+      selectedValue: "",
     };
+  },
+  created() {
+    this.selectedValue = this.$i18n.locale;
   },
   methods: {
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
     },
+    onChange(event) {
+      this.$router.replace(this.switchLocalePath(event));
+    }
   },
+  computed: {
+    availableLocales () {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
+  }
 };
 </script>
 
@@ -387,6 +416,9 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    &-list {
+      width: 100%;
     }
     &-link {
       &.link-active {
@@ -509,6 +541,7 @@ export default {
     &-text {
       display: flex;
       align-items: center;
+      word-break: keep-all;
     }
 
     &-blue {
@@ -528,6 +561,7 @@ export default {
         > span {
           display: flex;
           align-items: center;
+          word-break: keep-all;
         }
 
         svg {
@@ -607,6 +641,38 @@ export default {
       &::before {
         transform: translateX(-50%) rotate(45deg);
       }
+    }
+  }
+}
+.nav__menu-lang_switch {
+  margin-left:rem(15);
+  &_trigger {
+    font-size: rem(16);
+    color: #000;
+    text-transform:uppercase;
+    &:hover {
+      color: $hard_blue;
+    }
+  }
+  &_drop_down {
+    position: absolute;
+    margin-top:rem(5);
+    margin-left:-10px;
+    background:$white;
+    padding:rem(10);
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px -5px rgba(0, 0, 0, 0.75);
+
+    & a {
+      display:block;
+      color: #000;
+      font-size: rem(16);
+      padding:rem(5);
+    }
+    @include for-width(-laptop) {
+      top: auto;
+      bottom: 50px;
+      margin-left:0;
     }
   }
 }

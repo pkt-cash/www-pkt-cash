@@ -4,7 +4,7 @@
       <SimpleHeader
         mobile_img="/img/cash-mobile.jpg"
         title="PKT"
-        subtitle="PKT is paid to PacketCrypt miners"
+        :subtitle="this.$t('cash.page_subtitle')"
         bg="/img/cash-header-bg.jpg"
       />
     </section>
@@ -32,11 +32,10 @@ export default {
     return {
       advantage_item: [
         {
-          title: "Network Steward",
-          subTitle: "The Network Steward receives 20% of every coinbase",
-          text:
-            "The Network Steward is an address which gets 20% of every new block-mine so that developers can finance the building of Internet infrastructure and mesh network technology. Unlike a pre-mine or founder's fee, the recipient of the network steward payout can be changed by a PoS vote. ",
-          btnText: "Network Steward",
+          title: this.$t("header.network_st"),
+          subTitle: this.$t("cash.adv_subtitle"),
+          text:this.$t("cash.adv_text"),
+          btnText: this.$t("header.network_st"),
           img: "/img/advantage/mining-4.png",
           mobile_img: "/img/advantage/mining-4-mobile.png",
           btnLink: "/network-steward"
@@ -46,8 +45,8 @@ export default {
   },
   head() {
     return {
-      title: "Cash - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("cash.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
       link: [
         {
           rel: 'canonical',

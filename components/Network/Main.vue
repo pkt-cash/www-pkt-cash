@@ -11,7 +11,7 @@
                 class="c-content-main__navigation-link"
                 @click="itm_link = 'network-steward-charter'"
                 :class="{ active: itm_link === 'network-steward-charter' || itm_link === null }"
-              >Network Steward Charter</a>
+              >{{ $t("steward.network_nav_01") }}</a>
             </li>
             <li class="c-content-main__navigation-item">
               <a
@@ -19,7 +19,7 @@
                 class="c-content-main__navigation-link"
                 @click="itm_link = 'funding-proposal'"
                 :class="{ active: itm_link === 'funding-proposal'}"
-              >Funding Proposal</a>
+              >{{ $t("steward.network_nav_02") }}</a>
             </li>
             <li class="c-content-main__navigation-item">
               <a
@@ -27,7 +27,7 @@
                 class="c-content-main__navigation-link"
                 @click="itm_link = 'network-steward-projects'"
                 :class="{ active: itm_link === 'network-steward-projects'}"
-              >Network Steward Projects</a>
+              >{{ $t("steward.network_nav_03") }}</a>
             </li>
             <li class="c-content-main__navigation-item">
               <a
@@ -35,7 +35,7 @@
                 class="c-content-main__navigation-link"
                 @click="itm_link = 'who-is-the-network-steward'"
                 :class="{ active: itm_link === 'who-is-the-network-steward'}"
-              >Who is the Network Steward</a>
+              >{{ $t("steward.network_nav_04") }}</a>
             </li>
           </ul>
         </div>
@@ -45,69 +45,41 @@
         <div class="c-content-main__content">
           <div class="c-content-anchor" id="network-steward-charter"></div>
           <div class="c-content-main__section">
-            <h2 class="c-content-main__title">Network Steward Charter</h2>
-            <p
-              class="c-content-main__text"
-            >The objective of The Network Steward is to reduce barriers of entry to support the PKT Network in the pursuit of increased individual autonomy and privacy.</p>
-            <p class="c-content-main__text">Key aspects of this objective include:</p>
+            <h2 class="c-content-main__title">{{ $t("steward.network_nav_01") }}</h2>
+            <p class="c-content-main__text">{{ $t("steward.network_01_content_01") }}</p>
+            <p class="c-content-main__text">{{ $t("steward.network_01_content_02") }}</p>
             <ul class="c-content-main__list">
-              <li
-                class="c-content-main__list-item"
-              >Financing the development of open source networking software</li>
-              <li
-                class="c-content-main__list-item"
-              >Lobbying for improved regulatory environment for small network operators and more generally, for internet freedom, privacy, and decentralization</li>
-              <li
-                class="c-content-main__list-item"
-              >Purchasing property such as proprietary software or radio frequency spectrum rights in order to put these things in the commons</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_01_content_03") }}</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_01_content_04") }}</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_01_content_05") }}</li>
             </ul>
-            <p
-              class="c-content-main__text"
-            >In order to achieve these goals, The Network Steward will occasionally meet to review funding proposals and choose which projects to grant PKT to.</p>
+            <p class="c-content-main__text">{{ $t("steward.network_01_content_06") }}</p>
           </div>
           <!-- // Item 1 -->
 
           <!-- Item 2 -->
           <div class="c-content-anchor" id="funding-proposal"></div>
-          <div class="c-content-main__section" >
-            <h2 class="c-content-main__title">How to Make a Funding Proposal</h2>
-            <p
-              class="c-content-main__text"
-            >Getting a proposal accepted is much like getting a pull request merged in a project. You start by socializing what you want to do with the community (try the IRC or Matrix chats) and when you have rough consensus, you move that conversation to a formal proposal.</p>
-            <p
-              class="c-content-main__text"
-            >To make a proposal, you must create a pull request to the ns-projects repository which adds a new project markdown file as per the project template and name it according to the naming convention defined in the repository readme.</p>
-            <p
-              class="c-content-main__text"
-            >Periodically The Network Steward will hold a meeting and decide on which proposals should be funded. The minutes of these meetings are published in the the ns-projects repository along with the projects and their status.</p>
-            <a
-              href="https://github.com/pkt-cash/ns-projects"
-              target="_blank"
-              class="c-content-main__btn blue-btn-arrow"
-            >
-              <span>Submit Proposal</span>
+          <div class="c-content-main__section">
+            <h2 class="c-content-main__title">{{ $t("steward.network_02_content_01") }}</h2>
+            <p class="c-content-main__text">{{ $t("steward.network_02_content_02") }}</p>
+            <p class="c-content-main__text">{{ $t("steward.network_02_content_03") }}</p>
+            <p class="c-content-main__text">{{ $t("steward.network_02_content_04") }}</p>
+            <a href="https://github.com/pkt-cash/ns-projects" target="_blank" class="c-content-main__btn blue-btn-arrow">
+              <span>{{ $t("steward.network_02_content_05") }}</span>
             </a>
-            <a
-              href="https://github.com/pkt-cash/ns-projects/blob/master/projects/template.md"
-              target="_blank"
-              class="c-content-main__btn blue-btn-arrow"
-            >
-              <span>Download Template</span>
+            <a href="https://github.com/pkt-cash/ns-projects/blob/master/projects/template.md" target="_blank" class="c-content-main__btn blue-btn-arrow">
+              <span>{{ $t("steward.network_02_content_06") }}</span>
             </a>
           </div>
           <!-- //Item 2 -->
 
           <!-- Item 3 -->
           <div class="c-content-anchor" id="network-steward-projects"></div>
-          <div class="c-content-main__section" >
-            <h2 class="c-content-main__title">Network Steward Projects</h2>
-            <p class="c-content-main__text">These are the various projects:</p>
-            <a
-              href="https://github.com/pkt-cash/ns-projects/tree/master/projects"
-              target="_blank"
-              class="c-content-main__btn blue-btn-arrow"
-            >
-              <span>Network Steward Projects</span>
+          <div class="c-content-main__section">
+            <h2 class="c-content-main__title">{{ $t("steward.network_nav_03") }}</h2>
+            <p class="c-content-main__text">{{ $t("steward.network_03_content_01") }}</p>
+            <a href="https://github.com/pkt-cash/ns-projects/tree/master/projects" target="_blank" class="c-content-main__btn blue-btn-arrow">
+              <span>{{ $t("steward.network_nav_03") }}</span>
             </a>
           </div>
           <!-- // Item 3 -->
@@ -115,29 +87,24 @@
           <!-- Item 4 -->
           <div class="c-content-anchor" id="who-is-the-network-steward"></div>
           <div class="c-content-main__section" >
-            <h2 class="c-content-main__title">Who is the Network Steward?</h2>
-            <p
-              class="c-content-main__text"
-            >The Network Steward is a multi-signature wallet which requires 3 out of 5 signatures in order to make a payment.</p>
+            <h2 class="c-content-main__title">{{ $t("steward.network_nav_04") }}?</h2>
+            <p class="c-content-main__text">{{ $t("steward.network_04_content_01") }}</p>
             <p class="c-content-main__text">
-              The Network Steward wallet address is:
-              <a
-                href="https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2"
-                target="_blank"
-              >https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2</a>
+              {{ $t("steward.network_04_content_02") }}
+              <a href="https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2" target="_blank">
+                https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2
+              </a>
             </p>
             <ul class="c-content-main__list">
-              <li class="c-content-main__list-item">cjd - cjdns original author</li>
-              <li class="c-content-main__list-item">Arceliar - Yggdrasil original author</li>
-              <li class="c-content-main__list-item">benhylau - Contributor at Toronto Mesh</li>
-              <li class="c-content-main__list-item">NeilAlexander - Yggdrasil release manager</li>
-              <li class="c-content-main__list-item">Backupbrain - Creator of NetNinja VPN device</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_04_content_03") }}</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_04_content_04") }}</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_04_content_05") }}</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_04_content_06") }}</li>
+              <li class="c-content-main__list-item">{{ $t("steward.network_04_content_07") }}</li>
             </ul>
-            <p
-              class="c-content-main__text"
-            >All of the participants have agreed not to enter into any relationships which would affect their ability to act impartially on behalf of the PKT chain.</p>
+            <p class="c-content-main__text">{{ $t("steward.network_04_content_08") }}</p>
             <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/network-steward-vote">
-              <span>Voting Details</span>
+              <span>{{ $t("steward.network_04_content_09") }}</span>
             </nuxt-link>
           </div>
           <!-- // Item 4 -->

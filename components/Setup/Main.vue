@@ -7,47 +7,19 @@
           <div class="c-content-main__navigation">
             <ul class="c-content-main__navigation-list">
               <li class="c-content-main__navigation-item">
-                <a href="#" class="c-content-main__navigation-link"
-                  >Setup Packet Crypt</a
-                >
+                <a href="#" class="c-content-main__navigation-link">{{ $t("setup.nav_01") }}</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a
-                  href="#Ubuntu"
-                  @click="itm_link = 'Ubuntu'"
-                  :class="{
-                    active: itm_link === 'Ubuntu' || itm_link === null,
-                  }"
-                  class="c-content-main__navigation-link"
-                  >Ubuntu</a
-                >
+                <a href="#Ubuntu" @click="itm_link = 'Ubuntu'" :class="{ active: itm_link === 'Ubuntu' || itm_link === null, }" class="c-content-main__navigation-link">{{ $t("setup.nav_02") }}</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a
-                  href="#Alpine-Linux"
-                  @click="itm_link = 'Alpine-Linux'"
-                  :class="{ active: itm_link === 'Alpine-Linux' }"
-                  class="c-content-main__navigation-link"
-                  >Alpine Linux</a
-                >
+                <a href="#Alpine-Linux" @click="itm_link = 'Alpine-Linux'" :class="{ active: itm_link === 'Alpine-Linux' }" class="c-content-main__navigation-link">{{ $t("setup.nav_03") }}</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a
-                  href="#Apple-OSX"
-                  @click="itm_link = 'Apple-OSX'"
-                  :class="{ active: itm_link === 'Apple-OSX' }"
-                  class="c-content-main__navigation-link"
-                  >Apple OSX</a
-                >
+                <a href="#Apple-OSX" @click="itm_link = 'Apple-OSX'" :class="{ active: itm_link === 'Apple-OSX' }" class="c-content-main__navigation-link">{{ $t("setup.nav_04") }}</a>
               </li>
               <li class="c-content-main__navigation-item">
-                <a
-                  href="#Begin-Mining"
-                  @click="itm_link = 'Begin-Mining'"
-                  :class="{ active: itm_link === 'Begin-Mining' }"
-                  class="c-content-main__navigation-link"
-                  >Begin Mining</a
-                >
+                <a href="#Begin-Mining" @click="itm_link = 'Begin-Mining'" :class="{ active: itm_link === 'Begin-Mining' }" class="c-content-main__navigation-link">{{ $t("setup.nav_05") }}</a>
               </li>
             </ul>
           </div>
@@ -57,45 +29,39 @@
           <div class="c-content-anchor" id="Ubuntu"></div>
           <div class="c-content-main__content">
             <div class="c-content-main__section">
-              <h2 class="c-content-main__title">Ubuntu</h2>
+              <h2 class="c-content-main__title">{{ $t("setup.nav_02") }}</h2>
               <p class="c-content-main__text">
-                In order to build on Ubuntu, you will need to enable to universe
-                repository to be able to install autoconf-archive.
+                {{ $t("setup.nav_01_text_01") }}
               </p>
               <pre class="c-content-main__scroll">
 sudo add-apt-repository universe
 sudo apt-get update
-sudo apt install pkg-config libsodium-dev autoconf-archive git libssl-dev build-essential</pre
-              >
+sudo apt install pkg-config libsodium-dev autoconf-archive git libssl-dev build-essential</pre>
               <p class="c-content-main__text">
-                Once the requirements are installed, get the source code and
-                build it:
+                {{ $t("setup.nav_01_text_02") }}
               </p>
               <pre class="c-content-main__scroll">
 git clone https://github.com/cjdelisle/PacketCrypt cd PacketCrypt
 ./autogen.sh
 ./configure
 make
-npm install</pre
-              >
+npm install</pre>
             </div>
             <!-- // Item 1 -->
 
             <!-- Item 2 -->
             <div class="c-content-anchor" id="Alpine-Linux"></div>
             <div class="c-content-main__section">
-              <h2 class="c-content-main__title">Alpine Linux</h2>
+              <h2 class="c-content-main__title">{{ $t("setup.nav_03") }}</h2>
               <p class="c-content-main__text">
-                Make sure you have the community repository enabled.
+                {{ $t("setup.nav_02_text_01") }}
               </p>
               <pre class="c-content-main__scroll">
 sudo apk update
 sudo apk add nodejs npm autoconf automake autoconf-archive build-base git libsodium-dev
-openssl-dev</pre
-              >
+openssl-dev</pre>
               <p class="c-content-main__text">
-                Once the requirements are installed, get the source code and
-                build it:
+                {{ $t("setup.nav_01_text_02") }}
               </p>
               <pre class="c-content-main__scroll">
 git clone https://github.com/cjdelisle/PacketCrypt
@@ -103,24 +69,21 @@ cd PacketCrypt
 ./autogen.sh
 ./configure
 make
-npm install</pre
-              >
+npm install</pre>
             </div>
             <!-- // Item 2 -->
 
             <!-- Item 3 -->
             <div class="c-content-anchor" id="Apple-OSX"></div>
             <div class="c-content-main__section">
-              <h2 class="c-content-main__title">Apple OSX</h2>
+              <h2 class="c-content-main__title">{{ $t("setup.nav_04") }}</h2>
               <p class="c-content-main__text">
-                Make sure you have homebrew installed first.
+                {{ $t("setup.nav_03_text_01") }}
               </p>
               <pre class="c-content-main__scroll">
-brew install libsodium pkg-config autoconf-archive openssl</pre
-              >
+brew install libsodium pkg-config autoconf-archive openssl</pre>
               <p class="c-content-main__text">
-                Once the requirements are installed, get the source code and
-                build it:
+                {{ $t("setup.nav_01_text_02") }}
               </p>
               <pre class="c-content-main__scroll">
 git clone https://github.com/cjdelisle/PacketCrypt
@@ -130,12 +93,10 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:`echo /usr/local/Cellar/libsodium/*/lib
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:`echo /usr/local/Cellar/openssl/*/lib/pkgconfig/`"
 ./configure
 make
-npm install</pre
-              >
+npm install</pre>
               <p class="c-content-main__more">
-                Once you’ve completed building PacketCrypt, you can begin
-                mining.
-                <nuxt-link to="/">Learn More</nuxt-link>
+                {{ $t("setup.nav_03_text_02") }}
+                <nuxt-link to="/">{{ $t("common.learn_more") }}</nuxt-link>
               </p>
             </div>
           </div>
@@ -145,41 +106,26 @@ npm install</pre
     </div>
     <div class="c-setup-main">
       <div class="container">
-        <h1 class="c-setup-main__title">Begin Mining</h1>
+        <h1 class="c-setup-main__title">{{ $t("setup.nav_05") }}</h1>
         <div class="c-setup-main__wrap grid">
           <div class="wrapper-text">
             <p class="c-setup-main__text">
-              There are two types of mining available and pools should typically
-              make about 50% of their payment to their announcement miners and
-              50% of their payment to their block miners.
+              {{ $t("setup.nav_04_text_01") }}
             </p>
             <p class="c-setup-main__text">
-              Devices with low available memory and/or slow internet connection
-              should prefer to do announcement mining while devices with high
-              speed internet and lots of available memory may prefer block
-              mining.
+              {{ $t("setup.nav_04_text_02") }}
             </p>
           </div>
           <div class="wrapper-text">
             <p class="c-setup-main__text">
-              These examples have you mining in the Pkteer mining pool and also
-              giving your coins to cjd, make sure you update the --paymentAddr
-              appropriately unless you wish to make a donation.
+              {{ $t("setup.nav_04_text_03") }}
             </p>
             <div class="c-setup-main__btns">
-              <a
-                href="https://github.com/cjdelisle/PacketCrypt "
-                target="_blank"
-                class="c-setup-main__link blue-btn-arrow"
-              >
-                <span>Install Packet Crypt</span>
+              <a href="https://github.com/cjdelisle/PacketCrypt " target="_blank" class="c-setup-main__link blue-btn-arrow">
+                <span>{{ $t("setup.nav_04_link_01") }}</span>
               </a>
-              <a
-                href="https://pkteer.com/ "
-                target="_blank"
-                class="c-setup-main__link blue-btn-arrow"
-              >
-                <span>Visit Pkteer</span>
+              <a href="https://pkteer.com/" target="_blank" class="c-setup-main__link blue-btn-arrow">
+                <span>{{ $t("setup.nav_04_link_02") }}</span>
               </a>
             </div>
           </div>
@@ -193,14 +139,12 @@ npm install</pre
           <div class="c-content-anchor" id="Begin-Mining"></div>
           <div class="c-content-main__content">
             <div class="c-content-main__section">
-              <h2 class="c-content-main__title">Announcement mining:</h2>
+              <h2 class="c-content-main__title">{{ $t("home.scroll_section_block_3_title") }}:</h2>
               <pre class="c-content-main__scroll">
-node ./annmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com</pre
-              >
-              <h2 class="c-content-main__title">Block mining:</h2>
+node ./annmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com</pre>
+              <h2 class="c-content-main__title">{{ $t("home.scroll_section_block_4_title") }}:</h2>
               <pre class="c-content-main__scroll">
-node ./blkmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com</pre
-              >
+node ./blkmine.js --threads 2 --paymentAddr=pDSxcZunaUSUSxHrL6r8zpGJvoEropJ3Es http://pool.pkteer.com</pre>
               <!--              <h2 class="c-content-main__title">Resources</h2>-->
               <!--              <ul class="c-content-main__list&#45;&#45;small">-->
               <!--                <li class="c-content-main__list&#45;&#45;small-item">Telegram: https://t.me/pktproject</li>-->

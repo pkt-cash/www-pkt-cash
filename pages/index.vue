@@ -36,10 +36,9 @@ export default {
     return {
       advantage_list: [
         {
-          title: "Network Steward",
-          text:
-            "The network steward is an address which gets 20% of every new block-mine so that the developers can finance the building of mesh network technology. Unlike a premine or founder’s fee, the recipient of the network steward payout can be changed by a PoS vote.",
-          btnText: "Submit Proposal",
+          title: this.$t("header.network_st"),
+          text: this.$t("home.adv_text_1"),
+          btnText: this.$t("steward.network_02_content_05"),
           img: "/img/advantage/index-1.png",
           mobile_img: "/img/advantage/index-1-mobile.png",
           aligh: true,
@@ -59,13 +58,12 @@ export default {
           colorBlue: false,
           learnMore: true,
           lear_link: '/roadmap',
-		  aId: "pkt_roadmap",
-		  graphic: "pkt_roadmap_graphic",
+          aId: "pkt_roadmap",
+          graphic: "pkt_roadmap_graphic",
         },
         {
-          title: "Wallet",
-          text:
-            "There are several options for installing a PKT wallet. Certain wallets are suited for simple transactions while others are enabled for mining. The wallets currently supported include a terminal based command line wallet, the Electrum PKT wallet, and the PKT Zulu GUI wallet. A mobile wallet is also being developed and will be available soon.",
+          title: this.$t("header.wallet"),
+          text: this.$t("home.adv_text_3"),
           btnText: "Install Wallet",
           img: "/img/advantage/index-2.png",
           mobile_img: "/img/advantage/index-2-mobile.png",
@@ -79,8 +77,8 @@ export default {
   },
   head() {
     return {
-      title: "PKT Cash - The World's First Bandwidth-Hard Blockchain",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("home.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',
