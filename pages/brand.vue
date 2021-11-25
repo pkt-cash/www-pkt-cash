@@ -1,12 +1,12 @@
 <template>
   <div class="v-brand">
     <section class="v-brand-section-top">
-      <SimpleHeader mobile_img="" title="Brand Assets" subtitle="" bg="" />
+      <SimpleHeader mobile_img="" :title="this.$t('brand.image_alt')" subtitle="" bg="" />
     </section>
     <section class="v-brand-section">
 		<div class="container">
-			<p class="v-brand-section__text">Download the PKT Logo and wordmark assets <a href="https://pkt.cash/PKT-brand-assets-logos.zip">here</a>.</p>
-			<p class="v-brand-section__text">Before use, please see the trademark guidelines for these assets <a href="/trademark">here.</a></p>
+			<p class="v-brand-section__text">{{ $t("brand.download_assets") }} <a href="https://pkt.cash/PKT-brand-assets-logos.zip">{{ $t("brand.here") }}</a>.</p>
+			<p class="v-brand-section__text">{{ $t("brand.see_trademark") }} <a href="/trademark">{{ $t("brand.here") }}.</a></p>
 		</div>
     </section>
   </div>
@@ -21,8 +21,8 @@ export default {
   },
   head() {
     return {
-      title: "Brand - PKT",
-      meta: [{ hid: "description", name: "description", content: "Download the PKT Logo and wordmark assets." }],
+      title: this.$t("brand.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("brand.meta_descr") }],
       link: [
         {
           rel: 'canonical',

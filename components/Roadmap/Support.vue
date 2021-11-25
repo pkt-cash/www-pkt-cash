@@ -1,22 +1,16 @@
 <template>
   <div class="c-roadmap-support">
     <div class="container">
-      <h1 class="c-roadmap-support__title">Support the PKT Network</h1>
-      <p
-        class="c-roadmap-support__text"
-      >If you want to get involved, build on PKT, or start a business and work alongside the PKT team, then join the community today.</p>
-      <p
-        class="c-roadmap-support__text"
-      >PKT also contains a Network Steward (an elected institution which receives 20% of the newly mined coins), which is dedicated to supporting infrastructure growth and technology development, while making sure the core components of the project are open source.</p>
-      <p
-        class="c-roadmap-support__text"
-      >The Network Steward makes it possible for new businesses to propose and have projects funded that coincide with the PKT project roadmap.</p>
+      <h1 class="c-roadmap-support__title">{{ $t("roadmap.support_heading") }}</h1>
+      <p class="c-roadmap-support__text">{{ $t("roadmap.support_text_01") }}</p>
+      <p class="c-roadmap-support__text">{{ $t("roadmap.support_text_02") }}</p>
+      <p class="c-roadmap-support__text">{{ $t("roadmap.support_text_03") }}</p>
       <div class="c-roadmap-support__btns">
         <nuxt-link class="c-roadmap-support__link blue-btn" to="/network-steward">
-          <span>Network Steward</span>
+          <span>{{ $t("header.network_st") }}</span>
         </nuxt-link>
         <nuxt-link class="c-roadmap-support__link blue-btn" to="/community">
-          <span>Join The Community</span>
+          <span>{{ $t("footer.join_community") }}</span>
         </nuxt-link>
       </div>
     </div>

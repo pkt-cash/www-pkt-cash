@@ -22,8 +22,8 @@ export default {
   },
   head() {
     return {
-      title: "About - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("about.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
       link: [
         {
           rel: 'canonical',

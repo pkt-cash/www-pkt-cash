@@ -3,7 +3,7 @@
     <div class="bg"></div>
     <div class="container">
       <div class="c-index-header__wrap">
-        <h1 class="c-index-header__title">The world’s first bandwidth-hard blockchain<br /><nuxt-link to="/roadmap" class="c-scroll-sect__b-btn"><span>Roadmap</span></nuxt-link></h1>
+        <h1 class="c-index-header__title">{{ $t("home.header_heading") }}<br /><nuxt-link to="/roadmap" class="c-scroll-sect__b-btn"><span>{{ $t("header.roadmap") }}</span></nuxt-link></h1>
         <figure class="c-index-header__img">
           <video autoplay loop muted playsinline draggable="false">
             <source type="video/mp4" src="/gif.mp4" />
@@ -14,13 +14,13 @@
           <div class="c-index-header__list">
             <ul class="c-index-header__list-list">
               <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">Network Bandwidth</h4>
+                <h4 class="c-index-header__list-title">{{ $t("home.index_1") }}</h4>
                 <span
                   class="c-index-header__list-text"
-                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s</span>
+                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} {{ $t("home.index_1_metric") }}</span>
               </li>
               <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">Difficulty</h4>
+                <h4 class="c-index-header__list-title">{{ $t("home.index_2") }}</h4>
                 <span class="c-index-header__list-text">
                   {{
                   difficulty | commafy
@@ -28,28 +28,28 @@
                 </span>
               </li>
               <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">Mined to Date</h4>
+                <h4 class="c-index-header__list-title">{{ $t("home.index_3") }}</h4>
                 <span class="c-index-header__list-text">
                   <!--                1,645,817,539.55 PKT-->
                   {{ already_mined | displayed_stats_data | commafy }} PKT
                 </span>
               </li>
               <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">Encryptions / Sec</h4>
+                <h4 class="c-index-header__list-title">{{ $t("home.index_4") }}</h4>
                 <span class="c-index-header__list-text">
                   <!--                6,925,200-->
                   {{ encryptionsPerSecond | commafy }}
                 </span>
               </li>
               <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">Current Block Reward</h4>
+                <h4 class="c-index-header__list-title">{{ $t("home.index_5") }}</h4>
                 <span class="c-index-header__list-text">
                   <!--                3,037.01 PKT-->
                   {{ reward | displayed_stats_data | commafy }} PKT
                 </span>
               </li>
               <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">Coins Remaining</h4>
+                <h4 class="c-index-header__list-title">{{ $t("home.index_6") }}</h4>
                 <span class="c-index-header__list-text">
                   <!--                4,353,219,423.41 PKT-->
                   {{ remaining | displayed_stats_data | commafy }} PKT
@@ -62,35 +62,35 @@
           <div class="c-index-header__desk-list">
             <div class="c-index-header__desk-left">
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Network Bandwidth</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_1") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
-                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} Mb/s</p>
+                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} {{ $t("home.index_1_metric") }}</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Encryptions / Sec</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_2") }}</h3>
                 <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | commafy }}</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Difficulty</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_3") }}</h3>
                 <p class="c-index-header__desk-itm-text">{{ difficulty | commafy }}</p>
               </div>
             </div>
             <div class="c-index-header__desk-right">
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Current Block Reward</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_4") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
                 >{{ reward | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Coins Remaining</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_5") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
                 >{{ remaining | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">Mined to Date</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_6") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
                 >{{ already_mined | displayed_stats_data | commafy }} PKT</p>

@@ -8,11 +8,11 @@
           </figure>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Quicklink</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer.quicklink") }}</h5>
           <ul class="c-footer__menu-list">
             <li class="c-footer__menu-item">
               <a href="https://docs.pkt.cash/en/latest/mining/" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">Setup PacketCrypt</span>
+                <span class="c-footer__menu-text">{{ $t("footer.setup_pktcrypt") }}</span>
               </a>
             </li>
             <li v-for="(item, index) of quick_links" :key="index" class="c-footer__menu-item">
@@ -22,13 +22,13 @@
             </li>
             <li class="c-footer__menu-item">
               <a href="https://crypto.pkt.cash/" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">Blog</span>
+                <span class="c-footer__menu-text">{{ $t("header.blog") }}</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">About</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer.about") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of about_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.name === 'About'">
@@ -59,7 +59,7 @@
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Join the community</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer.join_community") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of join_community" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
@@ -76,7 +76,7 @@
         <div class="c-footer__text">
           <span class="c-footer__text-light">
             <a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">
-              ©2021 PKT Cash | Privacy Policy
+              ©2021 PKT Cash | {{ $t("footer.policy") }}
             </a>
           </span>
         </div>
@@ -98,19 +98,19 @@ export default {
       nav_open: false,
       quick_links: [
         {
-          name: "Mining",
+          name: this.$t("header.mining"),
           route_link: "/mining",
         },
         {
-          name: "Network Steward",
+          name: this.$t("header.network_st"),
           route_link: "/network-steward",
         },
         {
-          name: "Network Steward Voting",
+          name: this.$t("footer.network_steward_voting"),
           route_link: "/network-steward-vote",
         },
         {
-          name: "Wallet",
+          name: this.$t("header.wallet"),
           route_link: "/wallet",
         }
       ],
@@ -120,27 +120,27 @@ export default {
           route_link: "/cash",
         },
         {
-          name: "About",
+          name: this.$t("footer.about"),
           route_link: "/about",
         },
         {
-          name: "Roadmap",
+          name: this.$t("header.roadmap"),
           route_link: "/roadmap",
         },
         {
-          name: "Origin Story",
+          name: this.$t("footer.origin_story"),
           route_link: "/origin-story",
         },
         {
-          name: "Community",
+          name: this.$t("header.community"),
           route_link: "/community",
         },
-		{
-          name: "Trademark",
+		    {
+          name: this.$t("footer.trademark"),
           route_link: "/trademark",
         },
-		{
-          name: "Brand",
+		    {
+          name: this.$t("footer.brand"),
           route_link: "/brand",
         },
       ],
@@ -160,17 +160,17 @@ export default {
       ],
       join_community: [
         {
-          name: "pkt.chat",
+          name: this.$t("footer.pkt_chat"),
           route_link: "https://pkt.chat",
           //icon: "/img/icon/telegram.svg",
         },
         {
-          name: "Twitter",
+          name: this.$t("footer.twitter"),
           route_link: "https://twitter.com/pkt_cash",
           //icon: "/img/icon/matrix.svg",
         },
         {
-          name: "Matrix",
+          name: this.$t("footer.matrix"),
           route_link: "https://matrix.to/#/#pkt:matrix.org",
           //icon: "/img/icon/matrix.svg",
         },

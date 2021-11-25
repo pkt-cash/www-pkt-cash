@@ -1,35 +1,35 @@
 <template>
   <div class="v-trademark">
     <section class="v-trademark-section-top">
-      <SimpleHeader mobile_img="" title="The PKT Wordmarks and Logo Creative Commons 4.0" subtitle="" bg="" />
+      <SimpleHeader mobile_img="" :title="this.$t("trademark.heading")" subtitle="" bg="" />
     </section>
     <section class="v-trademark-section">
 		<div class="container">
-			<p class="v-trademark-section__text">You are free to use the <a href="/brand">PKT logos</a> as follows:</p>
+			<p class="v-trademark-section__text">{{ $t("trademark.subtitle_1") }} <a href="/brand">{{ $t("trademark.subtitle_2") }}</a> {{ $t("trademark.subtitle_3") }}:</p>
 			<ol>
-				<li>Share — copy and redistribute the material in any medium or format.</li>
-				<li>Adapt — remix, transform, and build upon the material for any purpose, even commercially.</li>
-				<li>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the PKT endorses you or your use.</li>
-				<li>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</li>
+				<li>{{ $t("trademark.free_use_list_item_1") }}</li>
+				<li>{{ $t("trademark.free_use_list_item_2") }}</li>
+				<li>{{ $t("trademark.free_use_list_item_3") }}</li>
+				<li>{{ $t("trademark.free_use_list_item_4") }}</li>
 			</ol>
-			<p class="v-trademark-section__text">Notices:</p>
+			<p class="v-trademark-section__text">{{ $t("trademark.notices") }}:</p>
 			<ul>
-				<li>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.</li>
-				<li>No warranties are given.</li>
-				<li>If you want to report misuse of a PKT mark, please post a message at <a href="https://pkt.chat" target="_blank">http://pkt.chat</a></li>
+				<li>{{ $t("trademark.notices_list_item_1") }}</li>
+				<li>{{ $t("trademark.notices_list_item_2") }}</li>
+				<li>{{ $t("trademark.notices_list_item_3") }} <a href="https://pkt.chat" target="_blank">http://pkt.chat</a></li>
 			</ul>
 
-			<h4 class="v-trademark-section__list-title">Uses</h4>
-			<p class="v-trademark-section__text">You may:</p>
+			<h4 class="v-trademark-section__list-title">{{ $t("trademark.uses") }}</h4>
+			<p class="v-trademark-section__text">{{ $t("trademark.you_may") }}:</p>
 			<ul>
-				<li>Use PKT wordmarks and logo at will.</li>
+				<li>{{ $t("trademark.you_may_text") }}</li>
 			</ul>
 			
-			<h4 class="v-trademark-section__list-title">Unacceptable Uses</h4>
-			<p class="v-trademark-section__text">Some specific things you should not do include:</p>
+			<h4 class="v-trademark-section__list-title">{{ $t("trademark.unacceptable_uses") }}</h4>
+			<p class="v-trademark-section__text">{{ $t("trademark.specific_things") }}:</p>
 			<ul>
-				<li>Don’t use PKT wordmarks and logo in anything dishonest or fraudulent.</li>
-				<li>Don’t use PKT wordmarks and logo to endorse products, groups, or services not associated with the PKT project.</li>
+				<li>{{ $t("trademark.specific_item_1") }}</li>
+				<li>{{ $t("trademark.specific_item_2") }}</li>
 			</ul>
 		</div>
     </section>
@@ -45,8 +45,8 @@ export default {
   },
   head() {
     return {
-      title: "Trademark - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("trademark.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',

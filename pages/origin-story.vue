@@ -2,8 +2,8 @@
   <div class="v-origin">
     <section class="v-origin-section">
       <SimpleHeader
-        title="PKT Origin Story"
-        subtitle="Cjdns and humble beginnings"
+        :title="this.$t("origin_story.simple_header_title")"
+        :subtitle="this.$t("origin_story.simple_header_text")"
         bg="/img/origin-story-header-bg.jpg"
       />
     </section>
@@ -34,8 +34,8 @@ export default {
   },
   head() {
     return {
-      title: "Origin Story - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("origin_story.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',

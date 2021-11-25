@@ -1,12 +1,10 @@
 <template>
   <div class="c-index-join">
     <div class="container">
-      <h1 class="c-index-join__title">Join the community</h1>
-      <p
-        class="c-index-join__text"
-      >PKT is run by the community for the community. The network becomes most secure when it is populated by people just like YOU. Join the community now for updates and discussions around how to participate in this growing network.</p>
+      <h1 class="c-index-join__title">{{ $t("home.join_community_title") }}</h1>
+      <p class="c-index-join__text">{{ $t("home.join_community_text") }}</p>
       <nuxt-link class="c-index-join__link blue-btn-arrow" to="/community">
-        <span>Join Now</span>
+        <span>{{ $t("home.join_community_label_link") }}</span>
       </nuxt-link>
     </div>
   </div>

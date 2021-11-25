@@ -4,13 +4,13 @@
       <BigHeader
         mobile_img="/img/wallet-header-bg.jpg"
         is_wallet
-        title="Wallet"
-        subtitle="You store your PKT in a PKT Wallet"
+        :title="this.$t("header.wallet")"
+        :subtitle="this.$t("wallet.header_descr")"
         :listTick="wallet_list"
         is_anchor
         btnLink="#setup"
         bg="/img/wallet-header-bg.jpg"
-        btn="Setup a Wallet"
+        :btn="this.$t("wallet.header_button")"
       />
     </section>
     <section class="v-wallet-section">
@@ -30,8 +30,8 @@ export default {
   },
   head() {
     return {
-      title: "Wallet - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("wallet.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',
@@ -43,9 +43,9 @@ export default {
   data() {
     return {
       wallet_list: [
-        "Send, receive and earn PKT.  ",
-        "Control your own private keys.  ",
-        "Backup your wallet by writing a short 13 word seed.  ",
+        this.$t("wallet.wallet_list_item_1"),
+        this.$t("wallet.wallet_list_item_2"),
+        this.$t("wallet.wallet_list_item_3"),
       ],
     };
   },

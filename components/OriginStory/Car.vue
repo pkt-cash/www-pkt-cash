@@ -1,18 +1,14 @@
 <template>
   <div class="c-origin-car">
     <div class="container">
-      <span
-        class="c-origin-car__quote"
-      >“The reason bandwidth markets have not yet emerged is not because we can’t subdivide bandwidth, it’s because current technology prohibits subdivision of routing hardware.”</span>
-      <p
-        class="c-origin-car__text"
-      >By replacing “where do you want to go” with “how do you want to get there”, cjdns replaces the rigidity of a postal service with the flexibility of a road system, a road system where each driver can choose which GPS to use. In this new network, hundreds or even thousands of Virtual ISPs can compete for customers while leasing access to the same “road system” and each searching for the best ways to get their customers’ data where it needs to go.</p>
+      <span class="c-origin-car__quote">{{ $t("origin_story.car_quote") }}</span>
+      <p class="c-origin-car__text">{{ $t("origin_story.car_text") }}</p>
       <div class="c-origin-car__btns">
         <nuxt-link class="c-origin-car__link blue-btn" to="/roadmap">
-          <span>PKT Roadmap</span>
+          <span>{{ $t("about.about_main__btn") }}</span>
         </nuxt-link>
         <nuxt-link class="c-origin-car__link blue-btn" to="/about">
-          <span>Letter from CJD</span>
+          <span>{{ $t("header.letter") }}</span>
         </nuxt-link>
       </div>
     </div>

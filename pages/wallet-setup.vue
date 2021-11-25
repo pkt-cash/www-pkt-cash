@@ -3,11 +3,11 @@
     <section class="v-network-section">
       <BigHeader
         is_wallet_setup
-        title="Wallet Setup"
-        subtitle="PKT Wallet Installation"
-        text="To set up the command line wallet for PKT you will need:"
+        :title="this.$t("wallet_setup.heading")"
+        :subtitle="this.$t("wallet_setup.subtitle")"
+        :text="this.$t("wallet_setup.text_1")"
         :list="wallet_setup"
-        sometext="Here are instructions to install the command line wallet:"
+        :sometext="this.$t("wallet_setup.text_2")"
         bg="/img/wallet-setup-header-bg.jpg"
       />
     </section>
@@ -28,8 +28,8 @@ export default {
   },
   head() {
     return {
-      title: "Wallet Setup - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("wallet_setup.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',

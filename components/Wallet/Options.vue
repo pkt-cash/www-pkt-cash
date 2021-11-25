@@ -1,89 +1,64 @@
 <template>
   <div class="c-wallet-options" id="setup">
     <div class="container">
-      <h2 class="c-wallet-options__title">
-        There are currently several options to get a free PKT Wallet
-      </h2>
+      <h2 class="c-wallet-options__title">{{ $t("wallet.options_heading") }}</h2>
       <div class="c-wallet-options__list">
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-1.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">Command line Wallet</h3>
+          <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_01_title") }}</h3>
           <a href="#" class="c-wallet-options__item-link">
-            Terminal-based
-            <br />full node setup
+            {{ $t("wallet.option_01_descr") }}
           </a>
-          <a
-            class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://docs.pkt.cash/en/latest/pktd/pktwallet"
-            target="_blank"
-          >
-            <span>Setup CLI Wallet</span>
+          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://docs.pkt.cash/en/latest/pktd/pktwallet" target="_blank">
+            <span>{{ $t("wallet.option_01_button") }}</span>
           </a>
         </div>
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-2.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">Electrum PKT Wallet</h3>
+          <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_02_title") }}</h3>
           <a href="#" class="c-wallet-options__item-link">
-            Graphical User Interface (GUI)
-            <br />wallet for desktop
+            {{ $t("wallet.option_02_descr") }}
           </a>
-          <a
-            class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://docs.pkt.cash/en/latest/electrum/"
-            target="_blank"
-          >
-            <span>Setup Electrum Wallet</span>
+          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://docs.pkt.cash/en/latest/electrum/" target="_blank">
+            <span>{{ $t("wallet.option_02_button") }}</span>
           </a>
         </div>
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-1.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">GUI Wallet</h3>
+          <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_03_title") }}</h3>
           <a href="#" class="c-wallet-options__item-link">
-            The PKT GUI wallet is for <br />
-            mining and supports Mac only.
+            {{ $t("wallet.option_03_descr") }}
           </a>
-          <a
-            class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases"
-            target="_blank"
-          >
-            <span>Setup PKT GUI Wallet</span>
+          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases" target="_blank">
+            <span>{{ $t("wallet.option_03_button") }}</span>
           </a>
         </div>
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-2.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">Pkt.world Wallet</h3>
+          <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_03_1_title") }}</h3>
           <a href="#" class="c-wallet-options__item-link">
-            The Pkt.World wallet is a GUI wallet<br />
-            for Windows users and miners.
+            {{ $t("wallet.option_03_1_descr") }}
           </a>
-          <a
-            class="c-wallet-options__item-btn blue-btn-arrow"
-            href="https://www.pkt.world/wallet"
-            target="_blank"
-          >
-            <span>Setup Pkt.world Wallet</span>
+          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://www.pkt.world/wallet" target="_blank">
+            <span>{{ $t("wallet.option_03_1_button") }}</span>
           </a>
         </div>
         <div class="c-wallet-options__item">
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-1.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">Mobile Wallet</h3>
-          <a href="#" class="c-wallet-options__item-link"> Coming Soon </a>
-          <a
-            class="c-wallet-options__item-btn blue-btn-arrow disabled"
-            href="#"
-          >
-            <span>Coming Soon</span>
+          <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_04_title") }}</h3>
+          <a href="#" class="c-wallet-options__item-link">{{ $t("wallet.option_04_descr") }}</a>
+          <a class="c-wallet-options__item-btn blue-btn-arrow disabled" href="#">
+            <span>{{ $t("wallet.option_04_descr") }}</span>
           </a>
         </div>
       </div>

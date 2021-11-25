@@ -2,24 +2,24 @@
   <div class="v-community">
     <section class="v-community-section">
       <BigHeader
-        title="Community"
-        subtitle="Thank you for your interest in the PKT Network. In building out this network infrastructure we are only as strong as the sum of all parts."
-        sometext="Please check out the various resources available to collaborate and communicate."
+        :title="this.$t('community.big_header_title')"
+        :subtitle="this.$t('community.big_header_subtitle')"
+        :sometext="this.$t('community.big_header_text')"
         bg="/img/community-header-bg.jpg"
         :email="true"
       />
     </section>
     <section class="v-community-section">
       <CommunityList
-        title="Resources"
-        text="Participate in the PKT Trading Group to find buy and sell sides for PKT liquidity. This community resource is open to the public to initiate block trades of PKT"
+        :title="this.$t('community.resources_title')"
+        :text="this.$t('community.resources_text')"
         :list="resources_list"
       />
     </section>
     <section class="v-community-section">
       <CommunityList
-        title="Join us"
-        text="Join us and help to create a better internet. Connect and collaborate with PKT community members online"
+        :title="this.$t('community.join_title')"
+        :text="this.$t('community.join_text')"
         :list="join_list"
       />
     </section>
@@ -42,8 +42,8 @@ export default {
   },
   head() {
     return {
-      title: "Community - PKT",
-      meta: [{ hid: "description", name: "description", content: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure." }],
+      title: this.$t("community.meta_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
       link: [
         {
           rel: 'canonical',
@@ -56,18 +56,16 @@ export default {
     return {
       resources_list: [
         {
-          title: "PKT Trading Group",
-          text:
-            "Community organized Telegram chat for peer-to-peer buying and selling of PKT.",
+          title: this.$t("community.resources_list_title"),
+          text:this.$t("community.resources_list_text"),
           img: "/img/community/telegram.svg",
           link: "https://t.me/joinchat/VTzmfU6P3YB7WrYx",
         },
       ],
       join_list: [
         {
-          title: "PKT.chat - Project Chat",
-          text:
-            "The place to chat with the PKT core developers, get help and support, and participate in the project",
+          title: this.$t("community.join_list_item_title_1"),
+          text: this.$t("community.join_list_item_text_1"),
           img: "/img/community/pkt.svg",
           link: "https://pkt.chat",
         },
@@ -79,9 +77,8 @@ export default {
         //   link: "https://t.me/pkt_cash",
         // },
         {
-          title: "PKT Community Discord",
-          text:
-            "The one-stop to talk about everything PKT related. Ask questions to community leaders and where to get involved in the PKT Network.",
+          title: this.$t("community.join_list_item_title_3"),
+          text: this.$t("community.join_list_item_text_3"),
           img: "/img/community/pkt_discord.png",
           link: "https://discord.gg/ytjzxzNzF3"
         },
@@ -100,9 +97,8 @@ export default {
           link: "https://www.instagram.com/pktcash/",
         },*/
         {
-          title: "Twitter",
-          text:
-            "Follow PKT on Twitter to stay up to date with news and progress.",
+          title: this.$t("community.join_list_item_title_4"),
+          text: this.$t("community.join_list_item_text_4"),
           img: "/img/community/twitter.svg",
           link: "https://twitter.com/pkt_cash",
         },
@@ -114,14 +110,14 @@ export default {
           link: "https://www.facebook.com/PKT-110041354126488",
         },*/
         {
-          title: "IRC",
-          text: "Follow the PKT.chat main chat room through the bridged IRC channel",
+          title: this.$t("community.join_list_item_title_5"),
+          text: this.$t("community.join_list_item_text_5"),
           img: "/img/community/irc.svg",
           link: "https://kiwiirc.com/nextclient/irc.freenode.net/pkt?nick=pktwow",
         },
         {
-          title: "Matrix",
-          text: "Follow the PKT.chat main chat room through the bridged Matrix channel",
+          title: this.$t("community.join_list_item_title_6"),
+          text: this.$t("community.join_list_item_text_6"),
           img: "/img/community/matrix.svg",
           link: "https://matrix.to/#/#pkt:matrix.org",
         },

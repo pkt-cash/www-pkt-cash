@@ -1,25 +1,25 @@
 <template>
   <div class="c-community-contact">
     <div class="container">
-      <h1 class="c-community-contact__title">Contact us</h1>
+      <h1 class="c-community-contact__title">{{ $t("contact.contact_title") }}</h1>
       <form @submit.prevent="send_data" class="c-community-contact__form">
-        <input type="text" placeholder="Name:" v-model="form.name" class="c-community-contact__input" />
-        <input type="email" placeholder="Email:" v-model="form.email" class="c-community-contact__input" />
-        <input type="text" placeholder="Subject:" v-model="form.subject" class="c-community-contact__input" />
-        <textarea placeholder="Message:" v-model="form.message" class="c-community-contact__textarea"></textarea>
+        <input type="text" :placeholder="this.$t('contact.form_name')" v-model="form.name" class="c-community-contact__input" />
+        <input type="email" :placeholder="this.$t('contact.form_email')" v-model="form.email" class="c-community-contact__input" />
+        <input type="text" :placeholder="this.$t('contact.form_subject')" v-model="form.subject" class="c-community-contact__input" />
+        <textarea :placeholder="this.$t('contact.form_message')" v-model="form.message" class="c-community-contact__textarea"></textarea>
         <figure class="c-community-contact__captcha">
           <vue-recaptcha @verify="varify_capcha" sitekey="6LdbwccZAAAAAFLFVcSpE6GvrrAcT9u3jWybD7OW" :loadRecaptchaScript="true"></vue-recaptcha>
         </figure>
-        <button :disabled="!valid" type="submit" class="c-community-contact__button blue-btn">Send Message</button>
+        <button :disabled="!valid" type="submit" class="c-community-contact__button blue-btn">{{ $t("contact.form_submit") }}</button>
         <div class="c-community-contact__status">
           <template v-if="status === 'sending'">
-            Sending in process ...
+            {{ $t("contact.form_sending") }}
           </template>
           <template v-if="status === 'ok'">
-            Thanks, we'll get back to you soon
+            {{ $t("contact.form_status_ok") }}
           </template>
           <template v-if="status === 'error'">
-            Something went wrong, please try again.
+            {{ $t("contact.form_status_error") }}
           </template>
         </div>
       </form>

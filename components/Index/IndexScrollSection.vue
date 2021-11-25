@@ -3,11 +3,8 @@
     <div class="container">
       <div class="c-scroll-sect">
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_top">
-          <h2 class="c-scroll-sect__title">The Network</h2>
-          <div class="c-scroll-sect__text">
-            The world’s first bandwidth-hard blockchain protocol, built to incentivize
-            the growth of infrastructure
-          </div>
+          <h2 class="c-scroll-sect__title">{{ $t("home.scroll_section_title") }}</h2>
+          <div class="c-scroll-sect__text">{{ $t("home.scroll_section_descr") }}</div>
         </div>
         <div class="c-scroll-sect__wrap c-scroll-sect__wrap_content">
           <!--          <figure >-->
@@ -44,7 +41,7 @@
                 <h3 class="c-scroll-sect__b-title" v-html="block.title"></h3>
                 <p class="c-scroll-sect__b-text" v-html="block.text"></p>
                 <nuxt-link :to="block.link" class="c-scroll-sect__b-btn">
-                  <span>More Details</span>
+                  <span>{{ $t("home.scroll_section_button_label") }}</span>
                 </nuxt-link>
               </div>
             </div>
@@ -70,48 +67,33 @@ export default {
       ],
       blocks: [
         {
-          title: "PKT Network",
-          text:
-            "PKT is a blockchain enabling anyone to become an ISP. Users allocate bandwidth from their " +
-            "local internet connections and build a global, decentralized edge network, " +
-            "by the people, for the people. \n",
+          title: this.$t("home.scroll_section_block_1_title"),
+          text:this.$t("home.scroll_section_block_1_descr"),
           link: { path: "/cash" },
         },
         {
-          title: "PacketCrypt Protocol",
-          text:
-            "PKT is a Bitcoin fork, using PacketCrypt, the world's first bandwidth-hard proof of work. " +
-            "PKT is efficiently mined when miners collaborate, and collaboration requires " +
-            "bandwidth and CPU. \n",
+          title: this.$t("home.scroll_section_block_2_title"),
+          text:this.$t("home.scroll_section_block_2_descr"),
           link: { path: "/setup" },
         },
         {
-          title: "Announcement Mining",
-          text:
-            "Casual miners use idle CPU time to generate small messages called announcements and " +
-            "broadcasts them to block miners who pay for them. \n",
+          title: this.$t("home.scroll_section_block_3_title"),
+          text:this.$t("home.scroll_section_block_3_descr"),
           link: { path: "/mining" },
         },
         {
-          title: "Block Mining",
-          text:
-            "Dedicated miners use specialized equipment to secure the blockchain, \n" +
-            "but the PacketCrypt algorithm allows them to do less work if they have more announcements, \n" +
-            "effectively substituting bandwidth for CPU power. \n",
+          title: this.$t("home.scroll_section_block_4_title"),
+          text:this.$t("home.scroll_section_block_4_descr"),
           link: { path: "/mining" },
         },
         {
-          title: "PKT Cash",
-          text:
-            "PKT is a native cryptocurrency based on Bitcoin code, making it Lightning Network \n" +
-            "ready from day one. It is not a token so there is no centralized issuer and no gas fees. \n",
+          title: this.$t("home.scroll_section_block_5_title"),
+          text:this.$t("home.scroll_section_block_5_descr"),
           link: { path: "/cash" },
         },
         {
           title: "PKT",
-          text:
-            "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
-            "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
+          text:this.$t("home.scroll_section_block_6_descr"),
           link: { path: "/cash" },
         },
       ],

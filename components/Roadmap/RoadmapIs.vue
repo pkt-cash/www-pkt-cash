@@ -1,24 +1,24 @@
 <template>
   <div class="c-roadmap-is">
     <div class="container">
-      <h1 class="c-roadmap-is__title">The PKT Roadmap</h1>
+      <h1 class="c-roadmap-is__title">{{ $t("roadmap.roadmap_is_heading") }}</h1>
       <ul class="c-roadmap-is__list">
         <li class="c-roadmap-is__item">
-          <a href="#VPN Marketplace">Phase 1</a> - Launch the PKT blockchain and begin bandwidth-hard mining using PacketCrypt.
+          <a href="#VPN Marketplace">{{ $t("roadmap.phase_1_pre") }}</a> - {{ $t("roadmap.roadmap_is_01") }}
         </li>
         <li class="c-roadmap-is__item">
-          <a href="#Support Internet Sharing">Phase 2</a> - Utilize technology use cases including VPN bandwidth leasing, tokenized bandwidth, DeFi, and connecting PKT to cjdns.
+          <a href="#Support Internet Sharing">{{ $t("roadmap.phase_2_pre") }}</a> - {{ $t("roadmap.roadmap_is_02") }}
         </li>
         <li class="c-roadmap-is__item">
-          <a href="#Tokenized Bandwidth Leases">Phase 3</a> - Scale low cost internet sharing, introduce first Cloud ISPs, and enable high speed transactions in and out of PKT using Lightning Network.
+          <a href="#Tokenized Bandwidth Leases">{{ $t("roadmap.phase_3_pre") }}</a> - {{ $t("roadmap.roadmap_is_03") }}
         </li>
         <li class="c-roadmap-is__item" id="letter_from_cjd">
-          <a href="#Support Next Gen Networking Hardware">Phase 4</a> - Innovate on Cloud ISP commercialization, getting on the internet without a traditional ISP, and selling tokenize bandwidth into a bandwidth trading marketplace.
+          <a href="#Support Next Gen Networking Hardware">{{ $t("roadmap.phase_4_pre") }}</a> - {{ $t("roadmap.roadmap_is_04") }}
         </li>
       </ul>
       <div class="d">
         <nuxt-link to="/about" class="c-roadmap-is__btn blue-btn">
-          <span>Letter from CJD</span>
+          <span>{{ $t("header.letter") }}</span>
         </nuxt-link>
       </div>
     </div>
