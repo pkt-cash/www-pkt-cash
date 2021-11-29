@@ -190,14 +190,13 @@
               </svg>
             </span>
             <div class="dropdown" :class="{ active: dropdownOpen }">
-              <ul class="dropdown__list">
-                <li class="dropdown__list__item">
-                  <a
-                    href="/PKT_Network_v1.0_2021.02.01.pdf"
-                    target="_blank"
-                    class="dropdown__list__item__link"
-                    >{{ $t("header.whitepaper") }}</a
-                  >
+              <ul :id="$i18n.locale" class="dropdown__list">
+                <li class="dropdown__list__item whitepaper">
+                  <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="dropdown__list__item__link" id="en">{{ $t("header.whitepaper") }}</a>
+                  <a href="/PKT_Network_v1.0_2021.02.01-ja.pdf" target="_blank" class="dropdown__list__item__link" id="ja">{{ $t("header.whitepaper") }}</a>
+                  <a href="/PKT_Network_v1.0_2021.02.01-ch.pdf" target="_blank" class="dropdown__list__item__link" id="zh">{{ $t("header.whitepaper") }}</a>
+                  <a href="/PKT_Network_v1.0_2021.02.01-ko.pdf" target="_blank" class="dropdown__list__item__link" id="ko">{{ $t("header.whitepaper") }}</a>
+                  <a href="/PKT_Network_v1.0_2021.02.01-ru.pdf" target="_blank" class="dropdown__list__item__link" id="ru">{{ $t("header.whitepaper") }}</a>
                 </li>
                 <li class="dropdown__list__item">
                   <a
@@ -646,6 +645,9 @@ export default {
 }
 .nav__menu-lang_switch {
   margin-left:rem(15);
+  @include for-width(-tablet-lg) {
+    margin-left:rem(25);
+  }
   &_trigger {
     font-size: rem(16);
     color: #000;
@@ -675,5 +677,23 @@ export default {
       margin-left:0;
     }
   }
+}
+ul .whitepaper .dropdown__list__item__link {
+  display:none;
+}
+ul#en .whitepaper #en {
+  display:block;
+}
+ul#ja .whitepaper #ja {
+  display:block;
+}
+ul#zh .whitepaper #zh {
+  display:block;
+}
+ul#ko .whitepaper #ko {
+  display:block;
+}
+ul#ru .whitepaper #ru {
+  display:block;
 }
 </style>
