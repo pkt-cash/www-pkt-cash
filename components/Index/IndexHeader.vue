@@ -68,29 +68,29 @@
                 >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} {{ $t("home.index_1_metric") }}</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_2") }}</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_4") }}</h3>
                 <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | commafy }}</p>
               </div>
               <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_3") }}</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_2") }}</h3>
                 <p class="c-index-header__desk-itm-text">{{ difficulty | commafy }}</p>
               </div>
             </div>
             <div class="c-index-header__desk-right">
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_4") }}</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_5") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
                 >{{ reward | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_5") }}</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_6") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
                 >{{ remaining | displayed_stats_data | commafy }} PKT</p>
               </div>
               <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_6") }}</h3>
+                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_3") }}</h3>
                 <p
                   class="c-index-header__desk-itm-text"
                 >{{ already_mined | displayed_stats_data | commafy }} PKT</p>
