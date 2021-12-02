@@ -2,8 +2,8 @@
   <div class="v-origin">
     <section class="v-origin-section">
       <SimpleHeader
-        :title="this.$t("origin_story.simple_header_title")"
-        :subtitle="this.$t("origin_story.simple_header_text")"
+        :title="this.$t('origin_story.simple_header_title')"
+        :subtitle="this.$t('origin_story.simple_header_text')"
         bg="/img/origin-story-header-bg.jpg"
       />
     </section>

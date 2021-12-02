@@ -1,7 +1,7 @@
 <template>
   <div id="roadmap-page" class="v-roadmap">
     <section class="v-roadmap-section">
-      <SimpleHeader :cta_title="this.$t("roadmap.glossary_heading")"
+      <SimpleHeader :cta_title="this.$t('roadmap.glossary_heading')"
       />
     </section>
     <section class="v-roadmap-section">

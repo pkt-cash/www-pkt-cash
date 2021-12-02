@@ -1,7 +1,7 @@
 <template>
   <div class="v-trademark">
     <section class="v-trademark-section-top">
-      <SimpleHeader mobile_img="" :title="this.$t("trademark.heading")" subtitle="" bg="" />
+      <SimpleHeader mobile_img="" :title="this.$t('trademark.heading')" subtitle="" bg="" />
     </section>
     <section class="v-trademark-section">
 		<div class="container">

@@ -3,11 +3,11 @@
     <section class="v-network-section">
       <BigHeader
         is_wallet_setup
-        :title="this.$t("wallet_setup.heading")"
-        :subtitle="this.$t("wallet_setup.subtitle")"
-        :text="this.$t("wallet_setup.text_1")"
+        :title="this.$t('wallet_setup.heading')"
+        :subtitle="this.$t('wallet_setup.subtitle')"
+        :text="this.$t('wallet_setup.text_1')"
         :list="wallet_setup"
-        :sometext="this.$t("wallet_setup.text_2")"
+        :sometext="this.$t('wallet_setup.text_2')"
         bg="/img/wallet-setup-header-bg.jpg"
       />
     </section>

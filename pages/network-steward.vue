@@ -4,9 +4,9 @@
       <BigHeader
         is_network_st
         mobile_img="/img/net-mobile.jpg"
-        :title="this.$t("header.network_st")"
-        :text="this.$t("steward.big_header_text")"
-        :btn="this.$t("steward_vote.big_header_title")"
+        :title="this.$t('header.network_st')"
+        :text="this.$t('steward.big_header_text')"
+        :btn="this.$t('steward_vote.big_header_title')"
         btnLink="/network-steward-vote"
         bg="/img/network-header-bg.jpg"
       />
