@@ -4,13 +4,13 @@
       <BigHeader
         mobile_img="/img/wallet-header-bg.jpg"
         is_wallet
-        :title="this.$t("header.wallet")"
-        :subtitle="this.$t("wallet.header_descr")"
+        :title="this.$t('header.wallet')"
+        :subtitle="this.$t('wallet.header_descr')"
         :listTick="wallet_list"
         is_anchor
         btnLink="#setup"
         bg="/img/wallet-header-bg.jpg"
-        :btn="this.$t("wallet.header_button")"
+        :btn="this.$t('wallet.header_button')"
       />
     </section>
     <section class="v-wallet-section">

@@ -3,8 +3,8 @@
     <section class="v-network-section">
       <BigHeader
         mobile_img="/img/network-steward-vote-header-bg.jpg"
-        :title="this.$t("steward_vote.big_header_title")"
-        :text="this.$t("steward_vote.big_header_text")"
+        :title="this.$t('steward_vote.big_header_title')"
+        :text="this.$t('steward_vote.big_header_text')"
         :btn="this.$t('header.network_st')"
         btnLink="/network-steward"
         bg="/img/network-steward-vote-header-bg.jpg"
