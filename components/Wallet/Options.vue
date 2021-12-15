@@ -110,8 +110,10 @@ export default {
     flex-direction: column;
     align-items: center;
     margin: rem(25) rem(50);
+    width:calc(50% - 100px);
     @include for-width(-tablet) {
       margin: rem(25) rem(20);
+      width:calc(100% - 40px);
     }
 
     &-img {
