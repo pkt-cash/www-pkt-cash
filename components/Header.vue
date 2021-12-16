@@ -25,11 +25,6 @@
                   <span class="nav__menu-text">{{ item.name }}</span>
                 </a>
               </template>
-              <template v-else-if="item.name === 'Roadmap'">
-                <a href="/roadmap" class="nav__menu-link btn-nav">
-                  <span class="nav__menu-text">{{ item.name }}</span>
-                </a>
-              </template>
               <template v-else-if="item.name === 'PKT'">
                 <a class="nav__menu-link btn-nav" :class="mClass">
                   <span class="nav__menu-text">{{ item.name }} 
@@ -195,7 +190,7 @@ export default {
         },
         {
           name: this.$t("home.roadmap_link"),
-          route_link: "/",
+          route_link: "/roadmap",
         },
         {
           name: "Wallet",

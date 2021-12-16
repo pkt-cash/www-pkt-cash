@@ -27,7 +27,7 @@
           <div class="c-index-header_data">
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.bandwidth') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }} Gb/s</p>
-            <h3 class="c-index-header__desk-itm-title">{{ $t('home.mined') }}</h3>
+            <h3 class="c-index-header__desk-itm-title">{{ $t('home.index_3') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
           </div>
           <div class="c-index-header_data">

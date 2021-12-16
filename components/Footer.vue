@@ -16,9 +16,16 @@
               </a>
             </li>
             <li v-for="(item, index) of quick_links" :key="index" class="c-footer__menu-item">
-              <nuxt-link :to="item.route_link" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">{{ item.name }}</span>
-              </nuxt-link>
+              <template v-if="item.name === 'Blog'">
+                <a href="https://crypto.pkt.cash" target="_blank" class="c-footer__menu-link">
+                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                </a>
+              </template>
+              <template v-else>
+                <nuxt-link :to="item.route_link" class="c-footer__menu-link">
+                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                </nuxt-link>
+              </template>
             </li>
           </ul>
         </div>
