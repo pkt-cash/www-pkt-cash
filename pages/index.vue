@@ -3,75 +3,90 @@
     <section class="v-index-section">
       <IndexHeader />
     </section>
-    <section class="v-index-section">
-      <IndexFeatures />
-    </section>
-    <section class="v-scroll-section">
-      <IndexScrollSection/>
-    </section>
     <section class="v-mining-section">
-      <Advantage is_index :list="advantage_list" />
+      <Blocks :list="blocks_list" />
     </section>
     <section class="v-index-section">
-      <IndexJoin />
+      <IndexTechnology />
+    </section>
+    <section class="v-index-section">
+      <IndexTrading />
+    </section>
+    <section class="v-index-section">
+      <IndexJoinCommunity />
     </section>
   </div>
 </template>
 
 <script>
 import IndexHeader from "~/components/Index/IndexHeader";
-import IndexFeatures from "~/components/Index/IndexFeatures";
-import IndexJoin from "~/components/Index/IndexJoin";
-import Advantage from "~/components/Advantage";
-import IndexScrollSection from "~/components/Index/IndexScrollSection";
+import IndexBlocks from "~/components/Blocks";
+import IndexTechnology from "~/components/Index/IndexTechnology";
+import IndexTrading from "~/components/Index/IndexTrading";
+import IndexJoinCommunity from "~/components/Index/IndexJoinCommunity";
 export default {
   components: {
-    IndexScrollSection,
     IndexHeader,
-    IndexFeatures,
-    IndexJoin,
-    Advantage,
+    IndexBlocks,
+    IndexTechnology,
+    IndexTrading,
+    IndexJoinCommunity,
   },
   data() {
     return {
-      advantage_list: [
+      blocks_list: [
         {
-          title: this.$t("header.network_st"),
-          text: this.$t("home.adv_text_1"),
-          btnText: this.$t("steward.network_02_content_05"),
-          img: "/img/advantage/index-1.png",
-          mobile_img: "/img/advantage/index-1-mobile.png",
-          aligh: true,
-          textSVG: true,
-          colorBlue: true,
-          learnMore: true,
-          lear_link: '/network-steward'
+          Id: 'build',
+          Title: this.$t("home.block_1_title"),
+          subTitle: this.$t("home.block_1_subtitle"),
+          content: this.$t("home.block_1_content"),
+          content_last: this.$t("home.block_1_content_last"),
+          button_label_1: this.$t("home.block_1_label_1"),
+          button_link_1: '/roadmap',
+          button_label_2: this.$t("home.block_1_label_2"),
+          button_link_2: '/network-steward',
+          single_1_title: this.$t("home.block_1_single_1_title"),
+          single_1_descr: this.$t("home.block_1_single_1_descr"),
+          single_2_title: this.$t("home.block_1_single_2_title"),
+          single_2_descr: this.$t("home.block_1_single_2_descr"),
+          single_3_title: this.$t("home.block_1_single_3_title"),
+          single_3_descr: this.$t("home.block_1_single_3_descr"),
         },
         {
-          title: "",
-          text: "",
-          btnText: "",
-          img: "",
-          mobile_img: "",
-          aligh: false,
-          textSVG: true,
-          colorBlue: false,
-          learnMore: true,
-          lear_link: '/roadmap',
-          aId: "pkt_roadmap",
-          graphic: "pkt_roadmap_graphic",
+          Id: 'mine',
+          Title: this.$t("home.block_2_title"),
+          subTitle: this.$t("home.block_2_subtitle"),
+          content: this.$t("home.block_2_content"),
+          content_last: this.$t("home.block_2_content_last"),
+          button_label_1: this.$t("home.block_2_label_1"),
+          button_link_1: 'https://docs.pkt.cash/en/latest/mining/',
+          blank: "_blank",
+          button_label_2: this.$t("home.block_2_label_2"),
+          button_link_2: '/wallet',
+          single_1_title: this.$t("home.block_2_single_1_title"),
+          single_1_descr: this.$t("home.block_2_single_1_descr"),
+          single_2_title: this.$t("home.block_2_single_2_title"),
+          single_2_descr: this.$t("home.block_2_single_2_descr"),
+          single_3_title: this.$t("home.block_2_single_3_title"),
+          single_3_descr: this.$t("home.block_2_single_3_descr"),
         },
         {
-          title: this.$t("header.wallet"),
-          text: this.$t("home.adv_text_3"),
-          btnText: "Install Wallet",
-          img: "/img/advantage/index-2.png",
-          mobile_img: "/img/advantage/index-2-mobile.png",
-          aligh: false,
-          textSVG: true,
-          linkMore: true,
-          lear_link: '/wallet'
-        },
+          Id: 'utility',
+          Title: this.$t("home.block_3_title"),
+          subTitle: this.$t("home.block_3_subtitle"),
+          content: this.$t("home.block_3_content"),
+          content_last: this.$t("home.block_3_content_last"),
+          button_label_1: "Cryptoeconomics",
+          button_link_1: '/cash',
+          button_label_2: this.$t("home.block_3_label_2"),
+          button_link_2: '/origin-story',
+          single_1_title: this.$t("home.block_3_single_1_title"),
+          single_1_descr: this.$t("home.block_3_single_1_descr"),
+          single_2_title: this.$t("home.block_3_single_2_title"),
+          single_2_descr: this.$t("home.block_3_single_2_descr"),
+          single_3_title: this.$t("home.block_3_single_3_title"),
+          single_3_descr: this.$t("home.block_3_single_3_descr"),
+        }
       ],
     };
   },
@@ -92,9 +107,6 @@ export default {
   },
   async mounted() {
     await this.$store.dispatch('pkt-analytics/load')
-  },
+  }
 };
 </script>
-
-<style lang="scss">
-</style>

@@ -29,12 +29,18 @@
 %jcsa {
     justify-content: space-around;
 }
-
+%ais {
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+}
 %aic {
     -ms-align-items: center;
     align-items: center;
 }
-
+%aib {
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+}
 %fw {
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
@@ -50,6 +56,13 @@
     -o-flex-direction: column;
     flex-direction: column;
 }
+%fdr {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+}
 %bg-reset {
     background-color: $black;
     background-position: center center;
@@ -63,4 +76,19 @@
 
 %evt-all {
     pointer-events: all;
+}
+%t-left {
+    text-align: left;
+}
+%t-center {
+    text-align: center;
+}
+%t-right {
+    text-align: right;
+}
+%container_new {
+    max-width:90%;
+    width:1360px;
+    margin: auto;
+    position: relative;
 }

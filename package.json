@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "immutable": "^4.0.0-rc.12",
+    "mobile-device-detect": "^0.4.3",
     "nuxt": "^2.13.0",
     "nuxt-i18n": "^6.28.1",
     "sass-loader": "^9.0.2",

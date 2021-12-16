@@ -1,15 +1,17 @@
 $mqs: (
   //name         //breakpoint
-    "small": 320,
+  "small": 320,
   "small-sm": 360,
   "small-md": 450,
   "small-lg": 767,
-  "tablet": 768,
+  "tablet": 992,
   "tablet-lg": 1025,
   "laptop": 1100,
   "desktop-med": 1210,
   "desktop-medium": 1310,
-  "desktop-lg": 1400
+  "desktop-lg": 1441,
+  "desktop-hg": 1600,
+  "desktop-er": 1681
 );
 
 @mixin for-width($size, $size2: null) {
