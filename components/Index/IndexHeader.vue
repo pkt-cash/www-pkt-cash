@@ -1,124 +1,60 @@
 <template>
   <div class="c-index-header">
-    <div class="bg"></div>
     <div class="container">
-      <div class="c-index-header__wrap">
-        <h1 class="c-index-header__title">{{ $t("home.header_heading") }}<br /><nuxt-link to="/roadmap" class="c-scroll-sect__b-btn"><span>{{ $t("header.roadmap") }}</span></nuxt-link></h1>
-        <figure class="c-index-header__img">
-          <video autoplay loop muted playsinline draggable="false">
-            <source type="video/mp4" src="/gif.mp4" />
-          </video>
-          <!--          <img src="/img/pkt-gif.gif" alt />-->
-        </figure>
-        <template v-if="is_mobile">
-          <div class="c-index-header__list">
-            <ul class="c-index-header__list-list">
-              <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">{{ $t("home.index_1") }}</h4>
-                <span
-                  class="c-index-header__list-text"
-                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} {{ $t("home.index_1_metric") }}</span>
-              </li>
-              <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">{{ $t("home.index_2") }}</h4>
-                <span class="c-index-header__list-text">
-                  {{
-                  difficulty | commafy
-                  }}
-                </span>
-              </li>
-              <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">{{ $t("home.index_3") }}</h4>
-                <span class="c-index-header__list-text">
-                  <!--                1,645,817,539.55 PKT-->
-                  {{ already_mined | displayed_stats_data | commafy }} PKT
-                </span>
-              </li>
-              <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">{{ $t("home.index_4") }}</h4>
-                <span class="c-index-header__list-text">
-                  <!--                6,925,200-->
-                  {{ encryptionsPerSecond | commafy }}
-                </span>
-              </li>
-              <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">{{ $t("home.index_5") }}</h4>
-                <span class="c-index-header__list-text">
-                  <!--                3,037.01 PKT-->
-                  {{ reward | displayed_stats_data | commafy }} PKT
-                </span>
-              </li>
-              <li class="c-index-header__list-item">
-                <h4 class="c-index-header__list-title">{{ $t("home.index_6") }}</h4>
-                <span class="c-index-header__list-text">
-                  <!--                4,353,219,423.41 PKT-->
-                  {{ remaining | displayed_stats_data | commafy }} PKT
-                </span>
-              </li>
-            </ul>
-          </div>
-        </template>
-        <template v-else>
-          <div class="c-index-header__desk-list">
-            <div class="c-index-header__desk-left">
-              <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_1") }}</h3>
-                <p
-                  class="c-index-header__desk-itm-text"
-                >{{ (bitsPerSecond / 1024 / 1024).toFixed(2) }} {{ $t("home.index_1_metric") }}</p>
-              </div>
-              <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_4") }}</h3>
-                <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | commafy }}</p>
-              </div>
-              <div class="c-index-header__desk-itm-l c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_2") }}</h3>
-                <p class="c-index-header__desk-itm-text">{{ difficulty | commafy }}</p>
-              </div>
-            </div>
-            <div class="c-index-header__desk-right">
-              <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_5") }}</h3>
-                <p
-                  class="c-index-header__desk-itm-text"
-                >{{ reward | displayed_stats_data | commafy }} PKT</p>
-              </div>
-              <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_6") }}</h3>
-                <p
-                  class="c-index-header__desk-itm-text"
-                >{{ remaining | displayed_stats_data | commafy }} PKT</p>
-              </div>
-              <div class="c-index-header__desk-itm-r c-index-header__desk-itm">
-                <h3 class="c-index-header__desk-itm-title">{{ $t("home.index_3") }}</h3>
-                <p
-                  class="c-index-header__desk-itm-text"
-                >{{ already_mined | displayed_stats_data | commafy }} PKT</p>
-              </div>
+        <div class="c-index-header_top">
+          <div class="c-index-header_top_left">
+            <h2 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h2>
+            <h1 class="c-index-header__title">{{ $t('home.title') }}</h1>
+            <p class="c-index-header__content">{{ $t('home.content_1') }}</p>
+            <p class="c-index-header__content">{{ $t('home.content_2') }}</p>
+            <div class="c-index-header__links inline_links">
+              <nuxt-link to="/about" class="btn_blue_new button_new"><span>Intro to PKT</span></nuxt-link>
+              <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
             </div>
           </div>
-        </template>
-      </div>
+          <div class="c-index-header_top_right">
+          <figure class="c-index-header__img">
+           <Globe />
+           <!-- <img src="/img/home-globe.png" alt="Globe" /> -->
+          </figure>
+          </div>
+        </div>
+        <div class="c-index-header_mining_data">
+          <div class="c-index-header_mining_data_title">
+            <h2>{{ $t('home.mining_data_title') }}:</h2>
+            <p class="c-index-header_live btn_blue_new">{{ $t('home.mining_data_subtitle') }}</p>
+          </div>
+          <div class="c-index-header_data">
+            <h3 class="c-index-header__desk-itm-title">{{ $t('home.bandwidth') }}</h3>
+            <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }} Gb/s</p>
+            <h3 class="c-index-header__desk-itm-title">{{ $t('home.mined') }}</h3>
+            <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
+          </div>
+          <div class="c-index-header_data">
+            <h3 class="c-index-header__desk-itm-title">{{ $t('home.encryptions') }}</h3>
+            <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | displayed_enc | commafy }}</p>
+            <h3 class="c-index-header__desk-itm-title">{{ $t('home.pkt_price') }}</h3>
+            <p class="c-index-header__desk-itm-text">$0.009 / PKT</p>
+          </div>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
+import Globe from "~/components/Index/Globe";
 import { mapFields } from "vuex-map-fields";
 export default {
   name: "IndexHeader",
   computed: {
     ...mapFields("pkt-analytics", [
       "already_mined",
-      "reward",
-      "remaining",
-      "difficulty",
       "bitsPerSecond",
       "encryptionsPerSecond",
     ]),
     is_mobile() {
       return process.client && window.innerWidth < 1100;
-    },
+    }
   },
   data() {
     return {
@@ -128,6 +64,9 @@ export default {
   filters: {
     displayed_stats_data(value) {
       return (Number(value) / 0x40000000).toFixed(2);
+    },
+    displayed_enc(value) {
+      return (Number(value) / 1000000);
     },
     displayed_kb(value) {
       if (value > 1 << 30)
@@ -153,242 +92,282 @@ export default {
   beforeDestroy() {
     clearInterval(this.timeout);
     this.timeout = null;
-  },
+  }
 };
 </script>
 
 <style lang="scss">
 .c-index-header {
   position: relative;
+  background-color:$dark_blue_new;
+  background-image: url(/img/home-bg.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% auto;
   overflow: hidden;
-  background: linear-gradient(
-    119.29deg,
-    rgba(60, 207, 239, 0.0126) 28.2%,
-    rgba(60, 196, 239, 0.06) 78.24%
-  );
-  @extend %bg-reset;
-  padding: rem(136) rem(96) rem(66);
+  @include for-width(+desktop-hg) {
+    background-position: left -10px;
+    background-size: 90% auto;
+  }
+  @include for-width(+desktop-er) {
+    background-position: left -40px;
+    background-size: 90% auto;
+  }
+  @include for-width(-desktop-hg) {
+    background-position: left -10px;
+    background-size: 100% auto;
+  }
+  @include for-width(-desktop-lg) {
+    background-position: left top;
+    background-size: 95% auto;
+  }
+  @include for-width(-laptop) {
+    background-position: left top;
+    background-size: 140%;
+  }
+  @include for-width(-tablet-lg) {
+    background-position: left 10px;
+    background-size: 115%;
+  }
   @include for-width(-tablet) {
-    padding: rem(73) rem(25) rem(25);
-    background: linear-gradient(
-      69.29deg,
-      rgba(60, 207, 239, 0.0126) 28.2%,
-      rgba(60, 196, 239, 0.06) 78.24%
-    );
+    background-position: left top;
+    background-size: 135%;
   }
-
-  .container {
-    width: 100%;
-    max-width: rem(1315);
-    margin: 0 auto;
+  @include for-width(-small-lg) {
+    background-position: center -95px;
+    background-size: 395%;
   }
-
-  &__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  &__title {
-    flex: 0 0 55%;
-    @extend %h1-title;
-    padding-top: rem(50);
-    @include for-width(-desktop-lg) {
-      padding-top: rem(30);
-    }
-    @include for-width(-desktop-medium) {
-      padding-top: 0;
-    }
-    @include for-width(-desktop-med) {
-      padding-top: rem(30);
-    }
-    @include for-width(-tablet-lg) {
-      flex: 0 0 100%;
-      width: 100%;
-      /*margin-bottom: rem(6);*/
-      @include font_sizes(55, 82);
-      text-align: center;
-      max-width: 500px;
-      margin: 0 auto rem(6);
+  & .container {
+    @extend %container_new;
+    @include for-width(-tablet) {
+      max-width:100%;
+      width:100%;
+      padding:0 rem(25);
     }
     @include for-width(-small-lg) {
-      text-align: left;
-      @include font_sizes(33, 43);
+      padding:0 rem(20);
     }
   }
-  
-  .c-scroll-sect__b-btn {
-	@include for-width(-small-lg) {
-      margin: 15px 0;
-    }
-  }
-
-  &__img {
-    flex: 0 0 40%;
-    @include for-width(+ desktop-medium) {
-      height: rem(420);
-    }
-    @include for-width(+ desktop-lg) {
-      height: rem(500);
-    }
-    video {
-      width: 100%;
-      height: 100%;
-    }
-    @include for-width(-tablet-lg) {
-      flex: 0 0 100%;
-      max-width: rem(450);
-      margin: 0 auto;
-      margin-bottom: rem(15);
-    }
-  }
-
-  &__list {
-    flex: 0 0 100%;
-
-    &-list {
-      display: flex;
-      flex-wrap: wrap;
-      @include for-width(-tablet-lg) {
-        justify-content: space-between;
-      }
-    }
-
-    &-item {
-      flex: 0 0 30%;
-      margin-bottom: rem(20);
-      @include for-width(-tablet-lg) {
-        flex: 0 0 50%;
-      }
-      @include for-width(-tablet) {
-        flex: 0 0 100%;
-        text-align: center;
-      }
-      @include for-width(-tablet) {
-        margin-bottom: rem(25);
-        &:first-child {
-          order: 1;
-        }
-        &:nth-child(2) {
-          order: 6;
-        }
-        &:nth-child(3) {
-          order: 2;
-        }
-        &:nth-child(4) {
-          order: 5;
-        }
-        &:nth-child(5) {
-          order: 3;
-        }
-        &:nth-child(6) {
-          order: 4;
-        }
-      }
-    }
-    &__desk {
-    }
-
-    &-title {
-	  font-family: "Poppins-Bold", sans-serif;
-      @extend %bold;
-      @include font_sizes(18, 28);
-      @include for-width(-tablet) {
-        @include font_sizes(16, 26);
-      }
-      margin-bottom: rem(12);
-    }
-	
-    &-text {
-	  font-family: "Poppins-Bold", sans-serif;
-      color: $hard_blue;
-      @extend %bold;
-      @include font_sizes(28, 38);
-      @include for-width(-tablet) {
-        @include font_sizes(24, 33);
-      }
-    }
-  }
-}
-.c-index-header__desk {
-  &-list {
-    margin-top: rem(-85);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    @include for-width(-desktop-lg) {
-      margin-top: rem(-30);
-    }
-    @include for-width(-desktop-medium) {
-      margin-top: rem(20);
+  &__uptitle {
+    color:$light_blue_new;
+    @extend %medium;
+    font-size: rem(18);
+    line-height:rem(28);
+    text-transform: uppercase;
+    @include for-width(+desktop-lg) {
+      font-size: rem(22);
+      line-height:rem(33);
     }
     @include for-width(-laptop) {
-      margin-top: rem(10);
+      font-size: rem(16);
+      line-height:rem(26);
     }
-    @include for-width(-tablet-lg) {
-      margin-top: rem(60);
+    @include for-width(-small-lg) {
+       font-family: "Poppins-SemiBold", sans-serif;
+     }
+  }
+  &__title {
+    @extend %heading-gradient-dark;
+    @extend %bold;
+    font-size: rem(66);
+    line-height:rem(80);
+    text-transform: capitalize;
+    max-width: 500px;
+    margin-bottom:rem(15);
+    @include for-width(+desktop-hg) {
+      max-width: 575px;
+    }
+    @include for-width(+desktop-lg) {
+      font-size: rem(76);
+      line-height:rem(90);
+    }
+    @include for-width(-desktop-med) {
+      font-size: rem(60);
+      line-height:rem(68);
+      width: rem(450);
+    }
+    @include for-width(-laptop) {
+      font-size: rem(56);
+      line-height:rem(66);
+      width: rem(425);
+    }
+    @include for-width(-tablet) {
+      font-size: rem(50);
+      line-height:rem(60);
+      width: rem(375);
+    }
+    @include for-width(-small-lg) {
+      font-size: rem(42);
+      line-height:rem(52);
+      width: 90%;
     }
   }
-  &-right {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  &__content {
+    @extend %pn;
+    @extend %regular;
   }
-  &-itm {
-    &-l,
-    &-r {
-      position: relative;
-      padding: rem(10);
-      border-left: 1px solid #98e0f9;
-      &:after,
-      &:before {
-        position: absolute;
-        content: "";
-        display: block;
-        width: rem(40);
-        height: rem(1);
-        background-color: #98e0f9;
+  &_top {
+    @extend %df;
+		@extend %fdr;
+		@extend %jcsb;
+    @extend %aic;
+    padding-top:rem(125);
+    position:relative;
+    @include for-width(+desktop-lg) {
+      padding-top:rem(175);
+    }
+    @include for-width(+desktop-er) {
+      padding-top:rem(225);
+    }
+    @include for-width(-tablet) {
+      display:block;
+    }
+    @include for-width(-small-lg) {
+      padding-top:rem(100);
+    }
+    &_left {
+      @include for-width(-tablet) {
+        max-width: 90%;
       }
-      &:after {
-        top: 0;
-        left: 0;
-      }
-      &:before {
-        bottom: 0;
-        left: 0;
+      @include for-width(-small-lg) {
+        max-width: 100%;
       }
     }
-    &-r {
-      border-left: 1px solid transparent;
-      border-bottom: 1px solid #98e0f9;
-      &:after,
-      &:before {
-        width: rem(1);
-        height: rem(40);
+  }
+  &__links {
+      margin-top:rem(25);
+      @include for-width(-small-lg) {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        -ms-align-items: center;
+        align-items: center;
       }
-      &:after {
-        top: auto;
-        bottom: 0;
-        left: 0;
-      }
-      &:before {
-        bottom: 0;
-        left: auto;
-        right: -2px;
+      .button_new {
+        @extend %btn-new;
+        @extend %btn_blue_new;
+        display: inline-block;
+        margin-right: 10px;
+        @include for-width(-small-lg) {
+          display: block;
+          margin:0;
+          width:100%;
+          max-width:42vw;
+          font-family: "Poppins-SemiBold", sans-serif;
+        }
       }
     }
-    &-r {
-      padding: rem(10) rem(15);
+  &__img {
+    @extend %t-right;
+    @include for-width(-tablet) {
+      position:absolute;
+      top:50px;
+      right:0;
     }
-    &-title {
-      @extend %medium;
-      @include font_sizes(18, 28);
+    @include for-width(-small-lg) {
+      position:relative;
+      top:0;
     }
-    &-text {
-      @extend %medium;
-      @include font_sizes(18, 22);
-      color: #3cadef;
-      margin-top: rem(10);
+    img {
+      max-width:90%;
+      padding: 25px 0 0 25px;
+      @include for-width(-tablet) {
+        max-width:rem(300);
+        padding:0;
+      }
+      @include for-width(-small-lg) {
+        max-width:100%;
+      }
+    }
+  }
+  &_mining_data {
+    padding:rem(75) 0 rem(75);
+    margin:0 auto;
+    max-width:85%;
+    @extend %df;
+		@extend %jcsb;
+    @extend %aic;
+    @include for-width(+desktop-hg) {
+      padding:rem(150) 0 rem(75);
+    }
+    @include for-width(+desktop-er) {
+      padding:rem(200) 0 rem(75);
+    }
+    @include for-width(-tablet) {
+      max-width:100%;
+      padding:rem(100) 0 rem(50);
+    }
+    @include for-width(-small-lg) {
+      display:block;
+      padding:0 0 rem(50);
+    }
+    &_title {
+      @extend %subheading;
+			color: $white;
+      @extend %t-center;
+      @include for-width(-small-lg) {
+        margin-bottom:rem(35);
+      }
+      h2 {
+        margin-bottom:rem(10);
+      }
+    }
+  }
+  &_live {
+    @extend %btn_blue_new;
+    text-transform:uppercase;
+    border-radius: 18px;
+    @include for-width(-small-lg) {
+      display: inline-block;
+      padding: rem(3) rem(24);
+    }
+  }
+  &_data {
+    @extend %t-right;
+    @include for-width(-small-lg) {
+      text-align:center;
+    }
+  }
+  &__desk-itm-title {
+    color: $light_blue_new;
+    @extend %semibold;
+    font-size: rem(18);
+    line-height: rem(28);
+    @include for-width(+desktop-lg) {
+      font-size: rem(20);
+      line-height: rem(30);
+    }
+    @include for-width(-laptop) {
+      font-size: rem(16);
+      line-height: rem(26);
+    }
+  }
+  &__desk-itm-text {
+    color: $white;
+    @extend %bold;
+    font-size: rem(32);
+    line-height: rem(50);
+    @include for-width(+desktop-lg) {
+      font-size: rem(40);
+      line-height: rem(60);
+    }
+    @include for-width(-desktop-med) {
+      font-size: rem(30);
+    line-height: rem(48);
+    }
+    @include for-width(-laptop) {
+      font-size: rem(26);
+      line-height: rem(36);
+    }
+    @include for-width(-tablet) {
+      font-size: rem(24);
+      line-height: rem(34);
+    }
+    @include for-width(-small-lg) {
+        margin-bottom:rem(25);
     }
   }
 }

@@ -8,10 +8,11 @@
             <img src="/img/wallet-item-1.png" alt />
           </figure>
           <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_01_title") }}</h3>
-          <a href="#" class="c-wallet-options__item-link">
-            {{ $t("wallet.option_01_descr") }}
-          </a>
-          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://docs.pkt.cash/en/latest/pktd/pktwallet" target="_blank">
+          <a href="#" class="c-wallet-options__item-link">{{ $t("wallet.option_01_descr") }}</a>
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow"
+            href="https://docs.pkt.cash/en/latest/pktd/pktwallet"
+            target="_blank">
             <span>{{ $t("wallet.option_01_button") }}</span>
           </a>
         </div>
@@ -20,10 +21,11 @@
             <img src="/img/wallet-item-2.png" alt />
           </figure>
           <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_02_title") }}</h3>
-          <a href="#" class="c-wallet-options__item-link">
-            {{ $t("wallet.option_02_descr") }}
-          </a>
-          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://docs.pkt.cash/en/latest/electrum/" target="_blank">
+          <a href="#" class="c-wallet-options__item-link">{{ $t("wallet.option_02_descr") }}</a>
+          <a
+            class="c-wallet-options__item-btn blue-btn-arrow"
+            href="https://docs.pkt.cash/en/latest/electrum/"
+            target="_blank">
             <span>{{ $t("wallet.option_02_button") }}</span>
           </a>
         </div>
@@ -32,9 +34,7 @@
             <img src="/img/wallet-item-1.png" alt />
           </figure>
           <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_03_title") }}</h3>
-          <a href="#" class="c-wallet-options__item-link">
-            {{ $t("wallet.option_03_descr") }}
-          </a>
+          <a href="#" class="c-wallet-options__item-link">{{ $t("wallet.option_03_descr") }}</a>
           <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases" target="_blank">
             <span>{{ $t("wallet.option_03_button") }}</span>
           </a>
@@ -43,20 +43,8 @@
           <figure class="c-wallet-options__item-img">
             <img src="/img/wallet-item-2.png" alt />
           </figure>
-          <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_03_1_title") }}</h3>
-          <a href="#" class="c-wallet-options__item-link">
-            {{ $t("wallet.option_03_1_descr") }}
-          </a>
-          <a class="c-wallet-options__item-btn blue-btn-arrow" href="https://www.pkt.world/wallet" target="_blank">
-            <span>{{ $t("wallet.option_03_1_button") }}</span>
-          </a>
-        </div>
-        <div class="c-wallet-options__item">
-          <figure class="c-wallet-options__item-img">
-            <img src="/img/wallet-item-1.png" alt />
-          </figure>
           <h3 class="c-wallet-options__item-title">{{ $t("wallet.option_04_title") }}</h3>
-          <a href="#" class="c-wallet-options__item-link">{{ $t("wallet.option_04_descr") }}</a>
+          <a href="#" class="c-wallet-options__item-link"> {{ $t("wallet.option_04_descr") }} </a>
           <a class="c-wallet-options__item-btn blue-btn-arrow disabled" href="#">
             <span>{{ $t("wallet.option_04_descr") }}</span>
           </a>
@@ -110,10 +98,8 @@ export default {
     flex-direction: column;
     align-items: center;
     margin: rem(25) rem(50);
-    width:calc(50% - 100px);
     @include for-width(-tablet) {
       margin: rem(25) rem(20);
-      width:calc(100% - 40px);
     }
 
     &-img {
@@ -138,6 +124,7 @@ export default {
     &-link {
       @extend %text-main;
       color: $hard_blue;
+      max-width: 60%;
     }
 
     &-btn {

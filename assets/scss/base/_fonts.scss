@@ -47,27 +47,27 @@
 
 // ################ Poppins-SemiBold ################
 // ================ TTNorms-Regular ================
-@include font_face(TTNorms-Regular, TTNorms-Regular);
+// @include font_face(TTNorms-Regular, TTNorms-Regular);
 
-%norms-regular {
-  font-family: "TTNorms-Regular", sans-serif;
-}
+// %norms-regular {
+//   font-family: "TTNorms-Regular", sans-serif;
+// }
 
 // ################ TTNorms-Regular ################
 // ================ TTNorms-Bold ================
-@include font_face(TTNorms-Bold, TTNorms-Bold);
+// @include font_face(TTNorms-Bold, TTNorms-Bold);
 
-%norms-bold {
-  font-family: "TTNorms-Bold", sans-serif;
-}
+// %norms-bold {
+//   font-family: "TTNorms-Bold", sans-serif;
+// }
 
 // ################ TTNorms-Bold ################
 // ================ TTNorms-Light ================
-@include font_face(TTNorms-Light, TTNorms-Light);
+// @include font_face(TTNorms-Light, TTNorms-Light);
 
-%norms-light {
-  font-family: "TTNorms-Light", sans-serif;
-}
+// %norms-light {
+//   font-family: "TTNorms-Light", sans-serif;
+// }
 
 // ################ TTNorms-Light ################
 
@@ -163,5 +163,254 @@
   @include for-width(-tablet-lg) {
     //@include font_sizes(17, 27);
     @include font_sizes(16, 25);
+  }
+}
+
+/*********************************************************/
+%heading-xlarge {
+  @extend %bold;
+  font-size: rem(86);
+  line-height:rem(112);
+  text-transform: capitalize;
+  @include for-width(+desktop-hg) {
+    font-size: rem(144);
+    line-height:rem(164);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(84);
+    line-height:rem(110);
+  }
+  @include for-width(-laptop) {
+    font-size: rem(80);
+    line-height: rem(100);
+  }
+  @include for-width(-tablet) {
+    font-size: rem(70);
+    line-height: rem(90);
+  }
+  @include for-width(-small-lg) {
+    font-size: rem(60);
+    line-height: rem(80);
+  }
+}
+
+%heading-mlarge {
+  @extend %bold;
+  font-size: rem(86);
+  line-height:rem(106);
+  text-transform: capitalize;
+  @include for-width(+desktop-hg) {
+    font-size: rem(114);
+    line-height:rem(134);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(74);
+    line-height:rem(94);
+  }
+  @include for-width(-desktop-med) {
+    font-size: rem(68);
+    line-height: rem(88);
+  }
+  @include for-width(-laptop) {
+    font-size: rem(66);
+    line-height: rem(86);
+  }
+  @include for-width(-tablet) {
+    font-size: rem(60);
+    line-height: rem(80);
+  }
+}
+
+%heading-large {
+  @extend %bold;
+  font-size: rem(76);
+  line-height:rem(96);
+  text-transform: capitalize;
+  @include for-width(+desktop-hg) {
+    font-size: rem(90);
+    line-height:rem(110);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(72);
+    line-height:rem(92);
+  }
+  @include for-width(-desktop-med) {
+    font-size: rem(68);
+    line-height: rem(88);
+  }
+  @include for-width(-laptop) {
+    font-size: rem(66);
+    line-height: rem(86);
+  }
+  @include for-width(-tablet) {
+    font-size: rem(60);
+    line-height: rem(80);
+  }
+}
+
+%subheading {
+  @extend %bold;
+  font-size: rem(30);
+  line-height:rem(48);
+  text-transform: capitalize;
+  @include for-width(+desktop-hg) {
+    font-size: rem(36);
+    line-height:rem(54);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(28);
+    line-height:rem(46);
+  }
+  @include for-width(-laptop) {
+    font-size: rem(24);
+    line-height: rem(36);
+  }
+}
+
+%heading-gradient-dark {
+  background: linear-gradient(113.63deg, #201B52 23.53%, #3CADEF 93.13%, #3CADEF 93.13%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &::selection {
+    background: none;
+  }
+}
+
+%heading-gradient-light {
+  background: linear-gradient(215.69deg, #FFFFFF 10.66%, #3CADEF 117.01%, #3CADEF 117.01%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &::selection {
+    background: none;
+  }
+}
+
+%heading-small {
+  font-size: rem(22);
+  line-height:rem(34);
+  text-transform: capitalize;
+  @include for-width(+desktop-hg) {
+    font-size: rem(28);
+    line-height:rem(42);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(20);
+    line-height:rem(32);
+  }
+  @include for-width(-tablet) {
+    font-size: rem(24);
+    line-height:rem(20);
+  }
+}
+
+%heading-super-small {
+  font-size: rem(22);
+  line-height:rem(34);
+  text-transform: capitalize;
+  @extend %medium;
+  @include for-width(+desktop-hg) {
+    font-size: rem(26);
+    line-height:rem(40);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(20);
+    line-height:rem(32);
+  }
+  @include for-width(-small-lg) {
+    font-size: rem(16);
+    line-height:rem(26);
+  }
+}
+
+%heading_internal {
+  @extend %bold;
+  font-size: rem(66);
+  line-height:rem(82);
+  text-transform: capitalize;
+  @include for-width(+desktop-hg) {
+    font-size: rem(72);
+    line-height:rem(84);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(60);
+    line-height:rem(72);
+  }
+  @include for-width(-tablet-lg) {
+    font-size: rem(54);
+    line-height:rem(66);
+  }
+  @include for-width(-small-lg) {
+    font-size: rem(50);
+    line-height:rem(62);
+  }
+}
+
+%pn {
+  color:$black_new;
+  font-size: rem(16);
+  line-height: rem(25);
+  margin: 0 0 15px;
+  @include for-width(+desktop-hg) {
+    font-size: rem(18);
+    line-height: rem(27);
+  }
+  @include for-width(-laptop) {
+    font-size: rem(14);
+    line-height: rem(24);
+  }
+}
+
+%pn_large {
+  @extend %regular;
+  font-size: rem(20);
+  line-height: rem(32);
+  margin: 0 0 15px;
+  @include for-width(+desktop-hg) {
+    font-size: rem(24);
+    line-height: rem(36);
+  }
+  @include for-width(-desktop-medium) {
+    font-size: rem(16);
+    line-height: rem(28);
+  }
+  @include for-width(-laptop) {
+    font-size: rem(14);
+    line-height: rem(24);
+  }
+}
+
+%btn-new {
+  font-size: rem(16);
+  line-height: rem(25);
+  padding:rem(15);
+  width:rem(225);
+  border-radius: 33px;
+  @extend %semibold;
+  @extend %t-center;
+  @include for-width(+desktop-hg) {
+    font-size: rem(18);
+    line-height: rem(27);
+    width:rem(270);
+  }
+  @include for-width(-laptop) {
+    padding:rem(12) 0;
+    width:rem(200);
+    font-size: rem(14);
+  }
+  @include for-width(-small-lg) {
+    width:auto;
+    padding:rem(10) rem(15);
+    font-size: rem(13);
+    font-family: "Poppins-SemiBold", sans-serif;
+  }
+}
+
+%btn_blue_new {
+  color:$white;
+  background-color: $light_blue_new;
+  &:hover {
+    background-color: $light_blue_hover;
   }
 }

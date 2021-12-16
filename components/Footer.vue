@@ -4,7 +4,7 @@
       <div class="c-footer__wrap">
         <div class="c-footer__logo">
           <figure class="c-footer__logo-img">
-            <img src="/img/logo-white.svg" alt />
+            <img src="/img/logo.svg" alt="pkt.cash" />
           </figure>
         </div>
         <div class="c-footer__menu">
@@ -19,11 +19,6 @@
               <nuxt-link :to="item.route_link" class="c-footer__menu-link">
                 <span class="c-footer__menu-text">{{ item.name }}</span>
               </nuxt-link>
-            </li>
-            <li class="c-footer__menu-item">
-              <a href="https://crypto.pkt.cash/" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">{{ $t("header.blog") }}</span>
-              </a>
             </li>
           </ul>
         </div>
@@ -49,7 +44,7 @@
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Github</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer.git") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of github_links" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
@@ -59,16 +54,11 @@
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">{{ $t("footer.join_community") }}</h5>
+          <h5 class="c-footer__menu-title">{{ $t("home.join_community_title") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of join_community" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
-                <!--<span class="c-footer__menu-text c-footer__menu-text-with-social">
-                  <figure class="c-footer__menu-img">
-                    <img :src="item.icon" alt />
-                  </figure>-->
                   <span class="c-footer__menu-text">{{ item.name }}</span>
-                <!--</span>-->
               </a>
             </li>
           </ul>
@@ -90,28 +80,27 @@ export default {
   name: "Footer",
   data() {
     return {
-      // PKT
-      // About
-      // Roadmap
-      // Origin Story
-      // Community
       nav_open: false,
       quick_links: [
         {
-          name: this.$t("header.mining"),
-          route_link: "/mining",
+          name: this.$t("header.mine"),
+          route_link: "/mine",
         },
         {
           name: this.$t("header.network_st"),
           route_link: "/network-steward",
         },
         {
-          name: this.$t("footer.network_steward_voting"),
+          name: "Network Steward Voting",
           route_link: "/network-steward-vote",
         },
         {
           name: this.$t("header.wallet"),
           route_link: "/wallet",
+        },
+        {
+          name: this.$t("header.blog"),
+          route_link: "https://crypto.pkt.cash/",
         }
       ],
       about_links: [
@@ -120,27 +109,27 @@ export default {
           route_link: "/cash",
         },
         {
-          name: this.$t("footer.about"),
+          name: "About",
           route_link: "/about",
         },
         {
-          name: this.$t("header.roadmap"),
+          name: "Roadmap",
           route_link: "/roadmap",
         },
         {
-          name: this.$t("footer.origin_story"),
+          name: "Origin Story",
           route_link: "/origin-story",
         },
         {
           name: this.$t("header.community"),
           route_link: "/community",
         },
-		    {
-          name: this.$t("footer.trademark"),
+		{
+          name: "Trademark",
           route_link: "/trademark",
         },
-		    {
-          name: this.$t("footer.brand"),
+		{
+          name: "Brand",
           route_link: "/brand",
         },
       ],
@@ -160,30 +149,17 @@ export default {
       ],
       join_community: [
         {
-          name: this.$t("footer.pkt_chat"),
+          name: "pkt.chat",
           route_link: "https://pkt.chat",
-          //icon: "/img/icon/telegram.svg",
         },
         {
-          name: this.$t("footer.twitter"),
+          name: "Twitter",
           route_link: "https://twitter.com/pkt_cash",
-          //icon: "/img/icon/matrix.svg",
         },
         {
-          name: this.$t("footer.matrix"),
+          name: "Matrix",
           route_link: "https://matrix.to/#/#pkt:matrix.org",
-          //icon: "/img/icon/matrix.svg",
-        },
-        /*{
-          name: "Instagram",
-          route_link: "https://www.instagram.com/pktcash/",
-          icon: "/img/icon/instagram.svg",
-        },
-        {
-          name: "Facebook",
-          route_link: "https://www.facebook.com/PKT-110041354126488",
-          icon: "/img/icon/facebook.svg",
-        },*/
+        }
       ],
     };
   },
@@ -192,7 +168,7 @@ export default {
 
 <style lang="scss">
 .c-footer {
-  background-color: $black;
+  background-color: $dark_blue_new;
   color: $white;
 
   & .container {
@@ -221,10 +197,9 @@ export default {
       width: 60%;
       margin-right: 0;
       order: 4;
-
-      & img {
-        height: rem(25);
-      }
+    }
+    & img {
+      height: rem(40);
     }
   }
 
@@ -244,19 +219,11 @@ export default {
       margin-right: 0;
       margin-bottom: 0;
     }
-
+    @include for-width(-small-lg) {
+      margin-bottom: rem(25);
+    }
     @include for-width(-tablet) {
-      &:nth-child(2) {
-        /*order: 1;*/
-      }
-
-      &:nth-child(3) {
-        /*width: 100%;*/
-        /*order: 3;*/
-      }
-
       &:nth-child(5) {
-        /*order: 2;*/
         position: static;
         margin-bottom: rem(45);
 
@@ -274,18 +241,10 @@ export default {
     }
 
     &-title {
-      font-family: arial, sans-serif;
-      font-weight: 700;
+      @extend %medium;
       letter-spacing: 1.1px;
       @include font_sizes(15, 20);
       margin-bottom: rem(23);
-      @include for-width(-tablet) {
-        @include font_sizes(11, 19);
-        margin-bottom: rem(8);
-      }
-      @include for-width(-tablet) {
-        opacity: 0.5;
-      }
     }
 
     &-item {
@@ -303,11 +262,11 @@ export default {
     }
 
     &-link {
-      font-family: arial, sans-serif;
       letter-spacing: 0.85px;
+      @extend %light;
       @include font_sizes(15, 20);
       @include for-width(-small-lg) {
-        @include font_sizes(11, 16);
+        @include font_sizes(14, 16);
       }
       color: $white;
     }
@@ -338,31 +297,26 @@ export default {
       @include for-width(-tablet) {
         transform: translate(-33%, -50%) scale(0.65);
       }
-
-      // max-width: rem(25);
-      // height: rem(25);
     }
   }
 
   &__text {
     width: 100%;
 	text-align: center;
-	padding-top: rem(25);
+	padding-top: rem(50);
     @include for-width(-tablet) {
       width: 40%;
       order: 5;
       padding-top: 0;
-	  text-align: left;
+	    text-align: left;
+    }
+    .c-footer__menu-link {
+      @include font_sizes(15, 20);
+      color: $light_grey_new;
     }
 
     &-light {
-      opacity: 0.4;
-      font-family: arial, sans-serif;
-      letter-spacing: 1.1px;
-      @include font_sizes(15, 20);
-      @include for-width(-tablet) {
-        @include font_sizes(11, 19);
-      }
+      @include font_sizes(18, 20);
     }
   }
 }
