@@ -26,7 +26,7 @@
           </div>
           <div class="c-index-header_data">
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.bandwidth') }}</h3>
-            <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }} Gb/s</p>
+            <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }} Gb/sec</p>
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.index_3') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
           </div>
@@ -113,6 +113,9 @@ export default {
     background-position: left -40px;
     background-size: 90% auto;
   }
+  // @include for-width(+desktop-xl) {
+  //   background-image: url(/img/home-bg-xl.png);
+  // }
   @include for-width(-desktop-hg) {
     background-position: left -10px;
     background-size: 100% auto;
@@ -350,13 +353,14 @@ export default {
     @extend %bold;
     font-size: rem(32);
     line-height: rem(50);
+    margin-bottom:rem(20);
     @include for-width(+desktop-lg) {
       font-size: rem(40);
       line-height: rem(60);
     }
     @include for-width(-desktop-med) {
       font-size: rem(30);
-    line-height: rem(48);
+      line-height: rem(48);
     }
     @include for-width(-laptop) {
       font-size: rem(26);
