@@ -113,9 +113,10 @@ export default {
     background-position: left -40px;
     background-size: 90% auto;
   }
-  // @include for-width(+desktop-xl) {
-  //   background-image: url(/img/home-bg-xl.png);
-  // }
+  @include for-width(+desktop-xl) {
+    background-image: url(/img/home-bg-xl.jpg);
+    background-position: left -60px;
+  }
   @include for-width(-desktop-hg) {
     background-position: left -10px;
     background-size: 100% auto;
@@ -175,7 +176,7 @@ export default {
     font-size: rem(66);
     line-height:rem(80);
     text-transform: capitalize;
-    max-width: 500px;
+    max-width: rem(570);
     margin-bottom:rem(15);
     @include for-width(+desktop-hg) {
       max-width: 575px;
