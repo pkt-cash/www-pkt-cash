@@ -3,8 +3,8 @@
     <div class="container">
         <div class="c-index-header_top">
           <div class="c-index-header_top_left">
-            <h2 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h2>
-            <h1 class="c-index-header__title">{{ $t('home.title') }}</h1>
+            <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
+            <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
             <p class="c-index-header__content">{{ $t('home.content_1') }}</p>
             <p class="c-index-header__content">{{ $t('home.content_2') }}</p>
             <div class="c-index-header__links inline_links">
@@ -105,6 +105,10 @@ export default {
   background-position: left top;
   background-size: 100% auto;
   overflow: hidden;
+  @include for-width(+desktop-lg) {
+    background-position: left -20px;
+    background-size: 95% auto;
+  }
   @include for-width(+desktop-hg) {
     background-position: left -10px;
     background-size: 90% auto;
@@ -116,14 +120,6 @@ export default {
   @include for-width(+desktop-xl) {
     background-image: url(/img/home-bg-xl.jpg);
     background-position: left -60px;
-  }
-  @include for-width(-desktop-hg) {
-    background-position: left -10px;
-    background-size: 100% auto;
-  }
-  @include for-width(-desktop-lg) {
-    background-position: left top;
-    background-size: 95% auto;
   }
   @include for-width(-laptop) {
     background-position: left top;
@@ -218,7 +214,7 @@ export default {
     padding-top:rem(125);
     position:relative;
     @include for-width(+desktop-lg) {
-      padding-top:rem(175);
+      padding-top:rem(185);
     }
     @include for-width(+desktop-er) {
       padding-top:rem(225);
