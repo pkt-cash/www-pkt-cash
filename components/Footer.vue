@@ -28,7 +28,7 @@
               </template>
             </li>
             <li class="c-footer__menu-item">
-              <a href="https://coinmarketcap.com/currencies/pkt/" class="c-footer__menu-link">
+              <a href="https://coinmarketcap.com/currencies/pkt/" target="_blank" class="c-footer__menu-link">
                 <span class="c-footer__menu-text">Coinmarketcap</span>
               </a>
             </li>
