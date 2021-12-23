@@ -3,8 +3,8 @@
     <div class="container">
         <div class="c-index-header_top">
           <div class="c-index-header_top_left">
-            <h2 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h2>
-            <h1 class="c-index-header__title">{{ $t('home.title') }}</h1>
+            <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
+            <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
             <p class="c-index-header__content">{{ $t('home.content_1') }}</p>
             <p class="c-index-header__content">{{ $t('home.content_2') }}</p>
             <div class="c-index-header__links inline_links">
@@ -26,7 +26,7 @@
           </div>
           <div class="c-index-header_data">
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.bandwidth') }}</h3>
-            <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }} Gb/sec</p>
+            <p class="c-index-header__desk-itm-text">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }} Gb</p>
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.index_3') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ already_mined | displayed_stats_data | commafy }} PKT</p>
           </div>
@@ -34,7 +34,7 @@
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.encryptions') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | displayed_enc | commafy }}</p>
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.pkt_price') }}</h3>
-            <p class="c-index-header__desk-itm-text">$0.009 / PKT</p>
+            <p class="c-index-header__desk-itm-text">${{ json | displayed_pkt_price }} / PKT</p>
           </div>
         </div>
     </div>
@@ -59,11 +59,15 @@ export default {
   data() {
     return {
       timeout: null,
+      json: null
     };
   },
   filters: {
+    displayed_pkt_price(value) {
+      return (Number(value)).toFixed(2);
+    },
     displayed_stats_data(value) {
-      return (Number(value) / 0x40000000).toFixed(2);
+      return (Number(value) / 0x40000000).toFixed(0);
     },
     displayed_enc(value) {
       return (Number(value) / 1000000);
@@ -92,6 +96,13 @@ export default {
   beforeDestroy() {
     clearInterval(this.timeout);
     this.timeout = null;
+  },
+  created: function () {
+      fetch("https://pktticker.tonygaitatzis.com/api/1.0/spot/PKT/USD/")
+        .then(r => r.json())
+        .then(json => {
+          this.json=json.price;
+        });
   }
 };
 </script>
@@ -105,6 +116,10 @@ export default {
   background-position: left top;
   background-size: 100% auto;
   overflow: hidden;
+  @include for-width(+desktop-lg) {
+    background-position: left -20px;
+    background-size: 95% auto;
+  }
   @include for-width(+desktop-hg) {
     background-position: left -10px;
     background-size: 90% auto;
@@ -116,14 +131,6 @@ export default {
   @include for-width(+desktop-xl) {
     background-image: url(/img/home-bg-xl.jpg);
     background-position: left -60px;
-  }
-  @include for-width(-desktop-hg) {
-    background-position: left -10px;
-    background-size: 100% auto;
-  }
-  @include for-width(-desktop-lg) {
-    background-position: left top;
-    background-size: 95% auto;
   }
   @include for-width(-laptop) {
     background-position: left top;
@@ -218,7 +225,7 @@ export default {
     padding-top:rem(125);
     position:relative;
     @include for-width(+desktop-lg) {
-      padding-top:rem(175);
+      padding-top:rem(185);
     }
     @include for-width(+desktop-er) {
       padding-top:rem(225);

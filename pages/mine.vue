@@ -2,7 +2,7 @@
   <div class="v-mining">
     <section class="v-header-section">
       <HeaderInternal 
-      :title="this.$t('header.mine')" 
+      title="PKT Mining" 
       :subtitle="this.$t('mine.subtitle')" 
       :text="this.$t('mine.text')" 
       :add_title="this.$t('mine.add_title')" 

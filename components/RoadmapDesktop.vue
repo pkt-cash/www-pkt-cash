@@ -60,7 +60,7 @@
 			<text transform="matrix(1 0 0 1 749 793)" v-scroll-to="{el: '#CustomerBit',offset: -100}" class="st2 st3 st4">CustomerBit</text>
 			<text transform="matrix(1 0 0 1 749 823)" v-scroll-to="{el: '#PKTDEX',offset: -100}" class="st2 st3 st4">PKT DEX</text>
             <text transform="matrix(1 0 0 1 749 853)" v-scroll-to="{el: '#PKTDEX',offset: -100}" class="st2 st3 st4">Smart Contracts</text>
-			<text transform="matrix(1 0 0 1 227.696 169)" class="st2 st6 st7">PKT Roadmap</text>
+			<text transform="matrix(1 0 0 1 227.696 169)" class="st2 st6 st7 title_hide">PKT Roadmap</text>
 			<path id="Icon_awesome-check-2" class="st8" d="M157.4,464.5l-8.2-8.2c-0.5-0.5-0.5-1.3,0-1.8c0,0,0,0,0,0l1.8-1.8
 				c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l5.5,5.5l11.9-11.9c0.5-0.5,1.3-0.5,1.8,0c0,0,0,0,0,0l1.8,1.8c0.5,0.5,0.5,1.3,0,1.8
 				c0,0,0,0,0,0l-14.6,14.6C158.7,465,157.9,465,157.4,464.5C157.4,464.5,157.4,464.5,157.4,464.5z"/>
