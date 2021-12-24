@@ -17,12 +17,15 @@
 				<li>{{ $t("trademark.notices_list_item_1") }}</li>
 				<li>{{ $t("trademark.notices_list_item_2") }}</li>
 				<li>{{ $t("trademark.notices_list_item_3") }} <a href="https://pkt.chat" target="_blank">http://pkt.chat</a></li>
+				<li>{{ $t("trademark.notices_list_item_4") }}</li>
+				<li>{{ $t("trademark.notices_list_item_5") }}</li>
 			</ul>
 
 			<h4 class="v-trademark-section__list-title">{{ $t("trademark.uses") }}</h4>
 			<p class="v-trademark-section__text">{{ $t("trademark.you_may") }}:</p>
 			<ul>
 				<li>{{ $t("trademark.you_may_text") }}</li>
+				<li>{{ $t("trademark.you_may_text_2") }}</li>
 			</ul>
 			
 			<h4 class="v-trademark-section__list-title">{{ $t("trademark.unacceptable_uses") }}</h4>
