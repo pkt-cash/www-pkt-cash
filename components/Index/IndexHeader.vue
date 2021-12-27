@@ -145,8 +145,7 @@ export default {
     background-size: 135%;
   }
   @include for-width(-small-lg) {
-    background-position: center -95px;
-    background-size: 395%;
+    background:$white;
   }
   & .container {
     @extend %container_new;
@@ -156,7 +155,7 @@ export default {
       padding:0 rem(25);
     }
     @include for-width(-small-lg) {
-      padding:0 rem(20);
+      padding:0;
     }
   }
   &__uptitle {
@@ -175,6 +174,8 @@ export default {
     }
     @include for-width(-small-lg) {
        font-family: "Poppins-SemiBold", sans-serif;
+       font-size: rem(20);
+       line-height:rem(26);
      }
   }
   &__title {
@@ -210,12 +211,18 @@ export default {
     @include for-width(-small-lg) {
       font-size: rem(42);
       line-height:rem(52);
-      width: 90%;
+      width: 98%;
+      margin:rem(15) auto rem(25);
     }
   }
   &__content {
     @extend %pn;
     @extend %regular;
+    &:nth-child(even) {
+      @include for-width(-small-lg) {
+        margin-bottom:rem(30);
+      }
+    }
   }
   &_top {
     @extend %df;
@@ -234,7 +241,7 @@ export default {
       display:block;
     }
     @include for-width(-small-lg) {
-      padding-top:rem(100);
+      padding-top:rem(110);
     }
     &_left {
       @include for-width(-tablet) {
@@ -242,6 +249,17 @@ export default {
       }
       @include for-width(-small-lg) {
         max-width: 100%;
+        padding:0 rem(25) rem(35);
+        text-align:center;
+      }
+    }
+    &_right {
+      @include for-width(-small-lg) {
+        background-image: url(/img/home-bg-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding:0 rem(20);
       }
     }
   }
@@ -314,6 +332,7 @@ export default {
     @include for-width(-small-lg) {
       display:block;
       padding:0 0 rem(50);
+      background-color:$dark_blue_new;
     }
     &_title {
       @extend %subheading;
