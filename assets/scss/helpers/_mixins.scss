@@ -5,6 +5,8 @@
 		url($path + $file-name + ".woff") format("woff");
 		font-weight: $weight;
 		font-style: $style;
+		font-display: block;
+		preload: true,
 	}
 }
 @mixin placeholder($color, $opacity) {

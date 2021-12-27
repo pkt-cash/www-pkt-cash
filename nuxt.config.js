@@ -40,7 +40,14 @@ export default {
         content: "The world's first bandwidth-hard blockchain"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: '/img/logo.svg',
+      },
+    ],
   },
   router: {
     linkActiveClass: "link-active"
@@ -70,7 +77,13 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
 	  "vue-scrollto/nuxt",
-    "nuxt-i18n"
+    "nuxt-i18n",
+    ["@nuxtjs/robots", {
+      UserAgent: '*',
+      Allow: '/',
+      Sitemap: '/sitemap.xml',
+    }],
+    "@nuxtjs/sitemap"
   ],
   /*
    ** Axios module configuration
@@ -104,6 +117,10 @@ export default {
     },
     lazy: true,
     langDir: './locales/'
+  },
+  sitemap: {
+    hostname: 'https://pkt.cash/',
+    gzip: true,
   },
   /*
    ** Build configuration
