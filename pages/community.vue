@@ -33,8 +33,7 @@ import CommunityList from "~/components/Community/List";
 export default {
   components: {
     BigHeader,
-    CommunityList,
-    CommunityContact,
+    CommunityList
   },
   head() {
     return {
