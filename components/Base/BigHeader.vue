@@ -23,11 +23,6 @@
           v-if="btn"
         >{{ btn }}</nuxt-link>
       </template>
-
-      <p class="c-big-header__sometext" v-if="sometext">{{ sometext }}</p>
-      <div class="c-big-header__email" v-if="email">
-        <div class="klaviyo-form-UMUDtg"></div>
-      </div>
     </div>
   </div>
 </template>

@@ -78,7 +78,7 @@
         <div class="c-footer__text">
           <span class="c-footer__text-light">
             <a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">
-              ©2021 PKT Cash | {{ $t("footer.policy") }}
+              ©2022 PKT Cash | {{ $t("footer.policy") }}
             </a>
           </span>
         </div>

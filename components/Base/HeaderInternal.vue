@@ -8,7 +8,7 @@
       <p class="c-internal-header__text" v-if="text">{{ text }}</p>
       <h3 class="c-internal-header__add-title" v-if="add_title">{{ add_title }}</h3>
       <div class="c-internal-header__links desktop_view">
-        <nuxt-link :to="button_1_link" class="btn_blue_new button_new" v-if="button_1"><span>{{ button_1 }}</span></nuxt-link>
+        <a :href="button_1_link" :target="button_1_target" class="btn_blue_new button_new" v-if="button_1"><span>{{ button_1 }}</span></a>
         <a :href="button_2_link" :target="button_2_target" class="btn_blue_new button_new" v-if="button_2"><span>{{ button_2 }}</span></a>
       </div>
       <template v-if="is_resources">
@@ -51,6 +51,7 @@ export default {
     button_4_link: String,
     button_5_link: String,
     button_6_link: String,
+    button_1_target: String,
     button_2_target: String,
     is_arrow_down: Boolean,
     arrow_down_link: String,

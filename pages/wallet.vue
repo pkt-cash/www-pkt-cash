@@ -6,7 +6,7 @@
       :subtitle="this.$t('wallet.subtitle')" 
       :text="this.$t('wallet.text')" 
       :button_1="this.$t('wallet.button_1')" 
-      button_1_link="/wallet-setup" 
+      button_1_link="#options"
       is_arrow_down 
       arrow_down_link="#options" />
     </section>
@@ -62,9 +62,9 @@ export default {
           img: "/img/wallet-anode.png",
           title: "Anode Mobile Wallet",
           content: "Mobile wallet for iOS with LND for micro-transactions",
-          button_link: "",
-          button_label: "Coming Soon",
-          is_disabled: true
+          button_link: "https://anode.co",
+          button_label: "Install Anode Wallet",
+          //is_disabled: true
         }
       ],
       mining_wallets: [
@@ -102,6 +102,7 @@ export default {
     & .c-internal-header {
       @include for-width(-small-lg) {
         height:100vh;
+        padding-top:rem(75);
       }
       &__text {
         max-width: 43rem;
@@ -109,7 +110,7 @@ export default {
           max-width: 65%;
         }
         @include for-width(-small-lg) {
-          max-width: 85%;
+          max-width: 90%;
           margin-bottom:rem(25);
         }
       }
@@ -118,7 +119,7 @@ export default {
       }
       & .mobile_view {
         @include for-width(-small-lg) {
-          display:inline-block;
+          display:none;
         }
       }
       & .desktop_view {
