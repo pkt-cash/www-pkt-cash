@@ -44,9 +44,9 @@ export default {
 
 <style lang="scss">
 .c-community-list {
-  padding: rem(100) rem(25) rem(0);
+  padding: rem(100) rem(25) rem(100);
   @include for-width(-tablet) {
-    padding: rem(50) rem(25) rem(0);
+    padding: rem(50) rem(25) rem(50);
   }
 
   .container {

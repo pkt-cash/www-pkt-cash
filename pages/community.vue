@@ -23,16 +23,12 @@
         :list="join_list"
       />
     </section>
-    <section class="v-community-section">
-      <CommunityContact />
-    </section>
   </div>
 </template>
 
 <script>
 import BigHeader from "~/components/Base/BigHeader";
 import CommunityList from "~/components/Community/List";
-import CommunityContact from "~/components/Community/Contact";
 
 export default {
   components: {
