@@ -5,8 +5,8 @@
           <div class="c-index-header_top_left">
             <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
             <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
-            <p class="c-index-header__content">{{ $t('home.content_1') }}</p>
-            <p class="c-index-header__content">{{ $t('home.content_2') }}</p>
+            <p class="c-index-header__content">PKT is a fully decentralized layer-1 protocol. It is designed to transmit high speed data around the world and enable internet access without relying on traditional monopolistic ISPs.</p>
+            <p class="c-index-header__content">The PKT Network is operated entirely by the people who participate. There is no central company, no investors and no pre-mine. PKT technology lowers the barriers of entry into the world of internet service. With PKT, everyone has the economic incentive to provide internet to their neighborhood as an Edge Point, or administer technical online services as a Cloud ISP.</p>
             <div class="c-index-header__links inline_links">
               <nuxt-link to="/about" class="btn_blue_new button_new"><span>Intro to PKT</span></nuxt-link>
               <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
