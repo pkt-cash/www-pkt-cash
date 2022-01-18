@@ -125,12 +125,16 @@ export default {
     background-size: 90% auto;
   }
   @include for-width(+desktop-er) {
-    background-position: left -40px;
-    background-size: 90% auto;
+    background-position: left -20px;
+    background-size: 92% auto;
   }
   @include for-width(+desktop-xl) {
     background-image: url(/img/home-bg-xl.jpg);
     background-position: left -60px;
+  }
+  @include for-width(-desktop-medium) {
+    background-position: left top;
+    background-size: 110% auto;
   }
   @include for-width(-laptop) {
     background-position: left top;
@@ -142,7 +146,7 @@ export default {
   }
   @include for-width(-tablet) {
     background-position: left top;
-    background-size: 135%;
+    background-size: 150%;
   }
   @include for-width(-small-lg) {
     background:$white;
@@ -229,16 +233,23 @@ export default {
 		@extend %fdr;
 		@extend %jcsb;
     @extend %aic;
-    padding-top:rem(125);
+    padding-top:rem(195);
     position:relative;
-    @include for-width(+desktop-lg) {
-      padding-top:rem(185);
+    @include for-width(+desktop-hg) {
+      padding-top:rem(145);
     }
     @include for-width(+desktop-er) {
       padding-top:rem(225);
     }
+    @include for-width(-desktop-lg) {
+      padding-top:rem(185);
+    }
+    @include for-width(-desktop-medium) {
+      padding-top:rem(175);
+    }
     @include for-width(-tablet) {
       display:block;
+      padding-top:rem(125);
     }
     @include for-width(-small-lg) {
       padding-top:rem(110);
