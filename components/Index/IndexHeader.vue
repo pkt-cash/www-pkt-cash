@@ -5,8 +5,8 @@
           <div class="c-index-header_top_left">
             <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
             <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
-            <p class="c-index-header__content">{{ $t('home.content_1') }}</p>
-            <p class="c-index-header__content">{{ $t('home.content_2') }}</p>
+            <p class="c-index-header__content">PKT is a fully decentralized layer-1 protocol. It is designed to transmit high speed data around the world and enable internet access without relying on traditional monopolistic ISPs.</p>
+            <p class="c-index-header__content">The PKT Network is operated entirely by the people who participate. There is no central company, no investors and no pre-mine. PKT technology lowers the barriers of entry into the world of internet service. With PKT, everyone has the economic incentive to provide internet to their neighborhood as an Edge Point, or administer technical online services as a Cloud ISP.</p>
             <div class="c-index-header__links inline_links">
               <nuxt-link to="/about" class="btn_blue_new button_new"><span>Intro to PKT</span></nuxt-link>
               <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
@@ -125,12 +125,16 @@ export default {
     background-size: 90% auto;
   }
   @include for-width(+desktop-er) {
-    background-position: left -40px;
-    background-size: 90% auto;
+    background-position: left -20px;
+    background-size: 92% auto;
   }
   @include for-width(+desktop-xl) {
     background-image: url(/img/home-bg-xl.jpg);
     background-position: left -60px;
+  }
+  @include for-width(-desktop-medium) {
+    background-position: left top;
+    background-size: 110% auto;
   }
   @include for-width(-laptop) {
     background-position: left top;
@@ -142,7 +146,7 @@ export default {
   }
   @include for-width(-tablet) {
     background-position: left top;
-    background-size: 135%;
+    background-size: 150%;
   }
   @include for-width(-small-lg) {
     background:$white;
@@ -229,16 +233,23 @@ export default {
 		@extend %fdr;
 		@extend %jcsb;
     @extend %aic;
-    padding-top:rem(125);
+    padding-top:rem(195);
     position:relative;
-    @include for-width(+desktop-lg) {
-      padding-top:rem(185);
+    @include for-width(+desktop-hg) {
+      padding-top:rem(145);
     }
     @include for-width(+desktop-er) {
       padding-top:rem(225);
     }
+    @include for-width(-desktop-lg) {
+      padding-top:rem(185);
+    }
+    @include for-width(-desktop-medium) {
+      padding-top:rem(175);
+    }
     @include for-width(-tablet) {
       display:block;
+      padding-top:rem(125);
     }
     @include for-width(-small-lg) {
       padding-top:rem(110);
