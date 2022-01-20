@@ -38,6 +38,9 @@ export default {
 		background: $light_bg;
 		padding:rem(40) rem(30) rem(45);
 		box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+		@include for-width(+desktop-medium) {
+			padding:rem(20) rem(15) rem(25);
+		}
 		@include for-width(-tablet-lg) {
 			padding:rem(30) rem(15) rem(45);
 		}
@@ -51,6 +54,10 @@ export default {
 			width:auto;
 			max-width:rem(165);
 			margin-bottom:rem(35);
+			@include for-width(+desktop-medium) {
+				height:rem(125);
+				margin-bottom:rem(15);
+			}
 			@include for-width(-tablet) {
 				height:rem(125);
 				margin-bottom:rem(10);
@@ -63,6 +70,10 @@ export default {
 		&_title {
 			@extend %heading-super-small;
 			margin-bottom:rem(10);
+			@include for-width(+desktop-medium) {
+				font-size: rem(20);
+  				line-height:rem(32);
+			}
 			@include for-width(-small-lg) {
 				font-size: rem(24);
         		line-height: rem(36);
@@ -73,6 +84,9 @@ export default {
 			@extend %pn;
 			max-width:75%;
 			margin:0 auto rem(30);
+			@include for-width(+desktop-medium) {
+				margin-bottom:rem(15);
+			}
 			@include for-width(-tablet) {
 				max-width:100%;
 				margin:0 auto rem(15);
@@ -85,8 +99,9 @@ export default {
 			@extend %btn-new;
     		@extend %btn_blue_new;
 			display:inline-block;
-			@include for-width(-desktop-lg) {
-				width:80%;
+			@include for-width(+desktop-medium) {
+				width:60%;
+				padding:rem(12) rem(10);
 			}
 			@include for-width(-tablet-lg) {
 				width:90%;

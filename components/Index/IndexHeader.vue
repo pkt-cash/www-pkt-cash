@@ -1,7 +1,7 @@
 <template>
   <div class="c-index-header">
     <div class="container">
-        <div class="c-index-header_top">
+        <div class="c-index-header_top c-index-header_top__desktop">
           <div class="c-index-header_top_left">
             <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
             <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
@@ -15,8 +15,28 @@
           <div class="c-index-header_top_right">
           <figure class="c-index-header__img">
            <Globe />
-           <!-- <img src="/img/home-globe.png" alt="Globe" /> -->
           </figure>
+          </div>
+        </div>
+        <div class="c-index-header_top c-index-header_top__mobile">
+          <div class="c-index-header_top_left c-index-header_top__mobile_left">
+            <SpotA />
+            <div class="c-index-header_top__mobile_left__textwrap">
+              <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
+              <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
+            </div>
+            <img src="/img/home-top-globe-mobile.png" alt="Globe" class="c-index-header_top__mobile_left_globe" />
+            <a href="#arrow_down" id="arrow_down">
+              <img src="/img/chevron-double-down.svg" alt="down" />
+            </a>
+          </div>
+          <div class="c-index-header_top_right c-index-header_top__mobile_right">
+            <p class="c-index-header__content">PKT is a fully decentralized layer-1 protocol. It is designed to transmit high speed data around the world and enable internet access without relying on traditional monopolistic ISPs.</p>
+            <p class="c-index-header__content">The PKT Network is operated entirely by the people who participate. There is no central company, no investors and no pre-mine. PKT technology lowers the barriers of entry into the world of internet service. With PKT, everyone has the economic incentive to provide internet to their neighborhood as an Edge Point, or administer technical online services as a Cloud ISP.</p>
+            <div class="c-index-header__links inline_links">
+              <nuxt-link to="/about" class="btn_blue_new button_new"><span>Intro to PKT</span></nuxt-link>
+              <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
+            </div>
           </div>
         </div>
         <div class="c-index-header_mining_data">
@@ -43,6 +63,7 @@
 
 <script>
 import Globe from "~/components/Index/Globe";
+import SpotA from "~/components/Index/SpotA";
 import { mapFields } from "vuex-map-fields";
 export default {
   name: "IndexHeader",
@@ -64,7 +85,7 @@ export default {
   },
   filters: {
     displayed_pkt_price(value) {
-      return (Number(value)).toFixed(2);
+      return (Number(value)).toFixed(3);
     },
     displayed_stats_data(value) {
       return (Number(value) / 0x40000000).toFixed(0);
@@ -121,8 +142,8 @@ export default {
     background-size: 95% auto;
   }
   @include for-width(+desktop-hg) {
-    background-position: left -10px;
-    background-size: 90% auto;
+    background-position: left top;
+    background-size: 96% auto;
   }
   @include for-width(+desktop-er) {
     background-position: left -20px;
@@ -236,9 +257,9 @@ export default {
     padding-top:rem(195);
     position:relative;
     @include for-width(+desktop-hg) {
-      padding-top:rem(145);
+      padding-top:rem(175);
     }
-    @include for-width(+desktop-er) {
+    @include for-width(+desktop-xl) {
       padding-top:rem(225);
     }
     @include for-width(-desktop-lg) {
@@ -273,6 +294,76 @@ export default {
         padding:0 rem(20);
       }
     }
+    &__desktop {
+      @include for-width(-small-lg) {
+        display:none;
+      }
+    }
+    &__mobile {
+      display:none;
+      background-color:$dark_blue_new;
+      padding:0;
+      @include for-width(-small-lg) {
+        display:block;
+      }
+      &_left {
+        height:100vh;
+        padding:0 rem(20);
+        @extend %df;
+        @extend %jcc;
+        @extend %aic;
+        @extend %fdc;
+        position:relative;
+        background-image: url(/img/home-bg-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        @include for-width(-small-sm) {
+          height:auto;
+          padding-top:rem(100);
+        }
+        &_globe {
+          display: block;
+          width: 80%;
+          height: auto;
+          z-index:2;
+          position:relative;
+        }
+        &__textwrap {
+          z-index:2;
+          position:relative;
+        }
+        & #arrow_down {
+          display:block;
+          margin:0 auto;
+          position:absolute;
+          bottom:rem(20);
+          z-index:2;
+          @include for-width(-small-sm) {
+            display:none;
+          }
+          & img {
+            width:rem(22);
+            height:auto;
+          }
+        }
+      }
+      &_right {
+        padding:rem(25) rem(20) rem(50);
+        & .c-index-header__content {
+          color:$white;
+          @extend %t-center;
+          padding:0 rem(10);
+          @include for-width(-small-sm) {
+            padding:0;
+          }
+        }
+      }
+      & .c-index-header__title {
+        @extend %heading-gradient-light;
+        margin-bottom:0;
+      }
+    }
   }
   &__links {
       margin-top:rem(25);
@@ -297,6 +388,9 @@ export default {
           width:100%;
           max-width:42vw;
           font-family: "Poppins-SemiBold", sans-serif;
+        }
+        @include for-width(-small-sm) {
+          max-width: 44vw;
         }
       }
     }
