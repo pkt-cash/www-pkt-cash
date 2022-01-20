@@ -29,6 +29,7 @@
     "vuex-map-fields": "^1.4.0"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "nuxt-compress": "^5.0.0"
   }
 }
