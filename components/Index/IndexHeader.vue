@@ -303,7 +303,7 @@ export default {
       display:none;
       background-color:$dark_blue_new;
       padding:0;
-      @media screen and (orientation:landscape) {
+      @include for-width(-small-lg) {
         display:block;
       }
       &_left {
