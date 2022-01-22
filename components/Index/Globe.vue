@@ -303,7 +303,7 @@
   /* transform: rotate(180deg);
   animation: rotation 60s infinite linear; */
 }
-#globe .st6,#globe .st8,#globe .st10,#globe .st12,#globe .st14,#globe .st17 {
+/* #globe .st6,#globe .st8,#globe .st10,#globe .st12,#globe .st14,#globe .st17 {
 	animation: shake_back 7s linear infinite;
   	-webkit-animation: shake_back 7s linear infinite;
 }
@@ -314,7 +314,7 @@
 #globe .st1 {
 	animation: weeds 7s linear infinite;
   	-webkit-animation: weeds 7s linear infinite;
-}
+} */
 @media screen and (max-width:1024px) {
 	#globe {
 		width:450px;
