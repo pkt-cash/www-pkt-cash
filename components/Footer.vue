@@ -84,6 +84,7 @@
         </div>
       </div>
     </div>
+    <a href="https://pkt.cash/sitemap.xml"></a>
   </footer>
 </template>
 
