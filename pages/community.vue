@@ -11,16 +11,17 @@
     </section>
     <section class="v-community-section">
       <CommunityList
-        :title="this.$t('community.resources_title')"
-        :text="this.$t('community.resources_text')"
-        :list="resources_list"
-      />
-    </section>
-    <section class="v-community-section">
-      <CommunityList
         :title="this.$t('community.join_title')"
         :text="this.$t('community.join_text')"
         :list="join_list"
+      />
+      <div class="klaviyo-form-UX7hyQ"></div>
+    </section>
+    <section class="v-community-section">
+      <CommunityList
+        :title="this.$t('community.resources_title')"
+        :text="this.$t('community.resources_text')"
+        :list="resources_list"
       />
     </section>
   </div>
@@ -115,7 +116,7 @@ export default {
           text: this.$t("community.join_list_item_text_6"),
           img: "/img/community/matrix.svg",
           link: "https://matrix.to/#/#pkt:matrix.org",
-        },
+        }
       ],
     };
   },

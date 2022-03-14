@@ -96,7 +96,8 @@ export default {
       Allow: '/',
       Sitemap: '/sitemap.xml',
     }],
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+    '@nuxtjs/redirect-module'
   ],
   /*
    ** Axios module configuration
@@ -143,5 +144,8 @@ export default {
     styleResources: {
       scss: "./assets/scss/_nuxt-imports.scss"
     }
-  }
+  },
+  redirect: [
+    { from: '^/cash', to: '/pkt', statusCode: 301 }
+  ]
 };
