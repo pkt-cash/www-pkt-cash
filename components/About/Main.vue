@@ -30,11 +30,11 @@
           <span>{{ $t("origin_story.simple_header_title") }}</span>
         </nuxt-link>
       </div>
-      <div class="c-about-main__separator"></div>
+      <!-- <div class="c-about-main__separator"></div>
       <span class="c-about-main__involved">{{ $t("about.klaviyo_form_heading") }}</span>
       <div class="c-about-main__email">
         <div class="klaviyo-form-UX7hyQ"></div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

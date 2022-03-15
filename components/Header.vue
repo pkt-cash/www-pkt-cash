@@ -45,7 +45,7 @@
                     <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/cash">{{ $t("header.cryptoeconomics") }}</nuxt-link>
+                    <nuxt-link to="/pkt">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                   </li>
                 </ul>
               </template>
