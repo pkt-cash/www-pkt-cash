@@ -15,7 +15,6 @@
         :text="this.$t('community.join_text')"
         :list="join_list"
       />
-      <div class="klaviyo-form-UX7hyQ"></div>
     </section>
     <section class="v-community-section">
       <CommunityList
