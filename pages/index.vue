@@ -236,7 +236,7 @@ export default {
     margin:0;
     @include for-width(-small-lg) {
       position:absolute;
-      bottom:5vh;
+      bottom:rem(125);
       width:100%;
       left:0;
     }
