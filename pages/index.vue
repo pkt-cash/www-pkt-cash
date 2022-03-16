@@ -120,7 +120,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.popupS-layer {
+.popupS-base .popupS-layer {
   border-radius: 0;
   box-shadow: none;
   margin: 0;
@@ -134,7 +134,7 @@ export default {
   top: rem(10);
   right: rem(10);
 }
-.bittrex_popup {
+.popupS-base .bittrex_popup {
   background-color:$dark_blue_new;
   background-image: url(/img/popup-bg.jpg);
   background-repeat: no-repeat;
