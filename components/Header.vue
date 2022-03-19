@@ -186,7 +186,7 @@ export default {
         // },
         {
           name: this.$t("header.mine"),
-          route_link: "mine",
+          route_link: "/mine",
         },
         {
           name: this.$t("home.roadmap_link"),
@@ -194,11 +194,11 @@ export default {
         },
         {
           name: "Wallet",
-          route_link: "wallet",
+          route_link: "/wallet",
         },
         {
           name: "Community",
-          route_link: "community",
+          route_link: "/community",
         },
         {
           name: "PKT",
