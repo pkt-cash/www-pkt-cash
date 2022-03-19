@@ -24,7 +24,6 @@ import IndexBlocks from "~/components/Blocks";
 import IndexTechnology from "~/components/Index/IndexTechnology";
 import IndexTrading from "~/components/Index/IndexTrading";
 import IndexJoinCommunity from "~/components/Index/IndexJoinCommunity";
-import 'popups/css/popupS.min.css';
 export default {
   components: {
     IndexHeader,
@@ -78,7 +77,7 @@ export default {
           content: this.$t("home.block_3_content"),
           content_last: this.$t("home.block_3_content_last"),
           button_label_1: "Cryptoeconomics",
-          button_link_1: '/cash',
+          button_link_1: '/pkt',
           button_label_2: this.$t("home.block_3_label_2"),
           button_link_2: '/origin-story',
           single_1_title: this.$t("home.block_3_single_1_title"),
@@ -108,14 +107,6 @@ export default {
   },
   async mounted() {
     await this.$store.dispatch('pkt-analytics/load')
-  },
-  mounted: function() {
-    var popupS = require('popups');
-    popupS.alert({
-        content: '<div class="bittrex_popup__images"><img src="/img/popup-bittrex-logo.png" alt="Bittrex" /><img src="/img/popup-bitmart-logo.png" alt="Bitmart" /></div><h2 class="bittrex_popup__title">TRADING IS<br />NOW LIVE</h2><h4 class="bittrex_popup__sub-title">Buy PKT</h4><div class="bittrex_popup__links"><a href="https://bittrex.com/discover/join?referralCode=2IP-T42-MSE" target="_blank" class="btn_blue_new bittrex_popup__links__link">Bittrex Global (Non-USA)</a><a href="https://www.bitmart.com/en?r=rD6Q7w" target="_blank" class="btn_blue_new bittrex_popup__links__link">Bitmart (Global/USA)</a></div>',
-        className : 'bittrex_popup',
-    });
-
   }
 };
 </script>
