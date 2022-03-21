@@ -11,9 +11,9 @@
           <ul class="nav__menu-list" :class="{ active: nav_open }">
             <li
               v-for="(item, index) of nav_list"
-              @click="nav_open = !nav_open"
               :key="index"
               class="nav__menu-item"
+              v-on="item.name !== 'PKT' ? { click: ()=>nav_open = !nav_open } : {}"
             >
               <template v-if="item.name === 'Blog'">
                 <a href="https://crypto.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
@@ -26,7 +26,7 @@
                 </a>
               </template>
               <template v-else-if="item.name === 'PKT'">
-                <a class="nav__menu-link btn-nav" :class="mClass">
+                <a class="nav__menu-link btn-nav" :class="mClass" v-on:click="isPKTNavigationVisible = !isPKTNavigationVisible">
                   <span class="nav__menu-text">{{ item.name }} 
                     <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
                       <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
@@ -37,15 +37,15 @@
                     </svg>
                   </span>
                 </a>
-                <ul  class="nested-drop">
-                  <li>
-                    <nuxt-link to="/about">{{ $t("header.letter") }}</nuxt-link>
+                <ul class="nested-drop" v-if="isPKTNavigationVisible" @click="nav_open = !nav_open">
+                  <li v-on:click="isPKTNavigationVisible = false">
+                    <nuxt-link  to="/about">{{ $t("header.letter") }}</nuxt-link>
                   </li>
-                  <li>
-                    <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
+                  <li v-on:click="isPKTNavigationVisible = false">
+                    <nuxt-link  to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
                   </li>
-                  <li>
-                    <nuxt-link to="/pkt">{{ $t("header.cryptoeconomics") }}</nuxt-link>
+                  <li v-on:click="isPKTNavigationVisible = false">
+                    <nuxt-link  to="/pkt">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                   </li>
                 </ul>
               </template>
@@ -178,6 +178,7 @@ export default {
   data() {
     return {
       isLangDropdownVisible: false,
+      isPKTNavigationVisible: false,
       nav_open: false,
       nav_list: [
         // {
@@ -413,7 +414,7 @@ export default {
       }
 
       .nested-drop {
-        display: none;
+        display: block;
         position: absolute;
         top: rem(63);
         margin-left:-25px;
