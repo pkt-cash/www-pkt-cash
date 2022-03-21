@@ -38,6 +38,10 @@ export default {
       {
         property: "og:description",
         content: "The world's first bandwidth-hard blockchain"
+      },
+      {
+        property: "google-site-verification",
+        content: "KkxplZrJKbimOGuYdsRlAVVimi6dj_ve7tPbibLr8oc"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
