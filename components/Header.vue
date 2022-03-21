@@ -37,7 +37,7 @@
                     </svg>
                   </span>
                 </a>
-                <ul class="nested-drop">
+                <ul  class="nested-drop">
                   <li>
                     <nuxt-link to="/about">{{ $t("header.letter") }}</nuxt-link>
                   </li>
@@ -61,7 +61,7 @@
               </a>
             </li>
             <li class="nav__menu-lang_switch">
-              <button v-on:click="isHidden = !isHidden" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}
+              <button v-on:click="isLangDropdownVisible = !isLangDropdownVisible" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}
                 <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
                   <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
                   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
@@ -70,8 +70,8 @@
                   </g>
                 </svg>
               </button>
-              <div class="nav__menu-lang_switch_drop_down" v-if="isHidden" v-model="$i18n.locale">
-                <p v-on:click="isHidden = !isHidden">
+              <div class="nav__menu-lang_switch_drop_down" v-if="isLangDropdownVisible" v-model="$i18n.locale">
+                <p v-on:click="isLangDropdownVisible = !isLangDropdownVisible">
                   <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default {
   name: "Header",
   data() {
     return {
-      isHidden: false,
+      isLangDropdownVisible: false,
       nav_open: false,
       nav_list: [
         // {
