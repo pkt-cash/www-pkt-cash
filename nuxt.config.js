@@ -146,6 +146,6 @@ export default {
     }
   },
   redirect: [
-    { from: '/cash', to: '/pkt', statusCode: 301 }
+    { from: '^/cash', to: '/pkt', statusCode: 301 }
   ]
 };
