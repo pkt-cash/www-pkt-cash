@@ -6,7 +6,8 @@
         <p class="c-index-trading__text">{{ $t('home.trading_text_1') }}</p>
         <p class="c-index-trading__text">Buy, sell or stake Wrapped PKT (wPKT) and<br />enter the world of DeFi on Pancake Swap.</p>
         <div class="c-index-trading__links">
-            <a href="https://t.me/joinchat/VTzmfU6P3YB7WrYx" target="_blank" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></a>
+            <a href="https://global.bittrex.com/Market/Index?MarketName=USDT-PKT" target="_blank" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></a>
+            <a href="https://www.bitmart.com/trade/en?symbol=PKT_USDT&layout=basic" target="_blank" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></a>
             <a href="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32" target="_blank" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_2') }}</span></a>
         </div>
       </div>
