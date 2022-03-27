@@ -143,7 +143,7 @@ export default {
         tech_single_title_3:"TokenStrike",
         tech_single_descr_3:"PKT supports a new token standard protocol called TokenStrike, for nearly-free token and NFT issuance and zero gas fees for exchange in a trustless Lightning Network HTLC transaction. Launching 2022.",
         trading_title: "Now Trading",
-        trading_text_1: "PKT can be traded OTC in a private telegram chat. Please use approved escrows only when trading. CEX listing is in progress.",
+        trading_text_1: "PKT can be traded on Bittrex Global and Bitmart. Additional CEX listings are in the works.",
         trading_text_2: "Buy, sell or stake Wrapped PKT (wPKT) and \n" + "enter the world of DeFi on Pancake Swap.",
         trading_link_1: "Buy PKT",
         trading_link_2: "Buy wPKT",
