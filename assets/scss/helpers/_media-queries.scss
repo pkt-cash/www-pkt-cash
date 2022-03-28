@@ -12,7 +12,8 @@ $mqs: (
   "desktop-lg": 1441,
   "desktop-hg": 1600,
   "desktop-er": 1681,
-  "desktop-xl": 1921
+  "desktop-xl": 1920,
+  "desktop-xxl": 2650
 );
 
 @mixin for-width($size, $size2: null) {

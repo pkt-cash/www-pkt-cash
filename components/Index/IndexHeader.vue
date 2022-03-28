@@ -2,43 +2,17 @@
   <div class="c-index-header">
     <div class="container">
         <div class="c-index-header_top c-index-header_top__desktop">
-          <div class="c-index-header_top_left">
-            <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
-            <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
-            <p class="c-index-header__content">PKT is a fully decentralized layer-1 protocol. It is designed to transmit high speed data around the world and enable internet access without relying on traditional monopolistic ISPs.</p>
-            <p class="c-index-header__content">The PKT Network is operated entirely by the people who participate. There is no central company, no investors and no pre-mine. PKT technology lowers the barriers of entry into the world of internet service. With PKT, everyone has the economic incentive to provide internet to their neighborhood as an Edge Point, or administer technical online services as a Cloud ISP.</p>
+            <h2 class="c-index-header__title">ALWAYS ACCESSIBLE<br/>INTERNET</h2>
+            <p class="c-index-header__content">PKT is getting the next billion people online. <br/>Join the movement.</p>
             <div class="c-index-header__links inline_links">
-              <nuxt-link to="/about" class="btn_blue_new button_new"><span>Intro to PKT</span></nuxt-link>
-              <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
+              <nuxt-link to="/utility" class="btn_blue_new button_new"><span>Utility</span></nuxt-link>
+              <nuxt-link to="/build" class="btn_blue_new button_new"><span>Build</span></nuxt-link>
+              <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>Roadmap</span></nuxt-link>
             </div>
-          </div>
-          <div class="c-index-header_top_right">
-          <figure class="c-index-header__img">
-           <Globe />
-          </figure>
-          </div>
         </div>
-        <div class="c-index-header_top c-index-header_top__mobile">
-          <div class="c-index-header_top_left c-index-header_top__mobile_left">
-            <SpotA />
-            <div class="c-index-header_top__mobile_left__textwrap">
-              <h1 class="c-index-header__uptitle">{{ $t('home.subtitle') }}</h1>
-              <h2 class="c-index-header__title">{{ $t('home.title') }}</h2>
-            </div>
-            <img src="/img/home-top-globe-mobile.png" alt="Globe" class="c-index-header_top__mobile_left_globe" />
-            <a href="#arrow_down" id="arrow_down">
-              <img src="/img/chevron-double-down.svg" alt="down" />
-            </a>
-          </div>
-          <div class="c-index-header_top_right c-index-header_top__mobile_right">
-            <p class="c-index-header__content">PKT is a fully decentralized layer-1 protocol. It is designed to transmit high speed data around the world and enable internet access without relying on traditional monopolistic ISPs.</p>
-            <p class="c-index-header__content">The PKT Network is operated entirely by the people who participate. There is no central company, no investors and no pre-mine. PKT technology lowers the barriers of entry into the world of internet service. With PKT, everyone has the economic incentive to provide internet to their neighborhood as an Edge Point, or administer technical online services as a Cloud ISP.</p>
-            <div class="c-index-header__links inline_links">
-              <nuxt-link to="/about" class="btn_blue_new button_new"><span>Intro to PKT</span></nuxt-link>
-              <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="c-index-header_mining_data_wrap">
+    <div class="container">
         <div class="c-index-header_mining_data">
           <div class="c-index-header_mining_data_title">
             <h2>{{ $t('home.mining_data_title') }}:</h2>
@@ -57,6 +31,7 @@
             <p class="c-index-header__desk-itm-text">${{ json | displayed_pkt_price }} / PKT</p>
           </div>
         </div>
+    </div>
     </div>
   </div>
 </template>
@@ -85,6 +60,8 @@ export default {
   },
   filters: {
     displayed_pkt_price(value) {
+      if (value > 0.01)
+        return (Number(value)).toFixed(2);
       return (Number(value)).toFixed(3);
     },
     displayed_stats_data(value) {
@@ -131,47 +108,7 @@ export default {
 <style lang="scss">
 .c-index-header {
   position: relative;
-  background-color:$dark_blue_new;
-  background-image: url(/img/home-bg.png);
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 100% auto;
-  overflow: hidden;
-  @include for-width(+desktop-lg) {
-    background-position: left -20px;
-    background-size: 95% auto;
-  }
-  @include for-width(+desktop-hg) {
-    background-position: left top;
-    background-size: 96% auto;
-  }
-  @include for-width(+desktop-er) {
-    background-position: left -20px;
-    background-size: 92% auto;
-  }
-  @include for-width(+desktop-xl) {
-    background-image: url(/img/home-bg-xl.jpg);
-    background-position: left -60px;
-  }
-  @include for-width(-desktop-medium) {
-    background-position: left top;
-    background-size: 110% auto;
-  }
-  @include for-width(-laptop) {
-    background-position: left top;
-    background-size: 140%;
-  }
-  @include for-width(-tablet-lg) {
-    background-position: left 10px;
-    background-size: 115%;
-  }
-  @include for-width(-tablet) {
-    background-position: left top;
-    background-size: 150%;
-  }
-  @include for-width(-small-lg) {
-    background:$white;
-  }
+  background-color:$white;
   & .container {
     @extend %container_new;
     @include for-width(-tablet) {
@@ -204,45 +141,34 @@ export default {
      }
   }
   &__title {
-    @extend %heading-gradient-dark;
+    @extend %heading-gradient-darker;
     @extend %bold;
-    font-size: rem(66);
-    line-height:rem(80);
+    font-size: rem(86);
+    line-height:rem(100);
     text-transform: capitalize;
-    max-width: rem(570);
-    margin-bottom:rem(15);
-    @include for-width(+desktop-hg) {
-      max-width: 575px;
-    }
-    @include for-width(+desktop-lg) {
-      font-size: rem(76);
-      line-height:rem(90);
-    }
-    @include for-width(-desktop-med) {
-      font-size: rem(60);
-      line-height:rem(68);
-      width: rem(450);
-    }
-    @include for-width(-laptop) {
-      font-size: rem(56);
-      line-height:rem(66);
-      width: rem(425);
-    }
-    @include for-width(-tablet) {
-      font-size: rem(50);
-      line-height:rem(60);
-      width: rem(375);
-    }
+    margin-bottom:0;
     @include for-width(-small-lg) {
       font-size: rem(42);
       line-height:rem(52);
-      width: 98%;
-      margin:rem(15) auto rem(25);
+      width: 100%;
+      margin:0 auto rem(20);
     }
   }
   &__content {
-    @extend %pn;
+    font-size: rem(22);
+    line-height:rem(34);
     @extend %regular;
+    margin:rem(45) 0 rem(65);
+    @include for-width(-small-lg) {
+      margin:0;
+      font-size: rem(18);
+      line-height:rem(30);
+    }
+    & br {
+      @include for-width(-small-lg) {
+        display:none;
+      }
+    }
     &:nth-child(even) {
       @include for-width(-small-lg) {
         margin-bottom:rem(30);
@@ -251,53 +177,20 @@ export default {
   }
   &_top {
     @extend %df;
-		@extend %fdr;
-		@extend %jcsb;
+    @extend %jcc;
     @extend %aic;
-    padding-top:rem(195);
-    position:relative;
-    @include for-width(+desktop-hg) {
-      padding-top:rem(175);
-    }
-    @include for-width(+desktop-xl) {
-      padding-top:rem(225);
-    }
-    @include for-width(-desktop-lg) {
-      padding-top:rem(185);
-    }
-    @include for-width(-desktop-medium) {
-      padding-top:rem(175);
+    @extend %fdc;
+    @extend %t-center;
+    padding:rem(235) 0 rem(100);
+    @include for-width(-tablet-lg) {
+      padding:rem(200) 0 rem(75);
     }
     @include for-width(-tablet) {
-      display:block;
-      padding-top:rem(125);
+      padding:rem(150) 0 rem(75);
     }
     @include for-width(-small-lg) {
-      padding-top:rem(110);
-    }
-    &_left {
-      @include for-width(-tablet) {
-        max-width: 90%;
-      }
-      @include for-width(-small-lg) {
-        max-width: 100%;
-        padding:0 rem(25) rem(35);
-        text-align:center;
-      }
-    }
-    &_right {
-      @include for-width(-small-lg) {
-        background-image: url(/img/home-bg-mobile.png);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: cover;
-        padding:0 rem(20);
-      }
-    }
-    &__desktop {
-      @include for-width(-small-lg) {
-        display:none;
-      }
+      padding:rem(65) 0 0;
+      height:100vh;
     }
     &__mobile {
       display:none;
@@ -366,31 +259,21 @@ export default {
     }
   }
   &__links {
-      margin-top:rem(25);
-      @include for-width(-small-lg) {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: space-between;
-        -ms-align-items: center;
-        align-items: center;
-      }
+    @include for-width(-small-lg) {
+      display:block;
+      width:100%;
+    }
       .button_new {
         @extend %btn-new;
         @extend %btn_blue_new;
         display: inline-block;
-        margin-right: 10px;
+        margin: 0 rem(10);
         @include for-width(-small-lg) {
           display: block;
-          margin:0;
+          margin:0 auto rem(20);
           width:100%;
-          max-width:42vw;
+          max-width:60vw;
           font-family: "Poppins-SemiBold", sans-serif;
-        }
-        @include for-width(-small-sm) {
-          max-width: 44vw;
         }
       }
     }
@@ -417,27 +300,22 @@ export default {
       }
     }
   }
+  &_mining_data_wrap {
+    background-color:$dark_blue_new;
+  }
   &_mining_data {
-    padding:rem(75) 0 rem(75);
+    padding:rem(50) 0 rem(35);
     margin:0 auto;
     max-width:85%;
     @extend %df;
 		@extend %jcsb;
     @extend %aic;
-    @include for-width(+desktop-hg) {
-      padding:rem(150) 0 rem(75);
-    }
-    @include for-width(+desktop-er) {
-      padding:rem(200) 0 rem(75);
-    }
     @include for-width(-tablet) {
       max-width:100%;
-      padding:rem(100) 0 rem(50);
     }
     @include for-width(-small-lg) {
       display:block;
-      padding:0 0 rem(50);
-      background-color:$dark_blue_new;
+      padding:rem(65) 0 rem(50);
     }
     &_title {
       @extend %subheading;

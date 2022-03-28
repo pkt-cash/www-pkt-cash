@@ -2,18 +2,10 @@
   <div class="c-index-join">
     <div class="container">
       <h2 class="c-index-join__title">{{ $t('home.join_community_title') }}</h2>
-      <p class="c-index-join__text">{{ $t('home.join_community_text') }}</p>
-      <div class="c-social c-social_outstanding">
-        <a class="c-social__item" id="pkt-chat" href="https://pkt.chat/" target="_blank">
-        <img src="/img/icons/pkt-chat.svg" alt="PKT.chat" />     
-        </a>
-      </div>
+      <p class="c-index-join__text">PKT is a community operated project. There is no company, no investors, no CEO, and no pre-mine. It is supported by people just like YOU. Join the social channels for updates and discussions about how to participate in this fast growing network.</p>
       <SocialLinks :list="social_list" />
-      <nuxt-link class="c-index-join__link desktop" to="/community">
-        <span>{{ $t('home.join_community_label_link') }}</span>
-      </nuxt-link>
       <img src="/img/home-join-map.svg" alt="Map" class="c-index-join__map" />
-      <nuxt-link class="c-index-join__link mobile" to="/community">
+      <nuxt-link class="c-index-join__link" to="/community">
         <span>{{ $t('home.join_community_label_link') }}</span>
       </nuxt-link>
     </div>
@@ -33,17 +25,23 @@ export default {
           title: "Discord",
           link: "https://discord.com",
         },
-        // {
-        //   key: "telegram",
-        //   src: "/img/icons/telegram.svg",
-        //   title: "Telegram",
-        //   link: "https://t.me/pkt_cash",
-        // },
         {
           key: "twitter",
           src: "/img/icons/twitter.svg",
           title: "Twiter",
           link: "https://twitter.com/pkt_cash",
+        },
+        {
+          key: "pkt-chat",
+          src: "/img/icons/pkt-chat.svg",
+          title: "PKT.chat",
+          link: "https://pkt.chat/",
+        },
+        {
+          key: "instagram",
+          src: "/img/icons/instagram.svg",
+          title: "Instagram",
+          link: "https://www.instagram.com/pktcash/",
         },
         {
           key: "youtube",
@@ -107,7 +105,7 @@ export default {
     @extend %df;
 		@extend %jcc;
     @extend %aic;
-    padding:0 0 rem(25);
+    padding:rem(35) 0 rem(25);
     &__item {
       display: block;
       margin: rem(0) rem(8);
@@ -115,6 +113,9 @@ export default {
       @include for-width(-small-lg) {
         margin: rem(0) rem(10);
         max-width: rem(50);
+      }
+      &#instagram {
+        padding:rem(5);
       }
     }
   }

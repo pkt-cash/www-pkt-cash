@@ -17,11 +17,15 @@
     display: -o-flex;
     display: flex;
 }
-
+%jcs {
+    justify-content: flex-start;
+}
+%jce {
+    justify-content: flex-end;
+}
 %jcc {
     justify-content: center;
 }
-
 %jcsb {
     justify-content: space-between;
 }
@@ -91,4 +95,14 @@
     width:1360px;
     margin: auto;
     position: relative;
+}
+%centered_all {
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
