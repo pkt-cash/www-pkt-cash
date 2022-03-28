@@ -225,6 +225,9 @@ export default {
           line-height:rem(32);
         }
       }
+      &__title {
+        padding-top:rem(35);
+      }
       &__links {
         @include for-width(-desktop-lg) {
           margin-top:rem(35);

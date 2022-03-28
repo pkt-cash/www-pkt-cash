@@ -41,7 +41,7 @@
               <template v-if="item.name === 'About'">
                 <a
                   :href="item.route_link"
-                  :class="{ 'link-active' : $route.name === 'about'}"
+                  :class="{ 'link-active' : $route.name === 'letter'}"
                   class="c-footer__menu-link"
                 >
                   <span class="c-footer__menu-text">{{ item.name }}</span>
@@ -123,7 +123,7 @@ export default {
         },
         {
           name: "About",
-          route_link: "/about",
+          route_link: "/letter",
         },
         {
           name: "Roadmap",

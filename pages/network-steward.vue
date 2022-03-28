@@ -267,6 +267,8 @@ export default {
   // Top section
   &-header-section {
     & .c-internal-header {
+      height:auto;
+      min-height:100vh;
       @include for-width(-small-lg) {
         padding:rem(65) 0 rem(25);
       }
@@ -286,7 +288,8 @@ export default {
       }
       &__title {
         max-width:50%;
-        margin: rem(50) auto 0;
+        margin: rem(135) auto 0;
+        line-height:rem(86);
         @include for-width(+desktop-er) {
           max-width:75%;
           line-height:rem(110);

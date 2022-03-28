@@ -151,6 +151,9 @@ export default {
         flex-direction: column;
       }
     }
+    &__title {
+      padding-top:rem(35);
+    }
     &__links {
       @include for-width(-small-lg) {
         order:3;
