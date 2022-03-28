@@ -8,12 +8,6 @@
       <p class="c-internal-header__text" v-if="text">{{ text }}</p>
       <p class="c-internal-header__text c-internal-header__text_2" v-if="text_2">{{ text_2 }}</p>
       <h3 class="c-internal-header__add-title" v-if="add_title">{{ add_title }}</h3>
-      <template v-if="is_network">
-        <!-- <div class="c-internal-header__indexes">
-          <p class="c-internal-header__indexes_index">Network Steward Wallet Balance<span class="c-internal-header__indexes_value">51,226,189.33 PKT</span></p>
-          <p class="c-internal-header__indexes_index">Burned Coins<span class="c-internal-header__indexes_value">414,220,661.54 PKT</span></p>
-        </div> -->
-      </template>
       <div class="c-internal-header__links desktop_view">
         <a :href="button_1_link" :target="button_1_target" class="btn_blue_new button_new" v-if="button_1"><span>{{ button_1 }}</span></a>
         <a :href="button_2_link" :target="button_2_target" class="btn_blue_new button_new" v-if="button_2"><span>{{ button_2 }}</span></a>

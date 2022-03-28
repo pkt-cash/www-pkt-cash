@@ -7,7 +7,7 @@
       text="PKT Cash is a native cryptocurrency built on Bitcoin code. To create a bridge to the multi-billion dollar world of DeFi, PKT can be wrapped into a BEP20 token called $wPKT for trading on PancakeSwap and Binance Smart Chain. WPKT has a 1-to-1 peg with $PKT and can be held in any wallet that supports BEP20 tokens, such as MetaMask." 
       text_2="Since PKT and WPKT exist on different blockchains, PKT can be sent to a swap called ODApp.io in order to convert. The symbols PKT and wPKT differentiate the assets based on the blockchain they can transact on."
       button_1="Trade wPKT" 
-      button_1_link="/" />
+      button_1_link="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32" />
     </section>
     <section class="v-wpkt-section v-wpkt-section__leveraging">
       <div class="container">
@@ -142,6 +142,7 @@ export default {
         }
       }
       &__title {
+        padding-top:rem(35);
         @include for-width(-tablet) {
           order:1;
         }

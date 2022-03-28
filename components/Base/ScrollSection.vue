@@ -36,7 +36,7 @@
               <div class="c-scroll-sect__b-wrap-left">
                 <h3 class="c-scroll-sect__b-title" v-html="block.title"></h3>
                 <p class="c-scroll-sect__b-text" v-html="block.text"></p>
-                <nuxt-link to="/cash" class="c-scroll-sect__b-btn">
+                <nuxt-link to="/pkt" class="c-scroll-sect__b-btn">
                   <span>More Details</span>
                 </nuxt-link>
               </div>

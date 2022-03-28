@@ -103,10 +103,6 @@ export default {
           name: this.$t("header.network_st"),
           route_link: "/network-steward",
         },
-        // {
-        //   name: "Network Steward Voting",
-        //   route_link: "/network-steward-vote",
-        // },
         {
           name: this.$t("header.wallet"),
           route_link: "/wallet",
