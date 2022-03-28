@@ -11,6 +11,9 @@
       <div class="c-internal-header__links desktop_view">
         <a :href="button_1_link" :target="button_1_target" class="btn_blue_new button_new" v-if="button_1"><span>{{ button_1 }}</span></a>
         <a :href="button_2_link" :target="button_2_target" class="btn_blue_new button_new" v-if="button_2"><span>{{ button_2 }}</span></a>
+        <template v-if="is_getpkt">
+          <a :href="button_pkt_link" :target="button_pkt_target" class="btn_blue_new button_new" v-if="button_pkt"><span>{{ button_pkt }}</span></a>
+        </template>
       </div>
       <template v-if="is_resources">
         <div class="c-internal-header__links">
@@ -43,8 +46,10 @@ export default {
     add_title: String,
     button_1: String,
     button_2: String,
+    button_pkt: String,
     button_1_link: String,
     button_2_link: String,
+    button_pkt_link: String,
     button_3: String,
     button_4: String,
     button_5: String,
@@ -55,10 +60,12 @@ export default {
     button_6_link: String,
     button_1_target: String,
     button_2_target: String,
+    button_pkt_target: String,
     is_arrow_down: Boolean,
     arrow_down_link: String,
     is_resources: Boolean,
-    is_network: Boolean
+    is_network: Boolean,
+    is_getpkt: Boolean
   }
 };
 </script>

@@ -61,7 +61,8 @@
             <VueSlickCarousel v-bind="settings">
               <div class="v-resources-section__videos_item" v-for="(item) of podcast_list">
                 <a :href="'https://www.youtube.com/watch?v=' + item.url" target="_blank">
-                  <img :src="'https://img.youtube.com/vi/' + item.url + '/maxresdefault.jpg'" :alt="item.title" class="v-resources-section__videos_item_preview" />
+                  <!-- <img :src="'https://img.youtube.com/vi/' + item.url + '/maxresdefault.jpg'" :alt="item.title" class="v-resources-section__videos_item_preview" /> -->
+                  <img :src="item.image_default" :alt="item.title" class="v-resources-section__videos_item_preview" />
                   <h5 class="v-resources-section__videos_item__title" v-html="item.title"></h5>
                 </a>
               </div>
@@ -75,7 +76,8 @@
             <VueSlickCarousel v-bind="settings">
               <div class="v-resources-section__videos_item" v-for="(item) of howto_list">
                 <a :href="'https://www.youtube.com/watch?v=' + item.url" target="_blank">
-                  <img :src="'https://img.youtube.com/vi/' + item.url + '/maxresdefault.jpg'" :alt="item.title" class="v-resources-section__videos_item_preview" />
+                  <!-- <img :src="'https://img.youtube.com/vi/' + item.url + '/maxresdefault.jpg'" :alt="item.title" class="v-resources-section__videos_item_preview" /> -->
+                  <img :src="item.image_default" :alt="item.title" class="v-resources-section__videos_item_preview" />
                   <h5 class="v-resources-section__videos_item__title" v-html="item.title"></h5>
                 </a>
               </div>
@@ -89,7 +91,8 @@
             <VueSlickCarousel v-bind="settings">
               <div class="v-resources-section__videos_item" v-for="(item) of popular_list">
                 <a :href="'https://www.youtube.com/watch?v=' + item.url" target="_blank">
-                  <img :src="'https://img.youtube.com/vi/' + item.url + '/maxresdefault.jpg'" :alt="item.title" class="v-resources-section__videos_item_preview" />
+                  <!-- <img :src="'https://img.youtube.com/vi/' + item.url + '/maxresdefault.jpg'" :alt="item.title" class="v-resources-section__videos_item_preview" /> -->
+                  <img :src="item.image_default" :alt="item.title" class="v-resources-section__videos_item_preview" />
                   <h5 class="v-resources-section__videos_item__title" v-html="item.title"></h5>
                 </a>
               </div>
@@ -154,49 +157,59 @@ export default {
           url: "_EeWHeY-omQ",
           title: "PKT Podcast Episode 1:<br />What is PKT",
           video: "Video_1",
+          image_default: "/img/resources-episode-1.jpeg"
         },
         {
           url: "tCBKBEtFmfw",
           title: "PKT Podcast Episode 2:<br />Token vs Koin",
           video: "Video_2",
+          image_default: "/img/resources-episode-2.jpeg"
         },
         {
           url: "IBTjANISzM4",
           title: "PKT Podcast Episode 3:<br />PKT Wallet",
           video: "Video_3",
+          image_default: "/img/resources-episode-3.jpeg"
         },
         {
           url: "CFxgIKFL0DM",
           title: "PKT Podcast Episode 5:<br />Talking about PKT With Vishnu Seesahai (WPKT Dev)",
           video: "Video_4",
+          image_default: "/img/resources-episode-5.jpeg"
         }, 
       ],
       howto_list: [
         {
           url: "OAVtdfmf3Cs",
-          title: "Import PKT Wallet from Seed"
+          title: "Import PKT Wallet from Seed",
+          image_default: "/img/resources-howto-1.jpeg"
         },
         {
           url: "kTtZeI_b5jM",
-          title: "PKT Zulu Wallet Installation for MacOS"
+          title: "PKT Zulu Wallet Installation for MacOS",
+          image_default: "/img/resources-howto-2.jpeg"
         },
         {
           url: "Snbw3WbiLJQ",
-          title: "How to Mine PKT with a Docker Image"
+          title: "How to Mine PKT with a Docker Image",
+          image_default: "/img/resources-howto-3.jpeg"
         },
       ],
       popular_list : [
         {
           url: "MckyQmnl35A",
-          title: "PKT Road Map Premiere + AMA"
+          title: "PKT Road Map Premiere + AMA",
+          image_default: "/img/resources-popular-1.jpeg"
         },
         {
           url: "5pt0QMjPk_Q",
-          title: "PKT Cash Explained"
+          title: "PKT Cash Explained",
+          image_default: "/img/resources-popular-2.jpeg"
         },
         {
           url: "8wT9lhNTQQk",
-          title: "PKT Network is Connecting The Next Billion People To The Internet"
+          title: "PKT Network is Connecting The Next Billion People To The Internet",
+          image_default: "/img/resources-popular-3.jpeg"
         },
       ],
     };

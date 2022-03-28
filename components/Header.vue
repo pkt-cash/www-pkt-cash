@@ -144,7 +144,7 @@ export default {
         },
         {
           name: "Community",
-          route_link: "/community",
+          route_link: "/resources",
         },
         {
           name: "Resources",
@@ -498,7 +498,7 @@ export default {
           transform: scaleX(1);
           width:100%;
           overflow:auto;
-          padding-top:rem(35);
+          padding-top:rem(75);
           &::-webkit-scrollbar {
             display:none;
           }
