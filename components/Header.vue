@@ -31,7 +31,7 @@
               </a>
             </template>
           </div>
-          <a href="https://explorer.pkt.cash" target="" class="c-navigation__top_links__link_border">Explorer</a>
+          <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
         </div>
       </div>
     </div>
@@ -498,6 +498,7 @@ export default {
           transform: scaleX(1);
           width:100%;
           overflow:auto;
+          padding-top:rem(35);
           &::-webkit-scrollbar {
             display:none;
           }
