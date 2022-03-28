@@ -103,10 +103,10 @@ export default {
           name: this.$t("header.network_st"),
           route_link: "/network-steward",
         },
-        {
-          name: "Network Steward Voting",
-          route_link: "/network-steward-vote",
-        },
+        // {
+        //   name: "Network Steward Voting",
+        //   route_link: "/network-steward-vote",
+        // },
         {
           name: this.$t("header.wallet"),
           route_link: "/wallet",
@@ -127,15 +127,15 @@ export default {
         },
         {
           name: "Roadmap",
-          route_link: "/roadmap",
+          route_link: "/build#roadmap",
         },
         {
           name: "Origin Story",
           route_link: "/origin-story",
         },
         {
-          name: this.$t("header.community"),
-          route_link: "/community",
+          name: "Resources",
+          route_link: "/resources",
         },
 		{
           name: "Trademark",

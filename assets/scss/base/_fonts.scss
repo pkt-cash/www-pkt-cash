@@ -45,6 +45,13 @@
   font-family: "Poppins-SemiBold", sans-serif;
 }
 
+// ================ Poppins-Bold ================
+@include font_face(Poppins-Black, Poppins-Black);
+
+%black {
+  font-family: "Poppins-Black", sans-serif;
+}
+
 // ################ Poppins-SemiBold ################
 // ================ TTNorms-Regular ================
 // @include font_face(TTNorms-Regular, TTNorms-Regular);
@@ -172,9 +179,13 @@
   font-size: rem(86);
   line-height:rem(112);
   text-transform: capitalize;
-  @include for-width(+desktop-hg) {
+  @include for-width(+desktop-xl) {
     font-size: rem(144);
-    line-height:rem(164);
+    line-height:rem(180);
+  }
+  @include for-width(+desktop-er) {
+    font-size: rem(110);
+    line-height:rem(140);
   }
   @include for-width(-desktop-medium) {
     font-size: rem(84);
@@ -224,11 +235,11 @@
 %heading-large {
   @extend %bold;
   font-size: rem(76);
-  line-height:rem(96);
+  line-height:rem(102);
   text-transform: capitalize;
   @include for-width(+desktop-hg) {
     font-size: rem(90);
-    line-height:rem(110);
+    line-height:rem(116);
   }
   @include for-width(-desktop-medium) {
     font-size: rem(72);
@@ -253,7 +264,7 @@
   font-size: rem(30);
   line-height:rem(48);
   text-transform: capitalize;
-  @include for-width(+desktop-hg) {
+  @include for-width(+desktop-er) {
     font-size: rem(36);
     line-height:rem(54);
   }
@@ -269,6 +280,16 @@
 
 %heading-gradient-dark {
   background: linear-gradient(113.63deg, #201B52 23.53%, #3CADEF 93.13%, #3CADEF 93.13%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &::selection {
+    background: none;
+  }
+}
+
+%heading-gradient-darker {
+  background: linear-gradient(111.6deg, #201B52 40.84%, #3CADEF 142.88%, #3CADEF 142.88%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -310,7 +331,7 @@
   line-height:rem(34);
   text-transform: capitalize;
   @extend %medium;
-  @include for-width(+desktop-hg) {
+  @include for-width(+desktop-xl) {
     font-size: rem(26);
     line-height:rem(40);
   }

@@ -89,6 +89,12 @@ export default {
 	@include for-width(-small-lg) {
       padding:0 rem(20);
     }
+	&:first-child {
+		margin-top:0;
+		@include for-width(-tablet-lg) {
+			margin-top:rem(50);
+		}
+	}
 	&_top {
 		@extend %df;
 		@extend %aic;

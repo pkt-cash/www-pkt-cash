@@ -1,34 +1,64 @@
 <template>
-  <nav class="c-navigation">
+  <nav class="c-navigation" :class="{ 'hidden-navbar': !showNavbar }">
+    <div class="c-navigation__top" :class="{ active: nav_open }">
+      <div class="container">
+        <div class="nav__menu-lang_switch">
+          <button v-on:click="isHidden = !isHidden" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}
+            <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
+              <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                  L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                  c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                  c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z" /> </g>
+            </svg>
+          </button>
+          <div class="nav__menu-lang_switch_drop_down" v-if="isHidden" v-model="$i18n.locale">
+            <p v-on:click="isHidden = !isHidden">
+              <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+            </p>
+          </div>
+        </div>
+        <div :id="$i18n.locale" class="c-navigation__top_links">
+          <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="en">{{ $t("header.whitepaper") }}</a>
+          <a href="/PKT_Network_v1.0_2021.02.01-ja.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="ja">{{ $t("header.whitepaper") }}</a>
+          <a href="/PKT_Network_v1.0_2021.02.01-ch.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="zh">{{ $t("header.whitepaper") }}</a>
+          <a href="/PKT_Network_v1.0_2021.02.01-ko.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="ko">{{ $t("header.whitepaper") }}</a>
+          <a href="/PKT_Network_v1.0_2021.02.01-ru.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="ru">{{ $t("header.whitepaper") }}</a>
+          <a href="https://docs.pkt.cash" target="_blank" class="c-navigation__top_links__link">Docs</a>
+          <div class="c-navigation__top_links_social" v-for="item of social_list">
+            <template>
+              <a :href="item.link" target="_blank" :title="item.name" class="c-navigation__top_links_social__item">
+                <img :src="item.icon" :alt="item.name" class="c-navigation__top_links_social__item_icon" />
+              </a>
+            </template>
+          </div>
+          <a href="https://explorer.pkt.cash" target="" class="c-navigation__top_links__link_border">Explorer</a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="nav">
         <div class="nav__logo">
           <nuxt-link tag="figure" :to="localePath('index')">
-            <img src="/img/logo.svg" alt />
+            <img src="/img/logo-new.svg" alt="PKT Cash" />
           </nuxt-link>
         </div>
         <div class="nav__menu" :class="{ active: nav_open }">
           <ul class="nav__menu-list" :class="{ active: nav_open }">
             <li
               v-for="(item, index) of nav_list"
+              @click="nav_open = !nav_open"
               :key="index"
               class="nav__menu-item"
-              v-on="item.name !== 'PKT' ? { click: ()=>nav_open = !nav_open } : {}"
             >
               <template v-if="item.name === 'Blog'">
                 <a href="https://crypto.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
                   <span class="nav__menu-text">{{ item.name }}</span>
                 </a>
               </template>
-              <template v-else-if="item.name === 'Docs'">
-                <a href="https://docs.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
-                  <span class="nav__menu-text">{{ item.name }}</span>
-                </a>
-              </template>
-              <template v-else-if="item.name === 'PKT'">
-                <a class="nav__menu-link btn-nav" :class="mClass" v-on:click="isPKTNavigationVisible = !isPKTNavigationVisible">
+              <template v-else-if="item.name === 'Resources'">
+                <a class="nav__menu-link btn-nav" :class="mClass">
                   <span class="nav__menu-text">{{ item.name }} 
-                    <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
+                    <svg class="" width="12" height="12" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
                       <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
                       c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
@@ -37,15 +67,24 @@
                     </svg>
                   </span>
                 </a>
-                <ul class="nested-drop" v-if="isPKTNavigationVisible" @click="nav_open = !nav_open">
-                  <li v-on:click="isPKTNavigationVisible = false">
-                    <nuxt-link  to="/about">{{ $t("header.letter") }}</nuxt-link>
+                <ul class="nested-drop">
+                  <li>
+                    <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
                   </li>
-                  <li v-on:click="isPKTNavigationVisible = false">
-                    <nuxt-link  to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
+                  <li>
+                    <nuxt-link to="/cryptoeconomics">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                   </li>
-                  <li v-on:click="isPKTNavigationVisible = false">
-                    <nuxt-link  to="/pkt">{{ $t("header.cryptoeconomics") }}</nuxt-link>
+                  <li>
+                    <nuxt-link to="/network-steward">Network Steward</nuxt-link>
+                  </li>
+                  <li>
+                    <nuxt-link to="/ecosystem">Ecosystem</nuxt-link>
+                  </li>
+                  <li>
+                    <nuxt-link to="/pkt">PKT Cash</nuxt-link>
+                  </li>
+                  <li>
+                    <nuxt-link to="/wallet">Wallet</nuxt-link>
                   </li>
                 </ul>
               </template>
@@ -55,111 +94,17 @@
                 </nuxt-link>
               </template>
             </li>
-            <li class="nav__menu-item">
-              <a href="https://explorer.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
-                <span class="nav__menu-text">{{ $t("header.explorer") }}</span>
-              </a>
-            </li>
-            <li class="nav__menu-lang_switch">
-              <button v-on:click="isLangDropdownVisible = !isLangDropdownVisible" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}
-                <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
-                  <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
-                  L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
-                  c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
-                  c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z" /> 
-                  </g>
-                </svg>
-              </button>
-              <div class="nav__menu-lang_switch_drop_down" v-if="isLangDropdownVisible" v-model="$i18n.locale">
-                <p v-on:click="isLangDropdownVisible = !isLangDropdownVisible">
-                  <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
-                </p>
+            <li class="nav_additional">
+              <div class="c-navigation__top_links_social">
+                <template>
+                  <a :href="item.link" target="_blank" :title="item.name" class="c-navigation__top_links_social__item" v-for="item of social_list">
+                    <img :src="item.icon" :alt="item.name" class="c-navigation__top_links_social__item_icon" />
+                  </a>
+                </template>
               </div>
+              <a href="https://explorer.pkt.cash" target="" class="c-navigation__top_links__link_border">Explorer</a>
             </li>
-            <li class="mobile_button">
-              <div class="nav__menu-blue btn-nav blue-btn" @click="toggleDropdown">
-                <span class="nav__menu-link">Whitepaper
-                  <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
-                    <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
-                    L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
-                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
-                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z" /> 
-                    </g>
-                  </svg>
-                </span>
-                <div class="dropdown" :class="{ active: dropdownOpen }">
-                  <ul :id="$i18n.locale" class="dropdown__list">
-                    <li class="dropdown__list__item whitepaper">
-                      <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="dropdown__list__item__link" id="en">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ja.pdf" target="_blank" class="dropdown__list__item__link" id="ja">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ch.pdf" target="_blank" class="dropdown__list__item__link" id="zh">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ko.pdf" target="_blank" class="dropdown__list__item__link" id="ko">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ru.pdf" target="_blank" class="dropdown__list__item__link" id="ru">{{ $t("header.whitepaper") }}</a>
-                    </li>
-                    <li class="dropdown__list__item">
-                      <a
-                        href="https://docsend.com/view/ayf5d3tz5rymn8fv"
-                        target="_blank"
-                        class="dropdown__list__item__link"
-                        >{{ $t("header.deck") }}</a
-                      >
-                    </li>
-                    <li class="dropdown__list__item">
-                      <a
-                        href="/PacketCrypt-2020-09-04.pdf"
-                        target="_blank"
-                        class="dropdown__list__item__link"
-                        >{{ $t("header.packetcrypt") }}</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <!-- <li class="nav__menu-item buy">
-              <a href="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32" target="_blank" class="nav__menu-link btn-nav">
-                <span class="nav__menu-text">{{ $t("header.buy") }}</span>
-              </a>
-            </li> -->
           </ul>
-          <div class="nav__menu-blue btn-nav blue-btn desktop_button" @click="toggleDropdown">
-            <span class="nav__menu-link">Whitepaper
-              <svg class="" width="10" height="10" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
-                  <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
-                  L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
-                  c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
-                  c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z" /> 
-                  </g>
-                </svg>
-            </span>
-            <div class="dropdown" :class="{ active: dropdownOpen }">
-                  <ul :id="$i18n.locale" class="dropdown__list">
-                    <li class="dropdown__list__item whitepaper">
-                      <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="dropdown__list__item__link" id="en">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ja.pdf" target="_blank" class="dropdown__list__item__link" id="ja">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ch.pdf" target="_blank" class="dropdown__list__item__link" id="zh">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ko.pdf" target="_blank" class="dropdown__list__item__link" id="ko">{{ $t("header.whitepaper") }}</a>
-                      <a href="/PKT_Network_v1.0_2021.02.01-ru.pdf" target="_blank" class="dropdown__list__item__link" id="ru">{{ $t("header.whitepaper") }}</a>
-                    </li>
-                    <li class="dropdown__list__item">
-                      <a
-                        href="https://docsend.com/view/ayf5d3tz5rymn8fv"
-                        target="_blank"
-                        class="dropdown__list__item__link"
-                        >{{ $t("header.deck") }}</a
-                      >
-                    </li>
-                    <li class="dropdown__list__item">
-                      <a
-                        href="/PacketCrypt-2020-09-04.pdf"
-                        target="_blank"
-                        class="dropdown__list__item__link"
-                        >{{ $t("header.packetcrypt") }}</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-          </div>
         </div>
         <div
           class="nav__burger"
@@ -173,69 +118,108 @@
 
 <script>
 import { isMobile } from 'mobile-device-detect';
+const OFFSET = 60;
 export default {
   name: "Header",
   data() {
     return {
-      isLangDropdownVisible: false,
-      isPKTNavigationVisible: false,
+      isHidden: false,
       nav_open: false,
       nav_list: [
-        // {
-        //   name:this.$t("header.build"),
-        //   route_link: "build",
-        // },
+        {
+          name:"Utility",
+          route_link: "utility",
+        },
+        {
+          name:this.$t("header.build"),
+          route_link: "build",
+        },
         {
           name: this.$t("header.mine"),
-          route_link: "/mine",
+          route_link: "mine",
         },
         {
-          name: this.$t("home.roadmap_link"),
-          route_link: "/roadmap",
-        },
-        {
-          name: "Wallet",
-          route_link: "/wallet",
+          name: "Technology",
+          route_link: "tech",
         },
         {
           name: "Community",
-          route_link: "/community",
+          route_link: "community",
         },
         {
-          name: "PKT",
-          route_link: "cash",
-        },
-        // {
-        //   name: this.$t("header.tech"),
-        //   route_link: "tech",
-        // },
-        // {
-        //   name: this.$t("header.ecosystem"),
-        //   route_link: "ecosystem",
-        // },
-        {
-          name: this.$t("header.docs"),
-          route_link: "/",
+          name: "Resources",
+          route_link: "resources",
         },
         {
           name: this.$t("header.blog"),
           route_link: "/",
         }
       ],
+      social_list: [
+        {
+          name:"Discord",
+          icon: "/img/icons/header-social-discord.svg",
+          link: "https://discord.gg/pktcash",
+        },
+        {
+          name:"Twitter",
+          icon: "/img/icons/header-social-twitter.svg",
+          link: "https://twitter.com/pkt_cash",
+        },
+        {
+          name:"PKT Chat",
+          icon: "/img/icons/header-social-pktchat.svg",
+          link: "https://pkt.chat/",
+        },
+        {
+          name:"Instagram",
+          icon: "/img/icons/header-social-instagram.svg",
+          link: "https://www.instagram.com/pktcash/",
+        },
+        {
+          name:"Youtube",
+          icon: "/img/icons/header-social-youtube.svg",
+          link: "https://www.youtube.com/c/PKTCash/",
+        }
+      ],
       dropdownOpen: false,
-      mClass: isMobile ? 'mobile_block' : ''
+      mClass: isMobile ? 'mobile_block' : '',
+      showNavbar: true,
+      lastScrollPosition: 0,
+      scrollValue: 0
     };
+  },
+  mounted () {
+    this.lastScrollPosition = window.pageYOffset
+    window.addEventListener('scroll', this.onScroll)
+    const viewportMeta = document.createElement('meta')
+    viewportMeta.name = 'viewport'
+    viewportMeta.content = 'width=device-width, initial-scale=1'
+    document.head.appendChild(viewportMeta)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
     },
     onOver() {
-        this.$refs.dropdown.visible = true;
-      },
-      onLeave() {
-        this.$refs.dropdown.visible = false;
+     this.$refs.dropdown.visible = true;
+    },
+    onLeave() {
+      this.$refs.dropdown.visible = false;
+    },
+    onScroll () {
+      if (window.pageYOffset < 0) {
+        return
       }
+      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) {
+        return
+      }
+      this.showNavbar = window.pageYOffset < this.lastScrollPosition
+      this.lastScrollPosition = window.pageYOffset
+    }
   },
   computed: {
     availableLocales () {
@@ -305,8 +289,12 @@ export default {
   right: 0;
   background-color: $dark_blue_new;
   z-index: 100;
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s all ease-out;
   @include for-width(-tablet) {
     width:100%;
+    transform: none;
+    transition: none;
   }
   & .container {
     width: 100%;
@@ -320,21 +308,52 @@ export default {
       padding: rem(20) rem(25);
     }
     @include for-width(-small-lg) {
-      padding: rem(20);
+      padding: rem(15) rem(20) rem(10);
+    }
+  }
+  & .nav_additional {
+    display:none;
+    @include for-width(-small-lg) {
+      display:block;
+      margin-top:rem(50);
+      text-align:center;
+    }
+    & .c-navigation__top_links_social {
+      display:block;
+      &__item {
+        padding:0 rem(5);
+        &_icon {
+          width:rem(50);
+        }
+      }
+    }
+    & .c-navigation__top_links__link_border {
+      display:inline-block;
+      margin:rem(25) auto 0;
+      font-size:rem(18);
+      padding:rem(10) rem(50);
     }
   }
 }
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.c-navigation.hidden-navbar {
+  transform: translate3d(0, -100%, 0);
   @include for-width(-tablet) {
-    justify-content: space-between;
+    transform: none;
   }
+}
+.nav {
+  @extend %df;
+  @extend %jcsb;
+  @extend %aic;
   &__logo {
     cursor: pointer;
     margin-right:rem(40);
+    @include for-width(-desktop-medium) {
+      margin-right:rem(20);
+    }
+    @include for-width(-tablet) {
+      z-index: 1;
+    }
     & img {
       height: rem(40);
       @include for-width(-tablet) {
@@ -364,7 +383,7 @@ export default {
     }
     &-link {
       &.btn-nav {
-        font-size: rem(16);
+        font-size: rem(18);
         color: $white;
         @extend %semibold;
         @include for-width(-laptop) {
@@ -376,9 +395,13 @@ export default {
           display:block;
         }
         & svg {
-            margin-left: rem(5);
+            margin-left: rem(7);
             display:inline-block;
             vertical-align:middle;
+            @include for-width(-tablet) {
+              position:absolute;
+              top:rem(10);
+            }
           }
       }
       &.link-active {
@@ -388,6 +411,9 @@ export default {
         text-align:center;
         & .nav__menu-text {
           display:block;
+          @include for-width(-tablet) {
+            position:relative;
+          }
         }
       }
     }
@@ -402,11 +428,11 @@ export default {
       @include for-width(-laptop) {
         margin: 0 rem(10);
       }
-      @include for-width(+ laptop) {
+      @include for-width(+laptop) {
         margin:0 rem(12);
       }
-      @include for-width(+ desktop-medium) {
-        margin-left: rem(20);
+      @include for-width(-desktop-medium) {
+        margin:0 rem(8);
       }
 
       &--blue {
@@ -414,9 +440,9 @@ export default {
       }
 
       .nested-drop {
-        display: block;
+        display: none;
         position: absolute;
-        top: rem(63);
+        top: 101%;
         margin-left:-25px;
         background-color: #fff;
         border-radius: 5px;
@@ -455,6 +481,7 @@ export default {
       justify-content: space-between;
       align-items: center;
       font-size: rem(14);
+      position: relative;
       @include for-width(-tablet) {
         position: fixed;
         transform: scaleX(0);
@@ -497,6 +524,12 @@ export default {
         width: rem(197);
         min-width: auto;
         margin-left: rem(40);
+        @include for-width(-desktop-medium) {
+          margin-left:rem(20);
+        }
+        @include for-width(-desktop-med) {
+          width: rem(180);
+        }
         @extend %semibold;
         .nav__menu-link {
           color: $white;
@@ -549,11 +582,18 @@ export default {
         margin-left:-35px;
         margin-top:rem(5);
         @include for-width(-tablet) {
-          position:relative;
-          top: 0;
-          margin-left:0;
-          background: none;
-          text-align:center;
+          position:fixed;
+          top: 65px;
+          left: 0;
+          margin: 0;
+          width: 100%;
+          text-align: left;
+          padding-left: rem(10);
+          background-color: #222450;
+          border-radius: 0;
+        }
+        @include for-width(-small-lg) {
+          padding-left: 0;
         }
         & a {
           display:block;
@@ -623,16 +663,10 @@ export default {
 
     &::after {
       transform: translate(-50%, -7px);
-      // @include for-width(-tablet) {
-      //   transform: translate(-50%, -3px);
-      // }
     }
 
     &::before {
       transform: translate(-50%, 0);
-      // @include for-width(-tablet) {
-      //   transform: translate(-50%, 3px);
-      // }
     }
 
     &.active {
@@ -647,22 +681,118 @@ export default {
     }
   }
 }
-ul .whitepaper .dropdown__list__item__link {
-  display:none;
+.c-navigation__top {
+  background-color: #222450;
+  @include for-width(-tablet) {    
+    display:none;
+  }
+  &.active {
+    @include for-width(-tablet) {    
+      display:block;
+      z-index: 101;
+      position:relative;
+    }
+  }
+  & .container {
+    @extend %df;
+    @extend %jcsb;
+    @extend %aic;
+    padding: rem(15) rem(30);
+    @include for-width(-small-lg) {
+      padding:rem(10) rem(20);
+    }
+  }
+  &_links {
+    @extend %df;
+    @extend %jce;
+    @extend %aic;
+    &__link {
+      font-size: rem(16);
+      @extend %light;
+      color: $white;
+      margin-right:rem(20);
+      @include for-width(-laptop) {
+        font-size: rem(14);
+      }
+      @include for-width(-small-lg) {
+        margin-right:0;
+      }
+      &:hover {
+        color: $blue_new;
+      }
+    }
+    &__link_border {
+      font-size: rem(16);
+      color: $white;
+      @extend %semibold;
+      border: 1px solid $blue_new;
+      border-radius:rem(33);
+      padding:rem(3) rem(25);
+      margin-left:rem(20);
+      @include for-width(-laptop) {
+        font-size: rem(14);
+      }
+      @include for-width(-small-lg) {
+        display:none;
+      }
+      &:hover {
+        color: $blue_new;
+      }
+    }
+    &_social {
+      @include for-width(-small-lg) {
+        display:none;
+      }
+      &__item {
+        display: inline-block;
+        line-height: 1;
+        padding:0 rem(4);
+        & img {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  &_links__link_whitepaper {
+    display:none;
+    font-size: rem(16);
+    @extend %light;
+    color: $white;
+    margin-right:rem(15);
+    @include for-width(-laptop) {
+      font-size: rem(14);
+    }
+    &:hover {
+      color: $blue_new;
+    }
+  }
+  & div#en #en {
+    display:block;
+  }
+  & div#ja #ja {
+    display:block;
+  }
+  & div#zh #zh {
+    display:block;
+  }
+  & div#ko #ko {
+    display:block;
+  }
+  & div#ru #ru {
+    display:block;
+  }
 }
-ul#en .whitepaper #en {
-  display:block;
-}
-ul#ja .whitepaper #ja {
-  display:block;
-}
-ul#zh .whitepaper #zh {
-  display:block;
-}
-ul#ko .whitepaper #ko {
-  display:block;
-}
-ul#ru .whitepaper #ru {
-  display:block;
+.c-navigation.hidden-navbar {
+  & .c-navigation__top {
+    position: fixed;
+    top: 100%;
+    width: 100%;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    @include for-width(-tablet) {
+      position:relative;
+    }
+  }
 }
 </style>

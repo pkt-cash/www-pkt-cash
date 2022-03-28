@@ -3,17 +3,15 @@
     <div class="container">
       <div class="c-index-trading_left" vue-animate-onscroll.repeat="'animated flip'">
         <h2 class="c-index-trading__title">{{ $t('home.trading_title') }}</h2>
-        <p class="c-index-trading__text">{{ $t('home.trading_text_1') }}</p>
-        <p class="c-index-trading__text">Buy, sell or stake Wrapped PKT (wPKT) and<br />enter the world of DeFi on Pancake Swap.</p>
+        <p class="c-index-trading__text">PKT can be traded on the BitMart exchange. It is also trading via OTC on Telegram in the PKT Trading Group chat. Wrapped PKT (wPKT) can be traded via Binance Smart Chain on PancakeSwap.</p>
         <div class="c-index-trading__links">
-            <a href="https://t.me/joinchat/VTzmfU6P3YB7WrYx" target="_blank" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></a>
-            <a href="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32" target="_blank" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_2') }}</span></a>
+            <nuxt-link to="/getpkt" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></nuxt-link>
+            <nuxt-link to="/wpkt" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_2') }}</span></nuxt-link>
         </div>
       </div>
       <div class="c-index-trading_right">
         <img class="c-index-trading_right__img" src="/img/home-pancake_swap.png" alt="Pancake" />
       </div>
-      <a href="https://pancakeswap.finance" target="_blank" class="c-index-trading__pancake"><img src="/img/pancake-swap-logo.svg" alt="PancakeSwap" /></a>
     </div>
   </div>
 </template>
@@ -26,6 +24,8 @@ export default {
 <style lang="scss">
 .c-index-trading {
   margin:50px auto;
+  z-index:3;
+  position:relative;
   @include for-width(-small-lg) {
     margin:0;
     padding:rem(50) rem(20);
@@ -43,13 +43,14 @@ export default {
     background-position: center right;
     background-size: cover;
     @include for-width(-tablet) {
-      max-width:100%;
+      max-width:93%;
       width:100%;
-      padding:rem(15) rem(25) rem(35);
+      padding:rem(25) rem(25) rem(35);
       display:block;
     }
     @include for-width(-small-lg) {
-      padding:rem(35);
+      padding:rem(35) rem(30);
+      max-width:98%;
       background-image: url(/img/home-trading-bg-mobile.png);
       background-position: bottom center;
       background-size: 100% auto;
@@ -58,6 +59,13 @@ export default {
   &__text {
     @extend %pn;
     @extend %regular;
+    padding-right:rem(185);
+    @include for-width(-tablet-lg) {
+      padding-right:rem(85);
+    }
+    @include for-width(-small-lg) {
+      padding-right:0;
+    }
   }
   &_left {
     width:60%;
@@ -71,14 +79,15 @@ export default {
     }
   }
   &_right {
-    text-align:right;
+    @extend %t-center;
     position:relative;
     z-index:2;
     @include for-width(-tablet) {
-      text-align:center;
+      text-align:left;
+      margin-top:rem(25);
     }
     img {
-      max-width:90%;
+      max-width:80%;
       @include for-width(-tablet) {
         max-width:70%;
       }
@@ -106,13 +115,12 @@ export default {
     @extend %df;
     @extend %aic;
     @include for-width(-tablet) {
-      text-align:center;
-      justify-content: center;
+      margin-top:rem(25);
     }
     @include for-width(-small-lg) {
       display:block;
       margin-top:0;
-      padding-top:rem(10);
+      padding-top:rem(5);
     }
     .button_new {
         @extend %btn-new;
@@ -120,7 +128,7 @@ export default {
         display: inline-block;
         margin-right: 20px;
         @include for-width(-tablet) {
-          margin: rem(10);
+          margin: rem(10) rem(10) rem(10) 0;
         }
         @include for-width(-small-lg) {
           display:block;
