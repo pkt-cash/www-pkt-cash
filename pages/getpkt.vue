@@ -5,9 +5,17 @@
       title="Get PKT" 
       subtitle="The world’s internet bandwidth currency" 
       text="PKT is both the name of the blockchain and the trading ticker. The PKT currency is also referred to as PKT Cash. There are many ways to acquire PKT Cash." 
-      button_1="Setup a PKT Wallet" 
-      button_1_link="/wallet-setup" 
-      is_arrow_down 
+      button_1="Trade on Bittrex" 
+      button_1_link="https://global.bittrex.com/Market/Index?MarketName=USDT-PKT"
+      button_1_target="_blank"
+      button_2="Trade on BitMart"
+      button_2_link="https://www.bitmart.com/trade/en?symbol=PKT_USDT&layout=basic"
+      button_2_target="_blank"
+      button_pkt="Trade wPKT"
+      button_pkt_link="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32"
+      button_pkt_target="_blank"
+      is_arrow_down
+      is_getpkt
       arrow_down_link="#start"
       />
     </section>
@@ -50,7 +58,7 @@
       <div class="container">
         <h2 class="v-pkt-section__title">All Pkteers are Invited</h2>
         <p class="v-pkt-section__text">Once you have acquired PKT or wPKT, you become a Pkteer, joining the effort to decentralize access to the internet and empowering people around the world to monetize their internet bandwidth. Join our community of people around the world, supporting the vision of getting the next 1 billion people online. </p>
-        <nuxt-link to="/community" class="v-pkt-section__button"><span>Join the Community</span></nuxt-link>
+        <nuxt-link to="/resources" class="v-pkt-section__button"><span>Join the Community</span></nuxt-link>
       </div>
     </section>
   </div>
@@ -94,7 +102,7 @@ export default {
       steps_list: [
         {
           name: "PKT is Listing on Cryptocurrency Exchanges",
-          link: "https://t.me/joinchat/VTzmfU6P3YB7WrYx",
+          link: "https://global.bittrex.com/Market/Index?MarketName=USDT-PKT",
           link_label: "Buy PKT",
           link_2: "https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32",
           link_label_2: "Buy wPKT",
@@ -104,7 +112,7 @@ export default {
         },
         {
           name: "You Will Need a PKT Wallet",
-          link: "/wallet-setup",
+          link: "/wallet#options",
           link_label: "Get a PKT Wallet",
           versa: "versa",
           text: "Choose a PKT wallet that will safely store your PKT or wPKT. Different wallets work for different operating systems and mobile devices.",
@@ -128,8 +136,19 @@ export default {
   // Top section
   & .v-header-section {
     & .c-internal-header {
+      @include for-width(-tablet-lg) {
+        padding:rem(100) 0 rem(75);
+      }
       @include for-width(-small-lg) {
-        height:100vh;
+        min-height:100vh;
+        height:auto;
+      }
+      &__title {
+        @include for-width(-small-lg) {
+          font-size: rem(54);
+          line-height: rem(70);
+          text-transform:uppercase;
+        }
       }
       &__sub-title {
         margin:rem(20) auto rem(30);
@@ -144,22 +163,23 @@ export default {
           max-width:80%;
         }
         @include for-width(-small-lg) {
-          max-width:90%;
+          max-width:85%;
           margin-bottom:rem(25);
         }
       }
       &__links {
+        margin-top:rem(50);
         @include for-width(-small-lg) {
-          justify-content: center;
+          display:block;
+        }
+        & .button_new {
+          width:rem(200);
+          margin:rem(25) auto 0;
         }
       }
       & .arrow_down {
         @include for-width(-tablet) {
           display:none;
-        }
-        @include for-width(-small-lg) {
-          display:block;
-          bottom: 7vh;
         }
       }
     }
@@ -365,13 +385,7 @@ export default {
   }
   #first {
     & .v-pkt-section__left {
-      padding-right:rem(125);
-      @include for-width(+desktop-xl) {
-        padding-right:rem(75);
-      }
-      @include for-width(-desktop-lg) {
-        padding-right:rem(100);
-      }
+      padding-right:rem(75);
       @include for-width(-laptop) {
         padding-right:rem(50);
       }

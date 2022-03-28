@@ -193,16 +193,23 @@ export default {
             margin:rem(20) 0;
           }
           @include for-width(-small-lg) {
-            padding:0 rem(25);
+            padding:0 rem(15);
             margin:rem(10) 0;
           }
         }
         &__text {
+          max-width: 55%;
+          @include for-width(-desktop-lg) {
+            max-width: 52%;
+          }
+          @include for-width(-desktop-medium) {
+            max-width: 58%;
+          }
           @include for-width(-laptop) {
             max-width: 65%;
           }
           @include for-width(-small-lg) {
-            max-width: 95%;
+            max-width: 100%;
           }
         }
         &__links {

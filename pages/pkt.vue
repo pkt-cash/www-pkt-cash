@@ -145,6 +145,7 @@ export default {
         }
       }
       &__links {
+        margin-top:rem(50);
           .button_new {
             @include for-width(-small-lg) {
               padding:rem(10) rem(35);
