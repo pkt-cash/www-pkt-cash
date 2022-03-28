@@ -20,7 +20,7 @@
         <p class="v-network-section__supersmall">Key aspects of this objective include:</p>
         <Cards :list="objectives_list" />
         <p class="v-network-section__supersmall">In order to achieve these goals, the Network Steward will periodically meet to review funding proposals based on a strict criteria and award grants.</p>
-        <nuxt-link to="/" class="v-network-section__button"><span>View Funding Criteria</span></nuxt-link>
+        <nuxt-link to="/network-steward-vote" class="v-network-section__button"><span>View Funding Criteria</span></nuxt-link>
       </div>
     </section>
     <section class="v-network-section v-network-section__request_funding">

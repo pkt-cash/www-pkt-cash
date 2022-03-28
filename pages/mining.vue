@@ -43,7 +43,7 @@ export default {
           mobile_img: "/img/advantage/mining-1-mobile.png",
           aligh: false,
           textSVG: true,
-          lear_link: '/cash'
+          lear_link: '/pkt'
         },
         {
           title: this.$t("home.scroll_section_block_3_title"),
@@ -55,7 +55,7 @@ export default {
           mobile_img: "/img/advantage/mining-2-mobile.png",
           aligh: true,
           textSVG: true,
-          lear_link: '/cash'
+          lear_link: '/pkt'
         },
         {
           title: this.$t("home.scroll_section_block_4_title"),
@@ -67,7 +67,7 @@ export default {
           mobile_img: "/img/advantage/mining-3-mobile.png",
           aligh: false,
           textSVG: true,
-          lear_link: '/cash'
+          lear_link: '/pkt'
         },
       ],
     };

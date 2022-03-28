@@ -8,7 +8,7 @@
       :add_title="this.$t('ecosystem.add_title')" 
       :button_1="this.$t('ecosystem.button_1')" 
       :button_2="this.$t('ecosystem.button_2')"
-      button_1_link="/"
+      button_1_link="/network-steward"
       button_2_link="/utility" 
       is_arrow_down 
       arrow_down_link="#eco" />

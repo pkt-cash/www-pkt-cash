@@ -28,7 +28,7 @@
       </div>
       <div class="v-about-section__links">
         <div class="container">
-          <a href="/build#roadmap" class="btn_blue_new button_new"><span>PKT Roadmap</span></a>
+          <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>PKT Roadmap</span></nuxt-link>
           <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
         </div>
       </div>
@@ -36,7 +36,7 @@
     <section class="v-about-section_involved">
       <div class="container">
         <h2 class="v-about-section-title_h2">Get Involved</h2>
-        <nuxt-link to="/community" class="btn_blue_new button_new"><span>Join the Community</span></nuxt-link>
+        <nuxt-link to="/resources" class="btn_blue_new button_new"><span>Join the Community</span></nuxt-link>
       </div>
     </section>
   </div>

@@ -128,27 +128,27 @@ export default {
       nav_list: [
         {
           name:"Utility",
-          route_link: "utility",
+          route_link: "/utility",
         },
         {
           name:this.$t("header.build"),
-          route_link: "build",
+          route_link: "/build",
         },
         {
           name: this.$t("header.mine"),
-          route_link: "mine",
+          route_link: "/mine",
         },
         {
           name: "Technology",
-          route_link: "tech",
+          route_link: "/tech",
         },
         {
           name: "Community",
-          route_link: "community",
+          route_link: "/community",
         },
         {
           name: "Resources",
-          route_link: "resources",
+          route_link: "/resources",
         },
         {
           name: this.$t("header.blog"),
