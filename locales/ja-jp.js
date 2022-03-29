@@ -33,7 +33,7 @@ export default {
         origin_story: "誕生の物語 コミュニティ",
         trademark: "Trademark",
         brand: "Brand",
-        pkt_chat: "PlayKey(PKT)チャット",
+        pkt_chat: "PKT チャット",
         twitter: "Twitter(ツイッター)",
         matrix: "Matrix",
     },
@@ -41,7 +41,7 @@ export default {
         learn_more: "さらに学ぶ"
     },
     home: {
-        meta_title: "PlayKey(PKT)キャッシュ - The World's First Bandwidth-Hard Blockchain",
+        meta_title: "PKTキャッシュ - The World's First Bandwidth-Hard Blockchain",
         meta_descr: "世界初の帯域幅ハードウェアのブロックチェーン",
         header_heading: "The world’s first bandwidth-hard blockchain",
         index_1: "ネットワーク帯域幅",
@@ -56,7 +56,7 @@ export default {
         scroll_section_title: "ネットワーク",
         scroll_section_descr: "世界初の帯域幅ハードウェアのブロックチェーンプロトコルは、インフラの増加対策として作られました。",
         scroll_section_button_label: "詳細を確認",
-        scroll_section_block_1_title: "PlayKey(PKT) ネットワーク",
+        scroll_section_block_1_title: "PKT ネットワーク",
         scroll_section_block_1_descr: "PKT is a blockchain enabling anyone to become an ISP. Users allocate bandwidth from their " + "local internet connections and build a global, decentralized edge network, " + "by the people, for the people. \n",
         scroll_section_block_2_title: "PacketCryptのプロトコル",
         scroll_section_block_2_descr: "PKT is a Bitcoin fork, using PacketCrypt, the world's first bandwidth-hard proof of work. " +
@@ -68,8 +68,8 @@ export default {
         scroll_section_block_4_descr: "Dedicated miners use specialized equipment to secure the blockchain, \n" +
         "but the PacketCrypt algorithm allows them to do less work if they have more announcements, \n" +
         "effectively substituting bandwidth for CPU power. \n",
-        scroll_section_block_5_title: "PlayKey(PKT)",
-        scroll_section_block_5_descr: "PlayKey(PKT)はビットコインのコードに基づいたネイティブ暗号通貨であり、 \n" +
+        scroll_section_block_5_title: "PKT",
+        scroll_section_block_5_descr: "PKTはビットコインのコードに基づいたネイティブ暗号通貨であり、 \n" +
         "初日からライトニングネットワークを利用可能にします。これはトークンではなく中央発行者がいないのでガス手数料はいりません。 \n",
         scroll_section_block_6_descr: "PKT is a new blockchain that rewards users for contributing bandwidth to the network. \n" +
         "Nodes broadcast what are called announcements (“anns”) across the network, and Blockminers gather those anns and put them into the blockchain. \n",
@@ -116,42 +116,42 @@ export default {
     },
     cash: {
         meta_title: "Cash - PKT",
-        page_subtitle: "PlayKey(PKT)がPacketCryptマイナーに支払い",
+        page_subtitle: "PKTがPacketCryptマイナーに支払い",
         adv_subtitle: "ネットワーク管理者は採掘報酬(コインベース)ごとに20％を受け取る。",
         adv_text: "ネットワーク管理者は、開発者がインターネット基盤とメッシュネットワーク技術の構築の資金援助をできるように、新たなブロックマインにつきその20％を受け取るアドレスです。プリマインや設立者の手数料と違い、ネットワーク管理者支払いの受取人は販売自転情報管理投票によって変わり得ます。",
-        main_text_1: "PlayKey(PKT)はビットコインコードに基づいたネイティブブロックチェーンです。 \n" +
+        main_text_1: "PKTはビットコインコードに基づいたネイティブブロックチェーンです。 \n" +
         "それには１分のブロックタイムがあり、PacketCryptのプルーフ・オブ・ワークを用い、毎回の採掘報酬(コインベース)支払いの20％を受け取るネットワーク管理者のアドレスを持ちます。 \n" +
-        "合計60億の採掘されるPlayKey(PKT)があり、不意に支払額を4年ごとに二等分するのではなく、PlayKey(PKT)では100日ごとに10％着実に減少します",
-        main_text_2: "PlayKey(PKT)はマイクロトランザクションのために作られているので、ビットコイン(BTC)は2,100万で最大限に達するところを、PlayKey(PKT)は合計60億が採掘されます。 \n" +
-        "さらに、１ビットコインにつき1億Satoshi(サトシ)のみのところを、それぞれのPlayKey(PKT)を1,073,741,824ユニット(２から３０番目のパワー)に小分けする事ができます。 \n" +
+        "合計60億の採掘されるPKTがあり、不意に支払額を4年ごとに二等分するのではなく、PKTでは100日ごとに10％着実に減少します",
+        main_text_2: "PKTはマイクロトランザクションのために作られているので、ビットコイン(BTC)は2,100万で最大限に達するところを、PKTは合計60億が採掘されます。 \n" +
+        "さらに、１ビットコインにつき1億Satoshi(サトシ)のみのところを、それぞれのPKTを1,073,741,824ユニット(２から３０番目のパワー)に小分けする事ができます。 \n" +
         "2021年1月にビットコインの価格がほぼ42,000ドルに達した時点で、1Satoshi(サトシ)の価格は0,04セントでした。\n" +
         "この1Satoshi( サトシ)ごとの価格は、ライトニングネットワークでほぼ無料で取引をするとしても、マイクロトランザクションには実用的ではありません。.",
-        main_text_3: "PlayKey(PKT)は帯域幅トレード市場を可能にする、小さなドミネーションでの迅速で安い取引という考えに基づき作られました。PlayKey(PKT)キャッシュは、人々が帯域幅をネットワークに接続するための経済刺激を提供します。ネットワーク管理者は、分散したインターネット基盤とオープンソース技術を構築するのを可能にする資金援助を確実にする事を目的としています。",
-        main_caption: "PlayKey(PKT)の支払い vs ビットコイン(BTC)の合計コイン割合",
+        main_text_3: "PKTは帯域幅トレード市場を可能にする、小さなドミネーションでの迅速で安い取引という考えに基づき作られました。PKTキャッシュは、人々が帯域幅をネットワークに接続するための経済刺激を提供します。ネットワーク管理者は、分散したインターネット基盤とオープンソース技術を構築するのを可能にする資金援助を確実にする事を目的としています。",
+        main_caption: "PKTの支払い vs ビットコイン(BTC)の合計コイン割合",
     },
     community: {
         meta_title: "コミュニティ - PKT",
-        resources_list_title: "PlayKey(PKT)トレーディンググループ",
+        resources_list_title: "PKTトレーディンググループ",
         resources_list_text: "の対等な売買のための、組織されたコミュニティでのテレグラムチャットです。",
         big_header_title: "コミュニティ",
-        big_header_subtitle: "PlayKeyネットワークに関心を持ってくださりありがとうございます。このネットワークの基盤構成の強さは全体のまとまりにかかっています。",
+        big_header_subtitle: "PKTネットワークに関心を持ってくださりありがとうございます。このネットワークの基盤構成の強さは全体のまとまりにかかっています。",
         big_header_text: "利用可能な様々なリソースを確認して、共同して働きコミュニケーションを図って下さい。.",
         resources_title: "リソース",
-        resources_text: "PlayKey(PKT)トレーディンググループに参加してPlayKey(PKT)流動性を促す、証券会社やお客様を見つけて下さい。このコミュニティリソースは、PlayKey(PKT)のブロック取引を始めるために公開されています。",
+        resources_text: "PKTトレーディンググループに参加してPKT流動性を促す、証券会社やお客様を見つけて下さい。このコミュニティリソースは、PKTのブロック取引を始めるために公開されています。",
         join_title: "参加して下さい",
-        join_text: "参加してさらに進歩したインターネットを作り上げるための助けになって下さい。オンラインでPlayKey(PKT)コミュニティメンバーと繋がり協力しましょう。",
-        join_list_item_title_1: "PlayKeyチャット- プロジェクトチャット",
-        join_list_item_text_1: "PlayKey(PKT) のコア開発者とチャットし、助けやサポートを受けてプロジェクトに参加する場所です。",
-        join_list_item_title_2: "PlayKey(PKT)キャッシュ- コミュニティでのディスカッション",
-        join_list_item_text_2: "PlayKey(PKT) プロジェクトについてディスカッションできる組織されたコミュニティでのチャットです。",
-        join_list_item_title_3: "PlayKey(PKT)コミュニティでの不和",
-        join_list_item_text_3: "PlayKey(PKT)に関連した事全てを話し合えるワンストップで、コミュニティリーダーに質問してPlayKey(PKT)ネットワークに関われる場所です。",
+        join_text: "参加してさらに進歩したインターネットを作り上げるための助けになって下さい。オンラインでPKTコミュニティメンバーと繋がり協力しましょう。",
+        join_list_item_title_1: "PKTチャット- プロジェクトチャット",
+        join_list_item_text_1: "PKT のコア開発者とチャットし、助けやサポートを受けてプロジェクトに参加する場所です。",
+        join_list_item_title_2: "PKTキャッシュ- コミュニティでのディスカッション",
+        join_list_item_text_2: "PKT プロジェクトについてディスカッションできる組織されたコミュニティでのチャットです。",
+        join_list_item_title_3: "PKTコミュニティでの不和",
+        join_list_item_text_3: "PKTに関連した事全てを話し合えるワンストップで、コミュニティリーダーに質問してPKTネットワークに関われる場所です。",
         join_list_item_title_4: "Twitter(ツイッター)",
-        join_list_item_text_4: "ツイッターでPlayKey(PKT)をフォローしてニュースや最新情報をチェックしましょう。",
+        join_list_item_text_4: "ツイッターでPKTをフォローしてニュースや最新情報をチェックしましょう。",
         join_list_item_title_5: "IRC",
-        join_list_item_text_5: "接続されたIRCチャンネルを通してPlayKey(PKT)チャットのメインチャットルームをフォローしましょう。",
+        join_list_item_text_5: "接続されたIRCチャンネルを通してPKTチャットのメインチャットルームをフォローしましょう。",
         join_list_item_title_6: "Matrix",
-        join_list_item_text_6: "接続されたMatrixチャンネルを通してPlayKey(PKT)チャットのメインチャットルームをフォローしましょう。",
+        join_list_item_text_6: "接続されたMatrixチャンネルを通してPKTチャットのメインチャットルームをフォローしましょう。",
     },
     mining: {
         meta_title: "マイニング - PKT",
@@ -179,7 +179,7 @@ export default {
     },
     roadmap: {
         meta_title: "ロードマップ - PKT",
-        roadmap_is_heading: "PlayKey(PKT) ロードマップ",
+        roadmap_is_heading: "PKT ロードマップ",
         roadmap_is_01: "Launch the PKT blockchain and begin bandwidth-hard mining using PacketCrypt.",
         roadmap_is_02: "Utilize technology use cases including VPN bandwidth leasing, tokenized bandwidth, DeFi, and connecting PKT to cjdns.",
         roadmap_is_03: "Scale low cost internet sharing, introduce first Cloud ISPs, and enable high speed transactions in and out of PKT using Lightning Network.",
@@ -287,17 +287,17 @@ export default {
     },
     steward: {
         meta_title: "ネットワーク管理者 - PKT",
-        big_header_text: "新たに採掘されるブロックの20％はネットワーク管理者のアドレスに届きます。このアドレスはPoS(プルーフ・オブ・ステート)に基づいた投票により変更が可能です。この投票のメカニックについてはネットワーク管理者投票をご覧下さい。ネットワーク管理者のアドレスへの支払いに関しては一つの特別なルールがあり、129600ブロック(約３カ月)が経過した後はそれらの支払いを利用する事ができないので、ネットワーク管理者がその資金の利用方法を決定できない場合、PlayKey(PKT)は貯まるのではなくバーンされてしまいます。",
+        big_header_text: "新たに採掘されるブロックの20％はネットワーク管理者のアドレスに届きます。このアドレスはPoS(プルーフ・オブ・ステート)に基づいた投票により変更が可能です。この投票のメカニックについてはネットワーク管理者投票をご覧下さい。ネットワーク管理者のアドレスへの支払いに関しては一つの特別なルールがあり、129600ブロック(約３カ月)が経過した後はそれらの支払いを利用する事ができないので、ネットワーク管理者がその資金の利用方法を決定できない場合、PKTは貯まるのではなくバーンされてしまいます。",
         network_nav_01: "ネットワーク管理者の特権",
         network_nav_02: "Funding Proposal",
         network_nav_03: "ネットワーク管理者のプロジェクト",
         network_nav_04: "ネットワーク管理者とは誰か",
-        network_01_content_01: "ネットワーク管理者の目的は、個々の自主性とプライバシーを促進するためにPlayKey(PKT) ネットワークのサポートを受ける面での障壁を少なくする事です",
+        network_01_content_01: "ネットワーク管理者の目的は、個々の自主性とプライバシーを促進するためにPKT ネットワークのサポートを受ける面での障壁を少なくする事です",
         network_01_content_02: "この目的は次の重要な点を含みます:",
         network_01_content_03: "Fオープンソースネットワークソフトウェアの開発の資金援助を行う",
         network_01_content_04: "少ないネットワークオペレーターのためのより良い規制環境、またより全般的にはインターネットの自由、プライバシーまた分散の働きかけをする",
         network_01_content_05: "ソフトウェア所有権または無線周波数の権利などのプロパティを購入しそれらを一般化する",
-        network_01_content_06: "これらの目標を達成するには、時折ネットワーク管理者が資金援助の提案を見直し、PlayKey(PKT)に承諾するプロジェクトを選ぶ必要があります。",
+        network_01_content_06: "これらの目標を達成するには、時折ネットワーク管理者が資金援助の提案を見直し、PKTに承諾するプロジェクトを選ぶ必要があります。",
         network_02_content_01: "資金援助の提案の仕方",
         network_02_content_02: "提案が受け入れられる事はプルリクエストをプロジェクトにマージするようなものです。まず始めに、コミュニティで行いたい事を社会の要求に合致させ (IRCチャットまたはMatrixチャットをお試し下さい) 、大体の世論を理解した上でその情報から正式な提案を作成して下さい。",
         network_02_content_03: "提案をするには、新たなプロジェクトのマークダウンファイルをプロジェクトテンプレート通りに追加する、nsプロジェクトリポジトリにプルリクエストを作成し、それをリポジトリのREADMEで定められた命名規則に沿って名付けて下さい。",
@@ -312,7 +312,7 @@ export default {
         network_04_content_05: "benhylau - Tronto Meshの貢献者",
         network_04_content_06: "NeilAlexander - ユグドラシルのリリースマネージャー",
         network_04_content_07: "Backupbrain - NetNinja VPN機器の考案者",
-        network_04_content_08: "すべての参加者は、PlayKey(PKT)チェーンを代表して、公平に行動する事を妨げかねないどんな関係にも携わらない事に同意しています。",
+        network_04_content_08: "すべての参加者は、PKTチェーンを代表して、公平に行動する事を妨げかねないどんな関係にも携わらない事に同意しています。",
         network_04_content_09: "投票の詳細",
     },
     steward_vote: {
@@ -415,11 +415,11 @@ export default {
         wallet_list_item_1: "PKウォレットで保管",
         wallet_list_item_2: "自身のプライベートキーを制限する",
         wallet_list_item_3: "短い13文字のシードを生成してウォレットをバックアップする",
-        options_heading: "無料のPlayKey(PKT)ウォレットを獲得する2つのオプションが現在あります。",
+        options_heading: "無料のPKTウォレットを獲得する2つのオプションが現在あります。",
         option_01_title: "コマンドラインウォレット",
         option_01_descr: "ターミナルベースのフルノードセットアップ",
         option_01_button: "CLIウォレットをセットアップする",
-        option_02_title: "エレクトラムPlayKey(PKT)ウォレット",
+        option_02_title: "エレクトラムPKTウォレット",
         option_02_descr: "デスクトップ専用のグラフィカルユーザーインターフェース(GUI)ウォレット",
         option_02_button: "エレクトラムウォレットをセットアップする",
         option_03_title: "GUI Wallet",
