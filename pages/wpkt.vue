@@ -13,7 +13,7 @@
       <div class="container">
         <h2 class="v-wpkt-section__title_small">Leveraging DeFi</h2>
         <p class="v-wpkt-section__text">WPKT allows anyone to trade on decentralized exchanges (DEX) or earn yields by staking into a liquidity pool to earn interest on PKT treasury holdings. PKT can be easily swapped into wPKT, and DeFi gains can easily be converted back into PKT by utilizing the ODApp bridge.</p>
-        <a href="#" target="_blank" class="v-wpkt-section__button"><span>Swap PKT & wPKT</span></a>
+        <a href="https://odapp.io/" target="_blank" class="v-wpkt-section__button"><span>Swap PKT & wPKT</span></a>
       </div>
     </section>
     <section class="v-wpkt-section v-wpkt-section__buy">
@@ -57,7 +57,7 @@
         <p class="v-wpkt-section__text v-wpkt-section__text_long">Click Trade and choose the amount of wPKT you want to buy using your BNB.</p>
         <img src="/img/wpkt-step-4-2.svg" alt="Click Trade" class="v-wpkt-section__screen" width="1280" height="135" />
         <p class="v-wpkt-section__text_highlighted">Holding wPKT enables participation in the highly lucrative world of DeFi. You can trade on PancakeSwap, as well as stake wPKT and earn yields on your holdings.</p>
-        <a href="#" target="_blank" class="v-wpkt-section__button"><span>Learn How to Swap</span></a>
+        <a href="https://odapp.io/" target="_blank" class="v-wpkt-section__button"><span>Learn How to Swap</span></a>
       </div>
     </section>
   </div>

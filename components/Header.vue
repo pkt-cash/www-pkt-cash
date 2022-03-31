@@ -72,6 +72,9 @@
                     <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
                   </li>
                   <li>
+                    <nuxt-link to="/letter">Letter from CJD</nuxt-link>
+                  </li>
+                  <li>
                     <nuxt-link to="/cryptoeconomics">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                   </li>
                   <li>
@@ -85,6 +88,12 @@
                   </li>
                   <li>
                     <nuxt-link to="/wallet">Wallet</nuxt-link>
+                  </li>
+                  <li>
+                    <nuxt-link to="/getpkt">Get PKT</nuxt-link>
+                  </li>
+                  <li>
+                    <nuxt-link to="/wpkt">WPKT</nuxt-link>
                   </li>
                 </ul>
               </template>
