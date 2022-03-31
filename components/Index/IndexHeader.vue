@@ -163,6 +163,7 @@ export default {
       margin:0;
       font-size: rem(18);
       line-height:rem(30);
+      padding:0 15vw;
     }
     & br {
       @include for-width(-small-lg) {

@@ -56,15 +56,15 @@ export default {
           title: "WPKT MetaMask",
           content: "Use for wPKT only on browser and mobile",
           button_link: "https://metamask.io/",
-          button_label: "Install Electrum"
+          button_label: "Install MetaMask"
         },
         {
           img: "/img/wallet-anode.png",
           title: "Anode Mobile Wallet",
           content: "Mobile wallet for iOS with LND for micro-transactions",
           button_link: "https://anode.co",
-          button_label: "Install Anode Wallet",
-          //is_disabled: true
+          button_label: "Coming Soon",
+          is_disabled: true
         }
       ],
       mining_wallets: [
