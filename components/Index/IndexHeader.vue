@@ -190,7 +190,7 @@ export default {
       padding:rem(150) 0 rem(75);
     }
     @include for-width(-small-lg) {
-      padding:rem(45) 0 0;
+      padding:0 0 rem(20);
       height:100vh;
     }
     &__mobile {

@@ -37,7 +37,7 @@ export default {
       },
       {
         property: "og:description",
-        content: "The world's first bandwidth-hard blockchain"
+        content: "Always Accessible Internet"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
