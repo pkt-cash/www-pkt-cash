@@ -42,7 +42,7 @@ export default {
         learn_more: "Learn More"
     },
     home: {
-        meta_title: "PKT Cash - The World's First Bandwidth-Hard Blockchain",
+        meta_title: "PKT Cash - Always Accessible Internet",
         meta_descr: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure.",
         header_heading: "The world’s first bandwidth-hard blockchain",
         index_1: "Network Bandwidth / Sec",
