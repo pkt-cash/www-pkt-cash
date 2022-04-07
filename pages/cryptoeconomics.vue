@@ -3,7 +3,9 @@
     <section class="v-crypto-header-section">
       <HeaderInternal 
       title="Cryptoeconomics" 
-      subtitle="PKT is paid to PacketCrypt miners" 
+      subtitle="PKT is paid to PacketCrypt miners"
+      is_arrow_down 
+      arrow_down_link="#crypto_start"
       />
     </section>
     <section class="v-crypto-section">
@@ -102,7 +104,14 @@ export default {
         @include for-width(-small-lg) {
           font-size: rem(16);
           line-height: rem(26);
-          margin:0;
+          margin:0 0 30vh;
+        }
+      }
+      & .arrow_down {
+        display:none;
+        @include for-width(-small-lg) {
+          display:block;
+          bottom:35vh;
         }
       }
       & #stars {

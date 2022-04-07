@@ -27,7 +27,7 @@
       </template>
     </div>
     <template v-if="is_arrow_down">
-      <a :href="arrow_down_link" class="arrow_down">
+      <a :href="arrow_down_link" class="arrow_down" id="crypto_start">
         <img src="/img/chevron-double-down.svg" alt="down" />
       </a>
     </template>
