@@ -52,7 +52,7 @@
           <p class="v-tech__text">TokenStrike tokens can be exchanged in a fully untrusted Lightning Network HTLC transaction. This is a scalable solution that fosters unlimited marketplace potential, including a decentralized bandwidth market, and sets PKT apart from every other layer 1 blockchain in the world.</p>
         </div>
         <div class="v-tech_right">
-          <img src="img/cash-tockenstrike.png" alt="TokenStrike" />
+          <img src="img/tech-tokenstrike.svg" alt="TokenStrike" />
         </div>
       </div>
     </section>
@@ -420,7 +420,7 @@ export default {
     & .v-tech_right {
       @extend %t-center;
       & img {
-        max-width:75%;
+        max-width:100%;
         @include for-width(-tablet-lg) {
           margin-top:0;
         }
