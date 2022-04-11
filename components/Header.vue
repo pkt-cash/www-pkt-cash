@@ -18,6 +18,7 @@
           </div>
         </div>
         <div :id="$i18n.locale" class="c-navigation__top_links">
+          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="c-navigation__top_links__link c-navigation__top_links__link__deck">Deck</a>
           <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="en">{{ $t("header.whitepaper") }}</a>
           <a href="/PKT_Network_v1.0_2021.02.01-ja.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="ja">{{ $t("header.whitepaper") }}</a>
           <a href="/PKT_Network_v1.0_2021.02.01-ch.pdf" target="_blank" class="c-navigation__top_links__link_whitepaper" id="zh">{{ $t("header.whitepaper") }}</a>
@@ -313,7 +314,7 @@ export default {
     @include for-width(+desktop-hg) {
       padding: rem(20) 0;
     }
-    @include for-width(-tablet) {
+    @include for-width(-tablet-lg) {
       padding: rem(20) rem(25);
     }
     @include for-width(-small-lg) {
@@ -365,7 +366,7 @@ export default {
     }
     & img {
       height: rem(40);
-      @include for-width(-tablet) {
+      @include for-width(-tablet-lg) {
         height: rem(30);
       }
     }
@@ -729,6 +730,11 @@ export default {
       }
       &:hover {
         color: $blue_new;
+      }
+      &__deck {
+        @include for-width(-small-lg) {
+          margin-right:rem(15);
+        }
       }
     }
     &__link_border {
