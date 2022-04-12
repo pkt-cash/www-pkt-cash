@@ -1,0 +1,14 @@
+[
+    {
+      "from": "/roadmap/",
+      "to": "/build/"
+    },
+    {
+        "from": "/cash/",
+        "to": "/pkt/"
+    },
+    {
+      "from": "/community",
+      "to": "/resources/"
+  }
+  ]

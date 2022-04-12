@@ -3,7 +3,6 @@
 		font-family: quote($font_name);
 		src: url($path + $file-name + ".woff2") format("woff2"),
 		url($path + $file-name + ".woff") format("woff");
-		font-weight: $weight;
 		font-style: $style;
 		font-display: block;
 		preload: true,
