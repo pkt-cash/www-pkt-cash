@@ -4,6 +4,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-mode
    */
   mode: "universal",
+  serverMiddleware: [
+    '~/middleware/redirects.js'
+  ],
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -96,8 +99,7 @@ export default {
       Allow: '/',
       Sitemap: '/sitemap.xml',
     }],
-    "@nuxtjs/sitemap",
-    '@nuxtjs/redirect-module'
+    "@nuxtjs/sitemap"
   ],
   /*
    ** Axios module configuration
@@ -144,8 +146,5 @@ export default {
     styleResources: {
       scss: "./assets/scss/_nuxt-imports.scss"
     }
-  },
-  redirect: [
-    { from: '^/cash', to: '/pkt', statusCode: 301 }
-  ]
+  }
 };
