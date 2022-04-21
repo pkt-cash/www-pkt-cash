@@ -1,0 +1,57 @@
+<template>
+<svg width="375" height="758" viewBox="0 0 375 758" fill="none" xmlns="http://www.w3.org/2000/svg" id="stars_home">
+<path d="M63.7701 418.537L62.3125 421.333L64.013 418.937L65.9564 421.333L64.4988 418.537L65.9564 415.342L64.013 417.739L62.3125 415.342L63.7701 418.537Z" fill="white" />
+<path d="M64.0126 418.937L64.2555 424.927V418.937L68.8711 418.537L64.2555 418.138L64.0126 410.949V418.138L59.8828 418.537L64.0126 418.937Z" fill="white" class="blink" />
+<g opacity="0.36">
+<path opacity="0.36" d="M48.7059 177.319L49.1918 182.91L49.4348 177.319L52.8358 176.92L49.4348 176.52L49.1918 170.929L48.7059 176.52L45.5479 176.92L48.7059 177.319Z" fill="white" class="blink_2" />
+</g>
+<path d="M157.538 76.2791L158.024 81.4708L158.267 76.2791L161.425 75.4803L158.267 75.081L158.024 69.4898L157.538 75.081L154.38 75.4803L157.538 76.2791Z" fill="white" class="blink_1" />
+<g opacity="0.28">
+<path opacity="0.28" d="M235.273 212.464L235.759 217.656L236.002 212.464L239.16 211.665L236.002 211.266L235.759 206.074L235.273 211.266L232.115 211.665L235.273 212.464Z" fill="white" class="blink" />
+</g>
+<path d="M99.4779 263.583L99.9638 269.973L100.45 263.583L104.094 263.184L100.45 262.385L99.9638 256.394L99.4779 262.385L95.834 263.184L99.4779 263.583Z" fill="white" class="blink" />
+<path d="M356.983 278.759L357.469 284.35L357.712 278.759L361.113 278.36L357.712 277.561L357.469 272.369L356.983 277.561L353.825 278.36L356.983 278.759Z" fill="white" class="blink_2" />
+<g opacity="0.28">
+<path opacity="0.28" d="M331.96 64.6982L328.316 72.2861L332.932 66.2956L337.548 72.2861L333.904 64.6982L337.548 57.1102L332.932 63.1007L328.316 57.1102L331.96 64.6982Z" fill="white"/>
+<path opacity="0.28" d="M331.714 66.6947L332.929 83.0687L333.9 66.6947L344.103 64.6978L333.9 62.701L332.929 46.327L331.714 62.701L321.754 64.6978L331.714 66.6947Z" fill="white"/>
+</g>
+<g opacity="0.36">
+<path opacity="0.36" d="M237.953 372.61L238.196 377.802L238.439 372.61L241.84 371.812L238.439 371.412L238.196 365.821L237.953 371.412L234.552 371.812L237.953 372.61Z" fill="white"/>
+</g>
+<path d="M146.858 339.463L147.101 342.259V339.463H148.801L147.101 339.064V336.268L146.858 339.064L145.157 339.463H146.858Z" fill="white"/>
+<path d="M325.89 517.181L326.376 522.772L326.619 517.181L330.02 516.782L326.619 515.983L326.376 510.791L325.89 515.983L322.732 516.782L325.89 517.181Z" fill="white" class="blink_1" />
+<g opacity="0.41" class="blink_1">
+<path opacity="0.41" d="M195.922 196.489L196.165 199.684L196.408 196.489H198.109L196.408 196.089L196.165 192.894L195.922 196.089L194.222 196.489H195.922Z" fill="white"/>
+</g>
+<path d="M206.848 587.071V589.866L207.091 587.071L208.791 586.671L207.091 586.272L206.848 583.477V586.272L204.904 586.671L206.848 587.071Z" fill="white"/>
+<g opacity="0.28" class="blink_2">
+<path opacity="0.28" d="M38.5062 25.5595L34.8623 33.1475L39.4779 27.157L44.0935 33.1475L40.4496 25.5595L44.0935 17.9716L39.4779 23.9621L34.8623 17.9716L38.5062 25.5595Z" fill="white"/>
+</g>
+</svg>
+</template>
+
+<style>
+.blink {
+  animation: blink-animation .5s steps(5, start) infinite;
+  -webkit-animation: blink-animation .5s steps(5, start) infinite;
+}
+.blink_1 {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+.blink_2 {
+  animation: blink-animation .75s steps(5, start) infinite;
+  -webkit-animation: blink-animation .75s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+</style>

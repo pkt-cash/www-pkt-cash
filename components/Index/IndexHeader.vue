@@ -2,6 +2,7 @@
   <div class="c-index-header">
     <div class="container">
         <div class="c-index-header_top c-index-header_top__desktop">
+            <StarsHome />
             <h2 class="c-index-header__title">ALWAYS ACCESSIBLE<br/>INTERNET</h2>
             <p class="c-index-header__content">PKT is getting the next billion people online. <br/>Join the movement.</p>
             <div class="c-index-header__links inline_links">
@@ -37,6 +38,7 @@
 </template>
 
 <script>
+import Stars from "~/components/Base/StarsHome";
 import Globe from "~/components/Index/Globe";
 import SpotA from "~/components/Index/SpotA";
 import { mapFields } from "vuex-map-fields";
@@ -109,6 +111,9 @@ export default {
 .c-index-header {
   position: relative;
   background-color:$white;
+   @include for-width(-small-lg) {
+      background-color:$dark_blue_new;
+    }
   & .container {
     @extend %container_new;
     @include for-width(-tablet) {
@@ -152,6 +157,10 @@ export default {
       line-height:rem(52);
       width: 100%;
       margin:0 auto rem(20);
+      background: linear-gradient(215.69deg, #FFFFFF 10.66%, #3CADEF 117.01%, #3CADEF 117.01%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   &__content {
@@ -164,6 +173,8 @@ export default {
       font-size: rem(18);
       line-height:rem(30);
       padding:0 15vw;
+      color:#fff;
+      margin-bottom:rem(30);
     }
     & br {
       @include for-width(-small-lg) {
@@ -192,70 +203,15 @@ export default {
     @include for-width(-small-lg) {
       padding:0 0 rem(20);
       height:100vh;
+
     }
-    &__mobile {
+    & svg#stars_home {
       display:none;
-      background-color:$dark_blue_new;
-      padding:0;
       @include for-width(-small-lg) {
         display:block;
-      }
-      &_left {
-        height:100vh;
-        padding:0 rem(20);
-        @extend %df;
-        @extend %jcc;
-        @extend %aic;
-        @extend %fdc;
-        position:relative;
-        background-image: url(/img/home-bg-mobile.png);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: cover;
-        @include for-width(-small-sm) {
-          height:auto;
-          padding-top:rem(100);
-        }
-        &_globe {
-          display: block;
-          width: 80%;
-          height: auto;
-          z-index:2;
-          position:relative;
-        }
-        &__textwrap {
-          z-index:2;
-          position:relative;
-        }
-        & #arrow_down {
-          display:block;
-          margin:0 auto;
-          position:absolute;
-          bottom:rem(20);
-          z-index:2;
-          @include for-width(-small-sm) {
-            display:none;
-          }
-          & img {
-            width:rem(22);
-            height:auto;
-          }
-        }
-      }
-      &_right {
-        padding:rem(25) rem(20) rem(50);
-        & .c-index-header__content {
-          color:$white;
-          @extend %t-center;
-          padding:0 rem(10);
-          @include for-width(-small-sm) {
-            padding:0;
-          }
-        }
-      }
-      & .c-index-header__title {
-        @extend %heading-gradient-light;
-        margin-bottom:0;
+        position:absolute;
+        height: 75%;
+        width: 100%;
       }
     }
   }
