@@ -3,8 +3,8 @@
     <div class="container">
         <div class="c-index-header_top c-index-header_top__desktop">
             <StarsHome />
-            <h2 class="c-index-header__title">ALWAYS ACCESSIBLE<br/>INTERNET</h2>
-            <p class="c-index-header__content">PKT is getting the next billion people online. <br/>Join the movement.</p>
+            <h2 class="c-index-header__title">UNSTOPPABLE<br/>INTERNET ACCESS</h2>
+            <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.</p>
             <div class="c-index-header__links inline_links">
               <nuxt-link to="/utility" class="btn_blue_new button_new"><span>Utility</span></nuxt-link>
               <nuxt-link to="/build" class="btn_blue_new button_new"><span>Build</span></nuxt-link>
@@ -153,8 +153,8 @@ export default {
     text-transform: capitalize;
     margin-bottom:0;
     @include for-width(-small-lg) {
-      font-size: rem(42);
-      line-height:rem(52);
+      font-size: rem(38);
+      line-height:rem(48);
       width: 100%;
       margin:0 auto rem(20);
       background: linear-gradient(215.69deg, #FFFFFF 10.66%, #3CADEF 117.01%, #3CADEF 117.01%);
