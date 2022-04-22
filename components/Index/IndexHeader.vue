@@ -3,8 +3,8 @@
     <div class="container">
         <div class="c-index-header_top c-index-header_top__desktop">
             <StarsHome />
-            <h2 class="c-index-header__title">UNSTOPPABLE<br/>INTERNET</h2>
-            <p class="c-index-header__content">Decoupling the network from the infrastructure, to make the internet self-soverign.</p>
+            <h2 class="c-index-header__title">DECENTRALIZING<br/>INTERNET ACCESS</h2>
+            <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.</p>
             <div class="c-index-header__links inline_links">
               <nuxt-link to="/utility" class="btn_blue_new button_new"><span>Utility</span></nuxt-link>
               <nuxt-link to="/build" class="btn_blue_new button_new"><span>Build</span></nuxt-link>
