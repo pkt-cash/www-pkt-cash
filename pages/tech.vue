@@ -39,7 +39,7 @@
         <p class="v-tech__text">VPN server administrators will register as a public PKT VPN, accept client connections and route VPN traffic through the PKT network. Users can browse a list of VPNs, select the best VPN based on location and bandwidth load and surf the internet from behind a PKT VPN exit node. VPN creates utility for the PKT Network and offers financial incentive in addition to PKT Cash tech.</p>
       </div>
       <div class="v-tech_right">
-        <img src="img/tech-vpn.svg" alt="Edge Points Devices" />
+        <img src="/img/tech-vpn.svg" alt="Edge Points Devices" />
       </div>
       </div>
     </section>
@@ -52,7 +52,7 @@
           <p class="v-tech__text">TokenStrike tokens can be exchanged in a fully untrusted Lightning Network HTLC transaction. This is a scalable solution that fosters unlimited marketplace potential, including a decentralized bandwidth market, and sets PKT apart from every other layer 1 blockchain in the world.</p>
         </div>
         <div class="v-tech_right">
-          <img src="img/tech-tokenstrike.svg" alt="TokenStrike" />
+          <img src="/img/tech-tokenstrike.svg" alt="TokenStrike" />
         </div>
       </div>
     </section>
@@ -65,7 +65,7 @@
         <p class="v-tech__text">The first stage Edge Points are PKT Cubes, sold by PKT Pal, which monetize home or office bandwidth and will provide VPN access, when PKT VPN is live. Subsequently, Edge Point owners will choose to monetize bandwidth once the TokenStrike protocol is minting tokens. As users allocate bandwidth from their local internet connections, this builds a global, decentralized edge network, by the people, for the people.</p>
       </div>
       <div class="v-tech_right">
-        <img src="img/tech-edge_devices.png" alt="Edge Points Devices" />
+        <img src="/img/tech-edge_devices.png" alt="Edge Points Devices" />
       </div>
       </div>
     </section>
