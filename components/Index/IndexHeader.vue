@@ -153,8 +153,8 @@ export default {
     text-transform: capitalize;
     margin-bottom:0;
     @include for-width(-small-lg) {
-      font-size: rem(38);
-      line-height:rem(48);
+      font-size: rem(36);
+      line-height:rem(46);
       width: 100%;
       margin:0 auto rem(20);
       background: linear-gradient(215.69deg, #FFFFFF 10.66%, #3CADEF 117.01%, #3CADEF 117.01%);

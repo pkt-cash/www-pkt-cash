@@ -166,8 +166,16 @@ export default {
           route_link: "https://twitter.com/pkt_cash",
         },
         {
-          name: "Matrix",
-          route_link: "https://matrix.to/#/#pkt:matrix.org",
+          name: "Discord",
+          route_link: "https://discord.com/invite/pktcash",
+        },
+        {
+          name: "Instagram",
+          route_link: "https://www.instagram.com/pktcash/",
+        },
+        {
+          name: "Facebook",
+          route_link: "https://www.facebook.com/pktcash/",
         }
       ],
     };
