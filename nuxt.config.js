@@ -4,9 +4,6 @@ export default {
    ** See https://nuxtjs.org/api/configuration-mode
    */
   mode: "universal",
-  serverMiddleware: [
-    '~/middleware/redirects.js'
-  ],
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
