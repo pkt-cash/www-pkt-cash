@@ -548,6 +548,14 @@ export default {
   @include for-width(-small-lg) {
     padding-top:0;
   }
+  & .v-roadmap-section-title_h2 {
+    padding-bottom:0;
+  }
+  #desktop {
+    & #Rectangle_34 {
+      fill: #141738;
+    }
+  }
 }
 .mobile_illustration {
   display:none;

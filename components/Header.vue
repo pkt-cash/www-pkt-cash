@@ -85,7 +85,7 @@
                     <nuxt-link to="/ecosystem">Ecosystem</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/pkt">PKT Cash</nuxt-link>
+                    <nuxt-link to="/pkt-cash">PKT Cash</nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/wallet">Wallet</nuxt-link>

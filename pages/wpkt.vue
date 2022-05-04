@@ -91,7 +91,7 @@ export default {
   & .v-header-section {
     & .c-internal-header {
       position:relative;
-      padding-bottom:rem(75);
+      padding-bottom:0;
       @include for-width(+desktop-xl) {
         padding-bottom:rem(50);
       }
@@ -116,7 +116,7 @@ export default {
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: rem(120);
+        height: rem(75);
         @include for-width(-desktop-medium) {
           height: rem(85);
         }
@@ -178,6 +178,7 @@ export default {
         }
       }
       &__links {
+        margin-top:rem(35);
         @include for-width(-desktop-medium) {
           margin-top:rem(35);
         }
