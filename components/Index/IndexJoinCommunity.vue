@@ -29,7 +29,7 @@ export default {
           key: "twitter",
           src: "/img/icons/twitter.svg",
           title: "Twiter",
-          link: "https://twitter.com/pktcash",
+          link: "https://twitter.com/pkt_cash",
         },
         {
           key: "pkt-chat",

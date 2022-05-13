@@ -174,7 +174,7 @@ export default {
         {
           name:"Twitter",
           icon: "/img/icons/header-social-twitter.svg",
-          link: "https://twitter.com/pktcash",
+          link: "https://twitter.com/pkt_cash",
         },
         {
           name:"PKT Chat",
