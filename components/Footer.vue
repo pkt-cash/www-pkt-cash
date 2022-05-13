@@ -163,7 +163,7 @@ export default {
         },
         {
           name: "Twitter",
-          route_link: "https://twitter.com/pkt_cash",
+          route_link: "https://twitter.com/pktcash",
         },
         {
           name: "Discord",
