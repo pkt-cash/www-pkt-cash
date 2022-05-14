@@ -95,7 +95,7 @@ export default {
           title: this.$t("community.join_list_item_title_4"),
           text: this.$t("community.join_list_item_text_4"),
           img: "/img/community/twitter.svg",
-          link: "https://twitter.com/pkt_cash",
+          link: "https://twitter.com/pktcash",
         },
         /*{
           title: "Mastadon",
