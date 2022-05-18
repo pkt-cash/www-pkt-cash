@@ -29,7 +29,7 @@
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.encryptions') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | displayed_enc | commafy }}</p>
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.pkt_price') }}</h3>
-            <p class="c-index-header__desk-itm-text">${{ json | displayed_pkt_price }} / PKT</p>
+            <p class="c-index-header__desk-itm-text">${{ pkt_price | displayed_pkt_price }} / PKT</p>
           </div>
         </div>
     </div>
@@ -49,6 +49,7 @@ export default {
       "already_mined",
       "bitsPerSecond",
       "encryptionsPerSecond",
+      "pkt_price",
     ]),
     is_mobile() {
       return process.client && window.innerWidth < 1100;
@@ -56,8 +57,7 @@ export default {
   },
   data() {
     return {
-      timeout: null,
-      json: null
+      timeout: null
     };
   },
   filters: {
@@ -96,13 +96,6 @@ export default {
   beforeDestroy() {
     clearInterval(this.timeout);
     this.timeout = null;
-  },
-  created: function () {
-      fetch("https://pktticker.tonygaitatzis.com/api/1.0/spot/PKT/USD/")
-        .then(r => r.json())
-        .then(json => {
-          this.json=json.price;
-        });
   }
 };
 </script>

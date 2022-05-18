@@ -102,7 +102,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true,
+  },
   i18n: {
     locales: [
       { code: 'en', iso: 'en-US', name: 'English', file: 'en-us.js' },
