@@ -1,10 +1,10 @@
-# STORE
+**PKT price from coinmarketcap.com**
 
-**This directory is not required, you can delete it if you don't want to use it.**
-
-This directory contains your Vuex Store files.
-Vuex Store option is implemented in the Nuxt.js framework.
-
-Creating a file in this directory automatically activates the option in the framework.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/vuex-store).
+location /api/cmc-price {
+    # proxy_cache pktcash;
+    # proxy_cache_valid any 5m;
+    # proxy_cache_lock on;        
+    proxy_set_header X-CMC_PRO_API_KEY "<TODO: CMC API KEY>";
+    proxy_set_header Content-Type application/json;
+    proxy_pass https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=PKT;
+}

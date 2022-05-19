@@ -2,7 +2,6 @@ import { Map as immutableMap } from 'immutable';
 import { getField, updateField } from 'vuex-map-fields';
 
 const EXPLORER_API = 'https://explorer.pkt.cash';
-const headers = { 'X-CMC_PRO_API_KEY': '27858879-2df5-4f21-a423-26dfb42d1d59','Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json',};
 
 const STATE = immutableMap({
   date: Date.now(),
@@ -39,7 +38,7 @@ export const actions = {
       // /api/v1/PKT/pkt/chain/down
       const difficulty = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/chain/down/1`)
       const stats = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/packetcrypt/stats/1/`)
-      const pkt_price_fetch = await this.$axios.$get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=PKT", { headers })
+      const pkt_price_fetch = await this.$axios.$get("https://pkt.cash/api/cmc-price")
       console.log('load function')
       
       commit('updateField', { path: 'already_mined', value: data.alreadyMined })

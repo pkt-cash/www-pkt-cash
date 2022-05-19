@@ -89,7 +89,7 @@ export default {
     if (process.client) {
       this.timeout = setInterval(
         () => this.$store.dispatch("pkt-analytics/update_data"),
-        60 * 1000
+        5 * 60 * 1000
       );
     }
   },
