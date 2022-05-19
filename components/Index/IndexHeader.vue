@@ -1,8 +1,8 @@
 <template>
   <div class="c-index-header">
     <div class="container">
+        <StarsHome />
         <div class="c-index-header_top c-index-header_top__desktop">
-            <StarsHome />
             <h2 class="c-index-header__title">DECENTRALIZING<br/>INTERNET ACCESS</h2>
             <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.</p>
             <div class="c-index-header__links inline_links">
@@ -117,6 +117,16 @@ export default {
     @include for-width(-small-lg) {
       padding:0;
     }
+    & svg#stars_home {
+      display:none;
+      @include for-width(-small-lg) {
+        display:block;
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+      }
+    }
   }
   &__uptitle {
     color:$light_blue_new;
@@ -196,16 +206,9 @@ export default {
     @include for-width(-small-lg) {
       padding:0 0 rem(20);
       height:100vh;
+      z-index:1;
+      position: relative;
 
-    }
-    & svg#stars_home {
-      display:none;
-      @include for-width(-small-lg) {
-        display:block;
-        position:absolute;
-        height: 75%;
-        width: 100%;
-      }
     }
   }
   &__links {
