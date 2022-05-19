@@ -1,8 +1,8 @@
 <template>
   <div class="c-index-header">
     <div class="container">
+        <StarsHome />
         <div class="c-index-header_top c-index-header_top__desktop">
-            <StarsHome />
             <h2 class="c-index-header__title">DECENTRALIZING<br/>INTERNET ACCESS</h2>
             <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.</p>
             <div class="c-index-header__links inline_links">
@@ -29,7 +29,7 @@
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.encryptions') }}</h3>
             <p class="c-index-header__desk-itm-text">{{ encryptionsPerSecond | displayed_enc | commafy }}</p>
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.pkt_price') }}</h3>
-            <p class="c-index-header__desk-itm-text">${{ json | displayed_pkt_price }} / PKT</p>
+            <p class="c-index-header__desk-itm-text">${{ pkt_price | displayed_pkt_price }} / PKT</p>
           </div>
         </div>
     </div>
@@ -49,6 +49,7 @@ export default {
       "already_mined",
       "bitsPerSecond",
       "encryptionsPerSecond",
+      "pkt_price",
     ]),
     is_mobile() {
       return process.client && window.innerWidth < 1100;
@@ -56,8 +57,7 @@ export default {
   },
   data() {
     return {
-      timeout: null,
-      json: null
+      timeout: null
     };
   },
   filters: {
@@ -96,13 +96,6 @@ export default {
   beforeDestroy() {
     clearInterval(this.timeout);
     this.timeout = null;
-  },
-  created: function () {
-      fetch("https://pktticker.tonygaitatzis.com/api/1.0/spot/PKT/USD/")
-        .then(r => r.json())
-        .then(json => {
-          this.json=json.price;
-        });
   }
 };
 </script>
@@ -123,6 +116,16 @@ export default {
     }
     @include for-width(-small-lg) {
       padding:0;
+    }
+    & svg#stars_home {
+      display:none;
+      @include for-width(-small-lg) {
+        display:block;
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+      }
     }
   }
   &__uptitle {
@@ -203,16 +206,9 @@ export default {
     @include for-width(-small-lg) {
       padding:0 0 rem(20);
       height:100vh;
+      z-index:1;
+      position: relative;
 
-    }
-    & svg#stars_home {
-      display:none;
-      @include for-width(-small-lg) {
-        display:block;
-        position:absolute;
-        height: 75%;
-        width: 100%;
-      }
     }
   }
   &__links {
