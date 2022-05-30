@@ -176,6 +176,10 @@ export default {
         {
           name: "Facebook",
           route_link: "https://www.facebook.com/pktcash/",
+        },
+        {
+          name: "Telegram",
+          route_link: "https://t.me/pkt_cash",
         }
       ],
     };
