@@ -7,7 +7,7 @@
             <img src="/img/logo.svg" alt="pkt.cash" />
           </figure>
         </div>
-        <div class="c-footer__menu">
+        <div class="c-footer__menu c-footer__menu_wider">
           <h5 class="c-footer__menu-title">{{ $t("footer.quicklink") }}</h5>
           <ul class="c-footer__menu-list">
             <li class="c-footer__menu-item">
@@ -55,7 +55,7 @@
             </li>
           </ul>
         </div>
-        <div class="c-footer__menu">
+        <div class="c-footer__menu c-footer__menu_wider">
           <h5 class="c-footer__menu-title">{{ $t("footer.git") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of github_links" :key="index" class="c-footer__menu-item">
@@ -176,6 +176,10 @@ export default {
         {
           name: "Facebook",
           route_link: "https://www.facebook.com/pktcash/",
+        },
+        {
+          name: "Telegram",
+          route_link: "https://t.me/pkt_cash",
         }
       ],
     };
@@ -238,6 +242,7 @@ export default {
     }
     @include for-width(-small-lg) {
       margin-bottom: rem(25);
+      width: 40%;
     }
     @include for-width(-tablet) {
       &:nth-child(5) {
@@ -316,11 +321,16 @@ export default {
       }
     }
   }
+  &__menu_wider {
+    @include for-width(-small-lg) {
+      width: 60%;
+    }
+  }
 
   &__text {
     width: 100%;
-	text-align: center;
-	padding-top: rem(50);
+    text-align: center;
+    padding-top: rem(50);
     @include for-width(-tablet) {
       width: 40%;
       order: 5;
@@ -330,6 +340,10 @@ export default {
     .c-footer__menu-link {
       @include font_sizes(15, 20);
       color: $light_grey_new;
+      @include for-width(-small-lg) {
+        font-size:14px;
+        line-height:18px;
+      }
     }
 
     &-light {
