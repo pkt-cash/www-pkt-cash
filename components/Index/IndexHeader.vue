@@ -3,8 +3,8 @@
     <div class="container">
         <StarsHome />
         <div class="c-index-header_top c-index-header_top__desktop">
-            <h2 class="c-index-header__title">DECENTRALIZING<br/>INTERNET ACCESS</h2>
-            <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.</p>
+            <h2 class="c-index-header__title">THE FUTURE OF<br />INTERNET ACCESS</h2>
+            <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.<br />The mission is to get the next billion people online.</p>
             <div class="c-index-header__links inline_links">
               <nuxt-link to="/utility" class="btn_blue_new button_new"><span>Utility</span></nuxt-link>
               <nuxt-link to="/build" class="btn_blue_new button_new"><span>Build</span></nuxt-link>
@@ -64,7 +64,7 @@ export default {
     displayed_pkt_price(value) {
       if (value > 0.01)
         return (Number(value)).toFixed(2);
-      return (Number(value)).toFixed(3);
+      return (Number(value)).toFixed(6);
     },
     displayed_stats_data(value) {
       return (Number(value) / 0x40000000).toFixed(0);

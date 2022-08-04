@@ -14,6 +14,9 @@
         <template v-if="is_getpkt">
           <a :href="button_pkt_link" :target="button_pkt_target" class="btn_blue_new button_new" v-if="button_pkt"><span>{{ button_pkt }}</span></a>
         </template>
+        <template v-if="is_utility">
+          <a :href="button_3_link" :target="button_2_target" class="btn_blue_new button_new" v-if="button_3"><span>{{ button_3 }}</span></a>
+        </template>
       </div>
       <template v-if="is_resources">
         <div class="c-internal-header__links">
@@ -46,9 +49,11 @@ export default {
     add_title: String,
     button_1: String,
     button_2: String,
+    button_3: String,
     button_pkt: String,
     button_1_link: String,
     button_2_link: String,
+    button_3_link: String,
     button_pkt_link: String,
     button_3: String,
     button_4: String,
@@ -64,6 +69,7 @@ export default {
     is_arrow_down: Boolean,
     arrow_down_link: String,
     is_resources: Boolean,
+    is_utility: Boolean,
     is_network: Boolean,
     is_getpkt: Boolean
   }
