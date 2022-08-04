@@ -50,10 +50,26 @@ export default {
 .v-mining {
   & .v-header-section {
     & .c-internal-header {
+      @include for-width(+desktop-er) {
+        padding-top:rem(75);
+      }
       @include for-width(-small-lg) {
         height:100vh;
       }
+      &__text {
+        @include for-width(+desktop-er) {
+          max-width: 60%;
+        }
+      }
+      &__links {
+        @include for-width(+desktop-er) {
+          margin-top:rem(35);
+        }
+      }
       & .arrow_down {
+        @include for-width(+desktop-er) {
+          bottom:3vh;
+        }
         @include for-width(-small-lg) {
           bottom:5vh;
         }

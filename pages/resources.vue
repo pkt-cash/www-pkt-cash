@@ -222,12 +222,18 @@ export default {
   // Top section
   & .v-header-section {
     & .c-internal-header {
+      @include for-width(+desktop-er) {
+        padding-top:rem(50);
+      }
       @include for-width(-small-lg) {
         height:100vh;
       }
       &__sub-title {
         max-width:55%;
         margin:rem(25) auto rem(35);
+        @include for-width(+desktop-er) {
+          margin:0 auto rem(10);
+        }
         @include for-width(-desktop-lg) {
           max-width:50%;
         }
@@ -242,6 +248,9 @@ export default {
         padding-top:rem(35);
       }
       &__links {
+        @include for-width(+desktop-er) {
+          margin-top:rem(30);
+        }
         @include for-width(-desktop-lg) {
           margin-top:rem(35);
         }

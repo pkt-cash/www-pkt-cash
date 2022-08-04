@@ -130,12 +130,20 @@ export default {
     }
   }
   .c-internal-header {
+    @include for-width(+desktop-er) {
+      padding-top:rem(65);
+    }
     @include for-width(-tablet) {
       height:100vh;
     }
     @include for-width(-small-lg) {
       height:auto;
       padding-top:rem(100);
+    }
+    & #crypto_start {
+      @include for-width(+desktop-er) {
+        bottom:rem(10);
+      }
     }
     & .container {
       @include for-width(-small-lg) {
@@ -153,6 +161,16 @@ export default {
     }
     &__title {
       padding-top:rem(35);
+    }
+    &__text {
+      @include for-width(+desktop-er) {
+        max-width: 70%;
+      }
+    }
+    &__sub-title {
+      @include for-width(+desktop-er) {
+        margin-bottom:rem(10);
+      }
     }
     &__links {
       @include for-width(-small-lg) {
