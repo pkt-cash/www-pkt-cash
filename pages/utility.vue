@@ -165,6 +165,10 @@ export default {
     // Sections
     &__top_section {
       & .c-internal-header {
+        padding-top:rem(65);
+        @include for-width(+desktop-er) {
+          padding-top:rem(100);
+        }
         @include for-width(-small-lg) {
           min-height:100vh;
           padding-top:rem(65);
@@ -189,6 +193,9 @@ export default {
         }
         &__sub-title {
           margin:rem(30) 0;
+          @include for-width(+desktop-er) {
+            margin:rem(10) 0;
+          }
           @include for-width(-desktop-medium) {
             margin:rem(20) 0;
           }
@@ -199,6 +206,9 @@ export default {
         }
         &__text {
           max-width: 55%;
+          @include for-width(+desktop-er) {
+            max-width: 65%;
+          }
           @include for-width(-desktop-lg) {
             max-width: 52%;
           }
@@ -213,7 +223,10 @@ export default {
           }
         }
         &__links {
-          margin-top:rem(75);
+          margin-top:rem(50);
+          @include for-width(+desktop-er) {
+            margin-top:rem(35);
+          }
           @include for-width(-desktop-medium) {
             margin-top:rem(50);
           }

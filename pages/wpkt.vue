@@ -95,6 +95,9 @@ export default {
       @include for-width(+desktop-xl) {
         padding-bottom:rem(50);
       }
+      @include for-width(+desktop-er) {
+        padding-top:rem(50);
+      }
       @include for-width(-desktop-lg) {
         padding-bottom:rem(50);
       }
@@ -152,6 +155,9 @@ export default {
         }
       }
       &__sub-title {
+        @include for-width(+desktop-er) {
+          margin-bottom:rem(10);
+        }
         @include for-width(-tablet) {
           order:2;
         }
@@ -160,6 +166,9 @@ export default {
         }
       }
       &__text {
+        @include for-width(+desktop-er) {
+          max-width: 70%;
+        }
         @include for-width(-laptop) {
           max-width: 65%;
         }
