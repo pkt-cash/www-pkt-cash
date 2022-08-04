@@ -26,7 +26,7 @@
     </section>
     <section class="v-utility__unique">
         <div class="container">
-          <h2 class="v-utility__title">What Makes PKT<br />Network Unique?</h2>
+          <h2 class="v-utility__title">What Makes PKT <br />Network Unique?</h2>
           <p class="v-utility__text">PKT is a people-powered, free to access network. The mission is to help connect the world to the internet. PKT’s free to use software technology makes it possible for anyone to earn income from their internet and help provide access to underserved areas around the world.</p>
           <nuxt-link to="/tech" class="v-utility__button"><span>View the Technology</span></nuxt-link>
           <Cards :list="unique_list" />
@@ -266,6 +266,9 @@ export default {
           @include for-width(+desktop-er) {
             bottom: rem(40);
           }
+          @include for-width(-desktop-lg) {
+            bottom: rem(25);
+          }
           @include for-width(-small-lg) {
             bottom:rem(20);
           }
@@ -321,6 +324,10 @@ export default {
       & .v-utility__title {
         @extend %heading-gradient-light;
         margin:0;
+        @include for-width(-small-lg) {
+          margin:0 auto;
+          max-width:80%;
+        }
       }
       & .v-utility__subtitle {
         color:$white;
@@ -328,6 +335,10 @@ export default {
         margin:rem(35) 0;
         @include for-width(-laptop) {
           margin:rem(20) 0;
+        }
+        @include for-width(-small-lg) {
+          font-size: rem(16);
+          line-height: rem(24);
         }
       }
       & .v-utility__text {
@@ -363,12 +374,17 @@ export default {
         }
         @include for-width(-small-lg) {
           background-size:auto 15%;
-          padding:rem(25) rem(30) rem(35);
+          padding:rem(25) rem(25) rem(35);
         }
       }
       & .v-utility__title {
         @include for-width(-small-lg) {
           text-align:left;
+        }
+        & br {
+          @include for-width(-small-lg) {
+            display:none;
+          }
         }
       }
       & .v-utility__text {
@@ -451,7 +467,7 @@ export default {
         padding-bottom:rem(50);
       }
       @include for-width(-small-lg) {
-        padding:rem(50) 0 rem(25);
+        padding:rem(65) 0 rem(25);
       }
       & .v-utility__title {
         @extend %heading-gradient-light;
