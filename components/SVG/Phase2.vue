@@ -17,17 +17,3 @@
 </defs>
 </svg>
 </template>
-
-<script type="text/javascript">
-import Vivus from 'vivus';
-export default {
-	name: "Phase2",
-	mounted() {
-		new Vivus('phase_2', {duration: 400, start: 'autostart', animTimingFuction: Vivus.EASE,}, myVivus => {
-			if (myVivus.getStatus() === 'end') {
-				myVivus.reset().play();
-			}
-		});
-	}
-}
-</script>
