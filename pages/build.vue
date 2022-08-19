@@ -67,7 +67,6 @@
 
             </div>
             <div class="roadmap_illustration__content_single">
-              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PaidAccess"><RoadmapPause />Paid Access</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#FullPaidNet"><RoadmapPause />Full Paid Net</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PaidVPN"><RoadmapPause />Paid VPN</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#VRouterLease"><RoadmapPause />VRouter Lease</nuxt-link></p>
