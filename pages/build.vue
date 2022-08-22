@@ -15,7 +15,69 @@
     <section id="roadmap" class="v-roadmap-section dark_section">
       <div class="container">
         <h2 class="v-roadmap-section-title_h2">{{ $t("build.roadmap_title") }}</h2>
-        <div id="desktop"><RoadmapDesktop/></div>
+        <div id="desktop" class="roadmap_illustration">
+          <div class="roadmap_illustration__headings">
+            <div class="roadmap_illustration__headings_single"><span class="single_button btn_blue_new button_new">Phase 1</span><p class="roadmap_illustration__headings_single_phase_title">Launch</p></div>
+            <div class="roadmap_illustration__headings_single"><span class="single_button btn_blue_new button_new">Phase 2</span><p class="roadmap_illustration__headings_single_phase_title">Utilize</p></div>
+            <div class="roadmap_illustration__headings_single"><span class="single_button btn_blue_new button_new">Phase 3</span><p class="roadmap_illustration__headings_single_phase_title">Scale</p></div>
+            <div class="roadmap_illustration__headings_single"><span class="single_button btn_blue_new button_new">Phase 4</span><p class="roadmap_illustration__headings_single_phase_title">Innovate</p></div>
+          </div>
+          <RoadmapTrack />
+          <div class="roadmap_illustration__content">
+            <div class="roadmap_illustration__content_single">
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />PacketCrypt Created</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />Mainnet Launch</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />CLI Wallet</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />PKT.Cash Website</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />Electrum Wallet</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />GUI Wallet</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />Community Launch</nuxt-link></p>
+            </div>
+            <div class="roadmap_illustration__content_single active">
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#RouteServer"><RoadmapCheck />Route Server</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />Exchange Listing</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#AnodiumVPN"><RoadmapLoad />Anodium VPN</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#Strike"><RoadmapLoad />Token Strike</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#MiningWallet"><RoadmapCheck />Mining Wallet</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#EdgePointDevice"><RoadmapCheck />Edge Point Device</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#LightningPaymaker"><RoadmapLoad />PKT Lightning</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#Lighting"><RoadmapLoad />Lightning Paymaker</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#WPKTDeFiETH"><RoadmapLoad />WPKT DeFi - ETH</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#WPKTDeFiBSC"><RoadmapCheck />WPKT DeFi - BSC</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#LINKPKTOracles"><RoadmapLoad />LINK/PKT Oracles</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PacketCryptRs"><RoadmapLoad />PacketCryptRs</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PKTNFTs"><RoadmapLoad />PKT NFTs</nuxt-link></p>
+
+            </div>
+            <div class="roadmap_illustration__content_single">
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PaidVPN"><RoadmapPause />Paid VPN</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#DesktopApp"><RoadmapPause />Desktop App</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#AtomicSwapMarket"><RoadmapPause />Atomic Swap Market</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#AddrLease"><RoadmapPause />AddrLease</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#BandwidthLease"><RoadmapPause />Bandwidth Lease</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PKTVPN"><RoadmapPause />PKT VPN</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#WinCjdns"><RoadmapPause />WinCjdns</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#CjdnsPriority"><RoadmapPause />Cjdns Priority</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#CjdnsMT"><RoadmapPause />Cjdns MT</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#CjdnsDocker"><RoadmapPause />Cjdns Docker</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#CjdnsTool"><RoadmapPause />Cjdns Tool</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#CustomerBit"><RoadmapPause />Customer Bit</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PKTDEX"><RoadmapPause />PKT DEX</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#SmartContracts"><RoadmapPause />Smart Contracts</nuxt-link></p>
+
+            </div>
+            <div class="roadmap_illustration__content_single">
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#FullPaidNet"><RoadmapPause />Full Paid Net</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PaidVPN"><RoadmapPause />Paid VPN</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#VRouterLease"><RoadmapPause />VRouter Lease</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#CjdnsWiFi"><RoadmapPause />Cjdns WiFi</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PKTCDNBridge"><RoadmapPause />PKT CDN Bridge</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#DappsAPI"><RoadmapPause />Dapps API</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#StreamingAPI"><RoadmapPause />Streaming API</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#BandwidthMarket"><RoadmapPause />Bandwidth Market</nuxt-link></p>
+            </div>
+          </div>
+        </div>
 			  <div id="mobile"><img src="/img/build-roadmap-new.svg" alt="Roadmap" /></div>
         <nuxt-link to="#glossary" class="single_button btn_blue_new button_new"><span>Glossary of Terms</span></nuxt-link>
       </div>
@@ -75,7 +137,9 @@ import RoadmapSupport from "~/components/Build/Support";
 import Phases from "~/components/Build/Phases";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import RoadmapDesktop from "~/components/SVG/RoadmapDesktop";
+import RoadmapTrack from "~/components/SVG/RoadmapTrack";
+import RoadmapCheck from "~/components/SVG/RoadmapCheck";
+import RoadmapPause from "~/components/SVG/RoadmapPause";
 import BuildArials from "~/components/SVG/BuildArials";
 import Phase1 from "~/components/SVG/Phase1";
 import Phase2 from "~/components/SVG/Phase2";
@@ -422,9 +486,6 @@ export default {
   }
   #desktop {
     display:none;
-    svg {
-      width:90%;
-    }
     @include for-width(+small-lg) {
       display:block;
     }
@@ -518,6 +579,99 @@ export default {
       margin:rem(25) auto 0;
       padding:rem(10) rem(25);
       display:inline-block;
+    }
+  }
+  & .roadmap_illustration {
+    &__headings {
+      @extend %df;
+      @extend %jcsb;
+      @extend %aic;
+      @include for-width(+desktop-medium-default) {
+        padding:0 rem(25);
+      }
+      @include for-width(+desktop-lg) {
+        padding:0 rem(50);
+      }
+      &_single {
+        width:25%;
+        @extend %t-center;
+        &_phase_title {
+          @extend %semibold;
+				  @extend %heading-small;
+          color:$white;
+          margin:rem(24) 0 rem(20);
+          @include for-width(-tablet) {
+            margin-bottom:0;
+          }
+        }
+        & .single_button {
+          @include for-width(-tablet) {
+            width:90%;
+          }
+        }
+      }
+    }
+    &__content {
+      @extend %df;
+      @extend %jcsb;
+      @extend %ais;
+      margin-top:-33px;
+      position:relative;
+      z-index:1;
+      @include for-width(+desktop-medium-default) {
+        padding:0 rem(15);
+      }
+      @include for-width(+desktop-lg) {
+        padding:0 rem(35);
+      }
+      @include for-width(-desktop-medium-default) {
+        padding:0;
+      }
+      &_single {
+        width:25%;
+        @extend %t-left;
+        padding:rem(40) 0 rem(25) rem(75);
+        @include for-width(-desktop-medium-default) {
+          padding:rem(40) 0 rem(25) rem(50);
+        }
+        @include for-width(-laptop) {
+          padding:rem(35) rem(25) rem(25);
+        }
+        @include for-width(-tablet) {
+          padding:rem(25) rem(15) rem(20);
+        }
+        &_title {
+          & a {
+            @extend %regular;
+            @extend %pn;
+            color:$white;
+            @include for-width(-tablet) {
+              font-size: rem(12);
+              line-height: rem(20);
+            }
+            & svg {
+              @extend %dib;
+              width:rem(16);
+              vertical-align:middle;
+              margin-right:rem(10);
+              @include for-width(-tablet) {
+                width:rem(14);
+                margin-right:rem(5);
+              }
+            }
+          }
+        }
+      }
+      & .active {
+        background: linear-gradient(0deg, #3688C8 47.86%, rgba(27, 11, 62, 0.8) 95.72%);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 20px 20px;
+      }
+    }
+    & svg {
+      width:100%;
+      position:relative;
+      z-index:2;
     }
   }
 }

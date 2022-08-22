@@ -406,6 +406,7 @@ export default {
       max-width:50%;
       margin:0 auto rem(50);
       @extend %semibold;
+      text-transform: initial;
       @include for-width(+desktop-xl) {
         margin-bottom:rem(60);
         max-width:65%;
@@ -421,8 +422,8 @@ export default {
         max-width:80%;
       }
       @include for-width(-small-lg) {
-        max-width:90%;
         margin-bottom:rem(20);
+        max-width:100%;
       }
     }
     &__text {
@@ -821,8 +822,9 @@ export default {
         width:auto;
         margin:0 rem(15);
         @include for-width(-small-lg) {
-          padding:rem(10) rem(15);
-          width:48%;
+          padding:rem(10) rem(20);
+          width:auto;
+          margin:0;
         }
       }
     }

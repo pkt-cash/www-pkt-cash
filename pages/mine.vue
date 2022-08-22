@@ -65,13 +65,19 @@ export default {
         @include for-width(+desktop-er) {
           margin-top:rem(35);
         }
+        .button_new {
+          @include for-width(-small-lg) {
+            padding:rem(10) rem(15);
+            width:49%;
+          }
+        }
       }
       & .arrow_down {
         @include for-width(+desktop-er) {
           bottom:3vh;
         }
         @include for-width(-small-lg) {
-          bottom:5vh;
+          bottom:4vh;
         }
       }
     }

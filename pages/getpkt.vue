@@ -173,8 +173,7 @@ export default {
           display:block;
         }
         & .button_new {
-          width:rem(200);
-          margin:rem(25) auto 0;
+          margin:rem(25) rem(10) 0;
         }
       }
       & .arrow_down {
