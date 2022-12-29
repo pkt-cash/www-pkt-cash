@@ -169,7 +169,7 @@ export default {
         {
           name:"Discord",
           icon: "/img/icons/header-social-discord.svg",
-          link: "https://discord.gg/pktcash",
+          link: "https://discord.gg/bjJutHm9CN",
         },
         {
           name:"Twitter",

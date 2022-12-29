@@ -167,7 +167,7 @@ export default {
         },
         {
           name: "Discord",
-          route_link: "https://discord.com/invite/pktcash",
+          route_link: "https://discord.gg/bjJutHm9CN",
         },
         {
           name: "Instagram",

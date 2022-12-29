@@ -23,7 +23,7 @@ export default {
           key: "discord",
           src: "/img/icons/discord.svg",
           title: "Discord",
-          link: "https://discord.com",
+          link: "https://discord.gg/bjJutHm9CN",
         },
         {
           key: "twitter",
