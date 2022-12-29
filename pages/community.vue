@@ -75,7 +75,7 @@ export default {
           title: this.$t("community.join_list_item_title_3"),
           text: this.$t("community.join_list_item_text_3"),
           img: "/img/community/pkt_discord.png",
-          link: "https://discord.gg/pktcash"
+          link: "https://discord.gg/bjJutHm9CN"
         },
         /*{
           title: "Facebook",
