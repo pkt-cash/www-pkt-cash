@@ -36,7 +36,7 @@
             <div class="roadmap_illustration__content_single active">
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#RouteServer"><RoadmapCheck />Route Server</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#glossary"><RoadmapCheck />Exchange Listing</nuxt-link></p>
-              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#AnodiumVPN"><RoadmapLoad />Anodium VPN</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to="#AnodiumVPN"><RoadmapCheck />Anodium VPN</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#Strike"><RoadmapLoad />Token Strike</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#MiningWallet"><RoadmapCheck />Mining Wallet</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#EdgePointDevice"><RoadmapCheck />Edge Point Device</nuxt-link></p>
@@ -47,6 +47,7 @@
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#LINKPKTOracles"><RoadmapLoad />LINK/PKT Oracles</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PacketCryptRs"><RoadmapLoad />PacketCryptRs</nuxt-link></p>
               <p class="roadmap_illustration__content_single_title"><nuxt-link to="#PKTNFTs"><RoadmapLoad />PKT NFTs</nuxt-link></p>
+              <p class="roadmap_illustration__content_single_title"><nuxt-link to=""><RoadmapCheck />Mobile Wallet</nuxt-link></p>
 
             </div>
             <div class="roadmap_illustration__content_single">
@@ -78,7 +79,7 @@
             </div>
           </div>
         </div>
-			  <div id="mobile"><img src="/img/build-roadmap-new.svg" alt="Roadmap" /></div>
+			  <div id="mobile"><img src="/img/build-roadmap-updated-2023.svg" alt="Roadmap" /></div>
         <nuxt-link to="#glossary" class="single_button btn_blue_new button_new"><span>Glossary of Terms</span></nuxt-link>
       </div>
       <div class="v-roadmap-section-bottom_bg"></div>
