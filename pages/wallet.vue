@@ -2,7 +2,7 @@
   <div class="v-wallet">
     <section class="v-wallet-header_section">
       <HeaderInternal 
-      title="PKT Wallet" 
+      :title="this.$t('wallet.title')" 
       :subtitle="this.$t('wallet.subtitle')" 
       :text="this.$t('wallet.text')" 
       :button_1="this.$t('wallet.button_1')" 

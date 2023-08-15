@@ -2,10 +2,10 @@
   <div class="c-roadmap-support">
     <div class="container">
       <div class="c-roadmap-support_left">
-        <h1 class="c-roadmap-support__title">{{ $t("roadmap.support_heading") }}</h1>
-        <p class="c-roadmap-support__text_large">{{ $t("roadmap.support_text_01") }}</p>
-        <p class="c-roadmap-support__text">{{ $t("roadmap.support_text_02") }}</p>
-        <p class="c-roadmap-support__text">{{ $t("roadmap.support_text_03") }}</p>
+        <h1 class="c-roadmap-support__title">{{ $t("build.support_heading") }}</h1>
+        <p class="c-roadmap-support__text_large">{{ $t("build.support_text_01") }}</p>
+        <p class="c-roadmap-support__text">{{ $t("build.support_text_02") }}</p>
+        <p class="c-roadmap-support__text">{{ $t("build.support_text_03") }}</p>
         <div class="c-roadmap-support__btns">
           <nuxt-link class="btn_blue_new button_new" to="/network-steward">
             <span>{{ $t("header.network_st") }}</span>

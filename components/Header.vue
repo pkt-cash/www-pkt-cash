@@ -18,7 +18,7 @@
           </div>
         </div>
         <div :id="$i18n.locale" class="c-navigation__top_links">
-          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="c-navigation__top_links__link c-navigation__top_links__link__deck">Deck</a>
+          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="c-navigation__top_links__link c-navigation__top_links__link__deck">{{ $t("header.deck") }}</a>
           
           <div class="nav__menu-top_menu">
             <ul class="nav__menu-list">
@@ -44,7 +44,7 @@
               </li>
             </ul>
           </div>
-          <a href="https://docs.pkt.cash" target="_blank" class="c-navigation__top_links__link">Docs</a>
+          <a href="https://docs.pkt.cash" target="_blank" class="c-navigation__top_links__link">{{ $t("header.docs") }}</a>
           <div class="c-navigation__top_links_social" v-for="item of social_list">
             <template>
               <a :href="item.link" target="_blank" :title="item.name" class="c-navigation__top_links_social__item">
@@ -52,7 +52,7 @@
               </a>
             </template>
           </div>
-          <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+          <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">{{ $t("header.explorer") }}</a>
         </div>
       </div>
     </div>
@@ -93,25 +93,25 @@
                     <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/letter">Letter from CJD</nuxt-link>
+                    <nuxt-link to="/letter">{{ $t("header.letter") }}</nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/cryptoeconomics">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/network-steward">Network Steward</nuxt-link>
+                    <nuxt-link to="/network-steward">{{ $t("header.network_st") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/ecosystem">Ecosystem</nuxt-link>
+                    <nuxt-link to="/ecosystem">{{ $t("header.ecosystem") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/pkt-cash">PKT Cash</nuxt-link>
+                    <nuxt-link to="/pkt-cash">{{ $t("header.pkt_cash") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/wallet">Wallet</nuxt-link>
+                    <nuxt-link to="/wallet">{{ $t("header.wallet") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/getpkt">Get PKT</nuxt-link>
+                    <nuxt-link to="/getpkt">{{ $t("header.get_pkt") }}</nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/wpkt">WPKT</nuxt-link>
@@ -157,7 +157,7 @@ export default {
       nav_open: false,
       nav_list: [
         {
-          name:"Utility",
+          name:this.$t("home.block_3_title"),
           route_link: "/utility",
         },
         {
@@ -169,15 +169,15 @@ export default {
           route_link: "/mine",
         },
         {
-          name: "Technology",
+          name: this.$t("header.tech"),
           route_link: "/tech",
         },
         {
-          name: "Community",
+          name: this.$t("header.community"),
           route_link: "/resources",
         },
         {
-          name: "Resources",
+          name: this.$t("header.resources"),
           route_link: "/resources",
         },
         {

@@ -3,7 +3,7 @@
     <Sattelite/>
     <div class="container">
       <h1 class="c-index-tech__title">{{ $t('home.tech_title') }}</h1>
-      <p class="c-index-tech__text">PKT is a fully decentralized, open source project with no company, no investors and no pre-mine. The project leverages <a href="https://github.com/cjdelisle/cjdns" target="_blank">cjdns</a> mesh networking technology created by PKT Lead Dev Caleb James DeLisle.</p>
+      <p class="c-index-tech__text">{{ $t('home.tech_descr_1') }} <a href="https://github.com/cjdelisle/cjdns" target="_blank">cjdns</a> {{ $t('home.tech_descr_2') }}</p>
       <div class="c-index-tech_technologies">
         <div class="c-index-tech_technologies_single">
           <h3 class="c-index-tech_technologies_single__title">{{ $t('home.tech_single_title_1') }}</h3>
@@ -11,7 +11,7 @@
         </div>
         <div class="c-index-tech_technologies_single">
           <h3 class="c-index-tech_technologies_single__title">{{ $t('home.tech_single_title_2') }}</h3>
-          <p class="c-index-tech_technologies_single__description">PacketCrypt is a "useful work" since the bandwidth and encryption is the same used in VPN, which in turn powers the PKT Network.</p>
+          <p class="c-index-tech_technologies_single__description">{{ $t('home.tech_single_descr_2') }}</p>
         </div>
         <div class="c-index-tech_technologies_single">
           <h3 class="c-index-tech_technologies_single__title">{{ $t('home.tech_single_title_3') }}</h3>

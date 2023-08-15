@@ -2,14 +2,14 @@
   <div class="v-utility">
     <section class="v-utility__top_section">
       <HeaderInternal 
-      title="Utility" 
-      subtitle="High Speed Infrastructure" 
-      text="PKT is a utility-based ecosystem powered by the world’s first and only bandwidth-hard blockchain. People who have internet connections are economically incentivized to run free, permissionless software and deliver bandwidth resources into the PKT Network. The result is PKT’s high speed, free to use, censorship-resistant internet infrastructure that is designed to get the next billion people online." 
-      button_1="Use the PKT Network" 
+      :title="this.$t('header.utility')" 
+      :subtitle="this.$t('utility.header_subtitle')" 
+      :text="this.$t('utility.header_text')"
+      :button_1="this.$t('utility.header_button_1')" 
       button_1_link="/network-steward"
-      button_2="Get Funding" 
+      :button_2="this.$t('utility.header_button_2')" 
       button_2_link="/network-steward"
-      button_3="Use Cases" 
+      :button_3="this.$t('utility.header_button_3')" 
       button_3_link="#real_cases"
       is_utility
       is_arrow_down 
@@ -18,39 +18,39 @@
     <section id="getting_next" class="v-utility__online">
         <div class="container">
           <div class="v-utility__online_internal">
-            <h2 class="v-utility__title">Getting the Next Billion People Online</h2>
-            <p class="v-utility__subtitle">Mesh Networking is the Future</p>
-            <p class="v-utility__text">While bandwidth usage increases year over year, people with internet connections are not using all of their bandwidth. PKT introduces a suite of free to use, mesh networking technologies that enable people to earn PKT Cash by connecting their unused bandwidth to PKT Network so people without internet connection can use those bandwidth resources to gain free access to the internet.</p>
+            <h2 class="v-utility__title">{{ $t("utility.spot_2_title") }}</h2>
+            <p class="v-utility__subtitle">{{ $t("utility.spot_2_subtitle") }}</p>
+            <p class="v-utility__text">{{ $t("utility.spot_2_text") }}</p>
           </div>
         </div>
     </section>
     <section class="v-utility__unique">
         <div class="container">
-          <h2 class="v-utility__title">What Makes PKT <br />Network Unique?</h2>
-          <p class="v-utility__text">PKT is a people-powered, free to access network. The mission is to help connect the world to the internet. PKT’s free to use software technology makes it possible for anyone to earn income from their internet and help provide access to underserved areas around the world.</p>
-          <nuxt-link to="/tech" class="v-utility__button"><span>View the Technology</span></nuxt-link>
+          <h2 class="v-utility__title">{{ $t("utility.spot_3_title_1") }} <br />{{ $t("utility.spot_3_title_2") }}</h2>
+          <p class="v-utility__text">{{ $t("utility.spot_3_text") }}</p>
+          <nuxt-link to="/tech" class="v-utility__button"><span>{{ $t("utility.spot_3_button") }}</span></nuxt-link>
           <Cards :list="unique_list" />
         </div>
     </section>
     <section id="real_cases" class="v-utility__cases">
         <div class="container">
-          <h2 class="v-utility__title">Real World Use Cases</h2>
-          <p class="v-utility__subtitle">Free to use applications</p>
+          <h2 class="v-utility__title">{{ $t("utility.spot_4_title") }}</h2>
+          <p class="v-utility__subtitle">{{ $t("utility.spot_4_subtitle") }}</p>
           <Cards :list="cases_list" />
         </div>
     </section>
     <section class="v-utility__ecosystem">
         <div class="container">
-          <h2 class="v-utility__title">Understand the Ecosystem</h2>
-          <p class="v-utility__text">The PKT Network interconnects technology, infrastructure and economic incentive to support and scale a network build and powered by the people, for the people.</p>
+          <h2 class="v-utility__title">{{ $t("utility.ecosystem_title") }}</h2>
+          <p class="v-utility__text">{{ $t("utility.ecosystem_text") }}</p>
           <img src="/img/utility-ecosystem.svg" alt="Understand the Ecosystem" />
-          <nuxt-link to="/ecosystem" class="v-utility__button"><span>View the Ecosystem</span></nuxt-link>
+          <nuxt-link to="/ecosystem" class="v-utility__button"><span>{{ $t("utility.ecosystem_button") }}</span></nuxt-link>
         </div>
     </section>
     <section class="v-utility__compare">
         <div class="container">
-          <h2 class="v-utility__title">How Does PKT Compare?</h2>
-          <p class="v-utility__text">PKT is the only fully decentralized layer 1 blockchain using a bandwidth-based proof of work. This ensures PKT can function and scale as a high throughput high speed network for infinite use cases.</p>
+          <h2 class="v-utility__title">{{ $t("utility.compare_title") }}</h2>
+          <p class="v-utility__text">{{ $t("utility.compare_text") }}</p>
           <img src="/img/utility-compare-table.svg" alt="How Does PKT Compare?" />
         </div>
     </section>
@@ -82,40 +82,40 @@ export default {
       unique_list: [
         {
           image: '/img/utility-unique-card-1.png',
-          title: "High Speed",
-          descr: "PKT is the world’s fastest decentralized network, now pushing over 100+ gbps of bandwidth.",
+          title: this.$t("utility.unique_list_1_title"),
+          descr: this.$t("utility.unique_list_1_descr"),
         },
         {
           image: '/img/utility-unique-card-2.png',
-          title: "Safe and Secure",
-          descr: "The PKT Network is fully encrypted to provide private, censorship-resistant, always-on internet access.",
+          title: this.$t("utility.unique_list_2_title"),
+          descr: this.$t("utility.unique_list_2_descr"),
         },
         {
           image: '/img/utility-unique-card-3.png',
-          title: "Easy to Use",
-          descr: "Anyone can earn money from their internet and securely provide access to the people who don’t have connectivity in urban and rural areas.",
+          title: this.$t("utility.unique_list_3_title"),
+          descr: this.$t("utility.unique_list_3_descr"),
         },
       ],
       cases_list: [
         {
           image: '/img/utility-cases-card-1.png',
-          title: "Free Internet Access",
-          descr: "PKT technology provides free, high speed internet access. The infrastructure is decentralized and powered by the people who connect.",
+          title: this.$t("utility.cases_list_1_title"),
+          descr: this.$t("utility.cases_list_1_descr"),
         },
         {
           image: '/img/utility-cases-vpn.svg',
-          title: "VPN",
-          descr: "PKT VPN provides private and secure internet connectivity for free and enables people to pay for how fast they want their connection to be.",
+          title: this.$t("utility.cases_list_2_title"),
+          descr: this.$t("utility.cases_list_2_descr"),
         },
         {
           image: '/img/utility-cases-wifi.svg',
-          title: "WiFi Sharing",
-          descr: "People with internet connections can earn PKT Cash by sharing internet access with their local area. Internet access connects through PKT VPN to eliminate privacy and legal risk to the provider.",
+          title: this.$t("utility.cases_list_3_title"),
+          descr: this.$t("utility.cases_list_3_descr"),
         },
         {
           image: '/img/utility-cases-card-3.png',
-          title: "Payments",
-          descr: "PKT Cash is PKT’s native coin, with near-zero gas fees and near-infinite transactions using Lightning Network. PKT offers multi-chain support via WPKT.",
+          title: this.$t("utility.cases_list_4_title"),
+          descr: this.$t("utility.cases_list_4_descr"),
         },
       ],
     };
