@@ -3,7 +3,7 @@
     <div class="container">
       <div class="c-index-trading_left" vue-animate-onscroll.repeat="'animated flip'">
         <h2 class="c-index-trading__title">{{ $t('home.trading_title') }}</h2>
-        <p class="c-index-trading__text">PKT can be traded on the BitMart exchange. It is also trading via OTC on Telegram in the PKT Trading Group chat. Wrapped PKT (wPKT) can be traded via Binance Smart Chain on PancakeSwap.</p>
+        <p class="c-index-trading__text">{{ $t('home.trading_text_1') }}</p>
         <div class="c-index-trading__links">
             <nuxt-link to="/getpkt" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></nuxt-link>
             <nuxt-link to="/wpkt" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_2') }}</span></nuxt-link>

@@ -118,27 +118,27 @@ export default {
           route_link: "/cash",
         },
         {
-          name: "About",
+          name: this.$t("footer.about"),
           route_link: "/letter",
         },
         {
-          name: "Roadmap",
+          name: this.$t("header.roadmap"),
           route_link: "/build#roadmap",
         },
         {
-          name: "Origin Story",
+          name: this.$t("header.origin_story"),
           route_link: "/origin-story",
         },
         {
-          name: "Resources",
+          name: this.$t("header.resources"),
           route_link: "/resources",
         },
 		{
-          name: "Trademark",
+          name: this.$t("footer.trademark"),
           route_link: "/trademark",
         },
 		{
-          name: "Brand",
+          name: this.$t("footer.brand"),
           route_link: "/brand",
         },
       ],

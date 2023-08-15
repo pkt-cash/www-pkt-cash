@@ -2,9 +2,9 @@
   <div class="v-pkt">
     <section class="v-header-section">
       <HeaderInternal 
-      title="Get PKT" 
-      subtitle="The world’s internet bandwidth currency" 
-      text="PKT is both the name of the blockchain and the trading ticker. The PKT currency is also referred to as PKT Cash. There are many ways to acquire PKT Cash." 
+      :title="this.$t('get_pkt.header_title')" 
+      :subtitle="this.$t('get_pkt.header_subtitle')" 
+      :text="this.$t('get_pkt.header_text')" 
       button_1="Trade on Bittrex" 
       button_1_link="https://global.bittrex.com/Market/Index?MarketName=USDT-PKT"
       button_1_target="_blank"
@@ -56,9 +56,9 @@
     </template>
     <section class="v-pkt-section v-pkt-section__invited">
       <div class="container">
-        <h2 class="v-pkt-section__title">All Pkteers are Invited</h2>
-        <p class="v-pkt-section__text">Once you have acquired PKT or wPKT, you become a Pkteer, joining the effort to decentralize access to the internet and empowering people around the world to monetize their internet bandwidth. Join our community of people around the world, supporting the vision of getting the next 1 billion people online. </p>
-        <nuxt-link to="/resources" class="v-pkt-section__button"><span>Join the Community</span></nuxt-link>
+        <h2 class="v-pkt-section__title">{{ $t("get_pkt.invited_title") }}</h2>
+        <p class="v-pkt-section__text">{{ $t("get_pkt.invited_text") }}</p>
+        <nuxt-link to="/resources" class="v-pkt-section__button"><span>{{ $t("footer.join_community") }}</span></nuxt-link>
       </div>
     </section>
   </div>
@@ -101,28 +101,28 @@ export default {
       ],
       steps_list: [
         {
-          name: "PKT is Listing on Cryptocurrency Exchanges",
+          name: this.$t("get_pkt.step_1_title"),
           link: "https://global.bittrex.com/Market/Index?MarketName=USDT-PKT",
           link_label: "Buy PKT",
           link_2: "https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32",
           link_label_2: "Buy wPKT",
-          text: "Some exchanges trade PKT, which is the mainnet, mined coin. Other exchanges list wPKT, which is a wrapped PKT token that exists on a 1:1 basis with PKT and can be swapped for PKT or staked in liquidity pools on Pancake Swap.",
+          text: this.$t("get_pkt.step_1_text"),
           img: "/img/pkt-steps-1.png",
           id: "first",
         },
         {
-          name: "You Will Need a PKT Wallet",
+          name: this.$t("get_pkt.step_2_title"),
           link: "/wallet#options",
           link_label: "Get a PKT Wallet",
           versa: "versa",
-          text: "Choose a PKT wallet that will safely store your PKT or wPKT. Different wallets work for different operating systems and mobile devices.",
+          text: this.$t("get_pkt.step_2_text"),
           img: "/img/pkt-steps-2.png",
         },
         {
-          name: "Peer to Peer OTC Trading",
+          name: this.$t("get_pkt.step_3_title"),
           link: "https://t.me/joinchat/VTzmfU6P3YB7WrYx",
           link_label: "Join Trading Group",
-          text: "OTC trading using escrow is active in the PKT Trading Group on Telegram. PKT miners and buyers safely trade by following the instructions in the chat group.",
+          text: this.$t("get_pkt.step_3_text"),
           img: "/img/pkt-steps-3.png",
         },
       ]

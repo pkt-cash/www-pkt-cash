@@ -2,7 +2,7 @@
   <div class="c-index-join">
     <div class="container">
       <h2 class="c-index-join__title">{{ $t('home.join_community_title') }}</h2>
-      <p class="c-index-join__text">PKT is a community operated project. There is no company, no investors, no CEO, and no pre-mine. It is supported by people just like YOU. Join the social channels for updates and discussions about how to participate in this fast growing network.</p>
+      <p class="c-index-join__text">{{ $t('home.join_community_text') }}</p>
       <SocialLinks :list="social_list" />
       <img src="/img/home-join-map.svg" alt="Map" class="c-index-join__map" />
       <nuxt-link class="c-index-join__link" to="/community">

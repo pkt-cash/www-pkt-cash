@@ -2,9 +2,9 @@
   <div class="v-cash">
     <section class="v-cash-header-section">
       <HeaderInternal
-      title="PKT Cash" 
-      subtitle="Powering the PKT ecosystem" 
-      text="PKT Cash is a coin that is created when mining the PKT blockchain using internet bandwidth. PKT Cash has no central issuer and the PKT Network is not owned by any individual, group or legal entity." 
+      :title="this.$t('header.pkt_cash')" 
+      :subtitle="this.$t('pkt_cash.header_subtitle')" 
+      :text="this.$t('pkt_cash.header_text')"
       button_1="Cryptoeconomics" 
       button_1_link="/cryptoeconomics"
       is_arrow_down 
@@ -12,9 +12,9 @@
     </section>
     <section class="v-cash-section__micro" id="micro">
       <div class="container">
-        <h2 class="v-cash-section__micro__title">Built For Microtransactions</h2>
-        <p class="v-cash-section__micro__text">Bandwidth is a $2T global annual market that is controlled by internet monopolies. PKT Cash is a cryptocurrency that is built to enable individuals to buy, sell and trade internet bandwidth trading. To accomplish this, PKT Cash is designed to transact with near-infinite transactions per second and near-zero gas fees.</p>
-        <p class="v-cash-section__micro__text">PKT is Lightning Network enabled, which means microtransactions occur off-chain, providing near-unlimited scalability for decentralized bandwidth trading markets. PKT has a 6 billion coin supply whereby the first half of the PKT Cash coin supply was mined in the first 2 years of mainnet, and the remaining half will take another 61 years to mine. This total coin supply makes it so bandwidth transactions can be small denominations, without requiring fractional payments.</p>
+        <h2 class="v-cash-section__micro__title">{{ $t("pkt_cash.micro_title") }}</h2>
+        <p class="v-cash-section__micro__text">{{ $t("pkt_cash.micro_text_1") }}</p>
+        <p class="v-cash-section__micro__text">{{ $t("pkt_cash.micro_text_2") }}</p>
       </div>
     </section>
     <section class="v-cash-section__functions">

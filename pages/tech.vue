@@ -12,10 +12,10 @@
     </section>
     <section id="pktcrypt" class="v-tech__pktcrypt">
       <div class="container">
-        <h2 class="v-tech__title">PacketCrypt</h2>
-        <p class="v-tech__subheading">Bandwidth + Encryption</p>
-        <p class="v-tech__text">PacketCrypt is the world’s first bandwidth-hard proof of work. This technology incentivizes miners to increase bandwidth upload and download throughput. PKT tech favors increased bandwidth over CPU power, rewarding people that connect high speed bandwidth infrastructure to the network. </p>
-        <p class="v-tech__text">PacketCrypt utilizes 2 distinct stages: announcement tech and block tech. Any internet connected device can mine PKT Cash by uploading small, difficult to compress (1KB) messages called announcements to block miners. Block miners seek to get a discount on the difficulty of the work they must do, and maximize the number of announcements into each block, by fairly paying announcement miners in PKT Cash to keep them supplied with fresh announcements. Optimal tech results achieved by cooperation between miners.</p>
+        <h2 class="v-tech__title">{{ $t("tech.pktcrypt_title") }}</h2>
+        <p class="v-tech__subheading">{{ $t("tech.pktcrypt_subtitle") }}</p>
+        <p class="v-tech__text">{{ $t("tech.pktcrypt_text_1") }}</p>
+        <p class="v-tech__text">{{ $t("tech.pktcrypt_text_2") }}</p>
       </div>
     </section>
     <section class="v-tech__cjdns">
@@ -24,19 +24,19 @@
           <h2 class="v-tech__title">Cjdns</h2>
         </div>
         <div class="v-tech_right">
-          <p class="v-tech__subheading">Mesh Networking And Packet Routing</p>
-          <p class="v-tech__text">PKT is an extension of the cjdns mesh networking protocol, launched by PKT Lead Developer Caleb James DeLisle in 2011. Cjdns solves several weaknesses with internet function, such as data privacy, need for decentralization and optimized, efficient routing.</p>
-          <p class="v-tech__text">Cjdns provides anyone with an IPv6 address, which enables people to gain access to the internet through a cjdns gateway without directly requiring a centralized ISP. This is the basis for a global mesh network in which anyone can share their internet and become an internet service provider (ISP).</p>
+          <p class="v-tech__subheading">{{ $t("tech.cjdns_subtitle") }}</p>
+          <p class="v-tech__text">{{ $t("tech.cjdns_text_1") }}</p>
+          <p class="v-tech__text">{{ $t("tech.cjdns_text_2") }}</p>
         </div>
       </div>
     </section>
     <section class="v-tech__vpn">
       <div class="container">
       <div class="v-tech_left">
-        <h2 class="v-tech__title">PKT VPN</h2>
-        <p class="v-tech__subheading">Free VPN, Only Pay For Speed</p>
-        <p class="v-tech__text">The PKT VPN is built to connect to, send and receive traffic through the cjdns network. PKT VPN enables users to get a base-line VPN for free, and pay for speed using microtransactions with PKT Cash. </p>
-        <p class="v-tech__text">VPN server administrators will register as a public PKT VPN, accept client connections and route VPN traffic through the PKT network. Users can browse a list of VPNs, select the best VPN based on location and bandwidth load and surf the internet from behind a PKT VPN exit node. VPN creates utility for the PKT Network and offers financial incentive in addition to PKT Cash tech.</p>
+        <h2 class="v-tech__title">{{ $t("tech.vpn_title") }}</h2>
+        <p class="v-tech__subheading">{{ $t("tech.vpn_subtitle") }}</p>
+        <p class="v-tech__text">{{ $t("tech.vpn_text_1") }}</p>
+        <p class="v-tech__text">{{ $t("tech.vpn_text_2") }}</p>
       </div>
       <div class="v-tech_right">
         <img src="/img/tech-vpn.svg" alt="Edge Points Devices" />
@@ -46,10 +46,10 @@
     <section class="v-tech__token">
       <div class="container">
         <div class="v-tech_left">
-          <h2 class="v-tech__title">TokenStrike</h2>
-          <p class="v-tech__subheading">A new standard for token issuance</p>
-          <p class="v-tech__text">TokenStrike is a unique protocol for the issuance and exchange of tokens and NFTs inside of the PKT ecosystem. TokenStrike is designed for microtransactions, so tokens must be issued and exchanged with zero cost and without gas fees (gas fees for the exchange of ERC-20 tokens is unacceptable).</p>
-          <p class="v-tech__text">TokenStrike tokens can be exchanged in a fully untrusted Lightning Network HTLC transaction. This is a scalable solution that fosters unlimited marketplace potential, including a decentralized bandwidth market, and sets PKT apart from every other layer 1 blockchain in the world.</p>
+          <h2 class="v-tech__title">{{ $t("tech.ts_title") }}</h2>
+          <p class="v-tech__subheading">{{ $t("tech.ts_subtitle") }}</p>
+          <p class="v-tech__text">{{ $t("tech.ts_text_1") }}</p>
+          <p class="v-tech__text">{{ $t("tech.ts_text_2") }}</p>
         </div>
         <div class="v-tech_right">
           <img src="/img/tech-tokenstrike.svg" alt="TokenStrike" />
@@ -59,10 +59,10 @@
     <section class="v-tech__devices">
       <div class="container">
       <div class="v-tech_left">
-        <h2 class="v-tech__title">Edge Points Devices</h2>
-        <p class="v-tech__subheading">Connectivity at the edge</p>
-        <p class="v-tech__text"> Edge Points are a device that is operated by an individual or business that maintains a network connection to the PKT Network. Edge Points will tokenize their bandwidth using TokenStrike and sell tokenized bandwidth to Cloud ISPs to broker connectivity to real customers. Edge Point technology will interface with PKT VPN and evolve to facilitate mesh network access points to the internet.</p>
-        <p class="v-tech__text">The first stage Edge Points are PKT Cubes, sold by PKT Pal, which monetize home or office bandwidth and will provide VPN access, when PKT VPN is live. Subsequently, Edge Point owners will choose to monetize bandwidth once the TokenStrike protocol is minting tokens. As users allocate bandwidth from their local internet connections, this builds a global, decentralized edge network, by the people, for the people.</p>
+        <h2 class="v-tech__title">{{ $t("tech.edge_device_title") }}</h2>
+        <p class="v-tech__subheading">{{ $t("tech.edge_device_subtitle") }}</p>
+        <p class="v-tech__text">{{ $t("tech.edge_device_text_1") }}</p>
+        <p class="v-tech__text">{{ $t("tech.edge_device_text_2") }}</p>
       </div>
       <div class="v-tech_right">
         <img src="/img/tech-edge_devices.png" alt="Edge Points Devices" />
@@ -72,10 +72,10 @@
     <section class="v-tech__cloud">
       <div class="container">
         <div class="v-tech_left">
-          <h2 class="v-tech__title">Cloud ISP</h2>
-          <p class="v-tech__subheading">Reimagined internet service</p>
-          <p class="v-tech__text">A Cloud ISP is a hybrid between a traditional ISP and a VPN provider. Cloud ISPs aggregate and broker Edge Point tokenized bandwidth leases, facilitate software defined networking, and oversee the administrative roles of internet service to customers.</p>
-          <p class="v-tech__text">The Cloud ISP system is designed to manage two virtual assets: the virtual router lease and the bandwidth lease. A virtual router lease has a right to resources within the routing device for a limited time period. The bandwidth lease provides a minimum bandwidth link guarantee between two physical routing devices for a specific time period. The result is the PKT Network: an ultra fast independent network that is connected to the normal internet and powered by the people.</p>
+          <h2 class="v-tech__title">{{ $t("tech.cloud_title") }}</h2>
+          <p class="v-tech__subheading">{{ $t("tech.cloud_subtitle") }}</p>
+          <p class="v-tech__text">{{ $t("tech.cloud_text_1") }}</p>
+          <p class="v-tech__text">{{ $t("tech.cloud_text_2") }}</p>
         </div>
         <div class="v-tech_right"></div>
       </div>

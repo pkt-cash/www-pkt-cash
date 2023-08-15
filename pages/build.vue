@@ -88,35 +88,35 @@
     <img class="mobile_illustration" src="/img/build-way.png" alt="Way" />
     <section id="phases_overview" class="v-roadmap-section">
       <div class="container">
-        <h2 class="v-roadmap-section-title_h2 dark_gradient">The Four Phases</h2>
-        <p class="v-roadmap-section-title_supersmall">Phases are listed in order, with the items having the fewest dependencies first. This is not the order the roadmap will be executed, because projects that bring valuable capabilities to the PKT community should be completed first.</p>
+        <h2 class="v-roadmap-section-title_h2 dark_gradient">{{ $t("build.phases_title") }}</h2>
+        <p class="v-roadmap-section-title_supersmall">{{ $t("build.phases_descr") }}</p>
         <div class="v-roadmap-section_phases_description">
           <div class="v-roadmap-section_phases_description_single">
             <div class="v-roadmap-section_phases_description_single_img"><Phase1/></div>
-            <h4 class="v-roadmap-section_phases_description_single_number">Phase 1</h4>
-            <h4 class="v-roadmap-section_phases_description_single_title">Launch</h4>
-            <p class="v-roadmap-section_phases_description_single_descr">Launch the PKT blockchain and begin bandwidth-hard mining using PacketCrypt.</p>
+            <h4 class="v-roadmap-section_phases_description_single_number">{{ $t("build.phase_1_number") }}</h4>
+            <h4 class="v-roadmap-section_phases_description_single_title">{{ $t("build.phase_1_title") }}</h4>
+            <p class="v-roadmap-section_phases_description_single_descr">{{ $t("build.phase_1_descr") }}</p>
           </div>
           <div class="v-roadmap-section_phases_description_single">
             <div class="v-roadmap-section_phases_description_single_img"><Phase2/></div>
-            <h4 class="v-roadmap-section_phases_description_single_number">Phase 2</h4>
-            <h4 class="v-roadmap-section_phases_description_single_title">Utilize</h4>
-            <p class="v-roadmap-section_phases_description_single_descr">Utilize technology use cases including VPN bandwidth leasing, tokenized bandwidth, DeFi, and connecting PKT to cjdns.</p>
+            <h4 class="v-roadmap-section_phases_description_single_number">{{ $t("build.phase_2_number") }}</h4>
+            <h4 class="v-roadmap-section_phases_description_single_title">{{ $t("build.phase_2_title") }}</h4>
+            <p class="v-roadmap-section_phases_description_single_descr">{{ $t("build.phase_2_descr") }}</p>
           </div>
           <div class="v-roadmap-section_phases_description_single">
             <div class="v-roadmap-section_phases_description_single_img"><Phase3/></div>
-            <h4 class="v-roadmap-section_phases_description_single_number">Phase 3</h4>
-            <h4 class="v-roadmap-section_phases_description_single_title">Scale</h4>
-            <p class="v-roadmap-section_phases_description_single_descr">Scale low cost internet sharing, introduce first Cloud ISPs, and enable high speed transactions in and out of PKT using Lightning Network.</p>
+            <h4 class="v-roadmap-section_phases_description_single_number">{{ $t("build.phase_3_number") }}</h4>
+            <h4 class="v-roadmap-section_phases_description_single_title">{{ $t("build.phase_3_title") }}</h4>
+            <p class="v-roadmap-section_phases_description_single_descr">{{ $t("build.phase_3_descr") }}</p>
           </div>
           <div class="v-roadmap-section_phases_description_single">
             <div class="v-roadmap-section_phases_description_single_img"><Phase4/></div>
-            <h4 class="v-roadmap-section_phases_description_single_number">Phase 4</h4>
-            <h4 class="v-roadmap-section_phases_description_single_title">Innovate</h4>
-            <p class="v-roadmap-section_phases_description_single_descr">Innovate on Cloud ISP commercialization, getting on the internet without a traditional ISP, and selling tokenize bandwidth into a bandwidth trading marketplace.</p>
+            <h4 class="v-roadmap-section_phases_description_single_number">{{ $t("build.phase_4_number") }}</h4>
+            <h4 class="v-roadmap-section_phases_description_single_title">{{ $t("build.phase_4_title") }}</h4>
+            <p class="v-roadmap-section_phases_description_single_descr">{{ $t("build.phase_4_descr") }}</p>
           </div>
         </div>
-        <nuxt-link to="/letter" class="single_button btn_blue_new button_new"><span>Letter From CJD</span></nuxt-link>
+        <nuxt-link to="/letter" class="single_button btn_blue_new button_new"><span>{{ $t("header.letter") }}</span></nuxt-link>
       </div>
     </section>
     <section class="v-roadmap-section">
@@ -176,33 +176,33 @@ export default {
         bg: true,
         utilize: false,
         illustration: "/img/build-launch.png",
-        Title: "Launch",
-        subTitle:"Bandwidth Mining",
-        content: "PacketCrypt was created and the mainnet PKT blockchain was launched in August 2019. Phase 1 focused on community growth, building out network infrastructure and unifying around PacketCrypt and bandwidth-hard mining. Major developments include multiple PKT wallets, community engagement via PKT Chat, the project task tracker, Network Steward and informational websites."
+        Title: this.$t("build.phase_1_title"),
+        subTitle:this.$t("build.phase_block_1_subtitle"),
+        content: this.$t("build.phase_block_1_content")
       },
       {
         bg: false,
         utilize: true,
         illustration: "/img/build-utilize.png",
-        Title: "Utilize",
-        subTitle:"Tokenized Bandwidth Leases",
-        content: "Anyone who wants to use a VPN, create their own, or mine PKT will easily be able to do so via Anodium VPN. Technology development includes Token Strike, to issue tokens in the PKT ecosystem for near zero cost and without gas fees, a DeFi bridge between PKT, Ethereum and Binance Smart Chain, bandwidth lease function and infrastructure via cjdns, and an Edge Point Device to easily mine PacketCrypt and get on the internet via your neighbor."
+        Title: this.$t("build.phase_2_title"),
+        subTitle: this.$t("build.phase_block_2_subtitle"),
+        content: this.$t("build.phase_block_2_content")
       },
       {
         bg: true,
         utilize: false,
         illustration: "/img/build-scale.png",
-        Title: "Scale",
-        subTitle:"Support Internet Sharing",
-        content: "The alpha implementation the virtual Cloud ISP provides the ability to trade, aggregate, of and access tokenized bandwidth leases via cjdns. People can get on the internet via their neighbor with no privacy risk because all data is sent to a VPN. The Atomic Swap Market can transact in and out of PKT with high speed, low cost transactions between Lightning Network enabled coins such as PKT, Bitcoin, Litecoin and Ethereum. Desktop and mobile apps provide easy functionality across devices worldwide."
+        Title: this.$t("build.phase_3_title"),
+        subTitle:this.$t("build.phase_block_3_subtitle"),
+        content: this.$t("build.phase_block_3_content")
       },
       {
         bg: false,
         utilize: false,
         illustration: "/img/build-innovate.png",
-        Title: "Innovate",
-        subTitle:"Virtual ISPs",
-        content: "The commercial expansion of Cloud ISPs signifies a healthy and active bandwidth market. People can lease bandwidth allotment guarantees and access the internet without using a traditional ISP. PKT Priority provides internet access with a minimum price free if there is available bandwidth. This will simplify local mesh of networking by moving the network engineering component to the Cloud ISP. The stateless switch design central in the cjdns protocol will not only set new records for router performance/cost ratio, but will also allow for hundreds or even thousands of Cloud ISPs to send data through a single device, each according to their own routing policy."
+        Title: this.$t("build.phase_4_title"),
+        subTitle: this.$t("build.phase_block_4_subtitle"),
+        content: this.$t("build.phase_block_4_content")
       }
     ],
 	  glossary_list: [

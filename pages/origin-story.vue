@@ -2,8 +2,8 @@
   <div class="v-origin">
     <section class="v-origin-header_section">
       <HeaderOrigin 
-      title="PKT Origin Story" 
-      subtitle="Cjdns and humble beginnings" 
+      :title="this.$t('origin_story.heading_title')" 
+      :subtitle="this.$t('origin_story.heading_subtitle')" 
        />
     </section>
     <section class="v-origin-section v-origin-section-first">

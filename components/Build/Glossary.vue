@@ -2,9 +2,9 @@
 <div class="c-glossary">
     <img class="c-glossary_before" src="/img/build-pkt-logo.svg" alt="PKT" />
     <div class="container">
-		<h2 class="c-glossary__title">{{ $t("roadmap.glossary_heading") }}</h2>
-		<p class="c-glossary__text">{{ $t("roadmap.glossary_text_01") }}</p>
-		<p class="c-glossary__text">{{ $t("roadmap.glossary_text_03") }}</p>
+		<h2 class="c-glossary__title">{{ $t("build.glossary_heading") }}</h2>
+		<p class="c-glossary__text">{{ $t("build.glossary_text_01") }}</p>
+		<p class="c-glossary__text">{{ $t("build.glossary_text_03") }}</p>
 		
 		<vsa-list :init-active="false" :auto-collapse="true">
 		  <vsa-item v-for="item of accordion_list" :key="item.id" :id="item.id" class="c-glossary__item">

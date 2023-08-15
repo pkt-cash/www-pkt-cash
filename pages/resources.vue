@@ -22,11 +22,11 @@
     <section class="v-resources-section v-resources-section__whitepapers">
       <div class="container">
         <div class="v-resources-section__left">
-          <h2 class="v-resources-section__title_small">PKT Whitepapers</h2>
-          <p class="v-resources-section__text">The PKT Network whitepaper gives an overview of the PKT project vision and introduces the concept of Edge Points and Cloud ISPs to decentralize infrastructure and network operation.</p>
-          <a href="#" target="_blank" class="v-resources-section__button"><span>PKT Network</span></a>
-          <p class="v-resources-section__text">The PacketCrypt whitepaper introduces the world's first bandwidth-hard proof of work and presents the mathematics and architecture behind the technology.</p>
-          <a href="#" target="_blank" class="v-resources-section__button"><span>PacketCrypt</span></a>
+          <h2 class="v-resources-section__title_small">{{ $t("resources.whitepapers_heading") }}</h2>
+          <p class="v-resources-section__text">{{ $t("resources.whitepapers_text_1") }}</p>
+          <a href="#" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.whitepapers_button_1") }}</span></a>
+          <p class="v-resources-section__text">{{ $t("resources.whitepapers_text_2") }}</p>
+          <a href="#" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.whitepapers_button_2") }}</span></a>
         </div>
       </div>
     </section>

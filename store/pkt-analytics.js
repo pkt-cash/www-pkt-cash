@@ -11,7 +11,8 @@ const STATE = immutableMap({
   difficulty: null,
   bitsPerSecond: null,
   encryptionsPerSecond: null,
-  pkt_price: null
+  pkt_price: null,
+  pkt_cp_logins: null
 });
 
 export const state = () => STATE.toJS();
@@ -39,6 +40,7 @@ export const actions = {
       const difficulty = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/chain/down/1`)
       const stats = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/packetcrypt/stats/1/`)
       const pkt_price_fetch = await this.$axios.$get("https://pkt.cash/api/cmc-price")
+      const pkt_cp_logins_fetch = await this.$axios.$get("https://pktpal.com/?get_cp_logins")
       console.log('load function')
       
       commit('updateField', { path: 'already_mined', value: data.alreadyMined })
@@ -48,6 +50,7 @@ export const actions = {
       commit('updateField', { path: 'bitsPerSecond', value: stats.results[0].bitsPerSecond })
       commit('updateField', { path: 'encryptionsPerSecond', value: stats.results[0].encryptionsPerSecond })
       commit('updateField', { path: 'pkt_price', value: pkt_price_fetch.data.PKT.quote.USD.price })
+      commit('updateField', { path: 'pkt_cp_logins', value: pkt_cp_logins_fetch[0].all_cp_logins })
 
     } catch (e) {
       console.log(e)
@@ -61,6 +64,7 @@ export const actions = {
       const difficulty = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/chain/down/1`)
       const stats = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/packetcrypt/stats/1/`)
       const pkt_price_fetch = await this.$axios.$get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=PKT", { headers })
+      const pkt_cp_logins_fetch = await this.$axios.$get("https://pktpal.com/?get_cp_logins")
       console.log(data, '/stats/coins')
       console.log(difficulty, '/chain/down/1')
       console.log(stats, '/packetcrypt/stats/1/')
@@ -72,6 +76,7 @@ export const actions = {
       commit('updateField', { path: 'bitsPerSecond', value: stats.results[0].bitsPerSecond })
       commit('updateField', { path: 'encryptionsPerSecond', value: stats.results[0].encryptionsPerSecond * 1000000 })
       commit('updateField', { path: 'pkt_price', value: pkt_price_fetch.data.PKT.quote.USD.price })
+      commit('updateField', { path: 'pkt_cp_logins', value: pkt_cp_logins_fetch[0].all_cp_logins })
     } catch (e) {
 
     }

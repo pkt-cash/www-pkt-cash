@@ -3,12 +3,12 @@
     <div class="container">
         <StarsHome />
         <div class="c-index-header_top c-index-header_top__desktop">
-            <h2 class="c-index-header__title">THE FUTURE OF<br />INTERNET ACCESS</h2>
-            <p class="c-index-header__content">PKT is an ecosystem of apps that decentralize access to the internet.<br />The mission is to get the next billion people online.</p>
+            <h2 class="c-index-header__title">{{ $t('home.header_heading') }}</h2>
+            <p class="c-index-header__content">{{ $t('home.header_subheading_1') }}<br />{{ $t('home.header_subheading_2') }}</p>
             <div class="c-index-header__links inline_links">
-              <nuxt-link to="/utility" class="btn_blue_new button_new"><span>Utility</span></nuxt-link>
-              <nuxt-link to="/build" class="btn_blue_new button_new"><span>Build</span></nuxt-link>
-              <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>Roadmap</span></nuxt-link>
+              <nuxt-link to="/utility" class="btn_blue_new button_new"><span>{{ $t("home.block_3_title") }}</span></nuxt-link>
+              <nuxt-link to="/build" class="btn_blue_new button_new"><span>{{ $t("header.build") }}</span></nuxt-link>
+              <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>{{ $t("home.roadmap_link") }}</span></nuxt-link>
             </div>
         </div>
     </div>
@@ -18,6 +18,8 @@
           <div class="c-index-header_mining_data_title">
             <h2>{{ $t('home.mining_data_title') }}:</h2>
             <p class="c-index-header_live btn_blue_new">{{ $t('home.mining_data_subtitle') }}</p>
+            <h3 class="c-index-header__desk-itm-title cp_users">{{ $t('home.cp_logins_label') }}</h3>
+            <p class="c-index-header__desk-itm-text">{{ pkt_cp_logins }}</p>
           </div>
           <div class="c-index-header_data">
             <h3 class="c-index-header__desk-itm-title">{{ $t('home.bandwidth') }}</h3>
@@ -50,6 +52,7 @@ export default {
       "bitsPerSecond",
       "encryptionsPerSecond",
       "pkt_price",
+      "pkt_cp_logins",
     ]),
     is_mobile() {
       return process.client && window.innerWidth < 1100;
@@ -155,6 +158,7 @@ export default {
     line-height:rem(100);
     text-transform: capitalize;
     margin-bottom:0;
+    max-width:rem(850);
     @include for-width(-small-lg) {
       font-size: rem(36);
       line-height:rem(46);
@@ -262,7 +266,7 @@ export default {
     max-width:85%;
     @extend %df;
 		@extend %jcsb;
-    @extend %aic;
+    @extend %aib;
     @include for-width(-tablet) {
       max-width:100%;
     }
@@ -274,9 +278,6 @@ export default {
       @extend %subheading;
 			color: $white;
       @extend %t-center;
-      @include for-width(-small-lg) {
-        margin-bottom:rem(35);
-      }
       h2 {
         margin-bottom:rem(10);
       }
@@ -289,6 +290,7 @@ export default {
     @include for-width(-small-lg) {
       display: inline-block;
       padding: rem(3) rem(24);
+      margin-bottom:rem(25);
     }
   }
   &_data {
@@ -309,6 +311,9 @@ export default {
     @include for-width(-laptop) {
       font-size: rem(16);
       line-height: rem(26);
+    }
+    &.cp_users {
+      margin-top: rem(15);
     }
   }
   &__desk-itm-text {
