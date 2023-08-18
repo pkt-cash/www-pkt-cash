@@ -40,7 +40,7 @@ export const actions = {
       const difficulty = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/chain/down/1`)
       const stats = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/packetcrypt/stats/1/`)
       const pkt_price_fetch = await this.$axios.$get("https://pkt.cash/api/cmc-price")
-      const pkt_cp_logins_fetch = await this.$axios.$get("https://pktpal.com/?get_cp_logins")
+      const pkt_cp_logins_fetch = await this.$axios.$get("https://pkt.cash/api/community-stats/pktpal")
       console.log('load function')
       
       commit('updateField', { path: 'already_mined', value: data.alreadyMined })
@@ -64,7 +64,7 @@ export const actions = {
       const difficulty = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/chain/down/1`)
       const stats = await this.$axios.$get(`${EXPLORER_API}/api/v1/PKT/pkt/packetcrypt/stats/1/`)
       const pkt_price_fetch = await this.$axios.$get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=PKT", { headers })
-      const pkt_cp_logins_fetch = await this.$axios.$get("https://pktpal.com/?get_cp_logins")
+      const pkt_cp_logins_fetch = await this.$axios.$get("https://pkt.cash/api/community-stats/pktpal")
       console.log(data, '/stats/coins')
       console.log(difficulty, '/chain/down/1')
       console.log(stats, '/packetcrypt/stats/1/')

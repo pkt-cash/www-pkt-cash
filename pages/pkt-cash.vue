@@ -47,8 +47,8 @@
     <section class="v-cash-section__halfed dark">
       <div class="container">
         <div class="v-cash-section__halfed_left">
-          <h2 class="v-cash-section__halfed__title">TokenStrike</h2>
-          <p class="v-cash-section__halfed__text">PKT proposes a new token standard called TokenStrike, that will enable zero cost token issuance with zero gas fee transactions. TokenStrike is the backbone technology for supporting a decentralized bandwidth trading marketplace, whereby anyone will be able to tokenize bandwidth and buy/sell microtransaction bandwidth leases over Lightning Network with near-infinite transactions per second. TokenStrike will also enable the issuance of NFTs without gas fees. - Coming 2022</p>
+          <h2 class="v-cash-section__halfed__title">{{ $t("pkt_cash.ts_title") }}</h2>
+          <p class="v-cash-section__halfed__text">{{ $t("pkt_cash.ts_descr") }}</p>
         </div>
         <div class="v-cash-section__halfed_right">
           <img src="/img/pkt-tockenstrike.png" alt="Bandwidth Trading Marketplace" />
@@ -97,30 +97,30 @@ export default {
     return {
       functions_first: [
         {
-          name: "Mining Rewards",
-          descr: "Edge Points are paid in PKT Cash every 60 seconds.",
+          name: this.$t("pkt_cash.function_1_name"),
+          descr: this.$t("pkt_cash.function_1_descr"),
           image: "/img/cash-functions-reward.png",
         },
         {
-          name: "VPN",
-          descr: "Users will have VPN service for free, and can pay for their VPN speed with PKT Cash. - Coming 2022",
+          name: this.$t("pkt_cash.function_2_name"),
+          descr: this.$t("pkt_cash.function_2_descr"),
           image: "/img/cash-functions-vpn.png",
         },
         {
-          name: "Data Transfer",
-          descr: "Edge Points can allow the transmission of real-world data through virtual private networks (VPN) to earn additional payments. - Coming 2022",
+          name: this.$t("pkt_cash.function_3_name"),
+          descr: this.$t("pkt_cash.function_3_descr"),
           image: "/img/cash-functions-data.png",
         },
       ],
       functions_last: [
         {
-          name: "Network Steward",
-          descr: "The Network Steward treasury provides grants for infrastructure growth and technology development every 90 days, otherwise the PKT Cash is burned.",
+          name: this.$t("pkt_cash.function_4_name"),
+          descr: this.$t("pkt_cash.function_4_descr"),
           image: "/img/cash-functions-ns.png",
         },
         {
-          name: "Governance",
-          descr: "Every holder of PKT Cash is able to cast a vote to impeach the Network Steward and vote a new one to take its place. ",
+          name: this.$t("pkt_cash.function_5_name"),
+          descr: this.$t("pkt_cash.function_5_descr"),
           image: "/img/cash-functions-vote.png",
         },
       ],
