@@ -2,41 +2,41 @@
   <div class="v-about">
     <section class="v-about-section-header">
       <HeaderInternal
-        title="Letter from CJD" 
-        subtitle="This is a letter about the inspiration for PKT, written by PKT lead developer and creator of cjdns, Caleb James DeLisle." 
-        button_1="PKT Origin Story" 
+        :title="this.$t('letter_cjd.header_title')" 
+        :subtitle="this.$t('letter_cjd.header_subtitle')" 
+        :button_1="this.$t('header.origin_story')" 
         button_1_link="/origin-story"
         />
     </section>
     <section class="v-about-section">
       <div class="container_narrow">
-        <h2 class="v-about-section-title_h2">ARPANET<br />Paved the Way</h2>
+        <h2 class="v-about-section-title_h2">{{ $t("letter_cjd.main_heading_1") }}<br />{{ $t("letter_cjd.main_heading_2") }}</h2>
         <hr />
-        <p class="v-about-section-text">It's been just over 50 years since the US military issued the first contract to build ARPANET, the network which would eventually evolve into the Internet.</p>
-        <p class="v-about-section-text">The year was 1969: Almost everybody got the daily newspaper, typing was a skill mostly confined to secretaries, and if you wanted to communicate with someone far away you would use the telephone. The telephone system itself was something hard to imagine, in most countries there was only one provider, it was illegal to connect your own telephone to the provider's network, and a 5 minute call from New York to Los Angeles cost the equivalent of $18 in today's money.</p>
-        <h3 class="v-about-section-quote">“If a network has the right DNA, it doesn't matter how small it is at the beginning.”</h3>
-        <p class="v-about-section-text">It's hard to overstate the impact that the Internet has had on the world. The ability of everyone to become a publisher has lead to entirely new forms of journalism and media. Teleconferencing has given rise to remote work and even entirely remote teams. E-commerce and crowdfunding combined with low volume manufacturing have given customers not only incredible choice, but direct input into what products are made. These phenomenon, while wildly futuristic by 1969 standards, would at least have been comprehensible; but open source software projects, decentralized social media, and blockchains are so far removed from that world that there wouldn't even be a basis to explain them.</p>
-        <h3 class="v-about-section-quote">“The Internet has probably been the biggest single force for individual liberation since the printing press.”</h3>
-        <p class="v-about-section-text">The core of the Internet has blossomed into a rich ecosystem, but many people are not able to effectively participate because they have limited access or no access at all. The ARPANET architecture has allowed for tens of thousands of independent network operators, but we need to lower the barrier of entry to allow for hundreds of millions of network operators.</p>
-        <p class="v-about-section-text">PKT’s plan is to separate the role of infrastructure provider (the boots-on-the-ground job of connecting fiber and pointing antennas), from the role of network operator (the complex technical job of planning routes that data should take). Between these two roles will be a decentralized bandwidth marketplace where the infrastructure providers sell bandwidth leases to the network operators.</p>
-        <p class="v-about-section-text">PKT intends to change the dynamic from pay-for-access to pay-for-priority because it makes absolutely no sense that a person should be unable to communicate while there's a perfectly good Internet connection sitting idle.</p>
-        <h3 class="v-about-section-quote">"This plan is obviously very ambitious, but like ARPANET started as a couple of computers connected over the telephone, PKT has begun this way as well."</h3>
-        <p class="v-about-section-text">PKT also carries forward the belief that communications should be encrypted. This means, nobody should have to apply for https certificates, there should be no question of the origins of a data packet when it is received, and nobody should ever need a VPN to get another Internet connection when they already have one.</p>
-        <p class="v-about-section-text">If you believe that the internet should be owned by the people, and that no one should ever be denied access while bandwidth sits unused, if you want to look back on the days of $50 a month the way we look back on the days of $18 phone calls, come build with us. We're just getting started.</p>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_1") }}</p>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_2") }}</p>
+        <h3 class="v-about-section-quote">“{{ $t("letter_cjd.main_text_3") }}”</h3>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_4") }}</p>
+        <h3 class="v-about-section-quote">“{{ $t("letter_cjd.main_text_5") }}”</h3>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_6") }}</p>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_7") }}</p>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_8") }}</p>
+        <h3 class="v-about-section-quote">"{{ $t("letter_cjd.main_text_9") }}"</h3>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_10") }}</p>
+        <p class="v-about-section-text">{{ $t("letter_cjd.main_text_11") }}</p>
         <img src="/img/letter-signature.svg" alt="Caleb James DeLisle" class="v-about-section-signature-image" />
-        <p class="v-about-section-signature">Caleb James DeLisle</p>
+        <p class="v-about-section-signature">{{ $t("letter_cjd.main_text_12") }}</p>
       </div>
       <div class="v-about-section__links">
         <div class="container">
           <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>PKT Roadmap</span></nuxt-link>
-          <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>PKT Origin Story</span></nuxt-link>
+          <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>{{ $t("header.origin_story") }}</span></nuxt-link>
         </div>
       </div>
     </section>
     <section class="v-about-section_involved">
       <div class="container">
         <h2 class="v-about-section-title_h2">Get Involved</h2>
-        <nuxt-link to="/resources" class="btn_blue_new button_new"><span>Join the Community</span></nuxt-link>
+        <nuxt-link to="/resources" class="btn_blue_new button_new"><span>{{ $t("home.join_community_title") }}</span></nuxt-link>
       </div>
     </section>
   </div>
