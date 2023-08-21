@@ -37,7 +37,7 @@ export default {
       },
       {
         property: "og:description",
-        content: "Always Accessible Internet"
+        content: "The Future of Internet Access"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
@@ -109,11 +109,11 @@ export default {
     locales: [
       { code: 'en', iso: 'en-US', name: 'English', file: 'en-us.js' },
       //{ code: 'es', iso: 'es-ES', name: 'Español', file: 'es-es.js' },
-      { code: 'zh', iso: 'zh-CN', name: 'Chinese', file: 'zh-cn.js' },
-      { code: 'ja', iso: 'ja-JP', name: 'Japanese', file: 'ja-jp.js' },
-      { code: 'ko', iso: 'ko-KR', name: 'Korean', file: 'ko-kr.js' },
-      { code: 'ru', iso: 'ru-RU', name: 'Russian', file: 'ru-ru.js' },
-      { code: 'vi', iso: 'vi-VNM', name: 'Vietnamese', file: 'vi-vnm.js' },
+      //{ code: 'ch', iso: 'zh-CN', name: 'Chinese', file: 'zh-cn.js' },
+      //{ code: 'ja', iso: 'ja-JP', name: 'Japanese', file: 'ja-jp.js' },
+      //{ code: 'ko', iso: 'ko-KR', name: 'Korean', file: 'ko-kr.js' },
+      //{ code: 'ru', iso: 'ru-RU', name: 'Russian', file: 'ru-ru.js' },
+      //{ code: 'vi', iso: 'vi-VNM', name: 'Vietnamese', file: 'vi-vnm.js' },
     ],
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
@@ -125,11 +125,11 @@ export default {
       messages: {
         en: require("./locales/en-us.js"),
         //es: require("./locales/es-es.js"),
-        zh: require("./locales/zh-cn.js"),
-        ja: require("./locales/ja-jp.js"),
-        ko: require("./locales/ko-kr.js"),
-        ru: require("./locales/ru-ru.js"),
-        vi: require("./locales/vi-vnm.js"),
+        //ch: require("./locales/zh-cn.js"),
+        //ja: require("./locales/ja-jp.js"),
+        //ko: require("./locales/ko-kr.js"),
+        //ru: require("./locales/ru-ru.js"),
+        //vi: require("./locales/vi-vnm.js"),
       }
     },
     lazy: true,
