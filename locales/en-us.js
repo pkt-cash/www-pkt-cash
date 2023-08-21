@@ -458,6 +458,7 @@ export default {
         klaviyo_form_heading: "Get involved",
         signature: "Signature",
     },
+    // Updated vars August 2023
     mine: {
         meta_title: "Mine - PKT",
         meta_descr: "The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure.",
@@ -466,6 +467,7 @@ export default {
         add_title: "\“Miners are paid in PKT Cash every 60 seconds\“",
         button_1: "Setup a Wallet",
         button_2: "Install PacketCrypt",
+        section_1: "",
     },
     brand: {
         meta_title: "Brand - PKT",
