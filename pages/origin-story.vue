@@ -12,25 +12,25 @@
           <CjdnstoPkt />
         </div>
         <div class="v-origin-section-first_right">
-          <p class="v-origin-section-first_right_text">PKT was born out of the cjdns project when it was realized that without the financial infrastructure for the network to pay its own bills, it would always remain a hobby. The cjdns project dates back to 2011 and the two basic ideas it brought to the table were:</p>
-          <p class="v-origin-section-first_right_text_special first_special">Everything should be encrypted, all of the time, no matter what.</p>
-          <p class="v-origin-section-first_right_text_special second_special">A packet of data flying across the Internet should not contain the address of its destination, but rather the directions to get there.</p>
-          <p class="v-origin-section-first_right_text">Point 1 has become more of a universal norm. However, point 2 remains uncommon in the network space.</p>
+          <p class="v-origin-section-first_right_text">{{ $t("origin_story.first_section_text_01") }}:</p>
+          <p class="v-origin-section-first_right_text_special first_special">{{ $t("origin_story.first_section_list_item_01") }}</p>
+          <p class="v-origin-section-first_right_text_special second_special">{{ $t("origin_story.first_section_list_item_02") }}</p>
+          <p class="v-origin-section-first_right_text">{{ $t("origin_story.first_section_text_02") }}</p>
         </div>
       </div>
     </section>
     <section class="v-origin-section v-origin-section-last">
       <div class="container">
         <div class="v-origin-section-last_left">
-          <h2 class="v-origin-section-last_left_title">An Introduction to Compact Source Routing</h2>
-          <p class="v-origin-section-last_left_text">Most of the Internet is routed using a system called prefix matching. With prefix matching, every packet of data flying across the Internet contains the IP address of its destination, and each router which forwards that packet looks up the destination in its routing table. It’s like every street-corner had a sign pointing the way to everywhere in the world (and everybody had to follow it).</p>
-          <p class="v-origin-section-last_left_text">Routing tables at the Internet backbone are unsurprisingly big, almost too big to fit in the special high-speed memory used in modern routers. Since every ISP has a different idea of how data should flow through their network, every router has a different routing table. What this all means is that even when an ISP leases bandwidth, they still have to operate their own physical router hardware. Sub-leasing of routers is simply impossible.</p>
-          <p class="v-origin-section-last_left_text">The way cjdns works is that packets of data flying through the network do not contain the IP address of the destination, but rather the directions to get there. This system is known as source routing. Normally a source route is big, so big that source routing is traditionally only used for experimentation, but cjdns uses a unique representation known as compact source routing which compresses that route down to roughly the size of an IP address.</p>
-          <p class="v-origin-section-last_left_quote">“The reason bandwidth markets have not yet emerged is not because we can’t subdivide bandwidth, it’s because current technology prohibits subdivision of routing hardware.”</p>
-          <p class="v-origin-section-last_left_text">By replacing “where do you want to go” with “how do you want to get there”, cjdns replaces the rigidity of a postal service with the flexibility of a road system, a road system where each driver can choose which GPS to use. In this new network, hundreds or even thousands of Virtual ISPs can compete for customers while leasing access to the same “road system” and each searching for the best ways to get their customers’ data where it needs to go.</p>
+          <h2 class="v-origin-section-last_left_title">{{ $t("origin_story.compass_title") }}</h2>
+          <p class="v-origin-section-last_left_text">{{ $t("origin_story.compass_text_01") }}</p>
+          <p class="v-origin-section-last_left_text">{{ $t("origin_story.compass_text_02") }}</p>
+          <p class="v-origin-section-last_left_text">{{ $t("origin_story.compass_text_03") }}</p>
+          <p class="v-origin-section-last_left_quote">“{{ $t("origin_story.car_quote") }}”</p>
+          <p class="v-origin-section-last_left_text">{{ $t("origin_story.car_text") }}</p>
           <div class="v-origin-section-last_left_links">
-            <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>PKT Roadmap</span></nuxt-link>
-            <nuxt-link to="/letter" class="btn_blue_new button_new"><span>Letter From CJD</span></nuxt-link>
+            <nuxt-link :to="localePath('build') + '#roadmap'" class="btn_blue_new button_new"><span>{{ $t("build.roadmap_title") }}</span></nuxt-link>
+            <nuxt-link :to="localePath('letter')" class="btn_blue_new button_new"><span>{{ $t("letter_cjd.header_title") }}</span></nuxt-link>
           </div>
         </div>
         <div class="v-origin-section-last_right">

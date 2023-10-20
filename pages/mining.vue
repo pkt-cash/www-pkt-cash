@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import MiningHeader from "~/components/Mining/Header";
+import MiningHeader from "~/components/Mining/MiningHeader";
 import Advantage from "~/components/Advantage";
 
 export default {

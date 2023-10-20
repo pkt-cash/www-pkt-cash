@@ -5,13 +5,13 @@
       :title="this.$t('get_pkt.header_title')" 
       :subtitle="this.$t('get_pkt.header_subtitle')" 
       :text="this.$t('get_pkt.header_text')" 
-      button_1="Trade on Bittrex" 
+      :button_1="this.$t('get_pkt.header_button_1')" 
       button_1_link="https://global.bittrex.com/Market/Index?MarketName=USDT-PKT"
       button_1_target="_blank"
-      button_2="Trade on BitMart"
+      :button_2="this.$t('get_pkt.header_button_2')"
       button_2_link="https://www.bitmart.com/trade/en?symbol=PKT_USDT&layout=basic"
       button_2_target="_blank"
-      button_pkt="Trade wPKT"
+      :button_pkt="this.$t('get_pkt.header_button_3')"
       button_pkt_link="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32"
       button_pkt_target="_blank"
       is_arrow_down
@@ -21,12 +21,12 @@
     </section>
     <section class="v-pkt-section v-pkt-section__started" id="start">
       <div class="container">
-        <h2 class="v-pkt-section__title">Getting started</h2>
+        <h2 class="v-pkt-section__title">{{ $t("get_pkt.started_title") }}</h2>
         <template>
            <div class="v-pkt-section__started__learn">
              <div class="v-pkt-section__started__learn_item" v-for="(item) of learn_list">
                 <h4 class="v-pkt-section__started__learn_item__title_small">{{ item.name }}</h4>
-                <nuxt-link :to="item.link" class="v-pkt-section__button"><span>Learn</span></nuxt-link>
+                <nuxt-link :to="localePath(item.link)" class="v-pkt-section__button"><span>{{ $t("get_pkt.started_button") }}</span></nuxt-link>
               </div>
           </div> 
         </template>
@@ -45,7 +45,7 @@
                 </div>
             </template>
             <template v-else>
-                <a :href="item.link" class="v-pkt-section__button"><span>{{ item.link_label }}</span></a>
+                <a :href="localePath(item.link)" class="v-pkt-section__button"><span>{{ item.link_label }}</span></a>
             </template>
           </div>
           <div class="v-pkt-section__right">
@@ -58,7 +58,7 @@
       <div class="container">
         <h2 class="v-pkt-section__title">{{ $t("get_pkt.invited_title") }}</h2>
         <p class="v-pkt-section__text">{{ $t("get_pkt.invited_text") }}</p>
-        <nuxt-link to="/resources" class="v-pkt-section__button"><span>{{ $t("footer.join_community") }}</span></nuxt-link>
+        <nuxt-link :to="localePath('resources')" class="v-pkt-section__button"><span>{{ $t("footer.join_community") }}</span></nuxt-link>
       </div>
     </section>
   </div>
@@ -87,15 +87,15 @@ export default {
     return {
       learn_list: [
         {
-          name: "What is PKT Cash?",
+          name: this.$t("get_pkt.started_1"),
           link: "pkt",
         },
         {
-          name: "What is wPKT?",
+          name: this.$t("get_pkt.started_2"),
           link: "wpkt",
         },
         {
-          name: "How to mine PKT?",
+          name: this.$t("get_pkt.started_3"),
           link: "mine",
         },
       ],
@@ -103,9 +103,9 @@ export default {
         {
           name: this.$t("get_pkt.step_1_title"),
           link: "https://global.bittrex.com/Market/Index?MarketName=USDT-PKT",
-          link_label: "Buy PKT",
+          link_label: this.$t("home.trading_link_1"),
           link_2: "https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32",
-          link_label_2: "Buy wPKT",
+          link_label_2: this.$t("home.trading_link_2"),
           text: this.$t("get_pkt.step_1_text"),
           img: "/img/pkt-steps-1.png",
           id: "first",
@@ -113,7 +113,7 @@ export default {
         {
           name: this.$t("get_pkt.step_2_title"),
           link: "/wallet#options",
-          link_label: "Get a PKT Wallet",
+          link_label: this.$t("get_pkt.step_2_link"),
           versa: "versa",
           text: this.$t("get_pkt.step_2_text"),
           img: "/img/pkt-steps-2.png",
@@ -121,7 +121,7 @@ export default {
         {
           name: this.$t("get_pkt.step_3_title"),
           link: "https://t.me/joinchat/VTzmfU6P3YB7WrYx",
-          link_label: "Join Trading Group",
+          link_label: this.$t("get_pkt.step_3_link"),
           text: this.$t("get_pkt.step_3_text"),
           img: "/img/pkt-steps-3.png",
         },

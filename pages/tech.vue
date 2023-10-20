@@ -5,8 +5,8 @@
       :title="this.$t('tech.title')" 
       :subtitle="this.$t('tech.subtitle')" 
       :text="this.$t('tech.text')"
-      button_1="Use the PKT Network" 
-      button_1_link="/network-steward"
+      :button_1="this.$t('tech.header_button')"
+      :button_1_link="localePath('network-steward')"
       is_arrow_down 
       arrow_down_link="#pktcrypt" />
     </section>

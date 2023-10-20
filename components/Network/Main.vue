@@ -103,7 +103,7 @@
               <li class="c-content-main__list-item">{{ $t("steward.network_04_content_07") }}</li>
             </ul>
             <p class="c-content-main__text">{{ $t("steward.network_04_content_08") }}</p>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/network-steward-vote">
+            <nuxt-link class="c-content-main__btn blue-btn-arrow" :to="localePath('network-steward-vote')">
               <span>{{ $t("steward.network_04_content_09") }}</span>
             </nuxt-link>
           </div>

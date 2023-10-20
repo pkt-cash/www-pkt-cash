@@ -18,12 +18,12 @@
             <li v-for="(item, index) of quick_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.name === 'Blog'">
                 <a href="https://crypto.pkt.cash" target="_blank" class="c-footer__menu-link">
-                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                  <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
                 </a>
               </template>
               <template v-else>
-                <nuxt-link :to="item.route_link" class="c-footer__menu-link">
-                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                <nuxt-link :to="localePath(item.route_link)" class="c-footer__menu-link">
+                  <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
                 </nuxt-link>
               </template>
             </li>
@@ -44,12 +44,12 @@
                   :class="{ 'link-active' : $route.name === 'letter'}"
                   class="c-footer__menu-link"
                 >
-                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                  <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
                 </a>
               </template>
               <template v-else>
-                <nuxt-link :to="item.route_link" class="c-footer__menu-link">
-                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                <nuxt-link :to="localePath(item.route_link)" class="c-footer__menu-link">
+                  <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
                 </nuxt-link>
               </template>
             </li>
@@ -60,7 +60,7 @@
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of github_links" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
-                <span class="c-footer__menu-text">{{ item.name }}</span>
+                <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
               </a>
             </li>
           </ul>
@@ -70,7 +70,7 @@
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of join_community" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
-                  <span class="c-footer__menu-text">{{ item.name }}</span>
+                  <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
               </a>
             </li>
           </ul>
@@ -78,7 +78,7 @@
         <div class="c-footer__text">
           <span class="c-footer__text-light">
             <a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">
-              ©2022 PKT Cash | {{ $t("footer.policy") }}
+              ©{{currentYear}} PKT Cash | {{ $t("footer.policy") }}
             </a>
           </span>
         </div>
@@ -94,21 +94,22 @@ export default {
   data() {
     return {
       nav_open: false,
+      currentYear: new Date().getFullYear(),
       quick_links: [
         {
-          name: this.$t("header.mine"),
+          name: "header.mine",
           route_link: "/mine",
         },
         {
-          name: this.$t("header.network_st"),
+          name: "header.network_st",
           route_link: "/network-steward",
         },
         {
-          name: this.$t("header.wallet"),
+          name: "header.wallet",
           route_link: "/wallet",
         },
         {
-          name: this.$t("header.blog"),
+          name: "header.blog",
           route_link: "https://crypto.pkt.cash/",
         }
       ],
@@ -118,27 +119,27 @@ export default {
           route_link: "/cash",
         },
         {
-          name: this.$t("footer.about"),
+          name:"footer.about",
           route_link: "/letter",
         },
         {
-          name: this.$t("header.roadmap"),
+          name: "header.roadmap",
           route_link: "/build#roadmap",
         },
         {
-          name: this.$t("header.origin_story"),
+          name: "header.origin_story",
           route_link: "/origin-story",
         },
         {
-          name: this.$t("header.resources"),
+          name: "header.resources",
           route_link: "/resources",
         },
 		{
-          name: this.$t("footer.trademark"),
+          name: "footer.trademark",
           route_link: "/trademark",
         },
 		{
-          name: this.$t("footer.brand"),
+          name: "footer.brand",
           route_link: "/brand",
         },
       ],
@@ -225,24 +226,25 @@ export default {
   }
 
   &__menu {
-    margin-right: rem(85);
-
+    padding-right:rem(20);
+    width:20%;
     @include for-width(-desktop-med) {
-      margin-right: rem(55);
+      padding-right: rem(55);
       margin-bottom: rem(35);
     }
     @include for-width(-tablet-lg) {
-      margin-right: rem(32);
+      padding-right: rem(32);
       margin-bottom: rem(35);
     }
     @include for-width(-tablet) {
       width: 50%;
       margin-right: 0;
-      margin-bottom: 0;
+      margin-bottom: rem(15);
     }
     @include for-width(-small-lg) {
       margin-bottom: rem(25);
-      width: 40%;
+      width: 50%;
+      padding-right:0;
     }
     @include for-width(-tablet) {
       &:nth-child(5) {
@@ -322,9 +324,9 @@ export default {
     }
   }
   &__menu_wider {
-    @include for-width(-small-lg) {
-      width: 60%;
-    }
+    // @include for-width(-small-lg) {
+    //   width: 60%;
+    // }
   }
 
   &__text {

@@ -9,7 +9,7 @@
 				<p class="c-block_top_left_content c-block_top_left_last">{{ item.content_last }}</p>
 				<div class="c-block__links inline_links">
 					<nuxt-link :to="item.button_link_1" class="btn_blue_new button_new" :target="item.blank"><span>{{ item.button_label_1 }}</span></nuxt-link>
-					<nuxt-link :to="item.button_link_2" class="btn_blue_new button_new"><span>{{ item.button_label_2 }}</span></nuxt-link>
+					<nuxt-link :to="localePath(item.button_link_2)" class="btn_blue_new button_new"><span>{{ item.button_label_2 }}</span></nuxt-link>
 				</div>
 			</div>
 			<div class="c-block_top_right">

@@ -2,11 +2,11 @@
   <div class="v-network">
     <section class="v-network-header-section">
       <HeaderInternal
-      title="The Network Steward" 
-      subtitle="Public grants for network development" 
-      text="The Network Steward is a democratically elected wallet that provides grants for open-source development of the PKT ecosystem. 20% of each mined coinbase is paid to the Network Steward wallet, and every 129,600 blocks (~3 months) 100% of the funds in the wallet must be granted or the coins are automatically burned. This Network Stewards can be changed anytime by way of more than 50% PoS vote." 
-      button_1="Submit Proposal" 
-      button_2="View On Explorer"
+      :title="this.$t('steward.header_title')" 
+      :subtitle="this.$t('steward.header_subtitle')" 
+      :text="this.$t('steward.header_content')" 
+      :button_1="this.$t('steward.header_button_1')" 
+      :button_2="this.$t('steward.header_button_2')"
       button_1_link="https://github.com/pkt-cash/ns-projects"
       button_2_link="https://explorer.pkt.cash/"
       button_1_target="_blank"
@@ -15,26 +15,26 @@
     </section>
     <section class="v-network-section v-network-section__charter">
       <div class="container">
-        <h2 class="v-network-section__title">The Charter</h2>
-        <p class="v-network-section__supersmall">The objective of the Network Steward is to provide perpetual funding for the technological and infrastructure development of the PKT Network </p>
-        <p class="v-network-section__supersmall">Key aspects of this objective include:</p>
+        <h2 class="v-network-section__title">{{ $t("steward.section_1_title") }}</h2>
+        <p class="v-network-section__supersmall">{{ $t("steward.section_1_text_1") }}</p>
+        <p class="v-network-section__supersmall">{{ $t("steward.section_1_text_2") }}</p>
         <Cards :list="objectives_list" />
-        <p class="v-network-section__supersmall">In order to achieve these goals, the Network Steward will periodically meet to review funding proposals based on a strict criteria and award grants.</p>
-        <nuxt-link to="/network-steward-vote" class="v-network-section__button"><span>View Funding Criteria</span></nuxt-link>
+        <p class="v-network-section__supersmall">{{ $t("steward.section_1_text_3") }}</p>
+        <nuxt-link :to="localePath('network-steward-vote')" class="v-network-section__button"><span>{{ $t("steward.section_1_button") }}</span></nuxt-link>
       </div>
     </section>
     <section class="v-network-section v-network-section__request_funding">
       <div class="container">
         <div class="container_flex">
           <div class="v-network-section__left">
-            <h2 class="v-network-section__title_small">Request Funding</h2>
-            <p class="v-network-section__subtitle">PKT invests in infrastructure</p>
-            <p class="v-network-section__text">Getting a proposal accepted is much like getting a pull request merged into a project. You start by socializing what you want to do with the community (try PKT.Chat or Telegram) and when you have rough consensus, you move that conversation to a formal proposal.</p>
-            <p class="v-network-section__text">To make a proposal, you must create a pull request to the ns-projects repository which adds a new project markdown file as per the project template and name it according to the naming convention defined in the repository <a href="#" target="_blank" class="v-network-section__text_link">readme</a>.</p>
-            <p class="v-network-section__text">The Network Steward meets several times per year to review submitted projects. The minutes of these meetings are published in the ns-projects repository, along with the projects and their status.</p>
+            <h2 class="v-network-section__title_small">{{ $t("steward.section_2_title") }}</h2>
+            <p class="v-network-section__subtitle">{{ $t("steward.section_2_subtitle") }}</p>
+            <p class="v-network-section__text">{{ $t("steward.section_2_text_1") }}</p>
+            <p class="v-network-section__text">{{ $t("steward.section_2_text_2") }} <a href="#" target="_blank" class="v-network-section__text_link">{{ $t("steward.section_2_text_2_2") }}</a>.</p>
+            <p class="v-network-section__text">{{ $t("steward.section_2_text_3") }}</p>
             <div class="v-network-section__links">
-              <a href="https://github.com/pkt-cash/ns-projects" target="_blank" class="v-network-section__button"><span>Submit a Proposal</span></a>
-              <a href="https://github.com/pkt-cash/ns-projects/blob/master/projects/template.md" target="_blank" class="v-network-section__button"><span>Download Template</span></a>
+              <a href="https://github.com/pkt-cash/ns-projects" target="_blank" class="v-network-section__button"><span>{{ $t("steward.header_button_1") }}</span></a>
+              <a href="https://github.com/pkt-cash/ns-projects/blob/master/projects/template.md" target="_blank" class="v-network-section__button"><span>{{ $t("steward.section_2_button_2") }}</span></a>
             </div>
           </div>
           <div class="v-network-section__right">
@@ -45,37 +45,37 @@
     </section>
     <section class="v-network-section v-network-section__progress">
       <div class="container">
-        <h2 class="v-network-section__title_small">Projects in Progress</h2>
+        <h2 class="v-network-section__title_small">{{ $t("steward.section_3_title") }}</h2>
         <Projects :list="projects_list" />
         <div class="v-network-section__links">
-          <a href="#" target="_blank" class="v-network-section__button"><span>View on GitHub</span></a>
-          <a href="https://github.com/pkt-cash/ns-projects/tree/master/projects" target="_blank" class="v-network-section__button"><span>Completed Projects</span></a>
+          <a href="#" target="_blank" class="v-network-section__button"><span>{{ $t("steward.section_3_link_1") }}</span></a>
+          <a href="https://github.com/pkt-cash/ns-projects/tree/master/projects" target="_blank" class="v-network-section__button"><span>{{ $t("steward.section_3_link_2") }}</span></a>
         </div>
       </div>
     </section>
     <section class="v-network-section v-network-section__who">
       <div class="container">
-        <h2 class="v-network-section__title_small">Who are the Network Stewards?</h2>
-        <p class="v-network-section__supersmall">The Network Steward is a multi-signature wallet which requires 3 out of 5 signatures in order to make a payment.</p>
+        <h2 class="v-network-section__title_small">{{ $t("steward.section_4_title") }}</h2>
+        <p class="v-network-section__supersmall">{{ $t("steward.section_4_subtitle") }}</p>
         <img src="/img/network-steward-hand.jpeg" alt="Who are the Network Stewards?" class="v-network-section__who__image" />
-        <p class="v-network-section__text">The Network Steward wallet address is:</p>
+        <p class="v-network-section__text">{{ $t("steward.section_4_text") }}:</p>
         <p class="v-network-section__text_highlighted"><a href="https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2" target="_blank">https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2</a></p>
-        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>cjd</span> - cjdns original author</p>
-        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>Arceliar</span> - Yggdrasil original author</p>
-        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>benhylau</span> - Contributor at Toronto Mesh</p>
-        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>NeilAlexander</span> - Yggdrasil release manager</p>
-        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>Backupbrain</span> - Creator of NetNinja VPN device</p>
-        <p class="v-network-section__text v-network-section__who__text">All of the participants have agreed not to enter into any relationships which would affect their ability to act impartially on behalf of the PKT project.</p>
-        <nuxt-link to="/network-steward-vote" class="v-network-section__button"><span>Voting Details</span></nuxt-link>
+        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>cjd</span> - {{ $t("steward.section_4_author_1") }}</p>
+        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>Arceliar</span> - {{ $t("steward.section_4_author_2") }}</p>
+        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>benhylau</span> - {{ $t("steward.section_4_author_3") }}</p>
+        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>NeilAlexander</span> - {{ $t("steward.section_4_author_4") }}</p>
+        <p class="v-network-section__supersmall v-network-section__who__supersmall"><span>Backupbrain</span> - {{ $t("steward.section_4_author_5") }}</p>
+        <p class="v-network-section__text v-network-section__who__text">{{ $t("steward.section_4_text_2") }}</p>
+        <nuxt-link :to="localePath('network-steward-vote')" class="v-network-section__button"><span>{{ $t("steward.section_4_text_button") }}</span></nuxt-link>
       </div>
     </section>
     <section class="v-network-section v-network-section__vote">
       <div class="container">
         <div class="container_flex">
           <div class="v-network-section__left">
-            <h2 class="v-network-section__title">Network Steward Vote</h2>
-            <p class="v-network-section__text">It is the belief of the PKT founding community members that any unaccountable authority, no matter how benevolent, will eventually fall victim to corruption, inefficiency or simple failure to innovate. Because of this, the PKT blockchain has a solution in case the Network Steward is ever not fulfilling its role of developing technology and infrastructure for the PKT ecosystem.</p>
-            <p class="v-network-section__text">Every holder of PKT is able to cast a vote to impeach the Network Steward and allow a new one Network Steward take its place. Impeachment is not an insignificant event. For it to occur, it requires more than a 50% VoteFor of the total PKT ever mined. If impeachment does occur, what follows is an automatic vote count and a change to the Network Steward address.</p>
+            <h2 class="v-network-section__title">{{ $t("steward.section_5_title") }}</h2>
+            <p class="v-network-section__text">{{ $t("steward.section_5_text_1") }}</p>
+            <p class="v-network-section__text">{{ $t("steward.section_5_text_2") }}</p>
           </div>
         </div>
       </div>
@@ -84,10 +84,10 @@
       <div class="container">
         <div class="container_flex">
           <div class="v-network-section__left">
-            <h2 class="v-network-section__title">How Voting Works</h2>
-            <p class="v-network-section__text">A vote consists of one two parts: VoteFor and VoteAgainst. VoteAgainst is a vote for impeachment while VoteFor is a vote for who should become network steward in the event of an impeachment.</p>
-            <p class="v-network-section__text">A Network Steward is represented as a transaction output script rather than a script encoded key. An easy way to get the script for a given address is to pay some money to it and then explore the raw transaction and copy the output.</p>
-            <p class="v-network-section__text">Exploring a coinbase transaction we can see the output being paid to the Network Steward <a href="#" target="_blank" class="v-network-section__text_link">https://explorer.pkt.cash/address/</a> and the script for this output is 0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</p>
+            <h2 class="v-network-section__title">{{ $t("steward.section_6_title") }}</h2>
+            <p class="v-network-section__text">{{ $t("steward.section_6_text_1") }}</p>
+            <p class="v-network-section__text">{{ $t("steward.section_6_text_2") }}</p>
+            <p class="v-network-section__text">{{ $t("steward.section_6_text_3") }} <a href="#" target="_blank" class="v-network-section__text_link">https://explorer.pkt.cash/address/</a> {{ $t("steward.section_6_text_3_1") }} 0020d5c1005c0d4012d3ae2672319e7f9eb15a57516aeefabbbc062265f67e308f2</p>
           </div>
         </div>
         <div class="v-network-section__code_wrapper v-network-section__code_long">
@@ -153,7 +153,7 @@ $ ./bin/pktctl getrawtransaction 505d2750577a3d3c739c2a650ec0e03a7ddb1f81080c820
 }
           </pre>
         </div>
-        <p class="v-network-section__text">If we double-check by querying pktd to find out what is the Network Steward, we will see that it shows the script that was paid to.</p>
+        <p class="v-network-section__text">{{ $t("steward.network_section__text_1") }}</p>
         <div class="v-network-section__code_wrapper">
           <pre class="v-network-section__code">
 $ ./bin/pktctl getnetworksteward
@@ -164,16 +164,16 @@ $ ./bin/pktctl getnetworksteward
 }
           </pre>
         </div>
-        <p class="v-network-section__text">So if we wanted, for instance, to change the Network Steward to <a href="#" target="_blank" class="v-network-section__text_link">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX</a>  we would want to vote for the corresponding script  76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac, and of course we probably want to vote against the current Network Steward as well.</p>
+        <p class="v-network-section__text">{{ $t("steward.network_section__text_2_1") }} <a href="#" target="_blank" class="v-network-section__text_link">https://explorer.pkt.cash/address/pGzmtW4Q2v4AWHcX8TYGqG5c1Eh5Ykg6fX</a>  {{ $t("steward.network_section__text_2_2") }}  76a9147d9df4279212fd7def4c47abf2d5f3a6c6eaf4ae88ac, {{ $t("steward.network_section__text_2_3") }}</p>
       </div>
     </section>
     <section class="v-network-section v-network-section__build_tech">
       <div class="container">
-        <h2 class="v-network-section__title">Get Funded To Build Tech</h2>
+        <h2 class="v-network-section__title">{{ $t("steward.get_funded_title") }}</h2>
         <div class="container_flex">
           <div class="v-network-section__left">
-            <p class="v-network-section__subtitle">The PKT blockchain funds network development</p>
-            <p class="v-network-section__text">20% of every block mined is paid to the Network Steward to be allocated for open-sourced development of the PKT ecosystem. The Network Steward has 129600 blocks (approximately 3 months) to deploy 100% of the coins in the wallet or those coins are burned to remove supply as demand increases. This Network Stewards can be changed anytime by way of a PoS based vote.</p>
+            <p class="v-network-section__subtitle">{{ $t("steward.get_funded_subtitle") }}</p>
+            <p class="v-network-section__text">{{ $t("steward.get_funded_text") }}</p>
           </div>
           <div class="v-network-section__right">
             <img src="/img/network-steward-build.png" alt="Get Funded To Build Tech" />
@@ -197,8 +197,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("steward.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
+      title: this.$t("steward.header_title"),
+      meta: [{ hid: "description", name: "description", content: this.$t("steward.header_subtitle") }],
       link: [
         {
           rel: 'canonical',
@@ -211,50 +211,50 @@ export default {
     return {
       objectives_list: [
         {
-          title: "Point 1",
-          descr: "Financing the development of open source software, technology documentation and education resources for the PKT Network and community.",
+          title: this.$t("steward.section_1_points_1"),
+          descr: this.$t("steward.section_1_point_1"),
         },
         {
-          title: "Point 2",
-          descr: "Lobbying for an improved regulator environment for small network operators and more generally, to promote internet freedom, privacy, and decentralized internet access.",
+          title: this.$t("steward.section_1_points_2"),
+          descr: this.$t("steward.section_1_point_2"),
         },
         {
-          title: "Point 3",
-          descr: "Purchasing property such as proprietary software or radio frequency spectrum rights in order to put these things in the commons.",
+          title: this.$t("steward.section_1_points_3"),
+          descr: this.$t("steward.section_1_point_3"),
         },
       ],
       projects_list: [
         {
           file: "2019_12_14_pkt-whitepaper-website.md",
-          date: "7 months ago"
+          date: this.$t("steward.project_list_1")
         },
         {
           file: "2020_02_28_pkt-vpn-uitility-wireframes.png",
-          date: "2 years ago"
+          date: this.$t("steward.project_list_2")
         },
         {
           file: "2020_02_28_pkt_vpn_utility.md",
-          date: "9 months ago"
+          date: this.$t("steward.project_list_3")
         },
         {
           file: "2020_07_25_tokenstrike.md",
-          date: "15 months ago"
+          date: this.$t("steward.project_list_6")
         },
         {
           file: "2020_11_14-double_wallet.md",
-          date: "9 months ago"
+          date: this.$t("steward.project_list_3")
         },
         {
           file: "2020_11_14-pkt-community.md",
-          date: "4 months ago"
+          date: this.$t("steward.project_list_4")
         },
         {
           file: "2020_11_14_Ongoing_Tech_Support_Proposal.md",
-          date: "11 months ago"
+          date: this.$t("steward.project_list_5")
         },
         {
           file: "2021_05_09_user_operated_internet_fund.md",
-          date: "5 months ago"
+          date: this.$t("steward.project_list_7")
         },
       ],
     };

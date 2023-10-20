@@ -5,8 +5,8 @@
         <h2 class="c-index-trading__title">{{ $t('home.trading_title') }}</h2>
         <p class="c-index-trading__text">{{ $t('home.trading_text_1') }}</p>
         <div class="c-index-trading__links">
-            <nuxt-link to="/getpkt" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></nuxt-link>
-            <nuxt-link to="/wpkt" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_2') }}</span></nuxt-link>
+            <nuxt-link :to="localePath('getpkt')" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_1') }}</span></nuxt-link>
+            <nuxt-link :to="localePath('wpkt')" class="btn_blue_new button_new"><span>{{ $t('home.trading_link_2') }}</span></nuxt-link>
         </div>
       </div>
       <div class="c-index-trading_right">

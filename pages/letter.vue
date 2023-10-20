@@ -5,7 +5,7 @@
         :title="this.$t('letter_cjd.header_title')" 
         :subtitle="this.$t('letter_cjd.header_subtitle')" 
         :button_1="this.$t('header.origin_story')" 
-        button_1_link="/origin-story"
+        :button_1_link="localePath('origin-story')"
         />
     </section>
     <section class="v-about-section">
@@ -28,15 +28,15 @@
       </div>
       <div class="v-about-section__links">
         <div class="container">
-          <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>PKT Roadmap</span></nuxt-link>
-          <nuxt-link to="/origin-story" class="btn_blue_new button_new"><span>{{ $t("header.origin_story") }}</span></nuxt-link>
+          <nuxt-link :to="localePath('build') + '#roadmap'" class="btn_blue_new button_new"><span>{{ $t("build.roadmap_title") }}</span></nuxt-link>
+          <nuxt-link :to="localePath('origin-story')" class="btn_blue_new button_new"><span>{{ $t("header.origin_story") }}</span></nuxt-link>
         </div>
       </div>
     </section>
     <section class="v-about-section_involved">
       <div class="container">
-        <h2 class="v-about-section-title_h2">Get Involved</h2>
-        <nuxt-link to="/resources" class="btn_blue_new button_new"><span>{{ $t("home.join_community_title") }}</span></nuxt-link>
+        <h2 class="v-about-section-title_h2">{{ $t("letter_cjd.heading_last") }}</h2>
+        <nuxt-link :to="localePath('resources')" class="btn_blue_new button_new"><span>{{ $t("home.join_community_title") }}</span></nuxt-link>
       </div>
     </section>
   </div>

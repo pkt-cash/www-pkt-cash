@@ -5,7 +5,7 @@
     </section>
     <section class="v-trademark-section">
 		<div class="container">
-			<p class="v-trademark-section__text">{{ $t("trademark.subtitle_1") }} <a href="/brand">{{ $t("trademark.subtitle_2") }}</a> {{ $t("trademark.subtitle_3") }}:</p>
+			<p class="v-trademark-section__text">{{ $t("trademark.subtitle_1") }} <a :href="localePath('brand')">{{ $t("trademark.subtitle_2") }}</a> {{ $t("trademark.subtitle_3") }}:</p>
 			<ol>
 				<li>{{ $t("trademark.free_use_list_item_1") }}</li>
 				<li>{{ $t("trademark.free_use_list_item_2") }}</li>

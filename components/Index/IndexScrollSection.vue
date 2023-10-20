@@ -40,7 +40,7 @@
               <div class="c-scroll-sect__b-wrap-left">
                 <h3 class="c-scroll-sect__b-title" v-html="block.title"></h3>
                 <p class="c-scroll-sect__b-text" v-html="block.text"></p>
-                <nuxt-link :to="block.link" class="c-scroll-sect__b-btn">
+                <nuxt-link :to="localePath(block.link)" class="c-scroll-sect__b-btn">
                   <span>{{ $t("home.scroll_section_button_label") }}</span>
                 </nuxt-link>
               </div>

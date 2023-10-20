@@ -13,7 +13,7 @@
           </button>
           <div class="nav__menu-lang_switch_drop_down" v-if="isHidden" v-model="$i18n.locale">
             <p v-on:click="isHidden = !isHidden">
-              <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+              <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code) + '/'">{{ locale.name }}</nuxt-link>
             </p>
           </div>
         </div>
@@ -71,14 +71,14 @@
               :key="index"
               class="nav__menu-item"
             >
-              <template v-if="item.name === 'Blog'">
+              <template v-if="item.target === 'blank'">
                 <a href="https://crypto.pkt.cash" target="_blank" class="nav__menu-link btn-nav">
-                  <span class="nav__menu-text">{{ item.name }}</span>
+                  <span class="nav__menu-text">{{ $t(item.name) }}</span>
                 </a>
               </template>
-              <template v-else-if="item.name === 'Resources'">
+              <template v-else-if="item.dropdown === true">
                 <a class="nav__menu-link btn-nav" :class="mClass">
-                  <span class="nav__menu-text">{{ item.name }} 
+                  <span class="nav__menu-text">{{ $t(item.name) }} 
                     <svg class="" width="12" height="12" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background: new 0 0 284.929 284.929" xml:space="preserve" fill="#fff">
                       <g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
@@ -90,37 +90,37 @@
                 </a>
                 <ul class="nested-drop">
                   <li>
-                    <nuxt-link to="/origin-story">{{ $t("header.origin_story") }}</nuxt-link>
+                    <nuxt-link :to="localePath('origin-story')">{{ $t("header.origin_story") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/letter">{{ $t("header.letter") }}</nuxt-link>
+                    <nuxt-link :to="localePath('letter')">{{ $t("header.letter") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/cryptoeconomics">{{ $t("header.cryptoeconomics") }}</nuxt-link>
+                    <nuxt-link :to="localePath('cryptoeconomics')">{{ $t("header.cryptoeconomics") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/network-steward">{{ $t("header.network_st") }}</nuxt-link>
+                    <nuxt-link :to="localePath('network-steward')">{{ $t("header.network_st") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/ecosystem">{{ $t("header.ecosystem") }}</nuxt-link>
+                    <nuxt-link :to="localePath('ecosystem')">{{ $t("header.ecosystem") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/pkt-cash">{{ $t("header.pkt_cash") }}</nuxt-link>
+                    <nuxt-link :to="localePath('pkt-cash')">{{ $t("header.pkt_cash") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/wallet">{{ $t("header.wallet") }}</nuxt-link>
+                    <nuxt-link :to="localePath('wallet')">{{ $t("header.wallet") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/getpkt">{{ $t("header.get_pkt") }}</nuxt-link>
+                    <nuxt-link :to="localePath('getpkt')">{{ $t("header.get_pkt") }}</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/wpkt">WPKT</nuxt-link>
+                    <nuxt-link :to="localePath('wpkt')">WPKT</nuxt-link>
                   </li>
                 </ul>
               </template>
               <template v-else>
-                <nuxt-link :to="item.route_link" class="nav__menu-link btn-nav">
-                  <span class="nav__menu-text">{{ item.name }}</span>
+                <nuxt-link :to="localePath(item.route_link)" class="nav__menu-link btn-nav">
+                  <span class="nav__menu-text">{{ $t(item.name) }}</span>
                 </nuxt-link>
               </template>
             </li>
@@ -157,32 +157,34 @@ export default {
       nav_open: false,
       nav_list: [
         {
-          name:this.$t("home.block_3_title"),
+          name:"home.block_3_title",
           route_link: "/utility",
         },
         {
-          name:this.$t("header.build"),
+          name:"header.build",
           route_link: "/build",
         },
         {
-          name: this.$t("header.mine"),
+          name: "header.mine",
           route_link: "/mine",
         },
         {
-          name: this.$t("header.tech"),
+          name:"header.tech",
           route_link: "/tech",
         },
         {
-          name: this.$t("header.community"),
+          name:"header.community",
           route_link: "/resources",
         },
         {
-          name: this.$t("header.resources"),
+          name:"header.resources",
           route_link: "/resources",
+          dropdown: true,
         },
         {
-          name: this.$t("header.blog"),
+          name: "header.blog",
           route_link: "/",
+          target: "blank"
         }
       ],
       social_list: [

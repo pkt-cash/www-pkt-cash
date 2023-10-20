@@ -13,7 +13,7 @@
 
 <script>
 import SimpleHeader from "~/components/Base/SimpleHeader";
-import AboutMain from "~/components/About/Main";
+import AboutMain from "~/components/About/AboutMain";
 
 export default {
   components: {
@@ -22,8 +22,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("about.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
+      title: this.$t("About - PKT"),
+      meta: [{ hid: "description", name: "description", content: this.$t("The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure.") }],
       link: [
         {
           rel: 'canonical',

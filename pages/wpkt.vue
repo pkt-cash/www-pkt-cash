@@ -6,58 +6,58 @@
       :subtitle="this.$t('wpkt.header_subtitle')" 
       :text="this.$t('wpkt.header_text_1')" 
       :text_2="this.$t('wpkt.header_text_2')"
-      button_1="Trade wPKT" 
+      :button_1="this.$t('wpkt.header_button')" 
       button_1_link="https://pancakeswap.finance/info/token/0x1c25222994531c4ac35e4d94bbf7552c9aa92e32" />
     </section>
     <section class="v-wpkt-section v-wpkt-section__leveraging">
       <div class="container">
-        <h2 class="v-wpkt-section__title_small">Leveraging DeFi</h2>
-        <p class="v-wpkt-section__text">WPKT allows anyone to trade on decentralized exchanges (DEX) or earn yields by staking into a liquidity pool to earn interest on PKT treasury holdings. PKT can be easily swapped into wPKT, and DeFi gains can easily be converted back into PKT by utilizing the ODApp bridge.</p>
-        <a href="https://odapp.io/" target="_blank" class="v-wpkt-section__button"><span>Swap PKT & wPKT</span></a>
+        <h2 class="v-wpkt-section__title_small">{{ $t("wpkt.leveraging_title") }}</h2>
+        <p class="v-wpkt-section__text">{{ $t("wpkt.leveraging_text") }}</p>
+        <a href="https://odapp.io/" target="_blank" class="v-wpkt-section__button"><span>{{ $t("wpkt.leveraging_link") }}</span></a>
       </div>
     </section>
     <section class="v-wpkt-section v-wpkt-section__buy">
       <div class="container">
-        <h2 class="v-wpkt-section__title">How to Buy wPKT</h2>
+        <h2 class="v-wpkt-section__title">{{ $t("wpkt.buy_title") }}</h2>
         <img src="/img/wpkt-arrow.svg" width="40" height="44" alt="icon-arrow" class="v-wpkt-section__arrow" />
-        <p class="v-wpkt-section__step"><span>Step 1</span></p>
-        <h4 class="v-wpkt-section__subtitle">Create Your MetaMask Wallet</h4>
-        <p class="v-wpkt-section__text">If you have a MetaMask wallet, skip ahead to Step 2.</p>
+        <p class="v-wpkt-section__step"><span>{{ $t("wpkt.buy_step_1_title") }}</span></p>
+        <h4 class="v-wpkt-section__subtitle">{{ $t("wpkt.buy_step_1_subtitle") }}</h4>
+        <p class="v-wpkt-section__text">{{ $t("wpkt.buy_step_1_text") }}</p>
         <ol class="v-wpkt-section__list">
-          <li>Go to MetaMask and download and install (in Chrome or FireFox).</li>
-          <li>You’ll see the MetaMask fox icon near your address bar. Click the icon to open MetaMask.</li>
-          <li>Setup your password and Secret Backup Phrase then store in a safe place.</li>
+          <li>{{ $t("wpkt.buy_step_1_list_1") }}</li>
+          <li>{{ $t("wpkt.buy_step_1_list_2") }}</li>
+          <li>{{ $t("wpkt.buy_step_1_list_3") }}</li>
         </ol>
         <img src="/img/wpkt-step-1.svg" alt="Create Your MetaMask Wallet" class="v-wpkt-section__screen" width="800" height="440" />
-        <p class="v-wpkt-section__step"><span>Step 2</span></p>
-        <h4 class="v-wpkt-section__subtitle">Add Binance Smart Chain</h4>
-        <p class="v-wpkt-section__text">Switch the blockchain by clicking where it says Main Ethereum Network.</p>
+        <p class="v-wpkt-section__step"><span>{{ $t("wpkt.buy_step_2_title") }}</span></p>
+        <h4 class="v-wpkt-section__subtitle">{{ $t("wpkt.buy_step_2_subtitle") }}</h4>
+        <p class="v-wpkt-section__text">{{ $t("wpkt.buy_step_2_text_1") }}</p>
         <img src="/img/wpkt-step-2-1.svg" alt="Add Binance Smart Chain" class="v-wpkt-section__screen" width="580" height="125" />
-        <p class="v-wpkt-section__text">Scroll down until you find Custom RPC.</p>
+        <p class="v-wpkt-section__text">{{ $t("wpkt.buy_step_2_text_2") }}</p>
         <img src="/img/wpkt-step-2-2.svg" alt="Scroll down until you find Custom RPC" class="v-wpkt-section__screen" width="550" height="110" />
-        <p class="v-wpkt-section__text">Enter in the following details:</p>
-        <p class="v-wpkt-section__supersmall">Enter in the BSC mainnet details as follows and click Save:</p>
+        <p class="v-wpkt-section__text">{{ $t("wpkt.buy_step_2_text_3") }}</p>
+        <p class="v-wpkt-section__supersmall">{{ $t("wpkt.buy_step_2_text_4") }}</p>
         <ul class="v-wpkt-section__list_regular">
-          <li><strong>Network Name:</strong> BSC Mainnet</li>
-          <li><strong>New RPC URL:</strong> https://bsc-dataseed1.binance.org/ or https://bsc-dataseed2.binance.org/</li>
-          <li><strong>ChainID:</strong> 56, or 0x38 if 56 doesn’t work</li>
-          <li><strong>Symbol:</strong> BNB</li>
-          <li><strong>Block Explorer URL:</strong> https://bscscan.com/</li>
+          <li><strong>{{ $t("wpkt.buy_step_2_list_1_1") }}:</strong> {{ $t("wpkt.buy_step_2_list_1_2") }}</li>
+          <li><strong>{{ $t("wpkt.buy_step_2_list_2") }}:</strong> https://bsc-dataseed1.binance.org/ or https://bsc-dataseed2.binance.org/</li>
+          <li><strong>{{ $t("wpkt.buy_step_2_list_3_1") }}:</strong> {{ $t("wpkt.buy_step_2_list_3_2") }}</li>
+          <li><strong>{{ $t("wpkt.buy_step_2_list_4_1") }}:</strong> {{ $t("wpkt.buy_step_2_list_4_2") }}</li>
+          <li><strong>{{ $t("wpkt.buy_step_2_list_5") }}:</strong> https://bscscan.com/</li>
         </ul>
         <img src="/img/wpkt-step-2-3.svg" alt="Enter in the following details" class="v-wpkt-section__screen" width="360" height="595" />
-        <p class="v-wpkt-section__step"><span>Step 3</span></p>
-        <h4 class="v-wpkt-section__subtitle">Purchase BNB</h4>
-        <p class="v-wpkt-section__text v-wpkt-section__text_long">Send BNB to your MetaMask wallet. You can purchase BNB from exchanges such as Binance, Kraken, Kucoin, etc. and send it to your MetaMask wallet address.</p>
+        <p class="v-wpkt-section__step"><span>{{ $t("wpkt.buy_step_3_title") }}</span></p>
+        <h4 class="v-wpkt-section__subtitle">{{ $t("wpkt.buy_step_3_subtitle") }}</h4>
+        <p class="v-wpkt-section__text v-wpkt-section__text_long">{{ $t("wpkt.buy_step_3_text") }}</p>
         <img src="/img/wpkt-step-3.svg" alt="Purchase BNB" class="v-wpkt-section__screen" width="825" height="95" />
-        <p class="v-wpkt-section__step"><span>Step 4</span></p>
-        <h4 class="v-wpkt-section__subtitle">Purchase wPKT on PancakeSwap</h4>
-        <p class="v-wpkt-section__text v-wpkt-section__text_long">Send BNB to your MetaMask wallet. You can purchase BNB from exchanges such as Binance, Kraken, Kucoin, etc. and send it to your MetaMask wallet address.</p>
-        <p class="v-wpkt-section__text v-wpkt-section__text_long">Go to PancakeSwap and connect Your MetaMask Wallet, by clicking in the top right corner.</p>
+        <p class="v-wpkt-section__step"><span>{{ $t("wpkt.buy_step_4_title") }}</span></p>
+        <h4 class="v-wpkt-section__subtitle">{{ $t("wpkt.buy_step_4_subtitle") }}</h4>
+        <p class="v-wpkt-section__text v-wpkt-section__text_long">{{ $t("wpkt.buy_step_4_text_1") }}</p>
+        <p class="v-wpkt-section__text v-wpkt-section__text_long">{{ $t("wpkt.buy_step_4_text_2") }}</p>
         <img src="/img/wpkt-step-4-1.svg" alt="Purchase wPKT on PancakeSwap" class="v-wpkt-section__screen" width="770" height="110" />
-        <p class="v-wpkt-section__text v-wpkt-section__text_long">Click Trade and choose the amount of wPKT you want to buy using your BNB.</p>
+        <p class="v-wpkt-section__text v-wpkt-section__text_long">{{ $t("wpkt.buy_step_4_text_3") }}</p>
         <img src="/img/wpkt-step-4-2.svg" alt="Click Trade" class="v-wpkt-section__screen" width="1280" height="135" />
-        <p class="v-wpkt-section__text_highlighted">Holding wPKT enables participation in the highly lucrative world of DeFi. You can trade on PancakeSwap, as well as stake wPKT and earn yields on your holdings.</p>
-        <a href="https://odapp.io/" target="_blank" class="v-wpkt-section__button"><span>Learn How to Swap</span></a>
+        <p class="v-wpkt-section__text_highlighted">{{ $t("wpkt.buy_step_4_text_4") }}</p>
+        <a href="https://odapp.io/" target="_blank" class="v-wpkt-section__button"><span>{{ $t("wpkt.buy_step_4_link") }}</span></a>
       </div>
     </section>
   </div>
@@ -73,7 +73,7 @@ export default {
   head() {
     return {
       title: "WPKT - PKT",
-      meta: [{ hid: "description", name: "description", content: "Bridging PKT to Decentralized Finance" }],
+      meta: [{ hid: "description", name: "description", content: this.$t("wpkt.meta_descr") }],
       link: [
         {
           rel: 'canonical',

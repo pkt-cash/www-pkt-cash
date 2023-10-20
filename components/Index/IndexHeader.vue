@@ -6,9 +6,9 @@
             <h2 class="c-index-header__title">{{ $t('home.header_heading') }}</h2>
             <p class="c-index-header__content">{{ $t('home.header_subheading_1') }}<br />{{ $t('home.header_subheading_2') }}</p>
             <div class="c-index-header__links inline_links">
-              <nuxt-link to="/utility" class="btn_blue_new button_new"><span>{{ $t("home.block_3_title") }}</span></nuxt-link>
-              <nuxt-link to="/build" class="btn_blue_new button_new"><span>{{ $t("header.build") }}</span></nuxt-link>
-              <nuxt-link to="/build#roadmap" class="btn_blue_new button_new"><span>{{ $t("home.roadmap_link") }}</span></nuxt-link>
+              <nuxt-link :to="localePath('utility')" class="btn_blue_new button_new"><span>{{ $t("home.block_3_title") }}</span></nuxt-link>
+              <nuxt-link :to="localePath('build')" class="btn_blue_new button_new"><span>{{ $t("header.build") }}</span></nuxt-link>
+              <nuxt-link :to="localePath('build') + '#roadmap'" class="btn_blue_new button_new"><span>{{ $t("home.roadmap_link") }}</span></nuxt-link>
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@ export default {
       return (Number(value) / 0x40000000).toFixed(0);
     },
     displayed_enc(value) {
-      return (Number(value) / 1000000);
+      return Math.round(value * 100) / 100;
     },
     displayed_kb(value) {
       if (value > 1 << 30)
