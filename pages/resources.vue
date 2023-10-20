@@ -2,20 +2,20 @@
   <div class="v-resources">
     <section class="v-header-section">
       <HeaderInternal
-        title="Resources" 
-        subtitle="Documentation, resources and video content about the PKT Network." 
-        button_1="Documentation" 
-        button_2="Videos"
+        :title="this.$t('resources.heading_title')" 
+        :subtitle="this.$t('resources.heading_subtitle')" 
+        :button_1="this.$t('resources.heading_button_1')" 
+        :button_2="this.$t('resources.heading_button_2')"
         button_1_link="resources#docs"
         button_2_link="resources#videos" 
-        button_3="Whitepapers" 
-        button_4="PKT Deck"
+        :button_3="this.$t('resources.heading_button_3')" 
+        :button_4="this.$t('resources.heading_button_4')"
         button_3_link="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf"
         button_4_link="#"
-        button_5="Buy PKT" 
-        button_6="Buy wPKT"
-        button_5_link="/getpkt"
-        button_6_link="/wpkt"
+        :button_5="this.$t('resources.heading_button_5')" 
+        :button_6="this.$t('resources.heading_button_6')"
+        :button_5_link="localePath('getpkt')"
+        :button_6_link="localePath('wpkt')"
         is_resources
         />
     </section>
@@ -33,18 +33,18 @@
     <section class="v-resources-section v-resources-section__documentation" id="docs">
       <div class="container">
         <div class="v-resources-section__left">
-          <h2 class="v-resources-section__title_small">Documentation</h2>
+          <h2 class="v-resources-section__title_small">{{ $t("resources.documentation_title") }}</h2>
           <div class="v-resources-section__links">
-            <a href="https://docs.pkt.cash/en/latest/PKT_FAQ/" target="_blank" class="v-resources-section__button"><span>FAQ</span></a>
-            <nuxt-link to="/mine" class="v-resources-section__button"><span>How to Mine</span></nuxt-link>
+            <a href="https://docs.pkt.cash/en/latest/PKT_FAQ/" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.documentation_cta_1") }}</span></a>
+            <nuxt-link :to="localePath('mine')" class="v-resources-section__button"><span>{{ $t("resources.documentation_cta_2") }}</span></nuxt-link>
           </div>
           <div class="v-resources-section__links">
-            <nuxt-link to="/wallet" class="v-resources-section__button"><span>Wallet Setup</span></nuxt-link>
-            <a href="https://docs.pkt.cash/en/latest/mining/pool_setup_guide/" target="_blank" class="v-resources-section__button"><span>Pool Setup</span></a>
+            <nuxt-link :to="localePath('wallet')" class="v-resources-section__button"><span>{{ $t("resources.documentation_cta_3") }}</span></nuxt-link>
+            <a href="https://docs.pkt.cash/en/latest/mining/pool_setup_guide/" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.documentation_cta_4") }}</span></a>
           </div>
           <div class="v-resources-section__links">
-            <nuxt-link to="/getpkt" class="v-resources-section__button"><span>Buy PKT</span></nuxt-link>
-            <nuxt-link to="/wpkt" class="v-resources-section__button"><span>Buy wPKT</span></nuxt-link>
+            <nuxt-link :to="localePath('getpkt')" class="v-resources-section__button"><span>{{ $t('resources.heading_button_5') }}</span></nuxt-link>
+            <nuxt-link :to="localePath('wpkt')" class="v-resources-section__button"><span>{{ $t('resources.heading_button_6') }}</span></nuxt-link>
           </div>
         </div>
         <div class="v-resources-section__right">
@@ -54,8 +54,8 @@
     </section>
     <section class="v-resources-section v-resources-section__videos v-resources-section__videos_wrap" id="videos">
       <div class="container">
-        <h2 class="v-resources-section__title">Videos</h2>
-        <h4 class="v-resources-section__subtitle">PKT Podcasts</h4>
+        <h2 class="v-resources-section__title">{{ $t('resources.video_title') }}</h2>
+        <h4 class="v-resources-section__subtitle">{{ $t('resources.video_subtitle_1') }}</h4>
         <template>
           <div class="v-resources-section__videos">
             <VueSlickCarousel v-bind="settings">
@@ -70,7 +70,7 @@
           </div>
           <!-- <div v-for="(item) of podcast_list"><Video :v-show="item.video" :url="item.url" @close-modal="item.video = false" /></div> -->
         </template>
-        <h4 class="v-resources-section__subtitle">How To</h4>
+        <h4 class="v-resources-section__subtitle">{{ $t('resources.video_subtitle_2') }}</h4>
         <template>
           <div class="v-resources-section__videos">
             <VueSlickCarousel v-bind="settings">
@@ -85,7 +85,7 @@
           </div>
           <!-- <div v-for="(item) of howto_list"><Video :v-show="item.video" :url="item.url" @close-modal="item.video = false" /></div> -->
         </template>
-        <h4 class="v-resources-section__subtitle">Popular Videos</h4>
+        <h4 class="v-resources-section__subtitle">{{ $t('resources.video_subtitle_3') }}</h4>
         <template>
           <div class="v-resources-section__videos">
             <VueSlickCarousel v-bind="settings">

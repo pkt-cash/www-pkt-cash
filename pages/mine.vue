@@ -2,13 +2,13 @@
   <div class="v-mining">
     <section class="v-header-section">
       <HeaderInternal 
-      title="PKT Mining" 
+      :title="this.$t('mine.title')"
       :subtitle="this.$t('mine.subtitle')" 
       :text="this.$t('mine.text')" 
       :add_title="this.$t('mine.add_title')" 
       :button_1="this.$t('mine.button_1')" 
-      button_2="Start Mining"
-      button_1_link="/wallet"
+      :button_2="this.$t('mine.button_2')"
+      :button_1_link="localePath('wallet')"
       button_2_link="https://docs.pkt.cash/en/latest/mining/" button_2_target="_blank"
       is_arrow_down 
       arrow_down_link="#mine_scroll" />

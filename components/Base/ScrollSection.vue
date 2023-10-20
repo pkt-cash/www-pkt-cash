@@ -36,8 +36,8 @@
               <div class="c-scroll-sect__b-wrap-left">
                 <h3 class="c-scroll-sect__b-title" v-html="block.title"></h3>
                 <p class="c-scroll-sect__b-text" v-html="block.text"></p>
-                <nuxt-link to="/pkt" class="c-scroll-sect__b-btn">
-                  <span>More Details</span>
+                <nuxt-link :to="localePath('pkt')" class="c-scroll-sect__b-btn">
+                  <span>{{ $t("home.scroll_section_button_label") }}</span>
                 </nuxt-link>
               </div>
             </div>
@@ -63,33 +63,33 @@ export default {
       ],
       blocks: [
         {
-          title: "PacketCrypt Protocol",
-          text: "The PacketCrypt protocol is designed to reward miners in PKT Cash for transferring data around the world. Mining PKT utilizes 2 distinct stages: announcement mining and block mining. PacketCrypt incentivizes efficient communication between nodes and requires high CPU encryption plus maximum bandwidth throughput to optimize yields. ",
+          title: this.$t("mine.scroll_section_1_title"),
+          text: this.$t("mine.scroll_section_1_content"),
           link: { path: "/" },
         },
         {
-          title: "Announcement Mining",
-          text: "Announcement Mining creates a small (1KB) message that is difficult to compress and proves work was done. Announcements are transmitted to and collected by block miners to form blocks. This simulates the transmission of data across the network. Announcement miners must maximize their CPU processing power and bandwidth upload speed for the highest yields. ",
+          title: this.$t("mine.scroll_section_2_title"),
+          text: this.$t("mine.scroll_section_2_content"),
           link: { path: "/mining" },
         },
         {
-          title: "Block Mining",
-          text: "Block mining involves setting up a mining pool. PKT mining pools require expert networking experience, significant hardware and bandwidth infrastructure with a minimum of 25 gbps of bandwidth ingest. Block miners gain efficiency on the difficulty of the work, based on the amount of new announcements they have in memory at the time of mining. This incentivizes mining pools to pay announcement miners to supply announcements. ",
+          title: this.$t("mine.scroll_section_3_title"),
+          text: this.$t("mine.scroll_section_3_content"),
           link: { path: "/mining" },
         },
         {
-          title: "PKT Cash",
-          text: "PKT Cash is the native cryptocurrency paid to PKT miners. Its minimum value is the cost to mine the coin, which includes processing power, plus bandwidth. PKT Cash is a Bitcoin fork, not a token, so there is no centralized issuer, no gas fees, and is Lightning Network ready for micro-transactions. ",
+          title: this.$t("mine.scroll_section_4_title"),
+          text: this.$t("mine.scroll_section_4_content"),
           link: { path: "/cash" },
         },
         {
-          title: "PKT Network",
-          text: "The PKT Network is a decentralized, ultra fast network that is connected to the global internet and powered by the people mining PacketCrypt. This high speed edge network enables infinite use cases, including free VPN, decentralized bandwidth trading, mesh networking and low cost internet access, to name a few.",
+          title: this.$t("mine.scroll_section_5_title"),
+          text: this.$t("mine.scroll_section_5_content"),
           link: { path: "/cash" },
         },
         {
-          title: "PKT Network",
-          text: "The PKT Network is a decentralized, ultra fast network that is connected to the global internet and powered by the people mining PacketCrypt. This high speed edge network enables infinite use cases, including free VPN, decentralized bandwidth trading, mesh networking and low cost internet access, to name a few.",
+          title: this.$t("mine.scroll_section_5_title"),
+          text: this.$t("mine.scroll_section_5_content"),
           link: { path: "/cash" },
         },
       ],

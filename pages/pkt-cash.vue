@@ -5,8 +5,8 @@
       :title="this.$t('header.pkt_cash')" 
       :subtitle="this.$t('pkt_cash.header_subtitle')" 
       :text="this.$t('pkt_cash.header_text')"
-      button_1="Cryptoeconomics" 
-      button_1_link="/cryptoeconomics"
+      :button_1="this.$t('header.cryptoeconomics')"
+      :button_1_link="localePath('cryptoeconomics')"
       is_arrow_down 
       arrow_down_link="#micro" />
     </section>
@@ -19,7 +19,7 @@
     </section>
     <section class="v-cash-section__functions">
       <div class="container">
-        <h2 class="v-cash-section__functions__title">PKT Cash Coin Functions</h2>
+        <h2 class="v-cash-section__functions__title">{{ $t("pkt_cash.function_title") }}</h2>
           <div class="v-cash-section__functions__row_first">
             <div v-for="item of functions_first" class="v-cash-section__functions__item">
               <template>
@@ -57,13 +57,13 @@
     </section>
     <section class="v-cash-section__halfed light">
       <div class="container">
-        <h2 class="v-cash-section__halfed__title">Bandwidth Trading Marketplace</h2>
+        <h2 class="v-cash-section__halfed__title">{{ $t("pkt_cash.marketplace_title") }}</h2>
         <div class="v-cash-section__halfed_left">
-          <p class="v-cash-section__halfed_left__text">The PKT roadmap will power a decentralized bandwidth trading marketplace. This market functions like current decentralized exchanges (DEX), however Tokenstrike makes it so anyone can: </p>
+          <p class="v-cash-section__halfed_left__text">{{ $t("pkt_cash.marketplace_text") }}</p>
           <ol class="v-cash-section__halfed_left__list">
-            <li>Create a token to represent underlying bandwidth.</li>
-            <li>Offer those tokens for sale to anyone, including software defined network operators called Cloud ISPs.</li>
-            <li>Cloud ISPs buy the tokens for access to the underlying bandwidth leases and become ISPs, handling networking/billing/administrative/legal, without requiring any infrastructure.</li>
+            <li>{{ $t("pkt_cash.marketplace_list_1") }}</li>
+            <li>{{ $t("pkt_cash.marketplace_list_2") }}</li>
+            <li>{{ $t("pkt_cash.marketplace_list_3") }}</li>
           </ol>
         </div>
         <div class="v-cash-section__halfed_right">

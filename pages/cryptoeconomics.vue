@@ -3,7 +3,7 @@
     <section class="v-crypto-header-section">
       <HeaderInternal 
       :title="this.$t('header.cryptoeconomics')" 
-      subtitle="PKT is paid to PacketCrypt miners"
+      :subtitle="this.$t('cryptoeconomics.heading_subtitle')"
       is_arrow_down 
       arrow_down_link="#crypto_start"
       />
@@ -28,7 +28,7 @@
           <h3 class="container_narrow_subheading">{{ $t("cryptoeconomics.section_3_subheading") }}</h3>
           <p class="container_narrow_text">{{ $t("cryptoeconomics.section_3_text") }}</p>
           <div class="container_narrow_links">
-            <nuxt-link to="/network-steward" class="btn_blue_new button_new"><span>Who is Network Steward</span></nuxt-link>
+            <nuxt-link :to="localePath('network-steward')" class="btn_blue_new button_new"><span>{{ $t("cryptoeconomics.last_link_to_ns") }}</span></nuxt-link>
           </div>
         </div>
     </section>

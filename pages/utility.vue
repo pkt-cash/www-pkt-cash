@@ -6,9 +6,9 @@
       :subtitle="this.$t('utility.header_subtitle')" 
       :text="this.$t('utility.header_text')"
       :button_1="this.$t('utility.header_button_1')" 
-      button_1_link="/network-steward"
+      :button_1_link="localePath('network-steward')"
       :button_2="this.$t('utility.header_button_2')" 
-      button_2_link="/network-steward"
+      :button_2_link="localePath('network-steward')"
       :button_3="this.$t('utility.header_button_3')" 
       button_3_link="#real_cases"
       is_utility
@@ -28,7 +28,7 @@
         <div class="container">
           <h2 class="v-utility__title">{{ $t("utility.spot_3_title_1") }} <br />{{ $t("utility.spot_3_title_2") }}</h2>
           <p class="v-utility__text">{{ $t("utility.spot_3_text") }}</p>
-          <nuxt-link to="/tech" class="v-utility__button"><span>{{ $t("utility.spot_3_button") }}</span></nuxt-link>
+          <nuxt-link :to="localePath('tech')" class="v-utility__button"><span>{{ $t("utility.spot_3_button") }}</span></nuxt-link>
           <Cards :list="unique_list" />
         </div>
     </section>
@@ -44,7 +44,7 @@
           <h2 class="v-utility__title">{{ $t("utility.ecosystem_title") }}</h2>
           <p class="v-utility__text">{{ $t("utility.ecosystem_text") }}</p>
           <img src="/img/utility-ecosystem.svg" alt="Understand the Ecosystem" />
-          <nuxt-link to="/ecosystem" class="v-utility__button"><span>{{ $t("utility.ecosystem_button") }}</span></nuxt-link>
+          <nuxt-link :to="localePath('ecosystem')" class="v-utility__button"><span>{{ $t("utility.ecosystem_button") }}</span></nuxt-link>
         </div>
     </section>
     <section class="v-utility__compare">

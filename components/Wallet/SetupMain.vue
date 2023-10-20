@@ -76,10 +76,10 @@ transactions, height 843, 2019-08-16 05:56:50 +0000 UTC)</pre>
             <pre class="c-content-main__scroll">./bin/pktctl --wallet sendtoaddress pP6Vh6GiL4HsMfcPby5xHQTyBUApd7mewg 10</pre>
             <p class="c-content-main__text">{{ $t("wallet.setup_wallet_text_07") }}:</p>
             <pre class="c-content-main__scroll">./bin/pktctl -l</pre>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/mining">
+            <nuxt-link class="c-content-main__btn blue-btn-arrow" :to="localePath('mining')">
               <span>{{ $t("wallet.setup_wallet_button_01") }}</span>
             </nuxt-link>
-            <nuxt-link class="c-content-main__btn blue-btn-arrow" to="/cash">
+            <nuxt-link class="c-content-main__btn blue-btn-arrow" :to="localePath('cash')">
               <span>{{ $t("wallet.setup_wallet_button_02") }}</span>
             </nuxt-link>
           </div>

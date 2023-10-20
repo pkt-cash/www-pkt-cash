@@ -6,7 +6,7 @@
         :title="this.$t('steward_vote.big_header_title')"
         :text="this.$t('steward_vote.big_header_text')"
         :btn="this.$t('header.network_st')"
-        btnLink="/network-steward"
+        :btnLink="localePath('network-steward')"
         bg="/img/network-steward-vote-header-bg.jpg"
       />
     </section>

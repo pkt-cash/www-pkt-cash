@@ -5,7 +5,7 @@
       <p class="c-index-join__text">{{ $t('home.join_community_text') }}</p>
       <SocialLinks :list="social_list" />
       <img src="/img/home-join-map.svg" alt="Map" class="c-index-join__map" />
-      <nuxt-link class="c-index-join__link" to="/community">
+      <nuxt-link class="c-index-join__link" :to="localePath('community')">
         <span>{{ $t('home.join_community_label_link') }}</span>
       </nuxt-link>
     </div>

@@ -260,3 +260,13 @@ img {
   position: absolute;
   margin-top: -70px;
 }
+
+body.ru .c-block__links .button_new,
+body.ru .c-index-join__link,
+body.ru .c-roadmap-support__btns .button_new,
+body.ru .v-utility__top_section .c-internal-header__links .btn_blue_new {
+  width:auto;
+}
+body.ru .c-join-community__link {
+  width:rem(300);
+}

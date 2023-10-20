@@ -4,10 +4,10 @@
       <span class="c-origin-car__quote">{{ $t("origin_story.car_quote") }}</span>
       <p class="c-origin-car__text">{{ $t("origin_story.car_text") }}</p>
       <div class="c-origin-car__btns">
-        <nuxt-link class="c-origin-car__link blue-btn" to="/roadmap">
+        <nuxt-link class="c-origin-car__link blue-btn" :to="localePath('roadmap')">
           <span>{{ $t("about.about_main__btn") }}</span>
         </nuxt-link>
-        <nuxt-link class="c-origin-car__link blue-btn" to="/about">
+        <nuxt-link class="c-origin-car__link blue-btn" :to="localePath('about')">
           <span>{{ $t("header.letter") }}</span>
         </nuxt-link>
       </div>

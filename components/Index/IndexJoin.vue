@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="c-index-join__title">{{ $t("home.join_community_title") }}</h1>
       <p class="c-index-join__text">{{ $t("home.join_community_text") }}</p>
-      <nuxt-link class="c-index-join__link blue-btn-arrow" to="/community">
+      <nuxt-link class="c-index-join__link blue-btn-arrow" :to="localePath('community')">
         <span>{{ $t("home.join_community_label_link") }}</span>
       </nuxt-link>
     </div>

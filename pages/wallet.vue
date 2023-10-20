@@ -13,7 +13,7 @@
     <section id="options" class="v-wallet-section">
       <h2 class="v-wallet-section_heading_main">{{ $t("wallet.heading_main") }}</h2>
       <p class="v-wallet-section_description_main">{{ $t("wallet.description_main") }}</p>
-      <h3 class="v-wallet-section_subheading">PKT or wPKT Storage Wallets</h3>
+      <h3 class="v-wallet-section_subheading">{{ $t("wallet.subheading_main") }}</h3>
       <Wallets :list="pkt_wallets" />
       <h3 class="v-wallet-section_subheading">{{ $t("wallet.subheading_bold") }}</h3>
       <Wallets :list="mining_wallets" />

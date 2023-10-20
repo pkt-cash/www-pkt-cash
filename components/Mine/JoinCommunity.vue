@@ -1,10 +1,10 @@
 <template>
   <div class="c-join-community">
     <div class="container">
-      <h2 class="c-join-community__title">Need Help?</h2>
-      <h4 class="c-join-community__subtitle">Ask the community</h4>
-      <p class="c-join-community__text">The PKT community is built around supporting the greater vision of decentralizing access to the internet and getting the next 1 billion people online. While each announcement miner and pool owner is operating a competitive business, collaboration and camaraderie is the essence of acommplishing the roadmap and supporting the growth of the PKT Network.</p>
-      <nuxt-link class="c-join-community__link" to="/community">
+      <h2 class="c-join-community__title">{{ $t("mine.join_title") }}</h2>
+      <h4 class="c-join-community__subtitle">{{ $t("mine.join_subtitle") }}</h4>
+      <p class="c-join-community__text">{{ $t("mine.join_content") }}</p>
+      <nuxt-link class="c-join-community__link" :to="localePath('community')">
         <span>{{ $t('home.join_community_label_link') }}</span>
       </nuxt-link>
     </div>

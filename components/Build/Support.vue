@@ -7,10 +7,10 @@
         <p class="c-roadmap-support__text">{{ $t("build.support_text_02") }}</p>
         <p class="c-roadmap-support__text">{{ $t("build.support_text_03") }}</p>
         <div class="c-roadmap-support__btns">
-          <nuxt-link class="btn_blue_new button_new" to="/network-steward">
+          <nuxt-link class="btn_blue_new button_new" :to="localePath('network-steward')">
             <span>{{ $t("header.network_st") }}</span>
           </nuxt-link>
-          <nuxt-link class="btn_blue_new button_new" to="/community">
+          <nuxt-link class="btn_blue_new button_new" :to="localePath('community')">
             <span>{{ $t("home.join_community_title") }}</span>
           </nuxt-link>
         </div>
