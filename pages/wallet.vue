@@ -13,9 +13,8 @@
     <section id="options" class="v-wallet-section">
       <h2 class="v-wallet-section_heading_main">{{ $t("wallet.heading_main") }}</h2>
       <p class="v-wallet-section_description_main">{{ $t("wallet.description_main") }}</p>
-      <h3 class="v-wallet-section_subheading">{{ $t("wallet.subheading_main") }}</h3>
+      <h3 class="v-wallet-section_subheading">PKT Wallets</h3>
       <Wallets :list="pkt_wallets" />
-      <h3 class="v-wallet-section_subheading">{{ $t("wallet.subheading_bold") }}</h3>
       <Wallets :list="mining_wallets" />
     </section>
   </div>
@@ -45,51 +44,42 @@ export default {
     return {
       pkt_wallets: [
         {
-          img: "/img/wallet-electrum.png",
-          title: "Electrum PKT Wallet",
-          content: "Easy to use non-mining GUI wallet for Mac or PC desktop",
-          button_link: "https://docs.pkt.cash/en/latest/electrum/",
-          button_label: "Install Electrum"
+          img: "/img/wallet-world.svg",
+          title: "PKT World Wallet",
+          content: "PKT wallet for Mac or PC with built-in miner",
+          button_link: "https://www.pkt.world/wallet",
+          button_label: "Install PKT World Wallet"
         },
         {
           img: "/img/wallet-metamask.png",
           title: "WPKT MetaMask",
-          content: "Use for wPKT only on browser and mobile",
+          content: "WPK wallet for desktop and mobile",
           button_link: "https://metamask.io/",
           button_label: "Install MetaMask"
         },
         {
           img: "/img/wallet-anode.png",
           title: "Anode Mobile Wallet",
-          content: "Mobile wallet for iOS with LND for micro-transactions",
+          content: "Mobile wallet for iOS and Android (with PKT VPN on Android)",
           button_link: "https://anode.co",
-          button_label: "Coming Soon",
-          is_disabled: true
+          button_label: "Install Now",
         }
       ],
       mining_wallets: [
         {
           img: "/img/wallet-command-line.png",
           title: "Command Line PKT Wallet",
-          content: "This terminal-based wallet is a full node setup",
+          content: "Terminal-based mining wallet",
           button_link: "https://docs.pkt.cash/en/latest/pktd/pktwallet/",
           button_label: "Install CLI Wallet"
         },
         {
-          img: "/img/wallet-world.svg",
-          title: "PKT World Wallet",
-          content: "Windows-based GUI wallet with built-in desktop miner",
-          button_link: "https://www.pkt.world/wallet",
-          button_label: "Install PKT World Wallet"
+          img: "/img/wallet-electrum.png",
+          title: "Electrum PKT Wallet",
+          content: "Non-mining PKT wallet for Mac or PC",
+          button_link: "https://docs.pkt.cash/en/latest/electrum/",
+          button_label: "Install Electrum"
         },
-        {
-          id: "zulu",
-          img: "/img/wallet-zulu.svg",
-          title: "Zulu PKT Wallet",
-          content: "Mac-based GUI wallet supports mining",
-          button_link: "https://github.com/artrepreneur/Zulu/releases",
-          button_label: "Install Zulu Wallet"
-        }
       ],
     };
   },
@@ -220,6 +210,15 @@ export default {
     }
   }
   .v-wallet-section_options {
+    justify-content: flex-start;
+    & .c-options_single {
+      width: 31%;
+      margin:0 1% 2%;
+      @include for-width(-small-lg) {
+        width: 100%;
+        margin:0 0 rem(25);
+      }
+    }
     & #zulu {
       & .c-options_single_img {
         padding: rem(25) rem(15) rem(25);
