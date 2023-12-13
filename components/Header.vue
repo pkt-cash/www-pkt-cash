@@ -446,6 +446,9 @@ export default {
             display: -ms-flex;
             display: -o-flex;
             display: flex;
+            justify-content: center;
+            -ms-align-items: center;
+            align-items: center;
           }
           & .nav__menu-item {
             @extend %t-center;

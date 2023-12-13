@@ -27,11 +27,11 @@ export default {
 	@extend %df;
 	@extend %jcc;
 	@extend %aic;
-	@include for-width(-small-lg) {
+	@include for-width(-tablet) {
 		display:block;
 	}
 	&-single {
-		@include for-width(-small-lg) {
+		@include for-width(-tablet) {
 			display:inline-block;
 		}
 		& img {

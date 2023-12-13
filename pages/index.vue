@@ -266,12 +266,16 @@ export default {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  @include for-width(-desktop-lg) {
+    background-size: 100% 100%;
+  }
   @include for-width(-tablet) {
     padding:15vh 0 10vh;
     background-position: top 0 left -175px;
+    background-size: cover;
   }
   @include for-width(-small-lg) {
-    padding:20vh 0 12vh;
+    padding:rem(175) 0 rem(100);
     background-position: top 0 left -75px;
     background-size: 200%;
   }
@@ -335,7 +339,8 @@ export default {
       & .c-images-single {
         margin:0 rem(10);
         @include for-width(-tablet) {
-          margin:0 rem(5);
+          margin:rem(7) 2%;
+          max-width:16%;
         }
         @include for-width(-small-lg) {
           margin:rem(15) 2%;
