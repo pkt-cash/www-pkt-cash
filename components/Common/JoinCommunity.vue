@@ -27,7 +27,7 @@ export default {
     padding:10vh 0;
   }
   @include for-width(-small-lg) {
-    padding:10vh rem(30);
+    padding:rem(85) rem(30);
   }
   & .container {
     border-radius:rem(20);

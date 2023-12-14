@@ -355,6 +355,9 @@ export default {
   @include for-width(-tablet) {
     padding-bottom::10vh;
   }
+  @include for-width(-small-lg) {
+    padding-bottom::rem(100);
+  }
   & .container {
     @extend %df;
     @extend %jcsb;
@@ -427,6 +430,9 @@ export default {
   padding:25vh 0 20vh;
   @include for-width(-tablet) {
     padding:10vh 0;
+  }
+  @include for-width(-small-lg) {
+    padding:rem(100) 0;
   }
   &__heading {
     @extend %h2-common;
