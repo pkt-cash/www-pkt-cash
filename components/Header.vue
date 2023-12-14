@@ -425,7 +425,7 @@ export default {
         & .nav__menu-list {
           display: none;
           z-index: 9;
-          position: absolute;
+          position: fixed;
           top:0;
           left:0;
           width:100vw;
@@ -450,6 +450,9 @@ export default {
             -ms-align-items: center;
             align-items: center;
           }
+          @include for-width(-small-lg) {
+            padding-bottom:10vh;
+          }
           & .nav__menu-item {
             @extend %t-center;
             & a {
@@ -458,15 +461,24 @@ export default {
               line-height: rem(30);
               @extend %inter_semibold;
               padding:rem(5);
+              @include for-width(-small-lg) {
+                padding:rem(3) 0;
+              }
             }
             & .nested-drop {
               margin:rem(5) 0 rem(25);
+              @include for-width(-small-lg) {
+                margin:rem(5) 0 rem(15);
+              }
               & li a {
                 color:$white;
                 font-size: rem(16);
                 line-height: rem(26);
                 @extend %inter_regular;
                 padding:rem(5);
+                @include for-width(-small-lg) {
+                  padding:0;
+                }
               }
             }
           }
@@ -486,6 +498,9 @@ export default {
           right:0;
           margin: 0 auto;
           @extend %t-center;
+          @include for-width(-small-lg) {
+            bottom:rem(50);
+          }
           & .c-navigation__top_links_social {
             width:100%;
             @extend %df;
