@@ -48,7 +48,18 @@ export default {
           title: "PKT World Wallet",
           content: "PKT wallet for Mac or PC with built-in miner",
           button_link: "https://www.pkt.world/wallet",
-          button_label: "Install PKT World Wallet"
+          button_label: "Install PKT World Wallet",
+          dropdown: true,
+          children: [
+            {
+              name:"Download for Mac",
+              link: "/PktWorldWallet.pkg",
+            },
+            {
+              name:"Download for PC",
+              link: "/PktWorldWalletSetup.exe",
+            },
+          ]
         },
         {
           img: "/img/wallet-metamask.png",
@@ -63,6 +74,17 @@ export default {
           content: "Mobile wallet for iOS and Android (with PKT VPN on Android)",
           button_link: "https://anode.co",
           button_label: "Install Now",
+          dropdown: true,
+          children: [
+            {
+              name:"Install for iOS",
+              link: "https://apps.apple.com/us/app/anode-wallet/id1609509719",
+            },
+            {
+              name:"Install for Android",
+              link: "https://play.google.com/store/apps/details?id=co.anode.anodium.playstore",
+            },
+          ]
         }
       ],
       mining_wallets: [
