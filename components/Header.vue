@@ -108,6 +108,7 @@ export default {
       isHidden: false,
       nav_open: false,
       show: false,
+      isBodyClassActive: false,
       showMobileMenu: false,
       showMobileDropdown: false,
       mClass: isMobile ? 'mobile_block' : '',
@@ -279,6 +280,7 @@ export default {
     },
     showMenu() {
       this.showMobileMenu = !this.showMobileMenu;
+      this.isBodyClassActive = !this.isBodyClassActive;
     },
     closeDropdown: function() {
       this.show = !this.show;
@@ -287,6 +289,15 @@ export default {
       this.showMobileDropdown = !this.showMobileDropdown;
       this.showMobileMenu = !this.showMobileMenu;
     }
+  },
+  watch: {
+    isBodyClassActive(newVal) {
+      if (newVal) {
+        document.body.classList.add("disableScroll");
+      } else {
+        document.body.classList.remove("disableScroll");
+      }
+    },
   },
   computed: {
     availableLocales () {
@@ -499,7 +510,7 @@ export default {
           margin: 0 auto;
           @extend %t-center;
           @include for-width(-small-lg) {
-            bottom:rem(50);
+            bottom:rem(105);
           }
           & .c-navigation__top_links_social {
             width:100%;
@@ -550,15 +561,20 @@ export default {
   }
 }
 .slide-enter-active {
-  transition: all .25s;
+  transition: all .35s;
   opacity: 1;
 }
 .slide-enter {
-  transform: translate(0, 10%);
-  opacity: 0;
+  transform: none;
+  opacity:0;
+  transition: none;
 }
 .slide-leave-to {
   transform: none;
   opacity:0;
+  transition: none;
+}
+.disableScroll {
+  overflow:hidden;
 }
 </style>
