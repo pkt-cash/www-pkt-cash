@@ -462,7 +462,7 @@ export default {
             align-items: center;
           }
           @include for-width(-small-lg) {
-            padding-bottom:10vh;
+            padding-bottom:rem(100);
           }
           & .nav__menu-item {
             @extend %t-center;
@@ -479,7 +479,7 @@ export default {
             & .nested-drop {
               margin:rem(5) 0 rem(25);
               @include for-width(-small-lg) {
-                margin:rem(5) 0 rem(15);
+                margin:0 0 rem(10);
               }
               & li a {
                 color:$white;
@@ -510,7 +510,7 @@ export default {
           margin: 0 auto;
           @extend %t-center;
           @include for-width(-small-lg) {
-            bottom:rem(105);
+            bottom:rem(115);
           }
           & .c-navigation__top_links_social {
             width:100%;

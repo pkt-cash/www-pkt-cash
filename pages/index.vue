@@ -275,7 +275,7 @@ export default {
     background-size: cover;
   }
   @include for-width(-small-lg) {
-    padding:rem(175) 0 rem(100);
+    padding:rem(180) 0 rem(100);
     background-position: top 0 left -75px;
     background-size: 200%;
   }
@@ -299,6 +299,8 @@ export default {
     padding:rem(20) 0 rem(35);
     @include for-width(-small-lg) {
       padding:rem(25) rem(20) rem(35);
+      max-width:rem(360);
+      margin:0 auto;
     }
   }
   &__links {
@@ -315,7 +317,7 @@ export default {
       margin-top:8vh;
     }
     @include for-width(-small-lg) {
-      margin-top:13vh;
+      margin-top:rem(95);
     }
     & p {
       @extend %p-common;
