@@ -128,8 +128,7 @@ export default {
 			@extend %btn-new;
     		@extend %btn_blue_new;
 			display:inline-block;
-			@include for-width(+desktop-medium) {
-				width:60%;
+			@include for-width(-desktop-medium) {
 				padding:rem(12) rem(10);
 			}
 			@include for-width(-tablet-lg) {
