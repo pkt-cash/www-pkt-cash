@@ -222,7 +222,7 @@ export default {
   head() {
     return {
       title: this.$t("home.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
+      meta: [{ hid: "description", name: "description", content: "A decentralized physical infrastructure (DePIN) ecosystem supporting open internet access & powering the decentralized web" }],
       link: [
         {
           rel: 'canonical',
