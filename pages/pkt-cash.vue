@@ -83,8 +83,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("cash.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
+      title: "PKT Cash",
+      meta: [{ hid: "description", name: "description", content: "Powering the PKT ecosystem" }],
       link: [
         {
           rel: 'canonical',
