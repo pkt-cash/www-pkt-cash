@@ -30,8 +30,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("wallet.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
+      title: "Wallet - PKT",
+      meta: [{ hid: "description", name: "description", content: "Store PKT in a PKT Wallet" }],
       link: [
         {
           rel: 'canonical',

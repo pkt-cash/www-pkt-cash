@@ -155,8 +155,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("build.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("build.meta_descr") }],
+      title: "Build - PKT",
+      meta: [{ hid: "description", name: "description", content: "A Network Powered By The People" }],
       link: [
         {
           rel: 'canonical',

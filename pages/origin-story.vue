@@ -53,8 +53,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("origin_story.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
+      title: "Origin Story - PKT",
+      meta: [{ hid: "description", name: "description", content: "Cjdns and humble beginnings" }],
       link: [
         {
           rel: 'canonical',

@@ -93,8 +93,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("tech.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("tech.meta_descr") }],
+      title: "Technology - PKT",
+      meta: [{ hid: "description", name: "description", content: "PKT represents the future of networking" }],
       link: [
         {
           rel: 'canonical',

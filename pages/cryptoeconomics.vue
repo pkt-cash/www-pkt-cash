@@ -44,8 +44,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("wallet.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("about.meta_descr") }],
+      title: "Cryptoeconomics - PKT",
+      meta: [{ hid: "description", name: "description", content: "PKT is paid to PacketCrypt miners" }],
       link: [
         {
           rel: 'canonical',

@@ -197,8 +197,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("steward.header_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("steward.header_subtitle") }],
+      title: "The Network Steward - PKT",
+      meta: [{ hid: "description", name: "description", content: "Public grants for network development" }],
       link: [
         {
           rel: 'canonical',

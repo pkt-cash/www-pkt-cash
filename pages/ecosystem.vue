@@ -31,8 +31,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t("ecosystem.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("ecosystem.meta_descr") }],
+      title: "Ecosystem - PKT",
+      meta: [{ hid: "description", name: "description", content: "By the people, for the people" }],
       link: [
         {
           rel: 'canonical',
