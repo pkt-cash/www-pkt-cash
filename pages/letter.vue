@@ -50,7 +50,7 @@ export default {
   },
   head() {
     return {
-      title: "Letter from CJD",
+      title: "Letter from CJD - PKT",
       meta: [{ hid: "description", name: "description", content: "This is a letter about the inspiration for PKT, written by PKT lead developer and creator of cjdns, Caleb James DeLisle." }],
       link: [
         {

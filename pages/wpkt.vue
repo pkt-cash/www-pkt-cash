@@ -73,7 +73,7 @@ export default {
   head() {
     return {
       title: "WPKT - PKT",
-      meta: [{ hid: "description", name: "description", content: this.$t("wpkt.meta_descr") }],
+      meta: [{ hid: "description", name: "description", content: "Bridging PKT to Decentralized Finance" }],
       link: [
         {
           rel: 'canonical',

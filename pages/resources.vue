@@ -11,7 +11,7 @@
         :button_3="this.$t('resources.heading_button_3')" 
         :button_4="this.$t('resources.heading_button_4')"
         button_3_link="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf"
-        button_4_link="#"
+        button_4_link="https://docsend.com/view/ayf5d3tz5rymn8fv"
         :button_5="this.$t('resources.heading_button_5')" 
         :button_6="this.$t('resources.heading_button_6')"
         :button_5_link="localePath('getpkt')"
@@ -24,9 +24,9 @@
         <div class="v-resources-section__left">
           <h2 class="v-resources-section__title_small">{{ $t("resources.whitepapers_heading") }}</h2>
           <p class="v-resources-section__text">{{ $t("resources.whitepapers_text_1") }}</p>
-          <a href="#" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.whitepapers_button_1") }}</span></a>
+          <a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.whitepapers_button_1") }}</span></a>
           <p class="v-resources-section__text">{{ $t("resources.whitepapers_text_2") }}</p>
-          <a href="#" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.whitepapers_button_2") }}</span></a>
+          <a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank" class="v-resources-section__button"><span>{{ $t("resources.whitepapers_button_2") }}</span></a>
         </div>
       </div>
     </section>

@@ -2,9 +2,22 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-size: 16px;
-  @extend %regular;
-  color: $dark_blue;
+  @extend %body-text;
+}
+.container {
+  margin: 0 auto;
+  width:100%;
+  max-width:rem(1170);
+  @include for-width(-laptop_small) {
+    max-width:95%;
+  }
+  @include for-width(-tablet) {
+    max-width:90%;
+  }
+  @include for-width(-small-lg) {
+    max-width:100%;
+    padding:0 rem(20);
+  }
 }
 img {
   display: inline-block;
@@ -16,10 +29,6 @@ img {
   padding: rem(70) rem(25) rem(50);
   @include for-width(-small-lg) {
     padding: rem(20) rem(25) rem(50);
-  }
-
-  & .container {
-    margin: 0 auto;
   }
 
   &__section {
@@ -269,4 +278,14 @@ body.ru .v-utility__top_section .c-internal-header__links .btn_blue_new {
 }
 body.ru .c-join-community__link {
   width:rem(300);
+}
+/**********************************************************************/
+.orange {
+  color:$orange;
+}
+.blue {
+  color:$blue;
+}
+.green {
+  color:$green;
 }

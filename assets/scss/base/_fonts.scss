@@ -166,11 +166,9 @@
 // Body
 %body-text {
   @extend %regular;
-  //@include font_sizes(23, 35);
-  @include font_sizes(18, 28);
+  @include font_sizes(16, 24);
   @include for-width(-tablet-lg) {
-    //@include font_sizes(17, 27);
-    @include font_sizes(16, 25);
+    @include font_sizes(16, 24);
   }
 }
 
@@ -434,5 +432,132 @@
   background-color: $light_blue_new;
   &:hover {
     background-color: $light_blue_hover;
+  }
+}
+/*********************************************************************************************************************************************************/
+// ================ Inter-Regular ================
+@include font_face(Inter-Regular, Inter-Regular);
+
+%inter_regular {
+  font-family: "Inter-Regular", sans-serif;
+}
+
+// ================ Inter-Medium ================
+@include font_face(Inter-Medium, Inter-Medium);
+
+%inter_medium {
+  font-family: "Inter-Medium", sans-serif;
+}
+
+// ================ Inter-SemiBold ================
+@include font_face(Inter-SemiBold, Inter-SemiBold);
+
+%inter_semibold {
+  font-family: "Inter-SemiBold", sans-serif;
+}
+
+// ================ Inter-Bold ================
+@include font_face(Inter-Bold, Inter-Bold);
+
+%inter_bold {
+  font-family: "Inter-Bold", sans-serif;
+}
+
+// ================ Inter-ExtraBold ================
+@include font_face(Inter-ExtraBold, Inter-ExtraBold);
+
+%inter_bold {
+  font-family: "Inter-ExtraBold", sans-serif;
+}
+
+// ================ Inter-Black ================
+@include font_face(Inter-Black, Inter-Black);
+
+%inter_black {
+  font-family: "Inter-Black", sans-serif;
+}
+
+%p-common {
+  font-size: rem(16);
+  line-height: rem(30);
+  @extend %inter_regular;
+  color:$white;
+  @include for-width(-small-lg) {
+    line-height: rem(24);
+  }
+}
+%p-common-thick {
+  font-size: rem(16);
+  line-height: rem(24);
+  @extend %inter_medium;
+  color:$white;
+}
+%p-big-common {
+  font-size: rem(20);
+  line-height: rem(30);
+  @extend %inter_regular;
+  color:$white;
+  @include for-width(-small-lg) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
+}
+%h1-common {
+  font-size: rem(64);
+  line-height: rem(80);
+  @extend %inter_bold;
+  color:$white;
+  @include for-width(-small-lg) {
+    font-size: rem(38);
+    line-height: rem(42);
+  }
+}
+%h2-common {
+  font-size: rem(40);
+  line-height: rem(50);
+  @extend %inter_bold;
+  color:$white;
+  @include for-width(-small-lg) {
+    font-size: rem(38);
+    line-height: rem(42);
+  }
+}
+%h3-common {
+  font-size: rem(40);
+  line-height: rem(50);
+  @extend %inter_bold;
+  color:$white;
+}
+.c-common-button {
+  font-size: rem(16);
+  line-height: rem(30);
+  border:1px solid;
+  border-radius: rem(30);
+  width:rem(160);
+  padding:rem(9);
+  @extend %t-center;
+  @extend %dib;
+  @extend %inter_semibold;
+
+}
+.c-common-button__bordered {
+  border-color:$white_50;
+  color:$white;
+  &:hover {
+    border-color:$white;
+  }
+  &:focus {
+    border-color:$white;
+  }
+}
+.c-common-button__filled {
+  border-color:$main_blue_light;
+  background-color:$main_blue_light;
+  color:$white;
+  &:hover {
+    
+  }
+  &:focus {
+    
   }
 }

@@ -12,7 +12,8 @@ const STATE = immutableMap({
   bitsPerSecond: null,
   encryptionsPerSecond: null,
   pkt_price: null,
-  pkt_cp_logins: null
+  pkt_cp_logins: null,
+  loading: true
 });
 
 export const state = () => STATE.toJS();
@@ -51,10 +52,12 @@ export const actions = {
       commit('updateField', { path: 'encryptionsPerSecond', value: stats.results[0].encryptionsPerSecond })
       commit('updateField', { path: 'pkt_price', value: pkt_price_fetch.data.PKT.quote.USD.price })
       commit('updateField', { path: 'pkt_cp_logins', value: pkt_cp_logins_fetch[0].all_cp_logins })
+      this.loading = false;
 
     } catch (e) {
       console.log(e)
       // commit('updateField', { path: 'status', value: 'error' })
+      this.loading = false;
     }
   },
   async update_data({ commit }) {
@@ -77,8 +80,9 @@ export const actions = {
       commit('updateField', { path: 'encryptionsPerSecond', value: stats.results[0].encryptionsPerSecond * 1000000 })
       commit('updateField', { path: 'pkt_price', value: pkt_price_fetch.data.PKT.quote.USD.price })
       commit('updateField', { path: 'pkt_cp_logins', value: pkt_cp_logins_fetch[0].all_cp_logins })
+      this.loading = false;
     } catch (e) {
-
+      this.loading = false;
     }
   }
 }
