@@ -221,7 +221,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t("home.meta_title"),
+      title: "PKT Cash - The Future of Internet Access",
       meta: [{ hid: "description", name: "description", content: "A decentralized physical infrastructure (DePIN) ecosystem supporting open internet access & powering the decentralized web" }],
       link: [
         {

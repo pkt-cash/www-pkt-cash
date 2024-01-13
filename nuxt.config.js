@@ -25,7 +25,7 @@ export default {
       },
       {
         property: "og:title",
-        content: "PKT"
+        content: "PKT Cash - The Future of Internet Access"
       },
       {
         property: "og:image",
