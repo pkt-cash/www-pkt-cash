@@ -497,6 +497,24 @@
   line-height: rem(30);
   @extend %inter_regular;
   color:$white;
+  @include for-width(-laptop) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
+  @include for-width(-small-lg) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
+}
+%p-big-common-thick {
+  font-size: rem(20);
+  line-height: rem(30);
+  @extend %inter_medium;
+  color:$white;
+  @include for-width(-laptop) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
   @include for-width(-small-lg) {
     font-size: rem(18);
     line-height: rem(26);
@@ -538,7 +556,12 @@
   @extend %t-center;
   @extend %dib;
   @extend %inter_semibold;
-
+  @include for-width(-laptop) {
+    line-height: rem(26);
+  }
+  @include for-width(-small-lg) {
+    line-height: rem(30);
+  }
 }
 .c-common-button__bordered {
   border-color:$white_50;
@@ -559,5 +582,34 @@
   }
   &:focus {
     
+  }
+}
+.c-common-button__dark_blue {
+  border-color:$black_blue;
+  color:$black_blue;
+  &:hover {
+    border-color:$black_blue;
+    color:$white;
+    background-color:$black_blue;
+  }
+  &:focus {
+    border-color:$black_blue;
+    color:$white;
+    background-color:$black_blue;
+  }
+}
+.c-common-button__white {
+  border-color:$white;
+  background-color:$white;
+  color:$pink;
+  &:hover {
+    border-color:$white;
+    color:$pink;
+    background-color:$white;
+  }
+  &:focus {
+    border-color:$white;
+    color:$pink;
+    background-color:$white;
   }
 }
