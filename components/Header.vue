@@ -4,7 +4,7 @@
     <nav class="c-navigation">
         <div class="nav__logo">
           <div class="nav__logo">
-            <nuxt-link tag="figure" to="/">
+            <nuxt-link tag="figure" :to="localePath('index')">
               <img src="/img/logo-new.svg" alt="PKT Cash" />
             </nuxt-link>
           </div>
@@ -28,7 +28,7 @@
                           </template>
                           <template v-else>
                             <div @click="closeDropdown">
-                              <nuxt-link :to="item.route_link" class="c-footer__menu-link">
+                              <nuxt-link :to="localePath(item.route_link)" class="c-footer__menu-link">
                                 <span class="c-footer__menu-text">{{ $t(item.name) }} </span>
                               </nuxt-link>
                               </div>
@@ -38,12 +38,21 @@
                     </transition>
                   </template>
                   <template v-else>
-                  <nuxt-link :to="item.route_link" class="nav__menu-link btn-nav">
+                  <nuxt-link :to="localePath(item.route_link)" class="nav__menu-link btn-nav">
                     <span class="nav__menu-text">{{ $t(item.name) }}</span>
                   </nuxt-link>
                 </template>
               </li>
             </ul>
+        </div>
+        <div class="nav__languages">
+          <button v-on:click="isHidden = !isHidden" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}<img src="/img/common/icons/arrow-down-white.svg" />
+          </button>
+          <div class="nav__menu-lang_switch_drop_down" v-if="isHidden" v-model="$i18n.locale">
+            <p v-on:click="isHidden = !isHidden">
+              <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code) + '/'">{{ locale.name }}</nuxt-link>
+            </p>
+          </div>
         </div>
         <div class="nav__menu_mobile">
           <div class="nav__burger" @click="showMenu()" ref="navbar"></div>
@@ -91,6 +100,14 @@
                   </template>
                 </ul>
               </li>
+              <li class="nav_languages">
+                <button v-on:click="isHidden = !isHidden" class="nav__menu-lang_switch_trigger">{{ $i18n.locale }}<img src="/img/common/icons/arrow-down-white.svg" /></button>
+                <div class="nav__menu-lang_switch_drop_down" v-if="isHidden" v-model="$i18n.locale">
+                  <p v-on:click="isHidden = !isHidden">
+                    <nuxt-link :click="$i18n.setLocaleCookie(locale)" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code) + '/'">{{ locale.name }}</nuxt-link>
+                  </p>
+                </div>
+              </li>
             </ul>
         </div>
     </nav>
@@ -117,77 +134,77 @@ export default {
       scrollValue: 0,
       nav_list: [
         {
-          name:"Learn",
+          name:"get_pkt.started_button",
           route_link: "/utility",
           dropdown: true,
           children: [
             {
-              name:"Mine",
+              name:"header.mine",
               route_link: "/mine",
             },
             {
-              name:"Utility",
+              name:"header.utility",
               route_link: "/utility",
             },
             {
-              name:"PKT Network",
+              name:"home.scroll_section_block_1_title",
               route_link: "/tech",
             },
             {
-              name:"PKT Cash",
+              name:"header.pkt_cash",
               route_link: "/pkt-cash",
             },
           ]
         },
         {
-          name:"Develop",
+          name:"footer_new.menu_2_title",
           route_link: "/build",
           dropdown: true,
           children: [
             {
-              name:"Developer Central",
+              name:"header_new.dev_dev_center",
               route_link: "/resources",
             },
             {
-              name:"Technical Docs",
+              name:"header_new.dev_tech_docs",
               route_link: "https://docs.pkt.cash/",
               external: true
             },
             {
-              name:"Roadmap",
+              name:"header.roadmap",
               route_link: "/build",
             },
             {
-              name:"Yellowpaper",
+              name:"header_new.dev_yellowpaper",
               route_link: "https://pkt.cash/PacketCrypt-2020-09-04.pdf",
               external: true
             },
             {
-              name:"Whitepaper",
+              name:"header.whitepaper",
               route_link: "https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf",
               external: true
             },
           ]
         },
         {
-          name: "Network",
+          name: "footer_new.menu_3_title",
           route_link: "/mine",
           dropdown: true,
           children: [
             {
-              name:"Network Steward",
+              name:"header.network_st",
               route_link: "/network-steward",
             },
             {
-              name:"Wallets",
+              name:"footer_new.wallets",
               route_link: "/wallet",
             },
             {
-              name:"Ecosystem",
+              name:"header.ecosystem",
               route_link: "/ecosystem",
             },
             {
-              name:"Cryptoeconomics",
+              name:"header.cryptoeconomics",
               route_link: "/cryptoeconomics",
             },
             {
@@ -197,26 +214,26 @@ export default {
           ]
         },
         {
-          name:"Explore",
+          name:"footer_new.menu_4_title",
           route_link: "/tech",
           dropdown: true,
           children: [
             {
-              name:"Explorer",
+              name:"header.explorer",
               route_link: "https://packetscan.io/",
               external: true
             },
             {
-              name:"Community",
+              name:"header.community",
               route_link: "/resources",
             },
             {
-              name:"Blog",
+              name:"header.blog",
               route_link: "https://crypto.pkt.cash/",
               external: true
             },
             {
-              name:"Media Kit",
+              name:"header_new.explore_kit",
               route_link: "/brand",
             }
           ]
@@ -334,6 +351,7 @@ export default {
       @extend %df;
       @extend %jcsb;
       @extend %aic;
+      position:relative;
       & > div {
         width:25%;
       }
@@ -411,6 +429,59 @@ export default {
             position: relative;
             top: 0;
             margin-left:0;
+          }
+        }
+      }
+      & .nav__languages {
+        width:auto;
+        position:absolute;
+        right:0;
+        @include for-width(-tablet) {
+          display: none;
+        }
+        & .nav__menu-lang_switch_trigger {
+          background:$black_blue_light;
+          backdrop-filter: blur(5px);
+          border-radius: 60px;
+          color:$white;
+          @extend %inter_semibold;
+          font-size: rem(16);
+          text-transform:uppercase;
+          padding:rem(20) rem(30);
+          @include for-width(-desktop-medium) {
+            padding:rem(16) rem(30);
+          }
+          & img {
+            vertical-align:middle;
+            margin-left:rem(10);
+          }
+        }
+        & .nav__menu-lang_switch_drop_down {
+          position:absolute;
+          top: 102%;
+          left:0;
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          background-color: $black_blue_light;
+          width:100%;
+          min-width:rem(150);
+          padding:rem(5) 0;
+          @include for-width(-laptop) {
+            min-width:rem(110);
+          }
+          & p {
+            & a {
+              @extend %db;
+              @extend %t-left;
+              padding:rem(5) rem(10) rem(5) rem(30);
+              color:$white;
+              @include for-width(-laptop) {
+                padding:rem(5) rem(10);
+                font-size: rem(14);
+              }
+            }
           }
         }
       }
@@ -556,6 +627,33 @@ export default {
             }
           }
         }
+        & .nav_languages {
+          padding-top:rem(20);
+          @extend %t-center;
+          & .nav__menu-lang_switch_trigger {
+            color:$white;
+            font-size: rem(18);
+            line-height: rem(26);
+            @extend %inter_semibold;
+            text-transform:uppercase;
+            & img {
+              margin-left:rem(10);
+              vertical-align:middle;
+            }
+          }
+          & .nav__menu-lang_switch_drop_down {
+            & p a {
+              color:$white;
+              font-size: rem(16);
+              line-height: rem(26);
+              @extend %inter_medium;
+              @extend %db;
+              @extend %t-center;
+              padding:rem(5) rem(10);
+              color:$white;
+            }
+          }
+        }
       }
     }
   }
@@ -576,5 +674,14 @@ export default {
 }
 .disableScroll {
   overflow:hidden;
+}
+.ru {
+  & .c-header {
+    & .nav__menu-list {
+      & .nav__menu-item a {
+        white-space: nowrap;
+      }
+    }
+  }
 }
 </style>

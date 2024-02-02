@@ -1,18 +1,18 @@
 <template>
   <div class="c-index-header">
     <div class="c-index-header_data">
-      <h3 class="c-index-header_data__title">Total Network Users</h3>
+      <h3 class="c-index-header_data__title">{{ $t("home_new.network_1") }}</h3>
       <template>
         <p class="c-index-header_data__value orange" v-if="loading">Loading...</p>
         <p class="c-index-header_data__value orange" v-else>{{ pkt_cp_logins | commafy }}</p>
       </template>
     </div>
     <div class="c-index-header_data">
-      <h3 class="c-index-header_data__title">Network Bandwidth / Sec</h3>
+      <h3 class="c-index-header_data__title">{{ $t("home_new.network_2") }}</h3>
       <p class="c-index-header_data__value blue">{{ (bitsPerSecond / 1024 / 1024 / 1024).toFixed(2) }}Gb</p>
     </div>
     <div class="c-index-header_data">
-      <h3 class="c-index-header_data__title">PKT Price</h3>
+      <h3 class="c-index-header_data__title">{{ $t("home_new.network_3") }}</h3>
       <p class="c-index-header_data__value green">${{ pkt_price | displayed_pkt_price }} / PKT</p>
     </div>
   </div>

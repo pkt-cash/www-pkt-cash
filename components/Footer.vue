@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Learn</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer_new.menu_1_title") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of learn_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.external === true">
@@ -39,7 +39,7 @@
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Develop</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer_new.menu_2_title") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of develop_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.external === true">
@@ -56,7 +56,7 @@
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Network</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer_new.menu_3_title") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of network_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.external === true">
@@ -73,7 +73,7 @@
           </ul>
         </div>
         <div class="c-footer__menu">
-          <h5 class="c-footer__menu-title">Explore</h5>
+          <h5 class="c-footer__menu-title">{{ $t("footer_new.menu_4_title") }}</h5>
           <ul class="c-footer__menu-list">
             <li v-for="(item, index) of explore_links" :key="index" class="c-footer__menu-item">
               <template v-if="item.external === true">
@@ -143,20 +143,20 @@ export default {
       ],
       learn_links: [
         {
-          name: "Mine",
+          name: "header.mine",
           route_link: "/mine",
         },
         {
-          name: "Utility",
+          name: "header.utility",
           route_link: "/utility",
         },
         {
-          name: "PKT Network",
+          name: "home.scroll_section_block_1_title",
           route_link: "https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf",
           external: true,
         },
         {
-          name: "PKT Cash",
+          name: "header.pkt_cash",
           route_link: "/pkt-cash",
         },
         // {
@@ -166,12 +166,12 @@ export default {
       ],
       develop_links: [
         {
-          name: "Technical Docs",
+          name: "footer_new.tech_docs",
           route_link: "https://pkt.cash/PacketCrypt-2020-09-04.pdf",
           external: true,
         },
         {
-          name: "Roadmap",
+          name: "header.roadmap",
           route_link: "/build#roadmap",
         },
         // {
@@ -179,27 +179,27 @@ export default {
         //   route_link: "/",
         // },
         {
-          name: "Whitepaper",
+          name: "header.whitepaper",
           route_link: "https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf",
           external: true,
         }
       ],
       network_links: [
         {
-          name: "Explorer",
+          name: "header.explorer",
           route_link: "https://packetscan.io/",
           external: true,
         },
         {
-          name: "Wallets",
+          name: "footer_new.wallets",
           route_link: "/wallet",
         },
         {
-          name: "Network Steward",
+          name: "header.network_st",
           route_link: "/network-steward",
         },
         {
-          name: "Ecosystem",
+          name: "header.ecosystem",
           route_link: "/ecosystem",
         },
         {
@@ -210,16 +210,16 @@ export default {
       ],
       explore_links: [
         {
-          name: "Community",
+          name: "header.community",
           route_link: "/resources",
         },
         {
-          name: "Blog",
+          name: "header.blog",
           route_link: "https://crypto.pkt.cash",
           external: true,
         },
         {
-          name: "Trademark",
+          name: "footer.trademark",
           route_link: "/trademark",
         },
         // {
@@ -227,7 +227,7 @@ export default {
         //   route_link: "/",
         // },
         {
-          name: "Brand",
+          name: "footer.brand",
           route_link: "/brand",
         },
       ]
