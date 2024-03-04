@@ -5,9 +5,9 @@
         <h1 class="v-top-section__heading">{{ $t("home_new.top_heading_1") }} <br />{{ $t("home_new.top_heading_2") }}</h1>
         <p class="v-top-section__description">{{ $t("home_new.top_descr") }}</p>
         <div class="v-top-section__links">
-          <nuxt-link class="c-common-button c-common-button__filled" to="/getpkt">
+          <a href="https://www.mexc.com/exchange/PKT_USDT" target="_blank" class="c-common-button c-common-button__filled">
             <span>{{ $t("header.get_pkt") }}</span>
-          </nuxt-link>
+          </a>
           <nuxt-link class="c-common-button c-common-button__bordered" to="/build">
             <span>{{ $t("header.roadmap") }}</span>
           </nuxt-link>
