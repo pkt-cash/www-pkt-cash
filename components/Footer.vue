@@ -3,9 +3,9 @@
     <div class="container">
       <div class="c-footer__wrap">
         <div class="c-footer__logo">
-          <figure class="c-footer__logo-img">
+          <nuxt-link :to="localePath('index')" class="c-footer__logo-img">
             <img src="/img/logo.svg" alt="pkt.cash" />
-          </figure>
+          </nuxt-link>
           <ul class="c-footer__logo_social">
             <li v-for="(item, index) of social_links" :key="index" class="c-footer__menu-item">
               <a :href="item.route_link" target="_blank" class="c-footer__menu-link">
@@ -161,8 +161,13 @@ export default {
         },
         // {
         //   name: "FAQ",
-        //   route_link: "/",
-        // }
+        //   route_link: "/faq",
+        // },
+        {
+          name: "PKT Deck",
+          route_link: "https://docsend.com/view/ayf5d3tz5rymn8fv",
+          external: true,
+        }
       ],
       develop_links: [
         {
@@ -240,6 +245,8 @@ export default {
 .c-footer {
   background-color: $black_new;
   color: $white_50;
+  position:relative;
+  z-index:3;
   &__wrap {
     padding: rem(60) 0 rem(65);
     @extend %df;

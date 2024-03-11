@@ -4,7 +4,7 @@
     <nav class="c-navigation">
         <div class="nav__logo">
           <div class="nav__logo">
-            <nuxt-link tag="figure" :to="localePath('index')">
+            <nuxt-link :to="localePath('index')">
               <img src="/img/logo-new.svg" alt="PKT Cash" />
             </nuxt-link>
           </div>
@@ -153,6 +153,11 @@ export default {
             {
               name:"header.pkt_cash",
               route_link: "/pkt-cash",
+            },
+            {
+              name:"PKT Deck",
+              route_link: "https://docsend.com/view/ayf5d3tz5rymn8fv",
+              external: true
             },
           ]
         },
@@ -333,11 +338,24 @@ export default {
   width:100%;
   z-index:10;
   @include for-width(-small-lg) {
-    background: rgba(0, 5, 47, 0.50);
+    background: rgba(0, 5, 47, 0.5);
     backdrop-filter: blur(5px);
-   }
+  }
+  &:before {
+    @include for-width(-small-lg) {
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      display:block;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+    }
+  }
   & .container {
-    @include for-width(-tablet) {
+    @include for-width(-desktop-med) {
       max-width:100%;
       padding:rem(10) rem(30);
     }
