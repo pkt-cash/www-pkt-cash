@@ -1,37 +1,51 @@
 <template>
-  <div class="v-wallet">
-    <section class="v-wallet-header_section">
-      <HeaderInternal 
-      :title="this.$t('wallet.title')" 
-      :subtitle="this.$t('wallet.subtitle')" 
-      :text="this.$t('wallet.text')" 
-      :button_1="this.$t('wallet.button_1')" 
-      button_1_link="#options"
-      is_arrow_down 
-      arrow_down_link="#options" />
+  <div class="v-wallets">
+    <section class="v-header-section">
+      <SpotAInternal 
+      title="PKT Wallets"
+      subtitle="Choose a wallet based on your use case"
+      text="Whether you’re mining PKT, holding PKT or transacting WPKT on Binance Smart Chain, select the wallet that works for you. Also install the Watchr app on mobile or desktop to easily view and track any PKT wallet address." 
+      button_1="View wallets" 
+      button_2="Install Watchr"
+      button_1_link="#wallets"
+      button_2_link="https://pkt.watch/watchr/"
+      button_2_target="false"
+      button_3_target="true" />
     </section>
-    <section id="options" class="v-wallet-section">
-      <h2 class="v-wallet-section_heading_main">{{ $t("wallet.heading_main") }}</h2>
-      <p class="v-wallet-section_description_main">{{ $t("wallet.description_main") }}</p>
-      <h3 class="v-wallet-section_subheading">PKT Wallets</h3>
-      <Wallets :list="pkt_wallets" />
-      <Wallets :list="mining_wallets" />
+    <section class="v-watchr-section">
+      <div class="container">
+        <div class="v-watchr-section_img">
+          <img src="/img/wallets-watchr.webp" title="Watchr screens" />
+        </div>
+        <div class="v-watchr-section_content">
+          <img src="/img/wallets-watchr-logo.webp" title="Watchr" />
+          <h5>Watch any wallet on the <br />PKT blockchain</h5>
+          <p>Watchr enables you to get insights and track any wallet address using the mobile or desktop app.</p>
+          <a href="https://pkt.watch/watchr/" target="_blank" class="c-common-button c-common-button__white"><span>Install Watchr</span></a>
+        </div>
+      </div>
+    </section>
+    <section id="wallets" class="v-wallet-section">
+      <div class="container">
+        <Wallets :list="pkt_wallets" />
+        <Wallets :list="mining_wallets" />
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-import HeaderInternal from "~/components/Base/HeaderInternal";
-import Wallets from "~/components/Base/Wallets";
+import SpotAInternal from "~/components/Common/SpotAInternal";
+import Wallets from "~/components/Wallet/Wallets";
 export default {
   components: {
-    HeaderInternal,
+    SpotAInternal,
     Wallets
   },
   head() {
     return {
-      title: "Wallet - PKT",
-      meta: [{ hid: "description", name: "description", content: "Store PKT in a PKT Wallet" }],
+      title: "PKT Wallets",
+      meta: [{ hid: "description", name: "description", content: "Choose a wallet based on your use case. Whether you are mining PKT, holding PKT or transacting wPKT on Binance Smart Chain, you can select that wallet that fits your needs. You can use the Watchr app to monitor any PKT wallet balance." }],
       link: [
         {
           rel: 'canonical',
@@ -44,211 +58,227 @@ export default {
     return {
       pkt_wallets: [
         {
-          img: "/img/wallet-world.svg",
+          bg_color: "background-color:#197CC7;background-image:url(/img/wallets-wallet-pkt-world.svg);background-size:23%;",
+          heading: "Desktop Wallet",
           title: "PKT World Wallet",
-          content: "PKT wallet for Mac or PC with built-in miner",
-          button_link: "https://www.pkt.world/wallet",
-          button_label: "Install PKT World Wallet",
-          dropdown: true,
-          children: [
-            {
-              name:"Download for Mac",
-              link: "/PktWorldWallet.pkg",
-            },
-            {
-              name:"Download for PC",
-              link: "/PktWorldWalletSetup.exe",
-            },
-          ]
+          content: "Windows and MacOS wallet with built-in PKT miner",
+          button_link: "https://pkt.world/wallet",
+          // dropdown: true,
+          // children: [
+          //   {
+          //     name:"Download for Mac",
+          //     link: "/PktWorldWallet.pkg",
+          //   },
+          //   {
+          //     name:"Download for PC",
+          //     link: "/PktWorldWalletSetup.exe",
+          //   },
+          // ]
         },
         {
-          img: "/img/wallet-metamask.png",
-          title: "WPKT MetaMask",
-          content: "WPK wallet for desktop and mobile",
-          button_link: "https://metamask.io/",
-          button_label: "Install MetaMask"
-        },
-        {
-          img: "/img/wallet-anode.png",
+          bg_color: "background-color:#2B3991;background-image:url(/img/wallets-wallet-anode.svg);background-size:30%;",
+          heading: "iOS Mobile Wallet",
           title: "Anode Mobile Wallet",
-          content: "Mobile wallet for iOS and Android (with PKT VPN on Android)",
-          button_link: "https://anode.co",
-          button_label: "Install Now",
-          dropdown: true,
-          children: [
-            {
-              name:"Install for iOS",
-              link: "https://apps.apple.com/us/app/anode-wallet/id1609509719",
-            },
-            {
-              name:"Install for Android",
-              link: "https://play.google.com/store/apps/details?id=co.anode.anodium.playstore",
-            },
-          ]
+          content: "Mobile wallet for iOS with PKT Lightning for micro-transactions",
+          button_link: "https://apps.apple.com/us/app/anode-wallet/id1609509719",
+        },
+        {
+          bg_color: "background-color:#2B3991;background-image:url(/img/wallets-wallet-anode-vpn.webp);background-size:50%;",
+          heading: "Android Mobile Wallet",
+          title: "Anode VPN for Android",
+          content: "Android mobile wallet that includes built-in PKT VPN app",
+          button_link: "https://play.google.com/store/apps/details?id=co.anode.anodium.playstore&hl=en&gl=US",
         }
       ],
       mining_wallets: [
         {
-          img: "/img/wallet-command-line.png",
-          title: "Command Line PKT Wallet",
-          content: "Terminal-based mining wallet",
-          button_link: "https://docs.pkt.cash/en/latest/pktd/pktwallet/",
-          button_label: "Install CLI Wallet"
+          bg_color: "background-color:#197CC7;background-image:url(/img/wallets-wallet-pkt-world.svg);background-size:23%;",
+          heading: "PKT Mining Wallet",
+          title: "PKT World Wallet",
+          content: "Windows and MacOS wallet with built-in PKT miner",
+          button_link: "https://pkt.world/wallet",
+          // dropdown: true,
+          // children: [
+          //   {
+          //     name:"Download for Mac",
+          //     link: "/PktWorldWallet.pkg",
+          //   },
+          //   {
+          //     name:"Download for PC",
+          //     link: "/PktWorldWalletSetup.exe",
+          //   },
+          // ]
         },
         {
-          img: "/img/wallet-electrum.png",
-          title: "Electrum PKT Wallet",
-          content: "Non-mining PKT wallet for Mac or PC",
-          button_link: "https://docs.pkt.cash/en/latest/electrum/",
-          button_label: "Install Electrum"
+          bg_color: "background-image:url(/img/wallets-wallet-command-line.webp);background-size:cover;",
+          heading: "PKT Mining Wallet",
+          title: "Command Line PKT Wallet",
+          content: "This terminal-based wallet is a full node setup",
+          button_link: "https://docs.pkt.cash/en/latest/pktd/pktwallet/",
+        },
+        {
+          bg_color: "background-color:#FD9D2D;background-image:url(/img/wallets-wallet-metamask.svg);background-size:30%;",
+          heading: "WPKT Wallet",
+          title: "WPKT MetaMask",
+          content: "Use this wallet for WPKT only on web browser and mobile",
+          button_link: "https://docs.pkt.cash/en/latest/wrapped_pkt/",
         },
       ],
     };
   },
 };
 </script>
-
 <style lang="scss">
-.v-wallet {
-  &-header_section {
-    & .c-internal-header {
-      @include for-width(-small-lg) {
-        height:100vh;
-        padding-top:rem(75);
-      }
-      &__text {
-        max-width: 43rem;
-        @include for-width(-tablet) {
-          max-width: 65%;
-        }
-        @include for-width(-small-lg) {
-          max-width: 90%;
-          margin-bottom:rem(25);
-        }
-      }
-      &__sub-title {
-        text-transform:initial;
-      }
-      & .mobile_view {
-        @include for-width(-small-lg) {
-          display:none;
-        }
-      }
-      & .desktop_view {
-        @include for-width(-small-lg) {
-          display:none;
-        }
-      }
-      .arrow_down {
-        @include for-width(-small-lg) {
-          bottom: 5vh;
-        }
-      }
-    }
-  }
-  &-section {
-    @extend %container_new;
-    background:$white;
-    @extend %t-center;
-    padding:rem(100) 0 rem(150);
+.v-wallets {
+  background-color:$black_blue;
+  position:relative;
+  &:before {
+    content:'';
+    background-image:url(/img/pkt-wallets-top-asset-2x-1.webp);
+    position:absolute;
+    top:0;
+    right:0;
+    width:75%;
+    height:75%;
+    background-position:right top;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
     @include for-width(-tablet) {
-      max-width:100%;
-      width:100%;
-      padding:rem(75) rem(25);
+      background-size:rem(800);
+      background-position:left -100px top -100px;
     }
     @include for-width(-small-lg) {
-        padding:rem(80) rem(20);
+      background-position:center top -100px;
+      width:100%;
     }
-    &_heading_main {
-      @extend %heading_internal;
-      padding: 0 rem(25);
-      text-transform:initial;
-      margin-bottom:rem(35);
-      @include for-width(+desktop-lg) {
-        margin-bottom:rem(50);
-      }
-      @include for-width(-tablet-lg) {
-        margin-bottom:rem(25);
-        font-size: rem(40);
-        line-height: rem(50);
-      }
+  }
+  &:after {
+    content:'';
+    background-image:url(/img/wallets-bottom.webp);
+    position:absolute;
+    bottom:-10%;
+    left:0;
+    width:50%;
+    height:50%;
+    background-position:left bottom;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
+    @include for-width(-small-lg) {
+      bottom:45%;
+    }
+  }
+  & > section {
+    z-index:3;
+    position:relative;
+  }
+  .v-watchr-section {
+    padding-top:rem(10);
+    padding-bottom:rem(35);
+    @include for-width(-tablet) {
+      padding:0 rem(25);
+    }
+    & .container {
+      background-image:url(/img/wallets-watchr-bg.webp);
+      background-position:center center;
+      background-size:cover;
+      border-radius:rem(20);
+      @extend %df;
+      @extend %jcsb;
+      @extend %aic;
       @include for-width(-small-lg) {
-        font-size: rem(24);
-        line-height: rem(36);
-        padding: 0;
+        border-radius:0;
+        display:block;
+        background-color:#FF007A;
+        background-size:auto;
       }
     }
-    &_description_main {
-      @extend %pn;
-      margin:0 auto;
-      max-width:65%;
+    &_img {
       @include for-width(-small-lg) {
-        max-width:95%;
+        padding:rem(50) rem(10) 0;
       }
-    }
-    &_subheading {
-      @extend %medium;
-      font-size: rem(44);
-      line-height:rem(64);
-      margin:rem(50) auto;
-      max-width:65%;
-      @include for-width(+desktop-lg) {
-        font-size: rem(55);
-        line-height: rem(82);
-      }
-      @include for-width(-tablet-lg) {
-        font-size: rem(34);
-        line-height:rem(44);
-        margin:rem(25) auto rem(35);
-        max-width:55%;
-      }
-      @include for-width(-tablet) {
-        max-width:75%;
-      }
-      @include for-width(-small-lg) {
-        font-size: rem(16);
-        line-height:rem(24);
-      }
-      &_bold {
-        @extend %bold;
-        font-size: rem(44);
-        line-height: rem(54);
-        margin:rem(75) auto;
-        @include for-width(+desktop-lg) {
-          font-size: rem(55);
-          line-height: rem(65);
+      & img {
+        display:block;
+        margin-top:-55px;
+        margin-bottom:-55px;
+        margin-left:-65px;
+        @include for-width(-desktop-medium) {
+          margin-left:-35px;
         }
-        @include for-width(-tablet-lg) {
-          font-size: rem(40);
-          line-height: rem(50);
-          margin:rem(50) auto;
+        @include for-width(-laptop) {
+          margin-left:-25px;
+        }
+        @include for-width(-tablet) {
+          margin:0;
+          max-width:rem(300);
         }
         @include for-width(-small-lg) {
-          font-size: rem(24);
-          line-height: rem(36);
-          margin:rem(30) auto;
+          max-width:100%;
+        }
+      }
+    }
+    &_content {
+      padding:rem(40) rem(120) rem(60) 0;
+      @include for-width(-laptop) {
+        padding:rem(30) rem(90) rem(50) rem(20);
+      }
+      @include for-width(-tablet) {
+        padding:rem(30) rem(30) rem(50) rem(20);
+      }
+      @include for-width(-small-lg) {
+        padding:rem(30) rem(15);
+      }
+      & img {
+        max-width:rem(100);
+        @include for-width(-laptop) {
+          max-width:rem(75);
+        }
+        @include for-width(-small-lg) {
+          width:25%;
+          display:inline-block;
+          vertical-align:middle;
+        }
+      }
+      & h5 {
+        @extend %p-big-common-thick;
+        padding:rem(20) 0 rem(10);
+        @include for-width(-small-lg) {
+          width:73%;
+          display:inline-block;
+          vertical-align:middle;
+          padding:0 0 0 rem(8);
+          font-size: rem(16);
+          line-height: rem(24);
+        }
+      }
+      & p {
+        @extend %p-big-common;
+        margin-bottom:rem(25);
+        @include for-width(-small-lg) {
+          font-size: rem(16);
+          line-height: rem(24);
+          margin-bottom:rem(30);
+          margin-top:rem(20);
+        }
+      }
+      & .c-common-button {
+        @include for-width(-small-lg) {
+          width:100%;
         }
       }
     }
   }
-  .v-wallet-section_options {
-    justify-content: flex-start;
-    & .c-options_single {
-      width: 31%;
-      margin:0 1% 2%;
-      @include for-width(-small-lg) {
-        width: 100%;
-        margin:0 0 rem(25);
-      }
+  .v-wallet-section {
+    padding-bottom:rem(120);
+    @include for-width(-small-lg) {
+      padding-bottom:rem(145);
+      padding-top:rem(70);
     }
-    & #zulu {
-      & .c-options_single_img {
-        padding: rem(25) rem(15) rem(25);
-        @include for-width(-tablet) {
-          padding: rem(15) rem(10) rem(15);
-        }
-      }
-    }
+  }
+  .c-footer {
+    z-index:3;
+    position:relative;
   }
 }
 </style>
