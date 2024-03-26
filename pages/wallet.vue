@@ -30,7 +30,7 @@ export default {
   },
   head() {
     return {
-      title: "Wallet - PKT",
+      title: "Wallets - PKT",
       meta: [{ hid: "description", name: "description", content: "Store PKT in a PKT Wallet" }],
       link: [
         {
