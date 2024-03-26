@@ -175,6 +175,10 @@ export default {
           route_link: "https://pkt.cash/PacketCrypt-2020-09-04.pdf",
           external: true,
         },
+        // {
+        //   name: "header.roadmap",
+        //   route_link: "/roadmap",
+        // },
         {
           name: "header.roadmap",
           route_link: "/build#roadmap",
@@ -216,7 +220,7 @@ export default {
       explore_links: [
         {
           name: "header.community",
-          route_link: "/resources",
+          route_link: "/community",
         },
         {
           name: "header.blog",

@@ -146,6 +146,10 @@ export default {
               name:"header.utility",
               route_link: "/utility",
             },
+            // {
+            //   name:"home.scroll_section_block_1_title",
+            //   route_link: "/pkt-network",
+            // },
             {
               name:"home.scroll_section_block_1_title",
               route_link: "/tech",
@@ -166,6 +170,10 @@ export default {
           route_link: "/build",
           dropdown: true,
           children: [
+            // {
+            //   name:"header_new.dev_dev_center",
+            //   route_link: "/developer-central",
+            // },
             {
               name:"header_new.dev_dev_center",
               route_link: "/resources",
@@ -175,6 +183,10 @@ export default {
               route_link: "https://docs.pkt.cash/",
               external: true
             },
+            // {
+            //   name:"header.roadmap",
+            //   route_link: "/roadmap",
+            // },
             {
               name:"header.roadmap",
               route_link: "/build",
@@ -212,6 +224,10 @@ export default {
               name:"header.cryptoeconomics",
               route_link: "/cryptoeconomics",
             },
+            // {
+            //   name:"Cjdns",
+            //   route_link: "/cjdns",
+            // },
             {
               name:"Cjdns",
               route_link: "/origin-story",
@@ -230,7 +246,7 @@ export default {
             },
             {
               name:"header.community",
-              route_link: "/resources",
+              route_link: "/community",
             },
             {
               name:"header.blog",

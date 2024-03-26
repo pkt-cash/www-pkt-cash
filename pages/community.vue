@@ -1,44 +1,95 @@
 <template>
   <div class="v-community">
-    <section class="v-community-section">
-      <BigHeader
-        :title="this.$t('community.big_header_title')"
-        :subtitle="this.$t('community.big_header_subtitle')"
-        :sometext="this.$t('community.big_header_text')"
-        bg="/img/community-header-bg.jpg"
-        :email="true"
+    <section class="v-header-section">
+      <SpotAInternal 
+      title="Welcome to the Community"
+      text="PKT is a community-based project. There is no company, foundation or pre-mine. Join the community to connect with other Pkteers who believe in internet freedom and want to help get the next 1 billion people online." 
       />
     </section>
-    <section class="v-community-section">
-      <CommunityList
-        :title="this.$t('community.join_title')"
-        :text="this.$t('community.join_text')"
-        :list="join_list"
-      />
+    <section class="c-community-blocks">
+      <CommunityBlocks :list="community_blocks" />
     </section>
-    <section class="v-community-section">
-      <CommunityList
-        :title="this.$t('community.resources_title')"
-        :text="this.$t('community.resources_text')"
-        :list="resources_list"
-      />
+    <section class="c-community-links">
+      <CommunityLinks :list="community_links" />
     </section>
   </div>
 </template>
 
 <script>
-import BigHeader from "~/components/Base/BigHeader";
-import CommunityList from "~/components/Community/List";
-
+import SpotAInternal from "~/components/Common/SpotAInternal";
+import CommunityBlocks from "~/components/Community/CommunityBlocks";
+import CommunityLinks from "~/components/Community/CommunityLinks";
 export default {
   components: {
-    BigHeader,
-    CommunityList
+    SpotAInternal,
+    CommunityBlocks,
+    CommunityLinks,
+  },
+  data() {
+    return {
+      community_links: [
+        {
+          link_icon: "/img/community-links-reddit.svg",
+          link_title: "Reddit",
+          link_url: "https://docs.pkt.cash/",
+        },
+        {
+          link_icon: "/img/community-telegram.svg",
+          link_title: "Telegram",
+          link_url: "https://t.me/pkt_cash",
+        },
+        {
+          link_icon: "/img/community-links-docs.svg",
+          link_title: "Docs",
+          link_url: "https://docs.pkt.cash/",
+        },
+        {
+          link_icon: "/img/community-links-instagram.svg",
+          link_title: "Instagram",
+          link_url: "https://www.instagram.com/pktcash/",
+        },
+        {
+          link_icon: "/img/community-links-github.svg",
+          link_title: "GitHub",
+          link_url: "https://github.com/pkt-cash/",
+        }
+      ],
+      community_blocks: [
+        {
+          bg_img: "background-image:url(/img/community-discord.svg)",
+          align_side: "left_side",
+          block_title: "Discord Chat",
+          block_descr: "Engage with the global PKT community on Discord",
+          block_url: "https://discord.gg/bjJutHm9CN",
+        },
+        {
+          bg_img: "background-image:url(/img/community-pkt-chat.svg)",
+          align_side: "right_side",
+          block_title: "PKT Chat",
+          block_descr: "The private and dedicated chat app for PKT. Ask technical questions here.",
+          block_url: "https://pkt.chat/",
+        },
+        {
+          bg_img: "background-image:url(/img/community-x.svg)",
+          align_side: "left_side",
+          block_title: "X.com",
+          block_descr: "Follow @pktcash to stay informed about news and updates.",
+          block_url: "https://twitter.com/pktcash",
+        },
+        {
+          bg_img: "background-image:url(/img/community-youtube.svg)",
+          align_side: "right_side",
+          block_title: "YouTube",
+          block_descr: "Watch tutorials about PKT technology and get regular video updates.",
+          block_url: "https://www.youtube.com/c/PKTCash/",
+        },
+      ]
+    };
   },
   head() {
     return {
-      title: this.$t("community.meta_title"),
-      meta: [{ hid: "description", name: "description", content: this.$t("home.meta_descr") }],
+      title: "Community - PKT",
+      meta: [{ hid: "description", name: "description", content: "PKT is a community-based project. There is no company, foundation or pre-mine. Join the community to connect with other Pkteers who believe in internet freedom and want to help get the next 1 billion people online." }],
       link: [
         {
           rel: 'canonical',
@@ -47,95 +98,113 @@ export default {
       ]
     };
   },
-  data() {
-    return {
-      resources_list: [
-        {
-          title: this.$t("community.resources_list_title"),
-          text:this.$t("community.resources_list_text"),
-          img: "/img/community/telegram.svg",
-          link: "https://t.me/joinchat/VTzmfU6P3YB7WrYx",
-        },
-      ],
-      join_list: [
-        {
-          title: this.$t("community.join_list_item_title_1"),
-          text: this.$t("community.join_list_item_text_1"),
-          img: "/img/community/pkt.svg",
-          link: "https://pkt.chat",
-        },
-        // {
-        //   title: "PKT Cash - Community Discussion",
-        //   text:
-        //     "Community organized chat for discussing PKT project",
-        //   img: "/img/community/telegram.svg",
-        //   link: "https://t.me/pkt_cash",
-        // },
-        {
-          title: this.$t("community.join_list_item_title_3"),
-          text: this.$t("community.join_list_item_text_3"),
-          img: "/img/community/pkt_discord.png",
-          link: "https://discord.gg/bjJutHm9CN"
-        },
-        /*{
-          title: "Facebook",
-          text:
-            "Visit PKT on Facebook for current events and to meet the community.",
-          img: "/img/community/facebook.svg",
-          link: "https://www.facebook.com/PKT-110041354126488",
-        },
-        {
-          title: "Instagram",
-          text:
-            "Browse PKT on Instagram for valuable insights about the project.",
-          img: "/img/community/instagram.svg",
-          link: "https://www.instagram.com/pktcash/",
-        },*/
-        {
-          title: this.$t("community.join_list_item_title_4"),
-          text: this.$t("community.join_list_item_text_4"),
-          img: "/img/community/twitter.svg",
-          link: "https://twitter.com/pktcash",
-        },
-        /*{
-          title: "Mastadon",
-          text:
-            "Follow PKT on Mastadon to stay up to date with news and progress.",
-          img: "/img/community/mastadon.svg",
-          link: "https://www.facebook.com/PKT-110041354126488",
-        },*/
-        {
-          title: this.$t("community.join_list_item_title_5"),
-          text: this.$t("community.join_list_item_text_5"),
-          img: "/img/community/irc.svg",
-          link: "https://kiwiirc.com/nextclient/irc.freenode.net/pkt?nick=pktwow",
-        },
-        {
-          title: this.$t("community.join_list_item_title_6"),
-          text: this.$t("community.join_list_item_text_6"),
-          img: "/img/community/matrix.svg",
-          link: "https://matrix.to/#/#pkt:matrix.org",
-        }
-      ],
-    };
-  },
-  // async mounted() {
-  //   // console.log(process)
-  //   if(process.client) {
-  //     await setTimeout(() => {
-  //       let test = document.querySelector('.needsclick');
-  //       if(!test) location.reload();
-  //     }, 500)
-  //     //
-  //   }
-  // },
 };
 </script>
-
 <style lang="scss">
-.test {
-  @extend %h1-title;
-  height: calc(100vh - 100px);
-  background-color: grey;
+.v-community {
+  background-color:$black_blue;
+  position:relative;
+  &:before {
+    content:'';
+    background-image:url(/img/community-top.webp);
+    background-size:rem(900);
+    background-position:top right;
+    background-repeat:no-repeat;
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+    @include for-width(-desktop-medium) {
+      background-size:rem(800);
+    }
+    @include for-width(-laptop) {
+      background-size:rem(600);
+    }
+    @include for-width(-small-lg) {
+      background-image:url(/img/community-top-mobile.webp);
+      background-position:top right;
+      background-size:52%;
+    }
+  }
+  &:after {
+    content:'';
+    background-image:url(/img/community-after.webp);
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:45%;
+    height:100%;
+    background-position:right bottom 60%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
+    @include for-width(-desktop-medium-default) {
+      background-position:right bottom;
+      width:35%;
+    }
+    @include for-width(-small-lg) {
+      display:none;
+    }
+  }
+  & > section {
+    z-index:3;
+    position:relative;
+  }
+  & .c-spot-a-internal {
+    padding:rem(165) 0 rem(50);
+    @include for-width(-small-lg) {
+      padding:rem(130) 0 rem(75);
+    }
+    &__title {
+      max-width:rem(550);
+      @include for-width(-small-lg) {
+        // max-width:rem(200);
+      }
+    }
+  }
+  .c-community-blocks {
+    & .container {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-gap: rem(40) rem(40);
+      @include for-width(-desktop-medium) {
+        grid-gap: rem(20) rem(20);
+        -ms-grid-columns: 49% 49%;
+        grid-template-columns: 49% 49%;
+      }
+      @include for-width(-tablet) {
+        display: block;
+      }
+    }
+  }
+  .c-community-links {
+    & .container {
+      @extend %df;
+      @extend %jcsb;
+      @extend %ais;
+      padding:rem(95) rem(75) rem(200);
+      @include for-width(-desktop-medium) {
+        padding:rem(95) rem(100) rem(170);
+      }
+      @include for-width(-laptop) {
+        padding:rem(95) rem(60) rem(150);
+      }
+      @include for-width(-tablet) {
+        padding:rem(95) 0 rem(150);
+      }
+      @include for-width(-small-lg) {
+        padding:rem(100) rem(35);
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 47% 47%;
+        grid-template-columns: 47% 47%;
+        grid-gap: rem(25) rem(25);
+      }
+    }
+  }
 }
 </style>
