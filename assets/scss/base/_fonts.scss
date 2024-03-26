@@ -492,6 +492,12 @@
   @extend %inter_medium;
   color:$white;
 }
+%p-common-bold {
+  font-size: rem(16);
+  line-height: rem(24);
+  @extend %inter_bold;
+  color:$white;
+}
 %p-big-common {
   font-size: rem(20);
   line-height: rem(30);
@@ -510,6 +516,20 @@
   font-size: rem(20);
   line-height: rem(30);
   @extend %inter_medium;
+  color:$white;
+  @include for-width(-laptop) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
+  @include for-width(-small-lg) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
+}
+%p-big-common-bold {
+  font-size: rem(20);
+  line-height: rem(30);
+  @extend %inter_bold;
   color:$white;
   @include for-width(-laptop) {
     font-size: rem(18);
@@ -553,6 +573,7 @@
   border-radius: rem(30);
   width:rem(160);
   padding:rem(9);
+  cursor: pointer;
   @extend %t-center;
   @extend %dib;
   @extend %inter_semibold;

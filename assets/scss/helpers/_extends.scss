@@ -106,3 +106,7 @@
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
+%dg {
+    display: -ms-grid;
+    display: grid;
+}

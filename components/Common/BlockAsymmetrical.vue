@@ -85,6 +85,9 @@ export default {
 			&.green_dot:before {
 				background-color:$green;
 			}
+			&.blue_dot:before {
+				background-color:$main_blue_light;
+			}
 		}
 		&_single_descr {
 			@extend %p-common-thick;

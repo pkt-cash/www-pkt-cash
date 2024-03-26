@@ -1,74 +1,159 @@
 <template>
   <div class="v-utility">
-    <section class="v-utility__top_section">
-      <HeaderInternal 
-      :title="this.$t('header.utility')" 
-      :subtitle="this.$t('utility.header_subtitle')" 
-      :text="this.$t('utility.header_text')"
-      :button_1="this.$t('utility.header_button_1')" 
-      :button_1_link="localePath('network-steward')"
-      :button_2="this.$t('utility.header_button_2')" 
-      :button_2_link="localePath('network-steward')"
-      :button_3="this.$t('utility.header_button_3')" 
-      button_3_link="#real_cases"
-      is_utility
-      is_arrow_down 
-      arrow_down_link="#getting_next"  />
+    <section class="v-header-section">
+      <SpotAInternal 
+      title="Building physical infrastructure with PKT"
+      text="PKT is a utility-focused cryptocurrency. The blockchain proof-of-work is designed to pay users who power the network's infrastructure. The PKT blockchain also interfaces directly with the PKT Network as payment rails. This seamless alignment between the high speed, encrypted networking and integrated peer-to-peer payments is the next-gen of the decentralized web." 
+     />
     </section>
-    <section id="getting_next" class="v-utility__online">
-        <div class="container">
-          <div class="v-utility__online_internal">
-            <h2 class="v-utility__title">{{ $t("utility.spot_2_title") }}</h2>
-            <p class="v-utility__subtitle">{{ $t("utility.spot_2_subtitle") }}</p>
-            <p class="v-utility__text">{{ $t("utility.spot_2_text") }}</p>
-          </div>
+    <section class="v-asymetrical-section">
+      <div class="container">
+        <div class="v-asymetrical-section__heading">
+          <h2>Why build physical infrastructure for  PKT?</h2>
         </div>
+        <div class="v-asymetrical-section__inner">
+          <BlockAsymmetrical :listFirst="asymetrical_block_list" :listSecond="asymetrical_block_list_second" />
+        </div>
+      </div>
     </section>
-    <section class="v-utility__unique">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.spot_3_title_1") }} <br />{{ $t("utility.spot_3_title_2") }}</h2>
-          <p class="v-utility__text">{{ $t("utility.spot_3_text") }}</p>
-          <nuxt-link :to="localePath('tech')" class="v-utility__button"><span>{{ $t("utility.spot_3_button") }}</span></nuxt-link>
-          <Cards :list="unique_list" />
-        </div>
+    <section class="v-chess-section">
+      <BlocksChessCommon :list="chess_list" />
     </section>
-    <section id="real_cases" class="v-utility__cases">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.spot_4_title") }}</h2>
-          <p class="v-utility__subtitle">{{ $t("utility.spot_4_subtitle") }}</p>
-          <Cards :list="cases_list" />
-        </div>
+    <section class="v-simple-section">
+      <SimpleText :list="simple_block" />
     </section>
-    <section class="v-utility__ecosystem">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.ecosystem_title") }}</h2>
-          <p class="v-utility__text">{{ $t("utility.ecosystem_text") }}</p>
-          <img src="/img/utility-ecosystem.svg" alt="Understand the Ecosystem" />
-          <nuxt-link :to="localePath('ecosystem')" class="v-utility__button"><span>{{ $t("utility.ecosystem_button") }}</span></nuxt-link>
+    <section class="v-comparison-section">
+      <div class="container">
+        <h2>PKT Comparison</h2>
+        <div class="v-comparison-section_table_wrap">
+          <table class="v-comparison-section_table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="pkt"><img src="/img/utility-comprasion-1.svg" title="PKT" /></th>
+                <th><img src="/img/utility-comprasion-2.svg" title="Helium" /></th>
+                <th><img src="/img/utility-comprasion-3.svg" title="NKN" /></th>
+                <th><img src="/img/utility-comprasion-4.svg" title="Orchid" /></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="row in rows">
+                <td>{{row.compare}}</td>
+                <td class="pkt">{{row.pkt}}</td>
+                <td>{{row.helium}}</td>
+                <td>{{row.nkn}}</td>
+                <td>{{row.orchid}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </section>
-    <section class="v-utility__compare">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.compare_title") }}</h2>
-          <p class="v-utility__text">{{ $t("utility.compare_text") }}</p>
-          <img src="/img/utility-compare-table.svg" alt="How Does PKT Compare?" />
-        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-import HeaderInternal from "~/components/Base/HeaderInternal";
-import Cards from "~/components/Base/Cards";
+import SpotAInternal from "~/components/Common/SpotAInternal";
+import BlocksChessCommon from "~/components/Common/BlocksChessCommon";
+import BlockAsymmetrical from "~/components/Common/BlockAsymmetrical";
+import SimpleText from "~/components/Common/SimpleText";
 export default {
   components: {
-    HeaderInternal,
-    Cards
+    SpotAInternal,
+    BlocksChessCommon,
+    BlockAsymmetrical,
+    SimpleText,
+  },
+  data() {
+    return {
+      chess_list: [
+        {
+          text_direction: "text_right",
+          single_title: "Physical Infrastructure",
+          single_descr: "PKT community members own and operate their own physical internet infrastructure. Anyone can support the network by running a PKT miner, setting up a cjdns node, building a website, or operating a PKT mining pool.",
+          // single_url: "/pkt-network",
+          single_url: "/tech",
+          external: false,
+          single_link: "Learn more",
+          single_img: "/img/utility-1.webp",
+        },
+        {
+          text_direction: "text_left",
+          single_title: "Internet Sharing",
+          single_descr: "PKT Network enables open internet access through secure, permissionless, mesh wifi connectivity. Individuals and businesses are rewarded for providing accessibility. This fosters a community-driven approach to scaling physical internet infrastructure and access.",
+          single_url: "https://github.com/cjdelisle/cjdns",
+          external: true,
+          single_link: "Learn more",
+          single_img: "/img/utility-2.webp",
+        },
+        {
+          text_direction: "text_right",
+          single_title: "Decentralized Web ",
+          single_descr: "PKT is powering the decentralized web through its open, permissionless ecosystem. Website developers can build censorship resistant websites and anyone can get online peer-to-peer using the network’s mesh access points.",
+          single_url: "https://docs.pkt.cash/en/latest/cjdns_websites/",
+          external: true,
+          single_link: "Learn more",
+          single_img: "/img/utility-3.webp",
+        },
+        {
+          text_direction: "text_left",
+          single_title: "PKT Lightning Network",
+          single_descr: "The forthcoming PKT Lightning Network revolutionizes web payments by enabling websites to receive payments directly to an IPv6 website URL without requiring a third-party processor. PKT Lightning also will deliver near-infinite transactions per second, enhancing speed and efficiency.",
+          // single_url: "/developer-central",
+          single_url: "/tech",
+          external: false,
+          single_link: "Learn more",
+          single_img: "/img/utility-4.webp",
+        }
+      ],
+      asymetrical_block_list: [
+        {
+          single_title: "Open Source",
+          single_descr: "PKT is fully open source, fostering community collaboration and driving innovation in decentralized network technology.",
+          color: "orange_dot"
+        },
+        {
+          single_title: "Expand Global Mesh",
+          single_descr: "Through mesh networking, nodes connect peer-to-peer, ensuring network resilience and decentralizing internet access.",
+          color: "green_dot"
+        }
+      ],
+      asymetrical_block_list_second: [
+        {
+          single_title: "Safe and Secure",
+          single_descr: "Developers have access to PKT's high speed decentralized, VPN-based infrastructure, with end-to-end encryption and censorship resistance.",
+          color: "green_dot"
+        },
+        {
+          single_title: "PKT Lightning Integration",
+          single_descr: "In an upcoming release, PKT Lightning Network will deliver near-infinite transactions per second with near-instant settlement for limitless scalability.",
+          color: "orange_dot"
+        }
+      ],
+      simple_block: [
+        {
+          single_title: "Getting the Next Billion People Online",
+          single_text: "PKT technology is designed with a focus on open internet access and mesh networking. The mission is to make internet access universal and permissionless. This is accomplished by empowering community-powered physical infrastructure to help get the next billion people online.",
+        }
+      ],
+      rows: [
+        { compare: 'Year Launched', pkt: "2019", helium: '2013', nkn: '2019', orchid: '2017' },
+        { compare: 'Coin or Token', pkt: "Mined Coin", helium: 'Pre-mined Token', nkn: 'Pre-mined Token', orchid: 'Pre-mined Token' },
+        { compare: 'Proof of Work', pkt: "Yes", helium: 'No', nkn: 'No', orchid: 'No' },
+        { compare: 'Algorithm', pkt: "PacketCrypt", helium: 'Proof of Coverage', nkn: 'Proof of Relay', orchid: 'Stake-Weighting' },
+        { compare: 'Bandwidth-Hard', pkt: "Yes", helium: 'No', nkn: 'No', orchid: 'No' },
+        { compare: 'Team/Investor %', pkt: "0%", helium: '35%', nkn: '50%', orchid: '48.90%' },
+        { compare: 'Top Network Speed', pkt: "105 GB/sec", helium: '36 GB/sec', nkn: '152 mb/sec', orchid: 'N/A' },
+        { compare: 'Ticker', pkt: "PKT", helium: 'HNT', nkn: 'NKN', orchid: 'OXT' },
+        { compare: 'Supply Limit', pkt: "6,000,000,000", helium: '223,000,000,000', nkn: '754,831,000', orchid: '979,379,000' },
+        { compare: 'Circulating Supply', pkt: "4,826,573,824", helium: '160,875,442', nkn: '754,831,362', orchid: '979,779,108' }
+      ]
+    };
   },
   head() {
     return {
       title: "Utility - PKT",
-      meta: [{ hid: "description", name: "description", content: "The fundamentals of an edge network" }],
+      meta: [{ hid: "description", name: "description", content: "Building physical infrastructure with PKT." }],
       link: [
         {
           rel: 'canonical',
@@ -77,540 +162,221 @@ export default {
       ]
     };
   },
-  data() {
-    return {
-      unique_list: [
-        {
-          image: '/img/utility-unique-card-1.png',
-          title: this.$t("utility.unique_list_1_title"),
-          descr: this.$t("utility.unique_list_1_descr"),
-        },
-        {
-          image: '/img/utility-unique-card-2.png',
-          title: this.$t("utility.unique_list_2_title"),
-          descr: this.$t("utility.unique_list_2_descr"),
-        },
-        {
-          image: '/img/utility-unique-card-3.png',
-          title: this.$t("utility.unique_list_3_title"),
-          descr: this.$t("utility.unique_list_3_descr"),
-        },
-      ],
-      cases_list: [
-        {
-          image: '/img/utility-cases-card-1.png',
-          title: this.$t("utility.cases_list_1_title"),
-          descr: this.$t("utility.cases_list_1_descr"),
-        },
-        {
-          image: '/img/utility-cases-vpn.svg',
-          title: this.$t("utility.cases_list_2_title"),
-          descr: this.$t("utility.cases_list_2_descr"),
-        },
-        {
-          image: '/img/utility-cases-wifi.svg',
-          title: this.$t("utility.cases_list_3_title"),
-          descr: this.$t("utility.cases_list_3_descr"),
-        },
-        {
-          image: '/img/utility-cases-card-3.png',
-          title: this.$t("utility.cases_list_4_title"),
-          descr: this.$t("utility.cases_list_4_descr"),
-        },
-      ],
-    };
-  },
 };
 </script>
-
 <style lang="scss">
 .v-utility {
-    // Common
+  background-color:$black_blue;
+  position:relative;
+  background-image:url(/img/utility/utility-top-asset.webp);
+  background-size:rem(900);
+  background-position:top right;
+  background-repeat:no-repeat;
+  @include for-width(-desktop-medium-default) {
+    background-size:rem(800);
+  }
+  @include for-width(-laptop) {
+    background-size:rem(700);
+    background-position:top -350px right -150px;
+  }
+  @include for-width(-small-lg) {
+    background-size:rem(800);
+    background-position:top -350px right -250px;
+  }
+  &:before {
+    content:'';
+    background-image:url(/img/utility-bg-1.webp);
+    position:absolute;
+    top:7%;
+    right:0;
+    width:70%;
+    height:75%;
+    background-position:right top;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
+  }
+  &:after {
+    content:'';
+    background-image:url(/img/utility-bg-2.webp);
+    position:absolute;
+    bottom:15%;
+    left:0;
+    width:55%;
+    height:35%;
+    background-position:left top;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
+  }
+  & > section {
+    z-index:3;
+    position:relative;
+  }
+  & .c-spot-a-internal {
+    @include for-width(-small-lg) {
+      padding:rem(145) 0 rem(100);
+    }
+  }
+  .v-chess-section {
+    padding-top:rem(50);
+    @include for-width(-laptop) {
+      padding-top:0;
+    }
+    & .c-chess-block_inner_single_img {
+      & img {
+        border-radius:rem(20);
+      }
+    }
+  }
+  .v-asymetrical-section {
+    padding-bottom:rem(100);
+    @include for-width(-laptop) {
+      padding-top:rem(100);
+    }
+    @include for-width(-small-lg) {
+      padding:rem(80) rem(20) rem(80);
+    }
     & .container {
-      @extend %container_new;
-      @extend %t-center;
+      @extend %df;
+      @extend %jcsb;
+      @extend %ais;
+      padding:rem(50) 0 0;
+      // border-top:1px solid rgba(217,217,217,.2);
+      // border-bottom:1px solid rgba(217,217,217,.2);
+      @include for-width(-laptop) {
+        padding:rem(75) 0 rem(35);
+      }
       @include for-width(-tablet) {
-        max-width:100%;
+        display:block;
+      }
+      @include for-width(-small-lg) {
+        border:0;
+        padding:0;
+      }
+      & .c-common-button {
+        @include for-width(-small-lg) {
+          display:none;
+        }
+      }
+      & .mobile_only {
+        display:none;
+        @include for-width(-small-lg) {
+          display:block;
+          margin-top:rem(25);
+        }
+      }
+    }
+    &__heading {
+      & h2 {
+        @extend %h2-common;
+        padding-bottom:rem(35);
+        @include for-width(-small-lg) {
+          padding-bottom:0;
+        }
+      }
+      width:35%;
+      @include for-width(-tablet) {
         width:100%;
-        padding:0 rem(25);
+        padding-bottom:rem(35);
+      }
+      @include for-width(-small-lg) {
+        padding-bottom:rem(15);
+      }
+    }
+    &__inner {
+      width:65%;
+      @include for-width(-tablet) {
+        width:100%;
       }
       @include for-width(-small-lg) {
         padding:0 rem(20);
       }
     }
-    &__title {
-      @extend %heading_internal;
-      @extend %heading-gradient-dark;
-      margin-bottom:rem(25);
-      text-transform:initial;
+  }
+  .v-simple-section {
+    padding:rem(155) 0 rem(200);
+    @include for-width(-laptop) {
+      padding:rem(100) 0 rem(150);
+    }
+    @include for-width(-small-lg) {
+      padding:rem(95) 0 rem(110);
+    }
+  }
+  .v-comparison-section {
+    padding-bottom:rem(120);
+    @include for-width(-small-lg) {
+      padding-bottom:rem(80);
+    }
+    & h2 {
+      @extend %h2-common;
+      padding-bottom:rem(30);
+      margin-bottom:rem(55);
       @include for-width(-laptop) {
-        margin-bottom:rem(15);
+        margin-bottom:rem(25);
       }
+    }
+    &_table_wrap {
+      width: 100%;
       @include for-width(-small-lg) {
-        font-size:rem(36);
-        line-height:rem(42);
+        overflow-x: scroll;
       }
     }
-    &__subtitle {
-      @extend %subheading;
-      @extend %medium;
-      max-width:55%;
-      margin:0 auto;
-      text-transform:initial;
-      @include for-width(-tablet) {
-        max-width:75%;
-      }
-    }
-    &__text {
-      @extend %pn;
-      max-width:50%;
-      margin:0 auto;
-      @include for-width(-tablet) {
-        max-width:70%;
-      }
-    }
-    &__button {
-      @extend %btn-new;
-      @extend %btn_blue_new;
-      display:inline-block;
-      width:auto;
-      padding:rem(12) rem(35);
-      @include for-width(-laptop) {
-        padding:rem(12) rem(35);
-      }
-    }
-    // Sections
-    &__top_section {
-      & .c-internal-header {
-        padding-top:rem(65);
-        @include for-width(+desktop-er) {
-          padding-top:rem(100);
-        }
-        @include for-width(-small-lg) {
-          min-height:100vh;
-          padding-top:rem(65);
-          height:auto;
-          padding-bottom:rem(50);
-        }
-        & .container {
-          @include for-width(-desktop-medium) {
-            padding-top:rem(50);
-          }
-          @include for-width(-small-lg) {
-            padding-top:rem(5);
-          }
-        }
-        &__title {
-          @include for-width(-small-lg) {
-            font-size: rem(66);
-            line-height: rem(80);
-            margin-bottom:0;
-          }
-        }
-        &__sub-title {
-          margin:rem(30) 0;
-          @include for-width(+desktop-er) {
-            margin:rem(10) 0;
-          }
-          @include for-width(-desktop-medium) {
-            margin:rem(20) 0;
-          }
-          @include for-width(-small-lg) {
-            padding:0 rem(15);
-            margin:rem(15) 0 rem(20);
-          }
-        }
-        &__text {
-          max-width: 55%;
-          @include for-width(+desktop-er) {
-            max-width: 65%;
-          }
-          @include for-width(-desktop-lg) {
-            max-width: 52%;
-          }
-          @include for-width(-desktop-medium) {
-            max-width: 58%;
-          }
-          @include for-width(-laptop) {
-            max-width: 65%;
-          }
-          @include for-width(-tablet) {
-            max-width: 85%;
-          }
-          @include for-width(-small-lg) {
-            max-width: 90%;
-          }
-        }
-        &__links {
-          margin-top:rem(50);
-          @include for-width(+desktop-er) {
-            margin-top:rem(35);
-          }
-          @include for-width(-desktop-medium) {
-            margin-top:rem(50);
-          }
-          @include for-width(-small-lg) {
-            margin-top:rem(35);
-            display:block;
-          }
-          & .btn_blue_new {
-            margin:0 rem(15);
-            @include for-width(-small-lg) {
-              margin:15px auto;
-              width:65%;
-              padding:rem(10);
-            }
-          }
-        }
-        .arrow_down {
-          @include for-width(+desktop-er) {
-            bottom: rem(40);
-          }
-          @include for-width(-desktop-lg) {
-            bottom: rem(25);
-          }
-          @include for-width(-small-lg) {
-            bottom:rem(20);
-          }
-        }
-      }
-    }
-    &__online {
-      background-color:$dark_blue_new;
-      height:100vh;
-      @extend %df;
-      @extend %jcs;
-      @extend %aic;
-      background-image:url(/img/utility-online.svg);
-      background-repeat:no-repeat;
-      background-size: auto 65%;
-      background-position: 90% 55%;
-      @include for-width(+desktop-er) {
-        background-position: 80% 55%;
-      }
-      @include for-width(+desktop-xxl) {
-        background-position: 75% 55%;
-      }
-      @include for-width(-laptop) {
-        background-size: auto 50%;
-        background-position: 95% 55%;
-      }
-      @include for-width(-tablet) {
-        height:auto;
-        display:block;
-        background-position: center 90%;
-        background-size: auto 50%;
-        padding:rem(75) 0 rem(550);
-      }
+    &_table {
+      width: 100%;
+      height: fit-content;
+      border-collapse: separate;
       @include for-width(-small-lg) {
-        background-size: auto rem(225);
-        padding:rem(75) 0 rem(250);
-        background-position: center 98%;
+        min-width: rem(850);
+        padding-bottom:rem(20);
       }
-      &_internal {
-        width:55%;
-        text-align:left;
-        @include for-width(-desktop-lg) {
-          width:57%;
-        }
-        @include for-width(-laptop) {
-          width:65%;
-        }
-        @include for-width(-tablet) {
-          width:100%;
-          text-align:center;
+      & thead tr {
+        & th {
+          padding:rem(25) rem(22) rem(20);
+          @extend %t-left;
+          &.pkt {
+            border:2px solid $blue;
+            border-top-left-radius:rem(20);
+            border-top-right-radius:rem(20);
+            border-bottom:0;
+          }
         }
       }
-      & .v-utility__title {
-        @extend %heading-gradient-light;
-        margin:0;
-        @include for-width(-small-lg) {
-          margin:0 auto;
-          max-width:80%;
-        }
-      }
-      & .v-utility__subtitle {
-        color:$white;
-        max-width: 100%;
-        margin:rem(35) 0;
-        @include for-width(-laptop) {
-          margin:rem(20) 0;
-        }
-        @include for-width(-small-lg) {
+      & tbody tr {
+        & td {
           font-size: rem(16);
-          line-height: rem(24);
-        }
-      }
-      & .v-utility__text {
-        color:$white;
-        max-width: rem(580);
-        margin:0;
-        @include for-width(-tablet) {
-          max-width: 85%;
-          margin:0 auto;
-        }
-      }
-    }
-    &__unique {
-      background-color:$dark_blue_new;
-      & .container {
-        background-color:$light_bg;
-        background-image:url(/img/utility-unique-bg.png);
-        background-repeat:no-repeat;
-        background-size:auto 100%;
-        background-position:top right;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-        border-radius:rem(40);
-        text-align:left;
-        padding:rem(60) rem(75);
-        @include for-width(-desktop-medium) {
-          padding:rem(50);
-        }
-        @include for-width(-tablet) {
-          padding:rem(75) rem(35) rem(35);
-          max-width:90%;
-          text-align:center;
-          background-size:auto 40%;
-        }
-        @include for-width(-small-lg) {
-          background-size:auto 15%;
-          padding:rem(25) rem(25) rem(35);
-        }
-      }
-      & .v-utility__title {
-        @include for-width(-small-lg) {
-          text-align:left;
-        }
-        & br {
-          @include for-width(-small-lg) {
-            display:none;
-          }
-        }
-      }
-      & .v-utility__text {
-        max-width:55%;
-        margin-left:0;
-        margin-bottom:rem(35);
-        @include for-width(-desktop-medium) {
-          margin-bottom:rem(25);
-        }
-        @include for-width(-tablet) {
-          max-width:100%;
-        }
-        @include for-width(-small-lg) {
-          text-align:left;
-        }
-      }
-      & .v-cards {
-        margin-top:rem(75);
-        @include for-width(-desktop-medium) {
-          margin-top:rem(55);
-        }
-        @include for-width(-tablet) {
-          margin-top:rem(35);
-        }
-        @include for-width(-tablet) {
-          display:block;
-        }
-        &__card {
-          width:29%;
-          @include for-width(-laptop) {
-            width:31%;
-          }
+          line-height: rem(60);
+          @extend %inter_medium;
+          color:$white_50;
+          @extend %t-left;
+          padding:0 rem(22) 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
           @include for-width(-tablet) {
-            width:100%;
-            text-align:center;
-          }
-          &__image {
-            width:rem(85);
-            height:rem(85);
-            @include for-width(-desktop-medium) {
-              width:rem(70);
-              height:rem(70);
-            }
-            @include for-width(-small-lg) {
-              width:rem(85);
-              height:rem(85);
-            }
-          }
-          &__title {
-            color:$black_new;
-            @extend %heading-small;
-            @extend %medium;
-            @include for-width(-small-lg) {
-              font-family: "Poppins-SemiBold", sans-serif;
-              font-size: rem(24);
-              line-height: rem(36);
-            }
-          }
-          &__descr {
-            color:$black_new;
-            @include for-width(-tablet) {
-              width:60%;
-              margin:rem(15) auto rem(35);            
-            }
-            @include for-width(-small-lg) {
-              width:70%;
-              margin:rem(5) auto rem(35);
-            }
-          }
-        }
-      }
-    }
-    &__cases {
-      background-color:$dark_blue_new;
-      padding:rem(100) 0;
-      @include for-width(-desktop-medium) {
-        padding:rem(75) 0;
-      }
-      @include for-width(-tablet) {
-        padding-bottom:rem(50);
-      }
-      @include for-width(-small-lg) {
-        padding:rem(65) 0 rem(25);
-      }
-      & .v-utility__title {
-        @extend %heading-gradient-light;
-      }
-      & .v-utility__subtitle {
-        color:$white;
-        @include for-width(-small-lg) {
-          font-size: rem(16);
-          line-height: rem(24);
-        }
-      }
-      & .v-cards {
-        margin:rem(75) auto 0;
-        max-width:85%;
-        @extend %fw;
-        align-items: stretch;
-        @include for-width(-desktop-medium) {
-          margin-top:rem(50);
-        }
-        @include for-width(-laptop) {
-          max-width:100%;
-          margin-top:rem(50);
-        }
-        @include for-width(-tablet) {
-          max-width:95%;
-        }
-        @include for-width(-small-lg) {
-          margin-top:rem(35);
-          max-width:100%;
-        }
-        &__card {
-          width:48%;
-          margin-bottom:rem(35);
-          @extend %df;
-          @extend %fdc;
-          @extend %jcs;
-          @extend %aic;
-          padding:rem(50) rem(80);
-          background: #222450;
-          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-          border-radius:rem(40);
-          @include for-width(-desktop-medium) {
-            padding:rem(40) rem(65);
-          }
-          @include for-width(-tablet) {
-            margin-bottom:rem(25);
-            padding:rem(25) rem(30);
+            padding:0 rem(10) 0;
+            line-height: rem(24);
           }
           @include for-width(-small-lg) {
-            width:100%;
-            margin-bottom:rem(30);
+            padding:0 rem(20) 0;
+            line-height: rem(60);
+            font-size: rem(14);
           }
-          &__image {
-            width:rem(75);
-            height:rem(75);
-            margin-bottom:rem(25);
-            @include for-width(-desktop-medium) {
-              width:rem(60);
-              height:rem(60);
-              margin-bottom:rem(15);
-            }
-            @include for-width(-small-lg) {
-              width:rem(80);
-              height:rem(80);
-            }
-          }
-          &__title {
+          &.pkt {
+            @extend %inter_bold;
             color:$white;
-            font-size: rem(30);
-            line-height: rem(46);
-            @extend %medium;
-            @include for-width(+desktop-xl) {
-              font-size: rem(34);
-              line-height: rem(50);
-            }
-            @include for-width(-desktop-medium) {
-              font-size: rem(26);
-              line-height: rem(42);
-            }
-            @include for-width(-laptop) {
-              font-size: rem(22);
-              line-height: rem(38);
-            }
-            @include for-width(-small-lg) {
-              font-family: "Poppins-SemiBold", sans-serif;
-              line-height: rem(36);
-            }
-          }
-          &__descr {
-            color:$white;
+            border-left:2px solid $blue;
+            border-right:2px solid $blue;
           }
         }
-      }
-    }
-    &__ecosystem {
-      background-color:$white;
-      padding:rem(100) 0 rem(125);
-      @include for-width(-desktop-medium) {
-        padding:rem(50) 0 rem(75);
-      }
-      @include for-width(-small-lg) {
-        padding:rem(50) 0;
-      }
-      & .v-utility__text {
-        @include for-width(-small-lg) {
-          max-width: 85%; 
+        &:last-child td {
+          padding-bottom:rem(12);
         }
-      }
-      & img {
-        margin:rem(55) auto rem(65);
-        width:60%;
-        display:block;
-        @include for-width(-small-lg) {
-          width: 100%;
-          margin:rem(40) auto;
+        &:last-child .pkt {
+          border-bottom:2px solid $blue;
+          border-bottom-left-radius:rem(20);
+          border-bottom-right-radius:rem(20);
         }
       }
     }
-    &__compare {
-      background-color:$light_bg;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-      padding:rem(100) 0 rem(125);
-      @include for-width(-desktop-medium) {
-        padding:rem(50) 0 rem(75);
-      }
-      @include for-width(-tablet) {
-        padding:rem(50) 0;
-      }
-      @include for-width(-small-lg) {
-        padding:rem(35) 0 rem(50);
-      }
-      & .v-utility__text {
-        @include for-width(-small-lg) {
-          max-width: 90%; 
-        }
-      }
-      & img {
-        margin-top:rem(55);
-        width:100%;
-        @include for-width(-tablet) {
-          margin-top:rem(35);
-        }
-      }
-    }
+  }
 }
 </style>

@@ -23,8 +23,11 @@ export default {
 <style lang="scss">
 .c-common-join {
   padding:rem(150) 0 rem(130);
+  @include for-width(-tablet-lg) {
+    padding:rem(125) rem(30);
+  }
   @include for-width(-tablet) {
-    padding:10vh 0;
+    padding:10vh rem(30);
   }
   @include for-width(-small-lg) {
     padding:rem(85) rem(20);
@@ -39,6 +42,7 @@ export default {
     @include for-width(-small-lg) {
       display:block;
       padding:rem(35) rem(15);
+      background:none;
     }
   }
   &__title {

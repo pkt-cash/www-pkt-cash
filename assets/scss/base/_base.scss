@@ -8,11 +8,9 @@ body {
   margin: 0 auto;
   width:100%;
   max-width:rem(1170);
-  @include for-width(-laptop_small) {
-    max-width:95%;
-  }
-  @include for-width(-tablet) {
-    max-width:90%;
+  @include for-width(-desktop-med) {
+    max-width:100%;
+    padding:0 rem(30);
   }
   @include for-width(-small-lg) {
     max-width:100%;
@@ -283,6 +281,9 @@ body.ru .c-join-community__link {
 .orange {
   color:$orange;
 }
+.white {
+  color:$white;
+}
 .blue {
   color:$blue;
 }
@@ -300,4 +301,16 @@ body.ru .c-join-community__link {
 }
 .dark_blue_bg {
   background-color:$main_blue_light;
+}
+.grey_bg {
+  background-color:$grey;
+}
+.rose_bg {
+  background-color:$pink;
+}
+.yellow_bg {
+  background-color:$yellow_bright;
+}
+.white_bg {
+  background-color:$white;
 }

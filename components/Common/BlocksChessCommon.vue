@@ -5,8 +5,12 @@
 		<div class="c-chess-block_inner" :class="item.text_direction">
 			<div class="c-chess-block_inner_single">
 				<h4 class="c-chess-block_inner_single_title">{{ item.single_title }}</h4>
+				<template v-if="item.single_subtitle">
+					<p class="c-chess-block_inner_single_subtitle green">{{ item.single_subtitle }}</p>
+				</template>
 				<p class="c-chess-block_inner_single_descr">{{ item.single_descr }}</p>
-				<nuxt-link class="c-common-button c-common-button__filled" :to="item.single_url">
+				<a :href="item.single_url" target="_blank" class="c-common-button c-common-button__filled" v-if="item.external === true"><span>{{ item.single_link }}</span></a>
+				<nuxt-link class="c-common-button c-common-button__filled" :to="item.single_url" v-if="item.single_link && item.external === false">
 					<span>{{ item.single_link }}</span>
 				</nuxt-link>
 			</div>
@@ -24,6 +28,7 @@ export default {
   name: "BlocksChessCommon",
   props: {
     list: Array,
+	external: Boolean,
   },
   computed: {
     is_mobile() {
@@ -59,10 +64,14 @@ export default {
 			&_title {
 				@extend %h2-common;
     			color:$white;
+				margin-bottom:rem(20);
+			}
+			&_subtitle {
+				@extend %p-big-common-thick;
 			}
 			&_descr {
 				@extend %p-big-common;
-				margin:rem(20) 0 rem(25);
+				margin-bottom:rem(25);
 				color:$white;	
 			}
 		}
@@ -84,7 +93,10 @@ export default {
 		& .c-chess-block_inner_single {
 			@extend %t-left;
 			order:2;
-			padding-left:rem(50);
+			padding-left:rem(45);
+			@include for-width(-laptop) {
+				padding-left:rem(25);
+			}
 			@include for-width(-tablet) {
 				order:1;
 				padding-left:0;
@@ -98,7 +110,10 @@ export default {
 	& .text_left {
 		& .c-chess-block_inner_single {
 			@extend %t-left;
-			padding-right:rem(50);
+			padding-right:rem(45);
+			@include for-width(-laptop) {
+				padding-right:rem(25);
+			}
 			@include for-width(-tablet) {
 				padding-right:0;
 			}

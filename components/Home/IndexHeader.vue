@@ -29,6 +29,7 @@ export default {
       "encryptionsPerSecond",
       "pkt_price",
       "pkt_cp_logins",
+      "loading"
     ]),
     is_mobile() {
       return process.client && window.innerWidth < 1100;
@@ -70,6 +71,7 @@ export default {
         () => this.$store.dispatch("pkt-analytics/update_data"),
         60 * 1000
       );
+      this.loading = false;
     }
   },
   beforeDestroy() {
