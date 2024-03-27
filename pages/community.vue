@@ -2,8 +2,8 @@
   <div class="v-community">
     <section class="v-header-section">
       <SpotAInternal 
-      title="Welcome to the Community"
-      text="PKT is a community-based project. There is no company, foundation or pre-mine. Join the community to connect with other Pkteers who believe in internet freedom and want to help get the next 1 billion people online." 
+      :title="this.$t('community.com_title')" 
+      :text="this.$t('community.com_text')" 
       />
     </section>
     <section class="c-community-blocks">
@@ -30,27 +30,27 @@ export default {
       community_links: [
         {
           link_icon: "/img/community-links-reddit.svg",
-          link_title: "Reddit",
+          link_title: this.$t("community.com_lnk_1"),
           link_url: "https://docs.pkt.cash/",
         },
         {
           link_icon: "/img/community-telegram.svg",
-          link_title: "Telegram",
+          link_title: this.$t("community.com_lnk_2"),
           link_url: "https://t.me/pkt_cash",
         },
         {
           link_icon: "/img/community-links-docs.svg",
-          link_title: "Docs",
+          link_title: this.$t("community.com_lnk_3"),
           link_url: "https://docs.pkt.cash/",
         },
         {
           link_icon: "/img/community-links-instagram.svg",
-          link_title: "Instagram",
+          link_title: this.$t("community.com_lnk_4"),
           link_url: "https://www.instagram.com/pktcash/",
         },
         {
           link_icon: "/img/community-links-github.svg",
-          link_title: "GitHub",
+          link_title: this.$t("community.com_lnk_5"),
           link_url: "https://github.com/pkt-cash/",
         }
       ],
@@ -58,29 +58,29 @@ export default {
         {
           bg_img: "background-image:url(/img/community-discord.svg)",
           align_side: "left_side",
-          block_title: "Discord Chat",
-          block_descr: "Engage with the global PKT community on Discord",
+          block_title: this.$t("community.com_block_1_title"),
+          block_descr: this.$t("community.com_block_1_descr"),
           block_url: "https://discord.gg/bjJutHm9CN",
         },
         {
           bg_img: "background-image:url(/img/community-pkt-chat.svg)",
           align_side: "right_side",
-          block_title: "PKT Chat",
-          block_descr: "The private and dedicated chat app for PKT. Ask technical questions here.",
+          block_title: this.$t("community.com_block_2_title"),
+          block_descr: this.$t("community.com_block_2_descr"),
           block_url: "https://pkt.chat/",
         },
         {
           bg_img: "background-image:url(/img/community-x.svg)",
           align_side: "left_side",
-          block_title: "X.com",
-          block_descr: "Follow @pktcash to stay informed about news and updates.",
+          block_title: this.$t("community.com_block_3_title"),
+          block_descr: this.$t("community.com_block_3_descr"),
           block_url: "https://twitter.com/pktcash",
         },
         {
           bg_img: "background-image:url(/img/community-youtube.svg)",
           align_side: "right_side",
-          block_title: "YouTube",
-          block_descr: "Watch tutorials about PKT technology and get regular video updates.",
+          block_title: this.$t("community.com_block_4_title"),
+          block_descr: this.$t("community.com_block_4_descr"),
           block_url: "https://www.youtube.com/c/PKTCash/",
         },
       ]

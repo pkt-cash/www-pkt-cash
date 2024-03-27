@@ -2,14 +2,14 @@
   <div class="v-utility">
     <section class="v-header-section">
       <SpotAInternal 
-      title="Building physical infrastructure with PKT"
-      text="PKT is a utility-focused cryptocurrency. The blockchain proof-of-work is designed to pay users who power the network's infrastructure. The PKT blockchain also interfaces directly with the PKT Network as payment rails. This seamless alignment between the high speed, encrypted networking and integrated peer-to-peer payments is the next-gen of the decentralized web." 
+      :title="this.$t('utility.u_title')"
+      :text="this.$t('utility.u_text')"
      />
     </section>
     <section class="v-asymetrical-section">
       <div class="container">
         <div class="v-asymetrical-section__heading">
-          <h2>Why build physical infrastructure for  PKT?</h2>
+          <h2>{{ $t("utility.u_assym_title") }}</h2>
         </div>
         <div class="v-asymetrical-section__inner">
           <BlockAsymmetrical :listFirst="asymetrical_block_list" :listSecond="asymetrical_block_list_second" />
@@ -24,7 +24,7 @@
     </section>
     <section class="v-comparison-section">
       <div class="container">
-        <h2>PKT Comparison</h2>
+        <h2>{{ $t("utility.u_compar_title") }}</h2>
         <div class="v-comparison-section_table_wrap">
           <table class="v-comparison-section_table">
             <thead>
@@ -69,84 +69,84 @@ export default {
       chess_list: [
         {
           text_direction: "text_right",
-          single_title: "Physical Infrastructure",
-          single_descr: "PKT community members own and operate their own physical internet infrastructure. Anyone can support the network by running a PKT miner, setting up a cjdns node, building a website, or operating a PKT mining pool.",
+          single_title: this.$t("utility.u_chess_title_1"),
+          single_descr: this.$t("utility.u_chess_descr_1"),
           // single_url: "/pkt-network",
           single_url: "/tech",
           external: false,
-          single_link: "Learn more",
+          single_link: this.$t("common.learn_more"),
           single_img: "/img/utility-1.webp",
         },
         {
           text_direction: "text_left",
-          single_title: "Internet Sharing",
-          single_descr: "PKT Network enables open internet access through secure, permissionless, mesh wifi connectivity. Individuals and businesses are rewarded for providing accessibility. This fosters a community-driven approach to scaling physical internet infrastructure and access.",
+          single_title: this.$t("utility.u_chess_title_2"),
+          single_descr: this.$t("utility.u_chess_descr_2"),
           single_url: "https://github.com/cjdelisle/cjdns",
           external: true,
-          single_link: "Learn more",
+          single_link: this.$t("common.learn_more"),
           single_img: "/img/utility-2.webp",
         },
         {
           text_direction: "text_right",
-          single_title: "Decentralized Web ",
-          single_descr: "PKT is powering the decentralized web through its open, permissionless ecosystem. Website developers can build censorship resistant websites and anyone can get online peer-to-peer using the network’s mesh access points.",
+          single_title: this.$t("utility.u_chess_title_3"),
+          single_descr: this.$t("utility.u_chess_descr_3"),
           single_url: "https://docs.pkt.cash/en/latest/cjdns_websites/",
           external: true,
-          single_link: "Learn more",
+          single_link: this.$t("common.learn_more"),
           single_img: "/img/utility-3.webp",
         },
         {
           text_direction: "text_left",
-          single_title: "PKT Lightning Network",
-          single_descr: "The forthcoming PKT Lightning Network revolutionizes web payments by enabling websites to receive payments directly to an IPv6 website URL without requiring a third-party processor. PKT Lightning also will deliver near-infinite transactions per second, enhancing speed and efficiency.",
+          single_title: this.$t("utility.u_chess_title_4"),
+          single_descr: this.$t("utility.u_chess_descr_4"),
           // single_url: "/developer-central",
           single_url: "/tech",
           external: false,
-          single_link: "Learn more",
+          single_link: this.$t("common.learn_more"),
           single_img: "/img/utility-4.webp",
         }
       ],
       asymetrical_block_list: [
         {
-          single_title: "Open Source",
-          single_descr: "PKT is fully open source, fostering community collaboration and driving innovation in decentralized network technology.",
+          single_title: this.$t("utility.u_assym_title_1"),
+          single_descr: this.$t("utility.u_assym_descr_1"),
           color: "orange_dot"
         },
         {
-          single_title: "Expand Global Mesh",
-          single_descr: "Through mesh networking, nodes connect peer-to-peer, ensuring network resilience and decentralizing internet access.",
+          single_title: this.$t("utility.u_assym_title_2"),
+          single_descr: this.$t("utility.u_assym_descr_2"),
           color: "green_dot"
         }
       ],
       asymetrical_block_list_second: [
         {
-          single_title: "Safe and Secure",
-          single_descr: "Developers have access to PKT's high speed decentralized, VPN-based infrastructure, with end-to-end encryption and censorship resistance.",
+          single_title: this.$t("utility.u_assym_title_3"),
+          single_descr: this.$t("utility.u_assym_descr_3"),
           color: "green_dot"
         },
         {
-          single_title: "PKT Lightning Integration",
-          single_descr: "In an upcoming release, PKT Lightning Network will deliver near-infinite transactions per second with near-instant settlement for limitless scalability.",
+          single_title: this.$t("utility.u_assym_title_4"),
+          single_descr: this.$t("utility.u_assym_descr_4"),
           color: "orange_dot"
         }
       ],
       simple_block: [
         {
-          single_title: "Getting the Next Billion People Online",
-          single_text: "PKT technology is designed with a focus on open internet access and mesh networking. The mission is to make internet access universal and permissionless. This is accomplished by empowering community-powered physical infrastructure to help get the next billion people online.",
+          single_title: this.$t("utility.u_simple_title"),
+          single_text: this.$t("utility.u_simple_text"),
         }
       ],
       rows: [
-        { compare: 'Year Launched', pkt: "2019", helium: '2013', nkn: '2019', orchid: '2017' },
-        { compare: 'Coin or Token', pkt: "Mined Coin", helium: 'Pre-mined Token', nkn: 'Pre-mined Token', orchid: 'Pre-mined Token' },
-        { compare: 'Proof of Work', pkt: "Yes", helium: 'No', nkn: 'No', orchid: 'No' },
-        { compare: 'Algorithm', pkt: "PacketCrypt", helium: 'Proof of Coverage', nkn: 'Proof of Relay', orchid: 'Stake-Weighting' },
-        { compare: 'Bandwidth-Hard', pkt: "Yes", helium: 'No', nkn: 'No', orchid: 'No' },
-        { compare: 'Team/Investor %', pkt: "0%", helium: '35%', nkn: '50%', orchid: '48.90%' },
-        { compare: 'Top Network Speed', pkt: "105 GB/sec", helium: '36 GB/sec', nkn: '152 mb/sec', orchid: 'N/A' },
-        { compare: 'Ticker', pkt: "PKT", helium: 'HNT', nkn: 'NKN', orchid: 'OXT' },
-        { compare: 'Supply Limit', pkt: "6,000,000,000", helium: '223,000,000,000', nkn: '754,831,000', orchid: '979,379,000' },
-        { compare: 'Circulating Supply', pkt: "4,826,573,824", helium: '160,875,442', nkn: '754,831,362', orchid: '979,779,108' }
+        { compare: this.$t("utility.u_table_th_1"), pkt: "2019", helium: '2013', nkn: '2019', orchid: '2017' },
+        { compare: this.$t("utility.u_table_th_2"), pkt: this.$t("utility.u_table_td_2_1"), helium: this.$t("utility.u_table_td_2_2"), nkn: this.$t("utility.u_table_td_2_2"), orchid: this.$t("utility.u_table_td_2_2") },
+        { compare: this.$t("utility.u_table_th_3"), pkt: this.$t("utility.u_table_td_3_1"), helium: this.$t("utility.u_table_td_3_2"), nkn: this.$t("utility.u_table_td_3_2"), orchid: this.$t("utility.u_table_td_3_2") },
+        { compare: this.$t("utility.u_table_th_4"), pkt: this.$t("utility.u_table_td_4_1"), helium: this.$t("utility.u_table_td_4_2"), nkn: this.$t("utility.u_table_td_4_3"), orchid: this.$t("utility.u_table_td_4_4") },
+        { compare: this.$t("utility.u_table_th_5"), pkt: this.$t("utility.u_table_td_3_1"), helium: this.$t("utility.u_table_td_3_2"), nkn: this.$t("utility.u_table_td_3_2"), orchid: this.$t("utility.u_table_td_3_2") },
+        { compare: this.$t("utility.u_table_th_6"), pkt: "0%", helium: '35%', nkn: '50%', orchid: '48.90%' },
+        { compare: this.$t("utility.u_table_th_7"), pkt: this.$t("utility.u_table_td_7_1"), helium: this.$t("utility.u_table_td_7_2"), nkn: this.$t("utility.u_table_td_7_3"), orchid: this.$t("utility.u_table_td_7_4") },
+        { compare: this.$t("utility.u_table_th_8"), pkt: "PKT", helium: 'HNT', nkn: 'NKN', orchid: 'OXT' },
+        { compare: this.$t("utility.u_table_th_9"), pkt: "6,000,000,000", helium: '223,000,000,000', nkn: '754,831,000', orchid: '979,379,000' },
+        { compare: this.$t("utility.u_table_th_10"), pkt: "4,826,573,824", helium: '160,875,442', nkn: '754,831,362', orchid: '979,779,108' }
       ]
     };
   },

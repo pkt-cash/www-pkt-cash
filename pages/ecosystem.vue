@@ -2,29 +2,29 @@
   <div class="v-ecosystem">
     <section class="v-header-section">
       <SpotAInternal 
-      title="Explore the PKT Network"
-      text="PKT Network is a permissionless ecosystem where entrepreneurs and developers can build decentralized infrastructure, expand the decentralized web and scale internet connectivity worldwide." 
+      :title="this.$t('ecosystem.eco_title')"
+      :text="this.$t('ecosystem.eco_text')"
        />
     </section>
     <section class="v-networks">
       <div class="container v-network_inner">
         <div class="v-network_inner_single v-network_inner_single_anode">
-          <div class="v-network_inner_single__img"><img src="/img/ecosystem-anode.webp" alt="Anode VPN" /></div>
+          <div class="v-network_inner_single__img"><img src="/img/ecosystem-anode.webp" :alt="this.$t('ecosystem.eco_net_single_1_title')" /></div>
           <div class="v-network_inner_single__content">
-            <a href="https://anode.co/" target="_blank" class="white"><img src="/img/ecosystem-anode-logo.webp" alt="Anode VPN" /></a>
+            <a href="https://anode.co/" target="_blank" class="white"><img src="/img/ecosystem-anode-logo.webp" :alt="this.$t('ecosystem.eco_net_single_1_title')" /></a>
             <div class="v-network_inner_single__content_text">
-              <h4><a href="https://anode.co/" target="_blank" class="white">Anode VPN</a></h4>
-              <p><a href="https://anode.co/" target="_blank" class="white">Free VPN access, powered by cjdns</a></p>
+              <h4><a href="https://anode.co/" target="_blank" class="white">{{ $t("ecosystem.eco_net_single_1_title") }}</a></h4>
+              <p><a href="https://anode.co/" target="_blank" class="white">{{ $t("ecosystem.eco_net_single_1_descr") }}</a></p>
             </div>
           </div>
         </div>
         <div class="v-network_inner_single v-network_inner_single_pkt_watch">
-          <div class="v-network_inner_single__img"><img src="/img/ecosystem-pktwatch.svg" alt="PKT Watch" /></div>
+          <div class="v-network_inner_single__img"><img src="/img/ecosystem-pktwatch.svg" :alt="this.$t('ecosystem.eco_net_single_2_title')" /></div>
           <div class="v-network_inner_single__content">
-            <a href="https://pkt.watch/" target="_blank" class="white"><img src="/img/ecosystem-pktwatch-logo.svg" alt="PKT Watch" /></a>
+            <a href="https://pkt.watch/" target="_blank" class="white"><img src="/img/ecosystem-pktwatch-logo.svg" :alt="this.$t('ecosystem.eco_net_single_2_title')" /></a>
             <div class="v-network_inner_single__content_text">
-              <h4><a href="https://pkt.watch/" target="_blank" class="white">PKT Watch</a></h4>
-              <p><a href="https://pkt.watch/" target="_blank" class="white">A collection of free tools and resources</a></p>
+              <h4><a href="https://pkt.watch/" target="_blank" class="white">{{ $t("ecosystem.eco_net_single_2_title") }}</a></h4>
+              <p><a href="https://pkt.watch/" target="_blank" class="white">{{ $t("ecosystem.eco_net_single_2_descr") }}</a></p>
             </div>
           </div>
         </div>
@@ -32,26 +32,26 @@
     </section>
     <section class="v-new-projects">
       <div class="container">
-        <h2 class="v-new-projects__heading">New Projects</h2>
+        <h2 class="v-new-projects__heading">{{ $t("ecosystem.eco_title_1") }}</h2>
         <ProjectBlock :list="projects" />
       </div>
     </section>
     <section class="v-projects-eco">
       <div class="container">
         <div class="v-projects-eco_inner">
-          <h3 class="v-projects-eco_inner__heading">Infrastructure</h3>
+          <h3 class="v-projects-eco_inner__heading">{{ $t("ecosystem.eco_title_2") }}</h3>
           <ProjectSBlock :list="projects_infra" />
         </div>
         <div class="v-projects-eco_inner">
-          <h3 class="v-projects-eco_inner__heading">Payments</h3>
+          <h3 class="v-projects-eco_inner__heading">{{ $t("ecosystem.eco_title_3") }}</h3>
           <ProjectSBlock :list="projects_payments" />
         </div>
         <div class="v-projects-eco_inner">
-          <h3 class="v-projects-eco_inner__heading">Consumer</h3>
+          <h3 class="v-projects-eco_inner__heading">{{ $t("ecosystem.eco_title_4") }}</h3>
           <ProjectSBlock :list="projects_consumer" />
         </div>
         <div class="v-projects-eco_inner">
-          <h3 class="v-projects-eco_inner__heading">DeFi</h3>
+          <h3 class="v-projects-eco_inner__heading">{{ $t("ecosystem.eco_title_5") }}</h3>
           <ProjectSBlock :list="projects_defi" />
         </div>
       </div>
@@ -73,43 +73,43 @@ export default {
         {
           img_style:"background-color:#FF007A;",
           img_url:"/img/ecosystem-new-watchr.svg",
-          title:"Watchr",
-          descr:"Watch any PKT wallet on the blockchain",
+          title:this.$t("ecosystem.eco_pr_new_1_title"),
+          descr:this.$t("ecosystem.eco_pr_new_1_descr"),
           project_link: "https://pkt.watch/watchr/"
         },
         {
           img_style:"background-color:#8F33D5;",
           img_url:"/img/ecosystem-new-minr.svg",
-          title:"Minr",
-          descr:"Watch any PKT address on the blockchain",
+          title:this.$t("ecosystem.eco_pr_new_2_title"),
+          descr:this.$t("ecosystem.eco_pr_new_2_descr"),
           project_link: "https://pkt.watch/minr/"
         },
         {
           img_style:"background-color:#3CADEF;",
           img_url:"/img/ecosystem-new-pktworld.svg",
-          title:"World.wallet",
-          descr:"PKT wallet for Mac, Windows, and Linux",
+          title:this.$t("ecosystem.eco_pr_new_3_title"),
+          descr:this.$t("ecosystem.eco_pr_new_3_descr"),
           project_link: "https://www.pkt.world/wallet"
         },
         {
           img_style:"background-color:#0D4AE7;",
           img_url:"/img/ecosystem-new-routie.svg",
-          title:"Routie",
-          descr:"Guest wifi solutions for businesses",
+          title:this.$t("ecosystem.eco_pr_new_4_title"),
+          descr:this.$t("ecosystem.eco_pr_new_4_descr"),
           project_link: "https://routie.io/"
         },
         {
           img_style:"background-color:#2B3991;",
           img_url:"/img/ecosystem-new-anode.svg",
-          title:"Anode",
-          descr:"Free VPN powered by cjdns",
+          title:this.$t("ecosystem.eco_pr_new_5_title"),
+          descr:this.$t("ecosystem.eco_pr_new_5_descr"),
           project_link: "https://anode.co"
         },
         {
           img_style:"background-color:#fff;",
           img_url:"/img/ecosystem-new-odapp.svg",
-          title:"Odapp",
-          descr:"Bridge to swap PKT to WPKT",
+          title:this.$t("ecosystem.eco_pr_new_6_title"),
+          descr:this.$t("ecosystem.eco_pr_new_6_descr"),
           project_link: "https://odapp.io/"
         }
       ],
@@ -117,38 +117,38 @@ export default {
         {
           projects_link: "https://docs.pkt.cash/en/latest/mining/pool_setup_guide/",
           img_url: "/img/ecosystem-zetahash.svg",
-          title: "Zetahash",
+          title:this.$t("ecosystem.eco_pr_infra_1"),
           style: "background-color:#F43939;",
         },
         {
           projects_link: "https://www.pkt.world",
           img_url: "/img/ecosystem-new-pktworld.svg",
-          title: "PKT World",
+          title:this.$t("ecosystem.eco_pr_infra_2"),
           style: "background-color:#3CADEF;",
         },
         {
           projects_link: "https://docs.pkt.cash/en/latest/mining/pool_setup_guide/",
           img_url: "/img/ecosystem-new-pkt-pool.svg",
-          title: "PKT Pool",
+          title:this.$t("ecosystem.eco_pr_infra_3"),
           style: "background-color:#2F36A1;",
         },
         {
           projects_link: "https://github.com/pkteer",
           img_url: "/img/ecosystem-pkteer.svg",
-          title: "Pkteer",
+          title:this.$t("ecosystem.eco_pr_infra_4"),
           style: "background-color:#FFFFFF;",
           img_style: "width:80px;",
         },
         {
           projects_link: "https://pkt.watch/minr/",
           img_url: "/img/ecosystem-new-minr.svg",
-          title: "Minr",
+          title:this.$t("ecosystem.eco_pr_infra_5"),
           style: "background-color:#8F33D5;",
         },
         {
           projects_link: "https://akash.network/",
           img_url: "/img/ecosystem-akash.svg",
-          title: "Akash",
+          title:this.$t("ecosystem.eco_pr_infra_6"),
           style: "background-color:#FFFFFF;",
         },
       ],
@@ -156,20 +156,20 @@ export default {
         {
           projects_link: "https://www.pkt.world/wallet",
           img_url: "/img/ecosystem-new-pktworld.svg",
-          title: "World.wallet",
+          title:this.$t("ecosystem.eco_pr_payment_1"),
           style: "background-color:#3CADEF;",
         },
         {
           projects_link: "https://anode.co",
           img_url: "/img/ecosystem-new-anode.svg",
-          title: "Anode",
+          title:this.$t("ecosystem.eco_pr_payment_2"),
           style: "background-color:#2B3991;",
           img_style: "width:80px;",
         },
         {
           projects_link: "https://exchange.pkt.net/",
           img_url: "/img/ecosystem-pktnet.svg",
-          title: "PKT.Net",
+          title:this.$t("ecosystem.eco_pr_payment_3"),
           style: "background-color:#FF9039;",
           img_style: "width:100px;",
         },
@@ -178,27 +178,27 @@ export default {
         {
           projects_link: "https://pkt.watch/watchr/",
           img_url: "/img/ecosystem-new-watchr.svg",
-          title: "Watchr",
+          title:this.$t("ecosystem.eco_pr_cons_1"),
           style: "background-color:#FF007A;",
           img_style: "width:54px;",
         },
         {
           projects_link: "https://routie.io/",
           img_url: "/img/ecosystem-new-routie.svg",
-          title: "Routie",
+          title:this.$t("ecosystem.eco_pr_cons_2"),
           style: "background-color:#0D4AE7;",
         },
         {
           projects_link: "https://pkt.watch",
           img_url: "/img/ecosystem-pkt-watch.svg",
-          title: "PKT Watch",
+          title:this.$t("ecosystem.eco_pr_cons_3"),
           style: "background-color:#FFFFFF;",
           img_style: "width:52px;",
         },
         {
           projects_link: "https://packetscan.io",
           img_url: "/img/ecosystem-packetscan.svg",
-          title: "Packetscan",
+          title:this.$t("ecosystem.eco_pr_cons_4"),
           style: "background-color:#FFFFFF;",
           img_style: "width:54px;",
         },
@@ -207,7 +207,7 @@ export default {
         {
           projects_link: "https://odapp.io/",
           img_url: "/img/ecosystem-new-odapp.svg",
-          title: "ODapp",
+          title:this.$t("ecosystem.eco_pr_defi_1"),
           style: "background-color:#FFFFFF;",
         },
       ],
