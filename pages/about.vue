@@ -1,54 +1,7 @@
-<template>
-  <div class="v-about">
-    <section class="v-about-section">
-      <SimpleHeader mobile_img="/img/about-mobile.jpg" title="Letter from CJD"
-                    subtitle=""
-                    bg="/img/about-header-bg.jpg" />
-    </section>
-    <section class="v-about-section">
-      <AboutMain />
-    </section>
-  </div>
-</template>
-
 <script>
-import SimpleHeader from "~/components/Base/SimpleHeader";
-import AboutMain from "~/components/About/AboutMain";
-
-export default {
-  components: {
-    SimpleHeader,
-    AboutMain,
-  },
-  head() {
-    return {
-      title: this.$t("About - PKT"),
-      meta: [{ hid: "description", name: "description", content: this.$t("The world’s first bandwidth-hard blockchain protocol, built to incentivize the growth of infrastructure.") }],
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://pkt.cash' + this.$route.path
-        }
-      ]
-    };
-  },
-  // async mounted() {
-  //   // console.log(process)
-  //   if(process.client) {
-  //     await setTimeout(() => {
-  //       let test = document.querySelector('.needsclick');
-  //       if(!test) location.reload();
-  //     }, 500)
-  //     //
-  //   }
-  // },
-};
-</script>
-
-<style lang="scss">
-.test {
-  @extend %h1-title;
-  height: calc(100vh - 100px);
-  background-color: grey;
+export default{
+  middleware({ redirect }) {
+    return redirect('/cjdns');
+  }
 }
-</style>
+</script>

@@ -25,7 +25,7 @@ export default {
       },
       {
         property: "og:title",
-        content: "PKT"
+        content: "PKT Cash - Media Network of the Future"
       },
       {
         property: "og:image",
@@ -33,11 +33,11 @@ export default {
       },
       {
         property: "og:site_name",
-        content: "PKT"
+        content: "PKT Cash"
       },
       {
         property: "og:description",
-        content: "The Future of Internet Access"
+        content: "A decentralized physical infrastructure (DePIN) ecosystem supporting open internet access & powering the decentralized web"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],

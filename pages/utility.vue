@@ -1,74 +1,142 @@
 <template>
   <div class="v-utility">
-    <section class="v-utility__top_section">
-      <HeaderInternal 
-      :title="this.$t('header.utility')" 
-      :subtitle="this.$t('utility.header_subtitle')" 
-      :text="this.$t('utility.header_text')"
-      :button_1="this.$t('utility.header_button_1')" 
-      :button_1_link="localePath('network-steward')"
-      :button_2="this.$t('utility.header_button_2')" 
-      :button_2_link="localePath('network-steward')"
-      :button_3="this.$t('utility.header_button_3')" 
-      button_3_link="#real_cases"
-      is_utility
-      is_arrow_down 
-      arrow_down_link="#getting_next"  />
+    <section class="v-header-section">
+      <SpotAInternal 
+      title="A Utility Network"
+      text="PKT functions as a versatile utility network built on the Base blockchain. The Base blockchain is a L2 that delivers fast, low cost payments using the Ethereum network. The PKT Network delivers a digital foundation for apps, products and platforms to access and service global customers."
+      button_1="Learn more"
+      button_2="Read docs"
+      button_1_link="ecosystem"
+      button_2_link="https://docs.pkt.cash/"
+      button_2_target="_blank" />
     </section>
-    <section id="getting_next" class="v-utility__online">
-        <div class="container">
-          <div class="v-utility__online_internal">
-            <h2 class="v-utility__title">{{ $t("utility.spot_2_title") }}</h2>
-            <p class="v-utility__subtitle">{{ $t("utility.spot_2_subtitle") }}</p>
-            <p class="v-utility__text">{{ $t("utility.spot_2_text") }}</p>
-          </div>
+    <section class="v-asymetrical-section">
+      <div class="container">
+        <div class="v-asymetrical-section__heading">
+          <h2>An Open Ecosystem</h2>
+          <a href="https://docs.pkt.cash/network/what-is-network" target="_blank" class="c-common-button c-common-button__filled"><span>{{ $t("common.learn_more") }}</span></a>
         </div>
+        <div class="v-asymetrical-section__inner">
+          <BlockAsymmetrical :listFirst="asymetrical_block_list" :listSecond="asymetrical_block_list_second" />
+        </div>
+      </div>
     </section>
-    <section class="v-utility__unique">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.spot_3_title_1") }} <br />{{ $t("utility.spot_3_title_2") }}</h2>
-          <p class="v-utility__text">{{ $t("utility.spot_3_text") }}</p>
-          <nuxt-link :to="localePath('tech')" class="v-utility__button"><span>{{ $t("utility.spot_3_button") }}</span></nuxt-link>
-          <Cards :list="unique_list" />
+    <section class="v-powering-section">
+      <div class="container">
+        <h2 class="v-powering-section__heading">Utility for the Future of Media</h2>
+        <div class="v-powering-section__inner">
+          <CardsCommon :list="cards_list" />
         </div>
+      </div>
     </section>
-    <section id="real_cases" class="v-utility__cases">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.spot_4_title") }}</h2>
-          <p class="v-utility__subtitle">{{ $t("utility.spot_4_subtitle") }}</p>
-          <Cards :list="cases_list" />
-        </div>
+    <section class="v-chess-section">
+      <BlocksChessCommon :list="chess_list" />
     </section>
-    <section class="v-utility__ecosystem">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.ecosystem_title") }}</h2>
-          <p class="v-utility__text">{{ $t("utility.ecosystem_text") }}</p>
-          <img src="/img/utility-ecosystem.svg" alt="Understand the Ecosystem" />
-          <nuxt-link :to="localePath('ecosystem')" class="v-utility__button"><span>{{ $t("utility.ecosystem_button") }}</span></nuxt-link>
-        </div>
-    </section>
-    <section class="v-utility__compare">
-        <div class="container">
-          <h2 class="v-utility__title">{{ $t("utility.compare_title") }}</h2>
-          <p class="v-utility__text">{{ $t("utility.compare_text") }}</p>
-          <img src="/img/utility-compare-table.svg" alt="How Does PKT Compare?" />
-        </div>
+    <section class="v-index-section">
+      <JoinCommunity />
     </section>
   </div>
 </template>
 
 <script>
-import HeaderInternal from "~/components/Base/HeaderInternal";
-import Cards from "~/components/Base/Cards";
+import SpotAInternal from "~/components/Common/SpotAInternal";
+import CardsCommon from "~/components/Home/CardsCommon";
+import BlocksChessCommon from "~/components/Common/BlocksChessCommon";
+import BlockAsymmetrical from "~/components/Common/BlockAsymmetrical";
+import JoinCommunity from "~/components/Common/JoinCommunity";
 export default {
   components: {
-    HeaderInternal,
-    Cards
+    SpotAInternal,
+    CardsCommon,
+    BlocksChessCommon,
+    BlockAsymmetrical,
+    JoinCommunity
+  },
+  data() {
+    return {
+      chess_list: [
+        {
+          text_direction: "text_right",
+          single_title: "BIA - A New Home For Media Entertainment",
+          single_descr: "BIA is a streaming platform built on the PKT Network. It designed to revolutionize how content is distributed, discovered and the way content creators are compensated. Audiences get paid to power the network and can cash-out or use their earnings to pay for content.",
+          single_img: "/img/utility/utility-1.webp",
+        },
+        {
+          text_direction: "text_left",
+          single_title: "Base Blockchain",
+          single_descr: "Base is an Ethereum L2, powered by Coinbase. Base provides a deployable, stable, EVM codebase for building on onchain apps, using smart contracts and using next gen wallet technologies.",
+          single_img: "/img/utility/utility-2.webp",
+        }
+      ],
+      asymetrical_block_list: [
+        {
+          single_title: "No Central Party",
+          single_descr: "The PKT Network is permissionless and globally accessible without geofencing. Anyone can launch, publish and transact content via applications, platforms, or websites on the network.",
+          color: "orange_dot"
+        },
+        {
+          single_title: "Built-in Payments",
+          single_descr: "Payment processing is fundamental for any network. Each web URL in the PKT Network is also a PKT payment address. This enables seamless, built-in payment processing without requiring a third party payment processor.",
+          color: "green_dot"
+        }
+      ],
+      asymetrical_block_list_second: [
+        {
+          single_title: "Scalable",
+          single_descr: "Using Base’s L2 blockchain provides PKT Network access to programmable payments using smart contracts. This delivers scalable, low cost, near-instant payment settlement.",
+          color: "green_dot"
+        },
+        {
+          single_title: "Wallet Innovation",
+          single_descr: "PKT Network is build on the Base blockchain. This enables access to top-tier, non-custodial wallets like Coinbase Wallet, MetaMask and Ledger, as well as multi-sig solutions for ease of storage, utility, and peace of mind security.",
+          color: "orange_dot"
+        }
+      ],
+      cards_list: [
+        {
+          single_title: "Streaming",
+          single_descr: "PKT Network is open for anyone to build and host streaming platforms. The first platform built on PKT is BIA - a streaming hub that reimagines the way content is distributed, discovered and compensated.",
+          single_url: "https://docs.pkt.cash/utility",
+          single_link: this.$t("common.learn_more"),
+          external: true
+        },
+        {
+          single_title: "Ecommerce",
+          single_descr: "Anyone to host and launch a censorship-resistant website on PKT. Each website’s web URL can be used as a PKT payment address, without requiring a third party payment processor.",
+          single_url: "https://docs.pkt.cash/utility",
+          single_link: this.$t("common.learn_more"),
+          external: true
+        },
+        {
+          single_title: "Bandwidth Markets",
+          single_descr: "It’s now possible to tokenize access rights to bandwidth using real world assets (RWAs). These RWA’s can be traded in a decentralized bandwidth marketplace using AI price models.",
+          single_url: "https://docs.pkt.cash/utility",
+          single_link: this.$t("common.learn_more"),
+          external: true
+        },
+      ],
+    };
   },
   head() {
     return {
-      title: "Utility - PKT",
-      meta: [{ hid: "description", name: "description", content: "The fundamentals of an edge network" }],
+      title: "Utility | PKT Cash",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Building physical infrastructure with PKT.'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Utility | PKT Cash'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Building physical infrastructure with PKT.'
+        }
+      ],
       link: [
         {
           rel: 'canonical',
@@ -77,540 +145,169 @@ export default {
       ]
     };
   },
-  data() {
-    return {
-      unique_list: [
-        {
-          image: '/img/utility-unique-card-1.png',
-          title: this.$t("utility.unique_list_1_title"),
-          descr: this.$t("utility.unique_list_1_descr"),
-        },
-        {
-          image: '/img/utility-unique-card-2.png',
-          title: this.$t("utility.unique_list_2_title"),
-          descr: this.$t("utility.unique_list_2_descr"),
-        },
-        {
-          image: '/img/utility-unique-card-3.png',
-          title: this.$t("utility.unique_list_3_title"),
-          descr: this.$t("utility.unique_list_3_descr"),
-        },
-      ],
-      cases_list: [
-        {
-          image: '/img/utility-cases-card-1.png',
-          title: this.$t("utility.cases_list_1_title"),
-          descr: this.$t("utility.cases_list_1_descr"),
-        },
-        {
-          image: '/img/utility-cases-vpn.svg',
-          title: this.$t("utility.cases_list_2_title"),
-          descr: this.$t("utility.cases_list_2_descr"),
-        },
-        {
-          image: '/img/utility-cases-wifi.svg',
-          title: this.$t("utility.cases_list_3_title"),
-          descr: this.$t("utility.cases_list_3_descr"),
-        },
-        {
-          image: '/img/utility-cases-card-3.png',
-          title: this.$t("utility.cases_list_4_title"),
-          descr: this.$t("utility.cases_list_4_descr"),
-        },
-      ],
-    };
-  },
 };
 </script>
-
 <style lang="scss">
 .v-utility {
-    // Common
+  background-color:$black_blue;
+  position:relative;
+  background-image:url(/img/utility/utility-top-asset.webp);
+  background-size:rem(1150);
+  background-position:top right;
+  background-repeat:no-repeat;
+  @include for-width(-desktop-medium-default) {
+    background-size:rem(800);
+  }
+  @include for-width(-laptop) {
+    background-size:rem(700);
+    background-position:top -350px right -150px;
+  }
+  @include for-width(-small-lg) {
+    background-size:rem(800);
+    background-position:top -350px right -250px;
+  }
+  &:before {
+    content:'';
+    background-image:url(/img/utility-bg-1.webp);
+    position:absolute;
+    top:7%;
+    right:0;
+    width:70%;
+    height:75%;
+    background-position:right top;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
+  }
+  &:after {
+    content:'';
+    background-image:url(/img/utility-bg-2.webp);
+    position:absolute;
+    bottom:15%;
+    left:0;
+    width:55%;
+    height:35%;
+    background-position:left top;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:1;
+  }
+  & > section {
+    z-index:3;
+    position:relative;
+  }
+  & .c-spot-a-internal {
+    @include for-width(-small-lg) {
+      padding:rem(100) 0 rem(90);
+    }
+    &__title {
+      max-width: rem(300);
+      @include for-width(-small-lg) {
+        
+      }
+    }
+  }
+  .v-chess-section {
+    & .c-chess-block_inner_single_img {
+      & img {
+        border-radius:rem(20);
+        @include for-width(-small-lg) {
+          margin-top:0;
+        }
+      }
+    }
+    & .text_right {
+      & .c-chess-block_inner_single {
+        padding-right:rem(30);
+        @include for-width(-tablet) {
+          padding-right:0;
+        }
+      }
+    }
+  }
+  .v-asymetrical-section {
+    padding-bottom:0;
+    @include for-width(-desktop-med) {
+      padding:0 rem(30);
+    }
+    @include for-width(-small-lg) {
+      padding:0 rem(20);
+    }
     & .container {
-      @extend %container_new;
-      @extend %t-center;
+      @extend %df;
+      @extend %jcsb;
+      @extend %ais;
+      padding:rem(50) 0 0;
+      // border-top:1px solid rgba(217,217,217,.2);
+      // border-bottom:1px solid rgba(217,217,217,.2);
+      @include for-width(-laptop) {
+        padding:rem(75) 0 rem(35);
+      }
       @include for-width(-tablet) {
-        max-width:100%;
+        display:block;
+      }
+      @include for-width(-small-lg) {
+        border:0;
+        padding:0;
+      }
+      & .c-common-button {
+        @include for-width(-small-lg) {
+          display:none;
+        }
+      }
+      & .mobile_only {
+        display:none;
+        @include for-width(-small-lg) {
+          display:block;
+          margin-top:rem(25);
+        }
+      }
+    }
+    &__heading {
+      & h2 {
+        @extend %h2-common;
+        padding-bottom:rem(35);
+        @include for-width(-small-lg) {
+          padding-bottom:0;
+        }
+      }
+      width:25%;
+      @include for-width(-tablet) {
         width:100%;
-        padding:0 rem(25);
+        padding-bottom:rem(35);
+      }
+      @include for-width(-small-lg) {
+        padding-bottom:rem(15);
+      }
+    }
+    &__inner {
+      width:65%;
+      @include for-width(-tablet) {
+        width:100%;
       }
       @include for-width(-small-lg) {
         padding:0 rem(20);
       }
     }
-    &__title {
-      @extend %heading_internal;
-      @extend %heading-gradient-dark;
-      margin-bottom:rem(25);
-      text-transform:initial;
-      @include for-width(-laptop) {
-        margin-bottom:rem(15);
-      }
-      @include for-width(-small-lg) {
-        font-size:rem(36);
-        line-height:rem(42);
-      }
+  }
+  & .v-powering-section {
+    padding:rem(135) 0 rem(180);
+    @include for-width(-tablet) {
+      padding:10vh 0;
     }
-    &__subtitle {
-      @extend %subheading;
-      @extend %medium;
-      max-width:55%;
-      margin:0 auto;
-      text-transform:initial;
-      @include for-width(-tablet) {
-        max-width:75%;
-      }
-    }
-    &__text {
-      @extend %pn;
-      max-width:50%;
-      margin:0 auto;
-      @include for-width(-tablet) {
-        max-width:70%;
-      }
-    }
-    &__button {
-      @extend %btn-new;
-      @extend %btn_blue_new;
-      display:inline-block;
-      width:auto;
-      padding:rem(12) rem(35);
-      @include for-width(-laptop) {
-        padding:rem(12) rem(35);
-      }
-    }
-    // Sections
-    &__top_section {
-      & .c-internal-header {
-        padding-top:rem(65);
-        @include for-width(+desktop-er) {
-          padding-top:rem(100);
-        }
-        @include for-width(-small-lg) {
-          min-height:100vh;
-          padding-top:rem(65);
-          height:auto;
-          padding-bottom:rem(50);
-        }
-        & .container {
-          @include for-width(-desktop-medium) {
-            padding-top:rem(50);
-          }
-          @include for-width(-small-lg) {
-            padding-top:rem(5);
-          }
-        }
-        &__title {
-          @include for-width(-small-lg) {
-            font-size: rem(66);
-            line-height: rem(80);
-            margin-bottom:0;
-          }
-        }
-        &__sub-title {
-          margin:rem(30) 0;
-          @include for-width(+desktop-er) {
-            margin:rem(10) 0;
-          }
-          @include for-width(-desktop-medium) {
-            margin:rem(20) 0;
-          }
-          @include for-width(-small-lg) {
-            padding:0 rem(15);
-            margin:rem(15) 0 rem(20);
-          }
-        }
-        &__text {
-          max-width: 55%;
-          @include for-width(+desktop-er) {
-            max-width: 65%;
-          }
-          @include for-width(-desktop-lg) {
-            max-width: 52%;
-          }
-          @include for-width(-desktop-medium) {
-            max-width: 58%;
-          }
-          @include for-width(-laptop) {
-            max-width: 65%;
-          }
-          @include for-width(-tablet) {
-            max-width: 85%;
-          }
-          @include for-width(-small-lg) {
-            max-width: 90%;
-          }
-        }
-        &__links {
-          margin-top:rem(50);
-          @include for-width(+desktop-er) {
-            margin-top:rem(35);
-          }
-          @include for-width(-desktop-medium) {
-            margin-top:rem(50);
-          }
-          @include for-width(-small-lg) {
-            margin-top:rem(35);
-            display:block;
-          }
-          & .btn_blue_new {
-            margin:0 rem(15);
-            @include for-width(-small-lg) {
-              margin:15px auto;
-              width:65%;
-              padding:rem(10);
-            }
-          }
-        }
-        .arrow_down {
-          @include for-width(+desktop-er) {
-            bottom: rem(40);
-          }
-          @include for-width(-desktop-lg) {
-            bottom: rem(25);
-          }
-          @include for-width(-small-lg) {
-            bottom:rem(20);
-          }
-        }
-      }
-    }
-    &__online {
-      background-color:$dark_blue_new;
-      height:100vh;
-      @extend %df;
-      @extend %jcs;
-      @extend %aic;
-      background-image:url(/img/utility-online.svg);
-      background-repeat:no-repeat;
-      background-size: auto 65%;
-      background-position: 90% 55%;
-      @include for-width(+desktop-er) {
-        background-position: 80% 55%;
-      }
-      @include for-width(+desktop-xxl) {
-        background-position: 75% 55%;
-      }
-      @include for-width(-laptop) {
-        background-size: auto 50%;
-        background-position: 95% 55%;
-      }
-      @include for-width(-tablet) {
-        height:auto;
-        display:block;
-        background-position: center 90%;
-        background-size: auto 50%;
-        padding:rem(75) 0 rem(550);
-      }
-      @include for-width(-small-lg) {
-        background-size: auto rem(225);
-        padding:rem(75) 0 rem(250);
-        background-position: center 98%;
-      }
-      &_internal {
-        width:55%;
-        text-align:left;
-        @include for-width(-desktop-lg) {
-          width:57%;
-        }
-        @include for-width(-laptop) {
-          width:65%;
-        }
-        @include for-width(-tablet) {
-          width:100%;
-          text-align:center;
-        }
-      }
-      & .v-utility__title {
-        @extend %heading-gradient-light;
-        margin:0;
-        @include for-width(-small-lg) {
-          margin:0 auto;
-          max-width:80%;
-        }
-      }
-      & .v-utility__subtitle {
-        color:$white;
-        max-width: 100%;
-        margin:rem(35) 0;
-        @include for-width(-laptop) {
-          margin:rem(20) 0;
-        }
-        @include for-width(-small-lg) {
-          font-size: rem(16);
-          line-height: rem(24);
-        }
-      }
-      & .v-utility__text {
-        color:$white;
-        max-width: rem(580);
-        margin:0;
-        @include for-width(-tablet) {
-          max-width: 85%;
-          margin:0 auto;
-        }
-      }
-    }
-    &__unique {
-      background-color:$dark_blue_new;
-      & .container {
-        background-color:$light_bg;
-        background-image:url(/img/utility-unique-bg.png);
-        background-repeat:no-repeat;
-        background-size:auto 100%;
-        background-position:top right;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-        border-radius:rem(40);
-        text-align:left;
-        padding:rem(60) rem(75);
-        @include for-width(-desktop-medium) {
-          padding:rem(50);
-        }
-        @include for-width(-tablet) {
-          padding:rem(75) rem(35) rem(35);
-          max-width:90%;
-          text-align:center;
-          background-size:auto 40%;
-        }
-        @include for-width(-small-lg) {
-          background-size:auto 15%;
-          padding:rem(25) rem(25) rem(35);
-        }
-      }
-      & .v-utility__title {
-        @include for-width(-small-lg) {
-          text-align:left;
-        }
-        & br {
-          @include for-width(-small-lg) {
-            display:none;
-          }
-        }
-      }
-      & .v-utility__text {
-        max-width:55%;
-        margin-left:0;
-        margin-bottom:rem(35);
-        @include for-width(-desktop-medium) {
-          margin-bottom:rem(25);
-        }
-        @include for-width(-tablet) {
-          max-width:100%;
-        }
-        @include for-width(-small-lg) {
-          text-align:left;
-        }
-      }
-      & .v-cards {
-        margin-top:rem(75);
-        @include for-width(-desktop-medium) {
-          margin-top:rem(55);
-        }
-        @include for-width(-tablet) {
-          margin-top:rem(35);
-        }
-        @include for-width(-tablet) {
-          display:block;
-        }
-        &__card {
-          width:29%;
-          @include for-width(-laptop) {
-            width:31%;
-          }
-          @include for-width(-tablet) {
-            width:100%;
-            text-align:center;
-          }
-          &__image {
-            width:rem(85);
-            height:rem(85);
-            @include for-width(-desktop-medium) {
-              width:rem(70);
-              height:rem(70);
-            }
-            @include for-width(-small-lg) {
-              width:rem(85);
-              height:rem(85);
-            }
-          }
-          &__title {
-            color:$black_new;
-            @extend %heading-small;
-            @extend %medium;
-            @include for-width(-small-lg) {
-              font-family: "Poppins-SemiBold", sans-serif;
-              font-size: rem(24);
-              line-height: rem(36);
-            }
-          }
-          &__descr {
-            color:$black_new;
-            @include for-width(-tablet) {
-              width:60%;
-              margin:rem(15) auto rem(35);            
-            }
-            @include for-width(-small-lg) {
-              width:70%;
-              margin:rem(5) auto rem(35);
-            }
-          }
-        }
-      }
-    }
-    &__cases {
-      background-color:$dark_blue_new;
+    @include for-width(-small-lg) {
       padding:rem(100) 0;
-      @include for-width(-desktop-medium) {
-        padding:rem(75) 0;
-      }
+    }
+    &__heading {
+      @extend %h2-common;
+      padding-bottom:rem(50);
       @include for-width(-tablet) {
-        padding-bottom:rem(50);
+        padding-bottom:rem(35);
       }
       @include for-width(-small-lg) {
-        padding:rem(65) 0 rem(25);
-      }
-      & .v-utility__title {
-        @extend %heading-gradient-light;
-      }
-      & .v-utility__subtitle {
-        color:$white;
-        @include for-width(-small-lg) {
-          font-size: rem(16);
-          line-height: rem(24);
-        }
-      }
-      & .v-cards {
-        margin:rem(75) auto 0;
-        max-width:85%;
-        @extend %fw;
-        align-items: stretch;
-        @include for-width(-desktop-medium) {
-          margin-top:rem(50);
-        }
-        @include for-width(-laptop) {
-          max-width:100%;
-          margin-top:rem(50);
-        }
-        @include for-width(-tablet) {
-          max-width:95%;
-        }
-        @include for-width(-small-lg) {
-          margin-top:rem(35);
-          max-width:100%;
-        }
-        &__card {
-          width:48%;
-          margin-bottom:rem(35);
-          @extend %df;
-          @extend %fdc;
-          @extend %jcs;
-          @extend %aic;
-          padding:rem(50) rem(80);
-          background: #222450;
-          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-          border-radius:rem(40);
-          @include for-width(-desktop-medium) {
-            padding:rem(40) rem(65);
-          }
-          @include for-width(-tablet) {
-            margin-bottom:rem(25);
-            padding:rem(25) rem(30);
-          }
-          @include for-width(-small-lg) {
-            width:100%;
-            margin-bottom:rem(30);
-          }
-          &__image {
-            width:rem(75);
-            height:rem(75);
-            margin-bottom:rem(25);
-            @include for-width(-desktop-medium) {
-              width:rem(60);
-              height:rem(60);
-              margin-bottom:rem(15);
-            }
-            @include for-width(-small-lg) {
-              width:rem(80);
-              height:rem(80);
-            }
-          }
-          &__title {
-            color:$white;
-            font-size: rem(30);
-            line-height: rem(46);
-            @extend %medium;
-            @include for-width(+desktop-xl) {
-              font-size: rem(34);
-              line-height: rem(50);
-            }
-            @include for-width(-desktop-medium) {
-              font-size: rem(26);
-              line-height: rem(42);
-            }
-            @include for-width(-laptop) {
-              font-size: rem(22);
-              line-height: rem(38);
-            }
-            @include for-width(-small-lg) {
-              font-family: "Poppins-SemiBold", sans-serif;
-              line-height: rem(36);
-            }
-          }
-          &__descr {
-            color:$white;
-          }
-        }
+        padding-bottom:rem(15);
       }
     }
-    &__ecosystem {
-      background-color:$white;
-      padding:rem(100) 0 rem(125);
-      @include for-width(-desktop-medium) {
-        padding:rem(50) 0 rem(75);
-      }
-      @include for-width(-small-lg) {
-        padding:rem(50) 0;
-      }
-      & .v-utility__text {
-        @include for-width(-small-lg) {
-          max-width: 85%; 
-        }
-      }
-      & img {
-        margin:rem(55) auto rem(65);
-        width:60%;
-        display:block;
-        @include for-width(-small-lg) {
-          width: 100%;
-          margin:rem(40) auto;
-        }
-      }
-    }
-    &__compare {
-      background-color:$light_bg;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-      padding:rem(100) 0 rem(125);
-      @include for-width(-desktop-medium) {
-        padding:rem(50) 0 rem(75);
-      }
-      @include for-width(-tablet) {
-        padding:rem(50) 0;
-      }
-      @include for-width(-small-lg) {
-        padding:rem(35) 0 rem(50);
-      }
-      & .v-utility__text {
-        @include for-width(-small-lg) {
-          max-width: 90%; 
-        }
-      }
-      & img {
-        margin-top:rem(55);
-        width:100%;
-        @include for-width(-tablet) {
-          margin-top:rem(35);
-        }
-      }
-    }
+  }
 }
 </style>

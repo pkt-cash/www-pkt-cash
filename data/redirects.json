@@ -1,14 +1,18 @@
 [
     {
-      "from": "/roadmap/",
-      "to": "/build/"
-    },
-    {
         "from": "/cash/",
         "to": "/pkt/"
     },
     {
-      "from": "/community",
-      "to": "/resources/"
-  }
+        "from": "/build",
+        "to": "/roadmap"
+    },
+    {
+        "from": "/origin-story",
+        "to": "/cjdns"
+    },
+    {
+        "from": "/resources",
+        "to": "/developer-central"
+    }
   ]
